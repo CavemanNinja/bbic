@@ -1,1 +1,0 @@
-ALTER TABLE `#__twojtoolbox` ADD `cacheid` int(11) NULL  DEFAULT '0' AFTER `state`;
