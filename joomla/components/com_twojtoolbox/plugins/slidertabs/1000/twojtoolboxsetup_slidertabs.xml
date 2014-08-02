@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<twojplugin version="1">
+	<name>2J Slider Tabs</name>
+	<type>slidertabs</type>
+	<creationDate>09-09-2013</creationDate>
+	<version>1000</version>
+	<description>2JSliderTabs - new and multifunctional content animation extension. Interface of the tabs highly customizable and fully dynamic. It's fully responsive tool with touch screen devices support! Great set of the simple and really powerful configuration settings make you able to build really different tabs or sliders with Joomla! articles or Joomla! modules as content source. Here you can find settings for all colors, borders, fonts and icons. You can fully customize style of the hovered and active tabs directly from admin section. You don't need CSS3 knowledge to build such stylish and eye catching layout of the slider like you can see in our demo section. </description>
+	<description_small>multifunctional ajax tabs and slider extension for joomla content and modules</description_small>
+	<multi>0</multi>
+	<images>0</images>
+	<ordering>1</ordering>
+	<multitag>1</multitag>
+	<twojtoolbox>1016</twojtoolbox>
+	<files>
+		<filename>twojtoolboxsetup_slidertabs.xml</filename>
+		<filename>twoj_slidertabs_plugin.php</filename>
+		<filename>item_options.xml</filename>
+		<filename>mid_logo.png</filename>
+		<filename>index.html</filename>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>less</folder>
+	</files>
+</twojplugin>
+

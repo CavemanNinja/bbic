@@ -1,0 +1,693 @@
+
+
+.head-search {
+  margin: 0px !important;
+}
+
+.t3-footnav {
+  padding-top: 5px !important;
+}
+
+.navbar-header {
+  width: 10px !important;
+  height: 33px !important;
+}
+
+.t3-footnav .module-title {
+  padding-bottom: 10px !important;
+}
+
+.article-title,
+.article-header, h1 {
+  color: #0C76BB ;
+}
+
+.module-title {
+  color: #0C76BB ;
+}
+
+.module {
+  margin-bottom: 40px !important;
+}
+
+.carousel {
+  padding: 0px !important;
+}
+
+/*.t3-sl {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}*/
+
+#Mod101, #Mod109, #Mod110,
+#Mod130, #Mod132, #Mod133, #Mod135  {
+  visibility: hidden !important;
+  height: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.mod-download-icon {
+  text-align: center !important;
+}
+
+/* TENANT LOGIN */
+#Mod16 {
+    box-shadow: 0px 6px 12px #666666;  
+    padding-bottom: 10px !important;
+    background-color: #ffffff;
+}
+
+#Mod129 {
+    box-shadow: 0px 6px 12px #666666;  
+    padding-bottom: 10px !important;
+    background-color: #ffffff;
+}
+
+#Mod91 {
+   box-shadow: 0px 6px 12px #666666;  
+    /*padding-bottom: 10px !important;*/
+    background-color: #ffffff; 
+
+}
+/*Quick Downloads*/
+#Mod103 {
+  background-color: #ffffff;
+  padding-bottom: 10px !important;
+  /*margin: 0px !important;*/
+  box-shadow: 0px 6px 12px #666666;  
+}
+#Mod128 {
+  background-color: #ffffff;
+  padding-bottom: 10px !important;
+  /*margin: 0px !important;*/
+  box-shadow: 0px 6px 12px #666666;  
+}
+
+/*News Categoories*/
+#Mod107 {
+  background-color: #ffffff;
+  box-shadow: 0px 6px 12px #666666;  
+}
+
+#Mod107 .module-inner .module-ct {
+  padding-left: 10px !important;
+
+}
+
+#Mod112 {
+  background-color: #ffffff;
+  padding-bottom: 10px !important;
+  box-shadow: 0px 6px 12px #666666;  
+}
+
+#Mod113 {
+  background-color: #ffffff;
+  padding-bottom: 10px !important;
+  box-shadow: 0px 6px 12px #666666;  
+}
+
+#Mod103 .module-inner .module-title {
+  text-align: center !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  margin-bottom: 0px !important;
+  /*background-color: #0C76BB;*/
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  color: #ffffff;
+}
+
+#Mod128 .module-inner .module-title {
+  text-align: center !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  margin-bottom: 0px !important;
+  /*background-color: #0C76BB;*/
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  color: #ffffff;
+}
+
+#Mod107 .module-inner .module-title {
+  text-align: center !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  margin-bottom: 0px !important;
+  /*background-color: #0C76BB;*/
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  color: #ffffff;
+}
+
+#Mod16 .module-inner .module-title {
+  text-align: center !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  margin-bottom: 0px !important;
+  /*background-color: #0C76BB;*/
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  color: #ffffff;
+}
+
+#Mod129 .module-inner .module-title {
+  text-align: center !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  margin-bottom: 0px !important;
+  /*background-color: #0C76BB;*/
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  color: #ffffff;
+}
+
+#Mod91 .module-inner .module-title {
+  text-align: center !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  margin-bottom: 0px !important;
+  /*background-color: #0C76BB;*/
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  color: #ffffff;
+}
+
+#Mod112 .module-inner .module-title {
+  text-align: center !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  margin-bottom: 0px !important;
+  /*background-color: #0C76BB;*/
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  color: #ffffff;
+}
+
+#Mod113 .module-inner .module-title {
+  text-align: center !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  margin-bottom: 0px !important;
+  /*background-color: #0C76BB;*/
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  color: #ffffff;
+}
+
+#Mod103 .module-inner .module-ct {
+  padding-top: 10px !important;
+
+}
+
+#Mod128 .module-inner .module-ct {
+  padding-top: 10px !important;
+
+}
+
+#Mod112 .module-inner .module-ct {
+  padding-top: 10px !important;
+}
+
+#Mod113 .module-inner .module-ct {
+  padding-top: 10px !important;
+}
+
+#Mod16 .module-inner .module-ct {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 10px !important;
+  background-color: #ffffff;
+}
+
+#Mod129 .module-inner .module-ct {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 10px !important;
+  background-color: #ffffff;
+}
+
+.ef-label {
+  /*color: #0C76BB !important;*/
+  font-weight: bold;
+}
+
+h2 {
+  color: #0C76BB !important;
+
+}
+
+.mod_docman {
+  
+}
+
+.t3-copyright {
+  padding-bottom: 30px !important;
+}
+
+.mysitemap {
+  /*width: 60%;*/
+  /*float: left;*/
+}
+
+.mysitemap-entry {
+  padding-right: 15px;
+}
+
+.mycopyright {
+  text-align: right;
+  /*float: right;*/
+  padding-top: 35px;
+  vertical-align: bottom;
+}
+
+.myfooter {
+  padding: 20px;
+}
+
+/*megamenu whitespace fix*/
+.mega-col-module {
+  padding: 0px !important;
+}
+
+.mega-inner {
+  padding: 0px !important;
+  text-align: center;
+}
+
+.mega-dropdown-menu {
+  padding: 0px !important;
+  border: 0px !important;
+}
+
+/*remove grey box from account settings submit area*/
+.form-actions {
+  background-color: #fff;
+}
+
+/*move navbar toggle to left*/
+.navbar-toggle {
+  float: left;
+}
+
+@media (min-width: 768px) {
+  .mynavlabel {
+    visibility: hidden !important;
+  }
+}
+
+.mynavlabel {
+  padding-top: 13px !important;
+  margin: 0px !important;
+  color: #777777;
+  
+}
+
+.t3-sl-2 {
+  padding-top: 0px;
+}
+
+.t3-wrapper {
+  background-image: url('/joomla/images/silverwood4.png');
+  
+}
+
+.t3-content {
+    background-color: #ffffff;
+    box-shadow: 0px 6px 12px #666666;
+    margin-bottom: 20px;
+    /*padding-right: 0px !important;*/
+}
+
+.t3-sidebar {
+  padding-top: 0px !important;
+}
+
+.myheaderdiv {
+  width: 100%;
+  background-color: #fff;
+  /*background-image: url('/joomla/images/brushed.png') !important;*/
+}
+
+.t3-header {
+  padding-top: 6px !important;
+  padding-bottom: 4px !important;
+  /*background-color: #aaa !important;*/
+  /*margin: 0px !important;*/
+  /*border-right: auto !important;*/
+  /*border-left: auto !important;*/
+  /*width: 100%;*/
+}
+
+
+.logo {
+
+  margin-top: 50px !important;
+  margin-bottom: 20px !important;
+  display: inline-block;
+  vertical-align: bottom !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.logo-img {
+  padding-left: 0px !important;
+  padding-right: 0px !important;  
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    margin-top: 80px !important;
+  }
+}
+@media (max-width: 992px) {
+  .logo {
+    margin-top: 110px !important;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    margin-top: 10px !important;
+  }
+}
+
+.featureCarousel {
+    margin: auto;
+    width: 660px !important;
+
+}
+
+body > div > div.container.t3-sl.t3-sl-2 > div > 
+div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
+  padding: 0px !important;
+}
+
+.t3-footer {
+  background-color: transparent !important;
+  border: 0px !important;
+}
+#Mod105 {
+  background-color: transparent !important;
+}
+
+#Mod134 {
+  background-color: transparent !important;
+}
+
+/*NAVBAR COLORS*/
+/*navbar margin shouldny on bottom put in mainbody top */
+#t3-mainbody {
+  margin-top: 50px !important;
+}
+
+.navbar {
+  border: 0px !important;
+  box-shadow: 0px 3px 8px #888;
+  background-image: url('/joomla/images/navbarnoise1.png');
+}
+
+.usernav {
+  border: 0px !important;
+  background-image: url('/joomla/images/noise-white.png') !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+
+.usernav .navbar-nav > li > a {
+  color: #0C76BB;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff !important;
+  background-image: url('/joomla/images/navbarnoise-dark1.png') !important;
+  /*background-color: #ffffff;*/
+}
+
+.usernav .navbar-nav > li > a:hover,
+.usernav .navbar-nav > li > a:focus {
+  color: #fff !important;
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  /*background-color: #ffffff;*/
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-image: url('/joomla/images/navbarnoise-dark.png') !important;
+  /*background-color: #ffffff;*/
+}
+
+.usernav .navbar-nav > .active > a,
+.usernav .navbar-nav > .active > a:hover,
+.usernav .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  /*background-color: #ffffff;*/
+}
+
+.navbar-default .navbar-nav > .open > a {
+  color: #fff;
+  background-image: url('/joomla/images/navbarnoise1.png') !important;
+}
+
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  color: #fff;
+  background-image: url('/joomla/images/navbarnoise-dark1.png') !important;
+}
+
+.nav > .open > a:focus {
+  color: #fff;
+  background-image: url('/joomla/images/navbarnoise-dark1.png') !important; 
+}
+
+.navbar > div > div.navbar-header > button {
+  width: 160px !important;
+  color: white ;
+}
+
+.usernav > div > div.navbar-header > button {
+  color: #0C76BB;
+}
+
+.usernav > div > div.navbar-header > button:focus,
+.usernav > div > div.navbar-header > button:hover {
+  color: #fff;
+}
+
+.usernav > div > div.navbar-header > button > i {
+  color: inherit !important;
+}
+
+#navbar > div > div.navbar-header > button > i {
+  color: #fff;
+}
+
+/*#t3-mainnav > div > div.navbar-header > button > i:hover {
+  color: #075d93 !important;
+}*/
+
+/*Dark Blue*/
+#t3-mainnav > div > div.navbar-header > button:hover {
+  color: #ffffff;
+  background-color: #00608F !important;
+} 
+
+/*Light Blue*/
+#t3-mainnav > div > div.navbar-header > button:focus {
+  color: #fff;
+  background-color: #0C76BB !important;
+}
+
+
+.t3-copyright {
+  border: 0px;
+  /*background: #666;*/
+  background-image: url('/joomla/images/copyrightnoise.png') !important;
+  box-shadow: 0px -3px 16px #595959;
+}
+
+.t3-copyright a {
+  color: #fff;
+  text-decoration: none;
+}
+.t3-copyright a:hover,
+.t3-copyright a:focus {
+  color: #23a4f6;
+  text-decoration: underline;
+}
+
+#t3-footer > section > div > div > div > div.col-md-9.mysitemap > p,
+#t3-footer > section > div > div > div > div.col-md-3.mycopyright {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+
+/*
+#Mod91 > div > div > ul > li .current .active {
+   background-color: #e2e2e2 !important;
+}
+
+#Mod91 > div > div > ul > li.current {
+    background-color: #e2e2e2 !important;
+}
+
+#Mod91 > div > div > ul > li.item-112 {
+
+}*/
+
+/*User Menu Customization*/
+#Mod91 > div > div > ul > li > a {
+  padding-left: 10px;
+}
+
+#Mod91 > div > div > ul > li {
+  margin: 0px !important;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #0c76bb !important;
+  background-color: #e2e2e2 !important;
+}
+
+/*table row colors fix */
+.cat-list-row1,
+tr.cat-list-row1 td {
+  background: #fff;
+}
+
+.cat-list-row0,
+tr.cat-list-row0 td {
+  background: #f7f7f7;
+}
+
+.cat-list-row0:hover,
+.cat-list-row1:hover {
+  background: #f1f1f1 !important;
+}
+
+.TableFilterSelect {
+  height: 25px;
+  font-size: 12px !important;
+  font-weight: normal !important;
+  padding: 0px;
+}
+
+th {
+  padding-right: 2px !important;
+  padding-left: 4px !important;
+  vertical-align: top !important;
+}
+
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+
+/*Search and Language */
+/*.search {
+  float: right;
+}
+*/
+.languageswitcherload {
+  /*float:right;*/
+  width: auto;
+  padding-top: 15px;
+  display: inline;
+}
+
+.breadcrumbs {
+  /*width: auto;*/
+  float: right;
+  padding-top: 8px;
+  padding-right: 5px;
+  padding-left: 5px;
+  display: inline;
+}
+
+.langsearch {
+  display: inline-block;
+  float: right;
+  height: 50px;
+}
+
+div.st_tabs > div > ul {
+  margin-left: 0px !important;
+  width: 100% !important;
+}
+
+#jform_attribs_companyprofile_block-lbl.invalid:after {
+  content: " (must be numerical)";
+}
+
+#jform_attribs_companyprofile_pobox-lbl.invalid:after {
+  content: " (must be numerical)";
+}
+
+#jform_attribs_companyprofile_tel-lbl.invalid:after {
+  content: " (must be numerical)";
+}
+
+#jform_attribs_billing_amount-lbl.invalid:after {
+  content: " (must be numerical)";
+}
+
+#jform_attribs_billing_repeatcycle-lbl.invalid:after {
+  content: " (must be numerical)";
+}
+
+#jform_attribs_service_price-lbl.invalid:after {
+  content: " (must be numerical)";
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #0c76bb;
+  border-color: ##0c76bb;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #0a5e95;
+  border-color: #0a5e95;
+}
+
+/* PARTNERS */
+
+.partners-div {
+  margin-bottom: 60px;
+}
+
+.partners-heading {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+
+.partners-images-div {
+  text-align: center;
+}
+
+.partners-images {
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20px;
+}

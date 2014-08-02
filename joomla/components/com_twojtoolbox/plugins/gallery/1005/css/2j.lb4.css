@@ -1,0 +1,82 @@
+/*
+    twoj_gallery_lb4 Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#twoj_gallery_lb4, #twoj_gallery_lb4_Overlay, #twoj_gallery_lb4_Wrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#twoj_gallery_lb4_Overlay{position:fixed; width:100%; height:100%;}
+#twoj_gallery_lb4_MiddleLeft, #twoj_gallery_lb4_BottomLeft{clear:left;}
+#twoj_gallery_lb4_Content{position:relative;}
+#twoj_gallery_lb4_LoadedContent{overflow:auto;}
+#twoj_gallery_lb4_Title{margin:0;}
+#twoj_gallery_lb4_LoadingOverlay, #twoj_gallery_lb4_LoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#twoj_gallery_lb4_Previous, #twoj_gallery_lb4_Next, #twoj_gallery_lb4_Close, #twoj_gallery_lb4_Slideshow{cursor:pointer;}
+.twoj_gallery_lb4_Photo{float:left; margin:auto; padding: 0; border:0; display:block; max-width:none;}
+.twoj_gallery_lb4_Iframe{width:100%; height:100%; display:block; border:0;}
+#twoj_gallery_lb4, #twoj_gallery_lb4_Content, #twoj_gallery_lb4_LoadedContent{box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of twoj_gallery_lb4.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#twoj_gallery_lb4_Overlay{background:#fff;}
+#twoj_gallery_lb4{}
+#twoj_gallery_lb4_TopLeft{width:25px; height:25px; background:url('%%CSS_URL%%/images/lb4/border1.png') no-repeat 0 0;}
+#twoj_gallery_lb4_TopCenter{height:25px; background:url('%%CSS_URL%%/images/lb4/border1.png') repeat-x 0 -50px;}
+#twoj_gallery_lb4_TopRight{width:25px; height:25px; background:url('%%CSS_URL%%/images/lb4/border1.png') no-repeat -25px 0;}
+#twoj_gallery_lb4_BottomLeft{width:25px; height:25px; background:url('%%CSS_URL%%/images/lb4/border1.png') no-repeat 0 -25px;}
+#twoj_gallery_lb4_BottomCenter{height:25px; background:url('%%CSS_URL%%/images/lb4/border1.png') repeat-x 0 -75px;}
+#twoj_gallery_lb4_BottomRight{width:25px; height:25px; background:url('%%CSS_URL%%/images/lb4/border1.png') no-repeat -25px -25px;}
+#twoj_gallery_lb4_MiddleLeft{width:25px; background:url('%%CSS_URL%%/images/lb4/border2.png') repeat-y 0 0;}
+#twoj_gallery_lb4_MiddleRight{width:25px; background:url('%%CSS_URL%%/images/lb4/border2.png') repeat-y -25px 0;}
+#twoj_gallery_lb4_Content{background:#fff; overflow:hidden;}
+.twoj_gallery_lb4_Iframe{background:#fff;}
+#twoj_gallery_lb4_Error{padding:50px; border:1px solid #ccc;}
+#twoj_gallery_lb4_LoadedContent{margin-bottom:20px;}
+#twoj_gallery_lb4_Title{position:absolute; bottom:0px; left:0; text-align:center; width:100%; color:#999;}
+#twoj_gallery_lb4_Current{position:absolute; bottom:0px; left:100px; color:#999;}
+#twoj_gallery_lb4_Slideshow{position:absolute; bottom:0px; right:42px; color:#444;}
+#twoj_gallery_lb4_Previous{position:absolute; bottom:0px; left:0; color:#444;}
+#twoj_gallery_lb4_Next{position:absolute; bottom:0px; left:63px; color:#444;}
+#twoj_gallery_lb4_LoadingOverlay{background:#fff url('%%CSS_URL%%/images/lb4/loading.gif') no-repeat 5px 5px;}
+#twoj_gallery_lb4_Close{position:absolute; bottom:0; right:0; display:block; color:#444;}
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.twoj_gallery_lb4_IE #twoj_gallery_lb4_TopLeft,
+.twoj_gallery_lb4_IE #twoj_gallery_lb4_TopCenter,
+.twoj_gallery_lb4_IE #twoj_gallery_lb4_TopRight,
+.twoj_gallery_lb4_IE #twoj_gallery_lb4_BottomLeft,
+.twoj_gallery_lb4_IE #twoj_gallery_lb4_BottomCenter,
+.twoj_gallery_lb4_IE #twoj_gallery_lb4_BottomRight,
+.twoj_gallery_lb4_IE #twoj_gallery_lb4_MiddleLeft,
+.twoj_gallery_lb4_IE #twoj_gallery_lb4_MiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+  The following provides PNG transparency support for IE6
+  Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+*/
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopLeft{background:url('%%CSS_URL%%/images/lb4/ie6/borderTopLeft.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopCenter{background:url('%%CSS_URL%%/images/lb4/ie6/borderTopCenter.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopRight{background:url('%%CSS_URL%%/images/lb4/ie6/borderTopRight.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomLeft{background:url('%%CSS_URL%%/images/lb4/ie6/borderBottomLeft.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomCenter{background:url('%%CSS_URL%%/images/lb4/ie6/borderBottomCenter.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomRight{background:url('%%CSS_URL%%/images/lb4/ie6/borderBottomRight.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_MiddleLeft{background:url('%%CSS_URL%%/images/lb4/ie6/borderMiddleLeft.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_MiddleRight{background:url('%%CSS_URL%%/images/lb4/ie6/borderMiddleRight.png');}
+
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopLeft,
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopCenter,
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopRight,
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomLeft,
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomCenter,
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomRight,
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_MiddleLeft,
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_MiddleRight {
+    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="left">
+		<field
+			name="folderlist"
+			type="TwoJToolBoxFolderList"
+			label="COM_TWOJTOOLBOX_UPLOAD_FOLDER_LABEL"
+			description="COM_TWOJTOOLBOX_UPLOAD_FOLDER_DESC"
+			class="inputbox"
+			required="true"
+			default=""
+		/>
+		<field
+			name="foldernew"
+			type="text"
+			label="COM_TWOJTOOLBOX_UPLOAD_FOLDERNEW_LABEL"
+			description="COM_TWOJTOOLBOX_UPLOAD_FOLDERNEW_DESC"
+			class="inputbox"
+			required="false"
+			default=""
+		/>
+	</fieldset>
+	<fieldset name="right">
+		<field name="state" type="list" label="JSTATUS" description="COM_TWOJTOOLBOX_ELEMENT_FIELD_STATE_DESC"
+			class="inputbox" size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL" description="COM_TWOJTOOLBOX_ELEMENT_FIELD_LANGUAGE_DESC" class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+	</fieldset>
+</form>
+

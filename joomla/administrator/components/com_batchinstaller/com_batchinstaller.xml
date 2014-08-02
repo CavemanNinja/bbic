@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>Batch Installer</name>
+    <creationDate>23 May 2014</creationDate>
+    <author>Fastw3b - We develop while you are thinking</author>
+    <authorEmail>dev@fastw3b.net</authorEmail>
+    <authorUrl>http://www.fastw3b.net</authorUrl>
+    <copyright>Copyright (C) 2014 Fastw3b. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>3.2</version>
+    <description><![CDATA[Please click this button to complete the installation <a class="btn btn-primary btn-large" href="index.php?option=com_batchinstaller&view=batchinstaller">Continue</a>]]></description>
+    <files folder="site">
+        <filename>index.html</filename>
+    </files>
+    <administration>
+        <menu>Batch Installer</menu>
+        <files folder="admin">
+            <filename>controller.php</filename> 
+            <filename>index.html</filename>
+            <filename>batchinstaller.php</filename>
+            <folder>assets</folder>
+            <folder>models</folder>
+            <folder>data</folder>
+            <folder>views</folder>
+        </files>
+		<languages folder="admin/language">
+			<language tag="en-GB">en-GB/en-GB.com_batchinstaller.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_batchinstaller.sys.ini</language>
+		</languages>
+    </administration>
+</extension>

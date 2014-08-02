@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="hidden" />
+		<field
+			name="title"
+			type="text"
+			label="COM_TWOJTOOLBOX_ITEM_TITLE_LABEL"
+			description="COM_TWOJTOOLBOX_ITEM_TITLE_DESC"
+			size="40"
+			class="inputbox validate-greeting"
+			required="true"
+			default=""
+		/>
+		<field name="state" type="list"
+			label="JSTATUS" description="COM_TWOJTOOLBOX_ITEM_FIELD_STATE_DESC"
+			class="inputbox" size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fieldset>
+	<fieldset name="details_right">
+		<field
+			name="type"
+			type="twojtoolboxdisplaytype"
+			label="COM_TWOJTOOLBOX_ITEM_TYPE_LABEL"
+			description="COM_TWOJTOOLBOX_ITEM_TYPE_DESC"
+			default=""
+		/>
+	</fieldset>	
+	
+	<fields name="params">
+	<fieldset name="options1" label="Main Options">
+		
+		<field name="size" hideButton="1" config="{ 
+				'sizeSet':{ 'text': '', 'role': 'showPanel','fields':{
+					'customWidthVal':	{ 'type':'text', 'length': 30, 'textBefore':'Width', 'hideSplitter': 1, 'textAfter': ''},
+					'customWidthType': 	{'type':'select', 	'length': 55, 'values': { 'px':'px', '%':'%'}},
+					'customHeightVal':	{ 'type':'text', 'length': 30, 'textBefore':'Height', 'hideSplitter': 1, 'textAfter': '' },
+					'customHeightType':	{'type':'select', 	'length': 55, 'values': { 'px':'px', '%':'%'}}
+				}}
+			}" type="TwoJMultiButton"  default='{"mainButton":"sizeSet","sizeSet":{"customWidthVal":"100", "customWidthType": "%", "customHeightVal":"", "customHeightType": "px"}}' label="Size"  description="Stage container width and container height in pixels or percents" />
+		
+		<field name="minSize" hideButton="1" config="{ 
+				'minSizeSet':{'text': '', 'role': 'showPanel','fields':{
+					'minSizeWidth':	{ 'type':'text', 'length': 30, 'textBefore':'Min Width:', 'hideSplitter': 1, 'textAfter': ''},
+					'minSizeWidthType': 	{'type':'select', 	'length': 55, 'values': { 'px':'px', '%':'%'}},
+					'minSizeHeight':	{ 'type':'text', 'length': 30, 'textBefore':'Min Height:', 'hideSplitter': 1, 'textAfter': '' },
+					'minSizeHeightType':	{'type':'select', 	'length': 55, 'values': { 'px':'px', '%':'%'}}
+				}}
+			}" type="TwoJMultiButton"  default='{"mainButton":"minSizeSet","minSizeSet":{"minSizeWidth":"300", "minSizeWidthType":"px", "minSizeHeight":"", "minSizeHeightType": "px"}}' label="Min Size"  description="Stage container minimum width and  minimum height in pixels or percents." />
+		
+		<field name="maxSize" hideButton="1" config="{ 
+				'maxSizeSet':{'text': '', 'role': 'showPanel','fields':{
+					'maxSizeWidth':	{ 'type':'text', 'length': 30, 'textBefore':'Max Width:', 'hideSplitter': 1, 'textAfter': ''},
+					'maxSizeWidthType': 	{'type':'select', 	'length': 55, 'values': { 'px':'px', '%':'%'}},
+					'maxSizeHeight':	{ 'type':'text', 'length': 30, 'textBefore':'Max Height:', 'hideSplitter': 1, 'textAfter': '' },
+					'maxSizeHeightType':	{'type':'select', 	'length': 55, 'values': { 'px':'px', '%':'%'}}
+				}}
+			}" type="TwoJMultiButton"  default='{"mainButton":"maxSizeSet","maxSizeSet":{ "maxSizeWidth":"100", "maxSizeWidthType":"%", "maxSizeHeight":"", "maxSizeHeightType": "px"}}' label="Max Size"  description="Stage container maximum width and maximum height in pixels or percents" />
+		
+		<field name="galleryRatio" 	type="twojText" size="10" default="800/600" addtext="[ example 4/3 or 16/9 ]"   label="Ratio" description="Width divided by height. Recommended if you using percentage width" />
+		
+        <field name="orderby" type="twojList"  default="0" label="Images ordering by" description="custom images ordering in gallery. Native images ordering you can change in images manager">
+			<option value="0" >Native Ordering</option>
+			<option value="1" >Native Ordering(descending)</option>
+			<option value="2" >Name</option>
+			<option value="3" >Name(descending)</option>
+			<option value="4" >Random</option>
+			<option value="5" >Id</option>
+			<option value="6" >Id (descending)</option>
+		</field>
+        
+		<field name="caption" type="twojRadio"  default="0" label="Show Caption"  description="enable or disable caption of the image on the slide">
+            <option value="0">Disabled</option>
+            <option value="1">Enabled</option>
+        </field>
+		
+		<field name="galleryBgColor" config="{ 
+				'disabledBgColor':{'text': 'Disabled', 'role': 'button'},
+				'enabledBgColor':{
+					'text': 'Enabled', 
+					'role': 'showPanel', 
+					'fields':{
+						'bgImages':{ 'type':'text', 'length': 50, 'color': '1', 'textBefore':'Images Panel bg Color', 'textAfter': '' },
+						'bgNav':{ 'type':'text', 'length': 50, 'color': '1', 'textBefore':'Navigation Panel bg Color', 'textAfter': '' }
+					}
+				}
+			}" type="TwoJMultiButton"  default='{"mainButton":"disabledBgColor","enabledBgColor":{"bgImages":"#ffffff", "bgNav": "#ffffff"}}' label="Background Color"  description="background color for slideshow and navigation panel" />
+		
+		<field name="galleryPadding"  type="TwoJMultiButton" config="{
+			'disabledPadding':{'text': 'Disabled', 	'role': 'button'},
+			'enabledAlignPadding':{ 'text': 'Align', 	'role': 'showPanel', 'fields':{
+						'alignPaddingValue': 	{'type':'select', 	'length': 80, 	'textBefore': 'Align:', 'values': { 'left':'left', 'center':'center', 'right':'right'}}
+				}},
+			'enabledCustomPadding':{ 'text': 'Custom', 	'role': 'showPanel', 'fields':{
+						'alignPaddingLeft':		{'type':'text', 	'length': 45, 	'textBefore': 'Left Offset:', 	'textAfter': 'px'},
+						'alignPaddingRight':	{'type':'text', 	'length': 45, 	'textBefore': 'Right Offset:', 	'textAfter': 'px'},
+						'alignPaddingTop':		{'type':'text', 	'length': 45, 	'textBefore': 'Top Offset:', 	'textAfter': 'px'},
+						'alignPaddingBottom':	{'type':'text', 	'length': 45, 	'textBefore': 'Bottom Offset:', 'textAfter': 'px'}
+					}
+			}
+		}"  default='{"mainButton":"disabledPadding","enabledAlignPadding":{"alignPaddingValue":"center"}, "enabledCustomPadding":{"alignPaddingLeft":"0", "alignPaddingRight": "0", "alignPaddingTop": "0", "alignPaddingBottom": "0"}}' label="Padding"  description="Horizontal margins for frames in pixels or using standard positions" />
+		
+		<field name="rtl" type="twojRadio"  default="0" label="RTL"  description="enable or disable rtl mode">
+            <option value="0">Disabled</option>
+            <option value="1">Enabled</option>
+        </field>
+		
+		<field name="preview" type="TwoJSimpleSlideshowDemo" label="Preview" description="" />
+		
+	</fieldset>
+	
+	<fieldset name="controlOptions" label="Control Settings">
+		
+		<field name="navType" type="twojRadio"  default="dots" label="Navigation style"  description="Here you can enable navigation dots, thumbnails or disable this navigation elements at all">
+            <option value="false">Disabled</option>
+            <option value="thumbs">Thumbs</option>
+			<option value="dots">Dots</option>
+        </field>
+		
+		<field name="navigationPosition" type="twojRadio"  default="0" label="Navigation position"  description="here you can select position of the navigatio on top or bottom side of the slideshow">
+            <option value="0">Bottom</option>
+            <option value="1">Top</option>
+        </field>
+		
+		<field name="fullScreen" type="twojRadio"  default="true" label="FullScreen"  description="here you can enable or disable fullscreen mode button">
+            <option value="false">Disabled</option>
+            <option value="true">Enabled</option>
+			<option value="native">Enabled native</option>
+        </field>
+		
+		<field name="control" hideButton="1" config="{ 
+				'controlSet':{'text': '', 'role': 'showPanel','fields':{
+					'controlArrows': 	{'type':'select', 'textBefore':'Arrows:', 'length': 105, 'values': { 'true':'Enabled', 'false':'Disabled'}},
+					'controlClick': 	{'type':'select', 'textBefore':'Click:', 'length': 105, 'values': { 'true':'Enabled', 'false':'Disabled'}},
+					'controlSwipe': 	{'type':'select', 'textBefore':'Swipe:', 'length': 105, 'values': { 'true':'Enabled', 'false':'Disabled'}}
+				}}
+			}" type="TwoJMultiButton"  default='{"mainButton":"controlSet","controlSet":{"controlArrows":"true", "controlClick":"false", "controlSwipe":"true"}}' label="Controls"  description="enable swipe, click event or enable/disable arrows" />
+		
+		<field name="keyboard" type="twojRadio"  default="0" label="Keyboard"  description="Enables keyboard navigation">
+            <option value="0">Disabled</option>
+            <option value="1">Enabled</option>
+        </field>
+		
+		<field name="startindex" 	type="twojText" size="5" default="" label="Start Index" description="Index or id of the frame that will be shown upon initialization of the slideshow" />
+		
+	</fieldset>
+	
+	
+	
+	<fieldset name="effectTimerOptions" label="Effect and Timer Settings">
+		
+		<field name="transition" type="twojRadio"  default="slide" label="Transition effect"  description="Defines what transition to use">
+            <option value="slide">slide</option>
+            <option value="crossfade">crossfade</option>
+			<option value="dissolve">dissolve</option>
+        </field>
+		
+		<field name="transitionduration" 	type="twojText" size="5" addtext="ms." default="300" label="Effect Duration" description="Animation length in milliseconds" />
+		
+		<field name="loop" type="twojRadio"  default="true" label="Loop"  description="Enable loop">
+            <option value="false">Disabled</option>
+            <option value="true">Enabled</option>
+        </field>
+		
+		<field name="autoplay"  type="TwoJMultiButton" config="{
+			'disabledAutoplay':{'text': 'Disabled', 	'role': 'button'},
+			'enabledAutoplay':{ 'text': 'Enabled', 	'role': 'showPanel', 'fields':{
+						'valAutoplay':		{'type':'text', 	'length': 45, 	'textBefore': 'Timer:', 	'textAfter': 'ms.'},
+						'stopAutoplay': 	{'type':'select', 	'length': 90, 	'textBefore': 'Stop Autoplay on Touch:', 'values': { '1':'Enabled', '0':'Disabled'}}
+				}}
+		}"  default='{"mainButton":"enabledAutoplay","enabledAutoplay":{"valAutoplay":"5000", "stopAutoplay":"0"}}' label="Autoplay"  description="Enables slideshow. Turn it on with true or any interval in milliseconds" />
+		
+	</fieldset>
+
+	<fieldset name="imagesOptions" label="Images  Settings">
+		<field name="fit" type="twojRadio"  default="contain" label="Image Fit"  description="How to fit an image into slideshow">
+            <option value="contain">contain</option>
+            <option value="cover">cover</option>
+			<option value="scaledown">scaledown</option>
+			<option value="none">none</option>
+        </field>
+		
+		<field name="margin" type="twojText" size="5" addtext="px." default="2" label="Images space" description="define some additional space fo the image in pixels" />
+		
+		<field name="images_label" type="twojspacer" long="1" label="Image Size Options"/>				
+		
+		<field name="big_type_resizing" type="twojRadio" 
+		json="{
+		'show':{
+			'2':['jform[params][big_resize_position]', 'jform[params][big_width]', 'jform[params][big_height]' ],
+			'0':['jform[params][big_width]', 'jform[params][big_height]', 'jform[params][big_color]' ]
+		}, 
+		'hide':{
+			'0':['jform[params][big_resize_position]' ],
+			'2':['jform[params][big_color]'],
+			'3':['jform[params][big_resize_position]', 'jform[params][big_width]', 'jform[params][big_height]', 'jform[params][big_color]'
+			]
+		} 
+		}"         
+		default="3" label="Resizing shape" description="select the way of the gallery images resizing. In the case of PROPORTIONAL value image will be resized proportional. In the case of the CROP values images cropping according to predefined size">
+            <option value="0">Proportional</option>
+            <option value="2">Crop</option>
+			<option value="3">Original</option>
+        </field>
+		
+		<field name="big_width"  type="twojText" size="5"    default="500" label="Image width" addtext="px" description="here you can specify width for the gallery images (this value could be lower then width of the original image)" />
+		<field name="big_height" type="twojText" size="5"    default="375" label="Image height" addtext="px" description="here you can specify height for the gallery images (this value could be lower then height of the original image)" />
+		<field name="big_color" type="twojText" class="twoj_color"  size="12" default="#ffffff" label="Image background color" description="color could be specify in hex format (for example: #616161). To change color click on the color selector and pick up required color" />
+		
+
+		<field name="thumbOptionsLabel" type="twojspacer" long="1" label="Thumbnail Size Options"/>				
+		
+        <field name="thumb_width"  type="twojText" size="5"    default="220" label="Thumbnail width" addtext="px" description="width of the thumbnail images" />
+		<field name="thumb_height" type="twojText" size="5"    default="160" label="Thumbnail height" addtext="px" description="height of the thumbnail images" />
+		
+		<field name="thumb_type_resizing" type="twojRadio" 
+        json="{'show':{'2': ['jform[params][thumb_resize_position]'], '0': ['jform[params][thumb_color]'] }, 'hide':{'0':['jform[params][thumb_resize_position]'], '2': ['jform[params][thumb_color]']} }"
+        default="2" label="Resizing shape" description="select the way of the gallery thumbnails resizing. In the case of PROPORTIONAL value thumbnail will be resized proportional. In the case of the CROP values thumbnails cropping according to predefined size.">
+            <option value="0">proportional</option>
+            <option value="2">crop</option>
+        </field>
+        
+        <field name="thumb_resize_position" type="twojList"   default="0" label="Thumbnail resizing align" description="required option in the case of CROP value in resizing shape. This options responsible for direction of the displacement during rezing process of the gallery thumbnails.">
+            <option value="0">center</option>
+            <option value="1">left</option>
+            <option value="2">right</option>
+            <option value="3">top</option>
+            <option value="4">bottom</option>
+        </field>
+		
+		<field name="thumb_color" type="twojText" class="twoj_color"  size="12" default="#ffffff" label="Thumbnail background color" description="color could be specify in hex format (for example: #616161). To change color click on the color selector and pick up required color" />
+		
+		<field name="thumbmargin" type="twojText" size="5" addtext="px." default="2" label="Thumbnail Space" description="define some additional space fo the thumbnails in pixels" />
+		
+		<field name="thumbborder" type="TwoJMultiValues"  default="{'enabled': 1, 'width': 2, 'color':'#00AFEA'}" label="Thumbnail Border"  hide_style="1" hide_opacity="1" description="here you can select color and size of the thumbnails border" />
+	
+	</fieldset>
+	
+	</fields>
+</form>

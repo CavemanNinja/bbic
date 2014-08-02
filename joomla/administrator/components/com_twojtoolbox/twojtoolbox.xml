@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>TwoJToolBox</name>
+	<creationDate>2014</creationDate>
+	<author>2Joomla Team</author>
+	<authorEmail>support@2joomla.net</authorEmail>
+	<authorUrl>http://www.2joomla.net</authorUrl>
+	<copyright>Copyright (c) 2008-2014 2Joomla.net All rights reserved</copyright>
+	<license>released under GNU/GPL License : http://www.gnu.org/copyleft/gpl.html</license>
+	<version>1.0.20</version>
+	<version_inner>1020</version_inner>
+	
+	<description>COM_TWOJTOOLBOX_DESCRIPTION</description>
+
+	<scriptfile>script.php</scriptfile>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> 
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>twojtoolbox.php</filename>
+		<filename>controller.php</filename>
+		<filename>pluginclass.php</filename>
+		<filename>plugincallback.php</filename>
+		<folder>controllers</folder>
+		<folder>css</folder>
+		<folder>demo_content</folder>
+		<folder>helpers</folder>
+		<folder>js</folder>
+		<folder>plugins</folder>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+		<folder>class</folder>
+	</files>
+	
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_twojtoolbox.ini</language>
+	</languages>
+	
+	<media destination="com_twojtoolbox" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+		<folder>cache</folder>
+	</media>
+
+	<administration>
+		<menu img="../components/com_twojtoolbox/css/admin/twojtoolbox-16x16.png">COM_TWOJTOOLBOX_MENU</menu>
+		
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>twojtoolbox.php</filename>
+			<filename>twojclass.php</filename>
+			<filename>controller.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>install</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_twojtoolbox.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_twojtoolbox.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>
+

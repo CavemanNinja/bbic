@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Images Crawler</name>
+	<author>Jesus Vargas</author>
+	<creationDate>Jun 2009</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>http://joomlahill.com</authorEmail>
+	<authorUrl>chuzky@gmail.com</authorUrl>
+	<version>2.1</version>
+	<description>This module scrolls horizontaly one or more images</description>
+	<files>
+		<filename module="mod_imgscrawler">mod_imgscrawler.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>crawler.js</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="folder"
+					type="text"
+					default="images"
+					label="Images Folder"
+					description="Path to the images folder relative to the site URL (e.g. images/sampledata/parks/animals)" />
+				<field
+					name="substoo"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Subfolders"
+					description="Subfolders">
+					<option
+						value="1">Include</option>
+					<option
+						value="0">Ignore</option>
+				</field>
+				<field
+					name="limit"
+					type="text"
+					default=""
+					label="Images Limit"
+					description="Limit the number of images to display or leave blank for no limit" />
+				<field
+					name="random"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Randomize Images"
+					description="Randomize Images">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="direction"
+					type="radio"
+					class="btn-group"
+					default="left"
+					label="Crawler Direction"
+					description="Crawler Direction">
+					<option
+						value="left">Left</option>
+					<option
+						value="right">Right</option>
+				</field>
+				<field
+					name="links"
+					type="textarea"
+					cols="50"
+					rows="5"
+					default=""
+					label="Links"
+					description="By a new line separated URLs to redirect if the corresponding image is clicked upon" />
+				<field
+					name="repeat"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="Repeat Links"
+					description="Repeat Links secuency?">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="target"
+					type="list"
+					default="0"
+					label="Links Target"
+					description="Links Target">
+					<option
+						value="0">Parent Window</option>
+					<option
+						value="1">New Window</option>
+				</field>
+				<field
+					name="width"
+					type="text"
+					default="100%"
+					label="Width"
+					description="Crawler Area Width" />
+				<field
+					name="height"
+					type="text"
+					default="100px"
+					label="Height"
+					description="Crawler Area Height" />
+				<field
+					name="bgcolor"
+					type="text"
+					default=""
+					label="Background Color"
+					description="Background Color (e.g. #FFFFFF)" />
+				<field
+					name="speed"
+					type="text"
+					default="1"
+					label="Speed"
+					description="Crawler Speed - pixel increment for each iteration of this crawler's movement" />
+				<field
+					name="valign"
+					type="list"
+					default="top"
+					label="Images Vertical Align"
+					description="Images Vertical Align">
+					<option
+						value="top">Top</option>
+					<option
+						value="middle">Middle</option>
+					<option
+						value="bottom">Bottom</option>
+				</field>
+				<field
+					name="iwidth"
+					type="text"
+					default=""
+					label="Images Width"
+					description="This will force all images to the specified width (in px)" />
+				<field
+					name="iheight"
+					type="text"
+					default=""
+					label="Images Height"
+					description="This will force all images to the specified height (in px)" />
+				<field
+					name="margin"
+					type="text"
+					default="3"
+					label="Space Between Images"
+					description="Space Between Images" />
+				<field
+					name="mouse"
+					type="list"
+					default="pause"
+					label="OnMouseOver"
+					description="On Mouse Over">
+					<option
+						value="pause">Pause</option>
+					<option
+						value="cursor driven">Cursor Driven</option>
+					<option
+						value="false">None</option>
+				</field>
+				<field
+					name="@spacer"
+					type="spacer"
+					default="OnMouseOver Cursor Driven Options"
+					label="OnMouseOver Cursor Driven Options"
+					description="OnMouseOver Cursor Driven Options" />
+				<field
+					name="moveatleast"
+					type="text"
+					default="1"
+					label="Min Speed onMouseOut"
+					description="Min Speed onMouseOut" />
+				<field
+					name="neutral"
+					type="text"
+					default="50"
+					label="Neutral Area Width"
+					description="Size of the area in the center of the marquee where hovering it will stop it" />
+				<field
+					name="savedirection"
+					type="list"
+					default="1"
+					label="Save Crawler Direction"
+					description="Will it remember it's initial direction, continue it's current direction, or will it reverse it's current direction?">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+					<option
+						value="2">Reverse</option>
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

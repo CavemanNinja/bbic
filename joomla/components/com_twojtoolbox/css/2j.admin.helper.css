@@ -1,0 +1,66 @@
+.twoj_p0{ padding: 0;}
+.twoj_m0{ margin: 0; }
+
+.twoj_pl5{ padding-left: 5px;}
+.twoj_ml5{ margin-left: 5px; }
+.twoj_pr5{ padding-right: 5px;}
+.twoj_mr5{ margin-right: 5px; }
+
+.twoj_clear{ clear: both; }
+.twoj_clear_left{ clear: left; }
+.twoj_clear_right{ clear: right; }
+
+.twoj_formEditItem .radio.ui-buttonset, 
+.twoj_formEditItem .checkbox.ui-buttonset{
+	min-height: 0px;
+	padding-left: 0px;
+}
+
+.twoj_float{ float: none; }
+.twoj_float_left{ float: left; }
+.twoj_float_right{ float: right; }
+
+.table th.twoj_center,
+.table td.twoj_center,
+.twoj_center{
+	text-align: center;
+}
+
+.twoj_nowrap{
+	white-space: nowrap	
+}
+.twoj_strong{
+	font-weight: bolder;
+}
+
+.twoj_border_bottom{
+	border-bottom: 1px solid silver;	
+}
+.twoj_formEditItem textarea.twoj_width_80,
+.twoj_formEditItem input.twoj_width_80,
+.twoj_width_80{
+	width: 80%
+}
+.twoj_formEditItem textarea.twoj_width_90,
+.twoj_formEditItem input.twoj_width_90,
+.twoj_width_90{
+	width: 90%
+}
+
+
+.twoj_width_60{ width: 59% }
+.twoj_width_40{ width: 39% }
+
+.twojtoolbox_hiddenblock{ display: none; } /* delete after check */
+.twoj_hiddenblock{ display: none; }
+
+.twoj_formEditItem select,
+.twoj_formEditItem textarea,
+.twoj_formEditItem input[type="text"],
+.twoj_formEditItem  .uneditable-input{
+	margin-bottom: 0px;
+}
+
+.twoj_formEditItem  .chzn-container{
+	margin-bottom: 0px;
+}

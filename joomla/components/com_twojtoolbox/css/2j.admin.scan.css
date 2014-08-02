@@ -1,0 +1,51 @@
+#twoj_scan_folderList{
+	margin: 10px 0 10px 0;
+	background-color: #f9f9f9;
+	padding: 10px 0 10px 0;
+	border-bottom: 1px solid #dddddd;
+	border-top: 1px solid #dddddd;
+	
+}
+.twoj_scan_folderItem{
+	background: url('%%CSS_URL%%/admin/folder.png') no-repeat top center;
+	min-width: 76px;
+	padding: 46px 2px 0px;
+	margin: 0px 8px 10px 8px;
+	font-weight: bolder;
+	font-size: 11px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.twoj_scan_folderItem.twoj_scan_folderItemUP{
+	background: url('%%CSS_URL%%/admin/folder_up.png') no-repeat top center;
+}
+#twoj_scan_rootFolder{
+	font-weight: bolder;
+	cursor: pointer;
+}
+#twoj_imagescopy_log{
+	height: 200px;
+	overflow: auto;
+	border: 1px solid silver;
+}
+
+.twoj_imagescopy_log_row{
+	white-space: normal;
+	font-size: 14px;
+	border-bottom: 1px solid white;
+	margin: 0;
+	padding: 4px 8px 4px;
+	background: url('%%CSS_URL%%/admin/done.png') no-repeat  98% 50%;
+}
+.twoj_imagescopy_log_row.twoj_imagescopy_log_row_active{
+	border-bottom: 1px solid silver;
+	font-weight: bolder;
+	background: #f5f5f5 url('%%CSS_URL%%/admin/load.gif') no-repeat 100% 50%;
+}
+.twoj_scan_saveimages_status{
+	font-size: 1.2em;
+	font-weight: bolder;
+	padding: 10px;
+}

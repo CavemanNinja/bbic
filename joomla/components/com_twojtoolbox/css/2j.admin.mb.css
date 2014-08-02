@@ -1,0 +1,40 @@
+.twoj_multibutton_wrap{
+	padding: 0;
+}
+.twoj_multibutton_buttonset_wrap{
+	display: block;
+	float: left;
+	padding: 3px 10px 4px 0;
+}
+.twoj_multibutton_panels_wrap{
+	display: block;
+	float: left;
+}
+
+.twoj_multibutton_panel{
+	background-color: #f5f5f5;
+	border-radius: 5px;
+	padding: 4px 0 4px 10px;
+}
+
+.twoj_multibutton_panel input.twoj_multibutton_panel_textbox,
+.twoj_multibutton_panel select.twoj_multibutton_panel_selectbox{
+	float: none;
+}
+.twoj_multibutton_default_button{
+	font-size: small;
+	font-weight: bolder;
+	font-variant: small-caps;
+	cursor: pointer;
+	display: block;
+	margin-top: -10px;
+}
+.twoj_multibutton_panel_splitter{
+	margin-left: 15px;
+}
+.twoj_multibutton_panel_before{
+	margin-right: 4px;
+}
+.twoj_multibutton_panel_after{
+	margin-left: 5px;
+}

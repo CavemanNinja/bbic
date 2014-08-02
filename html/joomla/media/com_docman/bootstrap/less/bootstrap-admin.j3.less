@@ -1,0 +1,204 @@
+/*!
+ * Bootstrap v2.0.3
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+ 
+div.com_docman {
+	// CSS Reset
+	//@import "reset.less";
+	
+	// Core variables and mixins
+	@import "variables.jui.less"; // Modify this for custom colors, font-sizes, etc
+	@import "mixins.less";
+	
+	// Grid system and page structure
+	//@import "scaffolding.less";
+	//@import "grid.less";
+	//@import "layouts.less";
+	
+	// Base CSS
+	//@import "type.less";
+	//@import "code.less";
+	//@import "forms.less";
+	//@import "tables.less";
+	
+	// Components: common
+	//@import "sprites.less";
+	//@import "dropdowns.less";
+	//@import "wells.less";
+	//@import "component-animations.less";
+	//@import "close.less";
+	
+	// Components: Buttons & Alerts
+	//@import "buttons.less";
+	//@import "button-groups.less";
+	//@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+	
+	// Components: Nav
+	//@import "navs.less";
+	//@import "navbar.less";
+	//@import "breadcrumbs.less";
+	//@import "pagination.less";
+	//@import "pager.less";
+	
+	// Components: Popovers
+	//@import "modals.less";
+	//@import "tooltip.less";
+	//@import "popovers.less";
+	
+	// Components: Misc
+	//@import "thumbnails.less";
+	//@import "labels-badges.less";
+	//@import "progress-bars.less";
+	//@import "accordion.less";
+	//@import "carousel.less";
+	//@import "hero-unit.less";
+	
+	// Utility classes
+	//@import "utilities.less"; // Has to be last to override when necessary
+	
+	// Custom classes
+    @import "_mixins.less";
+    @import "_chameleon.less"; //Autoskinning
+    @import "_admin.less"; // Has to be last to override when necessary
+    @import "_iconpicker.less";
+	@import "_validator.less";
+    @import "_tree.less";
+    @import "_files.less";
+
+    @import "_select2.less";
+
+    ///* @group Joomla! 3.0+ specific fixes*/
+    .fltlft {
+        float: left;
+    }
+    @navBarItemHeight: 16px;
+    @navBarItemPointerHeight: 24px;
+    @mainNavBackground: #f5f5f5;
+
+    .docman-main-nav {
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        font-family: Helvetica;
+        background: @mainNavBackground;
+
+        list-style-image: none!important;
+        list-style-type: none!important;
+        margin: 0;
+        padding-top: 12.5px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 12.5px;
+
+        li {
+            padding: 0;
+            font-size: @navBarItemHeight;
+            line-height: @navBarItemHeight;
+            color: hsl(0, 0%, 35%);
+            text-shadow: white 0 1px 0, hsla(0, 0%, 0%, 0.1) 0 2px 5px;
+            position: relative;
+            padding-left: 0px;
+            //opacity: 0.75;
+            position: relative;
+            margin-left: 0px;
+            margin-right: 0px;
+
+            a {
+                padding: 7.5px 0;
+                padding-left: 20px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
+        li.active {
+            color: hsl(0, 0%, 35%);
+
+            &::before, &::after {
+                display: block;
+                content: ' ';
+                width: 0;
+                height: 0;
+                border-top: 0px solid transparent;
+                border-top-width: @navBarItemPointerHeight/2;
+                border-bottom: 0px solid transparent;
+                border-bottom-width: @navBarItemPointerHeight/2;
+                border-left: 0px solid #ddd;
+                border-left-width: @navBarItemPointerHeight/2;
+                box-shadow: inset black 0 2px 0;
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                margin-top: -@navBarItemPointerHeight/2;
+            }
+            &::after {
+                border-left-color: white;
+                left: -1px;
+            }
+
+            a {
+                cursor: default;
+                position: relative;
+                background-color: transparent!important;
+                text-shadow: none;
+                color: #666;
+
+                &::before, &::after {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -@navBarItemPointerHeight/2;
+                    z-index: 1;
+                    height: @navBarItemPointerHeight;
+                }
+
+                &::before {
+                    content: -webkit-linear-gradient(right, hsla(0, 0%, 0%, 0.2),hsla(0, 0%, 0%, 0.05) 75%, hsla(0, 0%, 0%, 0));
+                    content: -moz-linear-gradient(right, hsla(0, 0%, 0%, 0.2),hsla(0, 0%, 0%, 0.05) 75%, hsla(0, 0%, 0%, 0));
+                    content: linear-gradient(right, hsla(0, 0%, 0%, 0.2),hsla(0, 0%, 0%, 0.05) 75%, hsla(0, 0%, 0%, 0));
+                    display: block;
+                    width: (@navBarItemPointerHeight/2) + 2;
+                    left: -2px;
+                }
+                &::after {
+                    content: ' ';
+                    height: 0px;
+                    border-top: 10px solid @mainNavBackground;
+                    border-top-width: @navBarItemPointerHeight/2;
+                    border-bottom: 10px solid @mainNavBackground;
+                    border-bottom-width: @navBarItemPointerHeight/2;
+                    border-left: 11px solid transparent;
+                    border-left-width: (@navBarItemPointerHeight/2) + 1;
+                    left: 0px;
+                }
+            }
+        }
+    }
+    ///* @end */
+}
+//Hiding the sidebar and fixing the width
+body.com_docman {
+    #content > .row-fluid {
+        & > .span2 {
+            display: none!important;
+        }
+        & > .span10 {
+            margin-left: 0px!important;
+            width: 100%!important;
+
+        }
+    }
+}
+/* Fix the aliasing on vector font icons */
+[class^="icon-"], [class*=" icon-"] {
+    &, &::before {
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+}
+
+@import "_global_overrides.less";

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>2J Carousel</name>
+	<creationDate>2014</creationDate>
+	<author>2Joomla Team</author>
+	<authorEmail>support@2joomla.net</authorEmail>
+	<authorUrl>http://www.2joomla.net</authorUrl>
+	<copyright>Copyright (c) 2008-2014 2Joomla.net All rights reserved</copyright>
+	<license>released under GNU/GPL License : http://www.gnu.org/copyleft/gpl.html</license>
+	<version>1.0.7</version>
+
+	<description>2J Carousel Plugin - it's AJAX 3D images carousel, with wide range of customization options (attention!!! more then 50 options for customization of the front end carousel) With 2JCarousel you can add images carousel to the web site, which looks like 3D oval with perspective. With 2JCarousel you receive freedom of creativity: all this options with combination of CSS styles which you can easily modify to make 2J Carousel fit to your web site design and your needs the best way! 2JCarousel have advanced images management tools: 3 ways for uploading sets of the images to the component scanning server directory, batch upload , uploading single images (one by one). 2J Carousel have implemented smart resizing functionality for thumbnails and big images.</description>
+	
+	<scriptfile>script.php</scriptfile>
+	
+	<files>
+		<filename>index.html</filename>
+	</files>
+	
+	<administration>
+		<menu img="components/com_2jcarousel/2jcarousel_16.png">COM_2JCAROUSEL_MENU</menu>
+		<files>
+			<filename>2jcarousel.php</filename>
+			<filename>index.html</filename>
+			<filename>2jcarousel_16.png</filename>
+		</files>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.com_2jcarousel.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>
+

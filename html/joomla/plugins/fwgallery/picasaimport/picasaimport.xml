@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0.0" type="plugin" group="fwgallery" method="upgrade">
+	<name>FW Gallery Picasa Import</name>
+	<creationDate>10 February 2014</creationDate>
+    <author>Fastw3b - We develop while you are thinking</author>
+    <authorEmail>dev@fastw3b.net</authorEmail>
+    <authorUrl>http://www.fastw3b.net</authorUrl>
+    <copyright>Copyright (C) 2014 Fastw3b. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>3.0</version>
+	<description><![CDATA[
+		<p><img alt="thank-yu3" src="../plugins/fwgallery/picasaimport/picasaimport/assets/images/thank-yu3.png" width="1020" height="77" /></p>
+		<p><img style="margin: 2px 8px 2px 2px; float: left;" alt="picasa_import_130" src="../plugins/fwgallery/picasaimport/picasaimport/assets/images/picasa_import_130.png" width="130" height="171" /></p>
+		<div>FW Gallery Picasa Import Plugin has been installed successfully on your website.</div>
+		<div>Thank you for your choice! We hope that you will enjoy Fastw3b extensions!</div>
+		<p>&nbsp;</p>
+		<p><strong>What to do next?<br /></strong></p>
+		<div>* Make sure that the plugin is enabled. Please check it in Extensions &gt;&gt; Plugin Manager.</div>
+		<div>* Go to FW Gallery &gt;&gt; Plugins to import your Picasa images into FW Gallery.</div>
+		<div>* Follow step-by-step guide published on the <a target="_blank" href="http://fastw3b.net/joomla-extensions/product/91-fw-gallery-picasa-import-plugin.html">Documentation page</a>.</div>
+		<p>&nbsp;</p>
+		<p style="text-align: left;"><span style="font-size: 14pt;"> </span></p>
+		<br />
+		<p><strong>Useful links:</strong></p>
+		<ul>
+		<li><a target="_blank" href="http://fastw3b.net/joomla-extensions/fw-gallery.html">FW Gallery add-ons and templates &gt;&gt;</a></li>
+		<li>View <a target="_blank" href="http://extensions.joomla.org/extensions/photos-a-images/photo-gallery/13185">JED reviews and leave yours &gt;&gt;</a></li>
+		<li>Follow us on <a target="_blank" href="http://twitter.com/#%21/Fastw3b">Twitter</a> or <a target="_blank" href="http://www.facebook.com/pages/Fastw3b/165610930146118">Facebook &gt;&gt;</a></li>
+		<li>Get immediate support via <a target="_blank" href="http://fastw3b.net/support/contact-us.html">Contact Us form &gt;&gt;</a><a target="_blank" href="http://www.fastw3b.net/support/premium-support.html"> </a></li>
+		</ul>
+		<p>&nbsp;</p>
+		<div>Developed by <a target="_blank" href="http://fastw3b.net/">Fastw3b</a></div>
+		<div>Copyright &copy; 2007 - 2014 Fastw3b</div>	]]></description>
+	<files>
+        <filename plugin="picasaimport">picasaimport.php</filename>
+        <folder>picasaimport</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_fwgallery_picasaimport.ini</language>
+	</languages>
+</extension>

@@ -1,0 +1,426 @@
+///* @group Joomla resets */
+tr, td {
+    border: none;
+}
+.btn {
+    letter-spacing: normal;
+}
+//Beez fixes
+.dropdown-menu {
+    list-style: none!important;
+    padding: 5px 0!important;
+    margin: 2px 0 0!important;
+}
+.dropdown-grid .dropdown-menu {
+    padding: 8px 8px 5px 8px!important;
+}
+.nav {
+    list-style: none!important;
+}
+///* @end */
+
+//Just a CSSS4 trick that give icons the same effect as the text-shadow we're using
+.icon-white {
+    -webkit-filter: drop-shadow(0 -1px 0 hsla(0, 0%, 0%, 0.25));
+}
+
+/* @group Generic fixes to Bootstrap */
+//Fixing issue where labels and juts info text would have a wrong height offset
+.controls .help-info {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: inline-block;
+}
+/* @end */
+
+.docman-group {
+	.clearfix();
+}
+
+.docman-row {
+	border-top: 1px solid @rowBackgroundColor;
+    border-top-color: @rowBackgroundColorHSLA;
+	padding-top: 20px;
+	margin-top: 20px;
+	.clearfix();
+}
+
+.docman-title {
+    /*font-size: 20px!important;*/
+    padding: 0px !important;
+    padding-bottom: 5px;
+    /*font-weight: bold;*/
+    margin: 0px !important;
+
+    &h2 {
+        /*font-family: inherit!important;*/
+    }
+}
+
+.docman-document-header {
+    position: relative;
+	.icon {
+        height: 32px;
+        width: 32px;
+        margin-top: 8px;
+		margin-right: 8px;
+	}
+}
+.docman-document .docman-document-header {
+    border-bottom: none!important;
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -16px;
+    }
+    &.icon {
+        padding-left: 40px!important;
+    }
+}
+.docman-row .docman-document-header .icon {
+    margin-top: 0px;
+}
+
+.docman-document-thumbnail {
+    max-width: 256px;
+    margin:0px 10px 10px 0px;
+    float:left;
+    cursor: pointer;
+}
+.docman-document-description {
+    margin-top: 0;
+}
+.docman-row .docman-document-description {
+	width: 60%;
+	float: left;
+}
+
+/* @group the following is from theme.css */
+
+.docman-heading-wrap {
+    position: relative;
+
+    .docman-heading {
+        margin: 0 0 20px 0;
+
+        &.docman-heading-pagination {
+            margin-top: 20px;
+        }
+        & + .pagination-limit {
+            position: absolute;
+            top: 5px;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
+.docman-heading.category, .categories .category {
+    margin: 0;
+    padding: 10px;
+    .clearfix;
+
+    .icon {
+        height: 32px;
+        width: 32px;
+        display: block;
+        margin-right: 10px;
+    }
+}
+.docman-heading-inner, .category-inner {
+    .clearfix;
+}
+/* @end */
+
+/* @group Categories view */
+.categories {
+    border-top: 1px solid @rowBackgroundColor;
+    border-top-color: @rowBackgroundColorHSLA;
+    margin-top: 10px;
+}
+.categories .category {
+    .linear-gradient(@rowBackgroundColorHSLA, fade(@rowBackgroundColorHSLA, 0));
+
+    display: block;
+    float: none;
+    border-top: 1px solid #fff;
+    padding: 10px 5px 10px 10px;
+    border-top-color: hsla(0, 0%, 100%, 0.1);
+    border-bottom: 1px solid @rowBackgroundColor;
+    border-bottom-color: @rowBackgroundColorHSLA;
+}
+.categories .category .title {
+
+}
+.categories .category .icon {
+
+}
+
+.pagination .limit {
+    margin-right: 5px;
+    float: left;
+    padding: 0 14px;
+    line-height: 34px;
+    border-top: 1px solid transparent;
+}
+.pagination .limit select {
+    width: auto;
+    margin-bottom: 4px;
+}
+/* @end */
+
+/* @group Category view */
+.category.icon {
+    background-repeat: no-repeat;
+    background-position: left 0.6em;
+    padding-left: 37px;
+}
+.docman-document-header {
+    margin-bottom: 10px;
+
+    .btn-toolbar {
+        display: inline-block;
+
+        .docman-btn-group-download {
+            display: none;
+        }
+    }
+}
+.docman-row .docman-document-header {
+    width: 60%;
+    float: left;
+}
+.docman-document-header .label {
+    vertical-align: 28%; /* better alignment with title */
+}
+.docman-document-details {
+    float: right;
+    width: 34%;
+
+    .well, table {
+        list-style: none;
+        font-size: 12px;
+        margin-bottom: 0px;
+
+        .detail-label {
+            text-align: right;
+            font-weight: bold;
+        }
+        .detail-name {
+            display: block;
+        }
+    }
+}
+.docman-row .btn-toolbar {
+    float: left;
+    clear: both;
+}
+
+.btn-group .docman-btn-download {
+    float: left;
+}
+.docman-btn-group-download.btn-group-vertical {
+    .docman-btn-download {
+        float: none;
+        margin-bottom: 0;
+    }
+    .btn {
+        display: block;
+    }
+}
+.docman-document {
+    .docman-btn-download.btn-large {
+        margin-bottom: 10px;
+    }
+    .docman-btn-group-download {
+        margin-bottom: 10px;
+
+        .btn.btn-large {
+            font-size: 15px;
+        }
+
+        &.btn-group-split {
+            .clearfix;
+
+            .btn {
+                width: 50%;
+                float: left;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+        }
+    }
+    .docman-btn-group-download > :last-child {
+        .clearfix;
+    }
+}
+
+/* @end */
+
+/* @group Document view */
+.docman-document .docman-document-details tbody tr td {
+    .box-shadow(inset white 0 1px 0);
+}
+.docman-document .docman-document-details tbody tr:first-child td {
+    border-top: none;
+    .box-shadow(none);
+}
+.docman-document .docman-document-details .well {
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    color: lighten(@textColor, 10%);
+    text-shadow: 0 1px 0 white;
+    word-wrap: break-word;
+
+    .detail-label {
+        display: block;
+        text-align: left;
+        font-size: 11px;
+        font-weight: normal;
+        color: desaturate(@infoText, 30%);
+        padding: 5px 0px;
+
+        &::before {
+            content: '.';
+            color: transparent;
+            display: block;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            height: 0px;
+            width: 100%;
+            border-bottom: white 1px solid;
+            border-top: @tableBorder 1px solid;
+        }
+        &::after {
+            content:':';
+        }
+
+    }
+
+    & > .detail-label:first-child::before {
+        display: none;
+    }
+}
+/* @end */
+
+/* @group Row Icons */
+
+.docman-wrapper .row .icon {
+    position: absolute;
+    overflow: hidden;
+    height: 32px;
+    width: 32px;
+    left: 0;
+    top: 50%;
+    margin-top: -16px;
+}
+
+.docman-wrapper .row .icon.left {
+    left: 10px;
+    top: 10px;
+}
+
+.docman-wrapper .row .icon.right {
+    right: 10px;
+    top: 10px;
+    border:  1px so;
+}
+
+/* @end */
+
+.docman-wrapper .row:hover{
+    background-color: rgba(100,100,100,0.1);
+    .transition(all 0.3s);
+}
+
+.docman-gallery {
+    padding: 10px;
+    border: 1px solid rgba(100,100,100,0.1);
+}
+
+.docman-gallery .row{
+    border: 1px solid rgba(100,100,100,0.1);
+    background-color: rgba(100,100,100,0.1);
+    margin: 5px;
+    padding: 5px;
+    width: 46%;
+    position: relative;
+}
+
+.docman-gallery .row.clearleft {
+    clear: left;
+}
+
+.docman-gallery .row .icon {
+    margin-right: 10px;
+}
+
+.docman-gallery dd {
+    padding: 0;
+    margin: 0;
+}
+
+.docman-images .image_box {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    text-align: center;
+}
+
+.docman-images .row {
+    clear: both;
+}
+
+.docman-images .image_box img {
+    .border-radius(5px);
+    .box-shadow(rgba(0, 0, 0, 0.148438) 0px 1px 3px);
+    .transition(all 0.15s ease-out);
+
+    padding: 4px;
+    border: 1px solid silver;
+    margin: 5px;
+}
+
+table.toolbar {
+    margin: 0 0 10px auto;
+}
+
+.input-append a.modal-button.btn {
+	margin-top: 0 !important;
+}
+/* @end */
+
+/* @group Table list */
+.docman-table-list {
+    table {
+        margin-bottom: 0;
+
+        td {
+            vertical-align: middle;
+        }
+        .btn-toolbar {
+            margin: 0 0 0 0;
+        }
+        .icon {
+            margin-right: 0.1em;
+
+            &.autosize {
+                max-width: 1.75em;
+            }
+        }
+    }
+}
+/* @end */
+
+.label-docman-draft {
+  background-color: #b94a48;
+}
+
+.label-docman-pending {
+  background-color: #c09853;
+}
+
+.label-docman-expired {
+  background-color: #3a87ad;
+}

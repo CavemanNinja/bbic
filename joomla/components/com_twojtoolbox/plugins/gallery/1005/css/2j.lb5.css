@@ -1,0 +1,52 @@
+/*
+    twoj_gallery_lb5 Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#twoj_gallery_lb5, #twoj_gallery_lb5_Overlay, #twoj_gallery_lb5_Wrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#twoj_gallery_lb5_Overlay{position:fixed; width:100%; height:100%;}
+#twoj_gallery_lb5_MiddleLeft, #twoj_gallery_lb5_BottomLeft{clear:left;}
+#twoj_gallery_lb5_Content{position:relative;}
+#twoj_gallery_lb5_LoadedContent{overflow:auto;}
+#twoj_gallery_lb5_Title{margin:0;}
+#twoj_gallery_lb5_LoadingOverlay, #twoj_gallery_lb5_LoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#twoj_gallery_lb5_Previous, #twoj_gallery_lb5_Next, #twoj_gallery_lb5_Close, #twoj_gallery_lb5_Slideshow{cursor:pointer;}
+.twoj_gallery_lb5_Photo{float:left; margin:auto; padding: 0; border:0; display:block; max-width:none;}
+.twoj_gallery_lb5_Iframe{width:100%; height:100%; display:block; border:0;}
+#twoj_gallery_lb5, #twoj_gallery_lb5_Content, #twoj_gallery_lb5_LoadedContent{box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of twoj_gallery_lb5.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#twoj_gallery_lb5_Overlay{background:#000;}
+#twoj_gallery_lb5{}
+    #twoj_gallery_lb5_TopLeft{width:14px; height:14px; background:url('%%CSS_URL%%/images/lb5/controls.png') no-repeat 0 0;}
+    #twoj_gallery_lb5_TopCenter{height:14px; background:url('%%CSS_URL%%/images/lb5/border.png') repeat-x top left;}
+    #twoj_gallery_lb5_TopRight{width:14px; height:14px; background:url('%%CSS_URL%%/images/lb5/controls.png') no-repeat -36px 0;}
+    #twoj_gallery_lb5_BottomLeft{width:14px; height:43px; background:url('%%CSS_URL%%/images/lb5/controls.png') no-repeat 0 -32px;}
+    #twoj_gallery_lb5_BottomCenter{height:43px; background:url('%%CSS_URL%%/images/lb5/border.png') repeat-x bottom left;}
+    #twoj_gallery_lb5_BottomRight{width:14px; height:43px; background:url('%%CSS_URL%%/images/lb5/controls.png') no-repeat -36px -32px;}
+    #twoj_gallery_lb5_MiddleLeft{width:14px; background:url('%%CSS_URL%%/images/lb5/controls.png') repeat-y -175px 0;}
+    #twoj_gallery_lb5_MiddleRight{width:14px; background:url('%%CSS_URL%%/images/lb5/controls.png') repeat-y -211px 0;}
+    #twoj_gallery_lb5_Content{background:#fff; overflow:visible;}
+        .twoj_gallery_lb5_Iframe{background:#fff;}
+        #twoj_gallery_lb5_Error{padding:50px; border:1px solid #ccc;}
+        #twoj_gallery_lb5_LoadedContent{margin-bottom:5px;}
+        #twoj_gallery_lb5_LoadingOverlay{background:url('%%CSS_URL%%/images/lb5/loading_background.png') no-repeat center center;}
+        #twoj_gallery_lb5_LoadingGraphic{background:url('%%CSS_URL%%/images/lb5/loading.gif') no-repeat center center;}
+        #twoj_gallery_lb5_Title{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
+        #twoj_gallery_lb5_Current{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
+        
+        #twoj_gallery_lb5_Previous, #twoj_gallery_lb5_Next, #twoj_gallery_lb5_Close, #twoj_gallery_lb5_Slideshow{position:absolute; bottom:-29px; background:url('%%CSS_URL%%/images/lb5/controls.png') no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
+        #twoj_gallery_lb5_Previous{left:0px; background-position: -51px -25px;}
+        #twoj_gallery_lb5_Previous:hover{background-position:-51px 0px;}
+        #twoj_gallery_lb5_Next{left:27px; background-position:-75px -25px;}
+        #twoj_gallery_lb5_Next:hover{background-position:-75px 0px;}
+        #twoj_gallery_lb5_Close{right:0; background-position:-100px -25px;}
+        #twoj_gallery_lb5_Close:hover{background-position:-100px 0px;}
+        
+        .twoj_gallery_lb5_Slideshow_on #twoj_gallery_lb5_Slideshow{background-position:-125px 0px; right:27px;}
+        .twoj_gallery_lb5_Slideshow_on #twoj_gallery_lb5_Slideshow:hover{background-position:-150px 0px;}
+        .twoj_gallery_lb5_Slideshow_off #twoj_gallery_lb5_Slideshow{background-position:-150px -25px; right:27px;}
+        .twoj_gallery_lb5_Slideshow_off #twoj_gallery_lb5_Slideshow:hover{background-position:-125px 0px;}

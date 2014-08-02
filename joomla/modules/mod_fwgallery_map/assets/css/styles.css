@@ -1,0 +1,22 @@
+.mod-fwg-map {
+	color: #000;
+    font: 12px "Trebuchet MS",Arial,Helvetica,sans-serif;
+	border:1px solid #a6a39a;
+}
+.mod-fwg-map td a img {
+	padding:2px;
+	border:1px solid #a6a39a;
+}
+.fw-map-name p {
+	padding:0;
+	margin:0;
+	color:#2e910b;
+	text-decoration:underline;
+}
+.fw-map-name strong {
+	background:url(../images/fw_map_hom.png) no-repeat 0 50%;
+	padding-left:15px;
+}
+.mod-fwg-map img {
+	max-width: none !important;
+}

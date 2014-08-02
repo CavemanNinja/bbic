@@ -1,0 +1,135 @@
+.mod-fwsg {
+    margin: 0!important;
+    padding: 0!important;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mod-fwsg .holder {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+.mod-fwsg .holder ul {
+	width: auto!important;
+    height: 740px!important;
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.mod-fwsg .holder ul li {
+	width: auto!important;
+	height: auto!important;
+	float: left;
+    margin: 0;
+    padding: 0;
+    position: absolute!important;
+    left: 0!important;
+    top: 0!important;
+}
+
+.mod-fwsg .holder td {
+	padding: 5px;
+	vertical-align: top;
+}
+.container.wrap_control{
+    position: relative;
+}
+.mod-fwsg .control{
+    position: absolute;
+    bottom: 160px;
+    right: 0;
+    width: 240px;
+    z-index: 21;
+}
+.mod-fwsg .control .counter{
+    /*position: absolute;*/
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 94px;
+    height: 94px;
+    background: url(../images/counter_bg.png) 0 0 no-repeat;
+    font-family: 'roboto_condensedlight';
+    font-size: 36px;
+    color: #3a3a3a;
+    line-height: 91px;
+}
+.mod-fwsg .control .prev,
+.mod-fwsg .control .next {
+    cursor: pointer;
+    height: 57px!important;
+    outline: medium none;
+    overflow: hidden;
+    position: static!important;
+    text-indent: -9999px;
+    top: 0px!important;
+    width: 57px!important;
+    z-index: 20;
+    display: inline-block;
+    margin-top: 20px;
+}
+.mod-fwsg .control .prev {
+    background: url("../images/slider_arrow_left.png") no-repeat 0 0!important;
+	left: 0px!important;
+}
+.mod-fwsg .control .next {
+    background: url("../images/slider_arrow_right.png") no-repeat 0 0!important;
+    right: 0px!important;
+}
+.mod-fwsg .control a:hover {
+    background-position: -19px 0;
+}
+
+.mod-fwsg .paging ul {
+    display: table;
+    margin: 0 auto;
+}
+.mod-fwsg .paging ul li {
+    display: table-cell;
+    list-style: none outside none;
+    padding-right: 7px;
+    width: 12px;
+}
+.mod-fwsg .paging ul li a {
+    background: url("../images/paging.png") no-repeat scroll -19px 0 transparent;
+    border: medium none !important;
+    display: block;
+    height: 12px;
+    text-indent: -20000px;
+    width: 12px;
+	overflow: hidden;
+}
+.mod-fwsg .paging ul li a.active {
+    background-position: 0 0;
+}
+
+/* Portrait tablet to landscape and desktop */ 
+@media screen and (max-width: 768px) {
+	.mod-fwsg {
+	    width: 450px;
+	}
+	.mod-fwsg .holder {
+	    width: 450px;
+	}
+	.mod-fwsg .holder ul li {
+		width: 450px;
+	}
+}
+@media (max-width: 480px) {
+	.mod-fwsg {
+	    width: 300px;
+	}
+	.mod-fwsg .holder {
+	    width: 300px;
+	}
+	.mod-fwsg .holder ul li {
+		width: 300px;
+	}
+}
+
+.mod-fwsg .holder li img {
+	width: 100%;
+}

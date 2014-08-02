@@ -1,0 +1,155 @@
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .ui-tabs-hide {
+        display: none;
+    }
+}
+
+@media print {
+    .ui-tabs-nav {
+        display: none;
+    }
+}
+
+.twoj_loadingobject_0, .twoj_loadingobject_1, .twoj_loadingobject_2{
+	position: absolute;
+}
+
+.twoj_buttonwrapper			{ position: relative; 	width: 100px; 	height: 40px; z-index: 10000;}
+.twoj_buttonwrapper_left	{ float: left; 			width: 40px; 	height: 40px; }
+.twoj_buttonwrapper_right	{ float: right; 			width: 40px; 	height: 40px; }
+
+.twoj_buttonwrapper_left:hover, 
+.twoj_buttonwrapper_right:hover{ cursor: pointer; }
+
+.twoj_button_style1{ height: 50px; }
+.twoj_button_style1 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style1_left.png) center no-repeat; width: 39px; height: 50px; }
+.twoj_button_style1 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style1_right.png) no-repeat center; width: 39px; height: 50px; }
+
+.twoj_button_style2{ width: 110px; height: 40px; } 
+.twoj_button_style2 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style2_left.png) center no-repeat; width: 40px; height: 40px; }
+.twoj_button_style2 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style2_right.png) no-repeat center; width: 40px; height: 40px; }
+
+.twoj_button_style3{ height: 40px;  width: 110px; }
+.twoj_button_style3 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style3_left.png) center no-repeat; width: 40px; height: 40px;}
+.twoj_button_style3 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style3_right.png) no-repeat center; width: 40px; height: 40px;}
+
+
+.twoj_button_style4{ height: 40px;  width: 100px; }
+.twoj_button_style4 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style4_left.png) center no-repeat; width: 40px; height: 40px; }
+.twoj_button_style4 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style4_right.png) no-repeat center; width: 40px; height: 40px; }
+
+.twoj_button_style5{ height: 40px; }
+.twoj_button_style5 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style5_left.png) center no-repeat; width: 40px; height: 40px; }
+.twoj_button_style5 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style5_right.png) no-repeat center; width: 40px; height: 40px; }
+
+.twoj_button_style6{ height: 40px; }
+.twoj_button_style6 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style6_left.png) center no-repeat; width: 40px; height: 40px; }
+.twoj_button_style6 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style6_right.png) no-repeat center; width: 40px; height: 40px; }
+
+.twoj_button_style7{ height: 40px; width: 100px; }
+.twoj_button_style7 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style7_left.png) center no-repeat; width: 40px; height: 40px; }
+.twoj_button_style7 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style7_right.png) no-repeat center; width: 40px; height: 40px; }
+
+.twoj_button_style8{ height: 60px; width: 140px; }
+.twoj_button_style8 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style8_left.png) center no-repeat; 	width: 60px; height: 60px; }
+.twoj_button_style8 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style8_right.png) no-repeat center; width: 60px; height: 60px; }
+
+.twoj_button_style9{ height: 60px; width: 140px; }
+.twoj_button_style9 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style9_left.png) center no-repeat; 	width: 60px; height: 60px;}
+.twoj_button_style9 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style9_right.png) no-repeat center; width: 60px; height: 60px;}
+
+.twoj_button_style10{ height: 90px; }
+.twoj_button_style10 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style10_left.png) center no-repeat; 	width: 40px; height: 90px; }
+.twoj_button_style10 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style10_right.png) no-repeat center; width: 40px; height: 90px; }
+
+.twoj_button_style11{ width: 160px; height: 45px; }
+.twoj_button_style11 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style11_left.png) center no-repeat; 	width: 70px; height: 45px; }
+.twoj_button_style11 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style11_right.png) no-repeat center; width: 70px; height: 45px; }
+
+.twoj_button_style12{ height: 27px; width: 70px; }
+.twoj_button_style12 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style12_left.png) center no-repeat; 	width: 27px; height: 27px;  }
+.twoj_button_style12 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style12_right.png) no-repeat center; width: 27px; height: 27px; }
+
+.twoj_button_style13 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style13_left.png) center no-repeat; }
+.twoj_button_style13 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style13_right.png) no-repeat center; }
+
+.twoj_button_style14 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style14_left.png) center no-repeat; }
+.twoj_button_style14 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style14_right.png) no-repeat center; }
+
+.twoj_button_style15 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style15_left.png) center no-repeat; }
+.twoj_button_style15 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style15_right.png) no-repeat center; }
+
+.twoj_button_style16 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style16_left.png) center no-repeat;  	width: 30px; height: 30px;}
+.twoj_button_style16 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style16_right.png) no-repeat center; width: 30px; height: 30px;}
+
+.twoj_button_style17 { width: 90px; height: 38px;}
+.twoj_button_style17 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style17_left.png) center no-repeat;  	width: 38px; height: 38px;}
+.twoj_button_style17 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style17_right.png) no-repeat center; width: 38px; height: 38px;}
+
+.twoj_button_style18 { width: 50px; height: 24px;}
+.twoj_button_style18 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style18_left.png) center no-repeat;  	width: 24px; height: 24px;}
+.twoj_button_style18 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style18_right.png) no-repeat center; width: 24px; height: 24px;}
+
+.twoj_button_style19{ height: 40px; }
+.twoj_button_style19 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style19_left.png) center no-repeat; 	width: 40px; height: 40px; }
+.twoj_button_style19 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style19_right.png) no-repeat center; width: 40px; height: 40px; }
+
+.twoj_button_style20{  width: 70px; height: 30px; }
+.twoj_button_style20 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style20_left.png) center no-repeat; 	width: 30px; height: 30px; }
+.twoj_button_style20 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style20_right.png) no-repeat center; width: 30px; height: 30px; }
+
+.twoj_button_style21{  width: 110px; height: 26px; }
+.twoj_button_style21 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style21_left.png) center no-repeat; 	width: 35px; height: 26px; }
+.twoj_button_style21 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style21_right.png) no-repeat center; width: 35px; height: 26px; }
+
+.twoj_button_style22{  width: 50px; height: 21px; }
+.twoj_button_style22 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style22_left.png) center no-repeat; 	width: 14px; height: 21px; }
+.twoj_button_style22 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style22_right.png) no-repeat center; width: 14px; height: 21px; }
+
+.twoj_button_style23{  width: 80px; height: 35px; }
+.twoj_button_style23 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style23_left.png) center no-repeat; 	width: 35px; height: 35px; }
+.twoj_button_style23 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style23_right.png) no-repeat center; width: 35px; height: 35px; }
+
+.twoj_button_style24{  width: 70px; height: 40px; }
+.twoj_button_style24 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style24_left.png) center no-repeat; 	width: 35px; height: 40px; }
+.twoj_button_style24 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style24_right.png) no-repeat center; width: 35px; height: 40px; }
+
+.twoj_button_style25{  width: 80px; height: 35px; }
+.twoj_button_style25 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style25_left.png) center no-repeat; 	width: 35px; height: 35px; }
+.twoj_button_style25 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style25_right.png) no-repeat center; width: 35px; height: 35px; }
+
+.twoj_button_style26{  width: 80px; height: 35px; }
+.twoj_button_style26 .twoj_buttonwrapper_left{ background: url(%%CSS_URL%%/img_style/style26_left.png) center no-repeat; 	width: 35px; height: 35px; }
+.twoj_button_style26 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style26_right.png) no-repeat center; width: 35px; height: 35px; }
+
+.twoj_button_style27{ 	width: 80px;  	height: 24px; }
+.twoj_button_style27 .twoj_buttonwrapper_left{ 	background: url(%%CSS_URL%%/img_style/style27_left.png) center no-repeat;  width: 24px; height: 24px; }
+.twoj_button_style27 .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style27_right.png) no-repeat center; width: 24px; height: 24px; }
+
+.twoj_button_custom{ 
+	width: 80px;  
+	height: 35px; 
+}
+.twoj_button_custom .twoj_buttonwrapper_left{ 
+	background: url(%%CSS_URL%%/img_style/style1_left.png) center no-repeat;  
+	width: 35px; 
+	height: 35px; 
+}
+.twoj_button_custom .twoj_buttonwrapper_right{ background: url(%%CSS_URL%%/img_style/style25_right.png) no-repeat center; width: 35px; height: 35px; }
+.twoj_button_custom .twoj_buttonwrapper_left:hover{ }
+.twoj_button_custom .twoj_buttonwrapper_right:hover{ }
+
+.twoj_carousel_style1 img.twoj_thimage{
+	border: none !important;
+	background-color: transparent !important;
+}
+
+.twoj_carousel_style2 img.twoj_thimage{
+	border: 1px solid #ccc  !important;
+	padding: 1px !important;
+	background-color: #eee !important;
+}
+
+img.twoj_thimage:hover{
+	cursor: pointer;
+}

@@ -1,0 +1,569 @@
+.twojtoolbox_td_active{ cursor: pointer; }
+
+#twojtoolbox_install{ padding: 0; }
+
+.twojtoolbox_product{
+	display: block;
+	float: left;
+	width: auto;
+	height: auto;
+	background-color: transparent;
+	margin: 1px 1px 1px 1px;
+	padding: 0;
+	cursor: pointer;
+	position: relative;
+}
+.twojtoolbox_product img{
+	padding: 0;
+	margin: 0;
+}
+
+.twojtoolbox_product .check{
+	background: url('%%CSS_URL%%/admin/checked.png') no-repeat top left;
+	width: 300px;
+	height: 84px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+
+#twojtoolbox_newproduct{
+	padding-bottom: 0px;
+	padding-top: 2px;
+	margin-left: 0px;
+	float: right;
+	margin-top: -5px;
+	margin-bottom: -5px;
+	margin-right: 10px;
+	font-weight: bolder;
+	padding-right: 0px;
+	background: url('%%CSS_URL%%/admin/load.gif') no-repeat center left;
+	padding-left: 40px;
+}
+#twojtoolbox_newproduct.twojtoolbox_updatecorect{
+	margin-top: -2px;
+	margin-bottom: -1px;
+}
+#twojtoolbox_newproduct.twojtoolbox_update_complete{
+	background: url('%%CSS_URL%%/admin/inf.gif') no-repeat center left;
+	padding-left: 16px;
+}
+
+
+
+.twojtoolbox_needupdate td .version_new{
+	font-weight: bolder;
+	font-size: 110%;
+	color: Black;
+}
+
+.twojtoolbox_status_button{
+	width: 96px;
+	height: 18px;
+	display: block;
+	float: left;
+/*	margin-right: 5px;*/
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.twojtoolbox_status_new{
+	background-image: url('%%CSS_URL%%/admin/bt_new.png');
+}
+.twojtoolbox_status_installed{
+	background-image: url('%%CSS_URL%%/admin/bt_installed.png');
+}
+.twojtoolbox_status_update{
+	background-image: url('%%CSS_URL%%/admin/bt_update.png');
+}
+
+.twojtoolbox_status_actionbutton{
+}
+.twojtoolbox_typeinfo{
+	height: 20px;
+	vertical-align: middle;
+	line-height: 20px;
+	font-size: 11px;
+}
+.twojtoolbox_status_actionbutton span{
+	width: 92px;
+	height: 20px;
+	display: block;
+	float: left;
+	cursor: pointer;
+	margin-left: 3px;
+}
+.twojtoolbox_buttonset_button_upload{
+	background-image: url('%%CSS_URL%%/admin/bt_upload.png');
+}
+.twojtoolbox_buttonset_button_scan{
+	background-image: url('%%CSS_URL%%/admin/bt_scan.png');
+}
+.twojtoolbox_buttonset_button_elements{
+	background-image: url('%%CSS_URL%%/admin/bt_elements.png');
+	margin-left: 5px;
+}
+.twojtoolbox_buttonset_button_options{
+	background-image: url('%%CSS_URL%%/admin/bt_options.png');
+}
+
+
+
+.twojtoolbox_status_actionbutton{ display: none; }
+.twojtoolbox_loading{
+	background-image: url('%%CSS_URL%%/admin/load_big.gif');
+	background-position: center center;
+	display: block;
+	height: 50px;
+	width: 50px;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
+.twojtoolbox_loading_small{
+	background-image: url('%%CSS_URL%%/admin/load.gif');
+	background-position: left center;
+	display: block;
+	height: 24px;
+	width: 33px;
+	background-repeat: no-repeat;
+	margin: 5;
+}
+
+.twojtoolbox_loading_big{
+	background-image: url('%%CSS_URL%%/admin/loading_bar.gif');
+	background-position: left center;
+	display: block;
+	height: 20px;
+	width: 160px;
+	background-repeat: no-repeat;
+	margin: 10;
+}
+
+.twojtoolbox_uplodinglog_loadimage{
+	background-image: url('%%CSS_URL%%/admin/load.gif');
+	background-position: left top;
+	display: block;
+	height: 8px;
+	width: 33px;float: left;
+	margin-top:4px;
+	
+}
+.twojtoolbox_uplodinglog{
+	float: left;
+	width: 320px;
+}
+.twojtoolbox_grid_true{
+	background-image: url('%%CSS_URL%%/admin/true.png');
+	background-position: left top;
+	display: block;
+	height: 16px;
+	width: 16px;
+	float: left;
+	
+}
+
+.twojtoolbox_infoplugin_title{
+	font-weight: bolder;
+	font-size: 12px;
+}
+.twojtoolbox_infoplugin_desc{
+	line-height: 20px;
+	word-spacing: 2px;
+	text-align: justify;
+	font-size: 12px;
+}
+.twojtoolbox_infoplugin_leftpanel{
+	float: left;
+	width: 110px;
+}
+.twojtoolbox_infoplugin_rightpanel{
+	float: left;
+	width: 550px;
+}
+.twojtoolbox_infoplugin_versiontext{
+	font-size: 10px;
+}
+.twojtoolbox_infoplugin_versiontext div{
+	float: left;
+	width: 50px;
+	
+}
+
+.twojtoolbox_pluginslist_title{
+	font-weight: bolder;
+}
+.twojtoolbox_pluginslist_image{
+	padding-right: 12px; float: left;
+	padding-bottom: 0px;
+}
+
+.twojtoolbox_selectversion{
+	width: 90px;
+}
+
+#twojtoolbox_typedialog_plugininfo a:hover, .ui-dialog-buttonpane a:hover{
+	text-decoration: none !important;
+}
+.twojtoolbox_plugindelete_text{
+	font-size: 12px;
+	text-align: justify;
+}
+
+#twojtoolbox_elementmenu{
+	text-align: left;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	clear: both;
+}
+#twojtoolbox_elementmenu_inner{ padding: 0;	margin: 0;  }
+#twojtoolbox_elementmenu_inner button{ margin-top: 0; }
+
+#twojtoolbox_elementmenu_selectcatid{ 	
+	vertical-align: top;
+	float: right; 
+}
+#twojtoolbox_elementmenu_selectcatid label{
+	font-weight: bolder;
+	padding-right: 8px;
+	display: block;
+	float: left;
+	margin-top: 5px;
+}
+#twojtoolbox_selectitems_chzn{
+	float: left;
+}
+
+
+
+
+#twojtoolbox_previewbox_divbox{
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	border: solid 1px silver;
+	width: 170px;
+	height: 130px;
+	background-image: url('%%CSS_URL%%/admin/load.gif');
+	background-position: center center;
+	background-color: White;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+	z-index: 10003;
+}
+#twojtoolbox_previewbox_divbox_inner{
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#twojtoolbox_labeltype{
+	padding: 0;
+	margin: 0;
+	float: right;
+}
+#twojtoolbox_labeltype img{ padding: 0; margin: 0; }
+
+.twojtoolbox_toolbox_version{
+	text-align: center;
+	font-size: 85%;
+}
+.twojtoolbox_toolbox_version a:hover,
+.twojtoolbox_toolbox_version a{
+font-weight: bolder;
+	text-decoration: none;
+}
+
+.twojtoolbox_form_addtext{
+	margin-left: 8px;
+	margin-top: 5px;
+	float: left;
+}
+.twojtoolbox_about_title_plugin{
+	font-size: 12px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-weight: bolder;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+.twojtoolbox_about_title_plugin img{
+	padding-right: 10px;
+}
+
+.twojtoolbox_about_twitterLink,
+.twojtoolbox_about_facebookLink,
+.twojtoolbox_about_youtubeLink{
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin: 10px 5px 5px 5px;
+	padding: 0;
+	float: left;
+	text-decoration: none !important;
+	
+}
+.twojtoolbox_about_twitterLink{ 	background: transparent url('%%CSS_URL%%/admin/twitter.png') no-repeat left; 	}
+.twojtoolbox_about_facebookLink{ background: transparent url('%%CSS_URL%%/admin/facebook.png') no-repeat left; }
+.twojtoolbox_about_youtubeLink{ 	background: transparent url('%%CSS_URL%%/admin/youtube.png') no-repeat left;	}
+
+.twojtoolbox_about_title{
+	padding: 0;
+	font-size: 16px;
+	font-weight: bolder;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.twojtoolbox_about_header{
+	font-weight: bolder;
+	font-size: 12px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	
+}
+.twojtoolbox_about_line{
+	padding-left: 34px;
+	font-size: 12px;
+	padding-bottom: 8px;
+}
+.twojtoolbox_about_line1{
+	padding-left: 44px;
+	float: left;
+	width: 150px;
+	font-size: 12px;
+	padding-bottom: 8px;
+}
+.twojtoolbox_about_line2{
+	padding-left: 20px;
+	float: left;
+	font-size: 12px;
+	padding-bottom: 8px;
+}
+.twojtoolbox_about_line3{
+	padding-left: 0px;
+	float: left;
+	font-size: 12px;
+	padding-bottom: 8px;
+	margin-top: -4px;
+	padding-left: 230px;
+	color: #b8860b;
+}
+.twojtoolbox_about_line4{
+	padding-left: 360px;
+	margin-top: -8px;
+	padding-bottom: 8px;
+}
+.twojtoolbox_about_line4 button{
+	font-size: 11px;
+	width: 60px;
+}
+#twojtoolbox_about_content{
+	margin: 0;
+	padding: 5px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+.twojtoolbox_about_powered{
+	display: block;
+	padding-top: 0px;
+	background: transparent url('%%CSS_URL%%/admin/2joomla_logo.png') no-repeat center bottom;
+	text-align: center;
+	padding-bottom: 58px;
+	font-size: 14px;
+	font-weight: bolder;
+	outline: none 0;
+}
+#twojtoolbox_typedialog_about a.twojtoolbox_about_powered:hover{
+	text-decoration: none;
+	outline: none 0;
+}
+.twojtoolbox_installed{
+	padding-left: 22px; 
+	background: transparent url('%%CSS_URL%%/admin/true.png') no-repeat center left;
+	color: #006400;
+}
+.twojtoolbox_notinstalled{
+	padding-left: 22px; 
+	background: transparent url('%%CSS_URL%%/admin/false.png') no-repeat center left;
+	color: #b8860b;
+}
+.icon-48-twojtoolbox {background-image: url('%%CSS_URL%%/admin/twojtoolbox-48x48.png');}
+.icon-32-twojtoolbox_about {background-image: url('%%CSS_URL%%/admin/info_button.png');}
+.icon-32-twojtoolbox_demo {background-image: url('%%CSS_URL%%/admin/demo.png');}
+
+.twojtoolbox_demo_div{
+	float: left;
+	position: relative;
+}
+.twojtoolbox_demo_img_select{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background-image: url('%%CSS_URL%%/admin/check_demos.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+	width: 71px;
+	height: 71px;
+}
+.twojtoolbox_demo_section_wrap{
+	padding: 10px;
+}
+#plugin_demo_frame{
+	border: 1px solid Silver;
+	background-color: white;	
+	padding: 10px;
+	margin: 0;
+	margin-top: 1px;
+}
+
+/* 10.09.2012 border fieald */
+
+.twojborderlist{
+	width: 710px;
+	height: 90px;
+	overflow: auto;
+	border: 1px solid silver;
+	position: relative;
+	float: left;
+	margin-left: 5px;
+	padding-top: 3px;
+}
+.twojborderlist .twojborderlist_li{
+	margin: 0 3px 3px 3px; 
+	padding: 0.4em; 
+	padding-left: 1.4em; 
+	font-size: 1.0em; 
+	height: 14px;  
+	color: black;
+	font-weight: normal; 
+}
+
+.twojborderlist .twojborderlist_li .twojborderlist_span_move{
+	position: absolute; 
+	margin-left: -1.3em;
+	cursor: move;
+	margin-top: -2px;
+}
+
+.twojborderlist .twojborderlist_li .twojborderlist_span_close{
+	float: right;
+	cursor: pointer;
+	margin-top: -2px;
+}
+.twojborderlist .twojborderlist_li .twojborderlist_inputbox{
+	float: none;
+	margin-top: -5px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+ .twojbordermenu{
+ 	float: left;
+	padding-left: 5px;
+}
+
+/* 19.09.2012 multivalue fieald */
+
+#submenu #twojttolboxNews{
+	font-size: 12px;
+	float: right;
+	font-weight: bolder;
+	color: #146295;	
+	margin-left: 10px;
+}
+.twoj_news_message_unread{
+	font-weight: bolder;
+	font-size: 14px;
+}
+.twoj_news_message_read{
+	font-style: italic;
+	
+}
+/* 22.10.2012 */
+div.controls button.twojtoolbox_editCssButton{
+	font-size: 10px;
+	margin-top: -1px;
+	margin-left: 10px;
+}
+.twojtoolbox_dialogFixed{
+	position:fixed !important;
+}
+div.ui-dialog .twojtoolbox_editCssStatus{
+	float: left;
+}
+.twojtoolbox_editCssStatus{
+	float: right;
+	font-size: 14px;
+	color: red;
+	text-align: left;
+	padding: 10px 20px;
+}
+
+.twojtoolbox_plugindelete_log{
+	font-weight: bolder;
+}
+
+.twoj_formEditItem input,
+.twoj_formEditItem textarea,
+.colorpicker input{
+	width: auto;
+}
+
+.twoj_formEditItem fieldset.panelform {
+	border: 0px none;
+}
+textarea.twoj_textarea_editCssSource{
+	width: 98%;
+	height: 95%;
+	margin: 0;
+	padding: 0;
+	border: 1px solid solid;
+	box-shadow: none;
+}
+textarea.twoj_textarea_editCssSource:focus{
+	border: 0px none;
+   transition: none;
+   box-shadow: none;
+}
+
+.twoj_control-group{
+	margin-bottom: 18px;
+}
+.twoj_control-label{
+	width: auto;
+	padding-right: 5px;
+	padding-top: 5px;
+	text-align: left;
+	float: left;
+}
+.twoj_controls{
+	margin-left: 160px;
+}
+
+.twoj_controls input,
+.twoj_controls select,
+.twoj_controls textarea{
+	float: left;
+}
+
+.twojBlockElement{
+	background-color: white;
+	/* z-index: 1; */
+	border: none; 
+	margin: 0px; 
+	padding: 0px; 
+	width: 100%; 
+	height: 100%; 
+	top: 0px; 
+	left: 0px; 
+	background-color: rgb(255, 255, 255); 
+	cursor: wait; 
+	position: absolute; 
+	opacity: 0.8;
+}

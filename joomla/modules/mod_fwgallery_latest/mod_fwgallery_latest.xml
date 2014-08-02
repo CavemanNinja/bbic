@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" method="upgrade">
+	<name>FW Gallery Latest</name>
+	<creationDate>18 January 2014</creationDate>
+    <author>Fastw3b - We develop while you are thinking</author>
+    <authorEmail>dev@fastw3b.net</authorEmail>
+    <authorUrl>http://www.fastw3b.net</authorUrl>
+    <copyright>Copyright (C) 2014 Fastw3b. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>3.0</version>
+	<description><![CDATA[
+<p><strong>FW Gallery Latest Module</strong></p><p><img style="margin-right: 10px; vertical-align: middle;" alt="fwgallery_latest" src="../modules/mod_fwgallery_latest/assets/images/fwgallery_latest_logo.png" height="138" width="105" /> This module displays a picture or several pictures you have chosen from your gallery on any page of your site!</p><p>&nbsp;</p><p><strong>Installation and usage requirements</strong></p><ul><li>Joomla 2.5, 3.0</li><li>FW Gallery 2.1 or higher installed</li></ul><p><strong>Useful links</strong></p><p>Any <a target="_blank" href="http://fastw3b.net/forum/index.php?board=90.0">ideas/questions &gt;&gt;</a><br />Our clients' feedbacks and your reviews on <a target="_blank" href="http://extensions.joomla.org/extensions/owner/fastweb">JED &gt;&gt;</a><br />Extra modules and plugins for FW Gallery <a target="_blank" href="http://fwgallery.fastw3b.net/">&gt;&gt;</a></p>
+	]]></description>
+	<files>
+		<filename module="mod_fwgallery_latest">mod_fwgallery_latest.php</filename>
+		<filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+		        <field name="gallery_id" type="sql" label="Gallery" query="(SELECT '' AS id, 1 AS pos, 'All' AS name) UNION (SELECT id, 2 AS pos, name FROM #__fwg_projects WHERE published = 1) ORDER BY pos, name" key_field="id" value_field="name" description="Select a gallery you want to be displayed" />
+				<field name="limit" type="text" default="1" label="Qty images" description="Indicate quantity of images you want to be displayed" />
+				<field name="order" type="list" default="newest" label="Ordering" description="Images order to display">
+		            <option value="newest">Newest first</option>
+		            <option value="popular">Most popular</option>
+					<option value="alpha">Alphabetically</option>
+					<option value="rand">Random</option>
+				</field>
+		        <field name="display_data" type="list" default="0" label="Display Date" description="Select whether you want or not to display image date">
+		            <option value="0">No</option>
+		            <option value="1">Yes</option>
+		        </field>
+		        <field name="display_name" type="list" default="0" label="Display Name" description="Select whether you want or not to display image name">
+		            <option value="0">No</option>
+		            <option value="1">Yes</option>
+		        </field>
+		        <field type="radio" name="image_size" default="th" label="Image Size">
+		            <option value="th">Thumb</option>
+		            <option value="mid">Medium</option>
+		            <option value="big">Big</option>
+		        </field>
+		        <field type="radio" name="layout" default="vertical" label="Layout">
+		            <option value="vertical">Vertical</option>
+		            <option value="horizontal">Horizontal</option>
+		        </field>
+				<field name="height" type="text" default="" label="Image height, px" description="" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

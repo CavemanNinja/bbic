@@ -1,0 +1,29 @@
+.twoj_gallery_hover_innerstyle1 .twoj_gallery_hover_info_title{
+   text-transform: uppercase;
+   color: #00345b;
+   text-align: center;
+   font-size: 14px;
+   padding: 10px;
+   background: rgba(255, 255, 255, 0.9);
+   margin: 20px 0 0 0;
+}
+.twoj_gallery_hover_innerstyle1 .twoj_gallery_hover_info_desc{
+   font-family: Georgia, serif;
+   font-style: italic;
+   font-size: 12px;
+   color: #00345b;
+   padding: 10px 20px 20px;
+   text-align: center;
+   text-decoration: none;
+}
+.twoj_gallery_hover_innerstyle1 .twoj_gallery_hover_info_text{
+   text-decoration: none;
+   font-size: 14px;
+   padding: 7px 14px;
+   background: #00345b;
+   color: #fff;
+   text-transform: uppercase;
+   -webkit-box-shadow: 0 0 1px #000;
+   -moz-box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #000;
+}

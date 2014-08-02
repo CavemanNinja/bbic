@@ -1,0 +1,101 @@
+.twoj_gallery_lb6_Overlay{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	opacity:0;
+	z-index:100000;
+	background-color:#222;
+	background-color:rgba(0,0,0,0.8);
+	overflow:hidden;
+	display:none;
+	-moz-transition:opacity 1s ease;
+	-webkit-transition:opacity 1s ease;
+	transition:opacity 1s ease;
+}
+.twoj_gallery_lb6_Overlay.visible{ opacity:1; }
+
+.twoj_gallery_lb6_Slider{
+	height:100%;
+	left:0;
+	top:0;
+	width:100%;
+	white-space: nowrap;
+	position:absolute;
+	-moz-transition:left 0.4s ease;
+	-webkit-transition:left 0.4s ease;
+	transition:left 0.4s ease;
+}
+
+.twoj_gallery_lb6_Slider .twoj_gallery_lb6_placeholder{
+	background: url('%%CSS_URL%%/images/lb6/preloader.gif') no-repeat center center;
+	height: 100%;
+	line-height: 1px;
+	text-align: center;
+	width:100%;
+	display:inline-block;
+}
+
+.twoj_gallery_lb6_Slider .twoj_gallery_lb6_placeholder:before{
+	content: "";
+	display: inline-block;
+	height: 50%;
+	width: 1px;
+	margin-right:-1px;
+}
+
+.twoj_gallery_lb6_Slider .twoj_gallery_lb6_placeholder img{
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.twoj_gallery_lb6_Slider.twoj_gallery_lb6_rightSpring{ -moz-animation: rightSpring 0.3s; -webkit-animation: rightSpring 0.3s;}
+.twoj_gallery_lb6_Slider.twoj_gallery_lb6_leftSpring{ -moz-animation: leftSpring 0.3s; -webkit-animation: leftSpring 0.3s;}
+
+@-moz-keyframes twoj_gallery_lb6_rightSpring{
+	0%{		margin-left:0px;}
+	50%{	margin-left:-30px;}
+	100%{	margin-left:0px;}
+}
+
+@-moz-keyframes twoj_gallery_lb6_leftSpring{
+	0%{		margin-left:0px;}
+	50%{	margin-left:30px;}
+	100%{	margin-left:0px;}
+}
+
+@-webkit-keyframes twoj_gallery_lb6_rightSpring{
+	0%{		margin-left:0px;}
+	50%{	margin-left:-30px;}
+	100%{	margin-left:0px;}
+}
+@-webkit-keyframes twoj_gallery_lb6_leftSpring{
+	0%{		margin-left:0px;}
+	50%{	margin-left:30px;}
+	100%{	margin-left:0px;}
+}
+
+.twoj_gallery_lb6_prevArrow,
+.twoj_gallery_lb6_nextArrow{
+	border:none;
+	text-decoration:none;
+	background:url('%%CSS_URL%%/images/lb6/arrows.png') no-repeat;
+	opacity:0.5;
+	cursor:pointer;
+	position:absolute;
+	width:43px;
+	height:58px;
+	top:50%;
+	margin-top:-29px;
+	-moz-transition:opacity 0.2s ease;
+	-webkit-transition:opacity 0.2s ease;
+	transition:opacity 0.2s ease;
+}
+
+.twoj_gallery_lb6_prevArrow:hover, 
+.twoj_gallery_lb6_nextArrow:hover{ opacity:1; }
+.twoj_gallery_lb6_prevArrow{ background-position:left top; left:40px;}
+.twoj_gallery_lb6_nextArrow{ background-position:right top; right:40px;}

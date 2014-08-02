@@ -1,0 +1,29 @@
+///*@TODO see if this can be made more reusable, so it is not module specific */
+
+ul {
+    list-style: disc inside!important;
+    &.icons {
+        list-style: none!important;
+    }
+
+    li {
+        a {
+            color: @textColor;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 16px;
+            border-bottom: 1px solid @rowBackgroundColor;
+            padding-top: 5px!important;
+            padding-bottom: 5px!important;
+            word-wrap: break-word;
+
+            &:hover {
+                text-decoration: underline!important;
+            }
+
+            img {
+                padding-right: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade"> 
+	<name>2JToolBox Module</name>
+	<author>2Joomla Team</author>
+	<creationDate>2011</creationDate>
+	<copyright>Copyright (C) 2011 2Joomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@2joomla.net</authorEmail>
+	<authorUrl>www.2joomla.net</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_TWOJTOOLBOX_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_twojtoolbox">mod_twojtoolbox.php</filename>
+		<folder>tmpl</folder>
+		<filename>tmpl/default.php</filename>	
+		<filename>tmpl/index.html</filename>	
+		<filename>index.html</filename>		
+		<filename>mod_twojtoolbox.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_twojtoolbox.ini</language>
+		<language tag="en-GB">en-GB.mod_twojtoolbox.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_twojtoolbox/models/fields">>
+			<fieldset name="basic">
+			<field
+				name="type"
+				type="twojtoolboxtype"
+				label="COM_TWOJTOOLBOX_MENU_SELECTTYPE"
+				description="COM_TWOJTOOLBOX_MENU_SELECTTYPE_DESC"
+				required="true"
+			/>
+			<field
+				name="id"
+				type="twojtoolboxelement"
+				label="COM_TWOJTOOLBOX_MENU_SELECTELEMENT"
+				description="COM_TWOJTOOLBOX_MENU_SELECTELEMENT_DESC"
+				required="true"
+			/>
+			<field name="spacer1" type="spacer" class="text" label="COM_TWOJTOOLBOX_MENU_HELP" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="hidden" default="0" value="0" />
+				<field name="cache_time" type="hidden" value="900" default="900" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+				<field name="twojInclude" type="list" default="0" label="Raw Output" description="this options enable raw outuput for the component content output rendering">
+					<option value="0">JDISABLED</option>
+					<option value="1">JENABLED</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

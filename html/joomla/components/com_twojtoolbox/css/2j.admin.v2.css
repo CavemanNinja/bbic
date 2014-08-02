@@ -1,0 +1,38 @@
+.twoj_formEditItem .adminform,
+#twoj_formEditElement .adminform{
+	background-color: white;
+}
+
+.twojmultivalues .twojmultivalues_line{
+	margin-top: 2px;
+}
+.ui-widget { font-size: 1em; }
+.ui-widget .ui-widget { font-size: 1em; }
+
+#twojtoolbox_elementmenu_selectcatid label{
+	margin-top: 2px;
+}
+
+div div.twoj_multibutton_buttonset_wrap label{
+	clear: none;
+	width: auto;
+	min-width: 30px;
+	margin: 0;
+}
+div.twoj_control-label label{
+	float: none;
+}
+
+.twoj_multibutton_panel_element.twoj_multibutton_panel_textbox,
+.twoj_multibutton_panel_element.twoj_multibutton_panel_selectbox{
+	margin: 0;
+}
+
+div.twoj_multibutton_buttonset_wrap{
+	padding: 0;
+}
+
+.twoj_multibutton_default_button{
+margin-bottom: -14px;
+float: left;
+}

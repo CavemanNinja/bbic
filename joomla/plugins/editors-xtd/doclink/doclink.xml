@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="2.5" group="editors-xtd" method="upgrade">
+	<identifier>plg:editors-xtd.doclink</identifier>
+	<name>plg_editors-xtd_doclink</name>
+	<version>2.0.0RC3</version>
+    <author>Joomlatools</author>
+    <creationDate>June 2013</creationDate>
+    <copyright>Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+	<description>PLG_DOCLINK_DESCRIPTION</description>
+	<files>
+		<filename plugin="doclink">doclink.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_doclink.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_doclink.sys.ini</language>
+	</languages>
+</extension>

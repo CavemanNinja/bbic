@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="attribs">
+   <fieldset 
+      name="billing"
+      label="TPL_EXTRAFIELDS_BILLING_SLIDER_LABEL" 
+      description="TPL_EXTRAFIELDS_BILLING_SLIDER_LABEL_DESC" 
+      group="extrafields"
+      >
+      
+         <field 
+            name="billing_tenant_id" 
+            type="sql" 
+            default="" 
+            label="TPL_EXTRAFIELDS_BILLING_INVOICEE"
+            description="TPL_EXTRAFIELDS_BILLING_INVOICEE_DESC"
+            query="SELECT id, name FROM #__users WHERE id IN (SELECT user_id FROM #__user_usergroup_map WHERE group_id = 10)"
+            value_field="name"
+            key_field="id"
+         />
+         
+         <field
+            name="billing_amount"
+            type="text"
+            class="validate-numeric"
+            label="TPL_EXTRAFIELDS_BILLING_AMOUNT"
+            description="TPL_EXTRAFIELDS_BILLING_AMOUNT_DESC"
+         />
+         
+         <field
+            name="billing_invoice_date"
+            type="calendar"
+            label="TPL_EXTRAFIELDS_BILLING_INVOICE_DATE"
+            description="TPL_EXTRAFIELDS_BILLING_INVOICE_DATE_DESC"
+         />
+
+         <field
+            name="billing_status"
+            type="list"
+            default="0"
+            label="TPL_EXTRAFIELDS_BILLING_STATUS"
+            description="TPL_EXTRAFIELDS_BILLING_STATUS_DESC"
+         >
+               <option value="0">Unpaid</option>
+               <option value="1">Paid through Credimax</option>
+               <option value="2">Paid by Cheque</option>
+               <option value="1">Paid by Credit Card</option>
+               <option value="1">Paid by Tamkeen</option>
+         </field>
+
+         <field
+            name="billing_repeat"
+            type="checkbox"
+            value="1"
+            default="0"
+            label="TPL_EXTRAFIELDS_BILLING_REPEAT"
+            description="TPL_EXTRAFIELDS_BILLING_REPEAT_DESC"
+         />
+
+         <field
+            name="billing_repeatcycle"
+            type="text"
+            class="validate-numeric"
+            label="TPL_EXTRAFIELDS_BILLING_REPEATCYCLE"
+            description="TPL_EXTRAFIELDS_BILLING_REPEATCYCLE_DESC"
+         />
+
+         <field
+            name="billing_repeatstart"
+            type="calendar"
+            label="TPL_EXTRAFIELDS_BILLING_REPEATSTART"
+            description="TPL_EXTRAFIELDS_BILLING_REPEATSTART_DESC"
+         />
+
+         <field
+            name="billing_repeatend"
+            type="calendar"
+            label="TPL_EXTRAFIELDS_BILLING_REPEATEND"
+            description="TPL_EXTRAFIELDS_BILLING_REPEATEND_DESC"
+         />
+
+      </fieldset>
+   </fields>
+</form>

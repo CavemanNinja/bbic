@@ -1,0 +1,38 @@
+#twoj_gallery_lb3, 
+#twoj_gallery_lb3_Overlay, 
+#twoj_gallery_lb3_Wrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#twoj_gallery_lb3_Overlay{position:fixed; width:100%; height:100%;}
+#twoj_gallery_lb3_MiddleLeft, 
+#twoj_gallery_lb3_BottomLeft{clear:left;}
+#twoj_gallery_lb3_Content{position:relative;}
+#twoj_gallery_lb3_LoadedContent{overflow:auto;}
+#twoj_gallery_lb3_Title{margin:0;}
+#twoj_gallery_lb3_LoadingOverlay, 
+#twoj_gallery_lb3_LoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#twoj_gallery_lb3_Previous, 
+#twoj_gallery_lb3_Next, 
+#twoj_gallery_lb3_Close, 
+#twoj_gallery_lb3_Slideshow{cursor:pointer;}
+.twoj_gallery_lb3_Photo{float:left; margin:auto; padding: 0; border:0; display:block; max-width: none;}
+.twoj_gallery_lb3_Iframe{width:100%; height:100%; display:block; border:0;}
+#twoj_gallery_lb3, 
+#twoj_gallery_lb3_Content, 
+#twoj_gallery_lb3_LoadedContent{box-sizing:content-box;}
+
+#twoj_gallery_lb3_Overlay{background:#000;}
+#twoj_gallery_lb3{}
+#twoj_gallery_lb3_Content{margin-top:20px;}
+.twoj_gallery_lb3_Iframe{background:#fff;}
+#twoj_gallery_lb3_Error{padding:50px; border:1px solid #ccc;}
+#twoj_gallery_lb3_LoadedContent{border:5px solid #000; background:#fff;}
+#twoj_gallery_lb3_Title{position:absolute; top:-20px; left:0; color:#ccc;}
+#twoj_gallery_lb3_Current{position:absolute; top:-20px; right:0px; color:#ccc;}
+#twoj_gallery_lb3_Slideshow{position:absolute; top:-20px; right:90px; color:#fff;}
+#twoj_gallery_lb3_Previous{position:absolute; top:50%; left:5px; margin-top:-32px; background:url('%%CSS_URL%%/images/lb3/controls.png') no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
+#twoj_gallery_lb3_Previous:hover{background-position:bottom left;}
+#twoj_gallery_lb3_Next{position:absolute; top:50%; right:5px; margin-top:-32px; background:url('%%CSS_URL%%/images/lb3/controls.png') no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
+#twoj_gallery_lb3_Next:hover{background-position:bottom right;}
+#twoj_gallery_lb3_LoadingOverlay{background:#000;}
+#twoj_gallery_lb3_LoadingGraphic{background:url('%%CSS_URL%%/images/lb3/loading.gif') no-repeat center center;}
+#twoj_gallery_lb3_Close{position:absolute; top:5px; right:5px; display:block; background:url('%%CSS_URL%%/images/lb3/images/controls.png') no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
+#twoj_gallery_lb3_Close:hover{background-position:bottom center;}

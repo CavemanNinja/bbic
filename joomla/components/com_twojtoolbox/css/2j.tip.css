@@ -1,0 +1,38 @@
+.twojTip { font-size: 12px; position: absolute; padding: 5px; z-index: 1000; }
+.twojTip-inner { background-color: #000; color: #FFF; max-width: 140px; padding: 6px; text-align: center; }
+.twojTip-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+.twojTip-inner a:link, .twojTip-inner a:visited{ color: #78c5e9; font-weight: bolder;}
+.twojTip-inner {
+box-shadow: 0 0 5px #000000; 
+-webkit-box-shadow: 0 0 5px #000000; 
+-moz-box-shadow: 0 0 5px #000000; }
+.twojTip-inner .twojtiphide{
+/*	border-left: 1px solid #a1a1a1;
+	border-top: 1px solid #a1a1a1;*/
+	right: 6px;
+	top: 6px;
+	padding: 3px 8px;
+	position: absolute;
+}
+.twojTip-inner .twojtiphide:hover{
+	background-color: #353535;
+	color: white;
+}
+
+.twojTip-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+.twojTip-arrow-n { border-bottom-color: #000; }
+.twojTip-arrow-s { border-top-color: #000; }
+.twojTip-arrow-e { border-left-color: #000; }
+.twojTip-arrow-w { border-right-color: #000; }
+  
+.twojTip-n 	.twojTip-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+.twojTip-nw .twojTip-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+.twojTip-ne .twojTip-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+.twojTip-s 	.twojTip-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+.twojTip-sw .twojTip-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+.twojTip-se .twojTip-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+.twojTip-e 	.twojTip-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+.twojTip-w 	.twojTip-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
+
+.twojtiphide{ cursor: pointer; font-weight: bolder; }

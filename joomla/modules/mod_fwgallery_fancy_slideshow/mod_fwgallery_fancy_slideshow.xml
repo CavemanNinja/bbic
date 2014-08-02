@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" method="upgrade">
+	<name>FW Gallery Fancy Slideshow</name>
+	<creationDate>18 January 2014</creationDate>
+    <author>Fastw3b - We develop while you are thinking.</author>
+    <authorEmail>dev@fastw3b.net</authorEmail>
+    <authorUrl>http://www.fastw3b.net</authorUrl>
+    <copyright>Copyright (C) 2014 Fastw3b. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>3.0</version>
+	<description><![CDATA[
+<p><strong>FW Gallery Fancy Slideshow Module</strong></p><p><img style="margin-right: 10px; float: left;" alt="fwgallery_fancy_slideshow" src="../modules/mod_fwgallery_fancy_slideshow/assets/images/fwgallery_fancy_slideshow_logo.png" height="138" width="105" /> Congratulations! Now you can apply this great module to your gallery!</p><p>This module allows you to display images from your gallery on any page of your site through a fancy slide show!</p><p>&nbsp;</p><p><strong>Installation and usage requirements</strong></p><ul><li>Joomla 2.5, 3.0</li><li>FW Gallery 2.1 or higher installed</li></ul><p><strong>Useful links</strong></p><p>Any <a target="_blank" href="http://fastw3b.net/forum/index.php?board=102.0">ideas/questions &gt;&gt;</a><br />Our clients' feedbacks and your reviews on <a target="_blank" href="http://extensions.joomla.org/extensions/owner/fastweb">JED &gt;&gt;</a><br />Extra modules and plugins for FW Gallery <a href="http://fwgallery.fastw3b.net/">&gt;&gt;</a></p>
+	]]></description>
+	<files>
+		<filename module="mod_fwgallery_fancy_slideshow">mod_fwgallery_fancy_slideshow.php</filename>
+		<filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="gallery_id" type="sql" label="Gallery" query="(SELECT '' AS id, 1 AS pos, 'All' AS name) UNION (SELECT id, 2 AS pos, name FROM #__fwg_projects WHERE published = 1) ORDER BY pos, name" key_field="id" value_field="name" description="Select a gallery you want to be displayed" />
+				<field type="spacer" />
+				<field type="radio" name="display_navigation" default="1" label="Display navigation" description="Select whether you want or not to display navigation arrows">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="radio" name="display_image_name" default="1" label="Display image name" description="Select whether you want or not to display image name">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="transition" type="list" default="random" label="Transition" description="Select transition effect">
+					<option value="0">Slice Down Right</option>
+					<option value="1">Slice Down Left</option>
+					<option value="2">Fold</option>
+					<option value="3">Fade</option>
+					<option value="random">Random</option>
+					<option value="none">None</option>
+				</field>
+				<field name="slices" type="text" default="10" label="Qty slices" description="Indicate quantity of slices for the chosen effect" />
+				<field name="background_color" type="text" default="#202834" label="Background color" description="Insert the code for desired background colour (e.g. white colour - #fff)" />
+				<field name="limit" type="text" default="0" label="Qty images" description="Indicate quantity of images you want to be displayed" />
+				<field name="order" type="list" default="newest" label="Ordering">
+					<option value="newest">Newest first</option>
+					<option value="alpha">Alphabetically</option>
+					<option value="rand">Random</option>
+					<option value="order">Order</option>
+				</field>
+				<field type="radio" name="image_size" default="mid" label="Image Size">
+					<option value="th">Thumb</option>
+					<option value="mid">Medium</option>
+					<option value="big">Big</option>
+				</field>
+				<field type="spacer" />
+				<field type="radio" name="run_slideshow" default="1" label="Run slideshow">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="pause" type="text" default="3" label="Pause, sec" description="Pause between transitions, in seconds" />
+				<field type="spacer" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

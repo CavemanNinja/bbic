@@ -1,0 +1,97 @@
+.dropdown-menu {
+      input {
+          display: none;
+      }
+      .modal-button, .dropdown-link {
+          background: none;
+          text-align: left;
+          .border-radius(0px);
+          border: none;
+          .box-shadow(none);
+          text-shadow: none;
+
+          &:hover, &:focus {
+              text-decoration: none;
+              color: @dropdownLinkColorHover;
+              background-color: @dropdownLinkBackgroundHover;
+              #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
+          }
+
+          // Disabled state
+          // --------------
+          // Nuke hover effects
+          &.disabled:focus, &.disabled:hover {
+              text-decoration: none;
+              background-color: transparent;
+              background-image: none; // Remove CSS gradient
+              cursor: default;
+              color: @grayLight;
+          }
+      }
+}
+.dropdown-menu li {
+    padding: 0;
+}
+.dropdown-grid .dropdown-menu {
+    width: 268px;
+    padding: 8px 8px 5px 8px;
+
+    li {
+        //float: left;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+    .spacer {
+        clear: both;
+        display: block;
+        height: 0px;
+    }
+    .divider {
+        clear: both;
+        position: relative;
+        margin-left: -8px!important;
+        margin-right: -8px!important;
+    }
+    .icon {
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 44px;
+
+        a {
+            .square(38px);
+            padding: 5px 5px;
+            .border-radius(5px);
+            text-align: center;
+        }
+
+        img {
+            margin: 3px;
+            width: 32px;
+            height: 32px;
+        }
+        span {
+            display: none;
+        }
+    }
+    .icon:last-child, .icon:last-of-type {
+        -webkit-transform: scale(2);
+    }
+}
+.thumbnail-picker {
+    img {
+        display: block;
+        float: left;
+    }
+    .help-inline {
+        font-size:13px;
+        display:block;
+        margin-top:5px;
+        top:100%;
+        left:0;
+        width:100%;
+        position:absolute;
+        white-space: normal;
+    }
+}

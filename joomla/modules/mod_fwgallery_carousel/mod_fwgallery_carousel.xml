@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" method="upgrade" client="site">
+	<name>FW Gallery Carousel</name>
+    <creationDate>21 January 2014</creationDate>
+    <author>Fastw3b - We develop while you are thinking</author>
+    <authorEmail>dev@fastw3b.net</authorEmail>
+    <authorUrl>http://www.fastw3b.net</authorUrl>
+    <copyright>Copyright (C) 2014 Fastw3b. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<version>3.0</version>
+	<description><![CDATA[
+		<table border="0">
+		<tbody>
+		<tr>
+		<td>
+		<p style="margin-top: 20px;"><img style="margin-right: 10px; float: left;" alt="carousel_module315" src="../modules/mod_fwgallery_carousel/assets/images/carousel_module315.png" width="175" height="225" /></p>
+		</td>
+		<td>
+		<p>&nbsp;</p>
+		<div style="margin-top: 20px;"><strong>FW Gallery Carousel Module</strong> has been installed successfully on your website.Thank you for your  choice! We  hope that you will enjoy Fastw3b extensions!</div>
+		<p style="margin-top: 20px;">FW Gallery  Carousel Module allows you to make a your gallery more functional and  conveniet for users.</p>
+		<p style="margin-top: 20px;"> </p>
+		<p><strong>What to do next?</strong></p>
+		1. Go to Extensions &gt;&gt; Module Manager &gt;&gt; FW Gallery Carousel Module<br />2. Select the parameters &gt;&gt; Enable the module &gt;&gt; Save the changes<br />
+		<p>&nbsp;</p>
+		<p>That's it - you are done!</p>
+		</td>
+		</tr>
+		<tr>
+		<td colspan="2">
+		<p><strong>Useful links:</strong></p>
+		<ul>
+		<li><a target="_blank" href="http://fastw3b.net/joomla-extensions/product/104-fw-gallery-carousel-module.html">How-to-use guide &gt;&gt;</a></li>
+		<li><a href="http://fastw3b.net/joomla-extensions/product/7-fw-gallery.html" target="_blank">FW Gallery and its add-ons &gt;&gt;</a></li>
+		<li>Read our <a target="_blank" href="http://fastw3b.net/latest-news.html">latest news &gt;&gt;</a></li>
+		<li>View <a target="_blank" href="http://extensions.joomla.org/extensions/extension-specific/fw-gallery-extensions/13856">JED reviews and leave yours &gt;&gt;</a></li>
+		<li>Follow us on <a target="_blank" href="http://twitter.com/#%21/Fastw3b">Twitter </a>or <a target="_blank" href="http://www.facebook.com/pages/Fastw3b/165610930146118">Facebook &gt;&gt; </a></li>
+		<li>Watch our video tutorial on<a target="_blank" href="http://www.youtube.com/user/fastw3b"> Youtube &gt;&gt; </a></li>
+		<li>See other <a href="http://fastw3b.net/joomla-extensions.html" target="_blank">Fastw3b extensions &gt;&gt;</a></li>
+		<li>Have any questions? Feel free to <a target="_blank" href="http://fastw3b.net/contact-us.html">contact us &gt;&gt;</a></li>
+		</ul>
+		<p>&nbsp;</p>
+		<strong> </strong>
+		<div>
+		<div>Developed by <a href="http://fastw3b.net/" target="_blank">Fastw3b</a></div>
+		<div>Copyright &copy; 2007 - 2014 Fastw3b</div>
+		</div>
+		</td>
+		</tr>
+		</tbody>
+		</table>	
+	]]></description>
+	<files>
+		<filename module="mod_fwgallery_carousel">mod_fwgallery_carousel.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="gallery_id" type="sql" label="Gallery" query="(SELECT '' AS id, 1 AS pos, 'All' AS name) UNION (SELECT id, 2 AS pos, name FROM #__fwg_projects WHERE published = 1) ORDER BY pos, name" key_field="id" value_field="name" description="" />
+				<field name="limit" type="text" default="20" label="Qty fetched images" description="Qty images to select" />
+				<field name="qty" type="text" default="3" label="Qty displayed images" description="Qty images to display" />
+				<field name="images_id" type="text" default="" size="50" label="Images id" description="Comma separated list of desired images ID" />
+				<field name="order" type="list" default="newest" label="Ordering" description="Images order to display">
+					<option value="newest">Newest first</option>
+					<option value="popular">Popular first</option>
+					<option value="rand">Random</option>
+				</field>
+				<field type="radio" name="layout" default="horizontal" label="Layout">
+					<option value="horizontal">Horizontal</option>
+					<option value="vertical">Vertical</option>
+				</field>
+		        <field type="radio" name="scroll_buttons" default="0" label="Display scroll buttons">
+		            <option value="1">Yes</option>
+		            <option value="0">No</option>
+		        </field>
+				<field name="@spacer" type="spacer" default="" label="" description="" />
+		        <field type="radio" name="display_galleryname" default="1" label="Display gallery name">
+		            <option value="1">Yes</option>
+		            <option value="0">No</option>
+		        </field>
+				<field type="radio" name="display_username" default="1" label="Display user name">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="radio" name="display_imagename" default="1" label="Display image name">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="radio" name="display_imagedate" default="1" label="Display image date">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="radio" name="display_imageviews" default="1" label="Display image views">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="radio" name="display_iconnew" default="1" label="Display icon new days">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>	
+</extension>

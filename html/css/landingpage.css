@@ -1,0 +1,18 @@
+body {
+	background-image: url('../images/silverwood4.png');
+}
+
+.myjumbotron {
+	text-align: center;
+	margin-top: 15%;
+	vertical-align: middle;
+}
+
+.myimage {
+	display: inline-block;
+	padding: 5px;
+}
+
+.btn-lg {
+	border-radius: 0px;
+}

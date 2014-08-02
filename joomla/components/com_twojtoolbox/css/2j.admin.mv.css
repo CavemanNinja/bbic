@@ -1,0 +1,43 @@
+
+.twojmultivalues{
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+}
+.twojmultivalues .twojmultivalues_line{
+	float: left;
+	margin: 0; 
+	padding: 2px 4px 2px 4px;  
+	font-size: 0.9em; 
+	margin-left: 10px;  
+	color: black;
+	font-weight: normal; 
+	background-color: #f7f7f7;
+	border: 1px solid silver;
+	vertical-align: middle;
+}
+
+.twojmultivalues .twojmultivalues_line input[disabled], 
+.twojmultivalues .twojmultivalues_line input[readonly]{
+	cursor: pointer;
+}
+
+
+.twojmultivalues .twojmultivalues_line .twojmultivalues_inputbox{
+	float: none;
+	margin-top: 0px;
+	margin-right: 2px;
+	margin-left: 2px;
+	margin-bottom: 0
+}
+
+.twojmultivalues .twojmultivalues_enabledbutton{
+	float: left;
+	margin: 0;
+	margin-top: 1px;
+	font-size: 0.8em;
+/*	width: 80px;*/
+min-width: 120px;
+}

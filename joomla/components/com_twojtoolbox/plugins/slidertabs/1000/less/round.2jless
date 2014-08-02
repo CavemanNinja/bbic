@@ -1,0 +1,114 @@
+/*==============================*/
+/* HORIZONTAL  */
+/*==============================*/
+#@{twoJObjectId}.twoj_slidertabs_horizontal {
+	/* Top  Align*/
+	> div.st_views{
+		border-top-right-radius: 	@tabRadius;
+		border-bottom-right-radius: @tabRadius;
+		border-bottom-left-radius: 	@tabRadius;
+	}
+	> div.st_tabs{
+		ul li a{ 
+			&.st_tab_first{ border-top-left-radius: @tabRadius; }
+			&.st_tab_last{ 	border-top-right-radius: @tabRadius;}
+		}
+		a.st_prev{ border-top-left-radius: @tabRadius; }
+		a.st_next{ border-top-right-radius: @tabRadius;}
+	}
+	&.st_sliding_active{
+		> div.st_views{ border-top-right-radius: 0; }
+		> div.st_tabs ul li a{
+			&.st_tab_first{ border-top-left-radius: 0; }
+			&.st_tab_last{ 	border-top-right-radius: 0;}
+		}
+	}
+	/* Bottom  Align*/
+	&.align_bottom{
+		> div.st_views{
+			border-bottom-left-radius: 	0;
+			border-top-left-radius: 	@tabRadius;
+			border-top-right-radius: 	@tabRadius;
+			
+		}
+		> div.st_tabs { 
+			ul li a{
+				&.st_tab_first{
+					border-bottom-left-radius: @tabRadius;
+					border-top-left-radius: 0;
+				}
+				&.st_tab_last{
+					border-bottom-right-radius: @tabRadius;
+					border-top-right-radius: 0;
+				}
+			}
+			a.st_prev {
+				border-bottom-left-radius: @tabRadius;
+				border-top-left-radius: 0;
+			}
+			a.st_next{
+				border-bottom-right-radius: @tabRadius;
+				border-top-right-radius: 0;
+			}
+		}
+		&.st_sliding_active{
+			> div.st_views{ border-bottom-right-radius: 0; }
+			> div.st_tabs ul li a{
+				&.st_tab_first{
+					border-bottom-left-radius: 0;
+					border-top-left-radius: 0;
+				}
+				&.st_tab_last{
+					border-bottom-right-radius: 0;
+					border-top-right-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+/*==============================*/
+/* VERTICAL  */
+/*==============================*/
+#@{twoJObjectId}.twoj_slidertabs_vertical {
+	/* Left  Align*/
+     > div.st_views {
+		border-top-right-radius:@tabRadius;
+		border-bottom-left-radius:@tabRadius;
+		border-bottom-right-radius:@tabRadius;
+    }
+     > div.st_tabs { 
+		border-top-left-radius: @tabRadius;
+        ul li a{
+			&.st_tab_first{ border-top-left-radius: @tabRadius; }
+			&.st_tab_last{ border-bottom-left-radius: @tabRadius; }
+        }
+    }
+	&.st_sliding_active{
+		> div.st_tabs ul li a.st_tab_first{ border-top-left-radius: 0; }
+		a.st_prev { border-top-left-radius:  @tabRadius; }
+	}
+	/* Right  Align*/
+	&.align_right {
+		 > div.st_views {
+			border-top-right-radius:0;		
+			border-top-left-radius:@tabRadius;
+		}
+		> div.st_tabs {
+			border-top-left-radius: 0;
+			border-top-right-radius: @tabRadius;
+			ul li a {
+				&.st_tab_first{ border-top-left-radius: 0; border-top-right-radius: 0;}
+				&.st_tab_last{
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: @tabRadius;
+				}
+			}
+		}
+		&.st_sliding_active{
+			> div.st_tabs ul li a.st_tab_first{ border-top-right-radius: 0; }
+			a.st_prev { border-top-left-radius: 0; }
+			a.st_next { border-top-right-radius: @tabRadius; }
+		}
+	}
+}

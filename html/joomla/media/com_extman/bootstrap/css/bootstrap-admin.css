@@ -1,0 +1,56 @@
+.com_extman .clearfix{*zoom:1;}.com_extman .clearfix:before,.com_extman .clearfix:after{display:table;content:"";line-height:0;}
+.com_extman .clearfix:after{clear:both;}
+.com_extman .hide-text{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;}
+.com_extman .input-block-level{display:block;width:100%;min-height:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.com_extman table{max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0;}
+.com_extman .table{width:100%;margin-bottom:18px;}.com_extman .table th,.com_extman .table td{padding:8px;line-height:18px;text-align:left;vertical-align:top;border-top:1px solid #dddddd;}
+.com_extman .table th{font-weight:bold;}
+.com_extman .table thead th{vertical-align:bottom;}
+.com_extman .table caption+thead tr:first-child th,.com_extman .table caption+thead tr:first-child td,.com_extman .table colgroup+thead tr:first-child th,.com_extman .table colgroup+thead tr:first-child td,.com_extman .table thead:first-child tr:first-child th,.com_extman .table thead:first-child tr:first-child td{border-top:0;}
+.com_extman .table tbody+tbody{border-top:2px solid #dddddd;}
+.com_extman .table-condensed th,.com_extman .table-condensed td{padding:4px 5px;}
+.com_extman .table-bordered{border:1px solid #dddddd;border-collapse:separate;*border-collapse:collapse;border-left:0;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}.com_extman .table-bordered th,.com_extman .table-bordered td{border-left:1px solid #dddddd;}
+.com_extman .table-bordered caption+thead tr:first-child th,.com_extman .table-bordered caption+tbody tr:first-child th,.com_extman .table-bordered caption+tbody tr:first-child td,.com_extman .table-bordered colgroup+thead tr:first-child th,.com_extman .table-bordered colgroup+tbody tr:first-child th,.com_extman .table-bordered colgroup+tbody tr:first-child td,.com_extman .table-bordered thead:first-child tr:first-child th,.com_extman .table-bordered tbody:first-child tr:first-child th,.com_extman .table-bordered tbody:first-child tr:first-child td{border-top:0;}
+.com_extman .table-bordered thead:first-child tr:first-child th:first-child,.com_extman .table-bordered tbody:first-child tr:first-child td:first-child{-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-moz-border-radius-topleft:4px;}
+.com_extman .table-bordered thead:first-child tr:first-child th:last-child,.com_extman .table-bordered tbody:first-child tr:first-child td:last-child{-webkit-border-top-right-radius:4px;border-top-right-radius:4px;-moz-border-radius-topright:4px;}
+.com_extman .table-bordered thead:last-child tr:last-child th:first-child,.com_extman .table-bordered tbody:last-child tr:last-child td:first-child,.com_extman .table-bordered tfoot:last-child tr:last-child td:first-child{-webkit-border-radius:0 0 0 4px;-moz-border-radius:0 0 0 4px;border-radius:0 0 0 4px;-webkit-border-bottom-left-radius:4px;border-bottom-left-radius:4px;-moz-border-radius-bottomleft:4px;}
+.com_extman .table-bordered thead:last-child tr:last-child th:last-child,.com_extman .table-bordered tbody:last-child tr:last-child td:last-child,.com_extman .table-bordered tfoot:last-child tr:last-child td:last-child{-webkit-border-bottom-right-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-bottomright:4px;}
+.com_extman .table-bordered caption+thead tr:first-child th:first-child,.com_extman .table-bordered caption+tbody tr:first-child td:first-child,.com_extman .table-bordered colgroup+thead tr:first-child th:first-child,.com_extman .table-bordered colgroup+tbody tr:first-child td:first-child{-webkit-border-top-left-radius:4px;border-top-left-radius:4px;-moz-border-radius-topleft:4px;}
+.com_extman .table-bordered caption+thead tr:first-child th:last-child,.com_extman .table-bordered caption+tbody tr:first-child td:last-child,.com_extman .table-bordered colgroup+thead tr:first-child th:last-child,.com_extman .table-bordered colgroup+tbody tr:first-child td:last-child{-webkit-border-top-right-radius:4px;border-top-right-radius:4px;-moz-border-right-topleft:4px;}
+.com_extman .table-striped tbody tr:nth-child(odd) td,.com_extman .table-striped tbody tr:nth-child(odd) th{background-color:#f9f9f9;}
+.com_extman .table-hover tbody tr:hover td,.com_extman .table-hover tbody tr:hover th{background-color:#f5f5f5;}
+.com_extman table [class*=span],.com_extman .row-fluid table [class*=span]{display:table-cell;float:none;margin-left:0;}
+.com_extman table .span1{float:none;width:44px;margin-left:0;}
+.com_extman table .span2{float:none;width:124px;margin-left:0;}
+.com_extman table .span3{float:none;width:204px;margin-left:0;}
+.com_extman table .span4{float:none;width:284px;margin-left:0;}
+.com_extman table .span5{float:none;width:364px;margin-left:0;}
+.com_extman table .span6{float:none;width:444px;margin-left:0;}
+.com_extman table .span7{float:none;width:524px;margin-left:0;}
+.com_extman table .span8{float:none;width:604px;margin-left:0;}
+.com_extman table .span9{float:none;width:684px;margin-left:0;}
+.com_extman table .span10{float:none;width:764px;margin-left:0;}
+.com_extman table .span11{float:none;width:844px;margin-left:0;}
+.com_extman table .span12{float:none;width:924px;margin-left:0;}
+.com_extman table .span13{float:none;width:1004px;margin-left:0;}
+.com_extman table .span14{float:none;width:1084px;margin-left:0;}
+.com_extman table .span15{float:none;width:1164px;margin-left:0;}
+.com_extman table .span16{float:none;width:1244px;margin-left:0;}
+.com_extman table .span17{float:none;width:1324px;margin-left:0;}
+.com_extman table .span18{float:none;width:1404px;margin-left:0;}
+.com_extman table .span19{float:none;width:1484px;margin-left:0;}
+.com_extman table .span20{float:none;width:1564px;margin-left:0;}
+.com_extman table .span21{float:none;width:1644px;margin-left:0;}
+.com_extman table .span22{float:none;width:1724px;margin-left:0;}
+.com_extman table .span23{float:none;width:1804px;margin-left:0;}
+.com_extman table .span24{float:none;width:1884px;margin-left:0;}
+.com_extman .table tbody tr.success td{background-color:#dff0d8;}
+.com_extman .table tbody tr.error td{background-color:#f2dede;}
+.com_extman .table tbody tr.info td{background-color:#d9edf7;}
+.com_extman form{margin-bottom:0;}
+.com_extman .table{margin-top:0px;margin-bottom:0px;color:#616161;}.com_extman .table th,.com_extman .table td{white-space:nowrap;}
+.com_extman .table thead{background-color:#eeeeee;}.com_extman .table thead th{padding:4px 8px;}
+.com_extman .table thead td{background-color:#f6f6f6;}
+.com_extman .table tbody.selected-single tr.selected td{border-top-color:#3385ff;background-color:#337aff;background-image:-moz-linear-gradient(top, #3396ff, #3352ff);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#3396ff), to(#3352ff));background-image:-webkit-linear-gradient(top, #3396ff, #3352ff);background-image:-o-linear-gradient(top, #3396ff, #3352ff);background-image:linear-gradient(to bottom, #3396ff, #3352ff);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3396ff', endColorstr='#ff3352ff', GradientType=0);-webkit-box-shadow:rgba(255, 255, 255, 0.2) 0 1px 0 inset;-moz-box-shadow:rgba(255, 255, 255, 0.2) 0 1px 0 inset;box-shadow:rgba(255, 255, 255, 0.2) 0 1px 0 inset;text-shadow:rgba(0, 0, 0, 0.2) 0 -1px 0;}
+.com_extman .table tbody tr.selected td,.com_extman .table tbody tr.selected td a,.com_extman .table tbody tr.selected td small,.com_extman .table tbody tr.selected td span{color:white!important;}
+.com_extman .-installer-grid{background:white;border:1px solid #cccccc;border-color:rgba(0, 0, 0, 0.2);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;}
