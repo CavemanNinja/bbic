@@ -13,7 +13,7 @@
   display: block;
 }
 .dropdown-submenu > .dropdown-menu {
-  border-radius: 0px;
+  border-radius: 2px;
 }
 .dropdown-submenu > a:after {
   display: block;

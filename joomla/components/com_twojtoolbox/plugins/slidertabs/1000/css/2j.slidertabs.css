@@ -107,3 +107,19 @@ div.twoj_slidertabs_wrap {
 	}
 
 }
+
+div.st_tabs > div > ul > li > a {
+	color: #0288d1 !important;
+	background-color: #fff !important;
+}
+
+div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
+	border-bottom: 2px solid #0288d1 !important;
+	box-sizing: border-box !important;
+}
+
+div.st_tabs > div > ul > li.twoj_tab_block_li > a:hover {
+ 	border-bottom: 2px solid #999;
+	box-sizing: border-box;
+}
+

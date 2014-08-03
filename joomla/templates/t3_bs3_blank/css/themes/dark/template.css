@@ -866,7 +866,7 @@ input.invalid {
   padding: 6px 12px;
   background-color: #2d2d2d;
   border: 1px solid #1f1f1f;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 @media screen and (min-width: 768px) {
   .counter {
@@ -1166,7 +1166,7 @@ ul.latestusers li {
   background: #878787;
   display: inline-block;
   padding: 5px 10px;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 .stats-module dt,
 .stats-module dd {
@@ -1564,7 +1564,7 @@ article aside .btn-group > .dropdown-toggle .caret {
   border: 1px solid #2d2d2d;
   margin-bottom: 20px;
   padding: 10px 20px;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 .reset .form-validate fieldset dl,
 .remind .form-validate fieldset dl {
@@ -1830,7 +1830,7 @@ div.finder {
 #article-index,
 .article-index {
   border: 1px solid #2d2d2d;
-  border-radius: 0px;
+  border-radius: 2px;
   float: right;
   padding: 10px;
   margin: 0 0 20px 20px;
@@ -1852,7 +1852,7 @@ div.finder {
 .article-index ul > li > a {
   border: 0;
   padding: 5px;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 #article-index ul > .active > a,
 .article-index ul > .active > a {
@@ -1888,7 +1888,7 @@ div.finder {
   padding: 10px 20px;
   line-height: normal;
   border: 1px solid #1f1f1f;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 .pagenav li > a:hover,
 .pagenav li > a:active,
@@ -2091,7 +2091,7 @@ div.calendar {
   margin-bottom: 0;
 }
 .container .jumbotron {
-  border-radius: 6px;
+  border-radius: 2px;
 }
 .masthead {
   padding: 40px 0;

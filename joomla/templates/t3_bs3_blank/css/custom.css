@@ -22,10 +22,6 @@
   color: #0C76BB ;
 }
 
-.module-title {
-  color: #0C76BB ;
-}
-
 .module {
   margin-bottom: 40px !important;
 }
@@ -110,85 +106,101 @@
   box-shadow: 0px 6px 12px #666666;  
 }
 
+/*Downloads*/
 #Mod103 .module-inner .module-title {
-  text-align: center !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 0px !important;
+  /*text-align: center !important;*/
+  /*padding-top: 8px !important;*/
+  /*padding-bottom: 8px !important;*/
+  /*margin-bottom: 0px !important;*/
   /*background-color: #0C76BB;*/
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  color: #ffffff;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  /*color: #ffffff;*/
 }
-
+/*Downloads Arabic*/
 #Mod128 .module-inner .module-title {
-  text-align: center !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 0px !important;
+  /*text-align: center !important;*/
+  /*padding-top: 8px !important;*/
+  /*padding-bottom: 8px !important;*/
+  /*margin-bottom: 0px !important;*/
   /*background-color: #0C76BB;*/
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  color: #ffffff;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  /*color: #ffffff;*/
 }
 
+/*News Categories*/
 #Mod107 .module-inner .module-title {
-  text-align: center !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 0px !important;
+  /*text-align: center !important;*/
+  /*padding-top: 8px !important;*/
+  /*padding-bottom: 8px !important;*/
+  /*margin-bottom: 0px !important;*/
   /*background-color: #0C76BB;*/
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  color: #ffffff;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  /*color: #ffffff;*/
 }
 
+/*Login*/
 #Mod16 .module-inner .module-title {
-  text-align: center !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 0px !important;
+  /*text-align: center !important;*/
+  /*padding-top: 8px !important;*/
+  /*padding-bottom: 8px !important;*/
+  /*margin-bottom: 0px !important;*/
   /*background-color: #0C76BB;*/
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  color: #ffffff;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  /*color: #ffffff;*/
 }
 
+/*Login Arabic*/
 #Mod129 .module-inner .module-title {
-  text-align: center !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 0px !important;
+  /*text-align: center !important;*/
+  /*padding-top: 8px !important;*/
+  /*padding-bottom: 8px !important;*/
+  /*margin-bottom: 0px !important;*/
   /*background-color: #0C76BB;*/
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  color: #ffffff;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  /*color: #ffffff;*/
 }
 
+/*User Menu*/
 #Mod91 .module-inner .module-title {
-  text-align: center !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 0px !important;
+  /*text-align: center !important;*/
+  /*padding-top: 8px !important;*/
+  /*padding-bottom: 8px !important;*/
+  /*margin-bottom: 0px !important;*/
   /*background-color: #0C76BB;*/
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  color: #ffffff;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  /*color: #ffffff;*/
 }
 
+/*Incubator application files*/
 #Mod112 .module-inner .module-title {
-  text-align: center !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 0px !important;
+  /*text-align: center !important;*/
+  /*padding-top: 8px !important;*/
+  /*padding-bottom: 8px !important;*/
+  /*margin-bottom: 0px !important;*/
   /*background-color: #0C76BB;*/
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  color: #ffffff;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  /*color: #ffffff;*/
 }
 
+/*Business application files*/
 #Mod113 .module-inner .module-title {
-  text-align: center !important;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  margin-bottom: 0px !important;
+  /*text-align: center !important;*/
+  /*padding-top: 8px !important;*/
+  /*padding-bottom: 8px !important;*/
+  /*margin-bottom: 0px !important;*/
   /*background-color: #0C76BB;*/
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  color: #ffffff;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  /*color: #ffffff;*/
 }
+
+
+.module-title {
+  font-size: 16px !important;
+  padding: 7px !important;
+  color: #0288d1;
+  background-color: #fff;
+}
+
 
 #Mod103 .module-inner .module-ct {
   padding-top: 10px !important;
@@ -399,12 +411,12 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
 .navbar {
   border: 0px !important;
   box-shadow: 0px 3px 8px #888;
-  background-image: url('/joomla/images/navbarnoise1.png');
+  /*background-image: url('/joomla/images/navbarnoise1.png');*/
 }
 
 .usernav {
   border: 0px !important;
-  background-image: url('/joomla/images/noise-white.png') !important;
+  background-color: #ffffff;
   
 }
 
@@ -413,54 +425,59 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
 }
 
 .usernav .navbar-nav > li > a {
-  color: #0C76BB;
+  color: #0277bd;
 }
 
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #fff !important;
-  background-image: url('/joomla/images/navbarnoise-dark1.png') !important;
+  color: #fff;
+  /*background-image: url('/joomla/images/navbarnoise-dark1.png') !important;*/
   /*background-color: #ffffff;*/
 }
 
 .usernav .navbar-nav > li > a:hover,
 .usernav .navbar-nav > li > a:focus {
-  color: #fff !important;
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
-  /*background-color: #ffffff;*/
+  color: #039be5;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
+  background-color: #ffffff;
 }
+
+/*.usernav .navbar-nav > li > a:active {
+  color: #fff;
+}*/
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #fff;
-  background-image: url('/joomla/images/navbarnoise-dark.png') !important;
-  /*background-color: #ffffff;*/
+  /*background-image: url('/joomla/images/navbarnoise-dark.png') !important;*/
+  background-color: #0277bd;
 }
 
 .usernav .navbar-nav > .active > a,
 .usernav .navbar-nav > .active > a:hover,
 .usernav .navbar-nav > .active > a:focus {
   color: #fff;
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  background-color: #0288d1;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
   /*background-color: #ffffff;*/
 }
 
 .navbar-default .navbar-nav > .open > a {
   color: #fff;
-  background-image: url('/joomla/images/navbarnoise1.png') !important;
+  /*background-image: url('/joomla/images/navbarnoise1.png') !important;*/
 }
 
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {
   color: #fff;
-  background-image: url('/joomla/images/navbarnoise-dark1.png') !important;
+  /*background-image: url('/joomla/images/navbarnoise-dark1.png') !important;*/
 }
 
 .nav > .open > a:focus {
   color: #fff;
-  background-image: url('/joomla/images/navbarnoise-dark1.png') !important; 
+  /*background-image: url('/joomla/images/navbarnoise-dark1.png') !important; */
 }
 
 .navbar > div > div.navbar-header > button {
@@ -469,7 +486,7 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
 }
 
 .usernav > div > div.navbar-header > button {
-  color: #0C76BB;
+  color: #0288d1;
 }
 
 .usernav > div > div.navbar-header > button:focus,
@@ -490,16 +507,16 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
 }*/
 
 /*Dark Blue*/
-#t3-mainnav > div > div.navbar-header > button:hover {
+/*#t3-mainnav > div > div.navbar-header > button:hover {
   color: #ffffff;
   background-color: #00608F !important;
-} 
+} */
 
 /*Light Blue*/
-#t3-mainnav > div > div.navbar-header > button:focus {
+/*#t3-mainnav > div > div.navbar-header > button:focus {
   color: #fff;
   background-color: #0C76BB !important;
-}
+}*/
 
 
 .t3-copyright {
@@ -700,10 +717,4 @@ div.st_tabs > div > ul {
 div.langsearch > div.languageswitcherload > div > ul > 
 li > a > img {
   box-shadow: 1px 1px 3px #595959;
-}
-
-.module-title {
-  font-size: 14px !important;
-  padding-top: 7 !important;
-  padding-bottom: 7 !important;
 }
