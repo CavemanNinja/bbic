@@ -79,7 +79,7 @@ div.st_views {
 	/*border: 0px !important;*/
 	border-bottom: 20px !important;
 	border-color: #f7f7f7 !important;
-	box-shadow: 0px 6px 12px #666666;  
+	/*box-shadow: 0px 6px 12px #666666;  */
 }
 
 div.twoj_slidertabs_wrap {
@@ -110,17 +110,17 @@ div.twoj_slidertabs_wrap {
 }
 
 div.st_tabs > div > ul > li > a {
-	color: #0288d1 !important;
+	color: #01579b !important;
 	background-color: #fff !important;
 }
 
 div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
-	border-bottom: 2px solid #0288d1 !important;
+	border-bottom: 1px solid #01579b !important;
 	box-sizing: border-box !important;
 }
 
 div.st_tabs > div > ul > li.twoj_tab_block_li > a:hover {
- 	border-bottom: 2px solid #999;
+ 	border-bottom: 1px solid #999;
 	box-sizing: border-box;
 }
 

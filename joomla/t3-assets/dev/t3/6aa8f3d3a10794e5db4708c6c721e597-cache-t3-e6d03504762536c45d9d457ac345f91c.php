@@ -955,8 +955,8 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         #00345b;
-@brand-secondary:       #428bca; // T3 Note: Add secondary color
+@brand-primary:         #01579b;
+@brand-secondary:       #0277bd; // T3 Note: Add secondary color
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;

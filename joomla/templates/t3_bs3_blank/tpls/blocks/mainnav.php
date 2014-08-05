@@ -19,12 +19,11 @@ defined('_JEXEC') or die;
 				<?php $this->addScript(T3_URL.'/js/nav-collapse.js'); ?>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-mainmenu">
 					<i class="fa fa-bars"></i><?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
-					    	اظهار القائمة الرئيسية
+					    	Toggle Main Menu
 		 				<?php else : ?>
 		 					اظهار قائمة المستخدم
 		 				<?php endif; ?>    
 				</button>
-			
 			<?php endif ?>
 
 			<?php if ($this->getParam('addon_offcanvas_enable')) : ?>

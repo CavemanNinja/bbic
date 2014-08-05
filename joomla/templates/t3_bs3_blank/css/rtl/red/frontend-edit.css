@@ -189,7 +189,7 @@
   right: -1px;
   z-index: 1;
   text-transform: uppercase;
-  background: url(../imgs/blank.gif) no-repeat rgba(0, 0, 0, 0);
+  background: url(../../../../../plugins/system/t3/base-bs3/imgs/blank.gif) no-repeat transparent;
   text-indent: -999em;
 }
 .t3onoff label:before,
@@ -317,7 +317,7 @@ fieldset.radio.btn-group label.active {
   display: block;
   float: right;
   padding: 2px 10px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 .button2-left span,
 .button2-right span {
@@ -355,3 +355,4 @@ fieldset.radio.btn-group label.active {
   cursor: pointer;
   margin-right: 5px;
 }
+
