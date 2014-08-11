@@ -2442,6 +2442,11 @@ a.list-group-item.active:focus .list-group-item-text {
     margin: 0 0 20px 30px;
   }
 }
+
+.languageswitcherload {
+  float: left !important;
+}
+
 .languageswitcherload ul {
   float: left;
 }

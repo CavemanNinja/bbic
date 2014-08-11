@@ -20,23 +20,37 @@ if (!$sitename) {
 
 $logosize = 'col-sm-12';
 if ($headright = $this->countModules('head-search or languageswitcherload')) {
-	$logosize = 'col-sm-5';
+	$logosize = 'col-sm-12 col-md-12 col-lg-5';
 }
 
 ?>
 
 <!-- HEADER -->
 <div class="myheaderdiv">
+<div class="row langsearch-row">
+<div class="container langsearch-container"
+		<!-- LANGUAGE SWITCHER + SEARCH -->
+		<div class="col-xs-12 langsearch">
+			<div class="breadcrumbs">
+				<jdoc:include type="modules" name="<?php $this->_p('breadcrumbs') ?>" style="raw" />
+			</div>
+			<div class="languageswitcherload">
+				<jdoc:include type="modules" name="<?php $this->_p('languageswitcherload') ?>" style="raw" />
+			</div>
+		</div>
+		<!-- //LANGUAGE SWITCHER -->
+	</div>
+</div>
+
 <header id="t3-header" class="container t3-header">
+	
 	<div class="row">
-
 		<!-- LOGO -->
-
 		<div class="col-xs-12 <?php echo $logosize ?> logo pull-down">
 			<div class="logo-<?php echo $logotype, ($logoimgsm ? ' logo-control' : '') ?>">
 				<a href="<?php echo JURI::base(true) ?>" title="<?php echo strip_tags($sitename) ?>">
 					<?php if($logotype == 'image'): ?>
-						<img class="logo-img pull-down img-responsive col-xs-12" src="<?php echo JURI::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
+						<img class="logo-img pull-down img-responsive col-xs-12 col-sm-12" src="<?php echo JURI::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
 					<?php endif ?>
 					<?php if($logoimgsm) : ?>
 						<img class="logo-img-sm pull-down" src="<?php echo JURI::base(true) . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
@@ -49,13 +63,13 @@ if ($headright = $this->countModules('head-search or languageswitcherload')) {
 		<!-- //LOGO -->
 
 		<?php if ($headright): ?>
-			<div class="col-xs-12 col-sm-7 carousel">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 carousel">
 				<?php if ($this->countModules('head-search')) : ?>
-					<!-- HEAD SEARCH -->
+					<!-- CAROUSEL-->
 					<div class="head-search <?php $this->_c('head-search') ?>">
 						<jdoc:include type="modules" name="<?php $this->_p('head-search') ?>" style="raw" />
 					</div>
-					<!-- //HEAD SEARCH -->
+					<!-- //CAROUSEL -->
 				<?php endif ?>
 
 				

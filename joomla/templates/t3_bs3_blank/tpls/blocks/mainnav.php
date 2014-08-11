@@ -42,7 +42,7 @@ defined('_JEXEC') or die;
 			<jdoc:include type="<?php echo $this->getParam('navigation_type', 'megamenu') ?>" name="<?php echo $this->getParam('mm_type', 'mainmenu') ?>" />
 			
 
-			<!-- LANGUAGE SWITCHER + SEARCH -->
+			<!-- LANGUAGE SWITCHER + SEARCH 
 			<div class="langsearch">
 				<div class="breadcrumbs">
 					<jdoc:include type="modules" name="<?php $this->_p('breadcrumbs') ?>" style="raw" />

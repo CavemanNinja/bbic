@@ -122,3 +122,4 @@ JHtml::_('bootstrap.tooltip');
 		</div>
 	<?php endif; ?>
 </form>
+			

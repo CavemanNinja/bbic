@@ -11,6 +11,7 @@
     <!-- Latest compiled and minified CSS -->
 <!--    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="/joomla/templates/t3_bs3_blank/css/custom.css"
 
     <!-- Optional theme -->
 <!--    <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
@@ -23,14 +24,15 @@
   </head>
   <body>
     <div class="myjumbotron">
-      <img src="images/BBICLogo2.png" class="img-responsive myimage">
+      <div class="landingcard">
+      <img src="/joomla/images/BBICLogoDark.png" class="img-responsive myimage">
       <p>
         <br/>
         <a class="btn btn-primary btn-lg" href="joomla/index.php/en" role="button">English</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
         <a class="btn btn-primary btn-lg" href="joomla/index.php/ar" role="button">العربية</a>
       </p>
     </div>
-
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

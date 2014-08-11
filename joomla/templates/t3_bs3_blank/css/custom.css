@@ -10,7 +10,7 @@
 
 .navbar-header {
   width: 10px !important;
-  height: 33px !important;
+  /*height: 33px !important; This was messing up the navbar. Don't know why I put it here. */
 }
 
 .t3-footnav .module-title {
@@ -36,7 +36,7 @@ body {
 }
 
 .module {
-  margin-bottom: 40px !important;
+  /*margin-bottom: 40px !important;*/
 }
 
 .carousel {
@@ -395,14 +395,12 @@ h2 {
 
 
 .logo {
-
   margin-top: 40px !important;
   margin-bottom: 20px !important;
   display: inline-block;
   vertical-align: bottom !important;
   padding-left: 0px !important;
   padding-right: 0px !important;
-
 }
 
 .logo-img {
@@ -412,17 +410,18 @@ h2 {
 
 @media (max-width: 1200px) {
   .logo {
-    margin-top: 80px !important;
+    margin-top: 40px !important;
+    text-align: center;
   }
 }
 @media (max-width: 992px) {
   .logo {
-    margin-top: 110px !important;
+    /*margin-top: 40px !important;*/
   }
 }
 @media (max-width: 768px) {
   .logo {
-    margin-top: 10px !important;
+    /*margin-top: 10px !important;*/
   }
 }
 
@@ -452,17 +451,21 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
 /*NAVBAR COLORS*/
 /*navbar margin shouldny on bottom put in mainbody top */
 #t3-mainbody {
-  margin-top: 50px !important;
+  margin-top: 50px;
 }
 
 .navbar {
   border: 0px !important;
-  box-shadow: 0px 6px 6px rgba(0,0,0,0.3);
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
   /*background-image: url('/joomla/images/navbarnoise1.png');*/
 }
 
 .navbar-default {
   border-color: #01579b;
+}
+
+.navbar-collapse {
+  max-height: 420px;
 }
 
 .usernav {
@@ -477,7 +480,39 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
 
 .usernav .navbar-nav > li > a {
   color: #0277bd;
+  font-size: 13px;
+  /*padding-left: 7px;
+  padding-right: 7px;*/
 }
+
+/*Navbar Resizing*/
+@media (max-width: 1200px) {
+  
+}
+@media (max-width: 992px) {
+  .navbar-default .navbar-nav > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  .t3-mainbody {
+    padding-top: 0px;
+    margin-top: 0px !important;
+    padding-bottom: 0px;
+  }
+  .t3-content {
+    /*width: 80% !important;*/
+    /*margin-left: 15px !important;
+    margin-right: 15px !important;*/
+  }
+}
+
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -685,6 +720,19 @@ th {
   width: auto;
   padding-top: 15px;
   display: inline;
+  text-align: right;
+}
+
+.languageswitcherload {
+  float: right;
+  
+}
+.languageswitcherload .mod-languages {
+  text-align: right;
+}
+
+#mod-search-searchword {
+  width: auto;
 }
 
 .breadcrumbs {
@@ -692,14 +740,36 @@ th {
   float: right;
   padding-top: 8px;
   padding-right: 5px;
-  padding-left: 5px;
+  padding-left: 10px;
   display: inline;
+
 }
 
 .langsearch {
   display: inline-block;
   float: right;
   height: 50px;
+}
+
+.langsearch-row {
+  /*border-bottom: 1px solid rgba(0,0,0,0.1);*/
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.1);
+  margin-bottom: 20px !important;
+  width: 100%;
+  margin: 0;
+}
+
+
+#t3-header {
+  padding-bottom: 20px !important;
+}
+
+body > div > div.myheaderdiv > div > div > div > div.languageswitcherload > div > ul > li > a > img {
+  box-shadow: 1px 1px 3px #595959;
+}
+
+#mod-search-searchword {
+  display: inline-block;
 }
 
 div.st_tabs > div > ul {
@@ -783,15 +853,14 @@ div.st_tabs > div > ul {
   margin-right: auto;
 }
 
-#t3-mainnav > div > div.t3-navbar.navbar-collapse.collapse > 
-div.langsearch > div.languageswitcherload > div > ul > 
-li > a > img {
-  box-shadow: 1px 1px 3px #595959;
-}
-
 .myspacer {
   height: 140px !important;
 }
 
-/*RADIUSES FOR COMPONENTS AND MODULES*/
+/*NAVBAR EXPERIMENTING*/
+/*.navbar-collapse.collapse {
+  height: 50px !important;
+}
+*/
 
+/*Making the user nav smaller*/
