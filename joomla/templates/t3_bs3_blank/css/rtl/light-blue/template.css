@@ -2443,6 +2443,8 @@ a.list-group-item.active:focus .list-group-item-text {
   }
 }
 
+/*CUSTOM CSS FOR RTL (ARABIC) SITE*/
+
 .languageswitcherload {
   float: left !important;
 }
@@ -2461,4 +2463,8 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .langsearch {
   float: left !important;
+}
+
+div.st_tabs > div > ul > li.twoj_tab_block_li {
+  float: right !important;
 }
