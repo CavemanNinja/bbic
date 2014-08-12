@@ -32,8 +32,10 @@ $document->addScriptDeclaration("
 ");
 
 // phpinfo();
-
+// $this->state->set('filter.published', [0, 1, 2]);
+// var_dump($this);
 // var_dump($this->pagination->total);
+// $this->state->set('list_limit', "0");
 
 $myPageItems = $this->pagination->total;
 $myPagesTotal = 0;
@@ -94,7 +96,7 @@ if ($catid == 10) {
 	$list_show_billing_repeating = true;
 }
 
-
+// var_dump($this);
 
 // Check for at least one editable article
 $isEditable = false;
@@ -136,7 +138,7 @@ if (!empty($this->items))
 						<label for="limit" class="element-invisible">
 							<?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?>
 						</label>
-						<?php echo $this->pagination->getLimitBox(); ?>
+						<!-- <?php echo $this->pagination->getLimitBox(); ?> -->
 					</div>
 				<?php endif; ?>
 

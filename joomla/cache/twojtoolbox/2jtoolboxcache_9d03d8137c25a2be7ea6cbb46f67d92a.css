@@ -153,8 +153,8 @@ div.st_tabs > div > ul > li.twoj_tab_block_li > a:hover {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.eot?v=3.2.1');
-  src: url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
   font-weight: normal;
   font-style: normal;
 }

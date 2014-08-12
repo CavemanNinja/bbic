@@ -606,8 +606,9 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
 .t3-copyright {
   border: 0px;
   /*background: #666;*/
-  background-image: url('/joomla/images/copyrightnoise.png') !important;
-  background-color: #4f4f4f;
+  /*background-image: url('../../../images/footer-background.png') !important;*/
+  background-image: url('../../../images/copyrightnoise.png') !important;
+  /*background-color: #4f4f4f;*/
   box-shadow: 0px -4px 6px rgba(0,0,0,0.2);
 }
 
@@ -862,4 +863,6 @@ div.st_tabs > div > ul {
 }
 */
 
-/*Making the user nav smaller*/
+#adminForm > fieldset > div:nth-child(1) {
+  margin: 0px;
+}

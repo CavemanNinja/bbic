@@ -829,7 +829,7 @@
 			description="COM_CONFIG_FIELD_DEFAULT_FEED_LIMIT_DESC"
 			filter="integer">
 			<option value="5">J5</option>
-			<option value="10">J10</option>
+			<option value="1000">J10</option>
 			<option value="15">J15</option>
 			<option value="20">J20</option>
 			<option value="25">J25</option>

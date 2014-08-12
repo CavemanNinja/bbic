@@ -7,7 +7,7 @@ class JConfig {
 	public $sitename = 'BBIC';
 	public $editor = 'tinymce';
 	public $captcha = '0';
-	public $list_limit = '20';
+	public $list_limit = '100';
 	public $access = '1';
 	public $debug = '0';
 	public $debug_lang = '0';
@@ -53,7 +53,7 @@ class JConfig {
 	public $sef_rewrite = '0';
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
-	public $feed_limit = '10';
+	public $feed_limit = '5';
 	public $log_path = '/var/www/html/joomla/logs';
 	public $tmp_path = '/var/www/html/joomla/tmp';
 	public $lifetime = '15';

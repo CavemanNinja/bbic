@@ -3,10 +3,34 @@
 	{
 		"selected_items":
 		[
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"limi",
+				"limitstart"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "joomla/templates/t3_bs3_blank/css/custom.css",
+			"settings":
+			{
+				"buffer_size": 17523,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+			"settings":
+			{
+				"buffer_size": 19775,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -40,10 +64,13 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/bbic/joomla/administrator/components/com_config/model/form/application.xml",
+		"/C/wamp/www/bbic/joomla/administrator/components/com_config/models/application.php",
+		"/C/wamp/www/bbic/joomla/administrator/components/com_config/models/forms/application.xml"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -74,18 +101,78 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "joomla/templates/t3_bs3_blank/css/custom.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17523,
+								17523
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 14867.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19775,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1102,
+								1102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"layout":
 	{
@@ -117,7 +204,7 @@
 	"project": "BBIC.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
