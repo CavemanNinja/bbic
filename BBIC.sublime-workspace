@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"quote",
-				"quoteName"
+				"csv",
+				"csv_record"
 			],
 			[
-				"csv",
-				"csv_company_name"
+				"quote",
+				"quoteName"
 			],
 			[
 				"company",
@@ -87,7 +87,7 @@
 			"file": "joomla/modules/mod_simplefileuploadv1.3/helper.php",
 			"settings":
 			{
-				"buffer_size": 43311,
+				"buffer_size": 45814,
 				"line_ending": "Windows"
 			}
 		},
@@ -95,15 +95,7 @@
 			"file": "joomla/templates/t3_bs3_blank/etc/extrafields/billing.xml",
 			"settings":
 			{
-				"buffer_size": 2658,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "joomla/plugins/content/billrepeat/billrepeat.php",
-			"settings":
-			{
-				"buffer_size": 12394,
+				"buffer_size": 3310,
 				"line_ending": "Windows"
 			}
 		}
@@ -140,13 +132,17 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/logs/php_error.log",
+		"/C/wamp/logs/apache_error.log",
+		"/C/wamp/logs/STDOUT",
+		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.ini",
+		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.sys.ini",
+		"/C/wamp/www/bbic/joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.ini",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/custom.css",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/map.css",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/map.xml",
-		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.sys.ini",
-		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.ini",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact/default.php",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/model/form/application.xml",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/models/application.php",
@@ -248,7 +244,7 @@
 						"translation.y": 11704.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -257,15 +253,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 43311,
+						"buffer_size": 45814,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								33935,
-								33935
+								35874,
+								35874
 							]
 						],
 						"settings":
@@ -274,7 +270,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 13644.0,
+						"translation.y": 14130.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -286,15 +282,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2658,
+						"buffer_size": 3310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2318,
+								2318
 							]
 						],
 						"settings":
@@ -304,46 +300,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 54.0,
+						"translation.y": 486.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 4,
-					"file": "joomla/plugins/content/billrepeat/billrepeat.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12394,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5385,
-								5385
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1836.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -366,18 +326,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":

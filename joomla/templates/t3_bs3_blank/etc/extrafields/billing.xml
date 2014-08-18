@@ -7,7 +7,15 @@
       description="TPL_EXTRAFIELDS_BILLING_SLIDER_LABEL_DESC" 
       group="extrafields"
       >
-      
+
+         <field
+            name="billing_invoice_id"
+            type="text"
+            class="validate-numeric"
+            label="TPL_EXTRAFIELDS_BILLING_INVOICE_ID"
+            description="TPL_EXTRAFIELDS_BILLING_INVOICE_ID_DESC"
+         />
+
          <field 
             name="billing_tenant_id" 
             type="sql" 
@@ -25,6 +33,20 @@
             class="validate-numeric"
             label="TPL_EXTRAFIELDS_BILLING_AMOUNT"
             description="TPL_EXTRAFIELDS_BILLING_AMOUNT_DESC"
+         />
+
+         <field
+            name="billing_description"
+            type="text"
+            label="TPL_EXTRAFIELDS_BILLING_DESCRIPTION"
+            description="TPL_EXTRAFIELDS_BILLING_DESCRIPTION_DESC"
+         />
+
+         <field
+            name="billing_type"
+            type="text"
+            label="TPL_EXTRAFIELDS_BILLING_TYPE"
+            description="TPL_EXTRAFIELDS_BILLING_TYPE_DESC"
          />
          
          <field

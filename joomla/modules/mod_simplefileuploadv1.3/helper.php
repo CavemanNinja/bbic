@@ -759,47 +759,93 @@ class ModSimpleFileUploaderHelperv13{
 				//load csv information into array
 				$csv_array = array();
 				$lines = file($csv_filepath);
-				foreach ($lines as $line_number => $line)
+				foreach ($lines as $line_number => $line) {
     				$csv_array[$line_number] = str_getcsv($line);
+				}
 
     			//remove first line if table headings
-    			if ($csv_array[0][0] == "Invoice")
+    			if ($csv_array[0][0] == "Invoice") {
     				$csv_array = array_slice($csv_array, 1);
+    			}
 
 				//iterate array
-				// foreach ($csv_array as $csv_line_number => $csv_record) {
+				$csv_success = 0;
+				foreach ($csv_array as $csv_line_number => $csv_record) {
+					
 					//check exact company name is found in database users table
-					// $csv_company_name = $csv_record[5];
-					$csv_company_name = $csv_array[3][5];
+					$csv_company_name = $csv_record[5]; //change when looping
 					$query = $db->getQuery(true);
 					$query->select($db->quoteName('created_by'));
 					$query->from($db->quoteName('#__content'));
 					$query->where($db->quoteName('catid')." = 9 AND ". 
 						$db->quoteName('title') ." LIKE ". $db->quote($csv_company_name));
 					$db->setQuery($query);
-					$tenant = $db->loadResult();
-					if ($tenant) {
-						//create new bill with information from csv
-						
-						
-						//add new bill to database
-							//check if bill with existing invoice no. exists
-								//TRUE
-								//Update existing bill
+					$tenant_id = $db->loadResult();
 
-								//FALSE
-								//Create new bill
+					if ($tenant_id) {
+						//create new bill with information from csv using the invoice ID as the alias
+						// 'DD "-" M "-" y'
+						// $csv_date = new JDate(strtotime($csv_record[1]));
+
+						$csv_time = strtotime($csv_record[1]);
+						$mysql_start_time = date('Y-m-d h:i:s', $csv_time);
+
+						$billing_amount = str_replace(".00", "", $csv_record[9]);
+						$billing_amount = str_replace(",", "", $billing_amount);
+
+
+						$billing_attribs = '{"billing_tenant_id":"'.$tenant_id.'","billing_amount":"'.$billing_amount.'","billing_invoice_id":"'.$csv_record[0].
+						'","billing_description":"'.$csv_record[6].'","billing_type":"'.$csv_record[10].
+						'","billing_invoice_date":"'. $mysql_start_time .'","billing_status":"0","billing_repeatcycle":"","billing_repeatstart":"","billing_repeatend":""}';
+						break;
+						$jt_article = JTable::getInstance('content');
+						$jt_article->title = $csv_record[0].' - '.$csv_record[5]. ': '.$csv_record[6];
+	                    $jt_article->alias = $csv_record[0];
+	                    $jt_article->state = 1;
+	                    $jt_article->catid = 10;
+	                    $jt_article->access = 1;
+	                    $jt_article->attribs = $billing_attribs;
+	                    $jt_article->metadata = '{"page_title":"","author":"","robots":""}';
+	                    $jt_article->language = '*';
+	                    $jt_article->created = JFactory::getDate()->toSQL();
+	                    
+	                    //Remove article with same alias if exists in database already.
+	                    $del_query = $db->getQuery(true);
+	                    $del_query->delete($db->quoteName('content'));
+	                    $del_query->where($db->quoteName('alias'). " LIKE " . $db->quoteName($csv_record[0]));
+	                    $db->setQuery($del_query);
+	                    $deleteresult = $db->query();
+	                    if ($deleteresult){
+	                    	$results .= "Removed ".$csv_record[0] .".";
+	                    }
+
+	                    //insert new article into database
+	                    if (!$jt_article->check()) {
+	                        JError::raiseNotice(500, $jt_article->getError());
+	                        // return FALSE;
+	                        $results .= "Error adding Invoice ". $csv_record[0] ."to database";
+	                    }
+	                    if (!$jt_article->store(TRUE)) {
+	                        JError::raiseNotice(500, $jt_article->getError());
+	                        // return FALSE;
+	                        $results .= "Error adding Invoice ". $csv_record[0] ."to database";
+	                    }
+
 						//increment successful invoice counter
+						$csv_success++;
 					} else {
-						//Unable to locate tenant. 
+						//Unable to locate tenant.
+						$results .= "Unable to locate tenant for Invoice ". $csv_record[0] .". Pleace Check Tenant Name and try again.";
 					}
-						//FALSE
-						//Add to result message, failed to add invoice no. XXX, please check company name (number from csv)
-				// }
-				//Display message, number of successfully added invoices.
+						
+				}
+				$results .= $csv_success." Successful Invoices added.";
 			}
-			return $query_result;
-			return $csv_company_name;
+
+			// return $query_result;
+			// return $csv_company_name;
+			// return number_format($csv_record[9], 0, "", "");
+			return $billing_attribs;
 			return $results;
 		}
 		
