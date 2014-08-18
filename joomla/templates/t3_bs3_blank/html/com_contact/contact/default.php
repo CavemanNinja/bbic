@@ -57,6 +57,123 @@ jimport('joomla.html.html.bootstrap');
 		<?php endif; ?>
 	<?php endif; ?>
 
+	<div class="panel-group collapse in" id="slide-contact" style="height: auto;">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#slide-contact" href="#basic-details">
+						Contact							</a>
+					</h4>
+				</div>
+				<div id="basic-details" class="panel-collapse collapse in">
+					<div class="panel-body">
+						
+						
+						
+						<dl class="contact-address dl-horizontal" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+							<dt>
+								<span class="jicons-text">
+									Address: 				</span>
+								</dt>
+								
+								<dd>
+									<span class="contact-street" itemprop="streetAddress">
+										Building 8, Road No. 17
+										Block No.117, Hidd Industrial Area
+										<br>				</span>
+									</dd>
+									
+									<dd>
+										<span class="contact-country" itemprop="addressCountry">
+											Kingdom of Bahrain<br>			</span>
+										</dd>
+										
+
+										<dt>
+											<span class="jicons-text">
+												Phone: 		</span>
+											</dt>
+											<dd>
+												<span class="contact-telephone" itemprop="telephone">
+													17358888		</span>
+												</dd>
+												<dt>
+													<span class="jicons-text">
+														Fax: 		</span>
+													</dt>
+													<dd>
+														<span class="contact-fax" itemprop="faxNumber">
+															17465484		</span>
+														</dd>
+													</dl>
+
+												</div>
+											</div>
+										</div>
+										
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a class="accordion-toggle" data-toggle="collapse" data-parent="#slide-contact" href="#display-form">
+														Contact Form							</a>
+													</h4>
+												</div>
+												<div id="display-form" class="panel-collapse collapse">
+													<div class="panel-body">
+														
+														<div class="contact-form">
+															<form id="contact-form" action="/bbic/joomla/index.php/en/contact-us" method="post" class="form-validate form-horizontal">
+																<fieldset>
+																	<legend>Send an email. All fields with an * are required.</legend>
+																	<div class="form-group">
+																		<label id="jform_contact_name-lbl" for="jform_contact_name" class="hasTooltip required col-sm-2 control-label" title="" data-original-title="<strong>Name</strong><br />Your name">Name<span class="star">&nbsp;*</span></label>				<div class="col-sm-10">
+																		<input type="text" name="jform[contact_name]" id="jform_contact_name" value="" size="30" required="" aria-required="true">				</div>
+																	</div>
+																	<div class="form-group">
+																		<label id="jform_contact_email-lbl" for="jform_contact_email" class="hasTooltip required col-sm-2 control-label" title="" data-original-title="<strong>Email</strong><br />Email for contact">Email<span class="star">&nbsp;*</span></label>				<div class="col-sm-10">
+																		<input type="email" name="jform[contact_email]" class="validate-email form-control" id="jform_contact_email" value="" size="30" required="" aria-required="true">				</div>
+																	</div>
+																	<div class="form-group">
+																		<label id="jform_contact_emailmsg-lbl" for="jform_contact_emailmsg" class="hasTooltip required col-sm-2 control-label" title="" data-original-title="<strong>Subject</strong><br />Enter the subject of your message here .">Subject<span class="star">&nbsp;*</span></label>				<div class="col-sm-10">
+																		<input type="text" name="jform[contact_subject]" id="jform_contact_emailmsg" value="" size="60" required="" aria-required="true">				</div>
+																	</div>
+																	<div class="form-group">
+																		<label id="jform_contact_message-lbl" for="jform_contact_message" class="hasTooltip required col-sm-2 control-label" title="" data-original-title="<strong>Message</strong><br />Enter your message here.">Message<span class="star">&nbsp;*</span></label>				<div class="col-sm-10">
+																		<textarea name="jform[contact_message]" id="jform_contact_message" cols="50" rows="10" required="" aria-required="true"></textarea>				</div>
+																	</div>
+																	<div class="form-group">
+																		<div class="col-sm-offset-2 col-sm-10">
+																			<div class="checkbox">
+																				<input type="checkbox" name="jform[contact_email_copy]" id="jform_contact_email_copy" value="1">							<label id="jform_contact_email_copy-lbl" for="jform_contact_email_copy" class="hasTooltip" title="" data-original-title="<strong>Send copy to yourself</strong><br />Sends a copy of the message to the address you have supplied.">Send copy to yourself</label>						</div>
+																			</div>
+																		</div>
+																		<div class="form-group">
+																		</div>
+																		<div class="form-group">
+																			<div class="col-sm-offset-2 col-sm-10">
+																				<button class="btn btn-primary validate" type="submit">Send Email</button>
+																			</div>
+																			
+																			<input type="hidden" name="option" value="com_contact">
+																			<input type="hidden" name="task" value="contact.submit">
+																			<input type="hidden" name="return" value="">
+																			<input type="hidden" name="id" value="1:enquiries">
+																			<input type="hidden" name="6687849e18a250703ce669392bd4fdce" value="1">			</div>
+																		</fieldset>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+													
+													<script type="text/javascript">
+														(function($){
+															$('#slide-contact').collapse({ parent: false, toggle: true, active: 'basic-details'});
+														})(jQuery);
+													</script>
+												</div>
+
 <?php else : ?>
 
 	<div class="contact<?php echo $this->pageclass_sfx?>" itemscope itemtype="http://schema.org/Person">

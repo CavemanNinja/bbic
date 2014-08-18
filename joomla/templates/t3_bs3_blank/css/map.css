@@ -1,0 +1,23 @@
+.map {
+	background-color: #4fb3ef;
+	border-color: #01579b;
+	text-align: center;
+	vertical-align: middle;
+	width: 150px;
+	height: 100px;
+	/*display: inline-block !important;*/
+	display: table-cell;
+	
+}
+
+.map_wrapper {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 60%;
+}
+
+
+.location1 {
+
+}

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields>
+        <fieldset name="publishing">
+            <field name="created_by" type="user" default="" label="JAUTHOR" description="JFIELD_METADATA_AUTHOR_DESC" />
+            <field name="created_by_alias" type="text" size="20" default="" label="JGLOBAL_FIELD_CREATED_BY_ALIAS_LABEL" description="JGLOBAL_FIELD_CREATED_BY_ALIAS_DESC" />
+            <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="CU_ACCESS_DESC" />
+            <field name="access_column" type="text" size="20" default="" label="CU_ACCESS_COLUMN_LABEL" description="CU_ACCESS_COLUMN_DESC" />
+            <field name="created" type="calendar" default="" label="JGLOBAL_FIELD_CREATED_LABEL" description="JGLOBAL_FIELD_CREATED_DESC" />
+            <field name="publish_up" type="calendar" default="" label="JGLOBAL_FIELD_PUBLISH_UP_LABEL" description="JGLOBAL_FIELD_PUBLISH_UP_DESC" />
+            <field name="publish_down" type="calendar" default="" label="JGLOBAL_FIELD_PUBLISH_DOWN_LABEL" description="JGLOBAL_FIELD_PUBLISH_DOWN_DESC" />
+        </fieldset>
+        <fieldset name="article">
+            <field name="show_title" type="list" default="" label="JGLOBAL_SHOW_TITLE_LABEL" description="JGLOBAL_SHOW_TITLE_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="link_titles" type="list" default="" label="JGLOBAL_LINKED_TITLES_LABEL" description="JGLOBAL_LINKED_TITLES_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_tags" type="list" class="chzn-color" label="CU_SHOW_TAGS_LABEL" description="CU_SHOW_TAGS_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="show_intro" type="list" default="" label="JGLOBAL_SHOW_INTRO_LABEL" description="JGLOBAL_SHOW_INTRO_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="info_block_position" type="list" default="" label="CU_INFOBLOCK_POSITION_LABEL" description="CU_INFOBLOCK_POSITION_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_CONTENT_FIELD_OPTION_ABOVE</option>
+                <option value="1">COM_CONTENT_FIELD_OPTION_BELOW</option>
+                <option value="2">COM_CONTENT_FIELD_OPTION_SPLIT</option>
+            </field>
+            <field name="show_category" type="list" default="" label="JGLOBAL_SHOW_CATEGORY_LABEL" description="JGLOBAL_SHOW_CATEGORY_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="link_category" type="list" default="" label="JGLOBAL_LINK_CATEGORY_LABEL" description="JGLOBAL_LINK_CATEGORY_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_parent_category" type="list" default="" label="JGLOBAL_SHOW_PARENT_CATEGORY_LABEL" description="JGLOBAL_SHOW_PARENT_CATEGORY_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="link_parent_category" type="list" default="" label="JGLOBAL_LINK_PARENT_CATEGORY_LABEL" description="JGLOBAL_LINK_PARENT_CATEGORY_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_author" type="list" default="" label="JGLOBAL_SHOW_AUTHOR_LABEL" description="JGLOBAL_SHOW_AUTHOR_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="link_author" type="list" default="" label="JGLOBAL_LINK_AUTHOR_LABEL" description="JGLOBAL_LINK_AUTHOR_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_create_date" type="list" default="" label="JGLOBAL_SHOW_CREATE_DATE_LABEL" description="JGLOBAL_SHOW_CREATE_DATE_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_modify_date" type="list" default="" label="JGLOBAL_SHOW_MODIFY_DATE_LABEL" description="JGLOBAL_SHOW_MODIFY_DATE_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_publish_date" type="list" default="" label="JGLOBAL_SHOW_PUBLISH_DATE_LABEL" description="JGLOBAL_SHOW_PUBLISH_DATE_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_item_navigation" type="list" default="" label="JGLOBAL_SHOW_NAVIGATION_LABEL" description="JGLOBAL_SHOW_NAVIGATION_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_icons" type="list" default="" label="JGLOBAL_SHOW_ICONS_LABEL" description="JGLOBAL_SHOW_ICONS_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_print_icon" type="list" default="" label="JGLOBAL_SHOW_PRINT_ICON_LABEL" description="JGLOBAL_SHOW_PRINT_ICON_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_email_icon" type="list" default="" label="JGLOBAL_SHOW_EMAIL_ICON_LABEL" description="JGLOBAL_SHOW_EMAIL_ICON_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_vote" type="list" default="" label="JGLOBAL_SHOW_VOTE_LABEL" description="JGLOBAL_SHOW_VOTE_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_vote" type="list" default="" label="JGLOBAL_SHOW_VOTE_LABEL" description="JGLOBAL_SHOW_VOTE_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_hits" type="list" default="" label="JGLOBAL_SHOW_HITS_LABEL" description="JGLOBAL_SHOW_HITS_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_noauth" type="list" default="" label="JGLOBAL_SHOW_UNAUTH_LINKS_LABEL" description="JGLOBAL_SHOW_UNAUTH_LINKS_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="urls_position" type="list" label="COM_CONTENT_FIELD_URLSPOSITION_LABEL" description="COM_CONTENT_FIELD_URLSPOSITION_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_CONTENT_FIELD_OPTION_ABOVE</option>
+                <option value="1">COM_CONTENT_FIELD_OPTION_BELOW</option>
+            </field>
+            <field name="alternative_readmore" type="text" size="20" default="" label="JFIELD_READMORE_LABEL" description="JFIELD_READMORE_DESC" />
+            <field name="article_layout" type="componentlayout" client_id="0" useglobal="true" extension="com_content" view="article" client="site" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_COMPONENT_LAYOUT_DESC" />
+            <field name="language" type="language" client="site" label="JFIELD_LANGUAGE_LABEL" description="CU_PRO_FEATURE_INDIVIDUALLY" />
+        </fieldset>
+        <fieldset name="metadata">
+            <field name="description" type="textarea" rows="5" cols="21" default="" label="JFIELD_META_DESCRIPTION_LABEL" description="JFIELD_META_DESCRIPTION_DESC" />
+            <field name="keywords" type="textarea" rows="5" cols="21" default="" label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC" />
+            <field name="xreference" type="text" default="" label="COM_CONTENT_FIELD_XREFERENCE_LABEL" description="JFIELD_METADATA_XREFERENCE_DESC" />
+            <field name="robots_select" type="list" default="" label="JFIELD_METADATA_ROBOTS_LABEL" description="JFIELD_METADATA_ROBOTS_DESC">
+                <option value="">CU_COLUMN_REF</option>
+                <option value="index, follow">index, follow</option>
+                <option value="noindex, follow">noindex, follow</option>
+                <option value="index, nofollow">index, nofollow</option>
+                <option value="noindex, nofollow">noindex, nofollow</option>
+            </field>
+            <field name="robots" type="text" size="20" default="" label="JFIELD_METADATA_ROBOTS_LABEL" description="CU_COLUMN_REF" />
+            <field name="author" type="text" size="20" default="" label="JAUTHOR" description="JFIELD_METADATA_AUTHOR_DESC" />
+            <field name="rights" type="textarea" rows="5" cols="21" default="" label="JFIELD_META_RIGHTS_LABEL" description="JFIELD_META_RIGHTS_DESC" />
+        </fieldset>
+
+        <fieldset name="images" label="COM_CONTENT_FIELD_IMAGE_OPTIONS">
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_INTRO_LABEL"
+                description="CU_TIPIMAGECOL"
+                disabled="1" />
+            <field
+                type="list"
+                label="COM_CONTENT_FLOAT_LABEL"
+                description="COM_CONTENT_FLOAT_DESC"
+                disabled="1">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="right">COM_CONTENT_RIGHT</option>
+                    <option value="left">COM_CONTENT_LEFT</option>
+                    <option value="none">COM_CONTENT_NONE</option>
+            </field>
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_IMAGE_ALT_LABEL"
+                description="CU_TIPIMAGEALT"
+                size="20"
+                disabled="1"/>
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_IMAGE_CAPTION_LABEL"
+                description="CU_TIPIMAGECAPTION"
+                size="20"
+                disabled="1"/>
+            <field
+                name="spacer1"
+                type="spacer"
+                hr="true"
+                />
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_FULL_LABEL"
+                description="CU_TIPIMAGECOL"
+                disabled="1"/>
+            <field
+                type="list"
+                label="COM_CONTENT_FLOAT_LABEL"
+                description="COM_CONTENT_FLOAT_DESC"
+                disabled="1">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="right">COM_CONTENT_RIGHT</option>
+                    <option value="left">COM_CONTENT_LEFT</option>
+                    <option value="none">COM_CONTENT_NONE</option>
+            </field>
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_IMAGE_ALT_LABEL"
+                description="CU_TIPIMAGEALT"
+                size="20"
+                disabled="1"/>
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_IMAGE_CAPTION_LABEL"
+                description="CU_TIPIMAGECAPTION"
+                size="20"
+                disabled="1"/>
+        </fieldset>
+
+        <fieldset name="urls" label="COM_CONTENT_FIELD_URLS_OPTIONS">
+            <field
+                type="url"
+                validate="url"
+                filter="url"
+                label="COM_CONTENT_FIELD_URLA_LABEL"
+                description="COM_CONTENT_FIELD_URL_DESC"
+                disabled="1" />
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_URLA_LINK_TEXT_LABEL"
+                description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC"
+                size="20"
+                disabled="1"/>
+            <field
+                type="list"
+                label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL"
+                description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+                default=""
+                filter="options"
+                disabled="1"
+                >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JBROWSERTARGET_PARENT</option>
+                <option value="1">JBROWSERTARGET_NEW</option>
+                <option value="2">JBROWSERTARGET_POPUP</option>
+                <option value="3">JBROWSERTARGET_MODAL</option>
+            </field>
+            <field
+                name="spacer3"
+                type="spacer"
+                hr="true"
+                />
+            <field
+                type="url"
+                validate="url"
+                filter="url"
+                label="COM_CONTENT_FIELD_URLB_LABEL"
+                description="COM_CONTENT_FIELD_URL_DESC"
+                disabled="1"/>
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_URLB_LINK_TEXT_LABEL"
+                description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC"
+                size="20"
+                disabled="1"/>
+            <field
+                type="list"
+                label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL"
+                description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+                default=""
+                filter="options"
+                disabled="1"
+                >
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JBROWSERTARGET_PARENT</option>
+                    <option value="1">JBROWSERTARGET_NEW</option>
+                    <option value="2">JBROWSERTARGET_POPUP</option>
+                    <option value="3">JBROWSERTARGET_MODAL</option>
+            </field>
+            <field
+                type="spacer"
+                hr="true"
+                />
+            <field
+                type="url"
+                validate="url"
+                filter="url"
+                label="COM_CONTENT_FIELD_URLC_LABEL"
+                description="COM_CONTENT_FIELD_URL_DESC"
+                disabled="1"/>
+            <field
+                type="text"
+                label="COM_CONTENT_FIELD_URLC_LINK_TEXT_LABEL"
+                description="COM_CONTENT_FIELD_URL_LINK_TEXT_DESC"
+                size="20"
+                disabled="1"/>
+            <field
+                type="list"
+                label="COM_CONTENT_URL_FIELD_BROWSERNAV_LABEL"
+                description="COM_CONTENT_URL_FIELD_BROWSERNAV_DESC"
+                default=""
+                filter="options"
+                disabled="1"
+                >
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">JBROWSERTARGET_PARENT</option>
+                    <option value="1">JBROWSERTARGET_NEW</option>
+                    <option value="2">JBROWSERTARGET_POPUP</option>
+                    <option value="3">JBROWSERTARGET_MODAL</option>
+            </field>
+        </fieldset>
+
+        <fieldset name="contentEditor">
+            <field name="cu[fulltext]" type="editor"
+                label="COM_CONTENT_FIELD_ARTICLETEXT_LABEL" description="COM_CONTENT_FIELD_ARTICLETEXT_DESC"
+                filter="JComponentHelper::filterText" buttons="true" />
+        </fieldset>
+    </fields>
+</form>

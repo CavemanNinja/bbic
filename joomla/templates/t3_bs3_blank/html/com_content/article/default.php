@@ -13,6 +13,20 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 // JHtml::addIncludePath(T3_PATH . '/html/com_content');
 JHtml::addIncludePath(dirname(dirname(__FILE__)));
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css', array(), true);
+JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/map.css', array(), true);
+
+// <script type="text/javascript">
+// 	(function($){
+// 		$('#slide-contact').collapse({ parent: false, toggle: true, active: 'basic-details'});
+// 	})(jQuery);
+// </script>
+
+$document = JFactory::getDocument();
+$document->addScriptDeclaration("
+	// jQuery(function(){
+	// 	jQuery('#slide-contact').collapse({ parent: false, toggle: true, active: 'basic-details'});
+	// });
+");
 
 // Create shortcuts to some parameters.
 $params   = $this->item->params;
@@ -53,7 +67,7 @@ if ($catid == "12" || $catid == "10") {
 }
 
 /* APPLICATIONS */
-if ($catid == "11" || $catid == "17") {
+if ($catid == "11" || $catid == "17" || $catid == "29") {
 	$params->set("show_author", "0");
 	$params->set("show_category", "0");
 	$params->set("show_hits", "0");	
@@ -511,7 +525,6 @@ JHtml::_('bootstrap.tooltip');
 	</div>
 
 <!-- COMPANY PROFILE -->
-
 <?php elseif ($catid == "9") : ?>
 	<article itemscope itemtype="http://schema.org/Article">
 		<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
@@ -669,6 +682,170 @@ JHtml::_('bootstrap.tooltip');
 
 	<?php echo $this->item->event->afterDisplayContent; ?>
 	</div>
+
+<!--MAP-->
+<?php elseif ($catid == "29") : ?>
+	<article itemscope itemtype="http://schema.org/Article">
+		<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
+
+	<?php if ($params->get('show_title')) : ?>
+		<?php echo JLayoutHelper::render('joomla.content.item_title', array('item' => $this->item, 'params' => $params, 'title-tag'=>'h1')); ?>
+	<?php endif; ?>
+
+	<!-- Aside -->
+	<?php if ($topInfo || $icons) : ?>
+	<aside class="article-aside clearfix">
+	  <?php if ($topInfo): ?>
+	  <?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
+	  <?php endif; ?>
+	  
+	  <?php if ($icons): ?>
+	  <?php echo JLayoutHelper::render('joomla.content.icons', array('item' => $this->item, 'params' => $params, 'print' => $this->print)); ?>
+	  <?php endif; ?>
+	</aside>  
+	<?php endif; ?>
+	<!-- //Aside -->
+	<div class="panel-group collapse in" id="slide-contact" style="height: auto;">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#slide-contact" href="#basic-details">
+					Level 1 
+				</a>
+			</h4>
+		</div>
+		<div id="basic-details" class="panel-collapse collapse in">
+			<div class="panel-body">
+				<div class="map_wrapper">
+					<div class="map location1">
+						<?php echo $attribs->get('map_location_1_company_name'); ?>
+					</div>
+					<div class="map location2">
+						<?php echo $attribs->get('map_location_2_company_name'); ?>
+					</div>
+					<div class="map location3">
+						<?php echo $attribs->get('map_location_3_company_name'); ?>
+					</div>
+					<div class="map location4">
+						<?php echo $attribs->get('map_location_4_company_name'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#slide-contact" href="#display-form">
+					Level 2
+				</a>
+			</h4>
+		</div>
+		<div id="display-form" class="panel-collapse collapse">
+			<div class="panel-body">
+				Panel Body Level 2
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+	<?php if (isset ($this->item->toc)) : ?>
+		<?php echo $this->item->toc; ?>
+	<?php endif; ?>
+
+	<?php if ($params->get('show_tags', 1) && !empty($this->item->tags)) : ?>
+		<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
+	<?php endif; ?>
+
+	<?php if (!$params->get('show_intro')) : ?>
+		<?php echo $this->item->event->afterDisplayTitle; ?>
+	<?php endif; ?>
+
+	<?php echo $this->item->event->beforeDisplayContent; ?>
+
+	<?php if (isset($urls) && ((!empty($urls->urls_position) && ($urls->urls_position == '0')) || ($params->get('urls_position') == '0' && empty($urls->urls_position))) || (empty($urls->urls_position) && (!$params->get('urls_position')))): ?>
+		<?php echo $this->loadTemplate('links'); ?>
+	<?php endif; ?>
+
+	<?php	if ($params->get('access-view')): ?>
+
+		<?php echo JLayoutHelper::render('joomla.content.fulltext_image', array('item' => $this->item, 'params' => $params)); ?>
+
+		<?php	if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
+			echo $this->item->pagination;
+		endif; ?>
+
+		<section class="article-content clearfix" itemprop="articleBody">
+			<?php echo $this->item->text; ?>
+		</section>
+
+	  <!-- footer -->
+	  <?php if ($botInfo) : ?>
+	  <footer class="article-footer clearfix">
+	    <?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
+	  </footer>
+	  <?php endif; ?>
+	  <!-- //footer -->
+
+		<?php
+		if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && !$this->item->paginationrelative): ?>
+			<?php
+			echo '<hr class="divider-vertical" />';
+			echo $this->item->pagination;
+			?>
+		<?php endif; ?>
+
+		<?php if (isset($urls) && ((!empty($urls->urls_position) && ($urls->urls_position == '1')) || ($params->get('urls_position') == '1'))): ?>
+			<?php echo $this->loadTemplate('links'); ?>
+		<?php endif; ?>
+
+		<?php //optional teaser intro text for guests ?>
+	<?php elseif ($params->get('show_noauth') == true and  $user->get('guest')) : ?>
+
+		<?php echo $this->item->introtext; ?>
+		<?php //Optional link to let them register to see the whole article. ?>
+		<?php if ($params->get('show_readmore') && $this->item->fulltext != null) :
+			$link1 = JRoute::_('index.php?option=com_users&view=login');
+			$link = new JURI($link1);
+			?>
+			<section class="readmore">
+				<a href="<?php echo $link; ?>" itemprop="url">
+							<span>
+							<?php $attribs = json_decode($this->item->attribs); ?>
+							<?php
+							if ($attribs->alternative_readmore == null) :
+								echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
+							elseif ($readmore = $this->item->alternative_readmore) :
+								echo $readmore;
+								if ($params->get('show_readmore_title', 0) != 0) :
+									echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+								endif;
+							elseif ($params->get('show_readmore_title', 0) == 0) :
+								echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+							else :
+								echo JText::_('COM_CONTENT_READ_MORE');
+								echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+							endif; ?>
+							</span>
+				</a>
+			</section>
+		<?php endif; ?>
+	<?php endif; ?>
+
+	</article>
+	<!-- //Article -->
+
+	<?php if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative): ?>
+		<?php echo $this->item->pagination; ?>
+	<?php endif; ?>
+
+	<?php echo $this->item->event->afterDisplayContent; ?>
+	</div>
+
+
 
 
 <?php else : ?>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>focontentuploader</name>
+    <author>freakedout</author>
+    <authorEmail>contact@freakedout.de</authorEmail>
+    <authorUrl>www.freakedout.de</authorUrl>
+    <creationDate>2014-08-09</creationDate>
+    <license>GNU/GPL</license>
+    <copyright>Copyright (C) 2014 freakedout - All rights reserved.</copyright>
+    <version>3.3</version>
+    <description>Upload Excel, Open office, CSV and other spreadsheet data and have it automatically added as articles.</description>
+
+    <scriptfile>installation.script.php</scriptfile>
+
+    <media destination="com_focontentuploader" folder="media">
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <filename>index.html</filename>
+    </media>
+
+    <administration>
+        <menu img="../media/com_focontentuploader/images/focontentuploader-icon.png">COM_FOCONTENTUPLOADER</menu>
+            <submenu>
+                <menu view="focontentuploader" img="../media/com_focontentuploader/images/article.png">COM_FOCONTENTUPLOADER_UPLOAD_ARTICLES</menu>
+                <menu view="k2" img="../media/com_focontentuploader/images/k2-ico.png">COM_FOCONTENTUPLOADER_UPLOAD_K2_ITEMS</menu>
+                <menu view="contact" img="../media/com_focontentuploader/images/contact.png">COM_FOCONTENTUPLOADER_UPLOAD_CONTACTS</menu>
+                <menu view="weblinks" img="../media/com_focontentuploader/images/weblink.png">COM_FOCONTENTUPLOADER_UPLOAD_WEB_LINKS</menu>
+                <menu view="admintools" img="../media/com_focontentuploader/images/admintools.png">COM_FOCONTENTUPLOADER_UPLOAD_URL_REDIRECTS</menu>
+            </submenu>
+
+        <files folder="admin">
+            <filename>focontentuploader.php</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>controllers</folder>
+            <folder>lib</folder>
+            <folder>tables</folder>
+        </files>
+
+        <languages>
+            <language tag="en-GB">language/admin/en-GB/en-GB.com_focontentuploader.ini</language>
+            <language tag="en-GB">language/admin/en-GB/en-GB.com_focontentuploader.sys.ini</language>
+            <language tag="de-DE">language/admin/de-DE/de-DE.com_focontentuploader.ini</language>
+            <language tag="de-DE">language/admin/de-DE/de-DE.com_focontentuploader.sys.ini</language>
+            <language tag="es-ES">language/admin/es-ES/es-ES.com_focontentuploader.ini</language>
+            <language tag="es-ES">language/admin/es-ES/es-ES.com_focontentuploader.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

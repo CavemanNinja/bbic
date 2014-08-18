@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="attribs">
+   <fieldset 
+      name="map"
+      label="TPL_EXTRAFIELDS_MAP_SLIDER_LABEL" 
+      description="TPL_EXTRAFIELDS_MAP_SLIDER_LABEL_DESC" 
+      group="extrafields"
+      >
+      
+         <field
+            name="map_location_1_company_name"
+            type="text"
+            label="TPL_EXTRAFIELDS_MAP_LOCATION_1_COMPANY_NAME"
+            description="TPL_EXTRAFIELDS_MAP_LOCATION_1_COMPANY_NAME_DESC"
+         />
+         
+         <field
+            name="map_location_2_company_name"
+            type="text"
+            label="TPL_EXTRAFIELDS_MAP_LOCATION_2_COMPANY_NAME"
+            description="TPL_EXTRAFIELDS_MAP_LOCATION_2_COMPANY_NAME_DESC"
+         />
+
+         <field
+            name="map_location_3_company_name"
+            type="text"
+            label="TPL_EXTRAFIELDS_MAP_LOCATION_3_COMPANY_NAME"
+            description="TPL_EXTRAFIELDS_MAP_LOCATION_3_COMPANY_NAME_DESC"
+         />
+
+         <field
+            name="map_location_4_company_name"
+            type="text"
+            label="TPL_EXTRAFIELDS_MAP_LOCATION_4_COMPANY_NAME"
+            description="TPL_EXTRAFIELDS_MAP_LOCATION_4_COMPANY_NAME_DESC"
+         />
+
+      </fieldset>
+   </fields>
+</form>
