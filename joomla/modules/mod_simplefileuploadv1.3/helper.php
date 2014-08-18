@@ -782,22 +782,31 @@ class ModSimpleFileUploaderHelperv13{
 					$db->setQuery($query);
 					$tenant_id = $db->loadResult();
 
+
+
 					if ($tenant_id) {
 						//create new bill with information from csv using the invoice ID as the alias
-						// 'DD "-" M "-" y'
-						// $csv_date = new JDate(strtotime($csv_record[1]));
+
+						//get the tenant name using the id						
+						$query = $db->getQuery(true);
+	                    $query->select($db->quoteName('username'));
+	                    $query->from($db->quoteName('#__users'));
+	                    $query->where($db->quoteName('id')." = ".$tenant_id);
+	                    $db->setQuery($query);
+	                    $result = $db->loadResult();
+	                    $tenant_name = $result;
 
 						$csv_time = strtotime($csv_record[1]);
-						$mysql_start_time = date('Y-m-d h:i:s', $csv_time);
+						$mysql_start_time = date('Y-m-d', $csv_time);
 
 						$billing_amount = str_replace(".00", "", $csv_record[9]);
 						$billing_amount = str_replace(",", "", $billing_amount);
 
 
-						$billing_attribs = '{"billing_tenant_id":"'.$tenant_id.'","billing_amount":"'.$billing_amount.'","billing_invoice_id":"'.$csv_record[0].
+						$billing_attribs = '{"billing_tenant_name":"'.$tenant_name.'","billing_tenant_id":"'.$tenant_id.'","billing_amount":"'.$billing_amount.'","billing_invoice_id":"'.$csv_record[0].
 						'","billing_description":"'.$csv_record[6].'","billing_type":"'.$csv_record[10].
 						'","billing_invoice_date":"'. $mysql_start_time .'","billing_status":"0","billing_repeatcycle":"","billing_repeatstart":"","billing_repeatend":""}';
-						break;
+						// break;
 						$jt_article = JTable::getInstance('content');
 						$jt_article->title = $csv_record[0].' - '.$csv_record[5]. ': '.$csv_record[6];
 	                    $jt_article->alias = $csv_record[0];
@@ -811,42 +820,46 @@ class ModSimpleFileUploaderHelperv13{
 	                    
 	                    //Remove article with same alias if exists in database already.
 	                    $del_query = $db->getQuery(true);
-	                    $del_query->delete($db->quoteName('content'));
-	                    $del_query->where($db->quoteName('alias'). " LIKE " . $db->quoteName($csv_record[0]));
+	                    $del_query->delete($db->quoteName('#__content'));
+	                    $del_query->where($db->quoteName('alias'). " LIKE " . $csv_record[0]);
 	                    $db->setQuery($del_query);
 	                    $deleteresult = $db->query();
 	                    if ($deleteresult){
-	                    	$results .= "Removed ".$csv_record[0] .".";
+	                    	$csv_results .= "Removed ".$csv_record[0] ."./n";
 	                    }
 
 	                    //insert new article into database
 	                    if (!$jt_article->check()) {
 	                        JError::raiseNotice(500, $jt_article->getError());
 	                        // return FALSE;
-	                        $results .= "Error adding Invoice ". $csv_record[0] ."to database";
+	                        $csv_results .= "Error adding Invoice ". $csv_record[0] ."to database (check)/n";
 	                    }
 	                    if (!$jt_article->store(TRUE)) {
 	                        JError::raiseNotice(500, $jt_article->getError());
 	                        // return FALSE;
-	                        $results .= "Error adding Invoice ". $csv_record[0] ."to database";
+	                        $csv_results .= "Error adding Invoice ". $csv_record[0] ."to database (store)/n";
 	                    }
 
+	                    break;
 						//increment successful invoice counter
 						$csv_success++;
 					} else {
 						//Unable to locate tenant.
-						$results .= "Unable to locate tenant for Invoice ". $csv_record[0] .". Pleace Check Tenant Name and try again.";
+						$csv_results .= "Unable to locate tenant for Invoice ". $csv_record[0] .". Pleace Check Tenant Name and try again./n";
 					}
 						
 				}
-				$results .= $csv_success." Successful Invoices added.";
+				$csv_results .= $csv_success." Successful Invoices added./n";
 			}
 
 			// return $query_result;
 			// return $csv_company_name;
 			// return number_format($csv_record[9], 0, "", "");
-			return $billing_attribs;
-			return $results;
+			// return "Asdf";
+			// return "tenant_id: ".$tenant_id;
+			return $csv_results;
+			// return $billing_attribs;
+			// return $results;
 		}
 		
 		
