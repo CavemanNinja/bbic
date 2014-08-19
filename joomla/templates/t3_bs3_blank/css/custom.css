@@ -805,6 +805,7 @@ div.st_tabs > div > ul {
   color: #ffffff;
   background-color: #01579b;
   border-color: #01579b;
+  border-radius: 2px !important;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -869,6 +870,23 @@ div.st_tabs > div > ul {
 
 
 /* csv file upload module */
+.sfu_table {
+  line-height: 22px !important;
+}
+
 #Mod138 > div > div {
   padding: 10px;
+
+}
+
+#txtUploadFile138 {
+  left: 0px !important;
+
+}
+
+
+.csv-upload-button {
+  /*max-width: 94px;*/
+  padding: 8px !important;
+  border: 0px outset buttonface;
 }

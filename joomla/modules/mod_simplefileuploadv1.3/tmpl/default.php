@@ -631,7 +631,8 @@ function sfufancyClose<?php echo $mid ?>() {
 	?>
 		<tr class="uploadtr<?php echo $mid ?>" style="display: <?php echo $divUploadShow; ?>">
 			<td class="sfu_table" style="padding-top: 5px;">
-				<input type="button" style="max-width: 160px;" onclick="javascript:startProcess<?php echo $mid ?>();" value="<?php echo JText::_('UPLOAD_BUTTON_TEXT'); ?>" />
+				<!-- <input type="button" class="btn-primary" style="max-width: 160px;" onclick="javascript:startProcess<?php echo $mid ?>();" value="<i class="fa fa-upload"></i> fa-upload<?php echo JText::_('UPLOAD_BUTTON_TEXT'); ?>" /> -->
+				<button class="btn-primary csv-upload-button" style="max-width: 160px;" onclick="javascript:startProcess<?php echo $mid ?>();"><i class="fa fa-upload"></i> <?php echo JText::_('UPLOAD_BUTTON_TEXT'); ?></button>
 				
 				<?php if (is_array($upload_userpath)) { 
 						if (count($upload_userpath) > 1) {
