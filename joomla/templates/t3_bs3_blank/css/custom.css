@@ -18,7 +18,7 @@
 }
 
 .article-title,
-.article-header, h1 {
+.article-header, h1, h2 {
   color: #01579b;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -622,11 +622,18 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
   text-decoration: underline;
 }
 
-#t3-footer > section > div > div > div > div.col-md-9.mysitemap > p,
+#t3-footer > section > div > div:nth-child(2) > div > div.col-md-3.mycopyright {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px !important;
+  font-weight: 300;
+  color: rgba(255,255,255, 0.9);
+}
+
+/*#t3-footer > section > div > div > div > div.col-md-9.mysitemap > p,
 #t3-footer > section > div > div > div > div.col-md-3.mycopyright {
   color: #fff !important;
   font-weight: bold;
-}
+}*/
 
 
 /*
@@ -824,7 +831,10 @@ div.st_tabs > div > ul {
 }
 
 .mypartners-heading {
-  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px !important;
+  font-weight: 300;
+  color: rgba(255,255,255, 0.9);
 }
 
 .partners-div {

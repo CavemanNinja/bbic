@@ -5,7 +5,7 @@
 	padding: 0;
 }
 .twoj_gallery_loadimage{
-	background: transparent url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/loader.gif') no-repeat center;
+	background: transparent url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/loader.gif') no-repeat center;
 	width: 160px;
 	height: 20px;
 	margin: 0 auto;
@@ -393,7 +393,7 @@
 }
 
 .twoj_gallery_lb6_Slider .twoj_gallery_lb6_placeholder{
-	background: url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb6/preloader.gif') no-repeat center center;
+	background: url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb6/preloader.gif') no-repeat center center;
 	height: 100%;
 	line-height: 1px;
 	text-align: center;
@@ -446,7 +446,7 @@
 .twoj_gallery_lb6_nextArrow{
 	border:none;
 	text-decoration:none;
-	background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb6/arrows.png') no-repeat;
+	background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb6/arrows.png') no-repeat;
 	opacity:0.5;
 	cursor:pointer;
 	position:absolute;

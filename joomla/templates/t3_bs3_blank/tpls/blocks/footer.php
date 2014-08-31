@@ -58,7 +58,7 @@ defined('_JEXEC') or die;
 				<div>
 					<div class="col-md-9 mysitemap"/>
 						<?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
-							<p>Site Map</p>
+							<p class="mypartners-heading">Site Map</p>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/">Home</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/about-us">About Us</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applicationincubator">Incubator Application</a>
@@ -74,7 +74,7 @@ defined('_JEXEC') or die;
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/component/users/?view=login">User Login</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/component/search/">Search</a>
 					 	<?php else : ?>
-					 		<p>خارطة الموقع</p>
+					 		<p class="mypartners-heading">خارطة الموقع</p>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/">الصفحة الرئيسية</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/about-us">عن المركز</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applicationincubator">تسجيل لمشروع الحاضنات</a>
@@ -93,9 +93,9 @@ defined('_JEXEC') or die;
 
 					</div>
 					<div class="col-md-3 mycopyright">
-						<small>
+						
 			            	© BBIC All rights reserved
-          				</small>
+          				
 					</div>
 				</div>	
 			</div>
