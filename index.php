@@ -25,7 +25,7 @@
   <body>
     <div class="myjumbotron">
       <div class="landingcard">
-      <img src="/joomla/images/BBICLogoDark.png" class="img-responsive myimage">
+      <img src="/bbic/joomla/images/BBICLogoDark.png" class="img-responsive myimage">
       <p>
         <br/>
         <a class="btn btn-primary btn-lg" href="joomla/index.php/en" role="button">English</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
