@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"end",
+				"endif"
+			],
+			[
 				"tenant",
 				"tenant_id"
 			],
@@ -91,7 +95,7 @@
 			"file": "joomla/templates/t3_bs3_blank/css/custom.css",
 			"settings":
 			{
-				"buffer_size": 17923,
+				"buffer_size": 18240,
 				"line_ending": "Windows"
 			}
 		}
@@ -128,16 +132,47 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp/www/bbic"
+		"/C/wamp/www/bbic",
+		"/C/wamp/www/bbic/css",
+		"/C/wamp/www/bbic/joomla",
+		"/C/wamp/www/bbic/joomla/components",
+		"/C/wamp/www/bbic/joomla/components/com_contact",
+		"/C/wamp/www/bbic/joomla/components/com_contact/models",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/category",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/contact/tmpl",
+		"/C/wamp/www/bbic/joomla/templates",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/category",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl/default.php",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/category/default_items.php",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl/default.xml",
+		"/C/wamp/www/bbic/joomla/components/com_contact/models/category.php",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl/default_children.php",
+		"/C/wamp/www/bbic/css/landingpage.css",
+		"/C/wamp/www/bbic/index.php",
+		"/C/wamp/www/bbic/joomla/configuration.php",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact/default.php",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl/default_items.php",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/contact/tmpl/default.php",
+		"/C/wamp/www/bbic/joomla/components/com_contact/views/categories/tmpl/default.php",
+		"/C/wamp/www/bbic/joomla/index.php",
+		"/C/wamp/www/bbic/Procfile",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/mod_simplefileuploadv1.3.php",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/mod_simplefileupload.css",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/helper.php",
 		"/C/wamp/logs/php_error.log",
 		"/C/wamp/www/bbic/joomla/plugins/content/billrepeat/billrepeat.php",
-		"/C/wamp/www/bbic/index.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/billing.xml",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/tmpl/default.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/custom.css",
@@ -150,7 +185,6 @@
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/map.css",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/map.xml",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact/default.php",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/model/form/application.xml",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/models/application.php",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/models/forms/application.xml"
@@ -171,6 +205,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/bbic",
+			"public $host = 'localhost';\n	public $user = 'root';\n	public $password = '';",
 			"dotted",
 			"138",
 			"joomla",
@@ -185,6 +221,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"dashed",
 			"bbic/joomla",
 			"2"
@@ -198,7 +235,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -227,7 +264,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -256,7 +293,7 @@
 						"translation.y": 12434.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -265,15 +302,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17923,
+						"buffer_size": 18240,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16621,
-								16627
+								508,
+								508
 							]
 						],
 						"settings":
@@ -283,10 +320,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 14247.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -365,7 +402,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 256.0,
+	"side_bar_width": 333.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
