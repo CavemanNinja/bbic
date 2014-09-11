@@ -37,7 +37,7 @@ class JFormFieldTwoJMultiButton extends JFormFieldText{
 			);
 		}
 		if( property_exists($fieldOption, "textAfter") ) $this->htmlPanel .= '<span class="twoj_multibutton_panel_after">'.$fieldOption->textAfter.'</span>';
-		$this->htmlPanel .= '<span class="twoj_multibutton_panel_splitter"> </span>';
+		if( !property_exists($fieldOption, "hideSplitter"))   $this->htmlPanel .= '<span class="twoj_multibutton_panel_splitter"> </span>';
 	}
 	
 	function getPanel($buttonOption){

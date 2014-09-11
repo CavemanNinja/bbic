@@ -12,7 +12,7 @@ JHtml::_('behavior.tooltip');
 if(TJTB_JVERSION==3){
 	JHtml::_('behavior.multiselect');
 	JHtml::_('dropdown.init');
-	JHtml::_('formbehavior.chosen', 'select');
+	//JHtml::_('formbehavior.chosen', 'select');
 }
 ?>
 <form  enctype="multipart/form-data" action="<?php echo JRoute::_('index.php?option=com_twojtoolbox&view=upload');?>" method="post" name="adminForm" id="adminForm">

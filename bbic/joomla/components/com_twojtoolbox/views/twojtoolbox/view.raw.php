@@ -12,8 +12,9 @@ jimport('joomla.application.component.view');
 class TwojtoolboxViewTwojtoolbox extends TwojJView{
 	function display($tpl = null){
 		
-		if( JRequest::getInt('twoj_showPlugin', 0) ){
+		if( JRequest::getInt('twoj_showPlugin', 0) || JRequest::getInt('twoj-show-plugin', 0) ){
 			$id = JRequest::getInt('twoj_pluginId', 0);
+			if(!$id) $id = JRequest::getInt('twoj-plugin-id', 0); 
 			if($id){
 				JLoader::register('TwojToolBoxSiteHelper', JPATH_SITE.'/components/com_twojtoolbox/helpers/twojtoolboxsite.php');
 				if( !class_exists('TwojToolBoxSiteHelper') ) return '';

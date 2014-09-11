@@ -1,0 +1,157 @@
+/* tabs*1804*css*2j.tabs2jbrs2tabs*1804*css*2j.style4.tabs */
+.twoj_tab_content{
+	padding: 10px;
+}
+
+.twoj_tab_block_ul{
+	margin: 0;
+   padding: 0;
+	background-image: none;
+	list-style: none none;
+	background-color: transparent;
+	overflow: hidden;
+}
+
+/*.twoj_tab_block_li{
+	float: left;
+	display: block;
+	border: 1px solid silver;
+	margin-bottom: -1px;
+	margin-right: -1px;
+}
+
+.twoj_tab_block_a{
+	display: block;
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+.twoj_tab_content{
+	border: 1px solid silver;
+}*/
+
+.twoj_tab_block_ul > .twoj_tab_block_li{
+	float: left;
+   padding: 0;
+   margin: 0;
+	background-image: none;
+	background-color: transparent;
+	display: block;
+}
+
+.twoj_tab_block_right > .twoj_tab_block_ul .twoj_tab_block_li{  
+	float: right;
+}
+
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a:link,
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a:visited,
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a:hover{ 
+	text-decoration: none; 
+}
+
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a, 
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a span{ 
+	text-decoration: none;
+	display: block;
+}
+
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a{
+    white-space: nowrap !important; /* @ IE 6 */
+    outline: 0; /* @ Firefox, prevent dotted border after click */
+}
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a .twoj_tabs_block_a_index{
+	display: none !important;
+}
+.twoj_tab_clr{ width: 0; height: 0; clear: both; }
+
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .twoj-tabs-hide {
+        display: none;
+    }
+}
+
+/* Hide useless elements in print layouts... */
+@media print {
+    .twoj_tab_block_ul {
+        display: none;
+    }
+}
+
+
+.twoj_tab_block_ul:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+
+
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a:hover, 
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a:focus, 
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a:active,
+
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a span:hover, 
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a span:focus, 
+.twoj_tab_block_ul > .twoj_tab_block_li .twoj_tab_block_a span:active,
+
+.twoj_tab_block_ul > .twoj_tab_block_li .ui-tabs-unselect .twoj_tab_block_a:hover, 
+.twoj_tab_block_ul > .twoj_tab_block_li .ui-tabs-unselect .twoj_tab_block_a:focus, 
+.twoj_tab_block_ul > .twoj_tab_block_li .ui-tabs-unselect .twoj_tab_block_a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+
+/* Additional IE specific bug fixes... */
+* html .twoj_tab_block_ul { /* auto clear @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block;
+}
+*:first-child+html .twoj_tab_block_ul  { /* auto clear @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block;
+}.twoj_tabs_class4 {
+	border: 1px solid #ccc;
+}
+
+.twoj_tabs_class4 > .twoj_tab_block_ul {  
+	background-color: #eee;
+ 	padding: 4px 4px 4px 4px;
+	border-bottom: 1px solid #ccc;
+}
+
+.twoj_tabs_class4.twoj_tab_block_bottom > .twoj_tab_block_ul {
+	border-top: 1px solid #ccc;
+	border-bottom: 0 none;
+}
+
+.twoj_tabs_class4 > .twoj_tab_block_ul .twoj_tab_block_li{
+	color: #5f5f5f;
+	border-bottom: 1px solid #ccc;
+	margin: 2px;
+	background-color: white;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee');
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+	background-image: -webkit-linear-gradient(top, #fff, #eee);
+	background-image:    -moz-linear-gradient(top, #fff, #eee);
+	background-image:     -ms-linear-gradient(top, #fff, #eee);
+	background-image:      -o-linear-gradient(top, #fff, #eee);
+	background-image:         linear-gradient(top, #fff, #eee);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.twoj_tabs_class4 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+	padding: 5px 15px 5px 15px;
+}
+
+.twoj_tabs_class4 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected{
+	filter:  none;
+	background: #fff;
+	color: black;
+}
+
+.twoj_tabs_class4.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li:hover{
+	background: #f9f9f9;
+}
+
+.twoj_tabs_class4 > .twoj_tab_content{
+	padding: 10px;
+}

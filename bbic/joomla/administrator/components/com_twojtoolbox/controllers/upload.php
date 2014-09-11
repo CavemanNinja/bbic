@@ -18,12 +18,12 @@ class TwojToolboxControllerUpload extends TwojController{
 		}
 		JRequest::checkToken('request') or jexit(JText::_('JINVALID_TOKEN'));
 		$model = $this->getModel('Upload');
-		if ($model->send()) {
-			$type = 'message';
-		} else {
+		$msg = $type = '';
+		if ( !$model->send() ) {
 			$type = 'error';
+			$msg = $model->getError();
 		}
-		$msg = $model->getError();
+		
 		$this->setredirect('index.php?option=com_twojtoolbox&view=elements', $msg, $type);
 	}
 }

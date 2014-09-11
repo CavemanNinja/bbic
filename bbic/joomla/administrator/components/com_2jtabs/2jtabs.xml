@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>2J Tabs</name>
+	<creationDate>2012</creationDate>
+	<author>2Joomla Team</author>
+	<authorEmail>support@2joomla.net</authorEmail>
+	<authorUrl>http://www.2joomla.net</authorUrl>
+	<copyright>Copyright (c) 2008-2012 2Joomla.net All rights reserved</copyright>
+	<license>released under GNU/GPL License : http://www.gnu.org/copyleft/gpl.html</license>
+	<version>1.8.4</version>
+
+	<description>2JNewsSlider it's advanced content slider for Joomla! with the wide range of the configuration options, different effects and auto scroll mode</description>
+	
+	<scriptfile>script.php</scriptfile>
+	
+	<files>
+		<filename>index.html</filename>
+	</files>
+	
+	<administration>
+		<menu img="components/com_2jtabs/2jtabs_16.png">COM_2JTABS_MENU</menu>
+		<files>
+			<filename>2jtabs.php</filename>
+			<filename>index.html</filename>
+			<filename>2jtabs_16.png</filename>
+		</files>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.com_2jtabs.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>
+

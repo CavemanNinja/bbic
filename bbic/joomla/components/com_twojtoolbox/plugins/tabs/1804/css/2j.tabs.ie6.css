@@ -1,0 +1,41 @@
+.twoj_tab_block_ul {  
+}
+
+.twoj_tab_block_li{
+	float: left;
+	display: block;
+	border: 1px solid silver;
+}
+
+.twoj_tab_block_a{
+	display: block;
+	padding: 6px 10px;
+	cursor: pointer;
+}
+
+.twoj_tab_block_a,
+.twoj_tab_block_a span {
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+    color: #8c8c8c; 
+    background-color: #f5f5f5; 
+	 font-size: 12px;
+}
+
+.twoj_tab_block_a span {
+   padding-left:10px;
+   padding-right:10px;
+}
+
+.twoj-tabs-selected div{
+	background-color: #727272;
+}
+
+.twoj-tabs-selected span{
+	background-color: #727272;
+	color: white;
+}
+
+.twoj_tab_content{
+	border: 1px solid silver;
+	padding: 10px;
+}

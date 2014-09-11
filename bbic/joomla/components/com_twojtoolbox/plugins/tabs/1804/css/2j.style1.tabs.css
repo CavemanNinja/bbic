@@ -1,0 +1,51 @@
+.twoj_tabs_class1 > .twoj_tab_block_ul {  
+	margin-left:-2px;
+	margin-right:-2px;
+}
+
+.twoj_tabs_class1 > .twoj_tab_block_ul .twoj_tab_block_li{
+   padding-left: 2px;
+   padding-right: 2px;
+}
+
+.twoj_tabs_class1 > .twoj_tab_content{
+ 	border: 1px solid #727272;
+ 	padding: 10px;
+}
+
+.twoj_tabs_class1 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a,
+.twoj_tabs_class1 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+    padding: 0;
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+    color: #8c8c8c; 
+    background-color: #d8d8d8; 
+	 font-size: 12px;
+	 line-height: 22px;
+	 height: 22px;
+}
+
+.twoj_tabs_class1 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a{
+	margin-top:2px;
+	margin-bottom: 2px;
+}
+
+.twoj_tabs_class1 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+   padding-left:10px;
+   padding-right:10px;
+}
+
+.twoj_tabs_class1.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover,
+.twoj_tabs_class1 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a{
+	background-color: #727272;
+	margin-top:0px;
+	padding-bottom: 4px;
+	margin-bottom:0px;
+}
+
+.twoj_tabs_class1.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover span,
+.twoj_tabs_class1 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span{
+	background-color: #727272;
+	color: white;
+	padding-bottom: 2px;
+	padding-top: 2px;
+}

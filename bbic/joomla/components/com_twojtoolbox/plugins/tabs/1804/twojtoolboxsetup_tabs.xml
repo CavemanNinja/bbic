@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<twojplugin version="1">
+	<name>2J Tabs</name>
+	<type>tabs</type>
+	<creationDate>19-03-2012</creationDate>
+	<version>1804</version>
+	<description>2J Tabs - it's a fresh breath for your website layout. Very easy and comfortable way to organize your front end content most effective way. 2J Tabs can emulate multi-pages structure based on the Joomla!® content articles as result your visitors will get easy access to the big content articles (no need to scroll through a large page). 2JTabs it's multi theme tabs with advanced admin settings and highly customizible CSS3 front end.</description>
+	<description_small>2J Tabs with multi-themes with advanced admin settings and highly customizable CSS3 front end</description_small>
+	<multi>0</multi>
+	<images>0</images>
+	<ordering>1</ordering>
+	<multitag>1</multitag>
+	<twojtoolbox>1015</twojtoolbox>
+	<files>
+		<filename>twojtoolboxsetup_tabs.xml</filename>
+		<filename>twoj_tabs_plugin.php</filename>
+		<filename>item_options.xml</filename>
+		<filename>mid_logo.png</filename>
+		<filename>index.html</filename>
+		<folder>js</folder>
+		<folder>fields</folder>
+		<folder>css</folder>
+		<folder>admin</folder>
+	</files>
+</twojplugin>
+

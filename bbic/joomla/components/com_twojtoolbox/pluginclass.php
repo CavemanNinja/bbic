@@ -122,6 +122,7 @@ class TwoJToolBoxPlugin extends JObject{
 
 		$obj_temp = new JObject;
 		$obj_temp->id = 1;
+		$obj_temp->params ='';
 		$obj_temp->title = 'Image 1';
 		$obj_temp->catid = 1;
 		$obj_temp->img = 'components/com_twojtoolbox/demo_content/image1.jpg';
@@ -343,7 +344,11 @@ class TwoJToolBoxPlugin extends JObject{
 	}
 	//=======================================================================
 	public function getVal( $name_params, $def_v=null, $type = 'string',  $typeout = 0, $option = 0){
-		$cur_val = $this->params->get( $name_params, ( $def_v===null ? $this->def_params->get($name_params) : $def_v )); //$def_v
+	/* 	if( version_compare(JVERSION,'2.5.14','ge') ){
+			$cur_val = $this->params->getValue( $name_params, ( $def_v===null ? $this->def_params->getValue($name_params) : $def_v ));
+		} else { */
+			$cur_val = $this->params->get( $name_params, ( $def_v===null ? $this->def_params->get($name_params) : $def_v ));
+		//}
 		switch($type){
 			case 'color':{
 				$cur_val = trim($cur_val);

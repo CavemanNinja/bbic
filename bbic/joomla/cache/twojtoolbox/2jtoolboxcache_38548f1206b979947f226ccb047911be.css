@@ -1,0 +1,70 @@
+/* tabs*1804*css*2j.style19.tabs */
+.twoj_tabs_class19 > .twoj_tab_block_ul {  
+	margin-bottom: 4px; 
+	margin-left: -4px; 
+}
+
+.twoj_tabs_class19.twoj_tab_block_bottom > .twoj_tab_block_ul { 
+	margin-top: 4px; 
+}
+
+.twoj_tabs_class19 > .twoj_tab_block_ul .twoj_tab_block_li{
+	margin-left: 4px;
+	text-shadow:1px 1px 0 rgba(255,255,255,0.4);
+	position:relative;
+	background-repeat:no-repeat;
+	background-position:bottom left;
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png');
+	background-position:bottom left, top right, 0 0, 0 0;
+	background-clip:border-box;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	-moz-box-shadow:0 0 1px #fff inset;
+	-webkit-box-shadow:0 0 1px #fff inset;
+	box-shadow:0 0 1px #fff inset;
+	-webkit-transition:background-position 1s;
+	-moz-transition:background-position 1s;
+	transition:background-position 1s;
+	
+	color:#525252;
+	border:1px solid #a5a5a5;	
+	background-color: #a9adb1;
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(197,199,202,1) 0,rgba(197,199,202,0) 100px),-moz-linear-gradient(#c5c7ca, #92989c);
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(197,199,202,1)), to(rgba(197,199,202,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#c5c7ca), to(#92989c));
+
+}
+.twoj_tabs_class19 > .twoj_tab_block_ul .twoj-tabs-selected{
+	color:#693e0a ;
+	border:1px solid #bea280;	
+	background-color: #e38d27;
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(232,189,45,1) 0,rgba(232,189,45,0) 100px),-moz-linear-gradient(#f1982f, #d4821f);
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(232,189,45,1)), to(rgba(232,189,45,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f1982f), to(#d4821f));
+}
+.twoj_tabs_class19.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li:hover{
+	background-position:top left;
+	background-position:top left, bottom right, 0 0, 0 0;
+}
+.twoj_tabs_class19.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li:hover{
+	background-color:#b6bbc0;
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(202,205,208,1) 0,rgba(202,205,208,0) 100px),-moz-linear-gradient(#d1d3d6, #9fa5a9);
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(202,205,208,1)), to(rgba(202,205,208,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#d1d3d6), to(#9fa5a9));
+}
+
+.twoj_tabs_class19.twoj_tab_block_hover > .twoj_tab_block_ul .twoj-tabs-selected:hover{
+	background-color:#ec9732;
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(241,192,52,1) 0,rgba(241,192,52,0) 100px),-moz-linear-gradient(#f9a746, #e18f2b);
+	background-image:url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), url('/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/img/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(241,192,52,1)), to(rgba(241,192,52,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9a746), to(#e18f2b));
+}
+
+.twoj_tabs_class19 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a{
+	font:15px Calibri, Arial, sans-serif;
+	padding:10px 20px;
+}
+
+.twoj_tabs_class19 > .twoj_tab_content{
+	border: 1px solid #e38d27;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius: 8px;
+}

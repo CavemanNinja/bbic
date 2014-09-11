@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details">
+		<field name="id" type="hidden" />
+		<field
+			name="title"
+			type="twojText"
+			label="COM_TWOJTOOLBOX_ITEM_TITLE_LABEL"
+			description="COM_TWOJTOOLBOX_ITEM_TITLE_DESC"
+			size="40"
+			class="inputbox validate-greeting"
+			required="true"
+			default=""
+		/>
+		<field name="state" type="list"
+			label="JSTATUS" description="COM_TWOJTOOLBOX_ITEM_FIELD_STATE_DESC"
+			class="inputbox" size="1" default="1" >
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fieldset>
+	<fieldset name="details_right">
+		<field
+			name="type"
+			type="twojtoolboxdisplaytype"
+			label="COM_TWOJTOOLBOX_ITEM_TYPE_LABEL"
+			description="COM_TWOJTOOLBOX_ITEM_TYPE_DESC"
+			default=""
+		/>
+	</fieldset>	
+	
+	<fields name="params">
+		<fieldset name="options_general" label="General Options">
+			<field name="width" type="twojText" size="8" default="80%" label="Tabs block width" addtext="px or %" description="Width of the tabs block. Acceptable values % and px." />
+			<field name="height" type="twojText" size="8" default="" label="Tabs block height" addtext="px or %" description="Height of the tabs  block. Acceptable values % and px." />
+			<field name="height_content" type="twojText" size="8" default="" label="Tabs content height" addtext="px or %" description="Height of the tabs content block. Here you can define size of the conent different then general tabs height. Could be useful in the case if you wish to publish some content outside of the tabs. For example some images outside of the main frame of the tabs. Acceptable values % and px." />
+			
+			<field name="all_pending" type="padding" default_left="" default_top="" default_right="" default_bottom=""  label="Tabs Padding" description="paddings for every side of the slideshow. Every side could have different padding value. Value 0 for no padding case. Only integer values." />
+			<field name="all_pending_top" type="twojtoolboxfieldrezerv"/>
+			<field name="all_pending_right" type="twojtoolboxfieldrezerv"/>
+			<field name="all_pending_left" type="twojtoolboxfieldrezerv"/>
+			<field name="all_pending_bottom" type="twojtoolboxfieldrezerv"/>
+			
+			
+			<field name="tab_navigation" type="twojRadio"  default="0" label="Navigation position" description="Position of the navigation buttons; You can put tabs buttons to top or bottom side of the tabs.">
+				<option value="0">Top</option>           
+				<option value="1">Bottom</option>
+			</field>
+			
+			<field name="tab_align" type="twojRadio"  default="0" label="Navigation align" description="Alignment of the navigation tabs to the left or right side.">
+				<option value="0">Left</option>           
+				<option value="1">Right</option>
+			</field>
+			
+			<field name="event" type="twojRadio"  default="click" label="Mouse Event" description="Here you can select one from the two values OnClick or OnHover for the event when change tabs gonna work.">
+				<option value="click">On Click</option>           
+				<option value="mouseover">On Hover</option>
+			</field>
+			
+			<field name="enable_hover" type="twojRadio"  default="0" label="Enable hover" description="This option enable or disable visual effect on the button when mouse on hover, in the case if this effect pre-defined in styles.">
+				<option value="0">Yes</option>           
+				<option value="1">No</option>
+			</field>
+			
+
+			<field 
+				name="effect" 
+				type="twojRadio" 
+				json="{ 
+					'show':{ 
+						'1': 'jform[params][duration]', 
+						'2': 'jform[params][duration]', 
+						'3': 'jform[params][duration]' 
+					},  
+					'hide':{ 
+						'0': 'jform[params][duration]' 
+					} 
+				}"
+				default="0" 
+				label="Mode" 
+				description="Mode for slide changing. None for manual mode; Slide for sliding effect during tabs changing process; Fade for the fade effect during tabs changing process; Slider + Fade enable both this effects at the same time." 
+				class="inputbox"
+			>
+				<option value="0">None</option>
+				<option value="1">Slide</option>           
+				<option value="2">Fade</option>
+				<option value="3">Slide + Fade</option>
+			</field>
+			
+			<field name="duration" type="twojText"  size="5" default="200" addtext="ms." label="Duration" description="Duration of the tabs changing process." />
+			
+			<field name="css_file" type="cssfilelist" directory="css"  default="2j.style1.tabs.css" editCssButton="1" filter="^2j\.style([0-9]{1,5})\.tabs\.css$" exclude="2j.tabs.css|2j.style.tabs_sample.css" label="Theme" addtext="from directory" description="Here you can select one theme from the pre-defined list." />
+			
+			<field name="filteringspacer_theme_pr1" type="twojspacer" long="1" label="This is live preview of your current theme configurations. First of all you can see here general view of the skin and to the add-on you can change some paramters and see result right here just in few seconds. Here's the list of the settings which can act to the preview: Navigation Position, Navigation Align, Mouse Event, Enable Hover, Mode and Theme."/>				
+		
+			<field name="demo" type="TwoJTabsDemo"  default="" addtext="" label="Theme Preview" description="" />
+			
+		</fieldset>
+		
+		<fieldset name="options_cs" label="Content Source">
+		
+		
+			<field name="content_source" type="TwoJradio" default="articles"
+				label="Load Content From"
+				description="In the case if you select Content Articles option you'll see on top 3 content configuration tabs: Content Options, Content Ordering, Display Options where you'll be able to select , sort group and order content for loding. In the case of Modules value you'll be able to select which exactly modules to load as content source, in the field below."
+				json="{
+					'show':{ 	'modules':	[ 'jform[params][module_list]', 'jform[params][module_type_out]'] }, 
+					'hide':{ 	'articles':	[ 'jform[params][module_list]', 'jform[params][module_type_out]'] },
+					'showtab':{ 'articles':	[ 'options1', 'ordering', 'display' ] },
+					'hidetab':{ 'modules':	[ 'options1', 'ordering', 'display' ] }
+				}"
+			>
+				<option value="articles">Content Articles</option>
+				<option value="modules">Modules</option>
+			</field>
+			
+			<field name="module_list" type="twojtextarea" cols="10" rows="3" label="Modules  Positions/IDs" description="" />
+			
+			<field name="module_type_out" type="twojText" default="" label="Module Style" description="leave this field is empty if you don't know how to use this option." />
+			
+			<field name="filteringspacer_label_tabs" type="twojspacer" long="1" label="Tabs Buttons"/>				
+
+			<field name="titleintab" 
+			json="{ 
+				'show':{ '1':'jform[params][tab_template]', '2':'jform[params][custom_label]' }, 
+				'hide':{ '0':['jform[params][custom_label]', 'jform[params][tab_template]'], '1':'jform[params][custom_label]', '2':'jform[params][tab_template]'} 
+			}"
+			type="twojRadio"  default="0" label="Labels of the Tabs" description="Tabs could have 3 different ways to define labels. Article Title - inlables you'll see titles of the loaded to the tabs articles; Index - auto-generated index with template where you can specify some custom text with addition of the auto incremented index; Custom Label - where you can customize label the way you wish;">
+				<option value="0">Article Title</option>           
+				<option value="1">Index</option>
+				<option value="2">Custom Label</option>
+			</field>
+			<field name="custom_label"  filter="raw" type="textarea" cols="10" rows="3" label="Custom Labels" description="Here you can define custom label for every tab. Please enter each label on a new line." />
+			<field name="tab_template" type="twojText"  default="Tabs #" label="Tab Label Template" addtext="use # " description="Here youcan define template for indexed tabs labels. For example  in the case if you specify here value TabsLabel#,   then in result you'll see such labels on tabs: TabsLabel1, TabsLabel2, TabsLabel3... and etc." />
+			<field name="tab_title_length" type="twojText" size="6"  default="" label="Length of the Tabs label" description="Length of the tabs labels in symbols. If you have some long labels, but don't wanna customize them, then you can here specify limit for the length of the labels. For example if value here 10, then labels which longer then 10 symbols will be cut off till 10." />
+			<field name="select_default" type="twojText" size="6"  default="" label="Default Tab" description="Here you can define id of the default tab. Defined tab will be active when page with tabs will be loaded. For exampel you have tabs with  4 articles: Article1, Article2, Article3 and Article4. In the case if value for this option will be 3, then active tab will with Article3." />
+			
+			
+		</fieldset>
+		
+		<fieldset name="options1" label="Content Options">
+			<field name="filteringspacer_cd1" type="twojspacer" long="1" label="In the case if you using slider plugin multitag mode, then content settings from this tab do not work."/>
+			
+			<field name="show_front" type="twojradio" default="show" label="Featured Articles" description="Select to Show, Hide or Only display Featured Articles">
+				<option value="show">Show</option>
+				<option value="hide">Hide</option>
+				<option value="only">Only</option>
+			</field>
+
+			<field name="count" type="twojText" size="3" default="15" label="Count" description="The number of items to display. The default value of 0 will display all articles." />
+
+			<field name="category_filtering_type" type="radio"
+				default="1"
+				label="Category Filtering Type"
+				description="Select Inclusive to include Selected Categories, Exclusive to Exclude Selected Categories"
+			>
+				<option value="1">Inclusive</option>
+				<option value="0">Exclusive</option>
+			</field>
+
+			<field name="catid" type="category" extension="com_content"
+				multiple="true" size="8"
+				label="Category"
+				description="Please select one or more categoires"
+			>
+				<option value="">All Categories</option>
+			</field>
+
+			<field name="show_child_category_articles" type="radio"
+				default="0"
+				label="Child Category Articles"
+				description="Include or Exclude Articles from Child Categories."
+			>
+				<option value="1">Include</option>
+				<option value="0">Exclude</option>
+			</field>
+
+			<field name="levels" type="twojText" default="1" size="3" label="Category Depth" description="The number of child category levels to return" />
+
+			<field name="author_filtering_type" type="radio"
+				default="1"
+				label="Author Filtering Type"
+				description="Select Inclusive to Include the Selected Authors, Exclusive to Exclude the Selected Authors."
+			>
+				<option value="1">Inclusive</option>
+				<option value="0">Exclusive</option>
+			</field>
+
+			<field name="created_by" type="sql"
+				multiple="true" size="8"
+				label="Authors"
+				description="Select one or more authors from the list below."
+				query="select id, name, username from #__users where id IN (select distinct(created_by) from #__content) order by name ASC"
+				key_field="id" value_field="name"
+			>
+				<option value="">Select Authors</option>
+			</field>
+
+			<field name="author_alias_filtering_type" type="radio"
+				default="1"
+				label="Author Alias Filtering Type"
+				description="Select Inclusive to Include the Selected Author Aliases, Exclusive to Exclude the Selected Author Aliases."
+			>
+				<option value="1">Inclusive</option>
+				<option value="0">Exclusive</option>
+			</field>
+
+			<field name="created_by_alias" type="sql"
+				multiple="true" size="8"
+				label="Author Aliases"
+				description="Select one or more author aliases from the list below."
+				query="select distinct(created_by_alias) from #__content where created_by_alias != '' order by created_by_alias ASC"
+				key_field="created_by_alias" value_field="created_by_alias"
+			>
+				<option value="">Select Author Aliases</option>
+			</field>
+			
+			<field name="id_alias_filtering_type" type="radio"
+				default="0"
+				label="Article IDs Filtering Type"
+				description="Select Inclusive to Include the Selected Article IDs, Exclusive to Exclude the Selected Article IDs."
+			>
+				<option value="1">Inclusive</option>
+				<option value="0">Exclusive</option>
+			</field>
+			
+			<field name="excluded_articles" type="textarea"
+				cols="10" rows="3"
+				label="Article IDs"
+				description="Please enter each Article ID on a new line." />
+
+			<field name="date_filtering" type="TwoJradio" default="off"
+				label="Date Filtering"
+				description="Select Date Filtering Type."
+				json="{
+					'show':{
+							'range':[
+								'jform[params][date_field]',
+								'jform[params][start_date_range]',
+								'jform[params][end_date_range]'
+							],
+							'relative':'jform[params][relative_date]'
+					}, 
+					'hide':{
+							'off':[
+								'jform[params][date_field]',
+								'jform[params][start_date_range]',
+								'jform[params][end_date_range]',
+								'jform[params][relative_date]'
+							],
+							'range':'jform[params][relative_date]',
+							'relative':[
+								'jform[params][date_field]',
+								'jform[params][start_date_range]',
+								'jform[params][end_date_range]'
+							]
+					} 
+				}"
+			>
+				<option value="off">Off</option>
+				<option value="range">Date Range</option>
+				<option value="relative">Relative Date</option>
+			</field>
+
+			<field name="date_field" type="list" default="a.created"
+				label="Date Range Field"
+				description="Select which date field you want the date range to be applied to."
+			>
+				<option value="a.created">Created Date</option>
+				<option value="a.modified">Modified Date</option>
+				<option value="a.publish_up">Start Publishing Date</option>
+			</field>
+
+			<field name="start_date_range" type="calendar"
+				format="%Y-%m-%d %H:%M:%S"
+				label="Start Date Range"
+				description="If Date Range is selected above, please enter a Starting Date."
+				size="22"
+				filter="user_utc" />
+
+			<field name="end_date_range" type="calendar"
+				format="%Y-%m-%d %H:%M:%S"
+				label="To Date"
+				description="If Date Range is selected above, please enter an End Date."
+				size="22"
+				filter="user_utc" />
+
+			<field name="relative_date" type="twojText" default="30"
+				label="Relative Date"
+				description="If Relative Date is selected above, please enter in a numeric day value. Results will be retrieved relative to the current date and the value you enter." />
+		</fieldset>
+			
+			
+		<fieldset name="ordering" label="Content Ordering" >
+			
+			<field name="filteringspacer_co1" type="TwoJSpacer" long="1" label="In the case if you using slider plugin multitag mode, then content settings from this tab do not work." />
+			
+			<field name="article_ordering" type="list"
+				default="a.title"
+				label="Article Field to Order By"
+				description="Select which field you would like Articles to be ordered by."
+			>
+				<option value="a.ordering">Joomla! Ordering</option>
+				<option value="a.hits">Hits</option>
+				<option value="a.title">Title</option>
+				<option value="a.id">ID</option>
+				<option value="a.alias">Alias</option>
+				<option value="a.created">Created Date</option>
+				<option value="modified">Modified Date</option>
+				<option value="publish_up">Start Publishing Date</option>
+				<option value="a.publish_down">Finish Publishing Date</option>
+			</field>
+
+			<field name="article_ordering_direction" type="list"
+				default="ASC"
+				label="Ordering Direction"
+				description="Select the direction you would like Articles to be ordered by."
+			>
+				<option value="DESC">Descending</option>
+				<option value="ASC">Ascending</option>
+			</field>
+		
+		<field name="filteringspacer_co3" type="TwoJSpacer" long="1" label="Grouping Options" />
+		
+		<field name="article_grouping" type="Twojlist"
+			default="none"
+			label="Article Grouping"
+			description="Select how you would like the articles to be grouped."
+			json="{
+						'show':{
+								'year':[
+										'jform[params][month_year_format]',
+										'jform[params][article_grouping_direction]'
+								],
+								'month_year':[
+										'jform[params][month_year_format]',
+										'jform[params][article_grouping_direction]'
+								],
+								'author':'jform[params][article_grouping_direction]',
+								'category_title':'jform[params][article_grouping_direction]'
+						}, 
+						'hide':{
+								'none':[
+									'jform[params][article_grouping_direction]',
+									'jform[params][month_year_format]'
+								],
+								'author':'jform[params][month_year_format]',
+								'category_title':'jform[params][month_year_format]'
+						} 
+					}"
+		>
+			<option value="none">None</option>
+			<option value="year">Year</option>
+			<option value="month_year">Month and Year</option>
+			<option value="author">Author</option>
+			<option value="category_title">Category</option>
+		</field>
+
+		<field name="article_grouping_direction" type="list"
+			default="ksort"
+			label="Grouping Direction"
+			description="Select the direction you would like the Article Groupings to be ordered by."
+		>
+			<option value="krsort">Descending</option>
+			<option value="ksort">Ascending</option>
+		</field>
+
+		<field name="month_year_format" type="twojText"
+			default="F Y"
+			label="Month and Year Display Format"
+			description="Please enter in a valid date format. See: http://php.net/date for formatting information." />
+	</fieldset>
+			
+	<fieldset name="display" label="Display Options">
+		<field name="filteringspacer_do1" type="twojspacer" long="1" label="In the case if you using slider plugin multitag mode, then content settings from this tab do not work."/>				
+
+		<field name="show_introtext" type="radio" default="2" label="Show Text" description="Select Show if you would like the text to be displayed.">
+			<option value="1">Full Text</option>
+			<option value="2">Introtext</option>
+			<option value="0">Do not show text</option>
+		</field>	
+
+		<field name="text_limit"  size="5" type="twojText" default="0" label="Text Limit" description="Please enter in a numeric character limit value. The introtext will be trimmed to the number of characters you enter. In the case of 0 value, it will show all symbols." /> 
+
+		<field name="show_readmore_title" label="JGLOBAL_SHOW_READMORE_TITLE_LABEL" description="JGLOBAL_SHOW_READMORE_TITLE_DESC" type="radio" default="1">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+
+		<field name="readmore_limit" size="5" type="twojText" default="20" label="JGLOBAL_SHOW_READMORE_LIMIT_LABEL" description="JGLOBAL_SHOW_READMORE_LIMIT_DESC" />
+		
+		<field
+			name="enable_template"
+			label="Template"
+			description="Turn on/off template for slides. "
+			type="twojradio"
+			default="0"
+			json="{
+				'show':{'1': 'jform[params][content_template]',
+						'0':[
+							'jform[params][item_heading]',
+							'jform[params][link_titles]',
+							'jform[params][show_date_create]',
+							'jform[params][show_date_modified]',
+							'jform[params][show_date_publish_up]',
+							'jform[params][show_category]',
+							'jform[params][link_category]',
+							'jform[params][show_hits]',
+							'jform[params][show_author]',
+							'jform[params][show_readmore]'
+						]
+				}, 
+				'hide':{'0': 'jform[params][content_template]',
+						'1':[
+							'jform[params][item_heading]',
+							'jform[params][link_titles]',
+							'jform[params][show_date_create]',
+							'jform[params][show_date_modified]',
+							'jform[params][show_date_publish_up]',
+							'jform[params][show_category]',
+							'jform[params][link_category]',
+							'jform[params][show_hits]',
+							'jform[params][show_author]',
+							'jform[params][show_readmore]'
+						]
+				} 
+			}"
+		>
+			<option value="1">JENABLED</option>
+			<option value="0">JDISABLED</option>
+		</field>
+		<field name="content_template" 
+			filter="raw" 
+			class="twojtoolbox_check_spacee" 
+			type="twojTextarea" 
+			default="&lt;h2&gt;@TITLE@&lt;/h2&gt;|2JNS|&lt;dl class=&quot;article-info&quot; style=&quot;clear: both;&quot;&gt;|2JNS|
+				&lt;dd class=&quot;category-name&quot;&gt;@CATEGORY@&lt;/dd&gt;|2JNS|
+				&lt;dd class=&quot;create&quot;&gt;@CREATEDATE@&lt;/dd&gt;|2JNS|
+				&lt;dd class=&quot;modified&quot;&gt;@MODIFIEDDATE@&lt;/dd&gt;|2JNS|
+				&lt;dd class=&quot;published&quot;&gt;@PUBLISHDATE@&lt;/dd&gt;|2JNS|
+				&lt;dd class=&quot;createdby&quot;&gt;@AUTHOR@&lt;/dd&gt;|2JNS|
+				&lt;dd class=&quot;hits&quot;&gt;@HITS@&lt;/dd&gt;|2JNS|
+&lt;/dl&gt;|2JNS|@TEXT@|2JNS|@READMORE@" 
+			cols="40" 
+			rows="10" 
+			label="Template text"
+			addtext="Template tags list: &lt;br /&gt;
+			&lt;strong&gt;@TITLE@&lt;/strong&gt; - article title;&lt;br /&gt; 
+			&lt;strong&gt;@TEXT@&lt;/strong&gt; - article  text;&lt;br /&gt;
+			&lt;strong&gt;@READMORE@&lt;/strong&gt; - read more button;&lt;br /&gt;
+			&lt;strong&gt;@READMORELINK@&lt;/strong&gt; - read more button;&lt;br /&gt;
+			&lt;strong&gt;@CATEGORY@&lt;/strong&gt; - article category;&lt;br /&gt;
+			&lt;strong&gt;@CATEGORYLINK@&lt;/strong&gt; - article category;&lt;br /&gt;
+			&lt;strong&gt;@CREATEDATE@&lt;/strong&gt; - create date;&lt;br /&gt;
+			&lt;strong&gt;@MODIFIEDDATE@&lt;/strong&gt; - modified date;&lt;br /&gt;
+			&lt;strong&gt;@PUBLISHDATE@&lt;/strong&gt; - publish up date;&lt;br /&gt;
+			&lt;strong&gt;@AUTHOR@&lt;/strong&gt; - author;&lt;br /&gt;
+			&lt;strong&gt;@HITS@&lt;/strong&gt; - hits"
+			description="Here is tags list,  " />
+			
+		<field name="item_heading" type="twojtext" default="h2" label="Heading Level" description="Select the desired HTML tag for the article titles." />
+
+		<field name="link_titles" type="radio" default="1" label="Linked Titles" description="Linked Titles">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="show_date_create" type="radio" default="1" label="Created Date" description="">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field name="show_date_modified" type="radio" default="0" label="Modified Date" description="">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field name="show_date_publish_up" type="radio" default="0" label="Start Publishing Date" description="">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+
+		<field name="show_category" type="radio" default="0" label="JCATEGORY" description="Select Show if you would like the category name displayed.">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field name="link_category" type="radio" default="0" label="Linked Category" description="">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field name="show_hits" type="radio" default="0"
+			label="Hits"
+			description="Select Show if you would like the hits for each article to be displayed."
+		>
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+
+		<field name="show_author" type="radio" default="0"
+			label="JAUTHOR"
+			description="Select Show if you would like the author (or author alias instead, if available) to be displayed."
+		>
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+		
+		<field name="show_readmore" label="JGLOBAL_SHOW_READMORE_LABEL" description="JGLOBAL_SHOW_READMORE_DESC" type="radio" default="1">
+			<option value="1">JSHOW</option>
+			<option value="0">JHIDE</option>
+		</field>
+	</fieldset>
+
+
+	<fieldset name="options6" label="Text Add-ons">
+		<field name="pretext" filter="raw" 	type="twojTextarea"  default="" cols="40" rows="7" label="Pre text" description="text before slideshow container, you can use HTML tags here" />
+        <field name="posttext" filter="raw" type="twojTextarea"  default="" cols="40" rows="7" label="Post text" description="text after slideshow container, you can use HTML tags here" />
+	</fieldset>
+
+	
+	<fieldset name="options9" label="Timer Settings">
+		<field name="timer" type="twojRadio" default="0" label="Enable timer" description="This option enable/disable auto image change mode">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+		<field name="tdelay" size="5" type="twojText"  default="3000" addtext="ms."  label="Time for slide change" description=" Here you can specify time for slide change in milliseconds. For example of you define here 5000 value then every images will change after 5 seconds." />
+	</fieldset>
+	<fieldset name="options_advanc" label="Advanced Settings">
+		<field name="show_comments" type="twojRadio" default="0" label="Show comments" description="this option enable/disable small comment in HTML, which gonan help you to find code of the extension from the front end">
+			<option value="0">JENABLED</option>
+			<option value="1">JDISABLED</option>
+		</field>
+		
+		<field name="filteringspacer_adv_opt" type="twojspacer" long="1" label="Important Note:  We consciously transfer this settings to the advanced section because this settings  not actually required.  This options will be really usefull in the case if you create your own theme, you'll be able to customize some parameters here. All themes builded based on CSS3 and if you really need to change some of the theme parameters you need to be sure that you know what you doing. If you need to customize one from the pre-defined themes you can edit CSS files. If you'll have some questions contact our support."/>				
+		
+		<field name="overflow" type="twojRadio" default="0" label="Content over frame" description="Make able content in the tabs show outside of the main tabs frame">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		
+		<field name="font_tab" 			size="15" type="twojText"  default="" label="Label Font" description="Font for the tabs label text" />
+		<field name="font_size_tab" 	size="15" type="twojText"  default="" label="Label Font Size" description="Font size for the tabs label text" />
+		<field name="pending_ul_left" 	size="5" type="twojText"  default="" label="Navigation left padding" description="Left padding for the whole navigation panel buttons." />
+		<field name="pending_ul_right" 	size="5" type="twojText"  default="" label="Navigation right padding " description="Right padding for the whole navigation panel buttons." />
+		<field name="pending_li_left" 	size="5" type="twojText"  default="" label="Tab left padding" description="Left padding for the tab container." />
+		<field name="pending_li_right" 	size="5" type="twojText"  default="" label="Tab right padding" description="Right padding for the tab container." />
+		<field name="bg_color"  		size="12" type="twojText" class="twoj_color" default="" label="Background color" description="Tabs background color" />
+			
+		<field name="type_border" type="twojList"  
+				json="{ 'show':{ '2':'jform[params][border_w]' }, 'hide':{ '0':'jform[params][border_w]', '1':'jform[params][border_w]' } }" 
+				default="0" 
+				label="Border type" 
+				description="This option allow you to enable/disable border. In the case of the Use css style value border parameters reading from CSS.">
+			<option value="2">Border</option>
+			<option value="1">Off</option>
+			<option value="0">Use css style</option>
+		</field>
+		
+		<field name="border" type="border"  default_color="#c8c8c8" default_s="solid" default_w="1px" label="Border" description="" />
+		<field name="border_s" type="twojtoolboxfieldrezerv"/>
+		<field name="border_color" type="twojtoolboxfieldrezerv"/>
+		<field name="border_w" type="twojtoolboxfieldrezerv"/>
+		
+		<field name="hideUnselectTabs" type="twojRadio" default="0" label="Hide Inactive Tabs" description="this option hide inactive tabs during loading process">
+			<option value="0">JDISABLED</option>
+			<option value="1">JENABLED</option>
+		</field>
+	</fieldset>
+	</fields>
+</form>

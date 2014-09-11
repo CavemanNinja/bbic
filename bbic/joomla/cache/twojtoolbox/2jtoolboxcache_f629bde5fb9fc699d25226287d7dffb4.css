@@ -1,0 +1,80 @@
+/* tabs*1804*css*2j.style6.tabs */
+/* Skin */
+.twoj_tabs_class6 > .twoj_tab_block_ul{
+	margin: -4px 0px; 
+}
+.twoj_tabs_class6 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a{
+     float: left;
+    color: #eee;
+    margin: 0 5px;
+    padding: 3px;
+    text-decoration: none;
+    border: 1px solid #831608;
+    font: bold 14px Arial, Helvetica;
+    background-color: #831608;
+    background-image: -moz-linear-gradient(#bb413b, #831608);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#bb413b), to(#831608));
+    background-image: -webkit-linear-gradient(#bb413b, #831608);
+    background-image: -o-linear-gradient(#bb413b, #831608);
+    background-image: -ms-linear-gradient(#bb413b, #831608);
+    background-image: linear-gradient(#bb413b, #831608);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+        -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 3px 0 rgba(0, 0, 0, 0.7), 0 2px 2px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 3px 0 rgba(0, 0, 0, 0.7), 0 2px 2px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 3px 0 rgba(0, 0, 0, 0.7), 0 2px 2px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+
+
+.twoj_tabs_class6 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected .twoj_tab_block_a,
+.twoj_tabs_class6.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover{
+    background-color: #bb413b;
+    background-image: -moz-linear-gradient(#831608, #bb413b);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#831608), to(#bb413b));
+    background-image: -webkit-linear-gradient(#831608, #bb413b);
+    background-image: -o-linear-gradient(#831608, #bb413b);
+    background-image: -ms-linear-gradient(#831608, #bb413b);
+    background-image: linear-gradient(#831608, #bb413b);
+}
+
+
+.twoj_tabs_class6 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+	border: 1px dashed #eba1a3;
+	display: inline-block;
+	padding: 4px 15px;
+	cursor: pointer;
+	background-color: #bb413b;
+	background-image: -moz-linear-gradient(#d4463c, #aa2618);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#d4463c), to(#aa2618));
+	background-image: -webkit-linear-gradient(#d4463c, #aa2618);
+	background-image: -o-linear-gradient(#d4463c, #aa2618);
+	background-image: -ms-linear-gradient(#d4463c, #aa2618);
+	background-image: linear-gradient(#d4463c, #aa2618);
+
+}
+
+.twoj_tabs_class6 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected .twoj_tab_block_a span,
+.twoj_tabs_class6.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover span{
+	background-color: #bb413b;
+	background-image: -moz-linear-gradient(#aa2618, #d4463c);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#aa2618), to(#d4463c));
+	background-image: -webkit-linear-gradient(#aa2618, #d4463c);
+	background-image: -o-linear-gradient(#aa2618, #d4463c);
+	background-image: -ms-linear-gradient(#aa2618, #d4463c);
+	background-image: linear-gradient(#aa2618, #d4463c);
+
+}
+
+.twoj_tabs_class6 > .twoj_tab_content{
+	padding: 10px;
+	border: 4px solid #86180b;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	-moz-box-shadow: 0px 3px 3px #cecece;
+	-webkit-box-shadow: 0px 3px 3px #cecece;
+	box-shadow: 0 3px 4px #8b8b8b;
+}

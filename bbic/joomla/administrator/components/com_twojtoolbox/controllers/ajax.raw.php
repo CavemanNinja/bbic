@@ -691,7 +691,8 @@ class TwojToolboxControllerAjax extends TwojController{
 		if (!is_array($imageFiles)) {
 			echo  JText::_('COM_TWOJTOOLBOX_MSG_INSTALL_NO_FILE_SELECTED');
 			return false;
-		}
+		} 
+
 		if ($imageFiles['error'] || $imageFiles['size'] < 1  ) {
 			echo  JText::_('COM_TWOJTOOLBOX_MSG_INSTALL_WARNINSTALLUPLOADERROR');
 			return false;
@@ -736,22 +737,28 @@ class TwojToolboxControllerAjax extends TwojController{
 		
 		$image_name_org  = $imageFiles["name"];
 		$image_name = JFile::makeSafe($image_name_org);
-		
-		if( $catid  && in_array( strtolower(JFile::getExt($image_name_org)), array('png', 'jpg', 'jpeg', 'gif')) ){
+		$image_name = str_replace( ' ', '_', $image_name);
+		$name_only = JFile::stripExt($image_name);
+		$ext_only = strtolower(JFile::getExt($image_name));
+		if(! $name_only ){
+			$name_only = 'image';
+			$image_name = $name_only.'.'.$ext_only;
+		}
+			
+		if( $catid  && in_array( $ext_only, array('png', 'jpg', 'jpeg', 'gif')) ){
 	
 			if (JFile::exists( $dir_upload.$image_name )){ 
 				$k=1;
-				$ext_only = JFile::getExt($image_name);
-				$name_only = JFile::stripExt($image_name);
-				$version_temp = $name_only.'('.$k.').'.$ext_only;
+				$version_temp = $name_only.'_copy'.$k.'.'.$ext_only;
 				while( JFile::exists( $dir_upload.$version_temp ) ){
-					$version_temp = $name_only.'('.++$k.').'.$ext_only;
+					$version_temp = $name_only.'_copy'.++$k.'.'.$ext_only;
 				}
 				$image_name = $version_temp;
 			}
 				
 				
 			$tmp_src	= $imageFiles['tmp_name'];
+
 			if( JFile::upload($tmp_src, $dir_upload.$image_name) ){
 				$ret[] = $image_name;
 				$row = JTable::getInstance('Element', 'TwojToolboxTable');
@@ -765,7 +772,7 @@ class TwojToolboxControllerAjax extends TwojController{
 				$row->check();
 				$row->store();
 			}
-		}
+		} else echo JText::_('COM_TWOJTOOLBOX_UPLOAD_UPLOADIMAGES_CHECK_ERROR');
 		
 		if( count($ret) ) echo json_encode($ret);
 			else echo JText::_('COM_TWOJTOOLBOX_UPLOAD_UPLOADIMAGES_ERROR');

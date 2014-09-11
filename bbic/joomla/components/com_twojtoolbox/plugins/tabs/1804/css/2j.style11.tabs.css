@@ -1,0 +1,50 @@
+/* Skin */
+.twoj_tabs_class11{
+	border: 1px solid #e0e0e0;
+}
+
+.twoj_tabs_class11 > .twoj_tab_block_ul .twoj_tab_block_li{
+	background: #F0F0F0;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FEFEFE', endColorstr='#F0F0F0');
+	background: -moz-linear-gradient(top, #FEFEFE 0%,#F0F0F0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FEFEFE), color-stop(100%, #F0F0F0));
+	background: -webkit-linear-gradient(top, #FEFEFE 0%,#F0F0F0 100%);
+	background: -o-linear-gradient(top, #FEFEFE 0%,#F0F0F0 100%);
+	background: -ms-linear-gradient(top, #FEFEFE 0%,#F0F0F0 100%);
+	background: linear-gradient(top, #FEFEFE 0%,#F0F0F0 100%);
+	
+	border-right: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.twoj_tabs_class11.twoj_tab_block_bottom > .twoj_tab_block_ul .twoj_tab_block_li{
+	border-bottom: 0 none;
+	border-top: 1px solid #e0e0e0;
+}
+
+.twoj_tabs_class11.twoj_tab_block_right > .twoj_tab_block_ul .twoj_tab_block_li{
+	border-right: 0 none;
+	border-left: 1px solid #e0e0e0;
+}
+
+.twoj_tabs_class11.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li:hover,
+.twoj_tabs_class11 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected{
+	background: rgb(177,228,39);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B1E427', endColorstr='#98CA18');
+	background: -moz-linear-gradient(top,  #B1E427 0%, #98CA18 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B1E427), color-stop(100%, #98CA18));
+	background: -webkit-linear-gradient(top,  #B1E427 0%, #98CA18 100%);
+	background: -o-linear-gradient(top,  #B1E427 0%, #98CA18 100%);
+	background: -ms-linear-gradient(top,  #B1E427 0%, #98CA18 100%);
+	background: linear-gradient(top,  #B1E427 0%, #98CA18 100%);
+}
+
+.twoj_tabs_class11 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+	padding: 7px 10px 7px 10px;
+	color: #666666;
+	 font: 11px Tahoma;
+}
+
+.twoj_tabs_class11.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover span, 
+.twoj_tabs_class11 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span{
+	color: White;
+}

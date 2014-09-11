@@ -1,0 +1,207 @@
+/**!
+ * @package Xpert Gallery
+ * @version 2.2
+ * @author ThemeXpert http://www.themexpert.com
+ * @copyright Copyright (C) 2009 - 2011 ThemeXpert
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ *
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.tx-gallery {
+  margin: -5px;
+}
+.tx-gallery .tx-gallery-columns-3 li {
+  width: 33.31%;
+}
+.tx-gallery .tx-gallery-columns-4 li {
+  width: 25%;
+}
+.tx-gallery .tx-gallery-columns-5 li {
+  width: 20%;
+}
+.tx-gallery .tx-gallery-columns-6 li {
+  width: 16.666666666666668%;
+}
+.tx-gallery ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tx-gallery li {
+  display: inline-block;
+  vertical-align: top;
+}
+.tx-gallery .tx-gallery-container .tx-gallery-item {
+  margin: 5px;
+}
+.tx-gallery .tx-gallery-container .tx-gallery-item-in {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tx-gallery .tx-gallery-container .tx-gallery-title {
+  padding: 0 10px;
+  margin: 5px 0;
+  font-size: 18px;
+  line-height: 18px;
+}
+.tx-gallery .tx-gallery-container .tx-gallery-content {
+  padding: 10px;
+  font-size: 12px;
+}
+.tx-gallery .tx-gallery-header {
+  margin: 10px 0;
+  *zoom: 1;
+}
+.tx-gallery .tx-gallery-header:before,
+.tx-gallery .tx-gallery-header:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.tx-gallery .tx-gallery-header:after {
+  clear: both;
+}
+.tx-gallery .tx-gallery-header li {
+  display: inline-block;
+  padding: 1px 6px;
+  margin: 0;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.tx-gallery .tx-gallery-header li:hover {
+  background: #fff;
+}
+.tx-gallery .tx-gallery-header li.active {
+  background: #ddd;
+}
+.tx-gallery .tx-gallery-filters {
+  float: left;
+}
+.tx-gallery .tx-gallery-sort {
+  float: right;
+}
+.tx-gallery .tx-gallery-image {
+  position: relative;
+}
+.tx-gallery .tx-gallery-image:hover .tx-gallery-image-preview {
+  opacity: 1;
+  margin-left: -35px;
+}
+.tx-gallery .tx-gallery-image:hover .tx-gallery-image-link {
+  opacity: 1;
+  margin-right: -35px;
+}
+.tx-gallery .tx-gallery-image .tx-gallery-image-preview,
+.tx-gallery .tx-gallery-image .tx-gallery-image-link {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.tx-gallery .tx-gallery-image .tx-gallery-image-preview {
+  background-image: url(../img/icon-preview.png);
+  left: 50%;
+  margin-left: -40px;
+}
+.tx-gallery .tx-gallery-image .tx-gallery-image-link {
+  background-image: url(../img/icon-link.png);
+  right: 50%;
+  margin-right: -40px;
+}
+@media only screen and (max-width: 767px) and (min-width: 481px) {
+  .tx-gallery .tx-gallery-columns-3 li,
+  .tx-gallery .tx-gallery-columns-4 li,
+  .tx-gallery .tx-gallery-columns-5 li,
+  .tx-gallery .tx-gallery-columns-6 li {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .tx-gallery .tx-gallery-columns-3 li,
+  .tx-gallery .tx-gallery-columns-4 li,
+  .tx-gallery .tx-gallery-columns-5 li,
+  .tx-gallery .tx-gallery-columns-6 li {
+    width: 100%;
+  }
+}
+/*Magnific popup override*/
+.mfp-ajax-holder .mfp-content {
+  max-width: 650px;
+}
+.mfp-ajax-holder .mfp-content > div {
+  background: #fff;
+  padding: 20px;
+}
+/**** Isotope ****/
+.tx-gallery {
+  /**** Isotope CSS3 transitions ****/
+  /**** disabling Isotope CSS3 transitions ****/
+}
+.tx-gallery .isotope-item {
+  z-index: 2;
+}
+.tx-gallery .isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+.tx-gallery .isotope,
+.tx-gallery .isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.tx-gallery .isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.tx-gallery .isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+}
+.tx-gallery .isotope.no-transition,
+.tx-gallery .isotope.no-transition .isotope-item,
+.tx-gallery .isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  transition-duration: 0s;
+}

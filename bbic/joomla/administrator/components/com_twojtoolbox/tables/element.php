@@ -35,6 +35,25 @@ class TwojToolboxTableElement extends JTable{
 	}
 	
 	public function store($updateNulls = false){
+		if( $this->img ){
+			jimport('joomla.filesystem.file');
+			jimport('joomla.utilities.arrayhelper');
+			jimport('joomla.filesystem.folder');
+			
+			$image_filename = str_replace('\\', '/', $this->img);
+			$image_filename = str_replace('\\\\', '/', $image_filename);
+			$image = JPATH_SITE.'/media/com_twojtoolbox/'.$image_filename;
+	
+			if( JFile::exists( $image ) && function_exists('getimagesize') ){
+				$size = getimagesize($image);
+				if( $size && is_array($size) ){
+					if( isset($size[0]) ) $this->width = (int) $size[0];
+					if( isset($size[1]) ) $this->height = (int) $size[1];
+				}
+			}
+		}
+		// print_r($this);
+		// die();
 		return parent::store($updateNulls);
 	}
 

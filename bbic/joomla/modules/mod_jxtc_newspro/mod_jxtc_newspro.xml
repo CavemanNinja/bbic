@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade">
+	<name>JoomlaXTC Deluxe News</name>
+	<author>JoomlaXTC</author>
+	<creationDate>2013-05-23</creationDate>
+	<copyright>Copyright (C) 2008-2012 Monev Software LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.joomlaxtc.com</authorUrl>
+	<version>2.0.0</version>
+	<description>JoomlaXTC Deluxe News v2.0.0 - Visit www.joomlaxtc.com documents area for help.</description>
+	<files>
+		<filename module="mod_jxtc_newspro">mod_jxtc_newspro.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>LICENSE.php</filename>
+		<filename>COPYRIGHT.php</filename>
+		<folder>css</folder>
+		<folder>elements</folder>
+		<folder>tmpl</folder>
+		<folder>templates</folder>
+	</files>
+	<media destination="JoomlaXTC" folder="media">
+		<filename>index.html</filename>
+		<filename>readme.txt</filename>
+		<filename>wallFX.js</filename>
+	</media>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jxtc_newspro/elements">
+			<fieldset name="basic">
+			<field type="xspacer" title="SELECTION PARAMETERS:" />
+
+		<field name="catid" type="jxtccategory" default="0" label="Category ID" description="Content category." />
+		<field name="artid" type="text" default="" size="50" label="Specific Articles" description="Enter the ID numbers for specific articles to show. This will override the Selection and Category filters." />
+		<field name="usecurrentcat" type="proonly" default="0" label="Use current category?" description="When browsing a Category or reading an article, display articles from the same Category only." />
+
+		<field name="compat" type="proonly" label="Avatar Compatibility mode" description="Select component compatibility mode for Avatar support." />
+		<field name="comcompat" type="proonly" label="Comment Compatibility mode" description="Select component compatibility mode for Comment count support." />
+		<field name="authorid" type="proonly" label="Authors" description="Filter according to article authors." />
+		<field name="includefrontpage" type="proonly" label="Include Frontpage Articles?" description="Include frontpage articles?" />
+		<field name="group" type="proonly" label="One article per author?" description="Limit articles to one per author?" />
+    <field name="filteraccess" type="proonly" label="Obey Joomla Access restrictions" description="Obey Joomla Access restrictions" />
+		<field name="sortorder" type="list" default="3" label="Sort field" description="Article sort order.">
+			<option value="0">Recently Added First</option>
+			<option value="1">Recently Modified First</option>
+			<option value="2">Most viewed first</option>
+			<option value="3">Joomla Order</option>
+			<option value="5">Category Name</option>
+			<option value="6">Article Name</option>
+			<option value="7">Random</option>
+		</field>
+	  <field name="order" type="list" default="1" label="Sort order" description="Select a sort order for article selection." >
+	      <option value="0">Ascending</option>
+	      <option value="1">Descending</option>
+	  </field>
+		<field type="xspacer" title="DISPLAY PARAMETERS:" />
+		<field name="columns" type="text" default="1" label="Columns" description="Number of columns to show." />
+		<field name="rows" type="text" default="1" label="Rows" description="Number of rows to show." />
+		<field name="pages" type="proonly" label="Pages" description="Number of pages to show. Transition effects are enabled between page changes." />
+		<field name="transmode" type="proonly" label="Display Style" description="Transition effect mode." />
+		<field name="width" type="proonly" label="Window Width" description="Window width in pixels (only for Window mode)." />
+		<field name="height" type="proonly" label="Window Height" description="Window height in pixels (only for Window mode)." />
+		<field name="transpause" type="proonly" label="Transition pause" description="Pause time between transitions (in milliseconds, default: 4000)." />
+		<field name="transspeed" type="proonly" label="Transition duration" description="Transition duration in milliseconds (default: 1500)." />
+		<field name="transflow" type="proonly" label="Slide orientation" description="Starting transition orientation." />
+		<field name="transtype" type="proonly" label="Transition type" description="Transition animation type." />
+		<field name="button" type="proonly" default="black" label="Button Style" directory="modules/mod_jxtc_newspro/buttons" description="Button graphic set to use (if enabled)."/>
+
+	  <field name="template" type="xtstemplate" module="modulehtml" element="html" more="morehtml" default="" label="Template" description="Select an exisiting module template. If none used, the following fields will be used." />
+	  <field name="modulehtml"  type="textarea" filter="RAW" rows="10" cols="40" default="{mainarea}" label="Module HTML template" description="HTML/CSS code to draw the complete module box. The {mainarea} tag represents the article display area." />
+	  <field name="html"  type="textarea" filter="RAW" rows="10" cols="40" default="{intro}" label="Main Content HTML template" description="HTML/CSS code to display each article. You can embedd any of the supported tags to display article information." />
+		<field name="avatarw" type="proonly" label="Avatar width" description="Avatar width (if applicable)." />
+		<field name="avatarh" type="proonly" label="Avatar height" description="Avatar height (if applicable)." />
+		<field name="maxtitle" type="text" default="" label="Max. title length" description="Maximum length of {title} tag. Empty = no limit." />
+		<field name="maxtitlesuf" type="text" default="..." label="Max. title suffix" description="Suffix to show when trimming the title." />
+		<field name="maxintro" type="text" default="" label="Max. intro length" description="Maximum length of {introtext} tag. Empty = no limit." />
+		<field name="maxintrosuf" type="text" default="..." label="Max. intro suffix" description="Suffix to show when trimming the intro text." />
+		<field name="maxtext" type="text" default="" label="Max. full text length" description="Maximum length of {fulltext} or {rawfulltext} tags. Empty = no limit." />
+		<field name="maxtextsuf" type="text" default="..." label="Max. full text suffix" description="Suffix to show when trimming full text." />
+		<field name="textbrk" type="text" default="" label="Text break keyword" description="Display article text up to this string mark is found (including). Leave empty to display all text." />
+		<field name="dateformat" type="proonly" label="Date format" description="Date format (using PHP date function). Defaulty is: Y-m-d" />
+		<field type="xspacer" title="'MORE' AREA CONFIGURATION:"/>
+	  <field name="morehtml" type="proonly" filter="RAW"  rows="10" cols="40" default="{title}" label="'More' Content HTML template" description="HTML/CSS code to display each article. You can embedd any of the supported tags to display article information." />
+		<field name="moreqty" type="proonly" default="0" label="More items" description="Enter how many elements to show in 'more area'." />
+		<field name="moreclone" type="proonly" default="0" label="Clone from main?" description="Enabling this will make the articles in the more section be the same as in the main section." />
+		<field name="morecols" type="proonly" label="More Columns" description="Number of articles to show horizontally. If number of articles is higher, multiple rows will be shown." />
+		<field name="moretext" type="proonly"  label="More legend" description="Legend to show in read more area." />
+		<field name="morergb" type="proonly"  label="More legend color" description="Legend color." />
+		<field name="moretitle" type="proonly" label="Max. length for title text" description="Maximum length of {title} tag. Empty = no limit." />
+		<field name="moretitlesuf" type="proonly" label="Max. title suffix" description="Suffix to show when trimming the title." />
+		<field name="moreintro" type="proonly" label="Max. length for intro text" description="Maximum length of {introtext} tag. Empty = no limit." />
+		<field name="moreintrosuf" type="proonly" label="Max. intro suffix" description="Suffix to show when trimming the intro text." />
+		<field name="moremaxtext" type="proonly" label="Max. full text length" description="Maximum length of {fulltext} or {rawfulltext} tags. Empty = no limit." />
+		<field name="moremaxtextsuf" type="proonly" label="Max. full text suffix" description="Suffix to show when trimming full text." />
+		<field name="moretextbrk" type="proonly" label="Full text break keyword" description="Display article text up to this string mark is found (including). Leave empty to display all text." />
+	</fieldset>
+	<fieldset name="advanced">
+
+		<field name="translayer" type="proonly" label="Z layer" description="Define the z-index layer to use for the effects." />
+	  <field name="css" type="textarea" filter="RAW" rows="10" cols="40" default="" label="Custom CSS" description="Optional CSS code to include." />
+		<field type="xspacer" title="Tooltip / Pop-Up FX Settings:" />
+		<field name="nptipoi" type="proonly" default="1" label="In Opacity" description="Tooltip / Popup In Opacity Value." />
+		<field name="nptipoo" type="proonly" default="0" label="Out Opacity" description="Tooltip / Popup Out Opacity Value." />
+		<field name="nptipvi" type="proonly" default="0" label="In Animation Vertical" description="Height of Vertical In Animation." />
+		<field name="nptipvo" type="proonly" default="0" label="Out Animation Vertical" description="Height of Vertical Out Animation." />
+		<field name="nptiphi" type="proonly" default="0" label="In Animation Horizontal" description="Width of Tooltip / Popup In Animation." />
+		<field name="nptipho" type="proonly" default="0" label="Out Animation Horizontal" description="Width of Tooltip Out / Popup Animation." />
+		<field name="nptipdi" type="proonly" default="550" label="Fade-In Duration" description="Tooltip / Popup Animation Fade In Duration." />
+		<field name="nptipdo" type="proonly" default="550" label="Fade-Out Duration" description="Tooltip / Popup Animation Fade Out Duration." />
+		<field name="nptpause" type="proonly" default="1000" label="Pause" description="Tooltip Pause Value (in millisencods)." />
+		<field name="nptipAnim" type="proonly" default="Quad" label="Tooltip animation mode" description="Tooltip / Popup animation mode." />
+		<field name="nptipEase" type="proonly" default="easeIn" label="Tooltip / Popup ease mode" description="Tooltip ease mode." />
+		<field name="nptipCenter" type="proonly" default="1" label="Centered Popup" description="Centers the pop-up window on the screen." />
+		<field type="xspacer" title="Slide FX Settings:" />
+		<field name="npslideitfx" type="proonly" default="easeIn" label="Sliding Panel Settings" description="Sliding Panel" />
+		<field name="npslixin" type="proonly" default="" label="Slide Panel X In" description="Slide X coordiantes px"/>
+		<field name="npslixout" type="proonly" default="" label="Slide Panel X out" description="Slide X coordiantes px"/>
+		<field name="npsliyin" type="proonly" default="" label="Slide Panel Y In" description="Slide Y coordiantes px"/>
+		<field name="npsliyout" type="proonly" default="" label="Slide Panel Y Out" description="Slide Y coordiantes px"/>
+		<field name="npsliAnim" type="proonly" default="Quad" label="Slide animation mode" description="Slide Panel animation mode." />
+		<field name="npsliEase" type="proonly" default="easeIn" label="Slide ease mode" description="Slide ease mode." />
+		<field name="npslidi" type="proonly" default="50" label="Frames Per Second" description="Frames per second" />
+		<field name="npslido" type="proonly" default="800" label="Frame Duration" description="Duration in Milliseconds." />
+		<field type="xspacer" title="Hover Color Change FX Settings:" />
+		<field name="hoifx" type="proonly" label="Hover Effect In Color" description="Hover Effect Color"/>
+		<field name="hoofx" type="proonly" label="Hover Effect Out Color" description="Original Background Color"/>
+		<field type="xspacer" title="Module Settings:" />
+		<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+		<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+			<option value="1">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+		<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+	</fieldset>
+	</fields>
+	</config>
+</extension>

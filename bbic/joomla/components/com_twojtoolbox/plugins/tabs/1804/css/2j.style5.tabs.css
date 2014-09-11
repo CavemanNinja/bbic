@@ -1,0 +1,142 @@
+/* Skin */
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li{
+	background: #a8cc45;
+	background: -moz-linear-gradient(top,  #a8cc45 27%, #9ec630 27%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(27%,#a8cc45), color-stop(27%,#9ec630));
+	background: -webkit-linear-gradient(top,  #a8cc45 27%,#9ec630 27%);
+	background: -o-linear-gradient(top,  #a8cc45 27%,#9ec630 27%);
+	background: -ms-linear-gradient(top,  #a8cc45 27%,#9ec630 27%);
+	background: linear-gradient(top,  #a8cc45 27%,#9ec630 27%);
+	-moz-border-radius:3px 3px 0 0;
+ 	-webkit-border-radius:3px 3px 0 0;
+ 	border-radius:3px 3px 0 0;
+ 	margin-left: 1px;
+}
+.twoj_tabs_class5.twoj_tab_block_bottom > .twoj_tab_block_ul .twoj_tab_block_li{
+	background: #a8cc45;
+	background: -moz-linear-gradient(bottom,  #a8cc45 27%,#9ec630 27%);
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(27%,#a8cc45), color-stop(27%,#9ec630));
+	background: -webkit-linear-gradient(bottom,  #a8cc45 27%,#9ec630 27%);
+	background: -o-linear-gradient(bottom,  #a8cc45 27%,#9ec630 27%);
+	background: -ms-linear-gradient(bottom,  #a8cc45 27%,#9ec630 27%);
+	background: linear-gradient(bottom,  #a8cc45 27%,#9ec630 27%);
+	-moz-border-radius: 0 0 3px 3px;
+ 	-webkit-border-radius:0 0 3px 3px;
+ 	border-radius:0 0 3px 3px;
+ 	
+}
+
+.twoj_tabs_class5.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li:hover,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected{
+	background: #90b4cf;
+	background: -moz-linear-gradient(top,  #90b4cf 27%, #83acca 27%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(27%,#90b4cf), color-stop(27%,#83acca));
+	background: -webkit-linear-gradient(top,  #90b4cf 27%,#83acca 27%);
+	background: -o-linear-gradient(top,  #90b4cf 27%,#83acca 27%);
+	background: -ms-linear-gradient(top,  #90b4cf 27%,#83acca 27%);
+	background: linear-gradient(top,  #90b4cf 27%,#83acca 27%);
+}
+
+.twoj_tabs_class5:not(.twoj_tab_block_right) > .twoj_tab_block_ul .twoj_tab_block_li:first-child{
+	margin-left: 0px;	
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+	padding: 4px 12px 4px 12px;
+	color: White;
+	font: bold 11px/1.5em Verdana;
+}
+
+.twoj_tabs_class5 > .twoj_tab_content{
+	border: 1px solid #83acca;
+}
+
+.twoj_tabs_class5 {
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:after{}
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:first-child:after,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected:first-child:after{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:last-child{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:last-child:after,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected:last-child:after{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:hover:after,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected:after,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:target:after{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected:after,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:target:after{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected:hover:after,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:target:hover:after{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:hover,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:focus,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:first-child {
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:last-child {
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li:active{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:focus, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:active,
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover span, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:focus span, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:active span
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span{
+}
+
+/*Hover tabs*/
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:focus, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:active{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover span, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:focus span, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:active span{
+}
+
+/*Select tabs*/
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a{
+}
+
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span, 
+.twoj_tabs_class5 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span{
+}

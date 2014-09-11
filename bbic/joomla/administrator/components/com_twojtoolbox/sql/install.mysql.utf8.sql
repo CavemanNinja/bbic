@@ -26,6 +26,8 @@ CREATE TABLE IF NOT EXISTS `#__twojtoolbox_elements`(
   `catid` int(11) NOT NULL,
   `params` text NOT NULL DEFAULT '',
   `img` varchar(255) NOT NULL DEFAULT '',
+  `width` smallint(6) NOT NULL,
+  `height` smallint(6) NOT NULL,
   `desc` text NOT NULL DEFAULT '',
   `language` varchar(7) NOT NULL,
   `ordering` int(11) NOT NULL,
@@ -76,5 +78,6 @@ CREATE TABLE IF NOT EXISTS `#__twojtoolbox_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pluginid` int(11) NOT NULL,
   `json` mediumtext NOT NULL,
+  `plugintype` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;

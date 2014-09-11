@@ -19,6 +19,18 @@ class TwojToolboxTableData extends JTable{
 		parent::__construct('#__twojtoolbox_data', 'id', $db);
 	}
 	
+	public function loadPluginType( $pluginType ){
+		$db = JFactory::getDBO();
+		$query = $db->getQuery(true);
+		$query->select( '`id`' );
+		$query->from('#__twojtoolbox_data');
+		$query->where('	plugintype = '. $db->quote($pluginType) );
+		$db->setQuery( (string) $query );
+		$realId = $db->loadResult();
+		$this->load($realId);
+		$this->plugintype = $pluginType;
+	}
+	
 	public function loadPluginId( $pluginId ){
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);

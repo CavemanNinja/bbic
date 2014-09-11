@@ -900,3 +900,17 @@ div.st_tabs > div > ul {
   padding: 8px !important;
   border: 0px outset buttonface;
 }
+
+/*NEWS LIST MODULE*/
+.news-list-img {
+  width: 25%;
+}
+
+.news-list-img-div {
+  float: left;
+  
+}
+
+/*.news-list-content {
+  float: right;
+}*/

@@ -1,0 +1,57 @@
+/* tabs*1804*css*2j.style13.tabs */
+.twoj_tabs_class13 > .twoj_tab_block_ul {  
+	margin-left: -2px;
+	margin-right: -2px;
+	overflow: visible	;
+}
+
+.twoj_tabs_class13 > .twoj_tab_block_ul .twoj_tab_block_li{
+	position: relative;
+	margin-left: 2px;
+	margin-right: 2px;
+	border:1px solid #bbb;
+   border-bottom: 0 none;
+	background: #ffffff;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ffffff');
+	background: -moz-linear-gradient(top, #ffffff 1%, #ebebeb 99%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(99%,#ebebeb), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #ffffff 1%,#ebebeb 99%,#ffffff 100%);
+	background: -o-linear-gradient(top, #ffffff 1%,#ebebeb 99%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #ffffff 1%,#ebebeb 99%,#ffffff 100%);
+	background: linear-gradient(top, #ffffff 1%,#ebebeb 99%,#ffffff 100%);
+}
+
+.twoj_tabs_class13.twoj_tab_block_bottom > .twoj_tab_block_ul .twoj_tab_block_li{
+	border:1px solid #bbb;
+   border-top: 0 none;
+}
+
+.twoj_tabs_class13 > .twoj_tab_block_ul .twoj-tabs-selected{
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	background: white;
+	top: 1px;
+	margin-top: -1px;
+	padding-bottom: 1px;
+	
+}
+
+.twoj_tabs_class13.twoj_tab_block_bottom > .twoj_tab_block_ul .twoj-tabs-selected{
+	top: 0px;
+}
+
+.twoj_tabs_class13 > .twoj_tab_content{
+ 	 border:1px solid #bbb;
+ 	padding: 10px;
+ 	background-color: white;
+}
+
+.twoj_tabs_class13 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+	padding: 5px 15px 5px 15px;
+   color: #8c8c8c; 
+	font-size: 14px;
+}
+
+.twoj_tabs_class13.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a:hover span, 
+.twoj_tabs_class13 > .twoj_tab_block_ul .twoj-tabs-selected .twoj_tab_block_a span{
+	color: black; 
+}

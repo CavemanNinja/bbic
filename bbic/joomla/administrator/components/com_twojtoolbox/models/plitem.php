@@ -12,6 +12,8 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.filesystem.file');  
 jimport('joomla.application.component.modeladmin');
 
+JTable::addIncludePath(JPATH_COMPONENT_ADMINISTRATOR . '/tables');
+
 class TwojToolboxModelPlitem extends JModelAdmin{
 
 	protected $plugininfo = null;
@@ -60,10 +62,19 @@ class TwojToolboxModelPlitem extends JModelAdmin{
 	}
 	
 	public function delete(&$pks){
-		$rez =  parent::delete($pks);
+		$db = JFactory::getDBO();
+		$typeArrow = array();
+		foreach ($pks as $i => $pk) {
+			$query = $db->getQuery(true);
+			$query->select('id, type')->from('#__twojtoolbox')->where('id = '.(int) $pk);
+			$db->setQuery( (string) $query);
+			$typeArrow = $typeArrow + $db->loadAssocList('id');			
+		}
+		//print_r($typeArrow);
+		$rez = parent::delete($pks);
 		if($rez){
 			$model =& TwojJModel::getInstance('Element', 'TwojToolboxModel');
-			$db = JFactory::getDBO();
+			
 			foreach ($pks as $i => $pk) {
 				// Delete menu items
 				$query = $db->getQuery(true);
@@ -85,9 +96,73 @@ class TwojToolboxModelPlitem extends JModelAdmin{
 				$db->setQuery( (string) $query);
 				$del_elements = $db->loadColumn(0);
 				if(count($del_elements))$model->delete($del_elements);
+				
+				if(isset( $typeArrow[(int) $pk] ) && $typeDeleteRow = $typeArrow[(int) $pk]){
+					$query = $db->getQuery(true);
+					$query->select('dat.json');
+					$query->where('dat.`plugintype` = '. $db->quote($typeArrow[(int) $pk]['type']) );
+					$query->from('#__twojtoolbox_data AS dat');
+					$db->setQuery( (string) $query);
+					
+			//echo (string) $query."<br />";
+					
+					if( $jsonInput = $db->loadResult() ){
+			//echo $jsonInput;
+						$jsonArray = json_decode($jsonInput, true);
+			//echo "<br />";
+			//print_r($jsonArray);
+						if( $jsonArray !== NULL ){
+							$jsonArray = $this->checkPatch($jsonArray,  (int) $pk);
+							if( $jsonArray && is_array($jsonArray) ){
+			//echo "<br />";
+			//print_r($jsonArray);
+								$jsonString = json_encode($jsonArray);
+								if( $jsonString !== NULL ){
+									$row = JTable::getInstance('Data', 'TwojToolboxTable'); 
+									$row->loadPluginType('gallery');
+									$row->json = $jsonString;
+									$jsonInput = $jsonString;
+									$row->check();
+									$row->store();
+								}
+							}
+						}
+					}  else echo "error  json";
+					//echo "<br />".$jsonInput;
+					
+				} else echo "error type";
 			}
 		}
+		//die();
 		return $rez;
+	}
+	
+	
+	public function checkPatch($elementArray, $elementNeed){
+		for($i=0;$i<count($elementArray);$i++){
+			if(isset($elementArray[$i]['id']) ){
+				if( $elementArray[$i]['id'] == $elementNeed ){
+					if( isset($elementArray[$i]['children']) ){
+						 $tempArray = $elementArray[$i]['children'];
+						 /* unset($elementArray[$i]); */
+						array_splice($elementArray, $i, 1);
+						 $elementArray = $elementArray + $tempArray;
+					} else {
+						/*  unset($elementArray[$i]); */
+						 array_splice($elementArray, $i, 1);
+					}
+					 return $elementArray;
+				}
+				if( isset($elementArray[$i]['children']) ){
+					$newArray = $this->checkPatch($elementArray[$i]['children'], $elementNeed);
+					if( $newArray && is_array($newArray) ){
+						$elementArray[$i]['children'] = $newArray;
+						return $elementArray; 
+					}
+				}
+			}
+		}
+		return 0;
 	}
 	
 	public function getTable($type = 'Plitem', $prefix = 'TwojToolboxTable', $config = array()){

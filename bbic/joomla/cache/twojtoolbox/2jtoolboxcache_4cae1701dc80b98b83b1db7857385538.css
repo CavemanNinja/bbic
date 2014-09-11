@@ -1,0 +1,47 @@
+/* tabs*1804*css*2j.style7.tabs */
+.twoj_tabs_class7 > .twoj_tab_block_ul{
+	border-left: 1px solid #f5d7b4;
+}
+.twoj_tabs_class7.twoj_tab_block_right > .twoj_tab_block_ul{
+	border-right: 1px solid #f5d7b4;
+	border-left: 0 none;
+}
+
+.twoj_tabs_class7 > .twoj_tab_block_ul .twoj_tab_block_li{
+	border: 1px solid #f5d7b4;
+	border-left: 0 none;
+	border-bottom: 0 none;
+	background: #fff;
+	color: #f3a650
+}
+
+.twoj_tabs_class7.twoj_tab_block_right > .twoj_tab_block_ul .twoj_tab_block_li{
+	border: 1px solid #f5d7b4;
+	border-right: 0 none;
+	border-bottom: 0 none;
+}
+
+.twoj_tabs_class7.twoj_tab_block_bottom > .twoj_tab_block_ul .twoj_tab_block_li{
+	border-top: 0 none;
+	border-bottom: 1px solid #f5d7b4;
+}
+
+.twoj_tabs_class7.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li:hover{
+	 background-color: #f8e8d7;
+	 color: #930;
+}
+
+.twoj_tabs_class7.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected:hover,
+.twoj_tabs_class7 > .twoj_tab_block_ul .twoj_tab_block_li.twoj-tabs-selected{
+	background: #c60;
+	color: #fff;
+}
+
+.twoj_tabs_class7 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span {
+	padding: 4px 12px 4px 12px;
+	font: normal 10px/18px "Lucida Grande", "Lucida Sans Unicode", verdana, lucida, sans-serif;
+}
+
+.twoj_tabs_class7 > .twoj_tab_content{
+	border: 1px solid #f5d7b4;
+}

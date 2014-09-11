@@ -14,7 +14,7 @@ JHtml::_('script','system/multiselect.js',false,true);
 if(TJTB_JVERSION==3){
 	JHtml::_('behavior.multiselect');
 	JHtml::_('dropdown.init');
-	JHtml::_('formbehavior.chosen', 'select');
+	//JHtml::_('formbehavior.chosen', 'select');
 }
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_twojtoolbox&view=scan'); ?>" method="post" name="adminForm" id="adminForm">

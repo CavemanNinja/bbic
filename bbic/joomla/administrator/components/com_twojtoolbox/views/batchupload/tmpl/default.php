@@ -12,7 +12,7 @@ JHtml::_('behavior.tooltip');
 if(TJTB_JVERSION==3){
 	JHtml::_('behavior.multiselect');
 	JHtml::_('dropdown.init');
-	JHtml::_('formbehavior.chosen', 'select');
+	//JHtml::_('formbehavior.chosen', 'select');
 }
 ?>
 

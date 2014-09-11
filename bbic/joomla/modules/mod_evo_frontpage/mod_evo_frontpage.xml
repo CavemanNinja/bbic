@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5/3.x" client="site" method="upgrade">
+	<name>EVO frontpage</name>
+	<creationDate>February 20th, 2014</creationDate>
+	<author>Pacificador</author>
+	<license>Released under GNU/GPL License</license>
+	<authorEmail>minifrontpageevolution@gmail.com</authorEmail>
+	<authorUrl>www.evofrontpage.com</authorUrl>
+	<version>2.9</version>
+	<description>MOD_EVO_FRONTPAGE_DESC</description>					# This is a fork of "Mini FrontPage 2.0" by Template Plazza which was released under the GPL #	<files>
+		<filename module="mod_evo_frontpage">mod_evo_frontpage.php</filename>
+		<folder>themes</folder>
+		<folder>images</folder>
+		<folder>library</folder>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>	
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_evo_frontpage.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_evo_frontpage.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="GENERAL">
+<field name="spacer_1" type="spacer" class="text" label="ARTICLES_SOURCES_TITLE" />
+				<field name="catid" type="category" extension="com_content" multiple="true" size="10" label="EVOFP_CATEGORY" description="EVOFP_CATEGORY_DESC" >
+
+
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				<field name="show_featured" type="list" default="1" label="EVOFP_SHOWFEATURED_LABEL" description="EVOFP_SHOWFEATURED_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+					<option value="2">EVOFP_ONLYSHOWFEATURED_OPTION</option>
+				</field>
+<field name="spacer_3" type="spacer" class="text" label="SORT_TITLE" />
+				<field name="order_by" type="list" default="2" label="EVOFP_ORDERING" description="EVOFP_ORDERING_DESC">
+		<option value="0">ORCREATED</option>
+		<option value="1">ORMOSTREAD</option>
+		<option value="2">ORPUBLISHED</option>
+		<option value="12">ORMODIFIED</option>
+		<option value="3">ORARTICLETITLE</option>
+		<option value="4">ORARTICLEALIAS</option>
+		<option value="5">ORARTICLEID</option>
+		<option value="6">ORAUTHORID</option>
+		<option value="7">ORAUTHORNAME</option>
+		<option value="8">ORCATEGORYID</option>
+		<option value="9">ORORDERING</option>
+		<option value="10">ORFEATURED</option>
+		<option value="11">ORRANDOM</option>
+				</field>
+				<field name="order_type" type="radio" default="1" label="EVOFP_ORDERING_TYPE" description="EVOFP_ORDERING_TYPE_DESC">
+					<option value="0">EVOFP_ORDERING_TYPE_ASC</option>
+					<option value="1">EVOFP_ORDERING_TYPE_DES</option>
+				</field>
+		
+				<field name="period" type="text" default="12345" label="EVOFP_PERIOD_LABEL" description="EVOFP_PERIOD_DESC"/>
+<field name="spacer_8" type="spacer" class="text" label="CATEGORY_TITLE" />
+
+
+				<field name="cat_near_dateandauthor" type="radio" default="0" label="EVOPRO_CATEGNEARDATE_LABEL" description="EVOPRO_CATEGNEARDATE_DESC">
+						<option value="0">Only available in PRO version</option>
+				</field>
+				<field name="cat_title" type="radio" default="1" label="EVOPRO_CATEGBOTTOM_LABEL" description="EVOPRO_CATEGBOTTOM_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+
+
+				<field name="trim_category_title" type="text" default="50" label="EVOFP_TRIMCATEGORYTITLE_LABEL" description="EVOFP_TRIMCATEGORYTITLE_DESC"/>
+<field name="spacer_4" type="spacer" class="text" label="TITLE_TITLE" />
+				<field name="show_title" type="radio" default="1" label="EVOFP_ARTICLETITLE_LABEL" description="EVOFP_ARTICLETITLE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="title_link" type="radio" default="1" label="EVOFP_ARTICLETITLELINK_LABEL" description="EVOFP_ARTICLETITLELINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+								<field name="trim_article_title" type="text" default="50" label="EVOFP_TRIMARTICLETITLE_LABEL" description="EVOFP_TRIMARTICLETITLE_DESC"/>
+<field name="spacer_7" type="spacer" class="text" label="AUTHOR_TITLE" />
+				<field name="user_id" type="list" default="0" label="EVOFP_USER_LABEL" description="EVOFP_USER_DESC">
+					<option value="0">EVOFP_VALUE_ANYONE</option>
+					<option value="by_me">EVOFP_VALUE_ADDED_BY_ME</option>
+					<option value="not_me">EVOFP_VALUE_NOTADDED_BY_ME</option>
+				</field>
+				<field name="show_author" type="radio" default="1" label="EVOFP_AUTHOR_LABEL" description="EVOFP_AUTHOR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+
+				<field name="show_author_type" type="radio" default="0" label="EVOFP_AUTHORTYPE_LABEL" description="EVOFP_AUTHORTYPE_DESC">
+					<option value="0">Only available in PRO version</option>
+				</field>
+
+
+<field name="spacer_9" type="spacer" class="text" label="DATE_TITLE" />
+				<field name="show_date" type="radio" default="1" label="EVOFP_ARTICLEDATE_LABEL" description="EVOFP_ARTICLEDATE_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="date_type" type="list" default="0" label="EVOFP_DATE_TYPE_LABEL" description="EVOFP_DATE_TYPE_DESC">
+					<option value="0">EVOFP_DATE_VALUE_CREATED</option>
+					<option value="1">EVOFP_DATE_VALUE_MODIFIED</option>
+					<option value="2">EVOFP_DATE_VALUE_PUBLISHUP</option>
+				</field>
+				<field name="date_format" type="text" default="d M Y H:i" label="EVOFP_DATEFORMAT_LABEL" description="EVOFP_DATEFORMAT_DESC"/>
+<field name="spacer_5" type="spacer" class="text" label="INTROTEXT_TITLE" />
+				<field name="limit_intro" type="text" default="100" label="EVOFP_LIMITINTRO_LABEL" description="EVOFP_LIMITINTRO_DESC"/>
+		<field name="intro_link" type="radio" default="0" label="EVOFP_INTRO_LINK" description="EVOFP_INTRO_LINK_DESC">
+   		<option value="0">No</option>
+		<option value="1">Yes</option>
+   		</field>
+<field name="spacer_6" type="spacer" class="text" label="READ_MORE_TITLE" />
+		<field name="show_fulllink" type="radio" default="0" label="READMORE" description="READMORED">
+   		<option value="0">No</option>
+		<option value="1">Yes</option>
+	</field>
+				<field name="fulllink" type="text" default="Read more..." label="EVOFP_FULLSTORY_LABEL" description="EVOFP_FULLSTORY_DESC"/>
+<field name="spacer_2" type="spacer" class="text" label="DISPLAY_FORMAT_TITLE" />
+				<field name="theme" type="folderlist" default="default" label="EVOFP_MODULE_TYPE_LABEL" description="EVOFP_MODULE_TYPE_DESC" directory="modules/mod_evo_frontpage/themes" />
+				<field name="number_of_column" type="list" default="2" label="EVOFP_NUMCOLUMNS_LABEL" description="EVOFP_NUMCOLUMNS_DESC">
+				   	<option value="1">1</option>
+	<option value="2">2</option>
+   	<option value="3">3</option>
+	<option value="4">4</option>
+	</field>
+				<field name="number_of_row" type="text" default="2" label="EVOFP_NUMROWS_LABEL" description="EVOFP_NUMROWS_DESC"/>
+				<field name="number_of_tab" type="text" default="2" label="EVOFP_NUMTABS_LABEL" description="EVOFP_NUMTABS_DESC"/>
+				<field name="number_of_article" type="text" default="10" label="EVOFP_NUMARTICLES_LABEL" description="EVOFP_NUMARTICLES_DESC"/>
+				<field name="number_of_skip" type="text" default="0" label="EVOFP_SKIP_LABEL" description="EVOFP_SKIP_DESC" />
+				<field name="item_direction" type="list" default="across" label="EVOFP_ITEMDIRECTION_LABEL" description="EVOFP_ITEMDIRECTION_DESC">
+					<option value="across">EVOFP_DIRECTION_ACROSS</option>
+					<option value="down">EVOFP_DIRECTION_DOWN</option>
+				</field>
+							<field name="link_newtab" type="radio" default="0" label="OPENLINKSNEWTAB" description="OPENLINKSNEWTABD">
+		<option value="0">No</option>
+		<option value="1">Yes</option>
+	</field>
+<field name="spacer_10" type="spacer" class="text" label="OTHER_ARTICLES_TITLE" />
+						<field name="show_others" type="radio" default="1" label="EVOFP_SHOW_OTHERS" description="EVOFP_SHOW_OTHERS_DESC">
+   		<option value="0">No</option>
+		<option value="1">Yes</option>
+   		</field>
+				<field name="header_title_links" type="text" default="Other Articles" label="EVOFP_OTHER_ARTICLES_LABEL" description="EVOFP_OTHER_ARTICLES_DESC">
+				</field>
+				<field name="more_article_placement" type="list" default="bottom" label="EVOFP_MOREARTICLEPLACEMENT_LABEL" description="EVOFP_MOREARTICLEPLACEMENT_DESC">
+					<option value="bottom">EVOFP_MOREARTICLEPLACEMENT_BOTTOM</option>
+					<option value="lastcolumn">EVOFP_MOREARTICLEPLACEMENT_LASTCOLUMN</option>
+					<option value="lastcell">EVOFP_MOREARTICLEPLACEMENT_LASTCELL</option>
+				</field>
+<field name="spacer_11" type="spacer" class="text" label="HEADINGS_TAGS_TITLE" />
+				<field name="heading_title" type="list" default="0" label="EVOPRO_HEADTITLE_LABEL" description="EVOPRO_HEADTITLE_DESC">
+					<option value="0">Only available in PRO version</option>
+				</field>
+				<field name="heading_intro" type="list" default="0" label="EVOPRO_HEADINTRO_LABEL" description="EVOPRO_HEADINTRO_DESC">
+					<option value="0">Only available in PRO version</option>
+				</field>
+				<field name="heading_others" type="list" default="0" label="EVOPRO_HEADOTHERS_LABEL" description="EVOPRO_HEADOTHERS_DESC">
+					<option value="0">Only available in PRO version</option>
+				</field>
+<field name="spacer_12" type="spacer" class="text" label="IMAGE_THUMBNAILS_TITLE" />
+				<field name="thumb_embed" type="radio" default="1" label="EVOFP_SHOWTHUMBS_LABEL" description="EVOFP_SHOWTHUMBS_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+
+
+				<field name="first" type="radio" default="0" label="EVOPRO_FIRST_LABEL" description="EVOPRO_FIRST_DESC">
+					<option value="0">Only available in PRO version</option>
+				</field>
+					<field name="thumb_embed_default" type="radio" default="0" label="DEFAULTTHUMB" description="DEFAULTTHUMBD">
+		<option value="0">Only available in PRO version</option>
+	</field>
+
+
+						<field name="thumb_link" type="radio" default="1" label="THUMBLINK" description="THUMBLINKD">
+		<option value="0">No</option>
+		<option value="1">Yes</option>
+	</field>
+				<field name="thumb_align" type="radio" default="0" label="EVOFP_THUMBALIGN_LABEL" description="EVOFP_THUMBALIGN_DESC">
+						<option value="0">EVOFP_VALUE_LEFT</option>
+						<option value="1">EVOFP_VALUE_RIGHT</option>
+						<option value="2">EVOFP_VALUE_CENTERED</option>
+				</field>
+				<field name="thumb_width" type="text" default="100" label="EVOFP_THUMBWIDTH_LABEL" description="EVOFP_THUMBWIDTH_DESC"/>
+				<field name="thumb_height" type="text" default="100" label="EVOFP_THUMBHEIGHT_LABEL" description="EVOFP_THUMBHEIGHT_DESC"/>
+				
+				<field name="aspect" type="radio" default="1" label="EVOFP_PRESERVEASPECT_LABEL" description="EVOFP_PRESERVEASPECT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="thumbnail_position" type="list" default="0" label="EVOFP_THUMBNAILPOS_LABEL" description="EVOFP_THUMBNAILPOS_DESC">
+						<option value="1">EVOFP_VALUE_BEFORETC</option>
+						<option value="0">EVOFP_VALUE_AFTERTD</option>
+				</field>	
+			</fieldset>
+			
+			<fieldset name="advanced">
+							<field name="loadJquery" type="list" default="1" label="EVOFP_LOADJQUERY_LABEL" description="EVOFP_LOADJQUERY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">EVOFP_VALUE_FROM_THISFILE</option>
+					<option value="2">EVOFP_VALUE_FROM_GOOGLE</option>
+				</field>
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+	
+		</fields>
+	</config>
+<updateservers>
+<server type="extension" name="EVO frontpage official site" priority="1">http://www.evofrontpage.com/updates/mod_evo_frontpage.xml</server>
+</updateservers>
+</extension>

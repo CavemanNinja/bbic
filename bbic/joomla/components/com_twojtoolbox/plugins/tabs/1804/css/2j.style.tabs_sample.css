@@ -1,0 +1,43 @@
+/* 
+Theme name of the class and file name should be the same
+
+ File name: 2j.styleXX.tabs.css
+ Theme class: .twoj_tabs_classXX  where XX it's unique ID
+ 
+ For example:
+    If the file name  2j.style1.tabs.css then in this case 
+	theme class .twoj_tabs_class1
+ 
+ */
+
+
+/* Tabs block */
+.twoj_tabs_class99{}
+
+/* Tabs block with enabled navigation buttons on the bottom side of the tabs block */
+.twoj_tabs_class99.twoj_tab_block_bottom{}
+
+/* Tabs block with align of the navigation buttons to the right */
+.twoj_tabs_class99.twoj_tab_block_right{}
+
+/* Content block of the current tab */
+.twoj_tabs_class99 > .twoj_tab_content{}
+
+/* Block of the tabs navigation */
+.twoj_tabs_class99 > .twoj_tab_block_ul{}
+
+/* Block of the tabs navigation when buttons shows on the bottom */
+.twoj_tabs_class99 > .twoj_tab_block_ul{}
+
+/* Container of the navigation button */
+.twoj_tabs_class99 > .twoj_tab_block_ul .twoj_tab_block_li{}
+
+/* Container of the active tabs button */
+.twoj_tabs_class99 > .twoj_tab_block_ul .ui-tabs-selected{}
+
+/* Container of the hovered tabs button */
+.twoj_tabs_class99.twoj_tab_block_hover > .twoj_tab_block_ul .twoj_tab_block_li:hover{}
+
+/* Additional caontainer of the tabs button */
+.twoj_tabs_class99 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a {}
+.twoj_tabs_class99 > .twoj_tab_block_ul .twoj_tab_block_li .twoj_tab_block_a span{}
