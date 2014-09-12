@@ -83,10 +83,10 @@ defined('_JEXEC') or die;
 	<?php foreach ($list as $item) : ?>
 		<li>
 			<?php
-				$my_article = JTable::getInstance('content');
-				$my_article->load($item->id);
-				preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $my_article->introtext, $matches);
-				$first_img = $matches[1][0];
+				// $my_article = JTable::getInstance('content');
+				// $my_article->load($item->id);
+				// preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $my_article->introtext, $matches);
+				// $first_img = $matches[1][0];
 			?>
 			
 			
@@ -115,11 +115,11 @@ defined('_JEXEC') or die;
 					(<?php echo $item->displayCategoryTitle; ?>)
 					</span>
 				<?php endif; ?>
-				<?php if ($first_img !== null) :?>
+				<!--<?php if ($first_img !== null) :?>
 					<div>
 						<?php echo '<img class="news-list-img" src="'.$first_img.'">'; ?>
 					</div>
-				<?php endif; ?>
+				<?php endif; ?> -->
 				<?php if ($item->displayDate) : ?>
 					<span class="mod-articles-category-date"><?php echo $item->displayDate; ?></span>
 				<?php endif; ?>
