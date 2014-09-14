@@ -13,16 +13,21 @@ defined('_JEXEC') or die;
 ?>
 
 <div id="t3-mainbody" class="container t3-mainbody">
+	<?php $id = JRequest::getVar('id'); ?>
 	<div class="row">
 
 		<!-- MAIN CONTENT -->
-		<div id="t3-content" class="t3-content col-xs-12">
-			<?php if($this->hasMessage()) : ?>
-			<jdoc:include type="message" />
-			<?php endif ?>
-			<jdoc:include type="component" />
-		</div>
-		<!-- //MAIN CONTENT -->
+		<?php if ($id == "162") : ?>
+			<div id="t3-content" class="tenant-no-component t3-content col-xs-12">
+		<?php else: ?>
+			<div id="t3-content" class="t3-content col-xs-12">
+		<?php endif; ?>
+				<?php if($this->hasMessage()) : ?>
+				<jdoc:include type="message" />
+				<?php endif ?>
+				<jdoc:include type="component" />
+			</div>
+			<!-- //MAIN CONTENT -->
 
 	</div>
 </div> 

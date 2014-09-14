@@ -37,7 +37,7 @@ jQuery(window).load(function() {
     });
 
     //Magnific popup options
-     jQuery('.tx-gallery-image a, .tx-gallery-image-preview').magnificPopup({type:'image'});
+     //jQuery('.tx-gallery-image a, .tx-gallery-image-preview').magnificPopup({type:'image'});
      jQuery('.tx-gallery-image-link').magnificPopup({
         type: 'ajax',
         alignTop: true,

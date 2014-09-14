@@ -73,7 +73,7 @@ body {
 
 
 /* TENANT LOGIN */
-#Mod16 {
+#Mod16, #Mod158 {
     /*box-shadow: 0px 6px 12px #666666;  */
     padding-bottom: 10px !important;
     /*background-color: #ffffff;*/
@@ -161,7 +161,7 @@ body {
 }
 
 /*Login*/
-#Mod16 .module-inner .module-title {
+#Mod16, #Mod158 .module-inner .module-title {
   /*text-align: center !important;*/
   /*padding-top: 8px !important;*/
   /*padding-bottom: 8px !important;*/
@@ -260,7 +260,7 @@ body {
   padding-top: 10px !important;
 }
 
-#Mod16 .module-inner .module-ct {
+#Mod16, #Mod158 .module-inner .module-ct {
   padding-left: 10px !important;
   padding-right: 10px !important;
   padding-top: 10px !important;
@@ -901,16 +901,104 @@ div.st_tabs > div > ul {
   border: 0px outset buttonface;
 }
 
-/*NEWS LIST MODULE*/
-.news-list-img {
-  width: 25%;
+/*-------NEWS LIST MODULE-----*/
+
+.news-list-module {
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow-y: auto;
+  height: 700px;
 }
 
-.news-list-img-div {
+.twoj_tab_content {
+}
+.news-list-content {
+  display: inline-block;
+}
+.news-list-image {
   float: left;
-  
+  width: 30%;
+}
+.news-list-text {
+  float: right;
+  width: 70%;
+  padding: 0px 10px 0px 20px;
+  /*margin-top: 4px;*/
 }
 
-/*.news-list-content {
+.news-list-content-ar {
+  display: inline-block;
+}
+.news-list-image-ar {
   float: right;
+  width: 30%;
+}
+.news-list-text-ar {
+  float: left;
+  width: 70%;
+  padding: 0px 20px 0px 10px;
+  /*margin-top: 4px;*/
+}
+
+.news-list-title {
+  font-size: 18px;
+}
+.news-list-img {
+  width: 100%;
+}
+
+
+#Mod145, #Mod151, 
+#Mod152, #Mod153,
+#Mod154, #Mod155,
+#Mod156, #Mod157 {
+  visibility: hidden;
+  height: 0px;
+}
+
+.twoj_tabs_class4 > .twoj_tab_block_ul .twoj_tab_block_li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    color: #777;
+}
+
+.categories-module li, ul.categories-module li, .category-module li, ul.category-module li {
+  border: 0px;
+}
+
+
+/* XPERTMOD GALLERY FOR TENANTS */
+.tx-gallery {
+  /*max-width: 728px !important;*/
+  width: 100%;
+  margin: 0px !important;
+  padding: 0px 10px 20px 10px;
+}
+
+/*.tx-gallery-image {
+  text-align: ceter !important;
 }*/
+
+.tx-gallery-title {
+  padding: 0px !important;
+}
+
+.tx-gallery-item {
+  text-align: center;
+  padding: 5px 0 5px 0;
+}
+
+/*#Mod149 {
+  display: none;
+}*/
+
+.tenant-no-component {
+  display: none;
+  height: 0px;
+  padding: 0px;
+}
+
+.tx-tenants-header {
+  padding: 15px;
+}
