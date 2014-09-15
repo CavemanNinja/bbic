@@ -6,6 +6,7 @@
  */
 
 defined('_JEXEC') or die;
+
 ?>
 
 <!-- META FOR IOS & HANDHELD -->

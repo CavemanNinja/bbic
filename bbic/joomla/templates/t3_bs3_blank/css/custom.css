@@ -906,12 +906,26 @@ div.st_tabs > div > ul {
 .news-list-module {
   padding-left: 0px;
   padding-right: 0px;
-  overflow-y: auto;
-  height: 700px;
+    
 }
 
+/* Enable for scrollbar style 
+.news-list-module {
+  overflow-y: auto;
+  height: 700px;
+}*/
 .twoj_tab_content {
 }
+
+
+
+.twoj_tab_block_li {
+  width: 24%;
+  text-align: center;
+  background: #f9f9f9;
+
+}
+
 .news-list-content {
   display: inline-block;
 }
@@ -922,7 +936,8 @@ div.st_tabs > div > ul {
 .news-list-text {
   float: right;
   width: 70%;
-  padding: 0px 10px 0px 20px;
+  padding: 0px 30px 0px 20px;
+  text-align: justify;
   /*margin-top: 4px;*/
 }
 
@@ -936,7 +951,7 @@ div.st_tabs > div > ul {
 .news-list-text-ar {
   float: left;
   width: 70%;
-  padding: 0px 20px 0px 10px;
+  padding: 0px 20px 0px 30px;
   /*margin-top: 4px;*/
 }
 
@@ -987,6 +1002,9 @@ div.st_tabs > div > ul {
 .tx-gallery-item {
   text-align: center;
   padding: 5px 0 5px 0;
+  background: #f7f7f7;
+  border-radius: 4px;
+  border: 1px solid #e3e3e3;
 }
 
 /*#Mod149 {
