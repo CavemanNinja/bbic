@@ -53,7 +53,6 @@ if (is_file(T3_TEMPLATE_PATH . '/css/custom.css')) {
 ?>
 
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-
 <!-- Le HTML5 shim and media query for IE8 support -->
 <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -61,3 +60,13 @@ if (is_file(T3_TEMPLATE_PATH . '/css/custom.css')) {
 <![endif]-->
 
 <!-- You can add Google Analytics here or use T3 Injection feature -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41391819-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
