@@ -15,6 +15,9 @@ JHtml::addIncludePath(dirname(dirname(__FILE__)));
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css', array(), true);
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/map.css', array(), true);
 
+JHtml::_('bootstrap.framework');
+JHtml::script(JUri::base().'templates/t3_bs3_blank/js/map.js', false, true);
+
 // <script type="text/javascript">
 // 	(function($){
 // 		$('#slide-contact').collapse({ parent: false, toggle: true, active: 'basic-details'});
@@ -705,7 +708,9 @@ JHtml::_('bootstrap.tooltip');
 	</aside>  
 	<?php endif; ?>
 	<!-- //Aside -->
-	<div class="panel-group collapse in" id="slide-contact" style="height: auto;">
+	
+
+	<!-- <div class="panel-group collapse in" id="slide-contact" style="height: auto;">
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<h4 class="panel-title">
@@ -747,9 +752,9 @@ JHtml::_('bootstrap.tooltip');
 				Panel Body Level 2
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-</div>
+<!-- </div> -->
 
 
 	<?php if (isset ($this->item->toc)) : ?>
@@ -777,9 +782,149 @@ JHtml::_('bootstrap.tooltip');
 		<?php	if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
 			echo $this->item->pagination;
 		endif; ?>
-
+		
 		<section class="article-content clearfix" itemprop="articleBody">
+			<!-- <?php var_dump($attribs->get('map_building8_1')); ?> -->
 			<?php echo $this->item->text; ?>
+			
+
+			<select id="map-select">
+				<option disabled selected> -- Select an business name -- </option>
+				<?php 
+					if ($attribs->get('map_building8_1') != "") {
+						echo "<option value='building8_1'>".$attribs->get('map_building8_1')."</option>";
+					}
+					if ($attribs->get('map_building8_2') != "") {
+						echo "<option value='building8_2'>".$attribs->get('map_building8_2')."</option>";
+					}
+					if ($attribs->get('map_building8_3') != "") {
+						echo "<option value='building8_3'>".$attribs->get('map_building8_3')."</option>";
+					}
+				?>
+			</select>
+
+			<button id="back-button" class="btn btn-default" style="display:none">Back</button>
+
+			<div class="bbic-map">
+
+				<div class="campus">
+					<i class="campus_building_building8"></i>
+					<i class="campus_building_1w"></i>
+					<i class="campus_building_2w"></i>
+					<i class="campus_building_3w"></i>
+					<i class="campus_building_4w"></i>
+					<i class="campus_building_a1"></i>
+					<i class="campus_building_a2"></i>
+					<i class="campus_building_a3"></i>
+					<i class="campus_building_b1"></i>
+					<i class="campus_building_b2"></i>
+					<i class="campus_building_b3"></i>
+					<i class="campus_building_c1"></i>
+					<i class="campus_building_c2"></i>
+					<i class="campus_building_c3"></i>
+					<i class="campus_building_d2"></i>
+					<i class="campus_building_d1"></i>
+					<i class="campus_building_d2"></i>
+					<i class="campus_building_d3"></i>
+					<i class="campus_building_e1"></i>
+					<i class="campus_building_e2"></i>
+					<i class="campus_building_e3"></i>
+					<i class="campus_building_e5"></i>
+					<i class="campus_building_e6"></i>
+					<i class="campus_building_e7"></i>
+					<i class="campus_building_1e"></i>
+					<i class="campus_building_2e"></i>
+					<i class="campus_building_3e"></i>
+					<i class="campus_building_4e"></i>
+					<i class="campus_building_unnamed"></i>
+					<i class="campus_lot8"></i>
+					<i class="campus_lotw"></i>
+					<i class="campus_lota"></i>
+					<i class="campus_lotb"></i>
+					<i class="campus_lotc"></i>
+					<i class="campus_lotd"></i>
+					<i class="campus_lote1"></i>
+					<i class="campus_lote2"></i>
+					<i class="campus_lote3"></i>
+					<i class="campus_border"></i>
+				</div>
+
+				<div class="building-map building8">
+					<!-- <i class="main-building-1"><i></i></i> -->
+					<i class="building8_outline"></i>
+					<i class="building8_reception"></i>
+					<div class="map-popover building8_1" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></div>
+					<i class="map-popover building8_2" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_2'); ?>"></i>
+					<i class="map-popover building8_3" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_3'); ?>"></i>
+					<i class="map-popover building8_4" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_4'); ?>"></i>
+					<i class="map-popover building8_5" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_6" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_7" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_8" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_9" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_10" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_11" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_12" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_13" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_14" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_15" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_16" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_17" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_18" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_19" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_20" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_21" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_22" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_23" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_24" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_25" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_26" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_27" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_28" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_29" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_30" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_31" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_32" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_33" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_34" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+					<i class="map-popover building8_35" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
+				</div>
+			</div>
 		</section>
 
 	  <!-- footer -->

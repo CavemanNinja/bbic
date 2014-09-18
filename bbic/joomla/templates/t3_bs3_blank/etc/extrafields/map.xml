@@ -7,35 +7,290 @@
       description="TPL_EXTRAFIELDS_MAP_SLIDER_LABEL_DESC" 
       group="extrafields"
       >
-      
-         <field
-            name="map_location_1_company_name"
-            type="text"
-            label="TPL_EXTRAFIELDS_MAP_LOCATION_1_COMPANY_NAME"
-            description="TPL_EXTRAFIELDS_MAP_LOCATION_1_COMPANY_NAME_DESC"
+         <field 
+            name="map_building8_1" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_1"
+            description="TPL_MAP_BUILDING8_1_DESC"
+            
+         />
+         <field 
+            name="map_building8_2" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_2"
+            description="TPL_MAP_BUILDING8_2_DESC"
+            
+         />
+         <field 
+            name="map_building8_3" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_3"
+            description="TPL_MAP_BUILDING8_3_DESC"
+            
+         />
+         <field 
+            name="map_building8_4" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_4"
+            description="TPL_MAP_BUILDING8_4_DESC"
+            
+         />
+         <field 
+            name="map_building8_5" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_5"
+            description="TPL_MAP_BUILDING8_5_DESC"
+            
+         />
+         <field 
+            name="map_building8_6" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_6"
+            description="TPL_MAP_BUILDING8_6_DESC"
+            
+         />
+         <field 
+            name="map_building8_7" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_7"
+            description="TPL_MAP_BUILDING8_7_DESC"
+            
+         />
+         <field 
+            name="map_building8_8" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_8"
+            description="TPL_MAP_BUILDING8_8_DESC"
+            
+         />
+         <field 
+            name="map_building8_9" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_9"
+            description="TPL_MAP_BUILDING8_9_DESC"
+            
+         />
+         <field 
+            name="map_building8_10" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_10"
+            description="TPL_MAP_BUILDING8_10_DESC"
+            
+         />
+         <field 
+            name="map_building8_11" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_11"
+            description="TPL_MAP_BUILDING8_11_DESC"
+            
+         />
+
+         <field 
+            name="map_building8_12" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_12"
+            description="TPL_MAP_BUILDING8_12_DESC"
+            
+         />
+         <field 
+            name="map_building8_13" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_13"
+            description="TPL_MAP_BUILDING8_13_DESC"
+            
+         />
+         <field 
+            name="map_building8_14" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_14"
+            description="TPL_MAP_BUILDING8_14_DESC"
+            
+         />
+         <field 
+            name="map_building8_15" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_15"
+            description="TPL_MAP_BUILDING8_15_DESC"
+            
+         />
+         <field 
+            name="map_building8_16" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_16"
+            description="TPL_MAP_BUILDING8_16_DESC"
+            
+         />
+         <field 
+            name="map_building8_17" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_17"
+            description="TPL_MAP_BUILDING8_17_DESC"
+            
+         />
+         <field 
+            name="map_building8_18" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_18"
+            description="TPL_MAP_BUILDING8_18_DESC"
+            
+         />
+         <field 
+            name="map_building8_19" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_19"
+            description="TPL_MAP_BUILDING8_19_DESC"
+            
+         />
+         <field 
+            name="map_building8_20" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_20"
+            description="TPL_MAP_BUILDING8_20_DESC"
+            
+         />
+         <field 
+            name="map_building8_21" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_21"
+            description="TPL_MAP_BUILDING8_21_DESC"
+            
+         />
+
+         <field 
+            name="map_building8_22" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_22"
+            description="TPL_MAP_BUILDING8_22_DESC"
+            
+         />
+         <field 
+            name="map_building8_23" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_23"
+            description="TPL_MAP_BUILDING8_23_DESC"
+            
+         />
+         <field 
+            name="map_building8_24" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_24"
+            description="TPL_MAP_BUILDING8_24_DESC"
+            
+         />
+         <field 
+            name="map_building8_25" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_25"
+            description="TPL_MAP_BUILDING8_25_DESC"
+            
+         />
+         <field 
+            name="map_building8_26" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_26"
+            description="TPL_MAP_BUILDING8_26_DESC"
+            
+         />
+         <field 
+            name="map_building8_27" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_27"
+            description="TPL_MAP_BUILDING8_27_DESC"
+            
+         />
+         <field 
+            name="map_building8_28" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_28"
+            description="TPL_MAP_BUILDING8_28_DESC"
+            
+         />
+         <field 
+            name="map_building8_29" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_29"
+            description="TPL_MAP_BUILDING8_29_DESC"
+            
+         />
+         <field 
+            name="map_building8_30" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_30"
+            description="TPL_MAP_BUILDING8_30_DESC"
+            
+         />
+         <field 
+            name="map_building8_31" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_31"
+            description="TPL_MAP_BUILDING8_31_DESC"
+            
+         />
+
+         <field 
+            name="map_building8_32" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_32"
+            description="TPL_MAP_BUILDING8_32_DESC"
+            
+         />
+         <field 
+            name="map_building8_33" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_33"
+            description="TPL_MAP_BUILDING8_33_DESC"
+            
+         />
+         <field 
+            name="map_building8_34" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_34"
+            description="TPL_MAP_BUILDING8_34_DESC"
+            
+         />
+         <field 
+            name="map_building8_35" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_35"
+            description="TPL_MAP_BUILDING8_35_DESC"
+            
          />
          
-         <field
-            name="map_location_2_company_name"
-            type="text"
-            label="TPL_EXTRAFIELDS_MAP_LOCATION_2_COMPANY_NAME"
-            description="TPL_EXTRAFIELDS_MAP_LOCATION_2_COMPANY_NAME_DESC"
-         />
-
-         <field
-            name="map_location_3_company_name"
-            type="text"
-            label="TPL_EXTRAFIELDS_MAP_LOCATION_3_COMPANY_NAME"
-            description="TPL_EXTRAFIELDS_MAP_LOCATION_3_COMPANY_NAME_DESC"
-         />
-
-         <field
-            name="map_location_4_company_name"
-            type="text"
-            label="TPL_EXTRAFIELDS_MAP_LOCATION_4_COMPANY_NAME"
-            description="TPL_EXTRAFIELDS_MAP_LOCATION_4_COMPANY_NAME_DESC"
-         />
-
       </fieldset>
    </fields>
 </form>

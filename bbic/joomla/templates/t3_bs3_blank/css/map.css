@@ -1,44 +1,753 @@
-.map {
-	background-color: #fff;
-	border-color: #01579b;
-	text-align: center;
-	vertical-align: middle;
-	width: 150px;
-	height: 100px;
-	/*display: inline-block !important;*/
-	display: table-cell;
-	border-radius: 4px;
+/* MAP */
+
+.bbic-map {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-left: 100px;
+  height: 600px;
 }
 
-.map_wrapper {
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
-	width: 60%;
+.building8 {
+  position: relative;
+  z-index: 38;
+  display: none;
+}
+
+.campus {
+  position: relative;
+  z-index: 331;
 }
 
 
-.location1 {
-	border-top: 2px solid #01579b;
-	border-bottom: 2px solid #01579b;
-	border-left: 2px solid #01579b;
-	border-right: 1px dashed #01579b;
+/*-- CAMPUS --*/
+
+.campus_building_building8 {
+  background-image: url('../images/map-assets/campus_building8.png');
+  position: absolute;
+  left: 438px;
+  top: 225px;
+  width: 154px;
+  height: 131px;
+  z-index: 330;
 }
-.location2 {
-	border-top: 2px solid #01579b;
-	border-bottom: 2px solid #01579b;
-	border-left: 1px dashed #01579b;
-	border-right: 1px dashed #01579b;
+.campus_building_1w {
+  background-image: url('../images/map-assets/campus_1w.png');
+  position: absolute;
+  left: 540px;
+  top: 95px;
+  width: 30px;
+  height: 54px;
+  z-index: 329;
 }
-.location3 {
-	border-top: 2px solid #01579b;
-	border-bottom: 2px solid #01579b;
-	border-left: 1px dashed #01579b;
-	border-right: 1px dashed #01579b;
+.campus_building_2w {
+  background-image: url('../images/map-assets/campus_2w.png');
+  position: absolute;
+  left: 541px;
+  top: 161px;
+  width: 55px;
+  height: 35px;
+  z-index: 328;
 }
-.location4 {
-	border-top: 2px solid #01579b;
-	border-bottom: 2px solid #01579b;
-	border-right: 2px solid #01579b;
-	border-left: 1px dashed #01579b;
+.campus_building_3w {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 482px;
+  top: 95px;
+  width: 52px;
+  height: 54px;
+  z-index: 327;
+}
+.campus_building_4w {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 442px;
+  top: 161px;
+  width: 92px;
+  height: 36px;
+  z-index: 326;
+}
+.campus_building_a1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 337px;
+  top: 94px;
+  width: 44px;
+  height: 97px;
+  z-index: 325;
+}
+.campus_building_a2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 287px;
+  top: 94px;
+  width: 36px;
+  height: 62px;
+  z-index: 324;
+}
+.campus_building_a3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 229px;
+  top: 94px;
+  width: 44px;
+  height: 97px;
+  z-index: 323;
+}
+.campus_building_b1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 146px;
+  top: 95px;
+  width: 44px;
+  height: 97px;
+  z-index: 322;
+}
+.campus_building_b2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 97px;
+  top: 95px;
+  width: 36px;
+  height: 62px;
+  z-index: 321;
+}
+.campus_building_b3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 37px;
+  top: 94px;
+  width: 44px;
+  height: 97px;
+  z-index: 320;
+}
+.campus_building_c1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 337px;
+  top: 242px;
+  width: 44px;
+  height: 97px;
+  z-index: 319;
+}
+.campus_building_c2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 287px;
+  top: 260px;
+  width: 36px;
+  height: 62px;
+  z-index: 318;
+}
+.campus_building_c3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 229px;
+  top: 242px;
+  width: 44px;
+  height: 97px;
+  z-index: 317;
+}
+.campus_building_d1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 146px;
+  top: 242px;
+  width: 44px;
+  height: 97px;
+  z-index: 316;
+}
+.campus_building_d2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 97px;
+  top: 259px;
+  width: 36px;
+  height: 62px;
+  z-index: 315;
+}
+.campus_building_d3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 37px;
+  top: 242px;
+  width: 44px;
+  height: 97px;
+  z-index: 314;
+}
+.campus_building_e1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 337px;
+  top: 390px;
+  width: 44px;
+  height: 88px;
+  z-index: 313;
+}
+.campus_building_e2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 287px;
+  top: 425px;
+  width: 36px;
+  height: 53px;
+  z-index: 312;
+}
+.campus_building_e3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 229px;
+  top: 390px;
+  width: 44px;
+  height: 88px;
+  z-index: 311;
+}
+.campus_building_e5 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 146px;
+  top: 390px;
+  width: 44px;
+  height: 88px;
+  z-index: 310;
+}
+.campus_building_e6 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 97px;
+  top: 425px;
+  width: 36px;
+  height: 53px;
+  z-index: 309;
+}
+.campus_building_e7 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 37px;
+  top: 390px;
+  width: 44px;
+  height: 88px;
+  z-index: 308;
+}
+.campus_building_1e {
+  background-image: url('../images/map-assets/campus_1e.png');
+  position: absolute;
+  left: 540px;
+  top: 431px;
+  width: 29px;
+  height: 57px;
+  z-index: 307;
+}
+.campus_building_2e {
+  background-image: url('../images/map-assets/campus_2e.png');
+  position: absolute;
+  left: 539px;
+  top: 384px;
+  width: 57px;
+  height: 36px;
+  z-index: 306;
+}
+.campus_building_3e {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 481px;
+  top: 431px;
+  width: 53px;
+  height: 57px;
+  z-index: 305;
+}
+.campus_building_4e {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 481px;
+  top: 384px;
+  width: 53px;
+  height: 36px;
+  z-index: 304;
+}
+.campus_building_unnamed {
+  background-image: url('../images/map-assets/campus_unnamed.png');
+  position: absolute;
+  left: 427px;
+  top: 386px;
+  width: 35px;
+  height: 102px;
+  z-index: 303;
+}
+
+/* outlines */
+.campus_lot8 {
+  background-image: url('../images/map-assets/campus_lot8.png');
+  /*border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;*/
+  position: absolute;
+  left: 415px;
+  top: 214px;
+  width: 185px;
+  height: 147px;
+  z-index: 300;
+}
+.campus_lotw {
+  background-image: url('../images/map-assets/campus_lotw.png');
+  /*border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;*/
+  position: absolute;
+  left: 415px;
+  top: 88px;
+  width: 188px;
+  height: 115px;
+  z-index: 299;
+}
+.campus_lota {
+  /*background-image: url('../images/map-assets/campus_lota.png');*/
+  border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  border-radius: 12px;
+  position: absolute;
+  left: 214px;
+  top: 79px;
+  width: 178.916px;
+  height: 121.916px;
+  z-index: 298;
+}
+.campus_lotb {
+  /*background-image: url('../images/map-assets/campus_lotb.png');*/
+  border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  border-radius: 12px;
+  position: absolute;
+  left: 13px;
+  top: 79px;
+  width: 187.916px;
+  height: 121.916px;
+  z-index: 297;
+}
+.campus_lotc {
+  /*background-image: url('../images/map-assets/campus_lotc.png');*/
+  border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  border-radius: 12px;
+  position: absolute;
+  left: 214px;
+  top: 214px;
+  width: 178.916px;
+  height: 145.916px;
+  z-index: 296;
+}
+.campus_lotd {
+  /*background-image: url('../images/map-assets/campus_lotd.png');*/
+  border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  border-radius: 12px;
+  position: absolute;
+  left: 13px;
+  top: 214px;
+  width: 187.916px;
+  height: 145.916px;
+  z-index: 295;
+}
+.campus_lote1 {
+  
+  background-image: url('../images/map-assets/campus_lote1.png');
+  background-repeat: no-repeat;
+/*  border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;*/
+  position: absolute;
+  left: 415px;
+  top: 374px;
+  width: 195px;
+  height: 125px;
+  z-index: 294;
+}
+.campus_lote2 {
+  /*background-image: url('../images/map-assets/campus_lote2.png');*/
+  border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  border-radius: 12px;
+  position: absolute;
+  left: 214px;
+  top: 374px;
+  width: 178.916px;
+  height: 122.916px;
+  z-index: 293;
+}
+.campus_lote3 {
+  border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  border-radius: 12px;
+  position: absolute;
+  left: 13px;
+  top: 374px;
+  width: 187.916px;
+  height: 122.916px;
+  z-index: 292;
+}
+.campus_border {
+  background-image: url('../images/map-assets/campus_border.png');
+  /*border-width: 2.083px;
+  border-color: rgb(1, 87, 155);
+  border-color: rgb(1, 87, 155);
+  border-style: solid;*/
+  position: absolute;
+  left: 0px;
+  top: 68px;
+  width: 629px;
+  height: 442px;
+  z-index: 291;
+}
+
+
+/*-- BUILDING 8 --*/
+
+.building8_outline {
+  background-image: url("../images/map-assets/building8-outline.png");
+  position: absolute;
+  left: 24px;
+  top: 42px;
+  width: 604px;
+  height: 515px;
+  z-index: 41;
+}
+
+.building8_1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 27px;
+  top: 46px;
+  width: 141px;
+  height: 59px;
+  z-index: 37;
+}
+.building8_2 {
+  background-image: url('../images/map-assets/building8-2.png');
+  position: absolute;
+  left: 102px;
+  top: 106px;
+  width: 123px;
+  height: 59px;
+  z-index: 36;
+}
+
+.building8_3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 101px;
+  top: 166px;
+  width: 124px;
+  height: 63px;
+  z-index: 35;
+}
+.building8_4 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 101px;
+  top: 230px;
+  width: 124px;
+  height: 62px;
+  z-index: 34;
+}
+.building8_5 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 101px;
+  top: 308px;
+  width: 124px;
+  height: 63px;
+  z-index: 33;
+}
+.building8_6 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 101px;
+  top: 372px;
+  width: 124px;
+  height: 62px;
+  z-index: 32;
+}
+
+.building8_7 {
+  background-image: url('../images/map-assets/building8-7.png');
+  position: absolute;
+  left: 102px;
+  top: 436px;
+  width: 123px;
+  height: 58px;
+  z-index: 31;
+}
+
+.building8_8 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 27px;
+  top: 496px;
+  width: 141px;
+  height: 59px;
+  z-index: 30;
+}
+.building8_9 {
+  background-image: url('../images/map-assets/building8-9.png');
+  position: absolute;
+  left: 212px;
+  top: 454px;
+  width: 61px;
+  height: 100px;
+  z-index: 29;
+}
+.building8_10 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 276px;
+  top: 454px;
+  width: 42px;
+  height: 100px;
+  z-index: 28;
+}
+.building8_11 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 321px;
+  top: 454px;
+  width: 42px;
+  height: 100px;
+  z-index: 27;
+}
+.building8_12 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 366px;
+  top: 454px;
+  width: 42px;
+  height: 100px;
+  z-index: 26;
+}
+.building8_13 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 455px;
+  top: 454px;
+  width: 44px;
+  height: 100px;
+  z-index: 25;
+}
+.building8_14 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 501px;
+  top: 454px;
+  width: 44px;
+  height: 100px;
+  z-index: 24;
+}
+.building8_15 {
+  background-image: url('../images/map-assets/building8-15.png');
+  position: absolute;
+  left: 547px;
+  top: 453px;
+  width: 76px;
+  height: 101px;
+  z-index: 23;
+}
+.building8_16 {
+  background-image: url('../images/map-assets/building8-16.png');
+  position: absolute;
+  left: 212px;
+  top: 46px;
+  width: 61px;
+  height: 100px;
+  z-index: 22;
+}
+.building8_17 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 276px;
+  top: 46px;
+  width: 42px;
+  height: 100px;
+  z-index: 21;
+}
+.building8_18 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 321px;
+  top: 46px;
+  width: 42px;
+  height: 100px;
+  z-index: 20;
+}
+.building8_19 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 366px;
+  top: 46px;
+  width: 42px;
+  height: 100px;
+  z-index: 19;
+}
+.building8_20 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 455px;
+  top: 46px;
+  width: 44px;
+  height: 100px;
+  z-index: 18;
+}
+.building8_21 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 501px;
+  top: 46px;
+  width: 44px;
+  height: 100px;
+  z-index: 17;
+}
+.building8_22 {
+  background-image: url('../images/map-assets/building8-22.png');
+
+  position: absolute;
+  left: 547px;
+  top: 46px;
+  width: 76px;
+  height: 100px;
+  z-index: 16;
+}
+.building8_23 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 322px;
+  top: 198px;
+  width: 76px;
+  height: 41px;
+  z-index: 15;
+}
+.building8_24 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 322px;
+  top: 241px;
+  width: 42px;
+  height: 43px;
+  z-index: 14;
+}
+.building8_25 {
+  background-image: url('../images/map-assets/building8-25.png');
+  position: absolute;
+  left: 366px;
+  top: 241px;
+  width: 32px;
+  height: 43px;
+  z-index: 13;
+}
+.building8_26 {
+  background-image: url('../images/map-assets/building8-26.png');
+  position: absolute;
+  left: 427px;
+  top: 198px;
+  width: 26px;
+  height: 86px;
+  z-index: 12;
+}
+.building8_27 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 455px;
+  top: 198px;
+  width: 24px;
+  height: 27px;
+  z-index: 11;
+}
+.building8_28 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 483px;
+  top: 198px;
+  width: 23px;
+  height: 27px;
+  z-index: 10;
+}
+.building8_29 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 455px;
+  top: 227px;
+  width: 51px;
+  height: 57px;
+  z-index: 9;
+}
+.building8_30 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 508px;
+  top: 198px;
+  width: 39px;
+  height: 86px;
+  z-index: 8;
+}
+.building8_31 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 277px;
+  top: 343px;
+  width: 60px;
+  height: 59px;
+  z-index: 7;
+}
+.building8_32 {
+  background-image: url('../images/map-assets/building8-32.png');
+  position: absolute;
+  left: 339px;
+  top: 315px;
+  width: 60px;
+  height: 44px;
+  z-index: 6;
+}
+.building8_33 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 339px;
+  top: 361px;
+  width: 60px;
+  height: 41px;
+  z-index: 5;
+}
+.building8_34 {
+  background-image: url('../images/map-assets/building8-34.png');
+  position: absolute;
+  left: 425px;
+  top: 315px;
+  width: 56px;
+  height: 87px;
+  z-index: 4;
+}
+.building8_35 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 483px;
+  top: 315px;
+  width: 64px;
+  height: 87px;
+  z-index: 3;
+}
+
+.building8_reception {
+  border-width: 2.083px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 398px;
+  top: 285px;
+  width: 24.834px;
+  height: 25.834px;
+  z-index: 40;
 }

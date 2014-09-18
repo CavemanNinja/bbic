@@ -263,7 +263,7 @@ body {
 #Mod16, #Mod158 .module-inner .module-ct {
   padding-left: 10px !important;
   padding-right: 10px !important;
-  padding-top: 10px !important;
+  padding-top: 0px !important;
   background-color: #ffffff;
 }
 
@@ -1020,3 +1020,4 @@ div.st_tabs > div > ul {
 .tx-tenants-header {
   padding: 15px;
 }
+
