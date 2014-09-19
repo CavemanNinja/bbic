@@ -290,7 +290,26 @@
             description="TPL_MAP_BUILDING8_35_DESC"
             
          />
-         
+
+         <!-- LOT A -->
+         <field 
+            name="map_lota_1" 
+            type="text" 
+            label="TPL_MAP_LOTA_1"
+            description="TPL_MAP_LOTA_1_DESC"
+         />
+         <field 
+            name="map_lota_2" 
+            type="text" 
+            label="TPL_MAP_LOTA_2"
+            description="TPL_MAP_LOTA_2_DESC"
+         />
+         <field 
+            name="map_lota_2" 
+            type="text" 
+            label="TPL_MAP_LOTA_2"
+            description="TPL_MAP_LOTA_2_DESC"
+         />         
       </fieldset>
    </fields>
 </form>

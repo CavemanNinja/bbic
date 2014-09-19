@@ -15,17 +15,24 @@
 	}
 }
 
-.building8 {
-  position: relative;
-  z-index: 38;
-  display: none;
-}
+/* building maps */
 
 .campus {
   position: relative;
   z-index: 331;
 }
 
+.building8 {
+  position: relative;
+  z-index: 38;
+  display: none;
+}
+
+.lota {
+  position: relative;
+  z-index: 27;
+  display: none;
+}
 
 /*-- CAMPUS --*/
 
@@ -756,4 +763,34 @@
   width: 24.834px;
   height: 25.834px;
   z-index: 40;
+}
+
+/* LOT A */
+
+.lota_1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 129px;
+  width: 148px;
+  height: 332px;
+  z-index: 26;
+}
+.lota_3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 66px;
+  top: 129px;
+  width: 148px;
+  height: 332px;
+  z-index: 25;
+}
+.lota_2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 265px;
+  top: 128px;
+  width: 122px;
+  height: 214px;
+  z-index: 24;
 }

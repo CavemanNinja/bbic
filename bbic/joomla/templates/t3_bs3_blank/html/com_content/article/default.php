@@ -923,6 +923,14 @@ JHtml::_('bootstrap.tooltip');
 					<i class="map-popover building8_35" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_building8_1'); ?>"></i>
 				</div>
+				<div class="building-map lota a1 a2 a3">
+					<i class="map-popover lota_1" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_lota_1'); ?>"></i>
+					<i class="map-popover lota_2" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_lota_2'); ?>"></i>
+					<i class="map-popover lota_3" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_lota_3'); ?>"></i>
+				</div>
 			</div>
 		</section>
 
