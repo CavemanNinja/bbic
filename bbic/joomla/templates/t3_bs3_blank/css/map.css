@@ -9,6 +9,12 @@
   height: 600px;
 }
 
+@media (max-width: 1200px) {
+	.bbic-map {
+		padding-left: 25px;
+	}
+}
+
 .building8 {
   position: relative;
   z-index: 38;

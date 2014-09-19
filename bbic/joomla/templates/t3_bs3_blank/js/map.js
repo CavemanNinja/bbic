@@ -14,6 +14,7 @@ jQuery(function(){
 
 	jQuery('#back-button').click(function(){
 		jQuery('.map-popover').popover('hide');
+		jQuery('#map-select').val('0');
 		jQuery('.building-map').hide();
 		jQuery('.campus').fadeIn();
 		jQuery(this).hide();

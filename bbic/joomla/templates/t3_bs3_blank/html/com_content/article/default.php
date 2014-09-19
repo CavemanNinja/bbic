@@ -688,6 +688,7 @@ JHtml::_('bootstrap.tooltip');
 
 <!--MAP-->
 <?php elseif ($catid == "29") : ?>
+
 	<article itemscope itemtype="http://schema.org/Article">
 		<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 
@@ -786,10 +787,9 @@ JHtml::_('bootstrap.tooltip');
 		<section class="article-content clearfix" itemprop="articleBody">
 			<!-- <?php var_dump($attribs->get('map_building8_1')); ?> -->
 			<?php echo $this->item->text; ?>
-			
 
 			<select id="map-select">
-				<option disabled selected> -- Select an business name -- </option>
+				<option value="0" disabled selected> -- Select an business name -- </option>
 				<?php 
 					if ($attribs->get('map_building8_1') != "") {
 						echo "<option value='building8_1'>".$attribs->get('map_building8_1')."</option>";
@@ -802,11 +802,10 @@ JHtml::_('bootstrap.tooltip');
 					}
 				?>
 			</select>
-
-			<button id="back-button" class="btn btn-default" style="display:none">Back</button>
+			<br/>
+			<button id="back-button" class="btn btn-primary" style="display:none"><i class="glyphicon glyphicon-arrow-left" ></i>  Back</button>
 
 			<div class="bbic-map">
-
 				<div class="campus">
 					<i class="campus_building_building8"></i>
 					<i class="campus_building_1w"></i>
