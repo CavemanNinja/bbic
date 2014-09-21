@@ -930,6 +930,7 @@ JHtml::_('bootstrap.tooltip');
 						data-content="<?php echo $attribs->get('map_lota_2'); ?>"></i>
 					<i class="map-popover lota_3" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_lota_3'); ?>"></i>
+					<i class="lota_1_outline"></i>
 				</div>
 			</div>
 		</section>

@@ -794,3 +794,13 @@
   height: 214px;
   z-index: 24;
 }
+
+.lota_1_outline {
+  background-image: url("../images/map-assets/lota_1_outline.png");
+  position: absolute;
+  left: 15px;
+  top: 81px;
+  width: 621px;
+  height: 417px;
+  z-index: 3;
+}
