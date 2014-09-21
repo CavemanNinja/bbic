@@ -34,6 +34,44 @@
   display: none;
 }
 
+.lotb {
+  position: relative;
+  display: none;
+  z-index: 34;
+}
+
+.lotc {
+  position: relative;
+  display: none;
+  z-index: 34;
+}
+
+.w1 {
+  position: relative;
+  z-index: 26;
+  display: none;
+}
+
+.w3 {
+  position: relative;
+  display: none;
+  z-index: 30;
+}
+
+.bdb {
+  position: relative;
+  display: none;
+  z-index: 37;
+}
+
+.w4 {
+  position: relative;
+  display: none;
+  z-index: 11;
+}
+
+
+
 /*-- CAMPUS --*/
 
 .campus_building_building8 {
@@ -45,7 +83,7 @@
   height: 131px;
   z-index: 330;
 }
-.campus_building_1w {
+.campus_building_w1 {
   background-image: url('../images/map-assets/campus_1w.png');
   position: absolute;
   left: 540px;
@@ -54,8 +92,8 @@
   height: 54px;
   z-index: 329;
 }
-.campus_building_2w {
-  background-image: url('../images/map-assets/campus_2w.png');
+.campus_building_bdb {
+  background-image: url('../images/map-assets/campus_bdb.png');
   position: absolute;
   left: 541px;
   top: 161px;
@@ -63,7 +101,7 @@
   height: 35px;
   z-index: 328;
 }
-.campus_building_3w {
+.campus_building_w3 {
   background-color: rgb(1, 87, 155);
   position: absolute;
   left: 482px;
@@ -72,7 +110,7 @@
   height: 54px;
   z-index: 327;
 }
-.campus_building_4w {
+.campus_building_w4 {
   background-color: rgb(1, 87, 155);
   position: absolute;
   left: 442px;
@@ -767,40 +805,1055 @@
 
 /* LOT A */
 
+.buildings {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 650px;
+  height: 600px;
+  z-index: 34;
+}
 .lota_1 {
   background-color: rgb(1, 87, 155);
   position: absolute;
   left: 436px;
   top: 129px;
   width: 148px;
-  height: 332px;
-  z-index: 26;
-}
-.lota_3 {
-  background-color: rgb(1, 87, 155);
-  position: absolute;
-  left: 66px;
-  top: 129px;
-  width: 148px;
-  height: 332px;
-  z-index: 25;
+  height: 84px;
+  z-index: 33;
 }
 .lota_2 {
   background-color: rgb(1, 87, 155);
   position: absolute;
+  left: 436px;
+  top: 217px;
+  width: 148px;
+  height: 84px;
+  z-index: 32;
+}
+.lota_3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 305px;
+  width: 148px;
+  height: 84px;
+  z-index: 31;
+}
+.lota_4 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 393px;
+  width: 148px;
+  height: 84px;
+  z-index: 30;
+}
+.lota_5 {
+  background-image: url('../images/map-assets/lot_5.png');
+  position: absolute;
   left: 265px;
-  top: 128px;
+  top: 208px;
   width: 122px;
-  height: 214px;
+  height: 115px;
+  z-index: 29;
+}
+.lota_6 {
+  background-image: url('../images/map-assets/lot_6.png');
+  position: absolute;
+  left: 265px;
+  top: 127px;
+  width: 122px;
+  height: 115px;
+  z-index: 28;
+}
+
+.lota_7 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 128px;
+  width: 148px;
+  height: 84px;
+  z-index: 27;
+}
+.lota_8 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 216px;
+  width: 148px;
+  height: 84px;
+  z-index: 26;
+}
+.lota_9 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 304px;
+  width: 148px;
+  height: 84px;
+  z-index: 25;
+}
+.lota_10 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 392px;
+  width: 148px;
+  height: 84px;
   z-index: 24;
 }
 
-.lota_1_outline {
-  background-image: url("../images/map-assets/lota_1_outline.png");
+.lota_outline {
+  background-image: url("../images/map-assets/lot_outline.png");
   position: absolute;
   left: 15px;
   top: 81px;
   width: 621px;
   height: 417px;
   z-index: 3;
+}
+
+/* LOT B */
+
+.lotb_1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 129px;
+  width: 148px;
+  height: 84px;
+  z-index: 33;
+}
+.lotb_2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 217px;
+  width: 148px;
+  height: 84px;
+  z-index: 32;
+}
+.lotb_3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 305px;
+  width: 148px;
+  height: 84px;
+  z-index: 31;
+}
+.lotb_4 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 393px;
+  width: 148px;
+  height: 84px;
+  z-index: 30;
+}
+.lotb_5 {
+  background-image: url('../images/map-assets/lot_5.png');
+  position: absolute;
+  left: 265px;
+  top: 208px;
+  width: 122px;
+  height: 115px;
+  z-index: 29;
+}
+.lotb_6 {
+  background-image: url('../images/map-assets/lot_6.png');
+  position: absolute;
+  left: 265px;
+  top: 127px;
+  width: 122px;
+  height: 115px;
+  z-index: 28;
+}
+.lotb_7 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 128px;
+  width: 148px;
+  height: 84px;
+  z-index: 27;
+}
+.lotb_8 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 216px;
+  width: 148px;
+  height: 84px;
+  z-index: 26;
+}
+.lotb_9 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 304px;
+  width: 148px;
+  height: 84px;
+  z-index: 25;
+}
+.lotb_10 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 392px;
+  width: 148px;
+  height: 84px;
+  z-index: 24;
+}
+
+.lotb_outline {
+  background-image: url("../images/map-assets/lot_outline.png");
+  position: absolute;
+  left: 15px;
+  top: 81px;
+  width: 621px;
+  height: 417px;
+  z-index: 3;
+}
+
+/* LOT C */
+
+.lotc_1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 129px;
+  width: 148px;
+  height: 84px;
+  z-index: 33;
+}
+.lotc_2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 217px;
+  width: 148px;
+  height: 84px;
+  z-index: 32;
+}
+.lotc_3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 305px;
+  width: 148px;
+  height: 84px;
+  z-index: 31;
+}
+.lotc_4 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 436px;
+  top: 393px;
+  width: 148px;
+  height: 84px;
+  z-index: 30;
+}
+.lotc_5 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 265px;
+  top: 128px;
+  width: 122px;
+  height: 99px;
+  z-index: 29;
+}
+
+.lotc_6 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 265px;
+  top: 233px;
+  width: 122px;
+  height: 99px;
+  z-index: 28;
+}
+
+.lotc_7 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 128px;
+  width: 148px;
+  height: 84px;
+  z-index: 27;
+}
+.lotc_8 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 216px;
+  width: 148px;
+  height: 84px;
+  z-index: 26;
+}
+.lotc_9 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 304px;
+  width: 148px;
+  height: 84px;
+  z-index: 25;
+}
+.lotc_10 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 68px;
+  top: 392px;
+  width: 148px;
+  height: 84px;
+  z-index: 24;
+}
+
+.lotc_outline {
+  background-image: url("../images/map-assets/lot_outline.png");
+  position: absolute;
+  left: 15px;
+  top: 81px;
+  width: 621px;
+  height: 417px;
+  z-index: 3;
+}
+
+
+
+/* W1 */
+
+.w1_1_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 64px;
+  top: 71px;
+  width: 93px;
+  height: 71px;
+  z-index: 25;
+}
+.w1_2_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 64px;
+  top: 144px;
+  width: 94px;
+  height: 72px;
+  z-index: 24;
+}
+.w1_3_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 64px;
+  top: 218px;
+  width: 94px;
+  height: 70px;
+  z-index: 23;
+}
+.w1_4_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 64px;
+  top: 290px;
+  width: 94px;
+  height: 70px;
+  z-index: 22;
+}
+.w1_5_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 64px;
+  top: 362px;
+  width: 94px;
+  height: 70px;
+  z-index: 21;
+}
+.w1_6_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 64px;
+  top: 434px;
+  width: 94px;
+  height: 70px;
+  z-index: 20;
+}
+.w1_7_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 160px;
+  top: 363px;
+  width: 95px;
+  height: 141px;
+  z-index: 19;
+}
+.w1_8_g {
+  background-image: url('../images/map-assets/w1_8_g.png');
+  /*background-color: rgb(1, 87, 155);*/
+  position: absolute;
+  left: 160px;
+  top: 71px;
+  width: 132px;
+  height: 290px;
+  z-index: 18;
+}
+.w1_1_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 382px;
+  top: 71px;
+  width: 93px;
+  height: 71px;
+  z-index: 17;
+}
+.w1_2_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 383px;
+  top: 144px;
+  width: 93px;
+  height: 71px;
+  z-index: 16;
+}
+.w1_3_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 383px;
+  top: 217px;
+  width: 93px;
+  height: 71px;
+  z-index: 15;
+}
+.w1_4_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 383px;
+  top: 290px;
+  width: 93px;
+  height: 71px;
+  z-index: 14;
+}
+.w1_5_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 382px;
+  top: 363px;
+  width: 93px;
+  height: 71px;
+  z-index: 13;
+}
+.w1_6_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 382px;
+  top: 436px;
+  width: 93px;
+  height: 68px;
+  z-index: 12;
+}
+.w1_7_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 510px;
+  top: 433px;
+  width: 63px;
+  height: 71px;
+  z-index: 11;
+}
+.w1_8_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 510px;
+  top: 329px;
+  width: 63px;
+  height: 102px;
+  z-index: 10;
+}
+.w1_9_1st {
+  background-image: url('../images/map-assets/w1_9_1st.png');
+  /*background-color: rgb(1, 87, 155);*/
+  position: absolute;
+  left: 510px;
+  top: 251px;
+  width: 101px;
+  height: 76px;
+  z-index: 9;
+}
+.w1_10_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 510px;
+  top: 155px;
+  width: 63px;
+  height: 94px;
+  z-index: 8;
+}
+.w1_11_1st {
+  background-image: url('../images/map-assets/w1_11_1st.png');
+  /*background-color: rgb(1, 87, 155);*/
+  position: absolute;
+  left: 478px;
+  top: 71px;
+  width: 95px;
+  height: 82px;
+  z-index: 7;
+}
+.w1_outline_1st {
+  background-image: url('../images/map-assets/w1_outline.png');
+  position: absolute;
+  left: 378px;
+  top: 66px;
+  width: 237px;
+  height: 442px;
+  z-index: 6;
+}
+.w1_outline_g {
+  background-image: url('../images/map-assets/w1_outline.png');
+  position: absolute;
+  left: 59px;
+  top: 66px;
+  width: 237px;
+  height: 442px;
+  z-index: 5;
+}
+
+/* W3 */
+
+.w3_1_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 18px;
+  top: 171px;
+  width: 132px;
+  height: 67px;
+  z-index: 21;
+}
+.w3_2_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 18px;
+  top: 240px;
+  width: 132px;
+  height: 63px;
+  z-index: 20;
+}
+.w3_3_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 18px;
+  top: 305px;
+  width: 132px;
+  height: 63px;
+  z-index: 19;
+}
+.w3_4_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 107px;
+  top: 370px;
+  width: 43px;
+  height: 63px;
+  z-index: 18;
+}
+.w3_5_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 153px;
+  top: 370px;
+  width: 132px;
+  height: 63px;
+  z-index: 17;
+}
+.w3_6_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 153px;
+  top: 305px;
+  width: 132px;
+  height: 63px;
+  z-index: 16;
+}
+.w3_7_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 153px;
+  top: 240px;
+  width: 132px;
+  height: 63px;
+  z-index: 15;
+}
+.w3_8_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 153px;
+  top: 171px;
+  width: 132px;
+  height: 67px;
+  z-index: 14;
+}
+.w3_1_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 367px;
+  top: 171px;
+  width: 132px;
+  height: 67px;
+  z-index: 13;
+}
+.w3_2_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 367px;
+  top: 240px;
+  width: 132px;
+  height: 63px;
+  z-index: 12;
+}
+.w3_3_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 367px;
+  top: 305px;
+  width: 132px;
+  height: 63px;
+  z-index: 11;
+}
+.w3_4_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 456px;
+  top: 370px;
+  width: 43px;
+  height: 63px;
+  z-index: 10;
+}
+.w3_5_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 502px;
+  top: 370px;
+  width: 132px;
+  height: 63px;
+  z-index: 9;
+}
+.w3_6_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 502px;
+  top: 305px;
+  width: 132px;
+  height: 63px;
+  z-index: 8;
+}
+.w3_7_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 502px;
+  top: 240px;
+  width: 132px;
+  height: 63px;
+  z-index: 7;
+}
+.w3_8_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 502px;
+  top: 171px;
+  width: 132px;
+  height: 67px;
+  z-index: 6;
+}
+.w3_outline_1st {
+  border-width: 2.083px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  position: absolute;
+  left: 359px;
+  top: 163px;
+  width: 284px;
+  height: 279px;
+  z-index: 5;
+}
+.w3_outline {
+  border-width: 2.083px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  position: absolute;
+  left: 10px;
+  top: 163px;
+  width: 284px;
+  height: 279px;
+  z-index: 4;
+}
+
+/* BDB */
+
+.bdb_1_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 16px;
+  top: 89px;
+  width: 68px;
+  height: 91px;
+  z-index: 36;
+}
+.bdb_2_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 87px;
+  top: 89px;
+  width: 66px;
+  height: 91px;
+  z-index: 35;
+}
+.bdb_3_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 156px;
+  top: 89px;
+  width: 66px;
+  height: 91px;
+  z-index: 34;
+}
+.bdb_4_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 225px;
+  top: 89px;
+  width: 66px;
+  height: 91px;
+  z-index: 33;
+}
+.bdb_5_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 84px;
+  top: 215px;
+  width: 66px;
+  height: 91px;
+  z-index: 32;
+}
+.bdb_6_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 154px;
+  top: 183px;
+  width: 137px;
+  height: 123px;
+  z-index: 31;
+}
+.bdb_7_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 217px;
+  top: 182px;
+  width: 38px;
+  height: 36px;
+  z-index: 30;
+}
+.bdb_8_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 257px;
+  top: 182px;
+  width: 34px;
+  height: 36px;
+  z-index: 29;
+}
+.bdb_9_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 16px;
+  top: 183px;
+  width: 46px;
+  height: 41px;
+  z-index: 28;
+}
+.bdb_10_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 16px;
+  top: 227px;
+  width: 46px;
+  height: 41px;
+  z-index: 27;
+}
+.bdb_11_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 16px;
+  top: 271px;
+  width: 46px;
+  height: 35px;
+  z-index: 26;
+}
+.bdb_12_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 16px;
+  top: 309px;
+  width: 46px;
+  height: 62px;
+  z-index: 25;
+}
+.bdb_13_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 16px;
+  top: 373px;
+  width: 37px;
+  height: 43px;
+  z-index: 24;
+}
+.bdb_14_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 16px;
+  top: 418px;
+  width: 53px;
+  height: 62px;
+  z-index: 23;
+}
+.bdb_15_g {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 111px;
+  top: 308px;
+  width: 180px;
+  height: 172px;
+  z-index: 22;
+}
+.bdb_1_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 564px;
+  top: 89px;
+  width: 66px;
+  height: 91px;
+  z-index: 21;
+}
+.bdb_2_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 495px;
+  top: 89px;
+  width: 66px;
+  height: 91px;
+  z-index: 20;
+}
+.bdb_3_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 426px;
+  top: 89px;
+  width: 66px;
+  height: 91px;
+  z-index: 19;
+}
+.bdb_4_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 357px;
+  top: 89px;
+  width: 89px;
+  height: 123px;
+  z-index: 18;
+}
+.bdb_5_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 357px;
+  top: 215px;
+  width: 89px;
+  height: 56px;
+  z-index: 17;
+}
+.bdb_6_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 448px;
+  top: 230px;
+  width: 20px;
+  height: 41px;
+  z-index: 16;
+}
+.bdb_7_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 469px;
+  top: 230px;
+  width: 20px;
+  height: 41px;
+  z-index: 15;
+}
+.bdb_8_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 491px;
+  top: 215px;
+  width: 45px;
+  height: 56px;
+  z-index: 14;
+}
+.bdb_9_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 538px;
+  top: 215px;
+  width: 45px;
+  height: 56px;
+  z-index: 13;
+}
+.bdb_10_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 585px;
+  top: 215px;
+  width: 45px;
+  height: 56px;
+  z-index: 12;
+}
+.bdb_11_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 448px;
+  top: 273px;
+  width: 47px;
+  height: 63px;
+  z-index: 11;
+}
+.bdb_12_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 498px;
+  top: 273px;
+  width: 68px;
+  height: 63px;
+  z-index: 10;
+}
+.bdb_13_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 569px;
+  top: 273px;
+  width: 61px;
+  height: 63px;
+  z-index: 9;
+}
+.bdb_14_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 357px;
+  top: 273px;
+  width: 89px;
+  height: 81px;
+  z-index: 8;
+}
+.bdb_15_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 357px;
+  top: 356px;
+  width: 89px;
+  height: 60px;
+  z-index: 7;
+}
+.bdb_16_1st {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 357px;
+  top: 418px;
+  width: 89px;
+  height: 62px;
+  z-index: 6;
+}
+.bdb_outline_g {
+  background-image: url('../images/map-assets/bdb_outline.png');
+  position: absolute;
+  left: 9px;
+  top: 82px;
+  width: 288px;
+  height: 440px;
+  z-index: 5;
+}
+.bdb_outline_1st {
+  background-image: url('../images/map-assets/bdb_outline.png');
+  position: absolute;
+  left: 349px;
+  top: 82px;
+  width: 288px;
+  height: 440px;
+  z-index: 4;
+}
+
+/* w4 */
+
+
+.w4_1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 43px;
+  top: 173px;
+  width: 116px;
+  height: 208px;
+  z-index: 10;
+}
+.w4_2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 163px;
+  top: 173px;
+  width: 112px;
+  height: 208px;
+  z-index: 9;
+}
+.w4_3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 279px;
+  top: 173px;
+  width: 75px;
+  height: 208px;
+  z-index: 8;
+}
+.w4_4 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 358px;
+  top: 173px;
+  width: 75px;
+  height: 208px;
+  z-index: 7;
+}
+.w4_5 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 437px;
+  top: 173px;
+  width: 75px;
+  height: 208px;
+  z-index: 6;
+}
+.w4_6 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 516px;
+  top: 173px;
+  width: 75px;
+  height: 208px;
+  z-index: 5;
+}
+.w4_outline {
+  border-width: 2.083px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  position: absolute;
+  left: 37px;
+  top: 170px;
+  width: 560.834px;
+  height: 214.834px;
+  z-index: 4;
 }
