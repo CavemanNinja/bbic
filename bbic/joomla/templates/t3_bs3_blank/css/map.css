@@ -15,6 +15,48 @@
 	}
 }
 
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
+/* Unit numbers text */
+
+.building8, .lota, .lotb, 
+.lotc, .w1, .w3, .w4, .bdb,
+.wh {
+  color: white;
+  font-size: 14px;
+}
+
+.text-bottom {
+  bottom: 0;
+  left: 4px;
+  position: absolute;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.text-rotate {
+
+/* Safari */
+-webkit-transform: rotate(-90deg);
+
+/* Firefox */
+-moz-transform: rotate(-90deg);
+
+/* IE */
+-ms-transform: rotate(-90deg);
+
+/* Opera */
+-o-transform: rotate(-90deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
 /* building maps */
 
 .campus {
@@ -70,9 +112,17 @@
   z-index: 11;
 }
 
+.wh {
+  position: relative;
+  display: none;
+  z-index: 18;
+}
+
 
 
 /*-- CAMPUS --*/
+
+
 
 .campus_building_building8 {
   background-image: url('../images/map-assets/campus_building8.png');
@@ -317,8 +367,8 @@
   height: 36px;
   z-index: 304;
 }
-.campus_building_unnamed {
-  background-image: url('../images/map-assets/campus_unnamed.png');
+.campus_building_wh {
+  background-image: url('../images/map-assets/campus_wh.png');
   position: absolute;
   left: 427px;
   top: 386px;
@@ -455,6 +505,45 @@
   width: 629px;
   height: 442px;
   z-index: 291;
+}
+
+.campus_trees {
+  background-image: url('../images/map-assets/campus_trees.png');
+  /*background-color: rgb(141, 198, 63);*/
+  position: absolute;
+  left: 19px;
+  top: 79px;
+  width: 580px;
+  height: 400px;
+  z-index: 224;
+}
+
+.campus_roads {
+  background-image: url('../images/map-assets/campus_roads.png');
+  /*border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: dashed;*/
+  position: absolute;
+  left: 0px;
+  top: 83px;
+  width: 620px;
+  height: 414.916px;
+  z-index: 225;
+}
+
+.campus_carspaces {
+
+  background-image: url("../images/map-assets/campus_carspaces.png");
+  /*
+  border-width: 1.042px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;*/
+  position: absolute;
+  left: 21.5px;
+  top: 97px;
+  width: 600px;
+  height: 384.916px;
+  z-index: 4;
 }
 
 
@@ -664,7 +753,6 @@
 }
 .building8_22 {
   background-image: url('../images/map-assets/building8-22.png');
-
   position: absolute;
   left: 547px;
   top: 46px;
@@ -672,122 +760,239 @@
   height: 100px;
   z-index: 16;
 }
+
 .building8_23 {
   background-color: rgb(1, 87, 155);
   position: absolute;
-  left: 322px;
-  top: 198px;
-  width: 76px;
-  height: 41px;
-  z-index: 15;
+  left: 339px;
+  top: 337px;
+  width: 12px;
+  height: 23px;
+  z-index: 30;
 }
 .building8_24 {
   background-color: rgb(1, 87, 155);
   position: absolute;
-  left: 322px;
-  top: 241px;
-  width: 42px;
-  height: 43px;
-  z-index: 14;
+  left: 353px;
+  top: 341px;
+  width: 14px;
+  height: 19px;
+  z-index: 29;
 }
 .building8_25 {
   background-image: url('../images/map-assets/building8-25.png');
-  position: absolute;
-  left: 366px;
-  top: 241px;
-  width: 32px;
-  height: 43px;
-  z-index: 13;
-}
-.building8_26 {
-  background-image: url('../images/map-assets/building8-26.png');
-  position: absolute;
-  left: 427px;
-  top: 198px;
-  width: 26px;
-  height: 86px;
-  z-index: 12;
-}
-.building8_27 {
   background-color: rgb(1, 87, 155);
   position: absolute;
-  left: 455px;
-  top: 198px;
-  width: 24px;
-  height: 27px;
-  z-index: 11;
+  left: 369px;
+  top: 341px;
+  width: 14px;
+  height: 19px;
+  z-index: 28;
+}
+.building8_46 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 385px;
+  top: 341px;
+  width: 14px;
+  height: 19px;
+  z-index: 27;
+}
+.building8_47 {
+  background-image: url('../images/map-assets/building8-47.png');
+  /*background-color: rgb(1, 87, 155);*/
+  position: absolute;
+  left: 353px;
+  top: 313px;
+  width: 45px;
+  height: 26px;
+  z-index: 26;
+}
+.building8_26 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 277px;
+  top: 200px;
+  width: 50px;
+  height: 66px;
+  z-index: 25;
+}
+.building8_27 {
+  /*background-image: url('../images/map-assets/building8-27.png');*/
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 329px;
+  top: 200px;
+  width: 44px;
+  height: 37px;
+  z-index: 24;
 }
 .building8_28 {
   background-color: rgb(1, 87, 155);
   position: absolute;
-  left: 483px;
-  top: 198px;
-  width: 23px;
-  height: 27px;
-  z-index: 10;
+  left: 329px;
+  top: 239px;
+  width: 44px;
+  height: 45px;
+  z-index: 23;
 }
 .building8_29 {
   background-color: rgb(1, 87, 155);
   position: absolute;
-  left: 455px;
-  top: 227px;
-  width: 51px;
-  height: 57px;
-  z-index: 9;
+  left: 375px;
+  top: 200px;
+  width: 24px;
+  height: 37px;
+  z-index: 22;
 }
 .building8_30 {
+  background-image: url('../images/map-assets/building8-30.png');
+  /*background-color: rgb(1, 87, 155);*/
+  position: absolute;
+  left: 375px;
+  top: 239px;
+  width: 24px;
+  height: 45px;
+  z-index: 21;
+}
+.building8_31 {
+  background-image: url('../images/map-assets/building8-31.png');
+  /*background-color: rgb(1, 87, 155);*/
+  position: absolute;
+  left: 429px;
+  top: 313px;
+  width: 24px;
+  height: 26px;
+  z-index: 20;
+}
+.building8_32 {
+  background-image: url('../images/map-assets/building8-32-1.png');
+  /*background-color: rgb(1, 87, 155);*/
+  position: absolute;
+  left: 427px;
+  top: 198px;
+  width: 79px;
+  height: 86px;
+  z-index: 19;
+}
+
+.building8_33 {
   background-color: rgb(1, 87, 155);
   position: absolute;
   left: 508px;
   top: 198px;
   width: 39px;
   height: 86px;
-  z-index: 8;
+  z-index: 18;
 }
-.building8_31 {
+.building8_34 {
+  background-image: url('../images/map-assets/building8-34.png');
+  /*background-color: rgb(1, 87, 155);*/
+  position: absolute;
+  left: 508px;
+  top: 315px;
+  width: 39px;
+  height: 86px;
+  z-index: 17;
+}
+.building8_35 {
   background-color: rgb(1, 87, 155);
   position: absolute;
   left: 277px;
   top: 343px;
   width: 60px;
   height: 59px;
-  z-index: 7;
+  z-index: 16;
 }
-.building8_32 {
-  background-image: url('../images/map-assets/building8-32.png');
-  position: absolute;
-  left: 339px;
-  top: 315px;
-  width: 60px;
-  height: 44px;
-  z-index: 6;
-}
-.building8_33 {
+.building8_36 {
   background-color: rgb(1, 87, 155);
   position: absolute;
   left: 339px;
   top: 361px;
-  width: 60px;
+  width: 34px;
   height: 41px;
-  z-index: 5;
+  z-index: 15;
 }
-.building8_34 {
-  background-image: url('../images/map-assets/building8-34.png');
-  position: absolute;
-  left: 425px;
-  top: 315px;
-  width: 56px;
-  height: 87px;
-  z-index: 4;
-}
-.building8_35 {
+.building8_37 {
   background-color: rgb(1, 87, 155);
   position: absolute;
-  left: 483px;
+  left: 375px;
+  top: 361px;
+  width: 24px;
+  height: 41px;
+  z-index: 14;
+}
+.building8_38 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 455px;
+  top: 385px;
+  width: 21px;
+  height: 16px;
+  z-index: 13;
+}
+.building8_39 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 430px;
+  top: 379px;
+  width: 23px;
+  height: 22px;
+  z-index: 12;
+}
+.building8_40 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 478px;
+  top: 355px;
+  width: 21px;
+  height: 22px;
+  z-index: 11;
+}
+.building8_41 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 478px;
+  top: 335px;
+  width: 21px;
+  height: 18px;
+  z-index: 10;
+}
+.building8_42 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 430px;
+  top: 355px;
+  width: 23px;
+  height: 22px;
+  z-index: 9;
+}
+.building8_43 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 430px;
+  top: 341px;
+  width: 23px;
+  height: 12px;
+  z-index: 8;
+}
+.building8_44 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 478px;
   top: 315px;
-  width: 64px;
-  height: 87px;
-  z-index: 3;
+  width: 21px;
+  height: 18px;
+  z-index: 7;
+}
+.building8_45 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 478px;
+  top: 379px;
+  width: 21px;
+  height: 22px;
+  z-index: 6;
 }
 
 .building8_reception {
@@ -852,7 +1057,7 @@
 .lota_5 {
   background-image: url('../images/map-assets/lot_5.png');
   position: absolute;
-  left: 265px;
+  left: 266px;
   top: 208px;
   width: 122px;
   height: 115px;
@@ -861,7 +1066,7 @@
 .lota_6 {
   background-image: url('../images/map-assets/lot_6.png');
   position: absolute;
-  left: 265px;
+  left: 266px;
   top: 127px;
   width: 122px;
   height: 115px;
@@ -1537,7 +1742,8 @@
   z-index: 32;
 }
 .bdb_6_g {
-  background-color: rgb(1, 87, 155);
+  background-image: url('../images/map-assets/bdb_6_g.png');
+  /*background-color: rgb(1, 87, 155);*/
   position: absolute;
   left: 154px;
   top: 183px;
@@ -1654,7 +1860,8 @@
   z-index: 19;
 }
 .bdb_4_1st {
-  background-color: rgb(1, 87, 155);
+  background-image: url('../images/map-assets/bdb_4_1st.png');
+  /*background-color: rgb(1, 87, 155);*/
   position: absolute;
   left: 357px;
   top: 89px;
@@ -1856,4 +2063,144 @@
   width: 560.834px;
   height: 214.834px;
   z-index: 4;
+}
+
+/* WH- WAREHOUSES */
+
+.wh_1 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 316px;
+  top: 47px;
+  width: 80px;
+  height: 53px;
+  z-index: 17;
+}
+.wh_2 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 316px;
+  top: 106px;
+  width: 80px;
+  height: 53px;
+  z-index: 16;
+}
+.wh_3 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 315px;
+  top: 165px;
+  width: 80px;
+  height: 53px;
+  z-index: 15;
+}
+.wh_4 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 315px;
+  top: 224px;
+  width: 80px;
+  height: 53px;
+  z-index: 14;
+}
+.wh_5 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 316px;
+  top: 283px;
+  width: 80px;
+  height: 53px;
+  z-index: 13;
+}
+.wh_6 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 316px;
+  top: 342px;
+  width: 80px;
+  height: 53px;
+  z-index: 12;
+}
+.wh_7 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 316px;
+  top: 401px;
+  width: 80px;
+  height: 53px;
+  z-index: 11;
+}
+.wh_8 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 232px;
+  top: 401px;
+  width: 80px;
+  height: 53px;
+  z-index: 10;
+}
+.wh_9 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 232px;
+  top: 342px;
+  width: 80px;
+  height: 53px;
+  z-index: 9;
+}
+.wh_10 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 232px;
+  top: 283px;
+  width: 80px;
+  height: 53px;
+  z-index: 8;
+}
+.wh_11 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 232px;
+  top: 224px;
+  width: 80px;
+  height: 53px;
+  z-index: 7;
+}
+.wh_12 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 232px;
+  top: 165px;
+  width: 80px;
+  height: 53px;
+  z-index: 6;
+}
+.wh_13 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 232px;
+  top: 106px;
+  width: 80px;
+  height: 53px;
+  z-index: 5;
+}
+.wh_14 {
+  background-color: rgb(1, 87, 155);
+  position: absolute;
+  left: 232px;
+  top: 47px;
+  width: 80px;
+  height: 53px;
+  z-index: 4;
+}
+.wh_outline {
+  border-width: 4.167px;
+  border-color: rgb(1, 87, 155);
+  border-style: solid;
+  position: absolute;
+  left: 222px;
+  top: 40px;
+  width: 183.666px;
+  height: 420.666px;
+  z-index: 3;
 }

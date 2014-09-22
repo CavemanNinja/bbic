@@ -8,7 +8,10 @@ jQuery(function(){
 		selectOffice(this.value);
 	});
 	jQuery('i[class^="campus_building"]').click(function(){
-		building = jQuery(this).attr('class').substring(16);
+		class_substr = jQuery(this).attr('class').substring(16);
+		classes = class_substr.split(" ");
+		building = classes[0];
+		// alert(building);
 		drillDown(building);
 	});
 
