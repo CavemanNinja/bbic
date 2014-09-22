@@ -886,8 +886,8 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   z-index: 18;
 }
 .building8_34 {
-  background-image: url('../images/map-assets/building8-34.png');
-  /*background-color: rgb(1, 87, 155);*/
+  /*background-image: url('../images/map-assets/building8-34.png');*/
+  background-color: rgb(1, 87, 155);
   position: absolute;
   left: 508px;
   top: 315px;
