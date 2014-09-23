@@ -12,14 +12,7 @@
             type="text" 
             label="TPL_MAP_BUILDING8_1"
             description="TPL_MAP_BUILDING8_1_DESC"
-         />
-         <field
-            name="map_building8_1_image"
-            type="media"
-            preview="tooltip"
-            directory="map_images"
-            label="TPL_MAP_BUILDING8_1_IMAGE"
-            description="TPL_MAP_BUILDING8_1_IMAGE_DESC"
+            
          />
          <field 
             name="map_building8_2" 
@@ -155,7 +148,14 @@
             description="TPL_MAP_BUILDING8_18_DESC"
             
          />
-        
+         <field 
+            name="map_building8_19" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_19"
+            description="TPL_MAP_BUILDING8_19_DESC"
+            
+         />
          <field 
             name="map_building8_20" 
             type="text" 
@@ -245,7 +245,14 @@
             description="TPL_MAP_BUILDING8_30_DESC"
             
          />
-         
+         <field 
+            name="map_building8_31" 
+            type="text" 
+            
+            label="TPL_MAP_BUILDING8_31"
+            description="TPL_MAP_BUILDING8_31_DESC"
+            
+         />
 
          <field 
             name="map_building8_32" 
@@ -550,7 +557,12 @@
             label="TPL_MAP_W1_1_G"
             description="TPL_MAP_W1_1_G_DESC"
          />
-         
+         <field 
+            name="map_w1_1_g" 
+            type="text" 
+            label="TPL_MAP_W1_1_G"
+            description="TPL_MAP_W1_1_G_DESC"
+         />
          <field 
             name="map_w1_2_g" 
             type="text" 
@@ -661,7 +673,12 @@
          />
 
          <!-- W3 -->
-
+         <field 
+            name="map_w3_1_g" 
+            type="text" 
+            label="TPL_MAP_W3_1_G"
+            description="TPL_MAP_W3_1_G_DESC"
+         />
          <field 
             name="map_w3_1_g" 
             type="text" 
@@ -760,7 +777,12 @@
          />
 
          <!-- BDB -->
-
+         <field 
+            name="map_bdb_1_g" 
+            type="text" 
+            label="TPL_MAP_BDB_1_G"
+            description="TPL_MAP_BDB_1_G_DESC"
+         />
          <field 
             name="map_bdb_1_g" 
             type="text" 
@@ -785,7 +807,72 @@
             label="TPL_MAP_BDB_4_G"
             description="TPL_MAP_BDB_4_G_DESC"
          />
-   
+         <field 
+            name="map_bdb_5_g" 
+            type="text" 
+            label="TPL_MAP_BDB_5_G"
+            description="TPL_MAP_BDB_5_G_DESC"
+         />
+         <field 
+            name="map_bdb_6_g" 
+            type="text" 
+            label="TPL_MAP_BDB_6_G"
+            description="TPL_MAP_BDB_6_G_DESC"
+         />
+         <field 
+            name="map_bdb_7_g" 
+            type="text" 
+            label="TPL_MAP_BDB_7_G"
+            description="TPL_MAP_BDB_7_G_DESC"
+         />
+         <field 
+            name="map_bdb_8_g" 
+            type="text" 
+            label="TPL_MAP_BDB_8_G"
+            description="TPL_MAP_BDB_8_G_DESC"
+         /> 
+         <field 
+            name="map_bdb_9_g" 
+            type="text" 
+            label="TPL_MAP_BDB_9_G"
+            description="TPL_MAP_BDB_9_G_DESC"
+         />  
+         <field 
+            name="map_bdb_10_g" 
+            type="text" 
+            label="TPL_MAP_BDB_10_G"
+            description="TPL_MAP_BDB_10_G_DESC"
+         />  
+         <field 
+            name="map_bdb_11_g" 
+            type="text" 
+            label="TPL_MAP_BDB_11_G"
+            description="TPL_MAP_BDB_11_G_DESC"
+         />  
+         <field 
+            name="map_bdb_12_g" 
+            type="text" 
+            label="TPL_MAP_BDB_12_G"
+            description="TPL_MAP_BDB_12_G_DESC"
+         />  
+         <field 
+            name="map_bdb_13_g" 
+            type="text" 
+            label="TPL_MAP_BDB_13_G"
+            description="TPL_MAP_BDB_13_G_DESC"
+         />  
+         <field 
+            name="map_bdb_14_g" 
+            type="text" 
+            label="TPL_MAP_BDB_14_G"
+            description="TPL_MAP_BDB_14_G_DESC"
+         />  
+         <field 
+            name="map_bdb_15_g" 
+            type="text" 
+            label="TPL_MAP_BDB_15_G"
+            description="TPL_MAP_BDB_15_G_DESC"
+         />  
          <field 
             name="map_bdb_1_1st" 
             type="text" 
