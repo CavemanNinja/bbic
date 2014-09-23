@@ -25,6 +25,9 @@ jQuery(function(){
 });
 
 function drillDown(building) {
+	/*Check if the current map is being loaded again don't hide*/
+	if (jQuery('.'+building).css('display') == "none")
+		jQuery('.building-map').hide();
 	jQuery('.campus').hide();
 	jQuery('.'+building).fadeIn();
 	jQuery("#back-button").show();
