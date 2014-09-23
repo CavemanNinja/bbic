@@ -90,6 +90,8 @@ if(count($extrafields)){
 	}
 </script>
 
+
+
 <!-- BILLING -->
 
 <?php if ($catid == 10) : ?>
@@ -1450,6 +1452,203 @@ if(count($extrafields)){
 		</form>
 	</div>
 
+
+<!-- MAP -->
+<?php elseif($catid == 29) : ?>
+	<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
+		<?php if ($params->get('show_page_heading', 1)) : ?>
+		<div class="page-header">
+			<h1>
+				<?php echo $this->escape($params->get('page_heading')); ?>
+			</h1>
+		</div>
+		<?php endif; ?>
+
+		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
+			<fieldset>
+
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('J3_EDITOR_SERVICE_TAB') ?></a></li>
+					<?php if(false) : ?>
+					<li><a href="#extrafields" data-toggle="tab"><?php echo JText::_('T3_EXTRA_FIELDS_GROUP_LABEL') ?></a></li>
+					<?php endif; ?>
+					<?php if ($params->get('show_urls_images_frontend') ) : ?>
+					<?php endif; ?>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="editor">
+						
+						<div class="form-group" readonly>
+							<?php echo $this->form->getLabel('title'); ?>
+							<?php 
+								$title_input = $this->form->getInput('title'); 
+								// var_dump($title_input);
+								// echo str_replace("<input", "<input default='Map' disabled='disabled'", $title_input); 
+								echo $title_input;
+							?>
+						</div>
+
+						<?php if (is_null($this->item->id)) : ?>
+						<div class="form-group hidden">
+							<?php echo $this->form->getLabel('alias'); ?>
+							<?php echo $this->form->getInput('alias'); ?>
+						</div>
+						<?php endif; ?>
+
+						<div class="form-group hidden">
+							<?php echo $this->form->getInput('articletext'); ?>
+							<br/><br/><br/><br/>
+						</div>
+
+						<?php if(count($extrafields)) : ?>
+						<div class="tab-pane" id="extrafields">
+							<?php foreach ($extrafields as $extraset) : ?>
+								<?php foreach ($this->form->getFieldset($extraset->name) as $field) : ?>
+									<div class="form-group">
+										<div class="control-label">
+											<?php echo $field->label; ?>
+										</div>
+										<div class="controls">
+											<?php echo $field->input; ?>
+										</div>
+									</div>
+								<?php endforeach ?>
+							<?php endforeach ?>
+						</div>
+						<?php endif; ?>
+					
+						<div class="form-group hidden">
+							<?php echo $this->form->getLabel('catid'); ?>
+							<?php 
+								$selectcat = $this->form->getInput('catid');
+
+								$selectcat = str_replace('option value="10"',
+								 'option value="10" disabled="disabled"',  $selectcat); 
+								$selectcat = str_replace('option value="8"',
+								 'option value="8" disabled="disabled"', $selectcat ); 
+								$selectcat = str_replace('option value="9"',
+								 'option value="9" disabled="disabled"', $selectcat ); 
+								$selectcat = str_replace('option value="13"',
+								 'option value="9" disabled="disabled"', $selectcat ); 
+								echo $selectcat;
+							?>
+						</div>
+						<?php if ($this->item->params->get('access-change')) : ?>
+						<div class="form-group hidden">
+							<?php echo $this->form->getLabel('state'); ?>
+							<?php 
+								$statepublished = $this->form->getInput('state');
+
+								$statepublished = str_replace('option value="0"', 
+									'option value="0" disabled="disabled"', $statepublished);
+								$statepublished = str_replace('option value="2"', 
+									'option value="2" disabled="disabled"', $statepublished);
+								$statepublished = str_replace('option value="-2"', 
+									'option value="-2" disabled="disabled"', $statepublished);
+								echo $statepublished;
+							?>
+						<?php endif; ?>
+						</div>
+
+					</div><!--edit pane -->
+
+
+					
+					<div class="tab-pane" id="publishing">
+
+						<div class="form-group">
+							<?php echo $this->form->getLabel('tags'); ?>
+							<?php echo str_replace('span12', '', $this->form->getInput('tags')); ?>
+						</div>
+
+						<?php if ($params->get('save_history', 0)) : ?>
+						<div class="form-group">
+							<?php echo $this->form->getLabel('version_note'); ?>
+							<?php echo $this->form->getInput('version_note'); ?>
+						</div>
+						<?php endif; ?>
+
+						<div class="form-group">
+							<?php echo $this->form->getLabel('created_by_alias'); ?>
+							<?php echo $this->form->getInput('created_by_alias'); ?>
+						</div>
+
+						<?php if ($this->item->params->get('access-change')) : ?>
+							<div class="form-group">
+								<?php echo $this->form->getLabel('featured'); ?>
+								<?php echo $this->form->getInput('featured'); ?>
+							</div>
+
+							<div class="form-group">
+								<?php echo $this->form->getLabel('publish_up'); ?>
+								<?php echo str_replace('class="btn"', 'class="btn btn-default"', $this->form->getInput('publish_up')); ?>
+							</div>
+
+							<div class="form-group">
+								<?php echo $this->form->getLabel('publish_down'); ?>
+								<?php echo str_replace('class="btn"', 'class="btn btn-default"', $this->form->getInput('publish_down')); ?>
+							</div>
+						<?php endif; ?>
+
+						<div class="form-group">
+							<?php echo $this->form->getLabel('access'); ?>
+							<?php echo $this->form->getInput('access'); ?>
+						</div>
+
+						<?php if (is_null($this->item->id)):?>
+							<div class="form-group">
+								<?php echo JText::_('COM_CONTENT_ORDERING'); ?>
+							</div>
+						<?php endif; ?>
+					</div>
+
+					<div class="tab-pane" id="language">
+						<div class="form-group">
+							<?php echo $this->form->getLabel('language'); ?>
+							<?php echo $this->form->getInput('language'); ?>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="metadata">
+						<div class="form-group">
+							<?php echo $this->form->getLabel('metadesc'); ?>
+							<?php echo $this->form->getInput('metadesc'); ?>
+						</div>
+
+						<div class="form-group">
+								<?php echo $this->form->getLabel('metakey'); ?>
+								<?php echo $this->form->getInput('metakey'); ?>
+						</div>
+
+						<input type="hidden" name="task" value="" />
+						<input type="hidden" name="return" value="<?php echo $this->return_page; ?>" />
+						<?php if ($this->params->get('enable_category', 0) == 1) :?>
+						<input type="hidden" name="jform[catid]" value="<?php echo $this->params->get('catid', 1); ?>" />
+						<?php endif; ?>
+					</div>
+				</div>
+				<div class="btn-toolbar">
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+				</div>
+				<?php echo JHtml::_('form.token'); ?>
+			</fieldset>
+		</form>
+	</div>
 
 <?php else : ?>
 	<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
