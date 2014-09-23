@@ -1341,15 +1341,22 @@ JHtml::_('bootstrap.tooltip');
 					<i class="campus_trees"></i>
 					<i class="campus_roads"></i>
 					<i class="campus_carspaces"></i>
-
 				</div>
 
 				<div class="building-map building8">
 					<!-- <i class="main-building-1"><i></i></i> -->
 					<i class="building8_outline"></i>
 					<i class="building8_reception"></i>
-					<div class="map-popover building8 building8_1" data-container="body" data-toggle="popover" data-placement="top" 
-						data-content="<?php echo $attribs->get('map_building8_1'); ?>">16</div>
+
+					<?php if ($attribs->get('map_building8_1_image') == "") : ?>
+						<div class="map-popover building8 building8_1" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>">16</i>
+					<?php else : ?>
+						<div class="map-popover building8 building8_1" data-container="body" data-toggle="popover" data-placement="top" 
+							data-title="<?php echo $attribs->get('map_building8_1'); ?>" data-html="true"
+							data-content="<img height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'>">16</div>
+					<?php endif; ?>
+
 					<i class="map-popover building8 building8_2" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_building8_2'); ?>">18</i>
 					<i class="map-popover building8 building8_3" data-container="body" data-toggle="popover" data-placement="top" 
