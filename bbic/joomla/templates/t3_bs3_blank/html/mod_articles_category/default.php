@@ -14,13 +14,6 @@ JHtml::_('bootstrap.framework');
 JHtml::script(JUri::base().'templates/t3_bs3_blank/js/jquery.bootpag.min.js', false, true);
 JHtml::script(JUri::base().'templates/t3_bs3_blank/js/newsList.js', false, true);
 
-
-$document = JFactory::getDocument();
-$document->addScriptDeclaration("
-
-");
-
-
 ?>
 <!-- <div id="test">test</div> -->
 <div id="content">
@@ -35,9 +28,9 @@ $document->addScriptDeclaration("
 			?>
 			
 			<?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
-				<div class="news-list-content">
+				<div id="news-list-content-id" class="news-list-content">
 			<?php else : ?>
-				<div class="news-list-content-ar">
+				<div id="news-list-content-id" class="news-list-content-ar">
 			<?php endif; ?>
 					<?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
 						<div class="news-list-image">
@@ -76,9 +69,13 @@ $document->addScriptDeclaration("
 					<br/>
 					<!-- <button id="btn-expand-<?php echo $item->id; ?>" class="btn btn-default" onclick="openArticle(<?php echo $item->id;?>)">Read More</button>
 					<button id="btn-collapse-<?php echo $item->id; ?>" class="btn btn-default" style="display:none" onclick="closeArticle(<?php echo $item->id;?>)">Show Less</button> -->
-
-					<button id="btn-expand-<?php echo $item->id; ?>" class="btn btn-default" >Read More</button>
-					<button id="btn-collapse-<?php echo $item->id; ?>" class="btn btn-default" style="display:none" >Show Less</button>
+					<?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
+						<button id="btn-expand-<?php echo $item->id; ?>" class="btn btn-default" >Read More</button>
+						<button id="btn-collapse-<?php echo $item->id; ?>" class="btn btn-default" style="display:none" >Show Less</button>
+					<?php else : ?>
+						<button id="btn-expand-<?php echo $item->id; ?>" class="btn btn-default" >المزيد</button>
+						<button id="btn-collapse-<?php echo $item->id; ?>" class="btn btn-default" style="display:none" >أقل</button>
+					<?php endif; ?>
 
 <!--
 					<?php if ($params->get('show_readmore')) :?>

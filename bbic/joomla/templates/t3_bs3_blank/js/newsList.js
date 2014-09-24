@@ -15,7 +15,10 @@ function loadList(tab_num) {
  	num_page = 3;
 	articles = [];
  	content = '';
- 	modid_lookup = ['145', '151', '152', '153'];
+ 	if (jQuery('#news-list-content-id').hasClass('news-list-content-ar'))
+ 		modid_lookup = ['154', '155', '156', '157'];
+ 	else
+ 		modid_lookup = ['145', '151', '152', '153'];
 
 	jQuery('#Mod'+modid_lookup[tab_num-1]+' #list-ul li').each(
 		function(index) {
@@ -26,7 +29,6 @@ function loadList(tab_num) {
 	
 	total_page = Math.ceil(articles.length/num_page);
 	
-
 	for (i=0; i < num_page && i < articles.length; i++) {
 		content += '<li>'+articles[i]+'</li>';
 	}
@@ -38,8 +40,7 @@ function loadList(tab_num) {
         // total: 20,
         // maxVisible: 1,
         leaps: false,
-        next: 'next',
-        prev: 'prev'
+
     }).on('page', function(event, num){
  		jQuery(this).bootpag({total: total_page});
  		content = '';

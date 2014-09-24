@@ -17,11 +17,12 @@ defined('_JEXEC') or die;
 	<div class="row">
 
 		<!-- MAIN CONTENT -->
-		<?php if ($id == "162") : ?>
-			<div id="t3-content" class="tenant-no-component t3-content col-xs-12">
-		<?php else: ?>
+
+		<!-- <?php if ($id == "162" || $id == "167" || $id == "173" || $id == "9") : ?> -->
+			<!-- <div id="t3-content" class="tenant-no-component t3-content col-xs-12"> -->
+		<!-- <?php else: ?> -->
 			<div id="t3-content" class="t3-content col-xs-12">
-		<?php endif; ?>
+		<!-- <?php endif; ?> -->
 				<?php if($this->hasMessage()) : ?>
 				<jdoc:include type="message" />
 				<?php endif ?>

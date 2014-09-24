@@ -17,6 +17,7 @@ JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/map.css', array(), tr
 
 JHtml::_('bootstrap.framework');
 JHtml::script(JUri::base().'templates/t3_bs3_blank/js/map.js', false, true);
+// JHtml::script(JUri::base().'templates/t3_bs3_blank/js/hideTenantModules.js', false, true);
 
 // <script type="text/javascript">
 // 	(function($){
@@ -26,9 +27,14 @@ JHtml::script(JUri::base().'templates/t3_bs3_blank/js/map.js', false, true);
 
 $document = JFactory::getDocument();
 $document->addScriptDeclaration("
-	// jQuery(function(){
-	// 	jQuery('#slide-contact').collapse({ parent: false, toggle: true, active: 'basic-details'});
-	// });
+	jQuery(function(){
+		// 	jQuery('#slide-contact').collapse({ parent: false, toggle: true, active: 'basic-details'});
+		
+		jQuery('.tenant-hide-module').addClass('tenant-no-component');
+
+	});
+
+
 ");
 
 // Create shortcuts to some parameters.
@@ -45,6 +51,12 @@ $botInfo = ($aInfo1 && $info == 1) || ($aInfo2 && $info != 0);
 $icons = !empty($this->print) || $canEdit || $params->get('show_print_icon') || $params->get('show_email_icon');
 $articleid = $this->item->id;
 $catid = $this->item->catid;
+$parentid = $this->item->parent_id;
+
+
+
+// var_dump($this->item->parent_id);
+// var_dump($this);
 // var_dump($params);
 // var_dump($catid);
 
@@ -528,7 +540,8 @@ JHtml::_('bootstrap.tooltip');
 	</div>
 
 <!-- COMPANY PROFILE -->
-<?php elseif ($catid == "9") : ?>
+<?php elseif ($catid == "9" || $catid == "28" || $parentid == "9" || $parentid == "28") : ?>
+	<!-- <?php echo "<script>hideTenantModules();</script>"; ?> -->
 	<article itemscope itemtype="http://schema.org/Article">
 		<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 
@@ -686,7 +699,7 @@ JHtml::_('bootstrap.tooltip');
 	<?php echo $this->item->event->afterDisplayContent; ?>
 	</div>
 
-<!--MAP-->
+<!--OLD MAP-->
 <?php elseif ($catid == "29") : ?>
 
 	<article itemscope itemtype="http://schema.org/Article">

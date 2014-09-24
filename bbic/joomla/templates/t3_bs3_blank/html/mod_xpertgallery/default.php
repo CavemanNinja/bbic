@@ -13,14 +13,25 @@ defined('_JEXEC') or die('Restricted accessd');
 
 ?>
 <div class="tx-tenants-header">
-    <h1>Tenants</h1>
+    <?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
+        <h1>Tenants</h1>
+    <?php else : ?>
+        <h1>الشركات</h1>
+    <?php endif; ?>
 </div>
 <!--ThemeXpert: Xpert Gallery module 2.2 Start here-->
 <div class="tx-gallery <?php echo $module_id;?> overview-<?php echo $params->get('overview_position');?> clearfix">
     
     <div class="tx-gallery-header">
         <ul class="tx-gallery-filters">
-            <li data-filter="*" class="active"><?php echo JText::_('ALL')?></li>
+            <li data-filter="*" class="active">
+                <?php 
+                    if (JFactory::getLanguage()->get('tag') == "ar-AA")
+                        echo "جميع";
+                    else
+                        echo JText::_('ALL');
+                ?>
+            </li>
             <?php echo XEFXpertGalleryHelper::getCatFilterList( $items, $params ) ; ?>
         </ul>
 
@@ -29,7 +40,15 @@ defined('_JEXEC') or die('Restricted accessd');
             <?php foreach($params->get('sort_elements') as $sitem):?>
                 <?php $selected = ($sitem == 'original-order') ? 'active' : ''; ?>
                 <li data-sort="<?php echo $sitem; ?>" class="<?php echo $selected?>">
-                    <?php echo JText::_( strtoupper($sitem) );?>
+                    <?php 
+                        $english_text = JText::_( strtoupper($sitem));
+
+                        if ($english_text == 'Title' && JFactory::getLanguage()->get('tag') == "ar-AA") {
+                            echo "اسم";
+                        } else {
+                            echo $english_text;
+                        }
+                    ?>
                 </li>
             <?php endforeach;?>
         </ul>
@@ -57,7 +76,17 @@ defined('_JEXEC') or die('Restricted accessd');
                                     <?php if( in_array('title', $overview_elements) ): ?>
                                         <h2 class="tx-gallery-title">
                                             <!-- <a class="tx-gallery-image-link" href="<?php echo $i->link . '/?tmpl=component'; ?>"> <?php echo $i->title; ?> </a> -->
-                                            <a class="" href="<?php echo $i->link; ?>"> <?php echo $i->title; ?> </a>
+                                            <?php 
+                                                $ilink = $i->link;
+                                                if (JFactory::getLanguage()->get('tag') == "ar-AA") {
+                                                    /***ADD ANY ARABIC COMPANY SUBCATEGORIES HERE ***/
+                                                    $arabic_subcategories = ['35', '36'];
+                                                    foreach ($arabic_subcategories as $ar_sub) {
+                                                        $ilink = str_replace("/2014-09-24-14-12-37/".$ar_sub."-arabic", "", $ilink);    
+                                                    }
+                                                }
+                                            ?>
+                                            <a class="" href="<?php echo $ilink; ?>"> <?php echo $i->title; ?> </a>
                                         </h2>
                                     <?php endif;?>
 

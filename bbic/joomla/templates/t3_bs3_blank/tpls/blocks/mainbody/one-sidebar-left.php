@@ -11,7 +11,13 @@ defined('_JEXEC') or die;
  * Mainbody 2 columns: sidebar - content
  */
 ?>
-<div id="t3-mainbody" class="container t3-mainbody">
+<?php $id = JRequest::getVar('id');  ?>
+
+<?php if ($id == "28" || $id == "9") : ?>
+	<div id="t3-mainbody" class="tenant-no-component container t3-mainbody">
+<?php else: ?>
+	<div id="t3-mainbody" class="container t3-mainbody">
+<?php endif; ?>
 	<div class="row">
 
 		<!-- MAIN CONTENT -->

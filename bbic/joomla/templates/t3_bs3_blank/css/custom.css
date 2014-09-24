@@ -77,7 +77,7 @@ body {
     /*background-color: #ffffff;*/
 }
 
-#Mod129 {
+#Mod129, #Mod160 {
     /*box-shadow: 0px 6px 12px #666666;  */
     padding-bottom: 10px !important;
     /*background-color: #ffffff;*/
@@ -170,7 +170,7 @@ body {
 }
 
 /*Login Arabic*/
-#Mod129 .module-inner .module-title {
+#Mod129, #Mod160 .module-inner .module-title {
   /*text-align: center !important;*/
   /*padding-top: 8px !important;*/
   /*padding-bottom: 8px !important;*/
@@ -265,7 +265,7 @@ body {
   background-color: #ffffff;
 }
 
-#Mod129 .module-inner .module-ct {
+#Mod129, #Mod160 .module-inner .module-ct {
   padding-left: 10px !important;
   padding-right: 10px !important;
   padding-top: 10px !important;
@@ -982,6 +982,12 @@ div.st_tabs > div > ul {
 
 
 /* XPERTMOD GALLERY FOR TENANTS */
+#Mod149, #Mod158,
+#Mod159, #Mod160 {
+  margin-top: 70px;
+  
+}
+
 .tx-gallery {
   /*max-width: 728px !important;*/
   width: 100%;
@@ -997,12 +1003,17 @@ div.st_tabs > div > ul {
   padding: 0px !important;
 }
 
+.tx-gallery-container {
+  
+}
+
 .tx-gallery-item {
   text-align: center;
   padding: 5px 0 5px 0;
   background: #f7f7f7;
   border-radius: 4px;
   border: 1px solid #e3e3e3;
+
 }
 
 /*#Mod149 {
