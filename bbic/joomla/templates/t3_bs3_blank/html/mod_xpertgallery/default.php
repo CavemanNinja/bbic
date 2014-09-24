@@ -56,7 +56,8 @@ defined('_JEXEC') or die('Restricted accessd');
                                 <div class="tx-gallery-info">
                                     <?php if( in_array('title', $overview_elements) ): ?>
                                         <h2 class="tx-gallery-title">
-                                            <a class="tx-gallery-image-link" href="<?php echo $i->link . '/?tmpl=component'; ?>"> <?php echo $i->title; ?> </a>
+                                            <!-- <a class="tx-gallery-image-link" href="<?php echo $i->link . '/?tmpl=component'; ?>"> <?php echo $i->title; ?> </a> -->
+                                            <a class="" href="<?php echo $i->link; ?>"> <?php echo $i->title; ?> </a>
                                         </h2>
                                     <?php endif;?>
 

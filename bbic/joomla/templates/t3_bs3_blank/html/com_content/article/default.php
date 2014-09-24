@@ -1299,21 +1299,21 @@ JHtml::_('bootstrap.tooltip');
 			<div class="map-label"><h2>BBIC Campus</h2></div>
 			<div class="bbic-map">
 				<div class="campus">
-					<i class="campus_building_building8 map-popover cursor-pointer" data-content="Building 8" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_w1 cursor-pointer map-popover" data-content="W1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_bdb cursor-pointer map-popover" data-content="BDB Building" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_w3 cursor-pointer map-popover" data-content="W3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_w4 cursor-pointer map-popover" data-content="W4" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_a1 cursor-pointer map-popover" data-content="A1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_a2 cursor-pointer map-popover" data-content="A2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_a3 cursor-pointer map-popover" data-content="A3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_b1 cursor-pointer map-popover" data-content="B1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_b2 cursor-pointer map-popover" data-content="B2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_b3 cursor-pointer map-popover" data-content="B3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_c1 cursor-pointer map-popover" data-content="C1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_c2 cursor-pointer map-popover" data-content="C2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_c3 cursor-pointer map-popover" data-content="C3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_wh cursor-pointer map-popover" data-content="Warehouses" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_building8 campus-map-popover cursor-pointer" data-content="Building 8" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_w1 cursor-pointer campus-map-popover" data-content="W1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_bdb cursor-pointer campus-map-popover" data-content="W2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_w3 cursor-pointer campus-map-popover" data-content="W3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_w4 cursor-pointer campus-map-popover" data-content="W4" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_a1 cursor-pointer campus-map-popover" data-content="A1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_a2 cursor-pointer campus-map-popover" data-content="A2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_a3 cursor-pointer campus-map-popover" data-content="A3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_b1 cursor-pointer campus-map-popover" data-content="B1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_b2 cursor-pointer campus-map-popover" data-content="B2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_b3 cursor-pointer campus-map-popover" data-content="B3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_c1 cursor-pointer campus-map-popover" data-content="C1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_c2 cursor-pointer campus-map-popover" data-content="C2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_c3 cursor-pointer campus-map-popover" data-content="C3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<i class="campus_building_wh cursor-pointer campus-map-popover" data-content="Warehouses" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
 					<!-- <i class="campus_building_d2"></i>
 					<i class="campus_building_d1"></i>
 					<i class="campus_building_d2"></i>
@@ -1350,523 +1350,522 @@ JHtml::_('bootstrap.tooltip');
 
 
 					<div class="map-popover building8 building8_1" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_1'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'>">16</div>
+						data-content="<?php echo $attribs->get('map_building8_1'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'>">16</div>
 
 					<div class="map-popover building8 building8_2" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_2'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_2_image'); ?>'>">18</div>
+						data-content="<?php echo $attribs->get('map_building8_2'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_2_image'); ?>'>">18</div>
 					<div class="map-popover building8 building8_3" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_3'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_3_image'); ?>'>">20</div>
+						data-content="<?php echo $attribs->get('map_building8_3'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_3_image'); ?>'>">20</div>
 					<div class="map-popover building8 building8_4" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_4'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_4_image'); ?>'>">22</div>
+						data-content="<?php echo $attribs->get('map_building8_4'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_4_image'); ?>'>">22</div>
 					<div class="map-popover building8 building8_5" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_5'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_5_image'); ?>'>">24</div>
+						data-content="<?php echo $attribs->get('map_building8_5'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_5_image'); ?>'>">24</div>
 					<div class="map-popover building8 building8_6" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_6'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_6_image'); ?>'>">26</div>
+						data-content="<?php echo $attribs->get('map_building8_6'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_6_image'); ?>'>">26</div>
 					<div class="map-popover building8 building8_7" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_7'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_7_image'); ?>'>">28</div>
+						data-content="<?php echo $attribs->get('map_building8_7'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_7_image'); ?>'>">28</div>
 					<div class="map-popover building8 building8_8" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_8'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_8_image'); ?>'>">30</div>
+						data-content="<?php echo $attribs->get('map_building8_8'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_8_image'); ?>'>">30</div>
 					<div class="map-popover building8 building8_9" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_9'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_9_image'); ?>'>"><span class="text-bottom">32</span></div>
+						data-content="<?php echo $attribs->get('map_building8_9'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_9_image'); ?>'>"><span class="text-bottom">32</span></div>
 					<div class="map-popover building8 building8_10" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_10'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_10_image'); ?>'>">34</div>
+						data-content="<?php echo $attribs->get('map_building8_10'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_10_image'); ?>'>">34</div>
 					<div class="map-popover building8 building8_11" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_11'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_11_image'); ?>'>">36</div>
+						data-content="<?php echo $attribs->get('map_building8_11'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_11_image'); ?>'>">36</div>
 					<div class="map-popover building8 building8_12" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_12'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_12_image'); ?>'>">38</div>
+						data-content="<?php echo $attribs->get('map_building8_12'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_12_image'); ?>'>">38</div>
 					<div class="map-popover building8 building8_13" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_13'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_13_image'); ?>'>">40</div>
+						data-content="<?php echo $attribs->get('map_building8_13'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_13_image'); ?>'>">40</div>
 					<div class="map-popover building8 building8_14" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_14'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_14_image'); ?>'>">42</div>
+						data-content="<?php echo $attribs->get('map_building8_14'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_14_image'); ?>'>">42</div>
 					<div class="map-popover building8 building8_15" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_15'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_15_image'); ?>'>"><span class="text-bottom">44</span></div>
+						data-content="<?php echo $attribs->get('map_building8_15'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_15_image'); ?>'>"><span class="text-bottom">44</span></div>
 					<div class="map-popover building8 building8_16" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_16'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_16_image'); ?>'>">14</div>
+						data-content="<?php echo $attribs->get('map_building8_16'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_16_image'); ?>'>">14</div>
 					<div class="map-popover building8 building8_17" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_17'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_17_image'); ?>'>">12</div>
+						data-content="<?php echo $attribs->get('map_building8_17'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_17_image'); ?>'>">12</div>
 					<div class="map-popover building8 building8_18" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_18'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_18_image'); ?>'>">10</div>
-					
+						data-content="<?php echo $attribs->get('map_building8_18'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_18_image'); ?>'>">10</div>
 					<div class="map-popover building8 building8_20" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_20'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_20_image'); ?>'>">6</div>
+						data-content="<?php echo $attribs->get('map_building8_20'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_20_image'); ?>'>">6</div>
 					<div class="map-popover building8 building8_21" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_21'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_2`_image'); ?>'>">4</div>
+						data-content="<?php echo $attribs->get('map_building8_21'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_2`_image'); ?>'>">4</div>
 					<div class="map-popover building8 building8_22" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_22'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_21_image'); ?>'>">2</div>
+						data-content="<?php echo $attribs->get('map_building8_22'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_21_image'); ?>'>">2</div>
 					<div class="map-popover building8 building8_23 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_23'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_22_image'); ?>'>">77</div>
+						data-content="<?php echo $attribs->get('map_building8_23'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_22_image'); ?>'>">77</div>
 					<div class="map-popover building8 building8_24 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_24'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_24_image'); ?>'>">39</div>
+						data-content="<?php echo $attribs->get('map_building8_24'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_24_image'); ?>'>">39</div>
 					<div class="map-popover building8 building8_25 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_25'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_25_image'); ?>'>">41</div>
+						data-content="<?php echo $attribs->get('map_building8_25'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_25_image'); ?>'>">41</div>
 					<div class="map-popover building8 building8_26" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_26'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_26_image'); ?>'>">78</div>
+						data-content="<?php echo $attribs->get('map_building8_26'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_26_image'); ?>'>">78</div>
 					<div class="map-popover building8 building8_27" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_27'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_27_image'); ?>'>">11</div>
+						data-content="<?php echo $attribs->get('map_building8_27'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_27_image'); ?>'>">11</div>
 					<div class="map-popover building8 building8_28" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_28'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_28_image'); ?>'>">55</div>
+						data-content="<?php echo $attribs->get('map_building8_28'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_28_image'); ?>'>">55</div>
 					<div class="map-popover building8 building8_29" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_29'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_29_image'); ?>'>">9</div>
+						data-content="<?php echo $attribs->get('map_building8_29'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_29_image'); ?>'>">9</div>
 					<div class="map-popover building8 building8_30" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_30'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_30_image'); ?>'>">57</div>
+						data-content="<?php echo $attribs->get('map_building8_30'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_30_image'); ?>'>">57</div>
 					<div class="map-popover building8 building8_31" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_31'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_31_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_building8_31'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_31_image'); ?>'>"></div>
 					<div class="map-popover building8 building8_32 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_32'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_32_image'); ?>'>">BBIC Admin</div>
+						data-content="<?php echo $attribs->get('map_building8_32'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_32_image'); ?>'>">BBIC Admin</div>
 					<div class="map-popover building8 building8_33" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_33'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_33_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_building8_33'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_33_image'); ?>'>"></div>
 					<div class="map-popover building8 building8_34" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_34'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_34_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_building8_34'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_34_image'); ?>'>"></div>
 					<div class="map-popover building8 building8_35" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_35'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_35_image'); ?>'>">33</div>
+						data-content="<?php echo $attribs->get('map_building8_35'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_35_image'); ?>'>">33</div>
 					<div class="map-popover building8 building8_36" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_36'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_36_image'); ?>'>">35</div>
+						data-content="<?php echo $attribs->get('map_building8_36'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_36_image'); ?>'>">35</div>
 					<div class="map-popover building8 building8_37" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_37'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_37_image'); ?>'>">37</div>
+						data-content="<?php echo $attribs->get('map_building8_37'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_37_image'); ?>'>">37</div>
 					<div class="map-popover building8 building8_38 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_38'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_38_image'); ?>'>">75</div>
+						data-content="<?php echo $attribs->get('map_building8_38'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_38_image'); ?>'>">75</div>
 					<div class="map-popover building8 building8_39 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_39'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_39_image'); ?>'>">76</div>
+						data-content="<?php echo $attribs->get('map_building8_39'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_39_image'); ?>'>">76</div>
 					<div class="map-popover building8 building8_40 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_40'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_40_image'); ?>'>">71</div>
+						data-content="<?php echo $attribs->get('map_building8_40'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_40_image'); ?>'>">71</div>
 					<div class="map-popover building8 building8_41 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_41'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_41_image'); ?>'>">69</div>
+						data-content="<?php echo $attribs->get('map_building8_41'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_41_image'); ?>'>">69</div>
 					<div class="map-popover building8 building8_42 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_42'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_42_image'); ?>'>">74</div>
+						data-content="<?php echo $attribs->get('map_building8_42'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_42_image'); ?>'>">74</div>
 					<div class="map-popover building8 building8_43 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_43'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_43_image'); ?>'>">72</div>
+						data-content="<?php echo $attribs->get('map_building8_43'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_43_image'); ?>'>">72</div>
 					<div class="map-popover building8 building8_44 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_44'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_44_image'); ?>'>">67</div>
+						data-content="<?php echo $attribs->get('map_building8_44'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_44_image'); ?>'>">67</div>
 					<div class="map-popover building8 building8_45 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_45'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_45_image'); ?>'>">73</div>
+						data-content="<?php echo $attribs->get('map_building8_45'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_45_image'); ?>'>">73</div>
 					<div class="map-popover building8 building8_46 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_46'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_46_image'); ?>'>">43</div>
+						data-content="<?php echo $attribs->get('map_building8_46'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_46_image'); ?>'>">43</div>
 					<div class="map-popover building8 building8_47 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_building8_47'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-bottom">46</span></div>
+						data-content="<?php echo $attribs->get('map_building8_47'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-unit-46">BBIC<br/>Admin</span></div>
 				</div>
 				<div class="building-map lota a1 a2 a3">
 					<div class="map-popover lota_1" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_1'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_1_image'); ?>'>">135</div>
+						data-content="<?php echo $attribs->get('map_lota_1'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_1_image'); ?>'>">135</div>
 					<div class="map-popover lota_2" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_2'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_2_image'); ?>'>">136</div>
+						data-content="<?php echo $attribs->get('map_lota_2'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_2_image'); ?>'>">136</div>
 					<div class="map-popover lota_3" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_3'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_3_image'); ?>'>">137</div>
+						data-content="<?php echo $attribs->get('map_lota_3'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_3_image'); ?>'>">137</div>
 					<div class="map-popover lota_4" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_4'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_4_image'); ?>'>">138</div>
+						data-content="<?php echo $attribs->get('map_lota_4'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_4_image'); ?>'>">138</div>
 					<div class="map-popover lota_5" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_5'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_5_image'); ?>'>"><span class="text-bottom text-center">134</span></div>
+						data-content="<?php echo $attribs->get('map_lota_5'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_5_image'); ?>'>"><span class="text-bottom text-center">134</span></div>
 					<div class="map-popover lota_6" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_6'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_6_image'); ?>'>">132</div>
+						data-content="<?php echo $attribs->get('map_lota_6'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_6_image'); ?>'>">132</div>
 					<div class="map-popover lota_7" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_7'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_7_image'); ?>'>">128</div>
+						data-content="<?php echo $attribs->get('map_lota_7'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_7_image'); ?>'>">128</div>
 					<div class="map-popover lota_8" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_8'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_8_image'); ?>'>">129</div>
+						data-content="<?php echo $attribs->get('map_lota_8'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_8_image'); ?>'>">129</div>
 					<div class="map-popover lota_9" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_9'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_9_image'); ?>'>">130</div>
+						data-content="<?php echo $attribs->get('map_lota_9'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_9_image'); ?>'>">130</div>
 					<div class="map-popover lota_10" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lota_10'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_10_image'); ?>'>">131</div>
+						data-content="<?php echo $attribs->get('map_lota_10'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lota_10_image'); ?>'>">131</div>
 					<div class="lota_outline"></div>
 				</div>
 				<div class="building-map lotb b1 b2 b3">
 					<div class="map-popover lotb_1" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_1'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_1_image'); ?>'>">145</div>
+						data-content="<?php echo $attribs->get('map_lotb_1'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_1_image'); ?>'>">145</div>
 					<div class="map-popover lotb_2" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_2'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_2_image'); ?>'>">146</div>
+						data-content="<?php echo $attribs->get('map_lotb_2'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_2_image'); ?>'>">146</div>
 					<div class="map-popover lotb_3" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_3'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_3_image'); ?>'>">147</div>
+						data-content="<?php echo $attribs->get('map_lotb_3'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_3_image'); ?>'>">147</div>
 					<div class="map-popover lotb_4" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_4'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_4_image'); ?>'>">148</div>
+						data-content="<?php echo $attribs->get('map_lotb_4'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_4_image'); ?>'>">148</div>
 					<div class="map-popover lotb_5" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_5'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_5_image'); ?>'>"><span class="text-bottom text-center">144</span></div>
+						data-content="<?php echo $attribs->get('map_lotb_5'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_5_image'); ?>'>"><span class="text-bottom text-center">144</span></div>
 					<div class="map-popover lotb_6" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_6'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_6_image'); ?>'>">143</div>
+						data-content="<?php echo $attribs->get('map_lotb_6'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_6_image'); ?>'>">143</div>
 					<div class="map-popover lotb_7" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_7'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_7_image'); ?>'>">139</div>
+						data-content="<?php echo $attribs->get('map_lotb_7'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_7_image'); ?>'>">139</div>
 					<div class="map-popover lotb_8" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_8'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_8_image'); ?>'>">140</div>
+						data-content="<?php echo $attribs->get('map_lotb_8'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_8_image'); ?>'>">140</div>
 					<div class="map-popover lotb_9" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_9'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_9_image'); ?>'>">141</div>
+						data-content="<?php echo $attribs->get('map_lotb_9'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_9_image'); ?>'>">141</div>
 					<div class="map-popover lotb_10" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotb_10'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_10_image'); ?>'>">142</div>
+						data-content="<?php echo $attribs->get('map_lotb_10'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_10_image'); ?>'>">142</div>
 					<div class="lotb_outline"></div>
 				</div>
 
 				<div class="building-map lotc c1 c2 c3" data-html="true">
 					<div class="map-popover lotc_1" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_1'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotc_1_image'); ?>'>">154</div>
+						data-content="<?php echo $attribs->get('map_lotc_1'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotc_1_image'); ?>'>">154</div>
 					<div class="map-popover lotc_2" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_2'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_2_image'); ?>'>">155</div>
+						data-content="<?php echo $attribs->get('map_lotc_2'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_2_image'); ?>'>">155</div>
 					<div class="map-popover lotc_3" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_3'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_3_image'); ?>'>">156</div>
+						data-content="<?php echo $attribs->get('map_lotc_3'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_3_image'); ?>'>">156</div>
 					<div class="map-popover lotc_4" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_4'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_4_image'); ?>'>">157</div>
+						data-content="<?php echo $attribs->get('map_lotc_4'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_4_image'); ?>'>">157</div>
 					<div class="map-popover lotc_5" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_5'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_5_image'); ?>'>">153</div>
+						data-content="<?php echo $attribs->get('map_lotc_5'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_5_image'); ?>'>">153</div>
 					<div class="map-popover lotc_6" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_6'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_6_image'); ?>'>">133</div>
+						data-content="<?php echo $attribs->get('map_lotc_6'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_6_image'); ?>'>">133</div>
 					<div class="map-popover lotc_7" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_7'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_7_image'); ?>'>">149</div>
+						data-content="<?php echo $attribs->get('map_lotc_7'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_7_image'); ?>'>">149</div>
 					<div class="map-popover lotc_8" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_8'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_8_image'); ?>'>">150</div>
+						data-content="<?php echo $attribs->get('map_lotc_8'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_8_image'); ?>'>">150</div>
 					<div class="map-popover lotc_9" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_9'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_9_image'); ?>'>">151</div>
+						data-content="<?php echo $attribs->get('map_lotc_9'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotb_9_image'); ?>'>">151</div>
 					<div class="map-popover lotc_10" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_lotc_10'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotc_10_image'); ?>'>">152</div>
+						data-content="<?php echo $attribs->get('map_lotc_10'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_lotc_10_image'); ?>'>">152</div>
 					<div class="lotc_outline"></div>
 				</div>
 
 				<div class="building-map w1">
 					<div class="map-popover w1_1_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_1_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_1_g_image'); ?>'>">12</div>
+						data-content="<?php echo $attribs->get('map_w1_1_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_1_g_image'); ?>'>">12</div>
 					<div class="map-popover w1_2_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_2_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_2_g_image'); ?>'>">14</div>
+						data-content="<?php echo $attribs->get('map_w1_2_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_2_g_image'); ?>'>">14</div>
 					<div class="map-popover w1_3_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_3_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_3_g_image'); ?>'>">16</div>
+						data-content="<?php echo $attribs->get('map_w1_3_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_3_g_image'); ?>'>">16</div>
 					<div class="map-popover w1_4_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_4_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_4_g_image'); ?>'>">18</div>
+						data-content="<?php echo $attribs->get('map_w1_4_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_4_g_image'); ?>'>">18</div>
 					<div class="map-popover w1_5_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_5_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_5_g_image'); ?>'>">20</div>
+						data-content="<?php echo $attribs->get('map_w1_5_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_5_g_image'); ?>'>">20</div>
 					<div class="map-popover w1_6_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_6_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_6_g_image'); ?>'>">22</div>
+						data-content="<?php echo $attribs->get('map_w1_6_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_6_g_image'); ?>'>">22</div>
 					<div class="map-popover w1_7_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_7_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_7_g_image'); ?>'>">27</div>
+						data-content="<?php echo $attribs->get('map_w1_7_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_7_g_image'); ?>'>">27</div>
 					<div class="map-popover w1_8_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_8_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_8_g_image'); ?>'>">24</div>
+						data-content="<?php echo $attribs->get('map_w1_8_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_8_g_image'); ?>'>">24</div>
 					<div class="map-popover w1_1_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_1_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_1_1st_image'); ?>'>">118</div>
+						data-content="<?php echo $attribs->get('map_w1_1_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_1_1st_image'); ?>'>">118</div>
 					<div class="map-popover w1_2_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_2_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_2_1st_image'); ?>'>">120</div>
+						data-content="<?php echo $attribs->get('map_w1_2_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_2_1st_image'); ?>'>">120</div>
 					<div class="map-popover w1_3_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_3_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_3_1st_image'); ?>'>">121</div>
+						data-content="<?php echo $attribs->get('map_w1_3_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_3_1st_image'); ?>'>">121</div>
 					<div class="map-popover w1_4_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_4_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_4_1st_image'); ?>'>">122</div>
+						data-content="<?php echo $attribs->get('map_w1_4_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_4_1st_image'); ?>'>">122</div>
 					<div class="map-popover w1_5_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_5_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_5_1st_image'); ?>'>">123</div>
+						data-content="<?php echo $attribs->get('map_w1_5_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_5_1st_image'); ?>'>">123</div>
 					<div class="map-popover w1_6_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_6_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_6_1st_image'); ?>'>">124</div>
+						data-content="<?php echo $attribs->get('map_w1_6_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_6_1st_image'); ?>'>">124</div>
 					<div class="map-popover w1_7_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_7_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_7_1st_image'); ?>'>">116</div>
+						data-content="<?php echo $attribs->get('map_w1_7_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_7_1st_image'); ?>'>">116</div>
 					<div class="map-popover w1_8_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_8_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_8_1st_image'); ?>'>">114</div>
+						data-content="<?php echo $attribs->get('map_w1_8_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_8_1st_image'); ?>'>">114</div>
 					<div class="map-popover w1_9_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_9_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_9_1st_image'); ?>'>">112</div>
+						data-content="<?php echo $attribs->get('map_w1_9_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_9_1st_image'); ?>'>">112</div>
 					<div class="map-popover w1_10_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_10_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_10_1st_image'); ?>'>">110</div>
+						data-content="<?php echo $attribs->get('map_w1_10_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_10_1st_image'); ?>'>">110</div>
 					<div class="map-popover w1_11_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w1_11_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_11_1st_image'); ?>'>">109</div>
+						data-content="<?php echo $attribs->get('map_w1_11_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w1_11_1st_image'); ?>'>">109</div>
 					<div class="w1_outline_1st"></div>
 					<div class="w1_outline_g"></div>
 				</div>
 				<div class="building-map w3" data-html="true">
 					<div class="map-popover w3_1_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_1_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_1_g_image'); ?>'>">29</div>
+						data-content="<?php echo $attribs->get('map_w3_1_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_1_g_image'); ?>'>">29</div>
 					<div class="map-popover w3_2_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_2_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_2_g_image'); ?>'>">30</div>
+						data-content="<?php echo $attribs->get('map_w3_2_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_2_g_image'); ?>'>">30</div>
 					<div class="map-popover w3_3_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_3_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_3_g_image'); ?>'>">31</div>
+						data-content="<?php echo $attribs->get('map_w3_3_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_3_g_image'); ?>'>">31</div>
 					<div class="map-popover w3_4_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_4_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_4_g_image'); ?>'>">32</div>
+						data-content="<?php echo $attribs->get('map_w3_4_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_4_g_image'); ?>'>">32</div>
 					<div class="map-popover w3_5_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_5_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_5_g_image'); ?>'>">33</div>
+						data-content="<?php echo $attribs->get('map_w3_5_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_5_g_image'); ?>'>">33</div>
 					<div class="map-popover w3_6_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_6_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_6_g_image'); ?>'>">34</div>
+						data-content="<?php echo $attribs->get('map_w3_6_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_6_g_image'); ?>'>">34</div>
 					<div class="map-popover w3_7_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_7_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_7_g_image'); ?>'>">35</div>
+						data-content="<?php echo $attribs->get('map_w3_7_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_7_g_image'); ?>'>">35</div>
 					<div class="map-popover w3_8_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_8_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_8_g_image'); ?>'>">37</div>
-					<div class="map-popover w3_1_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_1_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_1_1st_image'); ?>'>">5</div>
+						data-content="<?php echo $attribs->get('map_w3_8_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_8_g_image'); ?>'>">37</div>
+<!-- 					<div class="map-popover w3_1_1st" data-container="body" data-toggle="popover" data-placement="top" 
+						data-content="<?php echo $attribs->get('map_w3_1_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_1_1st_image'); ?>'>">5</div>
 					<div class="map-popover w3_2_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_2_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_2_1st_image'); ?>'>">6</div>
+						data-content="<?php echo $attribs->get('map_w3_2_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_2_1st_image'); ?>'>">6</div>
 					<div class="map-popover w3_3_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_3_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_3_1st_image'); ?>'>">7</div>
+						data-content="<?php echo $attribs->get('map_w3_3_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_3_1st_image'); ?>'>">7</div>
 					<div class="map-popover w3_4_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_4_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_4_1st_image'); ?>'>">8</div>
+						data-content="<?php echo $attribs->get('map_w3_4_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_4_1st_image'); ?>'>">8</div>
 					<div class="map-popover w3_5_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_5_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_5_1st_image'); ?>'>">4</div>
+						data-content="<?php echo $attribs->get('map_w3_5_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_5_1st_image'); ?>'>">4</div>
 					<div class="map-popover w3_6_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_6_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_6_1st_image'); ?>'>">3</div>
+						data-content="<?php echo $attribs->get('map_w3_6_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_6_1st_image'); ?>'>">3</div>
 					<div class="map-popover w3_7_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_7_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_7_1st_image'); ?>'>">2</div>
+						data-content="<?php echo $attribs->get('map_w3_7_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_7_1st_image'); ?>'>">2</div>
 					<div class="map-popover w3_8_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_w3_8_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_8_1st_image'); ?>'>">1</div>
+						data-content="<?php echo $attribs->get('map_w3_8_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w3_8_1st_image'); ?>'>">1</div> -->
 					<div class="w3_outline"></div>
-					<div class="w3_outline_1st"></div>
+					<!-- <div class="w3_outline_1st"></div> -->
 				</div>
 
 				<div class="building-map bdb" data-html="true">
 					<div class="map-popover bdb_1_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_1_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_1_g_image'); ?>'>">3</div>
+						data-content="<?php echo $attribs->get('map_bdb_1_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_1_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_2_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_2_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_2_g_image'); ?>'>">4</div>
+						data-content="<?php echo $attribs->get('map_bdb_2_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_2_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_3_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_3_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_3_g_image'); ?>'>">6</div>
+						data-content="<?php echo $attribs->get('map_bdb_3_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_3_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_4_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_4_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_4_g_image'); ?>'>">8</div>
+						data-content="<?php echo $attribs->get('map_bdb_4_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_4_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_5_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_5_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_5_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_5_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_5_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_6_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_6_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_6_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_6_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_6_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_7_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_7_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_7_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_7_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_7_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_8_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_8_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_8_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_8_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_8_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_9_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_9_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_9_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_9_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_9_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_10_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_10_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_10_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_10_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_10_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_11_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_11_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_11_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_11_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_11_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_12_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_12_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_12_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_12_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_12_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_13_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_13_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_13_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_13_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_13_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_14_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_14_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_14_g_image'); ?>'>"></div>
+						data-content="<?php echo $attribs->get('map_bdb_14_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_14_g_image'); ?>'>"></div>
 					<div class="map-popover bdb_15_g" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_15_g'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_15_g_image'); ?>'>">Bank</div>
+						data-content="<?php echo $attribs->get('map_bdb_15_g'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_15_g_image'); ?>'>">Bank</div>
 					
 					<div class="map-popover bdb_1_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_1_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_1_1st_image'); ?>'>">103</div>
+						data-content="<?php echo $attribs->get('map_bdb_1_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_1_1st_image'); ?>'>">103</div>
 					<div class="map-popover bdb_2_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_2_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_2_1st_image'); ?>'>">104</div>
+						data-content="<?php echo $attribs->get('map_bdb_2_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_2_1st_image'); ?>'>">104</div>
 					<div class="map-popover bdb_3_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_3_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_3_1st_image'); ?>'>">105</div>
+						data-content="<?php echo $attribs->get('map_bdb_3_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_3_1st_image'); ?>'>">105</div>
 					<div class="map-popover bdb_4_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_4_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_4_1st_image'); ?>'>">106</div>
+						data-content="<?php echo $attribs->get('map_bdb_4_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_4_1st_image'); ?>'>">106</div>
 					<div class="map-popover bdb_5_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_5_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_5_1st_image'); ?>'>">108</div>
+						data-content="<?php echo $attribs->get('map_bdb_5_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_5_1st_image'); ?>'>">108</div>
 					<div class="map-popover bdb_6_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_6_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_6_1st_image'); ?>'>"><span class="text-small">115</span></div>
+						data-content="<?php echo $attribs->get('map_bdb_6_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_6_1st_image'); ?>'>"><span class="text-small">115</span></div>
 					<div class="map-popover bdb_7_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_7_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_7_1st_image'); ?>'>"><span class="text-small">117</span></div>
+						data-content="<?php echo $attribs->get('map_bdb_7_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_7_1st_image'); ?>'>"><span class="text-small">117</span></div>
 					<div class="map-popover bdb_8_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_8_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_8_1st_image'); ?>'>">113</div>
+						data-content="<?php echo $attribs->get('map_bdb_8_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_8_1st_image'); ?>'>">113</div>
 					<div class="map-popover bdb_9_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_9_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_9_1st_image'); ?>'>">111</div>
+						data-content="<?php echo $attribs->get('map_bdb_9_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_9_1st_image'); ?>'>">111</div>
 					<div class="map-popover bdb_10_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_10_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_10_1st_image'); ?>'>">107</div>
+						data-content="<?php echo $attribs->get('map_bdb_10_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_10_1st_image'); ?>'>">107</div>
 					<div class="map-popover bdb_11_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_11_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_11_1st_image'); ?>'>">1</div>
+						data-content="<?php echo $attribs->get('map_bdb_11_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_11_1st_image'); ?>'>"></div>
 					<div class="map-popover bdb_12_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_12_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_12_1st_image'); ?>'>">2</div>
+						data-content="<?php echo $attribs->get('map_bdb_12_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_12_1st_image'); ?>'>"></div>
 					<div class="map-popover bdb_13_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_13_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_13_1st_image'); ?>'>">3</div>
+						data-content="<?php echo $attribs->get('map_bdb_13_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_13_1st_image'); ?>'>"></div>
 					<div class="map-popover bdb_14_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_14_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_14_1st_image'); ?>'>">4</div>
+						data-content="<?php echo $attribs->get('map_bdb_14_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_14_1st_image'); ?>'>"></div>
 					<div class="map-popover bdb_15_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_15_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_15_1st_image'); ?>'>">5</div>
+						data-content="<?php echo $attribs->get('map_bdb_15_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_15_1st_image'); ?>'>"></div>
 					<div class="map-popover bdb_16_1st" data-container="body" data-toggle="popover" data-placement="top" 
-						data-title="<?php echo $attribs->get('map_bdb_16_1st'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_16_1st_image'); ?>'>">6</div>
+						data-content="<?php echo $attribs->get('map_bdb_16_1st'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_16_1st_image'); ?>'>"></div>
 					<div class="bdb_outline_g"></div>
 					<div class="bdb_outline_1st"></div>
 				</div>
 				<div class="building-map w4">
 					<div class="map-popover w4_1" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_w4_1'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_1_image'); ?>'>">42</div>
+							data-content="<?php echo $attribs->get('map_w4_1'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_1_image'); ?>'>">42</div>
 					<div class="map-popover w4_2" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_w4_2'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_2_image'); ?>'>">44</div>
+							data-content="<?php echo $attribs->get('map_w4_2'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_2_image'); ?>'>">44</div>
 					<div class="map-popover w4_3" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_w4_3'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_3_image'); ?>'>">46</div>
+							data-content="<?php echo $attribs->get('map_w4_3'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_3_image'); ?>'>">46</div>
 					<div class="map-popover w4_4" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_w4_4'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_4_image'); ?>'>">48</div>
+							data-content="<?php echo $attribs->get('map_w4_4'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_4_image'); ?>'>">48</div>
 					<div class="map-popover w4_5" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_w4_5'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_5_image'); ?>'>">101</div>
+							data-content="<?php echo $attribs->get('map_w4_5'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_5_image'); ?>'>">101</div>
 					<div class="map-popover w4_6" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_w4_6'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_6_image'); ?>'>">102</div>
+							data-content="<?php echo $attribs->get('map_w4_6'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_w4_6_image'); ?>'>">102</div>
 					<div class="w4_outline"></div>
 				</div>
 				<div class="building-map wh">
 					<div class="map-popover wh_1" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_1'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_1_image'); ?>'>">87</div>
+							data-content="<?php echo $attribs->get('map_wh_1'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_1_image'); ?>'>">87</div>
 					<div class="map-popover wh_2" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_2'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_2_image'); ?>'>">89</div>
+							data-content="<?php echo $attribs->get('map_wh_2'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_2_image'); ?>'>">89</div>
 					<div class="map-popover wh_3" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_3'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_3_image'); ?>'>">95</div>
+							data-content="<?php echo $attribs->get('map_wh_3'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_3_image'); ?>'>">95</div>
 					<div class="map-popover wh_4" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_4'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_4_image'); ?>'>">97</div>
+							data-content="<?php echo $attribs->get('map_wh_4'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_4_image'); ?>'>">97</div>
 					<div class="map-popover wh_5" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_5'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_5_image'); ?>'>">106</div>
+							data-content="<?php echo $attribs->get('map_wh_5'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_5_image'); ?>'>">106</div>
 					<div class="map-popover wh_6" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_6'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_6_image'); ?>'>">108</div>
+							data-content="<?php echo $attribs->get('map_wh_6'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_6_image'); ?>'>">108</div>
 					<div class="map-popover wh_7" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_7'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_7_image'); ?>'>">114</div>
+							data-content="<?php echo $attribs->get('map_wh_7'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_7_image'); ?>'>">114</div>
 					<div class="map-popover wh_8" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_8'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_8_image'); ?>'>">102</div>
+							data-content="<?php echo $attribs->get('map_wh_8'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_8_image'); ?>'>">112</div>
 					<div class="map-popover wh_9" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_9'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_9_image'); ?>'>">104</div>
+							data-content="<?php echo $attribs->get('map_wh_9'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_9_image'); ?>'>">110</div>
 					<div class="map-popover wh_10" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_10'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_10_image'); ?>'>">110</div>
+							data-content="<?php echo $attribs->get('map_wh_10'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_10_image'); ?>'>">104</div>
 					<div class="map-popover wh_11" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_11'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_11_image'); ?>'>">112</div>
+							data-content="<?php echo $attribs->get('map_wh_11'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_11_image'); ?>'>">102</div>
 					<div class="map-popover wh_12" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_12'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_12_image'); ?>'>">85</div>
+							data-content="<?php echo $attribs->get('map_wh_12'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_12_image'); ?>'>">93</div>
 					<div class="map-popover wh_13" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_13'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_13_image'); ?>'>">91</div>
+							data-content="<?php echo $attribs->get('map_wh_13'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_13_image'); ?>'>">91</div>
 					<div class="map-popover wh_14" data-container="body" data-toggle="popover" data-placement="top" 
-							data-title="<?php echo $attribs->get('map_wh_14'); ?>" data-html="true" 
-						data-content="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_14_image'); ?>'>">93</div>
+							data-content="<?php echo $attribs->get('map_wh_14'); ?>" data-html="true" 
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_14_image'); ?>'>">85</div>
 					<div class="wh_outline"></div>
 			</div>
 			<div class="floor-label ground" style="display:none">Ground Floor</div>

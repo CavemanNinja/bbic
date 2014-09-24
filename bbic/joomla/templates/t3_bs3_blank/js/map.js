@@ -1,7 +1,12 @@
 jQuery(function(){
 	jQuery('.map-popover').popover({
-		animation: false
+		animation: false,
+		trigger: 'manual'
 	});
+	jQuery('.campus-map-popover').popover({
+		animation: false,
+		trigger: 'hover'
+	})
 	jQuery('#map-select').change(function(){
 		building = this.value.split('_');
 		drillDown(building[0]);
@@ -71,7 +76,7 @@ function drillDown(building) {
 			jQuery('.map-label > h2').text("Warehouses");
 			break;
 		case 'bdb':
-			jQuery('.map-label > h2').text("BDB Building");
+			jQuery('.map-label > h2').text("Building W2");
 			jQuery('.floor-label').show();
 			jQuery('.ground').css('left', '190px');
 			jQuery('.ground').css('top', '30px');
@@ -91,11 +96,6 @@ function drillDown(building) {
 			break;
 		case 'w3':
 			jQuery('.map-label > h2').text("Building W3");
-			jQuery('.floor-label').show();
-			jQuery('.ground').css('left', '190px');
-			jQuery('.ground').css('top', '30px');
-			jQuery('.first').css('top', '30px');
-			jQuery('.first').css('right', '220px');
 			break;
 	}
 	jQuery("#back-button").show();

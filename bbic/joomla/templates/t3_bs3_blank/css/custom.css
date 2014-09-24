@@ -1019,3 +1019,24 @@ div.st_tabs > div > ul {
   padding: 15px;
 }
 
+/* LOGIN MODULE */
+.inline-control-group {
+  display: inline !important;
+  white-space: nowrap;
+
+}
+#form-login-remember {
+  margin-bottom: 0px;
+  top: 10px !important;
+  padding-left: 10px;
+}
+
+ #mod-login-remember-label {
+  padding: 0px;
+  vertical-align: bottom;
+ }
+
+ #modlgn-remember {
+  vertical-align: bottom;
+  margin-bottom: 4px !important;
+ }

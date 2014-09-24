@@ -19,6 +19,18 @@
   cursor: pointer;
 }
 
+/*popover*/
+.popover-title {
+  background-color: #fff !important;
+}
+
+.popover-content  {
+  background-color: #ffffff;
+}
+
+.arrow {
+  /*border-top-color: #f !important;*/
+}
 /* Unit numbers text */
 
 .building8, .lota, .lotb, 
@@ -58,6 +70,12 @@
 
 .text-small {
   font-size: 12px;
+}
+.text-unit-46 {
+  bottom: 0;
+  left: 1px;
+  position: absolute;
+  font-size: 9px;
 }
 
 .text-rotate {
