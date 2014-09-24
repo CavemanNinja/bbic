@@ -20,8 +20,14 @@ jQuery(function(){
 		jQuery('#map-select').val('0');
 		jQuery('.building-map').hide();
 		jQuery('.campus').fadeIn();
+		jQuery('.map-label > h2').text("BBIC Campus");
+		jQuery('.floor-label').hide();
 		jQuery(this).hide();
-	})
+	});
+
+	// jQuery('.building-img').error(function(){
+	// 	jQuery(this).hide();
+	// });
 });
 
 function drillDown(building) {
@@ -30,6 +36,68 @@ function drillDown(building) {
 		jQuery('.building-map').hide();
 	jQuery('.campus').hide();
 	jQuery('.'+building).fadeIn();
+	switch(building) {
+		case 'building8':
+			jQuery('.map-label > h2').text("Building 8");
+			break;
+		case 'a1':
+			jQuery('.map-label > h2').text("Lot A");
+			break;
+		case 'a2':
+			jQuery('.map-label > h2').text("Lot A");
+			break;
+		case 'a3':
+			jQuery('.map-label > h2').text("Lot A");
+			break;
+		case 'b1':
+			jQuery('.map-label > h2').text("Lot B");
+			break;
+		case 'b2':
+			jQuery('.map-label > h2').text("Lot B");
+			break;
+		case 'b3':
+			jQuery('.map-label > h2').text("Lot B");
+			break;
+		case 'c1':
+			jQuery('.map-label > h2').text("Lot C");
+			break;
+		case 'c2':
+			jQuery('.map-label > h2').text("Lot C");
+			break;
+		case 'c3':
+			jQuery('.map-label > h2').text("Lot C");
+			break;
+		case 'wh':
+			jQuery('.map-label > h2').text("Warehouses");
+			break;
+		case 'bdb':
+			jQuery('.map-label > h2').text("BDB Building");
+			jQuery('.floor-label').show();
+			jQuery('.ground').css('left', '190px');
+			jQuery('.ground').css('top', '30px');
+			jQuery('.first').css('top', '30px');
+			jQuery('.first').css('right', '220px');
+			break;
+		case 'w1':
+			jQuery('.map-label > h2').text("Building W1");
+			jQuery('.floor-label').show();
+			jQuery('.ground').css('left', '190px');
+			jQuery('.ground').css('top', '30px');
+			jQuery('.first').css('top', '30px');
+			jQuery('.first').css('right', '220px');
+			break;
+		case 'w4':
+			jQuery('.map-label > h2').text("Building W4");
+			break;
+		case 'w3':
+			jQuery('.map-label > h2').text("Building W3");
+			jQuery('.floor-label').show();
+			jQuery('.ground').css('left', '190px');
+			jQuery('.ground').css('top', '30px');
+			jQuery('.first').css('top', '30px');
+			jQuery('.first').css('right', '220px');
+			break;
+	}
 	jQuery("#back-button").show();
 }
 function selectOffice(office) {

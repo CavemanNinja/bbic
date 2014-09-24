@@ -131,8 +131,8 @@
 			"file": "joomla/configuration.php",
 			"settings":
 			{
-				"buffer_size": 2883,
-				"line_ending": "Windows"
+				"buffer_size": 2709,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -155,7 +155,7 @@
 			"file": "joomla/templates/t3_bs3_blank/etc/extrafields/map.xml",
 			"settings":
 			{
-				"buffer_size": 27838,
+				"buffer_size": 65757,
 				"line_ending": "Windows"
 			}
 		},
@@ -176,18 +176,10 @@
 			}
 		},
 		{
-			"file": "joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
-			"settings":
-			{
-				"buffer_size": 95195,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "joomla/templates/t3_bs3_blank/js/map.js",
 			"settings":
 			{
-				"buffer_size": 1043,
+				"buffer_size": 1125,
 				"line_ending": "Windows"
 			}
 		},
@@ -203,7 +195,15 @@
 			"file": "/C/wamp/logs/php_error.log",
 			"settings":
 			{
-				"buffer_size": 3793369,
+				"buffer_size": 3833787,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/administrator/components/com_media/controllers/file.php",
+			"settings":
+			{
+				"buffer_size": 8374,
 				"line_ending": "Windows"
 			}
 		},
@@ -212,6 +212,22 @@
 			"settings":
 			{
 				"buffer_size": 37909,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
+			"settings":
+			{
+				"buffer_size": 122220,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n				\n				",
+			"settings":
+			{
+				"buffer_size": 10,
 				"line_ending": "Windows"
 			}
 		}
@@ -377,6 +393,25 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"'); ?>'\">",
+			"alt=\"\"",
+			"; ?>'\">",
+			"w4_1",
+			"bdb_1_1st",
+			"bdb_1_g",
+			"w3_1_1st",
+			"w3_1_g",
+			"w1_1_1st",
+			"w1_1_g",
+			"lotc_1",
+			"lotb_1",
+			"lota_1",
+			"building8_1",
+			"\">",
+			"</i",
+			"<i",
+			"title",
+			"data-content",
 			"description",
 			"label",
 			"field",
@@ -444,6 +479,25 @@
 		"regex": false,
 		"replace_history":
 		[
+			"'); ?>'>\">",
+			"alt=''",
+			"; ?>'>\">",
+			"wh_1",
+			"w4_1",
+			"bdb_1_1st",
+			"bdb_1_g",
+			"w3_1_1st",
+			"w3_1_g",
+			"w1_1_1st",
+			"w1_1_g",
+			"lotc_1",
+			"lotb_1",
+			"lota_1",
+			"\" data-html=\"true\" \n						data-content=\"<img class='building-img' alt=\"\" height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'\">",
+			"\" data-html=\"true\" data-content=\"<img class='building-img' alt=\"\" height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'\">",
+			"</div",
+			"<div",
+			"content",
 			"_g",
 			"bdb",
 			"w3",
@@ -482,7 +536,7 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -491,15 +545,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2883,
+						"buffer_size": 2709,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								506,
-								506
+								1758,
+								1758
 							]
 						],
 						"settings":
@@ -507,11 +561,11 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -541,7 +595,7 @@
 						"translation.y": 4351.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -571,7 +625,7 @@
 						"translation.y": 15477.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -580,15 +634,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 27838,
+						"buffer_size": 65757,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								27799,
-								27799
+								4483,
+								4741
 							]
 						],
 						"settings":
@@ -598,10 +652,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 15447.0,
+						"translation.y": 2292.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -626,7 +680,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4703.0,
+						"translation.y": 905.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
@@ -654,56 +708,27 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1623.0,
+						"translation.y": 363.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 95195,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								57888,
-								57888
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 24018.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "joomla/templates/t3_bs3_blank/js/map.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1043,
+						"buffer_size": 1125,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								805,
-								805
+								733,
+								654
 							]
 						],
 						"settings":
@@ -714,11 +739,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
 					"semi_transient": false,
 					"settings":
@@ -743,24 +768,24 @@
 						"translation.y": 26343.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "/C/wamp/logs/php_error.log",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3793369,
+						"buffer_size": 3833787,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3793369,
-								3793369
+								3827625,
+								3830704
 							]
 						],
 						"settings":
@@ -768,10 +793,39 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1012518.0,
+						"translation.y": 1023630.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "joomla/administrator/components/com_media/controllers/file.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
@@ -787,7 +841,7 @@
 						"selection":
 						[
 							[
-								37909,
+								0,
 								37909
 							]
 						],
@@ -798,10 +852,67 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1284.0,
+						"translation.y": 852.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 122220,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58289,
+								58289
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 24093.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10,
+								10
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]

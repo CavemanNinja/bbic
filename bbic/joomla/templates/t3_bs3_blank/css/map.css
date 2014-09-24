@@ -28,6 +28,28 @@
   font-size: 14px;
 }
 
+.map-label {
+  text-align: left;
+}
+
+.floor-label {
+  color: rgb(12, 118, 187);
+  /*display: block;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+.ground {
+  text-align: left;
+  left: 0px;
+  position: absolute;
+}
+.first {
+  text-align: right;
+  right: 0px;
+  position: absolute;
+}
+
 .text-bottom {
   bottom: 0;
   left: 4px;

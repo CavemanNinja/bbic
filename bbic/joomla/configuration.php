@@ -20,7 +20,7 @@ class JConfig {
 	public $host = 'us-cdbr-iron-east-01.cleardb.net';
 	public $user = 'b2c8d807e51feb';
 	public $password = '3f32f546';
-	
+
 	public $db = 'heroku_e299eddf77acc03';
 	public $dbprefix = 'yzhv6_';
 	public $live_site = '';
@@ -60,8 +60,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '5';
-	public $log_path = '/var/www/html/joomla/logs';
-	public $tmp_path = '/var/www/html/joomla/tmp';
+	public $log_path = '/log';
+	public $tmp_path = '/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $memcache_persist = '1';
