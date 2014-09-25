@@ -1489,9 +1489,16 @@ JHtml::_('bootstrap.tooltip');
 					<div class="map-popover building8 building8_31" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_building8_31'); ?>" data-html="true" 
 						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_31_image'); ?>'>"></div>
-					<div class="map-popover building8 building8_32 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-content="<?php echo $attribs->get('map_building8_32'); ?>" data-html="true" 
-						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_32_image'); ?>'>">BBIC Admin</div>
+					
+					<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+						<div class="map-popover building8 building8_32 text-small" data-container="body" data-toggle="popover" data-placement="top" 
+							data-content="<?php echo $attribs->get('map_building8_32'); ?>" data-html="true" 
+							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_32_image'); ?>'>">الادارة</div>
+					<?php else : ?>
+						<div class="map-popover building8 building8_32 text-small" data-container="body" data-toggle="popover" data-placement="top" 
+							data-content="<?php echo $attribs->get('map_building8_32'); ?>" data-html="true" 
+							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_32_image'); ?>'>">BBIC Admin</div>
+					<?php endif; ?>
 					<div class="map-popover building8 building8_33" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_building8_33'); ?>" data-html="true" 
 						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_33_image'); ?>'>"></div>
@@ -1534,9 +1541,17 @@ JHtml::_('bootstrap.tooltip');
 					<div class="map-popover building8 building8_46 text-small" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_building8_46'); ?>" data-html="true" 
 						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_46_image'); ?>'>">43</div>
-					<div class="map-popover building8 building8_47 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-						data-content="<?php echo $attribs->get('map_building8_47'); ?>" data-html="true" 
-						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-unit-46">BBIC<br/>Admin</span></div>
+						<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+							<div class="map-popover building8 building8_47 text-small" data-container="body" data-toggle="popover" data-placement="top" 
+								data-content="<?php echo $attribs->get('map_building8_47'); ?>" data-html="true" 
+								data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-unit-46">الادارة</span></div>
+					<?php else : ?>
+							<div class="map-popover building8 building8_47 text-small" data-container="body" data-toggle="popover" data-placement="top" 
+								data-content="<?php echo $attribs->get('map_building8_47'); ?>" data-html="true" 
+								data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-unit-46">BBIC<br/>Admin</span></div>
+					<?php endif; ?>
+
+
 				</div>
 				<div class="building-map lota a1 a2 a3">
 					<div class="map-popover lota_1" data-container="body" data-toggle="popover" data-placement="top" 
@@ -1796,10 +1811,15 @@ JHtml::_('bootstrap.tooltip');
 					<div class="map-popover bdb_14_g" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_bdb_14_g'); ?>" data-html="true" 
 						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_14_g_image'); ?>'>"></div>
-					<div class="map-popover bdb_15_g" data-container="body" data-toggle="popover" data-placement="top" 
+					<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+						<div class="map-popover bdb_15_g" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_bdb_15_g'); ?>" data-html="true" 
-						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_15_g_image'); ?>'>">Bank</div>
-					
+						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_15_g_image'); ?>'>">بنك</div>
+					<?php else : ?>
+						<div class="map-popover bdb_15_g" data-container="body" data-toggle="popover" data-placement="top" 
+							data-content="<?php echo $attribs->get('map_bdb_15_g'); ?>" data-html="true" 
+							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_15_g_image'); ?>'>">Bank</div>
+					<?php endif; ?>
 					<div class="map-popover bdb_1_1st" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_bdb_1_1st'); ?>" data-html="true" 
 						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_bdb_1_1st_image'); ?>'>">103</div>
