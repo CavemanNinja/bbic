@@ -22,6 +22,12 @@
             description="TPL_MAP_BUILDING8_1_IMAGE_DESC"
          />
          <field 
+            name="map_building8_1_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_1_LINK"
+            description="TPL_MAP_BUILDING8_1_LINK_DESC"
+         />
+         <field 
             name="map_building8_2" 
             type="text" 
             label="TPL_MAP_BUILDING8_2"

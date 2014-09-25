@@ -1397,10 +1397,24 @@ JHtml::_('bootstrap.tooltip');
 					<i class="building8_outline"></i>
 					<i class="building8_reception"></i>
 
+					<!-- 
+						if there is no image, do not include data title 
+						if there is no link do not use <a> in name.
+					-->
 
-					<div class="map-popover building8 building8_1" data-container="body" data-toggle="popover" data-placement="top" 
-						data-content="<?php echo $attribs->get('map_building8_1'); ?>" data-html="true" 
-						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'>">16</div>
+
+
+					
+					<div class="map-popover building8 building8_1" data-container="body" data-toggle="popover" data-placement="top" data-html="true"
+						<?php if ($attribs->get('map_building8_1_link') != "") : ?>	
+							data-content="<a href='<?php echo $attribs->get('map_building8_1_link'); ?>'><?php echo $attribs->get('map_building8_1'); ?></a>" 
+						<?php else : ?>
+							data-content="<?php echo $attribs->get('map_building8_1'); ?>"  
+						<?php endif; ?>
+						<?php if ($attribs->get('map_building8_1_image') != "") : ?>
+							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'>"
+						<?php endif; ?>
+						>16</div>
 
 					<div class="map-popover building8 building8_2" data-container="body" data-toggle="popover" data-placement="top" 
 						data-content="<?php echo $attribs->get('map_building8_2'); ?>" data-html="true" 
