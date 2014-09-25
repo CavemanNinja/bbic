@@ -44,6 +44,10 @@
   text-align: left;
 }
 
+.map-label-ar {
+  text-align: right;
+}
+
 .floor-label {
   color: rgb(12, 118, 187);
   /*display: block;*/

@@ -16,7 +16,10 @@ JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css'
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/map.css', array(), true);
 
 JHtml::_('bootstrap.framework');
-JHtml::script(JUri::base().'templates/t3_bs3_blank/js/map.js', false, true);
+if (JFactory::getLanguage()->get('tag') == "ar-AA")
+	JHtml::script(JUri::base().'templates/t3_bs3_blank/js/map-ar.js', false, true);
+else
+	JHtml::script(JUri::base().'templates/t3_bs3_blank/js/map.js', false, true);
 // JHtml::script(JUri::base().'templates/t3_bs3_blank/js/hideTenantModules.js', false, true);
 
 // <script type="text/javascript">
@@ -92,6 +95,12 @@ if ($catid == "11" || $catid == "17" || $catid == "29") {
 JHtml::_('behavior.caption');
 JHtml::_('bootstrap.tooltip');
 ?>
+
+<!-- LOAD BOOTSTRAP RTL (ARABIC) 
+<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+	<link rel="stylesheet" href="/bbic/joomla/templates/t3_bs3_blank/css/rtl/bootstrap-rtl.css" type="text/css">
+	<script src="/bbic/joomla/templates/t3_bs3_blank/js/bootstrap.min.rtl.js" type="text/javascript"></script>
+<?php endif; ?>-->
 
 <?php if ($this->params->get('show_page_heading', 1)) : ?>
 	<div class="page-header clearfix">
@@ -802,7 +811,11 @@ JHtml::_('bootstrap.tooltip');
 			<?php echo $this->item->text; ?>
 
 			<select id="map-select">
-				<option value="0" disabled selected> -- Select a business name -- </option>
+				<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+					<option value="0" disabled selected> -- اختر متجر تجاري -- </option>
+				<?php else : ?>
+					<option value="0" disabled selected> -- Select a business name -- </option>
+				<?php endif; ?>
 				<?php 
 					if ($attribs->get('map_building8_1') != "") {
 						echo "<option value='building8_1'>".$attribs->get('map_building8_1')."</option>";
@@ -1308,25 +1321,48 @@ JHtml::_('bootstrap.tooltip');
 				?>
 			</select>
 			<br/>
-			<button id="back-button" class="btn btn-primary" style="display:none"><i class="glyphicon glyphicon-arrow-left" ></i>  Back</button>
-			<div class="map-label"><h2>BBIC Campus</h2></div>
+			<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+				<button id="back-button" class="btn btn-primary" style="display:none"><i class="glyphicon glyphicon-arrow-right" ></i>  رجوع</button>
+				<div class="map-label-ar"><h2>مركز البحرين للصناعات الناشئة</h2></div>
+			<?php else : ?>
+				<button id="back-button" class="btn btn-primary" style="display:none"><i class="glyphicon glyphicon-arrow-left" ></i>  Back</button>
+				<div class="map-label"><h2>BBIC Campus</h2></div>
+			<?php endif; ?>
 			<div class="bbic-map">
 				<div class="campus">
-					<i class="campus_building_building8 campus-map-popover cursor-pointer" data-content="Building 8" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_w1 cursor-pointer campus-map-popover" data-content="W1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_bdb cursor-pointer campus-map-popover" data-content="W2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_w3 cursor-pointer campus-map-popover" data-content="W3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_w4 cursor-pointer campus-map-popover" data-content="W4" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_a1 cursor-pointer campus-map-popover" data-content="A1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_a2 cursor-pointer campus-map-popover" data-content="A2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_a3 cursor-pointer campus-map-popover" data-content="A3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_b1 cursor-pointer campus-map-popover" data-content="B1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_b2 cursor-pointer campus-map-popover" data-content="B2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_b3 cursor-pointer campus-map-popover" data-content="B3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_c1 cursor-pointer campus-map-popover" data-content="C1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_c2 cursor-pointer campus-map-popover" data-content="C2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_c3 cursor-pointer campus-map-popover" data-content="C3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
-					<i class="campus_building_wh cursor-pointer campus-map-popover" data-content="Warehouses" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+						<i class="campus_building_building8 campus-map-popover cursor-pointer" data-content="مبنى 8" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_w1 cursor-pointer campus-map-popover" data-content="W1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_bdb cursor-pointer campus-map-popover" data-content="W2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_w3 cursor-pointer campus-map-popover" data-content="W3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_w4 cursor-pointer campus-map-popover" data-content="W4" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_a1 cursor-pointer campus-map-popover" data-content="A1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_a2 cursor-pointer campus-map-popover" data-content="A2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_a3 cursor-pointer campus-map-popover" data-content="A3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_b1 cursor-pointer campus-map-popover" data-content="B1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_b2 cursor-pointer campus-map-popover" data-content="B2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_b3 cursor-pointer campus-map-popover" data-content="B3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_c1 cursor-pointer campus-map-popover" data-content="C1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_c2 cursor-pointer campus-map-popover" data-content="C2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_c3 cursor-pointer campus-map-popover" data-content="C3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_wh cursor-pointer campus-map-popover" data-content="ورشات" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<?php else : ?>
+						<i class="campus_building_building8 campus-map-popover cursor-pointer" data-content="Building 8" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_w1 cursor-pointer campus-map-popover" data-content="W1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_bdb cursor-pointer campus-map-popover" data-content="W2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_w3 cursor-pointer campus-map-popover" data-content="W3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_w4 cursor-pointer campus-map-popover" data-content="W4" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_a1 cursor-pointer campus-map-popover" data-content="A1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_a2 cursor-pointer campus-map-popover" data-content="A2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_a3 cursor-pointer campus-map-popover" data-content="A3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_b1 cursor-pointer campus-map-popover" data-content="B1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_b2 cursor-pointer campus-map-popover" data-content="B2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_b3 cursor-pointer campus-map-popover" data-content="B3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_c1 cursor-pointer campus-map-popover" data-content="C1" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_c2 cursor-pointer campus-map-popover" data-content="C2" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_c3 cursor-pointer campus-map-popover" data-content="C3" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+						<i class="campus_building_wh cursor-pointer campus-map-popover" data-content="Warehouses" data-trigger="hover" data-placement="top" data-container="body" data-toggle="popover"></i>
+					<?php endif; ?>
 					<!-- <i class="campus_building_d2"></i>
 					<i class="campus_building_d1"></i>
 					<i class="campus_building_d2"></i>
@@ -1881,8 +1917,14 @@ JHtml::_('bootstrap.tooltip');
 						data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_wh_14_image'); ?>'>">85</div>
 					<div class="wh_outline"></div>
 			</div>
-			<div class="floor-label ground" style="display:none">Ground Floor</div>
-			<div class="floor-label first" style="display:none">First Floor</div>
+
+			<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+				<div class="floor-label ground" style="display:none">الطابق الأرضي</div>
+				<div class="floor-label first" style="display:none">الطابق الأول</div>
+			<?php else : ?>
+				<div class="floor-label ground" style="display:none">Ground Floor</div>
+				<div class="floor-label first" style="display:none">First Floor</div>
+			<?php endif; ?>
 		</section>
 
 	  <!-- footer -->
