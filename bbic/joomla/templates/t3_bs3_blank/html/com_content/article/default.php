@@ -1402,6 +1402,48 @@ JHtml::_('bootstrap.tooltip');
 						if there is no link do not use <a> in name.
 					-->
 
+					<?php 
+						$units = ["building8_1" => "16", "building8_2" => "18", "building8_3" => "20",
+										"building8_4" => "22", "building8_5" => "", "building8_6" => "26",
+										"building8_7" => "28", "building8_8" => "30", "building8_9" => "<span class=\"text-bottom\">32</span>",
+										"building8_10" => "34", "building8_11" => "36", "building8_12" => "38",
+										"building8_13" => "40", "building8_14" => "42", "building8_15" => "<span class=\"text-bottom\">44</span>",
+										"building8_16" => "14", "building8_14" => "12", "building8_18" => "10",
+										"building8_20" => "6", "building8_21" => "4", "building8_22" => "2",
+										"building8_23" => "77", "building8_24" => "39", "building8_25" => "41",
+										"building8_26" => "78", "building8_27" => "11", "building8_28" => "55",
+										"building8_29" => "9", "building8_30" => "57", "building8_31" => "",
+										"building8_32" => "BBIC Admin", "building8_33" => "", "building8_34" => "",
+										"building8_35" => "33", "building8_36" => "35", "building8_37" => "37",
+										"building8_38" => "75", "building8_39" => "76", "building8_40" => "71",
+										"building8_41" => "69", "building8_42" => "74", "building8_43" => "72",
+										"building8_44" => "67", "building8_45" => "73", "building8_46" => "43",
+										"building8_47" => "<span class=\"text-unit-46\">BBIC<br/>Admin</span>"
+									]; 
+						if (JFactory::getLanguage()->get('tag') == "ar-AA") {
+							$units["building8_32"] = "الادارة";
+							$units["building8_47"] = "<span class=\"text-unit-46\">الادارة</span>";
+						}
+
+					?>
+
+					<?php foreach($units as $unit => $label) : ?>
+						<div class="map-popover building8 <?php echo $unit; ?>" data-container="body" data-toggle="popover" data-placement="top" data-html="true"
+						<?php if ($attribs->get('map_'. $unit .'_link') != "") : ?>	
+							data-content="<a href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>'><?php echo $attribs->get('map_'.$unit); ?></a>" 
+						<?php else : ?>
+							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
+						<?php endif; ?>
+						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
+							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+						<?php endif; ?>
+						><?php echo $label; ?></div>	
+					<?php endforeach; ?>
+
+
+					
+<!--
+
 
 
 					
@@ -1558,14 +1600,14 @@ JHtml::_('bootstrap.tooltip');
 						<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
 							<div class="map-popover building8 building8_47 text-small" data-container="body" data-toggle="popover" data-placement="top" 
 								data-content="<?php echo $attribs->get('map_building8_47'); ?>" data-html="true" 
-								data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-unit-46">الادارة</span></div>
-					<?php else : ?>
-							<div class="map-popover building8 building8_47 text-small" data-container="body" data-toggle="popover" data-placement="top" 
-								data-content="<?php echo $attribs->get('map_building8_47'); ?>" data-html="true" 
-								data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-unit-46">BBIC<br/>Admin</span></div>
-					<?php endif; ?>
+								data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-unit-47">الادارة</span></div>
+						<?php else : ?>
+								<div class="map-popover building8 building8_47 text-small" data-container="body" data-toggle="popover" data-placement="top" 
+									data-content="<?php echo $attribs->get('map_building8_47'); ?>" data-html="true" 
+									data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_47_image'); ?>'>"><span class="text-unit-47">BBIC<br/>Admin</span></div>
+						<?php endif; ?>
 
-
+-->
 				</div>
 				<div class="building-map lota a1 a2 a3">
 					<div class="map-popover lota_1" data-container="body" data-toggle="popover" data-placement="top" 
