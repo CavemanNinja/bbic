@@ -12,15 +12,9 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
-	
 	public $host = 'localhost';
 	public $user = 'root';
 	public $password = '';
-	
-	// public $host = 'us-cdbr-iron-east-01.cleardb.net';
-	// public $user = 'b2c8d807e51feb';
-	// public $password = '3f32f546';
-
 	public $db = 'heroku_e299eddf77acc03';
 	public $dbprefix = 'yzhv6_';
 	public $live_site = '';
@@ -35,17 +29,17 @@ class JConfig {
 	public $ftp_root = '';
 	public $ftp_enable = '0';
 	public $offset = 'UTC';
-	public $mailonline = '0';
-	public $mailer = 'mail';
-	public $mailfrom = 'admin@bbicbahrain.com';
-	public $fromname = 'BBIC';
+	public $mailonline = '1';
+	public $mailer = 'smtp';
+	public $mailfrom = 'bbiconlinemailer@gmail.com';
+	public $fromname = 'BBIC Online';
 	public $sendmail = '/usr/sbin/sendmail';
-	public $smtpauth = '0';
-	public $smtpuser = '';
-	public $smtppass = '';
-	public $smtphost = 'localhost';
-	public $smtpsecure = 'none';
-	public $smtpport = '25';
+	public $smtpauth = '1';
+	public $smtpuser = 'bbiconlinemailer@gmail.com';
+	public $smtppass = 'bbicmailerpw';
+	public $smtphost = 'smtp.gmail.com';
+	public $smtpsecure = 'ssl';
+	public $smtpport = '465';
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
