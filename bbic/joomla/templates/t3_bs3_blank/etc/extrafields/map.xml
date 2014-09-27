@@ -42,6 +42,12 @@
             description="TPL_MAP_BUILDING8_2_IMAGE_DESC"
          />
          <field 
+            name="map_building8_2_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_2_LINK"
+            description="TPL_MAP_BUILDING8_2_LINK_DESC"
+         />
+         <field 
             name="map_building8_3" 
             type="text" 
             label="TPL_MAP_BUILDING8_3"
@@ -54,6 +60,12 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_3_IMAGE"
             description="TPL_MAP_BUILDING8_3_IMAGE_DESC"
+         />
+         <field 
+            name="map_building8_3_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_3_LINK"
+            description="TPL_MAP_BUILDING8_3_LINK_DESC"
          />
          <field 
             name="map_building8_4" 
@@ -70,6 +82,12 @@
             description="TPL_MAP_BUILDING8_4_IMAGE_DESC"
          />
          <field 
+            name="map_building8_4_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_4_LINK"
+            description="TPL_MAP_BUILDING8_4_LINK_DESC"
+         />
+         <field 
             name="map_building8_5" 
             type="text" 
             label="TPL_MAP_BUILDING8_5"
@@ -82,6 +100,12 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_5_IMAGE"
             description="TPL_MAP_BUILDING8_5_IMAGE_DESC"
+         />
+         <field 
+            name="map_building8_5_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_5_LINK"
+            description="TPL_MAP_BUILDING8_5_LINK_DESC"
          />
          <field 
             name="map_building8_6" 
@@ -98,6 +122,12 @@
             description="TPL_MAP_BUILDING8_6_IMAGE_DESC"
          />
          <field 
+            name="map_building8_6_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_6_LINK"
+            description="TPL_MAP_BUILDING8_6_LINK_DESC"
+         />    
+         <field 
             name="map_building8_7" 
             type="text" 
             label="TPL_MAP_BUILDING8_7"
@@ -110,6 +140,12 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_7_IMAGE"
             description="TPL_MAP_BUILDING8_7_IMAGE_DESC"
+         />
+         <field 
+            name="map_building8_7_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_7_LINK"
+            description="TPL_MAP_BUILDING8_7_LINK_DESC"
          />
          <field 
             name="map_building8_8" 
@@ -126,6 +162,12 @@
             description="TPL_MAP_BUILDING8_8_IMAGE_DESC"
          />
          <field 
+            name="map_building8_8_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_8_LINK"
+            description="TPL_MAP_BUILDING8_8_LINK_DESC"
+         />   
+         <field 
             name="map_building8_9" 
             type="text" 
             label="TPL_MAP_BUILDING8_9"
@@ -139,6 +181,12 @@
             label="TPL_MAP_BUILDING8_9_IMAGE"
             description="TPL_MAP_BUILDING8_9_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_9_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_9_LINK"
+            description="TPL_MAP_BUILDING8_9_LINK_DESC"
+         />    
          <field 
             name="map_building8_10" 
             type="text" 
@@ -154,6 +202,12 @@
             description="TPL_MAP_BUILDING8_10_IMAGE_DESC"
          />
          <field 
+            name="map_building8_10_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_10_LINK"
+            description="TPL_MAP_BUILDING8_10_LINK_DESC"
+         />  
+         <field 
             name="map_building8_11" 
             type="text" 
             label="TPL_MAP_BUILDING8_11"
@@ -167,6 +221,12 @@
             label="TPL_MAP_BUILDING8_11_IMAGE"
             description="TPL_MAP_BUILDING8_11_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_11_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_11_LINK"
+            description="TPL_MAP_BUILDING8_11_LINK_DESC"
+         />       
          <field 
             name="map_building8_12" 
             type="text" 
@@ -182,6 +242,12 @@
             description="TPL_MAP_BUILDING8_12_IMAGE_DESC"
          />
          <field 
+            name="map_building8_12_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_12_LINK"
+            description="TPL_MAP_BUILDING8_12_LINK_DESC"
+         />       
+         <field 
             name="map_building8_13" 
             type="text" 
             label="TPL_MAP_BUILDING8_13"
@@ -195,6 +261,12 @@
             label="TPL_MAP_BUILDING8_13_IMAGE"
             description="TPL_MAP_BUILDING8_13_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_13_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_13_LINK"
+            description="TPL_MAP_BUILDING8_13_LINK_DESC"
+         />    
          <field 
             name="map_building8_14" 
             type="text" 
@@ -210,6 +282,12 @@
             description="TPL_MAP_BUILDING8_14_IMAGE_DESC"
          />
          <field 
+            name="map_building8_14_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_14_LINK"
+            description="TPL_MAP_BUILDING8_14_LINK_DESC"
+         />     
+         <field 
             name="map_building8_15" 
             type="text" 
             label="TPL_MAP_BUILDING8_15"
@@ -223,6 +301,12 @@
             label="TPL_MAP_BUILDING8_15_IMAGE"
             description="TPL_MAP_BUILDING8_15_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_15_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_15_LINK"
+            description="TPL_MAP_BUILDING8_15_LINK_DESC"
+         />     
          <field 
             name="map_building8_16" 
             type="text" 
@@ -238,6 +322,12 @@
             description="TPL_MAP_BUILDING8_16_IMAGE_DESC"
          />
          <field 
+            name="map_building8_16_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_16_LINK"
+            description="TPL_MAP_BUILDING8_16_LINK_DESC"
+         /> 
+         <field 
             name="map_building8_17" 
             type="text" 
             label="TPL_MAP_BUILDING8_17"
@@ -251,6 +341,12 @@
             label="TPL_MAP_BUILDING8_17_IMAGE"
             description="TPL_MAP_BUILDING8_17_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_17_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_17_LINK"
+            description="TPL_MAP_BUILDING8_17_LINK_DESC"
+         />   
          <field 
             name="map_building8_18" 
             type="text" 
@@ -266,6 +362,12 @@
             description="TPL_MAP_BUILDING8_18_IMAGE_DESC"
          />
          <field 
+            name="map_building8_18_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_18_LINK"
+            description="TPL_MAP_BUILDING8_18_LINK_DESC"
+         />     
+         <field 
             name="map_building8_20" 
             type="text" 
             label="TPL_MAP_BUILDING8_20"
@@ -279,6 +381,12 @@
             label="TPL_MAP_BUILDING8_20_IMAGE"
             description="TPL_MAP_BUILDING8_20_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_20_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_20_LINK"
+            description="TPL_MAP_BUILDING8_20_LINK_DESC"
+         />     
          <field 
             name="map_building8_21" 
             type="text" 
@@ -294,6 +402,12 @@
             description="TPL_MAP_BUILDING8_21_IMAGE_DESC"
          />
          <field 
+            name="map_building8_21_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_21_LINK"
+            description="TPL_MAP_BUILDING8_21_LINK_DESC"
+         />   
+         <field 
             name="map_building8_22" 
             type="text" 
             label="TPL_MAP_BUILDING8_22"
@@ -307,6 +421,12 @@
             label="TPL_MAP_BUILDING8_22_IMAGE"
             description="TPL_MAP_BUILDING8_22_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_22_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_22_LINK"
+            description="TPL_MAP_BUILDING8_22_LINK_DESC"
+         />     
          <field 
             name="map_building8_23" 
             type="text" 
@@ -322,6 +442,12 @@
             description="TPL_MAP_BUILDING8_23_IMAGE_DESC"
          />
          <field 
+            name="map_building8_23_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_23_LINK"
+            description="TPL_MAP_BUILDING8_23_LINK_DESC"
+         />   
+         <field 
             name="map_building8_24" 
             type="text" 
             label="TPL_MAP_BUILDING8_24"
@@ -335,6 +461,12 @@
             label="TPL_MAP_BUILDING8_24_IMAGE"
             description="TPL_MAP_BUILDING8_24_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_24_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_24_LINK"
+            description="TPL_MAP_BUILDING8_24_LINK_DESC"
+         />  
          <field 
             name="map_building8_25" 
             type="text" 
@@ -350,6 +482,12 @@
             description="TPL_MAP_BUILDING8_25_IMAGE_DESC"
          />
          <field 
+            name="map_building8_25_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_25_LINK"
+            description="TPL_MAP_BUILDING8_25_LINK_DESC"
+         />  
+         <field 
             name="map_building8_26" 
             type="text" 
             label="TPL_MAP_BUILDING8_26"
@@ -363,6 +501,12 @@
             label="TPL_MAP_BUILDING8_26_IMAGE"
             description="TPL_MAP_BUILDING8_26_IMAGE_DESC"
          />
+         <field 
+            name="map_building8_26_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_26_LINK"
+            description="TPL_MAP_BUILDING8_26_LINK_DESC"
+         />       
          <field 
             name="map_building8_27" 
             type="text" 
@@ -378,6 +522,12 @@
             description="TPL_MAP_BUILDING8_27_IMAGE_DESC"
          />
          <field 
+            name="map_building8_27_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_27_LINK"
+            description="TPL_MAP_BUILDING8_27_LINK_DESC"
+         />    
+         <field 
             name="map_building8_28" 
             type="text" 
             label="TPL_MAP_BUILDING8_28"
@@ -392,6 +542,12 @@
             description="TPL_MAP_BUILDING8_28_IMAGE_DESC"
          />
          <field 
+            name="map_building8_28_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_28_LINK"
+            description="TPL_MAP_BUILDING8_28_LINK_DESC"
+         />    
+         <field 
             name="map_building8_29" 
             type="text" 
             label="TPL_MAP_BUILDING8_29"
@@ -404,8 +560,13 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_29_IMAGE"
             description="TPL_MAP_BUILDING8_29_IMAGE_DESC"
-            
          />
+         <field 
+            name="map_building8_29_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_29_LINK"
+            description="TPL_MAP_BUILDING8_29_LINK_DESC"
+         />     
          <field 
             name="map_building8_30" 
             type="text" 
@@ -419,7 +580,13 @@
             directory="map_images"             
             label="TPL_MAP_BUILDING8_30_IMAGE"
             description="TPL_MAP_BUILDING8_30_IMAGE_DESC"            
-         />      
+         /> 
+         <field 
+            name="map_building8_30_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_30_LINK"
+            description="TPL_MAP_BUILDING8_30_LINK_DESC"
+         />          
          <field 
             name="map_building8_32" 
             type="text"             
@@ -435,6 +602,12 @@
             description="TPL_MAP_BUILDING8_32_IMAGE_DESC"
          />
          <field 
+            name="map_building8_32_link" 
+            type="text"             
+            label="TPL_MAP_BUILDING8_32_LINK"
+            description="TPL_MAP_BUILDING8_32_LINK_DESC"            
+         />   
+         <field 
             name="map_building8_33" 
             type="text" 
             label="TPL_MAP_BUILDING8_33"
@@ -449,6 +622,12 @@
             description="TPL_MAP_BUILDING8_33_IMAGE_DESC"
          />
          <field 
+            name="map_building8_33_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_33_LINK"
+            description="TPL_MAP_BUILDING8_33_LINK_DESC"
+         />    
+         <field 
             name="map_building8_34" 
             type="text" 
             label="TPL_MAP_BUILDING8_34"
@@ -461,14 +640,18 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_34_IMAGE"
             description="TPL_MAP_BUILDING8_34_IMAGE_DESC"
-            
+         />
+         <field 
+            name="map_building8_34_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_34_LINK"
+            description="TPL_MAP_BUILDING8_34_LINK_DESC"
          />
          <field 
             name="map_building8_35" 
             type="text" 
             label="TPL_MAP_BUILDING8_35"
             description="TPL_MAP_BUILDING8_35_DESC"
-            
          />
          <field 
             name="map_building8_35_image" 
@@ -477,7 +660,12 @@
             directory="map_images"   
             label="TPL_MAP_BUILDING8_35_IMAGE"
             description="TPL_MAP_BUILDING8_35_IMAGE_DESC"
-            
+         />
+         <field 
+            name="map_building8_35_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_35_LINK"
+            description="TPL_MAP_BUILDING8_35_LINK_DESC"
          />
          <field 
             name="map_building8_36" 
@@ -494,6 +682,12 @@
             description="TPL_MAP_BUILDING8_36_IMAGE_DESC"
          />
          <field 
+            name="map_building8_36_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_36_LINK"
+            description="TPL_MAP_BUILDING8_36_LINK_DESC"
+         />
+         <field 
             name="map_building8_37" 
             type="text" 
             label="TPL_MAP_BUILDING8_37"
@@ -506,6 +700,12 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_37_IMAGE"
             description="TPL_MAP_BUILDING8_37_IMAGE_DESC"
+         />
+         <field 
+            name="map_building8_37_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_37_LINK"
+            description="TPL_MAP_BUILDING8_37_LINK_DESC"
          />
          <field 
             name="map_building8_38" 
@@ -522,6 +722,12 @@
             description="TPL_MAP_BUILDING8_38_IMAGE_DESC"
          />
          <field 
+            name="map_building8_38_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_38_LINK"
+            description="TPL_MAP_BUILDING8_38_LINK_DESC"
+         />
+         <field 
             name="map_building8_39" 
             type="text" 
             label="TPL_MAP_BUILDING8_39"
@@ -534,6 +740,12 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_39_IMAGE"
             description="TPL_MAP_BUILDING8_39_IMAGE_DESC"
+         />
+         <field 
+            name="map_building8_39_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_39_LINK"
+            description="TPL_MAP_BUILDING8_39_LINK_DESC"
          />
          <field 
             name="map_building8_40" 
@@ -550,6 +762,12 @@
             description="TPL_MAP_BUILDING8_40_IMAGE_DESC"
          />
          <field 
+            name="map_building8_40_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_40_LINK"
+            description="TPL_MAP_BUILDING8_40_LINK_DESC"
+         />
+         <field 
             name="map_building8_41" 
             type="text" 
             label="TPL_MAP_BUILDING8_41"
@@ -562,6 +780,12 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_41_IMAGE"
             description="TPL_MAP_BUILDING8_41_IMAGE_DESC"
+         />
+         <field 
+            name="map_building8_41_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_41_LINK"
+            description="TPL_MAP_BUILDING8_41_LINK_DESC"
          />
          <field 
             name="map_building8_42" 
@@ -578,6 +802,12 @@
             description="TPL_MAP_BUILDING8_42_IMAGE_DESC"
          />
          <field 
+            name="map_building8_42_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_42_LINK"
+            description="TPL_MAP_BUILDING8_42_LINK_DESC"
+         />
+         <field 
             name="map_building8_43" 
             type="text" 
             label="TPL_MAP_BUILDING8_43"
@@ -592,6 +822,12 @@
             description="TPL_MAP_BUILDING8_43_IMAGE_DESC"
          />
          <field 
+            name="map_building8_43_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_43_LINK"
+            description="TPL_MAP_BUILDING8_43_LINK_DESC"
+         />    
+         <field 
             name="map_building8_44" 
             type="text" 
             label="TPL_MAP_BUILDING8_44"
@@ -604,6 +840,12 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_44_IMAGE"
             description="TPL_MAP_BUILDING8_44_IMAGE_DESC"
+         />
+         <field 
+            name="map_building8_44_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_44_LINK"
+            description="TPL_MAP_BUILDING8_44_LINK_DESC"
          />
          <field 
             name="map_building8_45" 
@@ -620,6 +862,12 @@
             description="TPL_MAP_BUILDING8_45_IMAGE_DESC"
          />
          <field 
+            name="map_building8_45_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_45_LINK"
+            description="TPL_MAP_BUILDING8_45_LINK_DESC"
+         />
+         <field 
             name="map_building8_46" 
             type="text" 
             label="TPL_MAP_BUILDING8_46"
@@ -634,6 +882,12 @@
             description="TPL_MAP_BUILDING8_46_IMAGE_DESC"
          />
          <field 
+            name="map_building8_46_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_46_LINK"
+            description="TPL_MAP_BUILDING8_46_LINK_DESC"
+         />
+         <field 
             name="map_building8_47" 
             type="text" 
             label="TPL_MAP_BUILDING8_47"
@@ -646,6 +900,12 @@
             directory="map_images" 
             label="TPL_MAP_BUILDING8_47_IMAGE"
             description="TPL_MAP_BUILDING8_47_IMAGE_DESC"
+         />
+         <field 
+            name="map_building8_47_link" 
+            type="text" 
+            label="TPL_MAP_BUILDING8_47_LINK"
+            description="TPL_MAP_BUILDING8_47_LINK_DESC"
          />
 
          <!-- LOT A -->
@@ -664,6 +924,12 @@
             description="TPL_MAP_LOTA_1_IMAGE_DESC"
          />
          <field 
+            name="map_lota_1_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_1_LINK"
+            description="TPL_MAP_LOTA_1_LINK_DESC"
+         />  
+         <field 
             name="map_lota_2" 
             type="text" 
             label="TPL_MAP_LOTA_2"
@@ -677,6 +943,12 @@
             label="TPL_MAP_LOTA_2_IMAGE"
             description="TPL_MAP_LOTA_2_IMAGE_DESC"
          />
+         <field 
+            name="map_lota_2_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_2_LINK"
+            description="TPL_MAP_LOTA_2_LINK_DESC"
+         /> 
          <field 
             name="map_lota_3" 
             type="text" 
@@ -692,6 +964,12 @@
             description="TPL_MAP_LOTA_3_IMAGE_DESC"
          />
          <field 
+            name="map_lota_3_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_3_LINK"
+            description="TPL_MAP_LOTA_3_LINK_DESC"
+         />
+         <field 
             name="map_lota_4" 
             type="text" 
             label="TPL_MAP_LOTA_4"
@@ -704,7 +982,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTA_4_IMAGE"
             description="TPL_MAP_LOTA_4_IMAGE_DESC"
-         />    
+         />  
+         <field 
+            name="map_lota_4_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_4_LINK"
+            description="TPL_MAP_LOTA_4_LINK_DESC"
+         />     
          <field 
             name="map_lota_5" 
             type="text" 
@@ -718,7 +1002,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTA_5_IMAGE"
             description="TPL_MAP_LOTA_5_IMAGE_DESC"
-         />                 
+         /> 
+         <field 
+            name="map_lota_5_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_5_LINK"
+            description="TPL_MAP_LOTA_5_LINK_DESC"
+         />                   
 
          <field 
             name="map_lota_6" 
@@ -733,6 +1023,12 @@
             directory="map_images" 
             label="TPL_MAP_LOTA_6_IMAGE"
             description="TPL_MAP_LOTA_6_IMAGE_DESC"
+         />   
+         <field 
+            name="map_lota_6_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_6_LINK"
+            description="TPL_MAP_LOTA_6_LINK_DESC"
          />               
          <field 
             name="map_lota_7" 
@@ -747,6 +1043,12 @@
             directory="map_images" 
             label="TPL_MAP_LOTA_7_IMAGE"
             description="TPL_MAP_LOTA_7_IMAGE_DESC"
+         />   
+         <field 
+            name="map_lota_7_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_7_LINK"
+            description="TPL_MAP_LOTA_7_LINK_DESC"
          />             
          <field 
             name="map_lota_8" 
@@ -761,7 +1063,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTA_8_IMAGE"
             description="TPL_MAP_LOTA_8_IMAGE_DESC"
-         />           
+         />  
+         <field 
+            name="map_lota_8_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_8_LINK"
+            description="TPL_MAP_LOTA_8_LINK_DESC"
+         />            
          <field 
             name="map_lota_9" 
             type="text" 
@@ -775,7 +1083,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTA_9_IMAGE"
             description="TPL_MAP_LOTA_9_IMAGE_DESC"
-         />                
+         /> 
+         <field 
+            name="map_lota_9_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_9_LINK"
+            description="TPL_MAP_LOTA_9_LINK_DESC"
+         />                     
          <field 
             name="map_lota_10" 
             type="text" 
@@ -789,6 +1103,12 @@
             directory="map_images" 
             label="TPL_MAP_LOTA_10_IMAGE"
             description="TPL_MAP_LOTA_10_IMAGE_DESC"
+         />  
+         <field 
+            name="map_lota_10_link" 
+            type="text" 
+            label="TPL_MAP_LOTA_10_LINK"
+            description="TPL_MAP_LOTA_10_LINK_DESC"
          />                 
 
 
@@ -808,6 +1128,12 @@
             description="TPL_MAP_LOTA_1_IMAGE_DESC"
          />
          <field 
+            name="map_lotb_1_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_1_LINK"
+            description="TPL_MAP_LOTA_1_LINK_DESC"
+         />   
+         <field 
             name="map_lotb_2" 
             type="text" 
             label="TPL_MAP_LOTB_2"
@@ -821,6 +1147,12 @@
             label="TPL_MAP_LOTB_2_IMAGE"
             description="TPL_MAP_LOTB_2_IMAGE_DESC"
          />
+         <field 
+            name="map_lotb_2_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_2_LINK"
+            description="TPL_MAP_LOTB_2_LINK_DESC"
+         /> 
          <field 
             name="map_lotb_3" 
             type="text" 
@@ -836,6 +1168,12 @@
             description="TPL_MAP_LOTB_3_IMAGE_DESC"
          />
          <field 
+            name="map_lotb_3_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_3_LINK"
+            description="TPL_MAP_LOTB_3_LINK_DESC"
+         />
+         <field 
             name="map_lotb_4" 
             type="text" 
             label="TPL_MAP_LOTB_4"
@@ -848,7 +1186,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTB_4_IMAGE"
             description="TPL_MAP_LOTB_4_IMAGE_DESC"
-         />             
+         />  
+         <field 
+            name="map_lotb_4_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_4_LINK"
+            description="TPL_MAP_LOTB_4_LINK_DESC"
+         />              
          <field 
             name="map_lotb_5" 
             type="text" 
@@ -862,6 +1206,12 @@
             directory="map_images" 
             label="TPL_MAP_LOTB_5_IMAGE"
             description="TPL_MAP_LOTB_5_IMAGE_DESC"
+         />  
+         <field 
+            name="map_lotb_5_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_5_LINK"
+            description="TPL_MAP_LOTB_5_LINK_DESC"
          />         
          <field 
             name="map_lotb_6" 
@@ -877,7 +1227,13 @@
             label="TPL_MAP_LOTB_6_IMAGE"
             description="TPL_MAP_LOTB_6_IMAGE_DESC"
          />  
-                 <field 
+         <field 
+            name="map_lotb_6_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_6_LINK"
+            description="TPL_MAP_LOTB_6_LINK_DESC"
+         />  
+         <field 
             name="map_lotb_7" 
             type="text" 
             label="TPL_MAP_LOTB_7"
@@ -890,7 +1246,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTB_7_IMAGE"
             description="TPL_MAP_LOTB_7_IMAGE_DESC"
-         />             
+         />  
+         <field 
+            name="map_lotb_7_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_7_LINK"
+            description="TPL_MAP_LOTB_7_LINK_DESC"
+         />              
          <field 
             name="map_lotb_8" 
             type="text" 
@@ -904,7 +1266,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTB_8_IMAGE"
             description="TPL_MAP_LOTB_8_IMAGE_DESC"
-         />             
+         />   
+         <field 
+            name="map_lotb_8_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_8_LINK"
+            description="TPL_MAP_LOTB_8_LINK_DESC"
+         />              
          <field 
             name="map_lotb_9" 
             type="text" 
@@ -918,7 +1286,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTB_9_IMAGE"
             description="TPL_MAP_LOTB_9_IMAGE_DESC"
-         />           
+         />  
+         <field 
+            name="map_lotb_9_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_9_LINK"
+            description="TPL_MAP_LOTB_9_LINK_DESC"
+         />            
          <field 
             name="map_lotb_10" 
             type="text" 
@@ -932,7 +1306,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTB_10_IMAGE"
             description="TPL_MAP_LOTB_10_IMAGE_DESC"
-         />                  
+         />  
+         <field 
+            name="map_lotb_10_link" 
+            type="text" 
+            label="TPL_MAP_LOTB_10_LINK"
+            description="TPL_MAP_LOTB_10_LINK_DESC"
+         />                    
 
       <!-- LOT C -->
          <field 
@@ -950,6 +1330,12 @@
             description="TPL_MAP_LOTC_1_IMAGE_DESC"
          />
          <field 
+            name="map_lotc_1_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_1_LINK"
+            description="TPL_MAP_LOTC_1_LINK_DESC"
+         /> 
+         <field 
             name="map_lotc_2" 
             type="text" 
             label="TPL_MAP_LOTC_2"
@@ -962,6 +1348,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTC_2_IMAGE"
             description="TPL_MAP_LOTC_2_IMAGE_DESC"
+         />
+         
+         <field 
+            name="map_lotc_2_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_2_LINK"
+            description="TPL_MAP_LOTC_2_LINK_DESC"
          />
          <field 
             name="map_lotc_3" 
@@ -978,6 +1371,12 @@
             description="TPL_MAP_LOTC_3_IMAGE_DESC"
          />
          <field 
+            name="map_lotc_3_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_3_LINK"
+            description="TPL_MAP_LOTC_3_LINK_DESC"
+         />
+         <field 
             name="map_lotc_4" 
             type="text" 
             label="TPL_MAP_LOTC_4"
@@ -990,7 +1389,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTC_4_IMAGE"
             description="TPL_MAP_LOTC_4_IMAGE_DESC"
-         />             
+         />  
+         <field 
+            name="map_lotc_4_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_4_LINK"
+            description="TPL_MAP_LOTC_4_LINK_DESC"
+         />              
          <field 
             name="map_lotc_5" 
             type="text" 
@@ -1004,6 +1409,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTC_5_IMAGE"
             description="TPL_MAP_LOTC_5_IMAGE_DESC"
+         />     
+         
+         <field 
+            name="map_lotc_5_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_5_LINK"
+            description="TPL_MAP_LOTC_5_LINK_DESC"
          />            
 
          <field 
@@ -1019,7 +1431,14 @@
             directory="map_images" 
             label="TPL_MAP_LOTC_6_IMAGE"
             description="TPL_MAP_LOTC_6_IMAGE_DESC"
-         />                 
+         />  
+
+         <field 
+            name="map_lotc_6_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_6_LINK"
+            description="TPL_MAP_LOTC_6_LINK_DESC"
+         />                
          <field 
             name="map_lotc_7" 
             type="text" 
@@ -1033,7 +1452,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTC_7_IMAGE"
             description="TPL_MAP_LOTC_7_IMAGE_DESC"
-         />            
+         />  
+         <field 
+            name="map_lotc_7_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_7_LINK"
+            description="TPL_MAP_LOTC_7_LINK_DESC"
+         />           
          <field 
             name="map_lotc_8" 
             type="text" 
@@ -1047,7 +1472,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTC_8_IMAGE"
             description="TPL_MAP_LOTC_8_IMAGE_DESC"
-         />         
+         /> 
+         <field 
+            name="map_lotc_8_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_8_LINK"
+            description="TPL_MAP_LOTC_8_LINK_DESC"
+         />          
          <field 
             name="map_lotc_9" 
             type="text" 
@@ -1063,6 +1494,12 @@
             description="TPL_MAP_LOTC_9_IMAGE_DESC"
          />        
          <field 
+            name="map_lotc_9_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_9_LINK"
+            description="TPL_MAP_LOTC_9_LINK_DESC"
+         />     
+         <field 
             name="map_lotc_10" 
             type="text" 
             label="TPL_MAP_LOTC_10"
@@ -1075,7 +1512,13 @@
             directory="map_images" 
             label="TPL_MAP_LOTC_10_IMAGE"
             description="TPL_MAP_LOTC_10_IMAGE_DESC"
-         />                   
+         />   
+         <field 
+            name="map_lotc_10_link" 
+            type="text" 
+            label="TPL_MAP_LOTC_10_LINK"
+            description="TPL_MAP_LOTC_10_LINK_DESC"
+         />                  
 
          <!-- W1 -->
 
@@ -1094,6 +1537,12 @@
             description="TPL_MAP_W1_1_G_IMAGE_DESC"
          />
          <field 
+            name="map_w1_1_g_link" 
+            type="text" 
+            label="TPL_MAP_W1_1_G_LINK"
+            description="TPL_MAP_W1_1_G_LINK_DESC"
+         />
+         <field 
             name="map_w1_2_g" 
             type="text" 
             label="TPL_MAP_W1_2_G"
@@ -1107,6 +1556,13 @@
             label="TPL_MAP_W1_2_G_IMAGE"
             description="TPL_MAP_W1_2_G_IMAGE_DESC"
          />
+         
+         <field 
+            name="map_w1_2_g_link" 
+            type="text" 
+            label="TPL_MAP_W1_2_G_LINK"
+            description="TPL_MAP_W1_2_G_LINK_DESC"
+         />  
          <field 
             name="map_w1_3_g" 
             type="text" 
@@ -1120,6 +1576,12 @@
             directory="map_images" 
             label="TPL_MAP_W1_3_G_IMAGE"
             description="TPL_MAP_W1_3_G_IMAGE_DESC"
+         />
+         <field 
+            name="map_w1_3_g_link" 
+            type="text" 
+            label="TPL_MAP_W1_3_G_LINK"
+            description="TPL_MAP_W1_3_G_LINK_DESC"
          />
          <field 
             name="map_w1_4_g" 
@@ -1136,6 +1598,12 @@
             description="TPL_MAP_W1_4_G_IMAGE_DESC"
          />
          <field 
+            name="map_w1_4_g_link" 
+            type="text" 
+            label="TPL_MAP_W1_4_G_LINK"
+            description="TPL_MAP_W1_4_G_LINK_DESC"
+         />
+         <field 
             name="map_w1_5_g" 
             type="text" 
             label="TPL_MAP_W1_5_G"
@@ -1148,6 +1616,12 @@
             directory="map_images" 
             label="TPL_MAP_W1_5_G_IMAGE"
             description="TPL_MAP_W1_5_G_IMAGE_DESC"
+         />
+         <field 
+            name="map_w1_5_g_link" 
+            type="text" 
+            label="TPL_MAP_W1_5_G_LINK"
+            description="TPL_MAP_W1_5_G_LINK_DESC"
          />
          <field 
             name="map_w1_6_g" 
@@ -1164,6 +1638,12 @@
             description="TPL_MAP_W1_6_G_IMAGE_DESC"
          />
          <field 
+            name="map_w1_6_g_link" 
+            type="text" 
+            label="TPL_MAP_W1_6_G_LINK"
+            description="TPL_MAP_W1_6_G_LINK_DESC"
+         />
+         <field 
             name="map_w1_7_g" 
             type="text" 
             label="TPL_MAP_W1_7_G"
@@ -1178,6 +1658,12 @@
             description="TPL_MAP_W1_7_G_IMAGE_DESC"
          />
          <field 
+            name="map_w1_7_g_link" 
+            type="text" 
+            label="TPL_MAP_W1_7_G_LINK"
+            description="TPL_MAP_W1_7_G_LINK_DESC"
+         />
+         <field 
             name="map_w1_8_g" 
             type="text" 
             label="TPL_MAP_W1_8_G"
@@ -1190,6 +1676,13 @@
             directory="map_images" 
             label="TPL_MAP_W1_8_G_IMAGE"
             description="TPL_MAP_W1_8_G_IMAGE_DESC"
+         />  
+         
+         <field 
+            name="map_w1_8_g_link" 
+            type="text" 
+            label="TPL_MAP_W1_8_G_LINK"
+            description="TPL_MAP_W1_8_G_LINK_DESC"
          />  
          <field 
             name="map_w1_1_1st" 
@@ -1206,6 +1699,12 @@
             description="TPL_MAP_W1_1_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_w1_1_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_1_1ST_LINK"
+            description="TPL_MAP_W1_1_1ST_LINK_DESC"
+         />
+         <field 
             name="map_w1_2_1st" 
             type="text" 
             label="TPL_MAP_W1_2_1ST"
@@ -1218,6 +1717,12 @@
             directory="map_images" 
             label="TPL_MAP_W1_2_1ST_IMAGE"
             description="TPL_MAP_W1_2_1ST_IMAGE_DESC"
+         />
+         <field 
+            name="map_w1_2_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_2_1ST_LINK"
+            description="TPL_MAP_W1_2_1ST_LINK_DESC"
          />
          <field 
             name="map_w1_3_1st" 
@@ -1234,6 +1739,12 @@
             description="TPL_MAP_W1_3_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_w1_3_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_3_1ST_LINK"
+            description="TPL_MAP_W1_3_1ST_LINK_DESC"
+         />
+         <field 
             name="map_w1_4_1st" 
             type="text" 
             label="TPL_MAP_W1_4_1ST"
@@ -1246,6 +1757,12 @@
             directory="map_images" 
             label="TPL_MAP_W1_4_1ST_IMAGE"
             description="TPL_MAP_W1_4_1ST_IMAGE_DESC"
+         />
+         <field 
+            name="map_w1_4_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_4_1ST_LINK"
+            description="TPL_MAP_W1_4_1ST_LINK_DESC"
          />
          <field 
             name="map_w1_5_1st" 
@@ -1262,6 +1779,12 @@
             description="TPL_MAP_W1_5_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_w1_5_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_5_1ST_LINK"
+            description="TPL_MAP_W1_5_1ST_LINK_DESC"
+         />
+         <field 
             name="map_w1_6_1st" 
             type="text" 
             label="TPL_MAP_W1_6_1ST"
@@ -1274,6 +1797,12 @@
             directory="map_images" 
             label="TPL_MAP_W1_6_1ST_IMAGE"
             description="TPL_MAP_W1_6_1ST_IMAGE_DESC"
+         />
+         <field 
+            name="map_w1_6_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_6_1ST_LINK"
+            description="TPL_MAP_W1_6_1ST_LINK_DESC"
          />
          <field 
             name="map_w1_7_1st" 
@@ -1290,6 +1819,12 @@
             description="TPL_MAP_W1_7_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_w1_7_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_7_1ST_LINK"
+            description="TPL_MAP_W1_7_1ST_LINK_DESC"
+         />
+         <field 
             name="map_w1_8_1st" 
             type="text" 
             label="TPL_MAP_W1_8_1ST"
@@ -1302,6 +1837,12 @@
             directory="map_images" 
             label="TPL_MAP_W1_8_1ST_IMAGE"
             description="TPL_MAP_W1_8_1ST_IMAGE_DESC"
+         />
+         <field 
+            name="map_w1_8_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_8_1ST_LINK"
+            description="TPL_MAP_W1_8_1ST_LINK_DESC"
          />
          <field 
             name="map_w1_9_1st" 
@@ -1318,6 +1859,12 @@
             description="TPL_MAP_W1_9_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_w1_9_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_9_1ST_LINK"
+            description="TPL_MAP_W1_9_1ST_LINK_DESC"
+         />
+         <field 
             name="map_w1_10_1st" 
             type="text" 
             label="TPL_MAP_W1_10_1ST"
@@ -1332,6 +1879,13 @@
             description="TPL_MAP_W1_10_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_w1_10_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_10_1ST_LINK"
+            description="TPL_MAP_W1_10_1ST_LINK_DESC"
+         />
+         
+         <field 
             name="map_w1_11_1st" 
             type="text" 
             label="TPL_MAP_W1_11_1ST"
@@ -1344,6 +1898,12 @@
             directory="map_images" 
             label="TPL_MAP_W1_11_1ST_IMAGE"
             description="TPL_MAP_W1_11_1ST_IMAGE_DESC"
+         /> 
+         <field 
+            name="map_w1_11_1st_link" 
+            type="text" 
+            label="TPL_MAP_W1_11_1ST_LINK"
+            description="TPL_MAP_W1_11_1ST_LINK_DESC"
          />
 
          <!-- W3 -->
@@ -1363,17 +1923,30 @@
             description="TPL_MAP_W3_1_G_IMAGE_DESC"
          />
          <field 
+            name="map_w3_1_g_link" 
+            type="text" 
+            label="TPL_MAP_W3_1_G_LINK"
+            description="TPL_MAP_W3_1_G_LINK_DESC"
+         />
+         <field 
             name="map_w3_2_g" 
             type="text" 
             label="TPL_MAP_W3_2_G"
             description="TPL_MAP_W3_2_G_DESC"
-         /> <field 
+         /> 
+         <field 
             name="map_w3_2_g_image" 
             type="media"
             preview="tooltip"
             directory="map_images" 
             label="TPL_MAP_W3_2_G_IMAGE"
             description="TPL_MAP_W3_2_G_IMAGE_DESC"
+         /> 
+         <field 
+            name="map_w3_2_g_link" 
+            type="text" 
+            label="TPL_MAP_W3_2_G_LINK"
+            description="TPL_MAP_W3_2_G_LINK_DESC"
          />
          <field 
             name="map_w3_3_g" 
@@ -1390,6 +1963,12 @@
             description="TPL_MAP_W3_3_G_IMAGE_DESC"
          />
          <field 
+            name="map_w3_3_g_link" 
+            type="text" 
+            label="TPL_MAP_W3_3_G_LINK"
+            description="TPL_MAP_W3_3_G_LINK_DESC"
+         />
+         <field 
             name="map_w3_4_g" 
             type="text" 
             label="TPL_MAP_W3_4_G"
@@ -1403,6 +1982,12 @@
             label="TPL_MAP_W3_4_G_IMAGE"
             description="TPL_MAP_W3_4_G_IMAGE_DESC"
          />
+         <field 
+            name="map_w3_4_g_link" 
+            type="text" 
+            label="TPL_MAP_W3_4_G_LINK"
+            description="TPL_MAP_W3_4_G_LINK_DESC"
+         />    
          <field 
             name="map_w3_5_g" 
             type="text" 
@@ -1418,6 +2003,12 @@
             description="TPL_MAP_W3_5_G_IMAGE_DESC"
          />
          <field 
+            name="map_w3_5_g_link" 
+            type="text" 
+            label="TPL_MAP_W3_5_G_LINK"
+            description="TPL_MAP_W3_5_G_LINK_DESC"
+         /> 
+         <field 
             name="map_w3_6_g" 
             type="text" 
             label="TPL_MAP_W3_6_G"
@@ -1431,6 +2022,12 @@
             label="TPL_MAP_W3_6_G_IMAGE"
             description="TPL_MAP_W3_6_G_IMAGE_DESC"
          />
+         <field 
+            name="map_w3_6_g_link" 
+            type="text" 
+            label="TPL_MAP_W3_6_G_LINK"
+            description="TPL_MAP_W3_6_G_LINK_DESC"
+         />  
          <field 
             name="map_w3_7_g" 
             type="text" 
@@ -1450,7 +2047,13 @@
             type="text" 
             label="TPL_MAP_W3_8_G"
             description="TPL_MAP_W3_8_G_DESC"
-         />    
+         />     
+         <field 
+            name="map_w3_7_g_link" 
+            type="text" 
+            label="TPL_MAP_W3_7_G_LINK"
+            description="TPL_MAP_W3_7_G_LINK_DESC"
+         />  
          <field 
             name="map_w3_8_g_image" 
             type="media"
@@ -1458,118 +2061,14 @@
             directory="map_images" 
             label="TPL_MAP_W3_8_G_IMAGE"
             description="TPL_MAP_W3_8_G_IMAGE_DESC"
-         />  
+         />   
          <field 
-            name="map_w3_1_1st" 
+            name="map_w3_8_g_link" 
             type="text" 
-            label="TPL_MAP_W3_1_1ST"
-            description="TPL_MAP_W3_1_1ST_DESC"
-         />     
-         <field 
-            name="map_w3_1_1st_image" 
-            type="media"
-            preview="tooltip"
-            directory="map_images" 
-            label="TPL_MAP_W3_1_1ST_IMAGE"
-            description="TPL_MAP_W3_1_1ST_IMAGE_DESC"
-         />
-         <field 
-            name="map_w3_2_1st" 
-            type="text" 
-            label="TPL_MAP_W3_2_1ST"
-            description="TPL_MAP_W3_2_1ST_DESC"
-         />         
-         <field 
-            name="map_w3_2_1st_image" 
-            type="media"
-            preview="tooltip"
-            directory="map_images" 
-            label="TPL_MAP_W3_2_1ST_IMAGE"
-            description="TPL_MAP_W3_2_1ST_IMAGE_DESC"
-         />
-         <field 
-            name="map_w3_3_1st" 
-            type="text" 
-            label="TPL_MAP_W3_3_1ST"
-            description="TPL_MAP_W3_3_1ST_DESC"
-         />     
-         <field 
-            name="map_w3_3_1st_image" 
-            type="media"
-            preview="tooltip"
-            directory="map_images" 
-            label="TPL_MAP_W3_3_1ST_IMAGE"
-            description="TPL_MAP_W3_3_1ST_IMAGE_DESC"
-         />
-         <field 
-            name="map_w3_4_1st" 
-            type="text" 
-            label="TPL_MAP_W3_4_1ST"
-            description="TPL_MAP_W3_4_1ST_DESC"
-         />        
-         <field 
-            name="map_w3_4_1st_image" 
-            type="media"
-            preview="tooltip"
-            directory="map_images" 
-            label="TPL_MAP_W3_4_1ST_IMAGE"
-            description="TPL_MAP_W3_4_1ST_IMAGE_DESC"
-         />
-         <field 
-            name="map_w3_5_1st" 
-            type="text" 
-            label="TPL_MAP_W3_5_1ST"
-            description="TPL_MAP_W3_5_1ST_DESC"
+            label="TPL_MAP_W3_8_G_LINK"
+            description="TPL_MAP_W3_8_G_LINK_DESC"
          />    
-         <field 
-            name="map_w3_5_1st_image" 
-            type="media"
-            preview="tooltip"
-            directory="map_images" 
-            label="TPL_MAP_W3_5_1ST_IMAGE"
-            description="TPL_MAP_W3_5_1ST_IMAGE_DESC"
-         />
-         <field 
-            name="map_w3_6_1st" 
-            type="text" 
-            label="TPL_MAP_W3_6_1ST"
-            description="TPL_MAP_W3_6_1ST_DESC"
-         />     
-         <field 
-            name="map_w3_6_1st_image" 
-            type="media"
-            preview="tooltip"
-            directory="map_images" 
-            label="TPL_MAP_W3_6_1ST_IMAGE"
-            description="TPL_MAP_W3_6_1ST_IMAGE_DESC"
-         />
-         <field 
-            name="map_w3_7_1st" 
-            type="text" 
-            label="TPL_MAP_W3_7_1ST"
-            description="TPL_MAP_W3_7_1ST_DESC"
-         />
-         <field 
-            name="map_w3_7_1st_image" 
-            type="media"
-            preview="tooltip"
-            directory="map_images" 
-            label="TPL_MAP_W3_7_1ST_IMAGE"
-            description="TPL_MAP_W3_7_1ST_IMAGE_DESC"
-         />
-         <field 
-            name="map_w3_8_1st" 
-            type="text" 
-            label="TPL_MAP_W3_8_1ST"
-            description="TPL_MAP_W3_8_1ST_DESC"
-         /> <field 
-            name="map_w3_8_1st_image" 
-            type="media"
-            preview="tooltip"
-            directory="map_images" 
-            label="TPL_MAP_W3_8_1ST_IMAGE"
-            description="TPL_MAP_W3_8_1ST_IMAGE_DESC"
-         />
+        
 
          <!-- BDB -->
 
@@ -1588,6 +2087,12 @@
             description="TPL_MAP_BDB_1_G_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_1_g_link" 
+            type="text" 
+            label="TPL_MAP_BDB_1_G_LINK"
+            description="TPL_MAP_BDB_1_G_LINK_DESC"
+         />      
+         <field 
             name="map_bdb_2_g" 
             type="text" 
             label="TPL_MAP_BDB_2_G"
@@ -1600,7 +2105,13 @@
             directory="map_images" 
             label="TPL_MAP_BDB_2_G_IMAGE"
             description="TPL_MAP_BDB_2_G_IMAGE_DESC"
-         />
+         /> 
+         <field 
+            name="map_bdb_2_g_link" 
+            type="text" 
+            label="TPL_MAP_BDB_2_G_LINK"
+            description="TPL_MAP_BDB_2_G_LINK_DESC"
+         />   
          <field 
             name="map_bdb_3_g" 
             type="text" 
@@ -1614,6 +2125,12 @@
             directory="map_images" 
             label="TPL_MAP_BDB_3_G_IMAGE"
             description="TPL_MAP_BDB_3_G_IMAGE_DESC"
+         />
+         <field 
+            name="map_bdb_3_g_link" 
+            type="text" 
+            label="TPL_MAP_BDB_3_G_LINK"
+            description="TPL_MAP_BDB_3_G_LINK_DESC"
          />
          <field 
             name="map_bdb_4_g" 
@@ -1630,6 +2147,12 @@
             description="TPL_MAP_BDB_4_G_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_4_g_link" 
+            type="text" 
+            label="TPL_MAP_BDB_4_G_LINK"
+            description="TPL_MAP_BDB_4_G_LINK_DESC"
+         />
+         <field 
             name="map_bdb_1_1st" 
             type="text" 
             label="TPL_MAP_BDB_1_1ST"
@@ -1642,6 +2165,12 @@
             directory="map_images" 
             label="TPL_MAP_BDB_1_1ST_IMAGE"
             description="TPL_MAP_BDB_1_1ST_IMAGE_DESC"
+         />
+         <field 
+            name="map_bdb_1_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_1_1ST_LINK"
+            description="TPL_MAP_BDB_1_1ST_LINK_DESC"
          />
          <field 
             name="map_bdb_2_1st" 
@@ -1658,6 +2187,12 @@
             description="TPL_MAP_BDB_2_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_2_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_2_1ST_LINK"
+            description="TPL_MAP_BDB_2_1ST_LINK_DESC"
+         />
+         <field 
             name="map_bdb_3_1st" 
             type="text" 
             label="TPL_MAP_BDB_3_1ST"
@@ -1670,7 +2205,13 @@
             directory="map_images" 
             label="TPL_MAP_BDB_3_1ST_IMAGE"
             description="TPL_MAP_BDB_3_1ST_IMAGE_DESC"
-         />
+         /> 
+         <field 
+            name="map_bdb_3_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_3_1ST_LINK"
+            description="TPL_MAP_BDB_3_1ST_LINK_DESC"
+         />     
          <field 
             name="map_bdb_4_1st" 
             type="text" 
@@ -1686,6 +2227,12 @@
             description="TPL_MAP_BDB_4_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_4_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_4_1ST_LINK"
+            description="TPL_MAP_BDB_4_1ST_LINK_DESC"
+         />    
+         <field 
             name="map_bdb_5_1st" 
             type="text" 
             label="TPL_MAP_BDB_5_1ST"
@@ -1698,6 +2245,12 @@
             directory="map_images" 
             label="TPL_MAP_BDB_5_1ST_IMAGE"
             description="TPL_MAP_BDB_5_1ST_IMAGE_DESC"
+         />
+         <field 
+            name="map_bdb_5_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_5_1ST_LINK"
+            description="TPL_MAP_BDB_5_1ST_LINK_DESC"
          />
          <field 
             name="map_bdb_6_1st" 
@@ -1714,6 +2267,12 @@
             description="TPL_MAP_BDB_6_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_6_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_6_1ST_LINK"
+            description="TPL_MAP_BDB_6_1ST_LINK_DESC"
+         />
+         <field 
             name="map_bdb_7_1st" 
             type="text" 
             label="TPL_MAP_BDB_7_1ST"
@@ -1728,6 +2287,12 @@
             description="TPL_MAP_BDB_7_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_7_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_7_1ST_LINK"
+            description="TPL_MAP_BDB_7_1ST_LINK_DESC"
+         />
+         <field 
             name="map_bdb_8_1st" 
             type="text" 
             label="TPL_MAP_BDB_8_1ST"
@@ -1740,6 +2305,12 @@
             directory="map_images" 
             label="TPL_MAP_BDB_8_1ST_IMAGE"
             description="TPL_MAP_BDB_8_1ST_IMAGE_DESC"
+         /> 
+         <field 
+            name="map_bdb_8_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_8_1ST_LINK"
+            description="TPL_MAP_BDB_8_1ST_LINK_DESC"
          />
          <field 
             name="map_bdb_9_1st" 
@@ -1756,6 +2327,12 @@
             description="TPL_MAP_BDB_9_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_9_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_9_1ST_LINK"
+            description="TPL_MAP_BDB_9_1ST_LINK_DESC"
+         />
+         <field 
             name="map_bdb_10_1st" 
             type="text" 
             label="TPL_MAP_BDB_10_1ST"
@@ -1768,6 +2345,12 @@
             directory="map_images" 
             label="TPL_MAP_BDB_10_1ST_IMAGE"
             description="TPL_MAP_BDB_10_1ST_IMAGE_DESC"
+         />
+         <field 
+            name="map_bdb_10_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_10_1ST_LINK"
+            description="TPL_MAP_BDB_10_1ST_LINK_DESC"
          />
          <field 
             name="map_bdb_11_1st" 
@@ -1784,6 +2367,12 @@
             description="TPL_MAP_BDB_11_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_11_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_11_1ST_LINK"
+            description="TPL_MAP_BDB_11_1ST_LINK_DESC"
+         />
+         <field 
             name="map_bdb_12_1st" 
             type="text" 
             label="TPL_MAP_BDB_12_1ST"
@@ -1798,6 +2387,12 @@
             description="TPL_MAP_BDB_12_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_12_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_12_1ST_LINK"
+            description="TPL_MAP_BDB_12_1ST_LINK_DESC"
+         />
+         <field 
             name="map_bdb_13_1st" 
             type="text" 
             label="TPL_MAP_BDB_13_1ST"
@@ -1810,6 +2405,12 @@
             directory="map_images" 
             label="TPL_MAP_BDB_13_1ST_IMAGE"
             description="TPL_MAP_BDB_13_1ST_IMAGE_DESC"
+         /> 
+         <field 
+            name="map_bdb_13_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_13_1ST_LINK"
+            description="TPL_MAP_BDB_13_1ST_LINK_DESC"
          />
          <field 
             name="map_bdb_14_1st" 
@@ -1825,7 +2426,14 @@
             directory="map_images" 
             label="TPL_MAP_BDB_14_1ST_IMAGE"
             description="TPL_MAP_BDB_14_1ST_IMAGE_DESC"
+         /> 
+         <field 
+            name="map_bdb_14_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_14_1ST_LINK"
+            description="TPL_MAP_BDB_14_1ST_LINK_DESC"
          />
+
          <field 
             name="map_bdb_15_1st" 
             type="text" 
@@ -1841,6 +2449,12 @@
             description="TPL_MAP_BDB_15_1ST_IMAGE_DESC"
          />
          <field 
+            name="map_bdb_15_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_15_1ST_LINK"
+            description="TPL_MAP_BDB_15_1ST_LINK_DESC"
+         />    
+         <field 
             name="map_bdb_16_1st" 
             type="text" 
             label="TPL_MAP_BDB_16_1ST"
@@ -1854,6 +2468,12 @@
             label="TPL_MAP_BDB_16_1ST_IMAGE"
             description="TPL_MAP_BDB_16_1ST_IMAGE_DESC"
          />    
+         <field 
+            name="map_bdb_16_1st_link" 
+            type="text" 
+            label="TPL_MAP_BDB_16_1ST_LINK"
+            description="TPL_MAP_BDB_16_1ST_LINK_DESC"
+         />      
          
          <!-- W4 -->
          <field 
@@ -1869,7 +2489,13 @@
             directory="map_images" 
             label="TPL_MAP_W4_1_IMAGE"
             description="TPL_MAP_W4_1_IMAGE_DESC"
-         />
+         /> 
+         <field 
+            name="map_w4_1_link" 
+            type="text" 
+            label="TPL_MAP_W4_1_LINK"
+            description="TPL_MAP_W4_1_LINK_DESC"
+         />         
          <field 
             name="map_w4_2" 
             type="text" 
@@ -1883,7 +2509,13 @@
             directory="map_images" 
             label="TPL_MAP_W4_2_IMAGE"
             description="TPL_MAP_W4_2_IMAGE_DESC"
-         />
+         />   
+         <field 
+            name="map_w4_2_link" 
+            type="text" 
+            label="TPL_MAP_W4_2_LINK"
+            description="TPL_MAP_W4_2_LINK_DESC"
+         />  
          <field 
             name="map_w4_3" 
             type="text" 
@@ -1897,7 +2529,14 @@
             directory="map_images" 
             label="TPL_MAP_W4_3_IMAGE"
             description="TPL_MAP_W4_3_IMAGE_DESC"
+         />  
+         <field 
+            name="map_w4_3_link" 
+            type="text" 
+            label="TPL_MAP_W4_3_LINK"
+            description="TPL_MAP_W4_3_LINK_DESC"
          />
+         
          <field 
             name="map_w4_4" 
             type="text" 
@@ -1911,6 +2550,12 @@
             directory="map_images" 
             label="TPL_MAP_W4_4_IMAGE"
             description="TPL_MAP_W4_4_IMAGE_DESC"
+         /> 
+         <field 
+            name="map_w4_4_link" 
+            type="text" 
+            label="TPL_MAP_W4_4_LINK"
+            description="TPL_MAP_W4_4_LINK_DESC"
          />
          <field 
             name="map_w4_5" 
@@ -1927,6 +2572,12 @@
             description="TPL_MAP_W4_5_IMAGE_DESC"
          />
          <field 
+            name="map_w4_5_link" 
+            type="text" 
+            label="TPL_MAP_W4_5_LINK"
+            description="TPL_MAP_W4_5_LINK_DESC"
+         />
+         <field 
             name="map_w4_6" 
             type="text" 
             label="TPL_MAP_W4_6"
@@ -1940,6 +2591,12 @@
             label="TPL_MAP_W4_6_IMAGE"
             description="TPL_MAP_W4_6_IMAGE_DESC"
          /> 
+         <field 
+            name="map_w4_6_link" 
+            type="text" 
+            label="TPL_MAP_W4_6_LINK"
+            description="TPL_MAP_W4_6_LINK_DESC"
+         />    
 
          <!-- WH -->
          <field 
@@ -1957,6 +2614,12 @@
             description="TPL_MAP_W4_1_IMAGE_DESC"
          />
          <field 
+            name="map_wh_1_link" 
+            type="text" 
+            label="TPL_MAP_WH_1_LINK"
+            description="TPL_MAP_W4_1_LINK_DESC"
+         />  
+         <field 
             name="map_wh_2" 
             type="text" 
             label="TPL_MAP_WH_2"
@@ -1971,6 +2634,12 @@
             description="TPL_MAP_W4_2_IMAGE_DESC"
          />
          <field 
+            name="map_wh_2_link" 
+            type="text" 
+            label="TPL_MAP_WH_2_LINK"
+            description="TPL_MAP_W4_2_LINK_DESC"
+         />   
+         <field 
             name="map_wh_3" 
             type="text" 
             label="TPL_MAP_WH_3"
@@ -1983,6 +2652,12 @@
             directory="map_images" 
             label="TPL_MAP_WH_3_IMAGE"
             description="TPL_MAP_W4_3_IMAGE_DESC"
+         />
+         <field 
+            name="map_wh_3_link" 
+            type="text" 
+            label="TPL_MAP_WH_3_LINK"
+            description="TPL_MAP_W4_3_LINK_DESC"
          />
          <field 
             name="map_wh_4" 
@@ -1999,6 +2674,12 @@
             description="TPL_MAP_W4_4_IMAGE_DESC"
          />
          <field 
+            name="map_wh_4_link" 
+            type="text" 
+            label="TPL_MAP_WH_4_LINK"
+            description="TPL_MAP_W4_4_LINK_DESC"
+         />
+         <field 
             name="map_wh_5" 
             type="text" 
             label="TPL_MAP_WH_5"
@@ -2013,6 +2694,12 @@
             description="TPL_MAP_W4_5_IMAGE_DESC"
          />
          <field 
+            name="map_wh_5_link" 
+            type="text" 
+            label="TPL_MAP_WH_5_LINK"
+            description="TPL_MAP_W4_5_LINK_DESC"
+         />  
+         <field 
             name="map_wh_6" 
             type="text" 
             label="TPL_MAP_WH_6"
@@ -2025,6 +2712,12 @@
             directory="map_images" 
             label="TPL_MAP_WH_6_IMAGE"
             description="TPL_MAP_W4_6_IMAGE_DESC"
+         />
+         <field 
+            name="map_wh_6_link" 
+            type="text" 
+            label="TPL_MAP_WH_6_LINK"
+            description="TPL_MAP_W4_6_LINK_DESC"
          />
          <field 
             name="map_wh_7" 
@@ -2041,6 +2734,12 @@
             description="TPL_MAP_W4_7_IMAGE_DESC"
          />
          <field 
+            name="map_wh_7_link" 
+            type="text" 
+            label="TPL_MAP_WH_7_LINK"
+            description="TPL_MAP_W4_7_LINK_DESC"
+         />
+         <field 
             name="map_wh_8" 
             type="text" 
             label="TPL_MAP_WH_8"
@@ -2055,6 +2754,12 @@
             description="TPL_MAP_W4_8_IMAGE_DESC"
          />
          <field 
+            name="map_wh_8_link" 
+            type="text" 
+            label="TPL_MAP_WH_8_LINK"
+            description="TPL_MAP_W4_8_LINK_DESC"
+         />
+         <field 
             name="map_wh_9" 
             type="text" 
             label="TPL_MAP_WH_9"
@@ -2067,6 +2772,12 @@
             directory="map_images" 
             label="TPL_MAP_WH_9_IMAGE"
             description="TPL_MAP_W4_9_IMAGE_DESC"
+         />
+         <field 
+            name="map_wh_9_link" 
+            type="text" 
+            label="TPL_MAP_WH_9_LINK"
+            description="TPL_MAP_W4_9_LINK_DESC"
          />
          <field 
             name="map_wh_10" 
@@ -2084,6 +2795,12 @@
             description="TPL_MAP_W4_10_IMAGE_DESC"
          />
          <field 
+            name="map_wh_10_link" 
+            type="text" 
+            label="TPL_MAP_WH_10_LINK"
+            description="TPL_MAP_W4_10_LINK_DESC"
+         />
+         <field 
             name="map_wh_11" 
             type="text" 
             label="TPL_MAP_WH_11"
@@ -2097,6 +2814,12 @@
             directory="map_images" 
             label="TPL_MAP_WH_11_IMAGE"
             description="TPL_MAP_W4_11_IMAGE_DESC"
+         />
+         <field 
+            name="map_wh_11_link" 
+            type="text" 
+            label="TPL_MAP_WH_11_LINK"
+            description="TPL_MAP_W4_11_LINK_DESC"
          />
          <field 
             name="map_wh_12" 
@@ -2113,6 +2836,12 @@
             description="TPL_MAP_W4_12_IMAGE_DESC"
          />
          <field 
+            name="map_wh_12_link" 
+            type="text" 
+            label="TPL_MAP_WH_12_LINK"
+            description="TPL_MAP_W4_12_LINK_DESC"
+         />
+         <field 
             name="map_wh_13" 
             type="text" 
             label="TPL_MAP_WH_13"
@@ -2125,6 +2854,12 @@
             directory="map_images" 
             label="TPL_MAP_WH_13_IMAGE"
             description="TPL_MAP_W4_13_IMAGE_DESC"
+         /> 
+         <field 
+            name="map_wh_13_link" 
+            type="text" 
+            label="TPL_MAP_WH_13_LINK"
+            description="TPL_MAP_W4_13_LINK_DESC"
          />
          <field 
             name="map_wh_14" 
@@ -2139,7 +2874,13 @@
             directory="map_images" 
             label="TPL_MAP_WH_14_IMAGE"
             description="TPL_MAP_W4_14_IMAGE_DESC"
-         />             
+         />    
+         <field 
+            name="map_wh_14_link" 
+            type="text" 
+            label="TPL_MAP_WH_14_LINK"
+            description="TPL_MAP_W4_14_LINK_DESC"
+         />           
  
       </fieldset>
    </fields>
