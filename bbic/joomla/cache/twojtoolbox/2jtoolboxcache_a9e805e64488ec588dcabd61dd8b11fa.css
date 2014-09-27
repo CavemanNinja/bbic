@@ -40,17 +40,17 @@
 .twoj_formEditItem textarea.twoj_width_80,
 .twoj_formEditItem input.twoj_width_80,
 .twoj_width_80{
-	width: 80%
+	width: 80%;
 }
 .twoj_formEditItem textarea.twoj_width_90,
 .twoj_formEditItem input.twoj_width_90,
 .twoj_width_90{
-	width: 90%
+	width: 90%;  min-width: 600px;
 }
 
 
-.twoj_width_60{ width: 59% }
-.twoj_width_40{ width: 39% }
+.twoj_width_60{ width: 59%;  min-width: 400px;}
+.twoj_width_40{ width: 39%;  min-width: 400px;}
 
 .twojtoolbox_hiddenblock{ display: none; } /* delete after check */
 .twoj_hiddenblock{ display: none; }
@@ -65,7 +65,7 @@
 .twoj_formEditItem  .chzn-container{
 	margin-bottom: 0px;
 }
-.colorpicker {	width: 356px;	height: 176px;	overflow: hidden;	position: absolute;	background: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_background.png');	font-family: Arial, Helvetica, sans-serif;	display: none;z-index: 99999;}.colorpicker_color {	width: 150px;	height: 150px;	left: 14px;	top: 13px;	position: absolute;	background: #f00;	overflow: hidden;	cursor: crosshair;}.colorpicker_color div {	position: absolute;	top: 0;	left: 0;	width: 150px;	height: 150px;	background: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_overlay.png');}.colorpicker_color div div {	position: absolute;	top: 0;	left: 0;	width: 11px;	height: 11px;	overflow: hidden;	background: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_select.gif');	margin: -5px 0 0 -5px;}.colorpicker_hue {	position: absolute;	top: 13px;	left: 171px;	width: 35px;	height: 150px;	cursor: n-resize;}.colorpicker_hue div {	position: absolute;	width: 35px;	height: 9px;	overflow: hidden;	background: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_indic.gif') left top;	margin: -4px 0 0 0;	left: 0px;}.colorpicker_new_color {	position: absolute;	width: 60px;	height: 30px;	left: 213px;	top: 13px;	background: #f00;}.colorpicker_current_color {	position: absolute;	width: 60px;	height: 30px;	left: 283px;	top: 13px;	background: #f00;}body .colorpicker input {	background-color: transparent;	border: 1px solid transparent;	position: absolute;	font-size: 10px;	font-family: Arial, Helvetica, sans-serif;	color: #898989;	top: 4px;	right: 11px;	text-align: right;	margin: 0;	padding: 0;	height: 11px;	transition: none;}body .colorpicker input:focus {	border: inherit;	box-shadow: 0px none;   transition: none;}.colorpicker_hex {	position: absolute;	width: 72px;	height: 22px;	background: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_hex.png') top;	left: 212px;	top: 142px;}.colorpicker_hex input {	right: 6px;}.colorpicker_field {	height: 22px;	width: 62px;	background-position: top;	position: absolute;}.colorpicker_field span {	position: absolute;	width: 12px;	height: 22px;	overflow: hidden;	top: 0;	right: 0;	cursor: n-resize;}.colorpicker_rgb_r {	background-image: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_rgb_r.png');	top: 52px;	left: 212px;}.colorpicker_rgb_g {	background-image: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_rgb_g.png');	top: 82px;	left: 212px;}.colorpicker_rgb_b {	background-image: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_rgb_b.png');	top: 112px;	left: 212px;}.colorpicker_hsb_h {	background-image: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_hsb_h.png');	top: 52px;	left: 282px;}.colorpicker_hsb_s {	background-image: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_hsb_s.png');	top: 82px;	left: 282px;}.colorpicker_hsb_b {	background-image: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_hsb_b.png');	top: 112px;	left: 282px;}.colorpicker_submit {	position: absolute;	width: 52px;	height: 22px;	background: url('/joomla/components/com_twojtoolbox/css/img/colorpicker_submit.png') top;	left: 292px;	top: 142px;	overflow: hidden;}.colorpicker_focus {	background-position: center;}.colorpicker_hex.colorpicker_focus {	background-position: bottom;}.colorpicker_submit.colorpicker_focus {	background-position: bottom;}.colorpicker_slider {	background-position: bottom;}
+.colorpicker {	width: 356px;	height: 176px;	overflow: hidden;	position: absolute;	background: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_background.png');	font-family: Arial, Helvetica, sans-serif;	display: none;z-index: 99999;}.colorpicker_color {	width: 150px;	height: 150px;	left: 14px;	top: 13px;	position: absolute;	background: #f00;	overflow: hidden;	cursor: crosshair;}.colorpicker_color div {	position: absolute;	top: 0;	left: 0;	width: 150px;	height: 150px;	background: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_overlay.png');}.colorpicker_color div div {	position: absolute;	top: 0;	left: 0;	width: 11px;	height: 11px;	overflow: hidden;	background: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_select.gif');	margin: -5px 0 0 -5px;}.colorpicker_hue {	position: absolute;	top: 13px;	left: 171px;	width: 35px;	height: 150px;	cursor: n-resize;}.colorpicker_hue div {	position: absolute;	width: 35px;	height: 9px;	overflow: hidden;	background: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_indic.gif') left top;	margin: -4px 0 0 0;	left: 0px;}.colorpicker_new_color {	position: absolute;	width: 60px;	height: 30px;	left: 213px;	top: 13px;	background: #f00;}.colorpicker_current_color {	position: absolute;	width: 60px;	height: 30px;	left: 283px;	top: 13px;	background: #f00;}body .colorpicker input {	background-color: transparent;	border: 1px solid transparent;	position: absolute;	font-size: 10px;	font-family: Arial, Helvetica, sans-serif;	color: #898989;	top: 4px;	right: 11px;	text-align: right;	margin: 0;	padding: 0;	height: 11px;	transition: none;}body .colorpicker input:focus {	border: inherit;	box-shadow: 0px none;   transition: none;}.colorpicker_hex {	position: absolute;	width: 72px;	height: 22px;	background: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_hex.png') top;	left: 212px;	top: 142px;}.colorpicker_hex input {	right: 6px;}.colorpicker_field {	height: 22px;	width: 62px;	background-position: top;	position: absolute;}.colorpicker_field span {	position: absolute;	width: 12px;	height: 22px;	overflow: hidden;	top: 0;	right: 0;	cursor: n-resize;}.colorpicker_rgb_r {	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_rgb_r.png');	top: 52px;	left: 212px;}.colorpicker_rgb_g {	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_rgb_g.png');	top: 82px;	left: 212px;}.colorpicker_rgb_b {	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_rgb_b.png');	top: 112px;	left: 212px;}.colorpicker_hsb_h {	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_hsb_h.png');	top: 52px;	left: 282px;}.colorpicker_hsb_s {	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_hsb_s.png');	top: 82px;	left: 282px;}.colorpicker_hsb_b {	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_hsb_b.png');	top: 112px;	left: 282px;}.colorpicker_submit {	position: absolute;	width: 52px;	height: 22px;	background: url('/bbic/joomla/components/com_twojtoolbox/css/img/colorpicker_submit.png') top;	left: 292px;	top: 142px;	overflow: hidden;}.colorpicker_focus {	background-position: center;}.colorpicker_hex.colorpicker_focus {	background-position: bottom;}.colorpicker_submit.colorpicker_focus {	background-position: bottom;}.colorpicker_slider {	background-position: bottom;}
 .twojmultivalues{
 	position: relative;
 	float: left;
@@ -169,7 +169,7 @@ min-width: 120px;
 }
 
 .twojtoolbox_product .check{
-	background: url('/joomla/components/com_twojtoolbox/css/admin/checked.png') no-repeat top left;
+	background: url('/bbic/joomla/components/com_twojtoolbox/css/admin/checked.png') no-repeat top left;
 	width: 300px;
 	height: 84px;
 	position: absolute;
@@ -188,7 +188,7 @@ min-width: 120px;
 	margin-right: 10px;
 	font-weight: bolder;
 	padding-right: 0px;
-	background: url('/joomla/components/com_twojtoolbox/css/admin/load.gif') no-repeat center left;
+	background: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load.gif') no-repeat center left;
 	padding-left: 40px;
 }
 #twojtoolbox_newproduct.twojtoolbox_updatecorect{
@@ -196,7 +196,7 @@ min-width: 120px;
 	margin-bottom: -1px;
 }
 #twojtoolbox_newproduct.twojtoolbox_update_complete{
-	background: url('/joomla/components/com_twojtoolbox/css/admin/inf.gif') no-repeat center left;
+	background: url('/bbic/joomla/components/com_twojtoolbox/css/admin/inf.gif') no-repeat center left;
 	padding-left: 16px;
 }
 
@@ -218,13 +218,13 @@ min-width: 120px;
 	background-repeat: no-repeat;
 }
 .twojtoolbox_status_new{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_new.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_new.png');
 }
 .twojtoolbox_status_installed{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_installed.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_installed.png');
 }
 .twojtoolbox_status_update{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_update.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_update.png');
 }
 
 .twojtoolbox_status_actionbutton{
@@ -244,24 +244,24 @@ min-width: 120px;
 	margin-left: 3px;
 }
 .twojtoolbox_buttonset_button_upload{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_upload.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_upload.png');
 }
 .twojtoolbox_buttonset_button_scan{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_scan.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_scan.png');
 }
 .twojtoolbox_buttonset_button_elements{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_elements.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_elements.png');
 	margin-left: 5px;
 }
 .twojtoolbox_buttonset_button_options{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_options.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_options.png');
 }
 
 
 
 .twojtoolbox_status_actionbutton{ display: none; }
 .twojtoolbox_loading{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/load_big.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load_big.gif');
 	background-position: center center;
 	display: block;
 	height: 50px;
@@ -271,7 +271,7 @@ min-width: 120px;
 	background-repeat: no-repeat;
 }
 .twojtoolbox_loading_small{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/load.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load.gif');
 	background-position: left center;
 	display: block;
 	height: 24px;
@@ -281,7 +281,7 @@ min-width: 120px;
 }
 
 .twojtoolbox_loading_big{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/loading_bar.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/loading_bar.gif');
 	background-position: left center;
 	display: block;
 	height: 20px;
@@ -291,7 +291,7 @@ min-width: 120px;
 }
 
 .twojtoolbox_uplodinglog_loadimage{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/load.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load.gif');
 	background-position: left top;
 	display: block;
 	height: 8px;
@@ -304,7 +304,7 @@ min-width: 120px;
 	width: 320px;
 }
 .twojtoolbox_grid_true{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/true.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/true.png');
 	background-position: left top;
 	display: block;
 	height: 16px;
@@ -396,7 +396,7 @@ min-width: 120px;
 	border: solid 1px silver;
 	width: 170px;
 	height: 130px;
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/load.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load.gif');
 	background-position: center center;
 	background-color: White;
 	background-repeat: no-repeat;
@@ -458,9 +458,9 @@ font-weight: bolder;
 	text-decoration: none !important;
 	
 }
-.twojtoolbox_about_twitterLink{ 	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/twitter.png') no-repeat left; 	}
-.twojtoolbox_about_facebookLink{ background: transparent url('/joomla/components/com_twojtoolbox/css/admin/facebook.png') no-repeat left; }
-.twojtoolbox_about_youtubeLink{ 	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/youtube.png') no-repeat left;	}
+.twojtoolbox_about_twitterLink{ 	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/twitter.png') no-repeat left; 	}
+.twojtoolbox_about_facebookLink{ background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/facebook.png') no-repeat left; }
+.twojtoolbox_about_youtubeLink{ 	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/youtube.png') no-repeat left;	}
 
 .twojtoolbox_about_title{
 	padding: 0;
@@ -522,7 +522,7 @@ font-weight: bolder;
 .twojtoolbox_about_powered{
 	display: block;
 	padding-top: 0px;
-	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/2joomla_logo.png') no-repeat center bottom;
+	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/2joomla_logo.png') no-repeat center bottom;
 	text-align: center;
 	padding-bottom: 58px;
 	font-size: 14px;
@@ -535,17 +535,17 @@ font-weight: bolder;
 }
 .twojtoolbox_installed{
 	padding-left: 22px; 
-	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/true.png') no-repeat center left;
+	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/true.png') no-repeat center left;
 	color: #006400;
 }
 .twojtoolbox_notinstalled{
 	padding-left: 22px; 
-	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/false.png') no-repeat center left;
+	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/false.png') no-repeat center left;
 	color: #b8860b;
 }
-.icon-48-twojtoolbox {background-image: url('/joomla/components/com_twojtoolbox/css/admin/twojtoolbox-48x48.png');}
-.icon-32-twojtoolbox_about {background-image: url('/joomla/components/com_twojtoolbox/css/admin/info_button.png');}
-.icon-32-twojtoolbox_demo {background-image: url('/joomla/components/com_twojtoolbox/css/admin/demo.png');}
+.icon-48-twojtoolbox {background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/twojtoolbox-48x48.png');}
+.icon-32-twojtoolbox_about {background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/info_button.png');}
+.icon-32-twojtoolbox_demo {background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/demo.png');}
 
 .twojtoolbox_demo_div{
 	float: left;
@@ -555,7 +555,7 @@ font-weight: bolder;
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/check_demos.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/check_demos.png');
 	background-position: top left;
 	background-repeat: no-repeat;
 	width: 71px;
@@ -1249,7 +1249,7 @@ button.ui-button::-moz-focus-inner {
 	height: 100%;
 }
 .ui-progressbar .ui-progressbar-overlay {
-	background: url("/joomla/components/com_twojtoolbox/css/images/animated-overlay.gif");
+	background: url("/bbic/joomla/components/com_twojtoolbox/css/images/animated-overlay.gif");
 	height: 100%;
 	filter: alpha(opacity=25);
 	opacity: 0.25;
@@ -1520,7 +1520,7 @@ body .ui-tooltip {
 }
 .ui-widget-content {
 	border: 1px solid #dddddd;
-	background: #ffffff url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
+	background: #ffffff url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
 	color: #444444;
 }
 .ui-widget-content a {
@@ -1528,7 +1528,7 @@ body .ui-tooltip {
 }
 .ui-widget-header {
 	border: 1px solid #dddddd;
-	background: #dddddd url("/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_50_dddddd_1x100.png") 50% 50% repeat-x;
+	background: #dddddd url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_50_dddddd_1x100.png") 50% 50% repeat-x;
 	color: #444444;
 	font-weight: bold;
 }
@@ -1542,7 +1542,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid #dddddd;
-	background: #f6f6f6 url("/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_100_f6f6f6_1x100.png") 50% 50% repeat-x;
+	background: #f6f6f6 url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_100_f6f6f6_1x100.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #0073ea;
 }
@@ -1559,7 +1559,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
 	border: 1px solid #0073ea;
-	background: #0073ea url("/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_25_0073ea_1x100.png") 50% 50% repeat-x;
+	background: #0073ea url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_25_0073ea_1x100.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #ffffff;
 }
@@ -1574,7 +1574,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
 	border: 1px solid #dddddd;
-	background: #ffffff url("/joomla/components/com_twojtoolbox/css/images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
+	background: #ffffff url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #ff0084;
 }
@@ -1591,7 +1591,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
 	border: 1px solid #cccccc;
-	background: #ffffff url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_55_ffffff_40x100.png") 50% 50% repeat-x;
+	background: #ffffff url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_55_ffffff_40x100.png") 50% 50% repeat-x;
 	color: #444444;
 }
 .ui-state-highlight a,
@@ -1603,7 +1603,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
 	border: 1px solid #ff0084;
-	background: #ffffff url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_55_ffffff_40x100.png") 50% 50% repeat-x;
+	background: #ffffff url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_55_ffffff_40x100.png") 50% 50% repeat-x;
 	color: #222222;
 }
 .ui-state-error a,
@@ -1649,27 +1649,27 @@ body .ui-tooltip {
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_ff0084_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_ff0084_256x240.png");
 }
 .ui-widget-header .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_0073ea_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_0073ea_256x240.png");
 }
 .ui-state-default .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_666666_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_666666_256x240.png");
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_ffffff_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_ffffff_256x240.png");
 }
 .ui-state-active .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_454545_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_454545_256x240.png");
 }
 .ui-state-highlight .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_0073ea_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_0073ea_256x240.png");
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_ff0084_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_ff0084_256x240.png");
 }
 
 /* positioning */
@@ -1882,14 +1882,14 @@ body .ui-tooltip {
 
 /* Overlays */
 .ui-widget-overlay {
-	background: #eeeeee url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_0_eeeeee_40x100.png") 50% 50% repeat-x;
+	background: #eeeeee url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_0_eeeeee_40x100.png") 50% 50% repeat-x;
 	opacity: .8;
 	filter: Alpha(Opacity=80);
 }
 .ui-widget-shadow {
 	margin: -4px 0 0 -4px;
 	padding: 4px;
-	background: #aaaaaa url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+	background: #aaaaaa url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
 	opacity: .6;
 	filter: Alpha(Opacity=60);
 	border-radius: 0px;
@@ -1923,8 +1923,8 @@ body .ui-tooltip {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.eot?v=3.2.1');
-  src: url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('/bbic/joomla/components/com_twojtoolbox/css/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -3366,7 +3366,7 @@ button.twojtoolbox_editIconSelectButton{
 	padding: 0;
 }
 .twoj_gallery_loadimage{
-	background: transparent url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/loader.gif') no-repeat center;
+	background: transparent url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/loader.gif') no-repeat center;
 	width: 160px;
 	height: 20px;
 	margin: 0 auto;
@@ -4078,15 +4078,15 @@ button.twojtoolbox_editIconSelectButton{
 .twoj_gallery_lb1_Photo{float:left; margin:auto; padding: 0; border:0; display:block; max-width:none;}
 .twoj_gallery_lb1_Iframe{width:100%; height:100%; display:block; border:0;}
 #twoj_gallery_lb1_Content, #twoj_gallery_lb1_LoadedContent{box-sizing:content-box;}
-#twoj_gallery_lb1_Overlay{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/overlay.png') repeat 0 0;}
-#twoj_gallery_lb1_TopLeft{width:21px; height:21px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -101px 0;}
-#twoj_gallery_lb1_TopRight{width:21px; height:21px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -130px 0;}
-#twoj_gallery_lb1_BottomLeft{width:21px; height:21px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -101px -29px;}
-#twoj_gallery_lb1_BottomRight{width:21px; height:21px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -130px -29px;}
-#twoj_gallery_lb1_MiddleLeft{width:21px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') left top repeat-y;}
-#twoj_gallery_lb1_MiddleRight{width:21px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') right top repeat-y;}
-#twoj_gallery_lb1_TopCenter{height:21px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/border.png') 0 0 repeat-x;}
-#twoj_gallery_lb1_BottomCenter{height:21px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/border.png') 0 -29px repeat-x;}
+#twoj_gallery_lb1_Overlay{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/overlay.png') repeat 0 0;}
+#twoj_gallery_lb1_TopLeft{width:21px; height:21px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -101px 0;}
+#twoj_gallery_lb1_TopRight{width:21px; height:21px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -130px 0;}
+#twoj_gallery_lb1_BottomLeft{width:21px; height:21px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -101px -29px;}
+#twoj_gallery_lb1_BottomRight{width:21px; height:21px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -130px -29px;}
+#twoj_gallery_lb1_MiddleLeft{width:21px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') left top repeat-y;}
+#twoj_gallery_lb1_MiddleRight{width:21px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') right top repeat-y;}
+#twoj_gallery_lb1_TopCenter{height:21px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/border.png') 0 0 repeat-x;}
+#twoj_gallery_lb1_BottomCenter{height:21px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/border.png') 0 -29px repeat-x;}
 #twoj_gallery_lb1_Content{background:#fff; overflow:hidden;}
 .twoj_gallery_lb1_Iframe{background:#fff;}
 #twoj_gallery_lb1_Error{padding:50px; border:1px solid #ccc;}
@@ -4094,13 +4094,13 @@ button.twojtoolbox_editIconSelectButton{
 #twoj_gallery_lb1_Title{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
 #twoj_gallery_lb1_Current{position:absolute; bottom:4px; left:58px; color:#949494;}
 #twoj_gallery_lb1_Slideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
-#twoj_gallery_lb1_Previous{position:absolute; bottom:0; left:0; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
+#twoj_gallery_lb1_Previous{position:absolute; bottom:0; left:0; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -75px 0; width:25px; height:25px; text-indent:-9999px;}
 #twoj_gallery_lb1_Previous:hover{background-position:-75px -25px;}
-#twoj_gallery_lb1_Next{position:absolute; bottom:0; left:27px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
+#twoj_gallery_lb1_Next{position:absolute; bottom:0; left:27px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -50px 0; width:25px; height:25px; text-indent:-9999px;}
 #twoj_gallery_lb1_Next:hover{background-position:-50px -25px;}
-#twoj_gallery_lb1_LoadingOverlay{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/loading_background.png') no-repeat center center;}
-#twoj_gallery_lb1_LoadingGraphic{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/loading.gif') no-repeat center center;}
-#twoj_gallery_lb1_Close{position:absolute; bottom:0; right:0; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
+#twoj_gallery_lb1_LoadingOverlay{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/loading_background.png') no-repeat center center;}
+#twoj_gallery_lb1_LoadingGraphic{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/loading.gif') no-repeat center center;}
+#twoj_gallery_lb1_Close{position:absolute; bottom:0; right:0; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/controls.png') no-repeat -25px 0; width:25px; height:25px; text-indent:-9999px;}
 #twoj_gallery_lb1_Close:hover{background-position:-25px -25px;}
 
 .twoj_gallery_lb1_IE #twoj_gallery_lb1_TopLeft,
@@ -4113,14 +4113,14 @@ button.twojtoolbox_editIconSelectButton{
 .twoj_gallery_lb1_IE #twoj_gallery_lb1_MiddleRight {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
 }
-.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_TopLeft{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderTopLeft.png');}
-.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_TopCenter{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderTopCenter.png');}
-.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_TopRight{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderTopRight.png');}
-.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_BottomLeft{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderBottomLeft.png');}
-.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_BottomCenter{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderBottomCenter.png');}
-.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_BottomRight{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderBottomRight.png');}
-.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_MiddleLeft{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderMiddleLeft.png');}
-.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_MiddleRight{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderMiddleRight.png');}
+.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_TopLeft{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderTopLeft.png');}
+.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_TopCenter{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderTopCenter.png');}
+.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_TopRight{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderTopRight.png');}
+.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_BottomLeft{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderBottomLeft.png');}
+.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_BottomCenter{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderBottomCenter.png');}
+.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_BottomRight{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderBottomRight.png');}
+.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_MiddleLeft{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderMiddleLeft.png');}
+.twoj_gallery_lb1_IE6 #twoj_gallery_lb1_MiddleRight{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb1/ie6/borderMiddleRight.png');}
 
 .twoj_gallery_lb1_IE6 #twoj_gallery_lb1_TopLeft,
 .twoj_gallery_lb1_IE6 #twoj_gallery_lb1_TopCenter,
@@ -4159,14 +4159,14 @@ button.twojtoolbox_editIconSelectButton{
 .twoj_gallery_lb2_Iframe{background:#fff;}
 #twoj_gallery_lb2_Error{padding:50px; border:1px solid #ccc;}
 #twoj_gallery_lb2_LoadedContent{background:#000; padding:1px;}
-#twoj_gallery_lb2_LoadingGraphic{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb2/loading.gif') no-repeat center center;}
+#twoj_gallery_lb2_LoadingGraphic{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb2/loading.gif') no-repeat center center;}
 #twoj_gallery_lb2_LoadingOverlay{background:#000;}
 #twoj_gallery_lb2_Title{position:absolute; top:-22px; left:0; color:#000;}
 #twoj_gallery_lb2_Current{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
 #twoj_gallery_lb2_Slideshow, 
 #twoj_gallery_lb2_Previous, 
 #twoj_gallery_lb2_Next, 
-#twoj_gallery_lb2_Close{text-indent:-9999px; width:20px; height:20px; position:absolute; top:-20px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb2/controls.png') no-repeat 0 0;}
+#twoj_gallery_lb2_Close{text-indent:-9999px; width:20px; height:20px; position:absolute; top:-20px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb2/controls.png') no-repeat 0 0;}
 #twoj_gallery_lb2_Previous{background-position:0px 0px; right:44px;}
 #twoj_gallery_lb2_Previous:hover{background-position:0px -25px;}
 #twoj_gallery_lb2_Next{background-position:-25px 0px; right:22px;}
@@ -4209,13 +4209,13 @@ button.twojtoolbox_editIconSelectButton{
 #twoj_gallery_lb3_Title{position:absolute; top:-20px; left:0; color:#ccc;}
 #twoj_gallery_lb3_Current{position:absolute; top:-20px; right:0px; color:#ccc;}
 #twoj_gallery_lb3_Slideshow{position:absolute; top:-20px; right:90px; color:#fff;}
-#twoj_gallery_lb3_Previous{position:absolute; top:50%; left:5px; margin-top:-32px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb3/controls.png') no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
+#twoj_gallery_lb3_Previous{position:absolute; top:50%; left:5px; margin-top:-32px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb3/controls.png') no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
 #twoj_gallery_lb3_Previous:hover{background-position:bottom left;}
-#twoj_gallery_lb3_Next{position:absolute; top:50%; right:5px; margin-top:-32px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb3/controls.png') no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
+#twoj_gallery_lb3_Next{position:absolute; top:50%; right:5px; margin-top:-32px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb3/controls.png') no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
 #twoj_gallery_lb3_Next:hover{background-position:bottom right;}
 #twoj_gallery_lb3_LoadingOverlay{background:#000;}
-#twoj_gallery_lb3_LoadingGraphic{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb3/loading.gif') no-repeat center center;}
-#twoj_gallery_lb3_Close{position:absolute; top:5px; right:5px; display:block; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb3/images/controls.png') no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
+#twoj_gallery_lb3_LoadingGraphic{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb3/loading.gif') no-repeat center center;}
+#twoj_gallery_lb3_Close{position:absolute; top:5px; right:5px; display:block; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb3/images/controls.png') no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
 #twoj_gallery_lb3_Close:hover{background-position:bottom center;}/*
     twoj_gallery_lb4 Core Style:
     The following CSS is consistent between example themes and should not be altered.
@@ -4239,14 +4239,14 @@ button.twojtoolbox_editIconSelectButton{
 */
 #twoj_gallery_lb4_Overlay{background:#fff;}
 #twoj_gallery_lb4{}
-#twoj_gallery_lb4_TopLeft{width:25px; height:25px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') no-repeat 0 0;}
-#twoj_gallery_lb4_TopCenter{height:25px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') repeat-x 0 -50px;}
-#twoj_gallery_lb4_TopRight{width:25px; height:25px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') no-repeat -25px 0;}
-#twoj_gallery_lb4_BottomLeft{width:25px; height:25px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') no-repeat 0 -25px;}
-#twoj_gallery_lb4_BottomCenter{height:25px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') repeat-x 0 -75px;}
-#twoj_gallery_lb4_BottomRight{width:25px; height:25px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') no-repeat -25px -25px;}
-#twoj_gallery_lb4_MiddleLeft{width:25px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border2.png') repeat-y 0 0;}
-#twoj_gallery_lb4_MiddleRight{width:25px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border2.png') repeat-y -25px 0;}
+#twoj_gallery_lb4_TopLeft{width:25px; height:25px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') no-repeat 0 0;}
+#twoj_gallery_lb4_TopCenter{height:25px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') repeat-x 0 -50px;}
+#twoj_gallery_lb4_TopRight{width:25px; height:25px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') no-repeat -25px 0;}
+#twoj_gallery_lb4_BottomLeft{width:25px; height:25px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') no-repeat 0 -25px;}
+#twoj_gallery_lb4_BottomCenter{height:25px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') repeat-x 0 -75px;}
+#twoj_gallery_lb4_BottomRight{width:25px; height:25px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border1.png') no-repeat -25px -25px;}
+#twoj_gallery_lb4_MiddleLeft{width:25px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border2.png') repeat-y 0 0;}
+#twoj_gallery_lb4_MiddleRight{width:25px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/border2.png') repeat-y -25px 0;}
 #twoj_gallery_lb4_Content{background:#fff; overflow:hidden;}
 .twoj_gallery_lb4_Iframe{background:#fff;}
 #twoj_gallery_lb4_Error{padding:50px; border:1px solid #ccc;}
@@ -4256,7 +4256,7 @@ button.twojtoolbox_editIconSelectButton{
 #twoj_gallery_lb4_Slideshow{position:absolute; bottom:0px; right:42px; color:#444;}
 #twoj_gallery_lb4_Previous{position:absolute; bottom:0px; left:0; color:#444;}
 #twoj_gallery_lb4_Next{position:absolute; bottom:0px; left:63px; color:#444;}
-#twoj_gallery_lb4_LoadingOverlay{background:#fff url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/loading.gif') no-repeat 5px 5px;}
+#twoj_gallery_lb4_LoadingOverlay{background:#fff url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/loading.gif') no-repeat 5px 5px;}
 #twoj_gallery_lb4_Close{position:absolute; bottom:0; right:0; display:block; color:#444;}
 
 /*
@@ -4279,14 +4279,14 @@ button.twojtoolbox_editIconSelectButton{
   The following provides PNG transparency support for IE6
   Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
 */
-.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopLeft{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderTopLeft.png');}
-.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopCenter{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderTopCenter.png');}
-.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopRight{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderTopRight.png');}
-.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomLeft{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderBottomLeft.png');}
-.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomCenter{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderBottomCenter.png');}
-.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomRight{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderBottomRight.png');}
-.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_MiddleLeft{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderMiddleLeft.png');}
-.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_MiddleRight{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderMiddleRight.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopLeft{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderTopLeft.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopCenter{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderTopCenter.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopRight{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderTopRight.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomLeft{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderBottomLeft.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomCenter{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderBottomCenter.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_BottomRight{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderBottomRight.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_MiddleLeft{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderMiddleLeft.png');}
+.twoj_gallery_lb4_IE6 #twoj_gallery_lb4_MiddleRight{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb4/ie6/borderMiddleRight.png');}
 
 .twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopLeft,
 .twoj_gallery_lb4_IE6 #twoj_gallery_lb4_TopCenter,
@@ -4321,24 +4321,24 @@ button.twojtoolbox_editIconSelectButton{
 */
 #twoj_gallery_lb5_Overlay{background:#000;}
 #twoj_gallery_lb5{}
-    #twoj_gallery_lb5_TopLeft{width:14px; height:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0 0;}
-    #twoj_gallery_lb5_TopCenter{height:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/border.png') repeat-x top left;}
-    #twoj_gallery_lb5_TopRight{width:14px; height:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat -36px 0;}
-    #twoj_gallery_lb5_BottomLeft{width:14px; height:43px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0 -32px;}
-    #twoj_gallery_lb5_BottomCenter{height:43px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/border.png') repeat-x bottom left;}
-    #twoj_gallery_lb5_BottomRight{width:14px; height:43px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat -36px -32px;}
-    #twoj_gallery_lb5_MiddleLeft{width:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') repeat-y -175px 0;}
-    #twoj_gallery_lb5_MiddleRight{width:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') repeat-y -211px 0;}
+    #twoj_gallery_lb5_TopLeft{width:14px; height:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0 0;}
+    #twoj_gallery_lb5_TopCenter{height:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/border.png') repeat-x top left;}
+    #twoj_gallery_lb5_TopRight{width:14px; height:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat -36px 0;}
+    #twoj_gallery_lb5_BottomLeft{width:14px; height:43px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0 -32px;}
+    #twoj_gallery_lb5_BottomCenter{height:43px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/border.png') repeat-x bottom left;}
+    #twoj_gallery_lb5_BottomRight{width:14px; height:43px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat -36px -32px;}
+    #twoj_gallery_lb5_MiddleLeft{width:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') repeat-y -175px 0;}
+    #twoj_gallery_lb5_MiddleRight{width:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') repeat-y -211px 0;}
     #twoj_gallery_lb5_Content{background:#fff; overflow:visible;}
         .twoj_gallery_lb5_Iframe{background:#fff;}
         #twoj_gallery_lb5_Error{padding:50px; border:1px solid #ccc;}
         #twoj_gallery_lb5_LoadedContent{margin-bottom:5px;}
-        #twoj_gallery_lb5_LoadingOverlay{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/loading_background.png') no-repeat center center;}
-        #twoj_gallery_lb5_LoadingGraphic{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/loading.gif') no-repeat center center;}
+        #twoj_gallery_lb5_LoadingOverlay{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/loading_background.png') no-repeat center center;}
+        #twoj_gallery_lb5_LoadingGraphic{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/loading.gif') no-repeat center center;}
         #twoj_gallery_lb5_Title{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
         #twoj_gallery_lb5_Current{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
         
-        #twoj_gallery_lb5_Previous, #twoj_gallery_lb5_Next, #twoj_gallery_lb5_Close, #twoj_gallery_lb5_Slideshow{position:absolute; bottom:-29px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
+        #twoj_gallery_lb5_Previous, #twoj_gallery_lb5_Next, #twoj_gallery_lb5_Close, #twoj_gallery_lb5_Slideshow{position:absolute; bottom:-29px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
         #twoj_gallery_lb5_Previous{left:0px; background-position: -51px -25px;}
         #twoj_gallery_lb5_Previous:hover{background-position:-51px 0px;}
         #twoj_gallery_lb5_Next{left:27px; background-position:-75px -25px;}
@@ -4372,24 +4372,24 @@ button.twojtoolbox_editIconSelectButton{
 */
 #twoj_gallery_lb5_Overlay{background:#000;}
 #twoj_gallery_lb5{}
-    #twoj_gallery_lb5_TopLeft{width:14px; height:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0 0;}
-    #twoj_gallery_lb5_TopCenter{height:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/border.png') repeat-x top left;}
-    #twoj_gallery_lb5_TopRight{width:14px; height:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat -36px 0;}
-    #twoj_gallery_lb5_BottomLeft{width:14px; height:43px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0 -32px;}
-    #twoj_gallery_lb5_BottomCenter{height:43px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/border.png') repeat-x bottom left;}
-    #twoj_gallery_lb5_BottomRight{width:14px; height:43px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat -36px -32px;}
-    #twoj_gallery_lb5_MiddleLeft{width:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') repeat-y -175px 0;}
-    #twoj_gallery_lb5_MiddleRight{width:14px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') repeat-y -211px 0;}
+    #twoj_gallery_lb5_TopLeft{width:14px; height:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0 0;}
+    #twoj_gallery_lb5_TopCenter{height:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/border.png') repeat-x top left;}
+    #twoj_gallery_lb5_TopRight{width:14px; height:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat -36px 0;}
+    #twoj_gallery_lb5_BottomLeft{width:14px; height:43px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0 -32px;}
+    #twoj_gallery_lb5_BottomCenter{height:43px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/border.png') repeat-x bottom left;}
+    #twoj_gallery_lb5_BottomRight{width:14px; height:43px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat -36px -32px;}
+    #twoj_gallery_lb5_MiddleLeft{width:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') repeat-y -175px 0;}
+    #twoj_gallery_lb5_MiddleRight{width:14px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') repeat-y -211px 0;}
     #twoj_gallery_lb5_Content{background:#fff; overflow:visible;}
         .twoj_gallery_lb5_Iframe{background:#fff;}
         #twoj_gallery_lb5_Error{padding:50px; border:1px solid #ccc;}
         #twoj_gallery_lb5_LoadedContent{margin-bottom:5px;}
-        #twoj_gallery_lb5_LoadingOverlay{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/loading_background.png') no-repeat center center;}
-        #twoj_gallery_lb5_LoadingGraphic{background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/loading.gif') no-repeat center center;}
+        #twoj_gallery_lb5_LoadingOverlay{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/loading_background.png') no-repeat center center;}
+        #twoj_gallery_lb5_LoadingGraphic{background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/loading.gif') no-repeat center center;}
         #twoj_gallery_lb5_Title{position:absolute; bottom:-25px; left:0; text-align:center; width:100%; font-weight:bold; color:#7C7C7C;}
         #twoj_gallery_lb5_Current{position:absolute; bottom:-25px; left:58px; font-weight:bold; color:#7C7C7C;}
         
-        #twoj_gallery_lb5_Previous, #twoj_gallery_lb5_Next, #twoj_gallery_lb5_Close, #twoj_gallery_lb5_Slideshow{position:absolute; bottom:-29px; background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
+        #twoj_gallery_lb5_Previous, #twoj_gallery_lb5_Next, #twoj_gallery_lb5_Close, #twoj_gallery_lb5_Slideshow{position:absolute; bottom:-29px; background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb5/controls.png') no-repeat 0px 0px; width:23px; height:23px; text-indent:-9999px;}
         #twoj_gallery_lb5_Previous{left:0px; background-position: -51px -25px;}
         #twoj_gallery_lb5_Previous:hover{background-position:-51px 0px;}
         #twoj_gallery_lb5_Next{left:27px; background-position:-75px -25px;}
@@ -4431,7 +4431,7 @@ button.twojtoolbox_editIconSelectButton{
 }
 
 .twoj_gallery_lb6_Slider .twoj_gallery_lb6_placeholder{
-	background: url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb6/preloader.gif') no-repeat center center;
+	background: url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb6/preloader.gif') no-repeat center center;
 	height: 100%;
 	line-height: 1px;
 	text-align: center;
@@ -4484,7 +4484,7 @@ button.twojtoolbox_editIconSelectButton{
 .twoj_gallery_lb6_nextArrow{
 	border:none;
 	text-decoration:none;
-	background:url('/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb6/arrows.png') no-repeat;
+	background:url('/bbic/joomla/components/com_twojtoolbox/plugins/gallery/1005/css/images/lb6/arrows.png') no-repeat;
 	opacity:0.5;
 	cursor:pointer;
 	position:absolute;

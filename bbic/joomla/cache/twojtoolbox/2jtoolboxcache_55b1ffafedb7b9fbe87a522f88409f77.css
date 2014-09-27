@@ -40,17 +40,17 @@
 .twoj_formEditItem textarea.twoj_width_80,
 .twoj_formEditItem input.twoj_width_80,
 .twoj_width_80{
-	width: 80%
+	width: 80%;
 }
 .twoj_formEditItem textarea.twoj_width_90,
 .twoj_formEditItem input.twoj_width_90,
 .twoj_width_90{
-	width: 90%
+	width: 90%;  min-width: 600px;
 }
 
 
-.twoj_width_60{ width: 59% }
-.twoj_width_40{ width: 39% }
+.twoj_width_60{ width: 59%;  min-width: 400px;}
+.twoj_width_40{ width: 39%;  min-width: 400px;}
 
 .twojtoolbox_hiddenblock{ display: none; } /* delete after check */
 .twoj_hiddenblock{ display: none; }
@@ -86,7 +86,7 @@
 }
 
 .twojtoolbox_product .check{
-	background: url('/joomla/components/com_twojtoolbox/css/admin/checked.png') no-repeat top left;
+	background: url('/bbic/joomla/components/com_twojtoolbox/css/admin/checked.png') no-repeat top left;
 	width: 300px;
 	height: 84px;
 	position: absolute;
@@ -105,7 +105,7 @@
 	margin-right: 10px;
 	font-weight: bolder;
 	padding-right: 0px;
-	background: url('/joomla/components/com_twojtoolbox/css/admin/load.gif') no-repeat center left;
+	background: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load.gif') no-repeat center left;
 	padding-left: 40px;
 }
 #twojtoolbox_newproduct.twojtoolbox_updatecorect{
@@ -113,7 +113,7 @@
 	margin-bottom: -1px;
 }
 #twojtoolbox_newproduct.twojtoolbox_update_complete{
-	background: url('/joomla/components/com_twojtoolbox/css/admin/inf.gif') no-repeat center left;
+	background: url('/bbic/joomla/components/com_twojtoolbox/css/admin/inf.gif') no-repeat center left;
 	padding-left: 16px;
 }
 
@@ -135,13 +135,13 @@
 	background-repeat: no-repeat;
 }
 .twojtoolbox_status_new{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_new.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_new.png');
 }
 .twojtoolbox_status_installed{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_installed.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_installed.png');
 }
 .twojtoolbox_status_update{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_update.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_update.png');
 }
 
 .twojtoolbox_status_actionbutton{
@@ -161,24 +161,24 @@
 	margin-left: 3px;
 }
 .twojtoolbox_buttonset_button_upload{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_upload.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_upload.png');
 }
 .twojtoolbox_buttonset_button_scan{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_scan.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_scan.png');
 }
 .twojtoolbox_buttonset_button_elements{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_elements.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_elements.png');
 	margin-left: 5px;
 }
 .twojtoolbox_buttonset_button_options{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/bt_options.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/bt_options.png');
 }
 
 
 
 .twojtoolbox_status_actionbutton{ display: none; }
 .twojtoolbox_loading{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/load_big.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load_big.gif');
 	background-position: center center;
 	display: block;
 	height: 50px;
@@ -188,7 +188,7 @@
 	background-repeat: no-repeat;
 }
 .twojtoolbox_loading_small{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/load.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load.gif');
 	background-position: left center;
 	display: block;
 	height: 24px;
@@ -198,7 +198,7 @@
 }
 
 .twojtoolbox_loading_big{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/loading_bar.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/loading_bar.gif');
 	background-position: left center;
 	display: block;
 	height: 20px;
@@ -208,7 +208,7 @@
 }
 
 .twojtoolbox_uplodinglog_loadimage{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/load.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load.gif');
 	background-position: left top;
 	display: block;
 	height: 8px;
@@ -221,7 +221,7 @@
 	width: 320px;
 }
 .twojtoolbox_grid_true{
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/true.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/true.png');
 	background-position: left top;
 	display: block;
 	height: 16px;
@@ -313,7 +313,7 @@
 	border: solid 1px silver;
 	width: 170px;
 	height: 130px;
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/load.gif');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/load.gif');
 	background-position: center center;
 	background-color: White;
 	background-repeat: no-repeat;
@@ -375,9 +375,9 @@ font-weight: bolder;
 	text-decoration: none !important;
 	
 }
-.twojtoolbox_about_twitterLink{ 	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/twitter.png') no-repeat left; 	}
-.twojtoolbox_about_facebookLink{ background: transparent url('/joomla/components/com_twojtoolbox/css/admin/facebook.png') no-repeat left; }
-.twojtoolbox_about_youtubeLink{ 	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/youtube.png') no-repeat left;	}
+.twojtoolbox_about_twitterLink{ 	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/twitter.png') no-repeat left; 	}
+.twojtoolbox_about_facebookLink{ background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/facebook.png') no-repeat left; }
+.twojtoolbox_about_youtubeLink{ 	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/youtube.png') no-repeat left;	}
 
 .twojtoolbox_about_title{
 	padding: 0;
@@ -439,7 +439,7 @@ font-weight: bolder;
 .twojtoolbox_about_powered{
 	display: block;
 	padding-top: 0px;
-	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/2joomla_logo.png') no-repeat center bottom;
+	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/2joomla_logo.png') no-repeat center bottom;
 	text-align: center;
 	padding-bottom: 58px;
 	font-size: 14px;
@@ -452,17 +452,17 @@ font-weight: bolder;
 }
 .twojtoolbox_installed{
 	padding-left: 22px; 
-	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/true.png') no-repeat center left;
+	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/true.png') no-repeat center left;
 	color: #006400;
 }
 .twojtoolbox_notinstalled{
 	padding-left: 22px; 
-	background: transparent url('/joomla/components/com_twojtoolbox/css/admin/false.png') no-repeat center left;
+	background: transparent url('/bbic/joomla/components/com_twojtoolbox/css/admin/false.png') no-repeat center left;
 	color: #b8860b;
 }
-.icon-48-twojtoolbox {background-image: url('/joomla/components/com_twojtoolbox/css/admin/twojtoolbox-48x48.png');}
-.icon-32-twojtoolbox_about {background-image: url('/joomla/components/com_twojtoolbox/css/admin/info_button.png');}
-.icon-32-twojtoolbox_demo {background-image: url('/joomla/components/com_twojtoolbox/css/admin/demo.png');}
+.icon-48-twojtoolbox {background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/twojtoolbox-48x48.png');}
+.icon-32-twojtoolbox_about {background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/info_button.png');}
+.icon-32-twojtoolbox_demo {background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/demo.png');}
 
 .twojtoolbox_demo_div{
 	float: left;
@@ -472,7 +472,7 @@ font-weight: bolder;
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	background-image: url('/joomla/components/com_twojtoolbox/css/admin/check_demos.png');
+	background-image: url('/bbic/joomla/components/com_twojtoolbox/css/admin/check_demos.png');
 	background-position: top left;
 	background-repeat: no-repeat;
 	width: 71px;
@@ -1166,7 +1166,7 @@ button.ui-button::-moz-focus-inner {
 	height: 100%;
 }
 .ui-progressbar .ui-progressbar-overlay {
-	background: url("/joomla/components/com_twojtoolbox/css/images/animated-overlay.gif");
+	background: url("/bbic/joomla/components/com_twojtoolbox/css/images/animated-overlay.gif");
 	height: 100%;
 	filter: alpha(opacity=25);
 	opacity: 0.25;
@@ -1437,7 +1437,7 @@ body .ui-tooltip {
 }
 .ui-widget-content {
 	border: 1px solid #dddddd;
-	background: #ffffff url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
+	background: #ffffff url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_75_ffffff_40x100.png") 50% 50% repeat-x;
 	color: #444444;
 }
 .ui-widget-content a {
@@ -1445,7 +1445,7 @@ body .ui-tooltip {
 }
 .ui-widget-header {
 	border: 1px solid #dddddd;
-	background: #dddddd url("/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_50_dddddd_1x100.png") 50% 50% repeat-x;
+	background: #dddddd url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_50_dddddd_1x100.png") 50% 50% repeat-x;
 	color: #444444;
 	font-weight: bold;
 }
@@ -1459,7 +1459,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
 	border: 1px solid #dddddd;
-	background: #f6f6f6 url("/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_100_f6f6f6_1x100.png") 50% 50% repeat-x;
+	background: #f6f6f6 url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_100_f6f6f6_1x100.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #0073ea;
 }
@@ -1476,7 +1476,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
 	border: 1px solid #0073ea;
-	background: #0073ea url("/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_25_0073ea_1x100.png") 50% 50% repeat-x;
+	background: #0073ea url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_highlight-soft_25_0073ea_1x100.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #ffffff;
 }
@@ -1491,7 +1491,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
 	border: 1px solid #dddddd;
-	background: #ffffff url("/joomla/components/com_twojtoolbox/css/images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
+	background: #ffffff url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #ff0084;
 }
@@ -1508,7 +1508,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
 	border: 1px solid #cccccc;
-	background: #ffffff url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_55_ffffff_40x100.png") 50% 50% repeat-x;
+	background: #ffffff url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_55_ffffff_40x100.png") 50% 50% repeat-x;
 	color: #444444;
 }
 .ui-state-highlight a,
@@ -1520,7 +1520,7 @@ body .ui-tooltip {
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
 	border: 1px solid #ff0084;
-	background: #ffffff url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_55_ffffff_40x100.png") 50% 50% repeat-x;
+	background: #ffffff url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_55_ffffff_40x100.png") 50% 50% repeat-x;
 	color: #222222;
 }
 .ui-state-error a,
@@ -1566,27 +1566,27 @@ body .ui-tooltip {
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_ff0084_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_ff0084_256x240.png");
 }
 .ui-widget-header .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_0073ea_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_0073ea_256x240.png");
 }
 .ui-state-default .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_666666_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_666666_256x240.png");
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_ffffff_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_ffffff_256x240.png");
 }
 .ui-state-active .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_454545_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_454545_256x240.png");
 }
 .ui-state-highlight .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_0073ea_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_0073ea_256x240.png");
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-	background-image: url("/joomla/components/com_twojtoolbox/css/images/ui-icons_ff0084_256x240.png");
+	background-image: url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-icons_ff0084_256x240.png");
 }
 
 /* positioning */
@@ -1799,14 +1799,14 @@ body .ui-tooltip {
 
 /* Overlays */
 .ui-widget-overlay {
-	background: #eeeeee url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_0_eeeeee_40x100.png") 50% 50% repeat-x;
+	background: #eeeeee url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_0_eeeeee_40x100.png") 50% 50% repeat-x;
 	opacity: .8;
 	filter: Alpha(Opacity=80);
 }
 .ui-widget-shadow {
 	margin: -4px 0 0 -4px;
 	padding: 4px;
-	background: #aaaaaa url("/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
+	background: #aaaaaa url("/bbic/joomla/components/com_twojtoolbox/css/images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
 	opacity: .6;
 	filter: Alpha(Opacity=60);
 	border-radius: 0px;
