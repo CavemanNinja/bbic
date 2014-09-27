@@ -58,6 +58,11 @@ defined('_JEXEC') or die('Restricted accessd');
     <ul class="tx-gallery-container tx-gallery-columns-<?php echo $params->get('column',3);?>">
         <?php foreach($items as $item):?>
             <?php foreach($item as $i):?>
+                <?php 
+                    $extrafields_attribs_json = $i->attribs;
+                    $extrafields_attribs = json_decode($extrafields_attribs_json, true);
+                    if ($extrafields_attribs["companyprofile_approval"] == "1") :
+                ?>
                 <li class="<?php echo XEFXpertGalleryHelper::getCatNameAsClass( $i, $params ) ; ?>">
                     <div class="tx-gallery-item">
                         <div class="tx-gallery-item-in">
@@ -120,6 +125,7 @@ defined('_JEXEC') or die('Restricted accessd');
                         </div>
                     </div>
                 </li>
+            <?php endif; ?>
             <?php endforeach; ?>
         <?php endforeach; ?>
     </ul>

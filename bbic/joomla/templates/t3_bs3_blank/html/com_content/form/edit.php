@@ -14,6 +14,7 @@ JHtml::_('behavior.calendar');
 JHtml::_('behavior.formvalidation');
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css', array(), true);
 
+// var_dump($this);
 
 //Check if user is a tenant
 $isTenant = in_array("10", array_values(JFactory::getUser()->groups));
@@ -25,6 +26,17 @@ $params = $this->state->get('params');
 
 $catid = $this->form->getData()->get('catid');
 
+/*Get the parent category ID, used for News and Company Profiles */
+$categoriesModel = JCategories::getInstance('content');
+$category = $categoriesModel->get($catid);
+$parent = $category->getParent();
+$parentid = $parent->id;
+
+// if ($parentid) {
+// 	var_dump($parentid);
+// }
+
+/*BILLING*/
 if ($catid == "10") {
 	JHtml::script(JUri::base() . 'templates/t3_bs3_blank/js/dependsOn-1.0.1.min.js', true);
 
@@ -281,11 +293,15 @@ if(count($extrafields)){
 		</form>
 	</div>
 
-<!-- NEWS, MUST ADD SUBCATEGORIES -->
+<!-- NEWS, MUST ADD SUBCATEGORIES, NO! use PARENT ID -->
 
-<?php elseif ($catid == "8" ||  $catid == "14" ||  $catid == "15" || 
-     $catid == "16" ||  $catid == "22" ||  $catid == "23" ||
-      $catid == "24" || $catid == "25") : ?>
+<?php 
+//elseif ($catid == "8" ||  $catid == "14" ||  $catid == "15" || Old stuff using subcategories. 
+//$catid == "16" ||  $catid == "22" ||  $catid == "23" ||
+//$catid == "24" || $catid == "25") : 
+?>
+
+<?php elseif ($catid == "8" || $catid == "22" || $parentid == "8" || $parentid == "22") : ?>
 
 <div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
 		<?php if ($params->get('show_page_heading', 1)) : ?>
@@ -640,7 +656,7 @@ if(count($extrafields)){
 	</div>
 
 <!-- COMPANY PROFILES -->
-<?php elseif ($catid == 9 || $catid == "28"): ?>
+<?php elseif ($catid == "9" || $catid == "28" || $parentid == "9" || $parentid == "28"): ?>
 	<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
 		<?php if ($params->get('show_page_heading', 1)) : ?>
 		<div class="page-header">
