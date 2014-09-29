@@ -235,7 +235,7 @@
 			"file": "/C/wamp/logs/php_error.log",
 			"settings":
 			{
-				"buffer_size": 4735647,
+				"buffer_size": 4749259,
 				"line_ending": "Windows"
 			}
 		},
@@ -251,7 +251,7 @@
 			"file": "joomla/plugins/content/billrepeat/billrepeat.php",
 			"settings":
 			{
-				"buffer_size": 23710,
+				"buffer_size": 24897,
 				"line_ending": "Windows"
 			}
 		},
@@ -733,15 +733,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4735647,
+						"buffer_size": 4749259,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4747527,
+								4747527
 							]
 						],
 						"settings":
@@ -749,10 +749,10 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 21528.0,
+						"translation.y": 1277568.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -790,15 +790,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23710,
+						"buffer_size": 24897,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8352,
-								8352
+								21841,
+								21841
 							]
 						],
 						"settings":
@@ -808,10 +808,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3228.0,
+						"translation.y": 7218.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
