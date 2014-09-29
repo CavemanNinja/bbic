@@ -33,7 +33,25 @@ class plgContentBillrepeat extends JPlugin
         $catid = $article->catid;
         $attribs_json = $article->attribs;
         $attribs = json_decode($attribs_json);
+
+        //Get the parent category id - For Company Profiles
+        $query = $db->getQuery(true);
+        $query->select($db->quoteName("parent_id"));
+        $query->from($db->quoteName("#__categories"));
+        $query->where($db->quoteName("id") . " = " . $article->catid);
+        $db->setQuery($query);
+        $parent_id = $db->loadResult(); //loads single record.
         
+        $current_user = JFactory::getUser();
+        $isTenant = in_array(10, $current_user->getAuthorisedGroups());
+
+        //Set company profile approval to pending if current user is tenant
+        if ($isTenant && ($catid == 9 || $catid == 28 || $parent_id == 9 || $parent_id == 28 )) {
+            $attribs->companyprofile_approval = "0";
+            $article->attribs = json_encode($attribs);
+        }
+        
+
         //If Bill, add the tenant name to attribs
         if ($catid == 10) {
             $attribs = json_decode($article->attribs);
@@ -52,6 +70,7 @@ class plgContentBillrepeat extends JPlugin
             $article_info = $article->attribs;
             
             // JFactory::getApplication()->enqueueMessage("onContentBeforeSave BILL CALLED");
+            
             
         }
         
@@ -83,108 +102,173 @@ class plgContentBillrepeat extends JPlugin
     }
     
     function onContentAfterSave($context, $article, $isNew) {
+        
+        //Get DB Object.
         $db = JFactory::getDbo();
         
+        //Collect some article attributes.
         $id = intval($article->id);
         $asset_id = intval($article->asset_id);
         $catid = $article->catid;
         $attribs_json = $article->attribs;
         $attribs = json_decode($attribs_json);
         
-        //Create bill automatically when servie request made
-        if ($catid == 12 && $isNew) {
+        //Check if current user is staff member.
+        $current_user = JFactory::getUser();
+        $isStaff = in_array(11, $current_user->getAuthorisedGroups());
+        $isTenant = in_array(10, $current_user->getAuthorisedGroups());
+        
+        //Get the parent category id - For Company Profiles
+        $query = $db->getQuery(true);
+        $query->select($db->quoteName("parent_id"));
+        $query->from($db->quoteName("#__categories"));
+        $query->where($db->quoteName("id") . " = " . $article->catid);
+        $db->setQuery($query);
+        $parent_id = $db->loadResult(); //loads single record.
+
+        //Create bill automatically when service request made
+        if ($catid == 12) {
             
             //Get the service price and name from database
+            $tenant_id = $article->created_by;
             $service_id = $attribs->servicerequest_item;
-            
             $query = $db->getQuery(true);
             $query->select($db->quoteName('attribs'));
             $query->from($db->quoteName('#__content'));
             $query->where($db->quoteName('id') . " = " . $service_id);
             $db->setQuery($query);
             $result = $db->loadResult();
+            $service_attribs_json = $result;
             $service_attribs = json_decode($result);
-            
             $service_price = $service_attribs->service_price;
             $service_name = $service_attribs->service_name;
             
-            // JFactory::getApplication()->enqueueMessage("result: ".$result);
-            // JFactory::getApplication()->enqueueMessage("service_price: ".$service_price);
-            // JFactory::getApplication()->enqueueMessage("service_name: ".$service_name);
-            // JFactory::getApplication()->enqueueMessage("sql: ".$query);
-            
             //Lookup the tenant name in db.
-            $tenant_id = $article->created_by;
-            $query = $db->getQuery(true);
-            $query->select($db->quoteName('username'));
-            $query->from($db->quoteName('#__users'));
-            $query->where($db->quoteName('id') . " = " . $tenant_id);
-            $db->setQuery($query);
-            $result = $db->loadResult();
-            $tenant_name = $result;
-            
-            // JFactory::getApplication()->enqueueMessage("tenant_id: ".$tenant_id);
-            // JFactory::getApplication()->enqueueMessage("tenant_name: ".$result);
-            
-            //Set Billing Attributes
-            $billing_attribs = '{"billing_tenant_name":"' . $tenant_name . '","billing_tenant_id":"' . $tenant_id . '","billing_amount":"' . $service_price . '","billing_invoice_date":"","billing_status":"0","billing_repeatcycle":"","billing_repeatstart":"","billing_repeatend":""}';
-            
-            //Create object to insert
-            $jt_article = JTable::getInstance('content');
-            $jt_article->title = "Service Request: " . $article->title;
-            $jt_article->alias = $tenant_id . "-" . $service_name . "-" . $new_article->id;
-            $jt_article->state = 1;
-            $jt_article->catid = 10;
-            $jt_article->access = 1;
-            $jt_article->attribs = $billing_attribs;
-            $jt_article->metadata = '{"page_title":"","author":"","robots":""}';
-            $jt_article->language = '*';
-            $jt_article->created = JFactory::getDate()->toSQL();
-            
-            // $jt_article->publish_up = JFactory::getDate()->toSQL();
-            
-            //insert new article into database
-            if (!$jt_article->check()) {
-                JError::raiseNotice(500, $jt_article->getError());
-                
-                // return FALSE;
-                
-            }
-            if (!$jt_article->store(TRUE)) {
-                JError::raiseNotice(500, $jt_article->getError());
-                
-                // return FALSE;
-                
-            }
-            
-            //Send Email to tenant about Service Request
-            $mailer = JFactory::getMailer();
-            $config = JFactory::getConfig();
-            $sender = array($config->get('config.mailfrom'), $config->get('config.fromname'));
-            $mailer->setSender($sender);
+            /*
+                         TODO: Should just be able to use getUser to get this much easier. 
+                     
+                     
+                     $query = $db->getQuery(true);
+                     $query->select($db->quoteName('username'));
+                     $query->from($db->quoteName('#__users'));
+                     $query->where($db->quoteName('id') . " = " . $tenant_id);
+                     $db->setQuery($query);
+                     $result = $db->loadResult();
+                     $tenant_name = $result;
+            */
             
             $tenant_user = JFactory::getUser($tenant_id);
             $tenant_email = $tenant_user->email;
-            $mailer->addRecipient($tenant_email);
+            $tenant_username = $tenant_user->username;
             
-            $body = "Hello " . $tenant_user->name . ",\n";
-            $body.= "You have made a new Service Request\n";
-            $body.= "Follow this link to your service requests page to view details:\n";
+            //If the SR is new email the user of new SR.
+            if ($isNew) {
+                
+                /*
+                    Send Email Case (1) to tenant about New Service Request
+                */
+                $body = "Hello " . $tenant_user->name . ",\n";
+                $body.= "You have made a new Service Request\n";
+                $body.= "Follow this link to your service requests page to view details:\n";
+                
+                //TODO: Insert Proper LINK!!
+                
+                $subject = "You have created a new Service Request.";
+                
+                $send = $this->sendEmail($tenant_email, $subject, $body);
+                if ($send == true) {
+                    JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                } else {
+                    JFactory::getApplication()->enqueueMessage("Mail Error.");
+                }
+
+                /*
+                    Send Email Case (2) to Staff Members of Manage Service Requests about New Service Request
+                */
+                //Query for all users in Group Staff>Manage Service Requests (groupid: 15)
+                $query = $db->getQuery(true);
+                $query->select($db->quoteName("user_id"));
+                $query->from($db->quoteName("#__user_usergroup_map"));
+                $query->where($db->quoteName("group_id") . "=15");
+                $db->setQuery($query);
+                $servicerequests_group_userids = $db->loadColumn();
+                $staff_emails = array();
+                $i = 0;
+                if (!empty($servicerequests_group_userids)) {
+                    foreach ($servicerequests_group_userids as $staff_id) {
+                        $staff_emails[$i] = JFactory::getUser($staff_id)->email;
+                        $i++;
+                    }
+                    // JFactory::getApplication()->enqueueMessage("staff emails: " . print_r($staff_emails, true));
+                    $staff_subjuct = "A Tenant has created a new service request.";
+                    $staff_body = "A Tenant has added a new service request.";
+                    $send = $this->sendEmail($staff_emails, $staff_subject, $staff_body);
+                    if ($send == true) {
+                        JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                    } else {
+                        JFactory::getApplication()->enqueueMessage("Mail Error.");
+                    }
+                }
+            }
             
-            //TODO: Insert Proper LINK!!
-            
-            $mailer->setSubject("You have created a new Service Request.");
-            $mailer->setBody($body);
-            
-            $send = $mailer->Send();
-            if ($send == true) {
-                JError::raiseNotice(500, $send->__toString());
-            } else {
-                JFactory::getApplication()->enqueueMessage("Mail Sent.");
+            //If the SR is saved by staff member with the status approved and flag indicating it was just approved
+            elseif ($isStaff && $attribs->servicerequest_approval == "1" && $article->metakey == "") {
+                
+                // JFactory::getApplication()->enqueueMessage("first time approved.");
+                /*
+                                Create Bill for Service Request.
+                */
+                $billing_attribs = '{"billing_tenant_name":"' . $tenant_username . '","billing_tenant_id":"' . $tenant_id . '","billing_amount":"' . $service_price . '","billing_invoice_date":"","billing_status":"0","billing_repeatcycle":"","billing_repeatstart":"","billing_repeatend":""}';
+                $jt_article = JTable::getInstance('content');
+                $jt_article->title = "Service Request: " . $article->title;
+                $jt_article->alias = $tenant_id . "-" . $service_name . "-" . $article->id;
+                $jt_article->state = 1;
+                $jt_article->catid = 10;
+                $jt_article->access = 1;
+                $jt_article->attribs = $billing_attribs;
+                $jt_article->metadata = '{"page_title":"","author":"","robots":""}';
+                $jt_article->language = '*';
+                $jt_article->created = JFactory::getDate()->toSQL();
+                
+                // $jt_article->publish_up = JFactory::getDate()->toSQL();
+                
+                //Insert new article into database
+                if (!$jt_article->check()) {
+                    JError::raiseNotice(500, $jt_article->getError());
+                }
+                if (!$jt_article->store(TRUE)) {
+                    JError::raiseNotice(500, $jt_article->getError() . ", " . $jt_article->alias);
+                } else {
+                  JFactory::getApplication()->enqueueMessage("New Bill created.");  
+                }
+                
+                /*
+                    Send Email Service Request Has been approved.
+                        Success: Set flag email has been sent on service request attribs.
+                */
+                $subject = "Your Service Request Has been approved.";
+                $body = "Hello " . $tenant_user->name . ",\n";
+                $body.= "Your service request has been approved.\n";
+                $body.= "Follow this link to your service requests page to view details:\n";
+                
+                $send = $this->sendEmail($tenant_email, $subject, $body);
+                if ($send == true) {
+                     //Send email successful.
+                    
+                    $query = $db->getQuery(true);
+                    $query->update($db->quoteName('#__content'));
+                    $query->set($db->quoteName("metakey") . " = 1");
+                    $query->where($db->quoteName("id") . " = " . $id);
+                    $db->setQuery($query);
+                    $result = $db->query();
+                    JFactory::getApplication()->enqueueMessage("Notification Email sent to Tenant.");
+                } else {
+                    JError::raiseNotice(500, "Mail Error.");
+                }
             }
         }
         
-        //Repeating Bills
+        //Repeating Bills + Bill emails.
         if ($catid == 10) {
             
             //Check bill is set to repeat
@@ -198,11 +282,6 @@ class plgContentBillrepeat extends JPlugin
                 $db->setQuery($query);
                 $deleteresult = $db->query();
                 
-                //debug
-                // $sql = $query->__toString();
-                // JFactory::getApplication()->enqueueMessage("sql: ".$sql);
-                // JFactory::getApplication()->enqueueMessage("deleteresult: ".$deleteresult);
-                
                 $start_time = strtotime($attribs->billing_repeatstart);
                 $end_time = strtotime($attribs->billing_repeatend);
                 $cycle = $attribs->billing_repeatcycle * (24 * 60 * 60);
@@ -213,9 +292,6 @@ class plgContentBillrepeat extends JPlugin
                     $new_attribs = clone $attribs;
                     $new_attribs->billing_repeat = 0;
                     $new_attribs_json = json_encode($new_attribs);
-                    
-                    // JFactory::getApplication()->enqueueMessage("new attribs billing_repeat: ".$new_attribs->billing_repeat);
-                    // JFactory::getApplication()->enqueueMessage("new attribs json: ".$new_attribs_json);
                     
                     $i = 0;
                     while ($start_time < $end_time) {
@@ -243,11 +319,13 @@ class plgContentBillrepeat extends JPlugin
                             
                             // return FALSE;
                             
+                            
                         }
                         if (!$jt_article->store(TRUE)) {
                             JError::raiseNotice(500, $jt_article->getError());
                             
                             // return FALSE;
+                            
                             
                         }
                         
@@ -257,49 +335,117 @@ class plgContentBillrepeat extends JPlugin
                     JError::raiseWarning(100, 'Warning: Unable to create repeated invoices, please check repeated billing information.');
                 }
             }
-        }
-        
-        // JFactory::getApplication()->enqueueMessage("articleinfo: ".$attribs->get('billing_amount'));
-        // JFactory::getApplication()->enqueueMessage("articleinfo: ".$attribs->billing_amount);
-        // JFactory::getApplication()->enqueueMessage("attribs billing_repeat: ".$attribs->billing_repeat);
-        // JFactory::getApplication()->enqueueMessage("attribs: ".$attribs_json);
-        // JFactory::getApplication()->enqueueMessage("article id: ".$article->id);
-        // JError::raiseNotice( 100, 'onContentAfterSave plugin fired! ');
-        
-        if ($catid == 10 && $isNew) {
             
-            //Send Notification Email to tenant, New Bill Created
-            $mailer = JFactory::getMailer();
-            $config = JFactory::getConfig();
-            $sender = array($config->get('config.mailfrom'), $config->get('config.fromname'));
-            $mailer->setSender($sender);
-            
-            $attribs = json_decode($article->attribs);
-            $tenant_id = $attribs->billing_tenant_id;
-            
-            $tenant_user = JFactory::getUser($tenant_id);
-            $tenant_email = $tenant_user->email;
-            $mailer->addRecipient($tenant_email);
-            
-            $body = "Hello " . $tenant_user->name . ",\n";
-            $body.= "A new bill has been added to your account\n";
-            $body.= "Follow this link to your billing page to view details:\n";
-            
-            //TODO: Insert Proper LINK!!
-            
-            $mailer->setSubject("A new bill has been added to you account.");
-            $mailer->setBody($body);
-            
-            $send = $mailer->Send();
-            if ($send == true) {
+            //If the bill is new send a notification email to the Tenant.
+            if ($isNew) {
                 
-                // JFactory::getApplication()->enqueueMessage("Mail Error: " . $send->toString());
-                var_dump($send);
-            } else {
-                JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                //Send Notification Email to tenant, New Bill Created
+                $attribs = json_decode($article->attribs);
+                $tenant_id = $attribs->billing_tenant_id;
+                $tenant_user = JFactory::getUser($tenant_id);
+                $tenant_email = $tenant_user->email;
+                
+                $subject = "A new bill has been added to you account.";
+                
+                $body = "Hello " . $tenant_user->name . ",\n";
+                $body.= "A new bill has been added to your account\n";
+                $body.= "Follow this link to your billing page to view details:\n";
+                
+                //TODO: Insert Proper LINK!!
+                
+                $send = $this->sendEmail($tenant_email, $subject, $body);
+                if ($send == true) {
+                    JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                } else {
+                    JError::raiseNotice(500, "Mail Error.");
+                }
+
+
+            }
+
+            elseif ($isStaff && $attribs->billing_status != "0" && $article->metakey == "") {
+                //Send Notification Email to tenant, New Bill Created
+                $attribs = json_decode($article->attribs);
+                $tenant_id = $attribs->billing_tenant_id;
+                $tenant_user = JFactory::getUser($tenant_id);
+                $tenant_email = $tenant_user->email;
+
+                $subject = "Thank you, Your Bill has been set as Paid.";
+
+                $body = "Hello " . $tenant_user->name . ",\n";
+                $body .= "A bill in your account has been marked as Paid. Thank You.";
+
+                $send = $this->sendEmail($tenant_email, $subject, $body);
+                if ($send == true) {
+                    JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                } else {
+                    JError::raiseNotice(500, "Mail Error.");
+                }   
             }
         }
-        
+
+        //Company Profile Emails. Must use Parent category and catid!
+        if ($catid == 9 || $catid == 28 || $parent_id == 9 || $parent_id == 28 ) {
+            $tenant_id = $article->created_by;
+            $tenant_user = JFactory::getUser($tenant_id);
+            $tenant_email = $tenant_user->email;
+            
+            //Company Profile saved by Tenant with Pending Status
+            if ($isTenant && $attribs->companyprofile_approval == "0") {
+                //Send Email, 
+                $subject = "Your Company Profile has been saved.";
+                $body = "Hello " . $tenant_user->name . ",\n";
+                $body .= "Your Company Profile has been saved and is awaiting approval.\n";
+                $body .= "You will be notified once your profile has been approved and is available for viewing.";
+                $send = $this->sendEmail($tenant_email, $subject, $body);
+                if ($send == true) {
+                    JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                } else {
+                    JError::raiseNotice(500, "Mail Error.");
+                }
+
+                //Query for all users in Group Staff>Manage Service Requests (groupid: 15)
+                $query = $db->getQuery(true);
+                $query->select($db->quoteName("user_id"));
+                $query->from($db->quoteName("#__user_usergroup_map"));
+                $query->where($db->quoteName("group_id") . "=13");
+                $db->setQuery($query);
+                $servicerequests_group_userids = $db->loadColumn();
+                $staff_emails = array();
+                $i = 0;
+                if (!empty($servicerequests_group_userids)) {
+                    foreach ($servicerequests_group_userids as $staff_id) {
+                        $staff_emails[$i] = JFactory::getUser($staff_id)->email;
+                        $i++;
+                    }
+                    // JFactory::getApplication()->enqueueMessage("staff emails: " . print_r($staff_emails, true));
+                    $staff_subject = "A Tenant has updated their profile.";
+                    $staff_body = "A Tenant has updated thier profile and it is awaiting approval.";
+                    $send = $this->sendEmail($staff_emails, $staff_subject, $staff_body);
+                    if ($send == true) {
+                        JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                    } else {
+                        JFactory::getApplication()->enqueueMessage("Mail Error.");
+                    }
+                }
+            }
+            
+            //Company Profile saved by Staff with Approved Status
+            if ($isStaff && $attribs->companyprofile_approval == "1") {
+                $subject = "Your Company Profile has been approved.";
+                $body = "Hello " . $tenant_user->name . ",\n";
+                $body .= "Your Company Profile has been approved.\n";
+
+                $send = $this->sendEmail($tenant_email, $subject, $body);
+                if ($send == true) {
+                    JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                } else {
+                    JError::raiseNotice(500, "Mail Error.");
+                }
+            }
+
+        }
+
         return true;
     }
     
@@ -355,6 +501,20 @@ class plgContentBillrepeat extends JPlugin
                 echo "Mail Sent";
             }
         }
+    }
+    
+    function sendEmail($recipient, $subject, $body) {
+        $mailer = JFactory::getMailer();
+        $config = JFactory::getConfig();
+        $sender = array($config->get('config.mailfrom'), $config->get('config.fromname'));
+        $mailer->setSender($sender);
+        
+        // JFactory::getApplication()->enqueueMessage("Send Email, Subject: " . $subject);
+        $mailer->addRecipient($recipient);
+        $mailer->setSubject($subject);
+        $mailer->setBody($body);
+        
+        return $mailer->Send();
     }
 }
 ?>
