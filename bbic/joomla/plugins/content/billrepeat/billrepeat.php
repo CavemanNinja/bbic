@@ -26,87 +26,104 @@ class plgContentBillrepeat extends JPlugin
     //         return "";
     // }
     
-    // function onContentBeforeSave($context, $article, $isNew) {
-        
-    //     // JError::raiseNotice( 100, 'onContentBeforeSave plugin fired!' );
-    //     $db = JFactory::getDbo();
-    //     $catid = $article->catid;
-    //     $attribs_json = $article->attribs;
-    //     $attribs = json_decode($attribs_json);
+    function onContentBeforeSave($context, $article, $isNew) {
+        if(property_exists($article, 'catid') && property_exists($article, 'attribs')){
 
-    //     //Get the parent category id - For Company Profiles
-    //     $query = $db->getQuery(true);
-    //     $query->select($db->quoteName("parent_id"));
-    //     $query->from($db->quoteName("#__categories"));
-    //     $query->where($db->quoteName("id") . " = " . $article->catid);
-    //     $db->setQuery($query);
-    //     $parent_id = $db->loadResult(); //loads single record.
-        
-    //     $current_user = JFactory::getUser();
-    //     $isTenant = in_array(10, $current_user->getAuthorisedGroups());
+            // JError::raiseNotice( 100, 'onContentBeforeSave plugin fired!' );
+            $db = JFactory::getDbo();
+            $catid = $article->catid;
+            $attribs_json = $article->attribs;
+            $attribs = json_decode($attribs_json);
 
-    //     //Set company profile approval to pending if current user is tenant
-    //     if ($isTenant && ($catid == 9 || $catid == 28 || $parent_id == 9 || $parent_id == 28 )) {
-    //         $attribs->companyprofile_approval = "0";
-    //         $article->attribs = json_encode($attribs);
-    //     }
-        
+            //Get the parent category id - For Company Profiles
+            $query = $db->getQuery(true);
+            $query->select($db->quoteName("parent_id"));
+            $query->from($db->quoteName("#__categories"));
+            $query->where($db->quoteName("id") . " = " . $article->catid);
+            $db->setQuery($query);
+            $parent_id = $db->loadResult(); //loads single record.
+            
+            $current_user = JFactory::getUser();
+            $isTenant = in_array(10, $current_user->getAuthorisedGroups());
 
-    //     //If Bill, add the tenant name to attribs
-    //     if ($catid == 10) {
-    //         $attribs = json_decode($article->attribs);
-    //         $tenant_id = $attribs->billing_tenant_id;
+            //Set company profile approval to pending if current user is tenant
+            if ($isTenant && ($catid == 9 || $catid == 28 || $parent_id == 9 || $parent_id == 28 )) {
+                $attribs->companyprofile_approval = "0";
+                $article->attribs = json_encode($attribs);
+            }
+
+            //Put a company profile in the right category based on laguage and subcategory choice.
+            if ($catid == 9 || $catid == 28 || $parent_id == 9 || $parent_id == 28) {
+                $subcategory_choice = $attribs->companyprofile_category;
+                switch($subcategory_choice) {
+                    case 0: 
+                        $article->catid = 33;
+                        break;
+                    case 1:
+                        $article->catid = 34;
+                        break;
+                }
+            }
+
             
-    //         $query = $db->getQuery(true);
-    //         $query->select($db->quoteName('username'));
-    //         $query->from($db->quoteName('#__users'));
-    //         $query->where($db->quoteName('id') . " = " . $tenant_id);
-    //         $db->setQuery($query);
-    //         $result = $db->loadResult();
+
+            //If Bill, add the tenant name to attribs
+            if ($catid == 10) {
+                $attribs = json_decode($article->attribs);
+                $tenant_id = $attribs->billing_tenant_id;
+                
+                $query = $db->getQuery(true);
+                $query->select($db->quoteName('username'));
+                $query->from($db->quoteName('#__users'));
+                $query->where($db->quoteName('id') . " = " . $tenant_id);
+                $db->setQuery($query);
+                $result = $db->loadResult();
+                
+                $attribs->billing_tenant_name = $result;
+                $article->attribs = json_encode($attribs);
+                
+                $article_info = $article->attribs;
+                
+                // JFactory::getApplication()->enqueueMessage("onContentBeforeSave BILL CALLED");
+                
+                
+            }
             
-    //         $attribs->billing_tenant_name = $result;
-    //         $article->attribs = json_encode($attribs);
+            //Service Request, add service name+price to attribs
+            elseif ($catid == 12) {
+                $service_id = $attribs->servicerequest_item;
+                
+                $query = $db->getQuery(true);
+                $query->select($db->quoteName('attribs'));
+                $query->from($db->quoteName('#__content'));
+                $query->where($db->quoteName('id') . " = " . $service_id);
+                $db->setQuery($query);
+                $result = $db->loadResult();
+                $service_attribs = json_decode($result);
+                
+                $attribs->service_price = $service_attribs->service_price;
+                $attribs->service_name = $service_attribs->service_name;
+                $article->attribs = json_encode($attribs);
+            }
             
-    //         $article_info = $article->attribs;
-            
-    //         // JFactory::getApplication()->enqueueMessage("onContentBeforeSave BILL CALLED");
-            
-            
-    //     }
-        
-    //     //Service Request, add service name+price to attribs
-    //     elseif ($catid == 12) {
-    //         $service_id = $attribs->servicerequest_item;
-            
-    //         $query = $db->getQuery(true);
-    //         $query->select($db->quoteName('attribs'));
-    //         $query->from($db->quoteName('#__content'));
-    //         $query->where($db->quoteName('id') . " = " . $service_id);
-    //         $db->setQuery($query);
-    //         $result = $db->loadResult();
-    //         $service_attribs = json_decode($result);
-            
-    //         $attribs->service_price = $service_attribs->service_price;
-    //         $attribs->service_name = $service_attribs->service_name;
-    //         $article->attribs = json_encode($attribs);
-    //     }
-        
-    //     //If Service add the price to the title.
-    //     //Add the service name as well as the id
-    //     elseif ($catid == 19) {
-    //         $name = $attribs->service_name;
-    //         $price = $attribs->service_price;
-    //         $article->title = $name . " - BD " . $price;
-    //     }
-    //     return true;
-    // }
+            //If Service add the price to the title.
+            //Add the service name as well as the id
+            elseif ($catid == 19) {
+                $name = $attribs->service_name;
+                $price = $attribs->service_price;
+                $article->title = $name . " - BD " . $price;
+            }
+        }
+        return true;
+    }
     
     function onContentAfterSave($context, $article, $isNew) {
-        if(property_exists($article, $catid) && property_exists($artilce, $attribs)){
-            
+        if(property_exists($article, 'catid') && property_exists($article, 'attribs')){
+            // JFactory::getApplication()->enqueueMessage("oncontentaftersave catid and attribs article detected");
             // Get DB Object.
             $db = JFactory::getDbo();
-            
+            $catid = $article->catid;
+
             //Collect some article attributes.
             $id = intval($article->id);
             $asset_id = intval($article->asset_id);

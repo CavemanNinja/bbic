@@ -13,7 +13,8 @@ defined('_JEXEC') or die('Restricted accessd');
 
 ?>
 <div class="tx-tenants-header">
-    <?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
+    <?php $page_lang = JFactory::getLanguage()->get('tag'); ?>
+    <?php if ($page_lang == "en-GB") : ?>
         <h1>Tenants</h1>
     <?php else : ?>
         <h1>الشركات</h1>
@@ -26,13 +27,21 @@ defined('_JEXEC') or die('Restricted accessd');
         <ul class="tx-gallery-filters">
             <li data-filter="*" class="active">
                 <?php 
-                    if (JFactory::getLanguage()->get('tag') == "ar-AA")
+                    if ($page_lang == "ar-AA")
                         echo "جميع";
                     else
                         echo JText::_('ALL');
                 ?>
             </li>
-            <?php echo XEFXpertGalleryHelper::getCatFilterList( $items, $params ) ; ?>
+            <?php
+                $cat_tags = XEFXpertGalleryHelper::getCatFilterList( $items, $params );
+                
+                if ($page_lang == "ar-AA") {
+                    $cat_tags = str_replace("Industrial", "الصناعية", $cat_tags);
+                    $cat_tags = str_replace("Retail", "التجارية", $cat_tags);
+                }
+                echo $cat_tags;
+            ?>
         </ul>
 
         <?php if($params->get('sort_enabled', 1)): ?>
@@ -43,7 +52,7 @@ defined('_JEXEC') or die('Restricted accessd');
                     <?php 
                         $english_text = JText::_( strtoupper($sitem));
 
-                        if ($english_text == 'Title' && JFactory::getLanguage()->get('tag') == "ar-AA") {
+                        if ($english_text == 'Title' && $page_lang == "ar-AA") {
                             echo "اسم";
                         } else {
                             echo $english_text;
@@ -61,7 +70,10 @@ defined('_JEXEC') or die('Restricted accessd');
                 <?php 
                     $extrafields_attribs_json = $i->attribs;
                     $extrafields_attribs = json_decode($extrafields_attribs_json, true);
-                    if ($extrafields_attribs["companyprofile_approval"] == "1") :
+                    $item_lang = $extrafields_attribs["companyprofile_language"];
+                    if (($extrafields_attribs["companyprofile_approval"] == "1") &&
+                        ( $item_lang == 0 || ($page_lang == "en-GB" && $item_lang == 1) || ($page_lang == "ar-AA" && $item_lang == 2) ))
+                        :
                 ?>
                 <li class="<?php echo XEFXpertGalleryHelper::getCatNameAsClass( $i, $params ) ; ?>">
                     <div class="tx-gallery-item">

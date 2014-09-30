@@ -47,11 +47,20 @@ $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 
 //Check for Tenant
-$isTenant = in_array("10", array_values(JFactory::getUser()->groups));
+$isTenant = in_array(10, array_values(JFactory::getUser()->groups));
 $restrictView = false;
+
+
+
+
 if ($this->items[0]){
 	$catid = $this->items[0]->catid;
-	$restrictView = (($catid == "9") | ($catid == "10") | ($catid == "12"))  && $isTenant;
+	/*Get the parent category ID, used for News and Company Profiles */
+	$categoriesModel = JCategories::getInstance('content');
+	$category = $categoriesModel->get($catid);
+	$parent = $category->getParent();
+	$parentid = $parent->id;
+	$restrictView = (($catid == 9) || $parentid == 9 || ($catid == 10) || ($catid == 12))  && $isTenant;
 }
 //Table header settings
 $list_show_servicerequest_item = false;
@@ -61,8 +70,9 @@ $list_show_billing_status = false;
 $list_show_billing_price = false;
 $list_show_companyprofile_approval = false;
 $list_show_billing_repeating = false;
+$list_show_companyprofile_language = false;
 
-/*Must list news parent and all subcategories*/
+/*Must list news parent and all subcategories !use parent cat instead*/
 
 if ($catid == "8" ||  $catid == "14" ||  $catid == "15" || 
      $catid == "16" ||  $catid == "22" ||  $catid == "23" ||
@@ -73,8 +83,9 @@ if ($catid == "8" ||  $catid == "14" ||  $catid == "15" ||
 
 
 //IF COMPANY PROFILE
-if ($catid == 9) {
+if ($catid == 9 || $parentid == 9) {
 	$list_show_companyprofile_approval = true;
+	$list_show_companyprofile_language = true;
 }
 
 //IF CATEGORY IS SERVICE REQUEST OR BILL
@@ -226,7 +237,13 @@ if (!empty($this->items))
 							<th id="categorylist_header_companyprofile_approval" class="applyfilter">
 								<a href="#" onclick="return false;" class="hasTooltip" title="" data-original-title="<strong><?php echo JText::_('TPL_EXTRAFIELDS_COMPANYPROFILE_APPROVAL_SHORT'); ?></strong><br />Click to sort by this column"><?php echo JText::_('TPL_EXTRAFIELDS_COMPANYPROFILE_APPROVAL_SHORT'); ?></a>
 							</th>
-						<?php endif; ?>						
+						<?php endif; ?>				
+
+						<?php if ($list_show_companyprofile_language) : ?>
+							<th id="categorylist_header_companyprofile_language" class="applyfilter">
+								<a href="#" onclick="return false;" class="hasTooltip" title="" data-original-title="<strong><?php echo JText::_('TPL_EXTRAFIELDS_COMPANYPROFILE_LANGUAGE_SHORT'); ?></strong><br />Click to sort by this column"><?php echo JText::_('TPL_EXTRAFIELDS_COMPANYPROFILE_LANGUAGE_SHORT'); ?></a>
+							</th>
+						<?php endif; ?>				
 
 						<!-- NEWS HEADINGS -->
 						<?php if ($list_show_category_title) :?>
@@ -260,6 +277,7 @@ if (!empty($this->items))
 								$showarticle = true;
 						} else { //otherwise check current user is the author
 							if ($this->items[$i]->created_by == $userid)
+
 								$showarticle = true;
 						}
 					} else {
@@ -366,7 +384,7 @@ if (!empty($this->items))
 					      	</td>
 					      	<?php endif; ?>
 					      	<?php if ($list_show_companyprofile_approval) :?>
-					      	<td headers="categorylist_header_servicerequest_approval" class="list-servicerequest-approval">
+					      	<td headers="categorylist_header_compnayprofile_approval" class="list-companyprofile-approval">
 					      		<?php
 					      			$companyprofile_approval = $attribs->get('companyprofile_approval');
 					      			switch ($companyprofile_approval) {
@@ -375,6 +393,26 @@ if (!empty($this->items))
 					      					break;
 					      				case '1':
 					      					echo "Approved";
+					      					break;
+					      				default:
+					      					break;
+					      			};
+					      		?>
+					      	</td>
+					      	<?php endif; ?>
+					      	<?php if ($list_show_companyprofile_language) :?>
+					      	<td headers="categorylist_header_companyprofile_language" class="list-companyprofile-language">
+					      		<?php
+					      			$companyprofile_language = $attribs->get('companyprofile_language');
+					      			switch ($companyprofile_language) {
+					      				case '0':
+					      					echo "Both";
+					      					break;
+					      				case '1':
+					      					echo "English Only";
+					      					break;
+					      				case '2':
+					      					echo "Arabic Only";
 					      					break;
 					      				default:
 					      					break;

@@ -31,6 +31,7 @@ $categoriesModel = JCategories::getInstance('content');
 $category = $categoriesModel->get($catid);
 $parent = $category->getParent();
 $parentid = $parent->id;
+// var_dump($parentid);
 
 // if ($parentid) {
 // 	var_dump($parentid);
@@ -724,18 +725,18 @@ if(count($extrafields)){
 						
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('catid'); ?>
-							<?php 
-								$selectcat = $this->form->getInput('catid');
+							<?php echo $this->form->getInput('catid');
+								// $selectcat = 
 
-								$selectcat = str_replace('option value="10"',
-								 'option value="10" disabled="disabled"',  $selectcat); 
-								$selectcat = str_replace('option value="8"',
-								 'option value="8" disabled="disabled"', $selectcat ); 
-								$selectcat = str_replace('option value="12"',
-								 'option value="12" disabled="disabled"', $selectcat ); 
-								echo $selectcat;
-								$selectcat = str_replace('option value="13"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								// $selectcat = str_replace('option value="10"',
+								//  'option value="10" disabled="disabled"',  $selectcat); 
+								// $selectcat = str_replace('option value="8"',
+								//  'option value="8" disabled="disabled"', $selectcat ); 
+								// $selectcat = str_replace('option value="12"',
+								//  'option value="12" disabled="disabled"', $selectcat ); 
+								// echo $selectcat;
+								// $selectcat = str_replace('option value="13"',
+								//  'option value="9" disabled="disabled"', $selectcat ); 
 							?>
 						</div>
 
@@ -754,27 +755,27 @@ if(count($extrafields)){
 							?>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('language'); ?>
-							<?php 
-							$lang = JFactory::getLanguage()->get('tag');
-							if ($lang == "en-GB") {
-								$selectlang = $this->form->getInput('language');
-								$selectlang = str_replace(
-									'<option value="en-GB">English</option>',
-									'<option selected value="en-GB">English</option>', 
-									$selectlang);
-								echo $selectlang;
+							<?php echo $this->form->getInput('language');
+							// $lang = JFactory::getLanguage()->get('tag');
+							// if ($lang == "en-GB") {
+							// 	$selectlang = $this->form->getInput('language');
+							// 	$selectlang = str_replace(
+							// 		'<option value="en-GB">English</option>',
+							// 		'<option selected value="en-GB">English</option>', 
+							// 		$selectlang);
+							// 	echo $selectlang;
 
 
-							} else {
-								$selectlang = $this->form->getInput('language');		
-								$selectlang = str_replace(
-									'<option value="ar-AA">العربية</option>',
-									'<option selected value="ar-AA">العربية</option>', 
-									$selectlang);
-								echo $selectlang;
-							}
+							// } else {
+							// 	$selectlang = $this->form->getInput('language');		
+							// 	$selectlang = str_replace(
+							// 		'<option value="ar-AA">العربية</option>',
+							// 		'<option selected value="ar-AA">العربية</option>', 
+							// 		$selectlang);
+							// 	echo $selectlang;
+							// }
 						?>
 						</div>
 					</div>
