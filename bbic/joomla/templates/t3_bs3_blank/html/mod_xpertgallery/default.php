@@ -81,7 +81,8 @@ defined('_JEXEC') or die('Restricted accessd');
 
                             <div class="tx-gallery-image">
                                 <!-- <a href="<?php echo $i->image; ?>"> -->
-                                    <img class="img-thumbnail" src="<?php echo $i->image;?>" alt="<?php echo $i->title?>">
+                                    <img class="img-thumbnail" src="<?php echo $extrafields_attribs['companyprofile_logo'];?>" alt="<?php echo $i->title?>">
+                                    <!-- <img class="img-thumbnail" src="<?php echo $i->image;?>" alt="<?php echo $i->title?>"> -->
                                     <!-- <span class="tx-gallery-image-overlay"></span> -->
                                 <!-- </a> -->
                                 <!-- <a class="tx-gallery-image-preview" href="<?php echo $i->image;?>"></a> -->

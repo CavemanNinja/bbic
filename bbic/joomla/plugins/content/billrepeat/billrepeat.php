@@ -65,8 +65,6 @@ class plgContentBillrepeat extends JPlugin
                 }
             }
 
-            
-
             //If Bill, add the tenant name to attribs
             if ($catid == 10) {
                 $attribs = json_decode($article->attribs);

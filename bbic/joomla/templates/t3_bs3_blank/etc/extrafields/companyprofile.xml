@@ -48,8 +48,6 @@
             description="TPL_EXTRAFIELDS_COMPANYPROFILE_WEBSITE_DESC"
          />
 
-
-
          <field
             name="companyprofile_logo"
             type="media"
