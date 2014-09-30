@@ -264,18 +264,10 @@
 	"buffers":
 	[
 		{
-			"file": "/C/wamp/logs/php_error.log",
+			"file": "joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
 			"settings":
 			{
-				"buffer_size": 5034686,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "joomla/modules/mod_simplefileuploadv1.3/helper.php",
-			"settings":
-			{
-				"buffer_size": 46484,
+				"buffer_size": 6176,
 				"line_ending": "Windows"
 			}
 		}
@@ -336,38 +328,37 @@
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/elements",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/images",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/tmpl",
-		"/C/wamp/www/bbic/joomla/plugins/content",
-		"/C/wamp/www/bbic/joomla/plugins/content/billrepeat",
-		"/C/wamp/www/bbic/joomla/plugins/system",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/com_content",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/com_content/categories",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/com_content/category",
 		"/C/wamp/www/bbic/joomla/templates",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/article",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/categories",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/form",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery"
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks"
 	],
 	"file_history":
 	[
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/blog.php",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/servicerequest.xml",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/service.xml",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+		"/C/wamp/logs/php_error.log",
+		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/helper.php",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/tmpl/default.php",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/mod_simplefileuploadv1.3.php",
 		"/C/wamp/www/bbic/joomla/configuration.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/custom.css",
 		"/C/wamp/www/bbic/joomla/plugins/content/billrepeat/billrepeat.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/companyprofile.xml",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
 		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.ini",
 		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.sys.ini",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/map.xml",
@@ -376,13 +367,11 @@
 		"/C/wamp/www/bbic/joomla/administrator/components/com_contact/helpers/contact.php",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_contact/controllers/contact.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/billing.xml",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/servicerequest.xml",
 		"/C/wamp/www/bbic/joomla/plugins/content/billrepeat/index.html",
 		"/C/wamp/www/bbic/joomla/plugins/content/billrepeat/billrepeat.xml",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/categories/default_items.php",
 		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/com_content/categories/default_items.php",
 		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/com_content/categories/default.php",
-		"/C/wamp/logs/php_error.log",
 		"/C/wamp/www/bbic/joomla/components/com_contact/contact.php",
 		"/C/wamp/www/bbic/joomla/components/com_contact/controller.php",
 		"/C/wamp/www/bbic/joomla/components/com_contact/controllers/contact.php",
@@ -433,9 +422,7 @@
 		"/C/var/www/html/joomla/logs/error.php",
 		"/C/Users/Jalal/Documents/Tamioz-Heroku-Clone/peaceful-headland-8486/views/body.html",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/map.xml.sqllookupcompanyprofiles.xml",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/service.xml",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/templateHook.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/blog.php",
 		"/C/wamp/www/bbic/joomla/components/com_blankcomponent/views/default/tmpl/default.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_blankcomponent/default.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/analytics.js",
@@ -480,7 +467,6 @@
 		"/C/wamp/www/bbic/joomla/index.php",
 		"/C/wamp/www/bbic/Procfile",
 		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/mod_simplefileupload.css",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/helper.php",
 		"/C/wamp/logs/apache_error.log",
 		"/C/wamp/logs/STDOUT",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/model/form/application.xml",
@@ -711,52 +697,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/wamp/logs/php_error.log",
+					"file": "joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5034686,
+						"buffer_size": 6176,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4921591,
-								4921591
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1362474.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "joomla/modules/mod_simplefileuploadv1.3/helper.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 46484,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								37633,
-								37633
+								4567,
+								4567
 							]
 						],
 						"settings":
@@ -765,7 +723,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 14824.0,
+						"translation.y": 972.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

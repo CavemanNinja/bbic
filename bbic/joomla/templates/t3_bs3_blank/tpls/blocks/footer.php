@@ -61,34 +61,30 @@ defined('_JEXEC') or die;
 							<p class="mypartners-heading">Site Map</p>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/">Home</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/about-us">About Us</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applicationincubator">Incubator Application</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applicationbusiness">Business Application</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/news">News (All)</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/14-bbic">BBIC News</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/15-bdb">BDB News</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/16-extra">Extra News</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/company-profiles">Company Profiles</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/gallery2j">Image Gallery</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/download">Download Centre</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applications">Incubator Application</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applications">Business Application</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/newstabs">News (All)</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/tenants">Tenants</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/gallery">Image Gallery</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/downloads">Download Centre</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/map">Map</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/contact-us">Contact Us</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/component/users/?view=login">User Login</a>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/component/search/">Search</a>
 					 	<?php else : ?>
 					 		<p class="mypartners-heading">خارطة الموقع</p>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/">الصفحة الرئيسية</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/about-us">عن المركز</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applicationincubator">تسجيل لمشروع الحاضنات</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applicationbusiness">تسجيل في مركز الاعمال</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/news">الأخبار</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/14-bbic">أخبار ب ب أ سي</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/15-bdb">أخبار ب د ب</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/16-extra">أخبار اضافية</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/company-profiles">شركات</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/gallery2j">المعرض</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/download">التنزيلات</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/contact-us">للإتصال بنا</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/component/users/?view=login">تسجيل دخول المستأجر</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/component/search/">البحث</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/">الصفحة الرئيسية</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/2014-07-07-21-54-17">عن المركز</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/arapplications">تسجيل لمشروع الحاضنات</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/arapplications">تسجيل في مركز الاعمال</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/2014-09-13-21-21-58">الأخبار</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/artenants">شركات</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/argallery">المعرض</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/ardownloads">التنزيلات</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/map-ar">خريطة</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/2014-07-07-21-42-36">للإتصال بنا</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/component/users/?view=login">تسجيل دخول المستأجر</a>
+							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/component/search/">البحث</a>
 					 	<?php endif; ?>
 
 					</div>
