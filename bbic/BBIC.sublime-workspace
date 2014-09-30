@@ -264,11 +264,11 @@
 	"buffers":
 	[
 		{
-			"file": "joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
+			"file": "joomla/configuration.php",
 			"settings":
 			{
-				"buffer_size": 6176,
-				"line_ending": "Windows"
+				"buffer_size": 2891,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -345,6 +345,7 @@
 	],
 	"file_history":
 	[
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/blog.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/servicerequest.xml",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/service.xml",
@@ -441,7 +442,6 @@
 		"/C/wamp/www/bbic/joomla/modules/mod_xpertgallery/helper.php",
 		"/C/wamp/www/bbic/joomla/modules/mod_xpertgallery/assets/js/script.js",
 		"/C/wamp/www/bbic/joomla/modules/mod_xpertscroller/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
 		"/C/wamp/www/bbic/index.php",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_docman/databases/behaviors/aclable.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_articles_category/get_first_image.php",
@@ -702,19 +702,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
+					"file": "joomla/configuration.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6176,
+						"buffer_size": 2891,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4567,
-								4567
+								511,
+								511
 							]
 						],
 						"settings":
@@ -723,7 +723,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 972.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
