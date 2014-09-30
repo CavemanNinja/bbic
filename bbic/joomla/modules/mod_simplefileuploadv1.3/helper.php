@@ -755,6 +755,7 @@ class ModSimpleFileUploaderHelperv13{
 				$db = JFactory::getDbo();
 				//get csv file location - just use $filename
 				$csv_filepath = "uploaded\\".$filename;
+				// $debug = $csv_filepath;
 				
 				//load csv information into array
 				$csv_array = array();
@@ -762,6 +763,8 @@ class ModSimpleFileUploaderHelperv13{
 				foreach ($lines as $line_number => $line) {
     				$csv_array[$line_number] = str_getcsv($line);
 				}
+				$debug = $lines;
+				$debug = count($csv_array);
 
     			//remove first line if table headings
     			if ($csv_array[0][0] == "Invoice") {
@@ -777,13 +780,11 @@ class ModSimpleFileUploaderHelperv13{
 					$query = $db->getQuery(true);
 					$query->select($db->quoteName('created_by'));
 					$query->from($db->quoteName('#__content'));
-					$query->where($db->quoteName('catid')." = 9 AND ". 
+					$query->where($db->quoteName('catid') . " = 33 AND ". 
 						$db->quoteName('title') ." LIKE ". $db->quote($csv_company_name));
 					$db->setQuery($query);
 					$tenant_id = $db->loadResult();
-
-
-
+					$debug .= $tenant_id;
 					if ($tenant_id) {
 						//create new bill with information from csv using the invoice ID as the alias
 
@@ -840,7 +841,7 @@ class ModSimpleFileUploaderHelperv13{
 	                        $csv_results .= "Error adding Invoice ". $csv_record[0] ."to database (store)/n";
 	                    }
 
-	                    break;
+	                    // break;
 						//increment successful invoice counter
 						$csv_success++;
 					} else {
@@ -856,8 +857,9 @@ class ModSimpleFileUploaderHelperv13{
 			// return $csv_company_name;
 			// return number_format($csv_record[9], 0, "", "");
 			// return "Asdf";
-			// return "tenant_id: ".$tenant_id;
+			// $csv_results .= "<<debug: ".$debug;
 			return $csv_results;
+			// return $debug;
 			// return $billing_attribs;
 			// return $results;
 		}
