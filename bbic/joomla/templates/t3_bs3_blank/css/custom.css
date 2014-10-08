@@ -967,7 +967,7 @@ div.st_tabs > div > ul {
 #Mod154, #Mod155,
 #Mod156, #Mod157 {
   visibility: hidden;
-  height: 0px;
+  display: none;
 }
 
 .twoj_tabs_class4 > .twoj_tab_block_ul .twoj_tab_block_li {
