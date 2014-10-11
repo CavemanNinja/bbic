@@ -31,6 +31,7 @@ body {
   color: rgba(0, 0, 0, 0.8);
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .module {
@@ -961,13 +962,13 @@ div.st_tabs > div > ul {
   width: 100%;
 }
 
-
 #Mod145, #Mod151, 
 #Mod152, #Mod153,
 #Mod154, #Mod155,
 #Mod156, #Mod157 {
   visibility: hidden;
-  height: 0px;
+  /*height: 0px;*/
+  display: none;
 }
 
 .twoj_tabs_class4 > .twoj_tab_block_ul .twoj_tab_block_li {

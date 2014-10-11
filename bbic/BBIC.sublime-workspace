@@ -4,212 +4,28 @@
 		"selected_items":
 		[
 			[
-				"csv",
-				"csv_results"
+				"list_show_companypro",
+				"list_show_companyprofile_title"
+			],
+			[
+				"service",
+				"service_price"
+			],
+			[
+				"end",
+				"endif"
+			],
+			[
+				"padding",
+				"padding-left"
 			],
 			[
 				"tenant",
 				"tenant_id"
 			],
 			[
-				"tenan",
-				"tenant_id"
-			],
-			[
-				"list_show_comp",
-				"list_show_companyprofile_languge"
-			],
-			[
-				"cat",
-				"category"
-			],
-			[
-				"item",
-				"item_lang"
-			],
-			[
-				"subcate",
-				"subcategory_choice"
-			],
-			[
-				"subcategory",
-				"subcategory_chcoice"
-			],
-			[
-				"TP",
-				"TPL_EXTRAFIELDS_COMPANYPROFILE_APPROVAL"
-			],
-			[
-				"font-",
-				"font-weight"
-			],
-			[
-				"cu",
-				"current_user"
-			],
-			[
-				"staff",
-				"staff_emails"
-			],
-			[
-				"service",
-				"servicerequests_group_userids"
-			],
-			[
-				"send",
-				"sendEmail"
-			],
-			[
-				"new_a",
-				"new_article"
-			],
-			[
-				"new",
-				"new_article"
-			],
-			[
-				"getD",
-				"getDbo"
-			],
-			[
-				"json",
-				"json_encode"
-			],
-			[
-				"raise",
-				"raiseError"
-			],
-			[
-				"tena",
-				"tenant_email"
-			],
-			[
-				"recipe",
-				"recipient"
-			],
-			[
-				"paid",
-				"paid_status"
-			],
-			[
-				"attribs",
-				"attribs"
-			],
-			[
-				"reci",
-				"recipient"
-			],
-			[
-				"billing_tenant",
-				"billing_tenant_id"
-			],
-			[
-				"attrib",
-				"attrib_array"
-			],
-			[
-				"parent",
-				"parentid"
-			],
-			[
-				"var",
-				"var_dump"
-			],
-			[
-				"paren",
-				"parentid"
-			],
-			[
-				"hide",
-				"hideTenantModules"
-			],
-			[
-				"padding",
-				"padding-top"
-			],
-			[
-				"ar",
-				"ar_sub"
-			],
-			[
-				"for",
-				"foreach	foreach …"
-			],
-			[
-				"str_re",
-				"str_replace"
-			],
-			[
-				"back",
-				"background-color"
-			],
-			[
-				"mar",
-				"margin"
-			],
-			[
-				"no",
-				"nowrap"
-			],
-			[
-				"margin",
-				"margin-bottom"
-			],
-			[
-				"title",
-				"title_input"
-			],
-			[
-				"else",
-				"elseif	elseif …"
-			],
-			[
-				"lota",
-				"lota_1"
-			],
-			[
-				"font",
-				"font-size"
-			],
-			[
-				"map",
-				"map-assets"
-			],
-			[
-				"inlin",
-				"inline-block"
-			],
-			[
-				"page",
-				"page_title"
-			],
-			[
-				"total",
-				"total_page"
-			],
-			[
-				"paddin",
-				"padding"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
-				"in",
-				"inline-block"
-			],
-			[
-				"marg",
-				"margin-left"
-			],
-			[
-				"fo",
-				"font-style"
-			],
-			[
-				"end",
-				"endif"
+				"csv",
+				"csv_record"
 			],
 			[
 				"quote",
@@ -244,12 +60,20 @@
 				"results"
 			],
 			[
+				"margin",
+				"margin-right"
+			],
+			[
 				"table",
 				"table-cell"
 			],
 			[
 				"v",
 				"vertical-align"
+			],
+			[
+				"text",
+				"text-align"
 			],
 			[
 				"print",
@@ -268,38 +92,62 @@
 			"settings":
 			{
 				"buffer_size": 2891,
-				"line_ending": "Unix"
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/templates/t3_bs3_blank/css/custom.css",
+			"settings":
+			{
+				"buffer_size": 20653,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css/2j.slidertabs.css",
+			"settings":
+			{
+				"buffer_size": 2738,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/components/com_twojtoolbox/plugins/slidertabs/1000/twoj_slidertabs_plugin.php",
+			"settings":
+			{
+				"buffer_size": 23404,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+			"settings":
+			{
+				"buffer_size": 21604,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.ini",
+			"settings":
+			{
+				"buffer_size": 62216,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 374.0,
+		"height": 58.0,
 		"selected_items":
 		[
-			[
-				"for",
-				"Format Code"
-			],
-			[
-				"form",
-				"Format Code"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
-				"isntall",
-				"Package Control: Install Package"
-			],
 			[
 				"Package Control: instal",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 520.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -322,160 +170,54 @@
 	[
 		"/C/wamp/www/bbic",
 		"/C/wamp/www/bbic/joomla",
+		"/C/wamp/www/bbic/joomla/components",
+		"/C/wamp/www/bbic/joomla/components/com_twojtoolbox/plugins",
+		"/C/wamp/www/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs",
+		"/C/wamp/www/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs/1000",
+		"/C/wamp/www/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css",
 		"/C/wamp/www/bbic/joomla/language",
-		"/C/wamp/www/bbic/joomla/modules",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/elements",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/images",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/tmpl",
+		"/C/wamp/www/bbic/joomla/language/ar-AA",
 		"/C/wamp/www/bbic/joomla/templates",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/article",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/categories",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/form",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks"
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category"
 	],
 	"file_history":
 	[
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/blog.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/servicerequest.xml",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/service.xml",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/categories/default_items.php",
 		"/C/wamp/logs/php_error.log",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/helper.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/mod_simplefileuploadv1.3.php",
-		"/C/wamp/www/bbic/joomla/configuration.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/custom.css",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/billing.xml",
 		"/C/wamp/www/bbic/joomla/plugins/content/billrepeat/billrepeat.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/companyprofile.xml",
-		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.ini",
-		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.sys.ini",
+		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/blog.php",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/map.js",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/custom.css",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/map.xml",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/map.css",
-		"/C/wamp/www/bbic/joomla/administrator/components/com_contact/models/contact.php",
-		"/C/wamp/www/bbic/joomla/administrator/components/com_contact/helpers/contact.php",
-		"/C/wamp/www/bbic/joomla/administrator/components/com_contact/controllers/contact.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/billing.xml",
-		"/C/wamp/www/bbic/joomla/plugins/content/billrepeat/index.html",
-		"/C/wamp/www/bbic/joomla/plugins/content/billrepeat/billrepeat.xml",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/categories/default_items.php",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/com_content/categories/default_items.php",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/com_content/categories/default.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/contact.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/controller.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/controllers/contact.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/helpers/category.php",
-		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
-		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/codeformatter/lib/phpbeautifier/CompatInfo.php",
-		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/codeformatter/lib/phpbeautifier/PEAR.php",
-		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/codeformatter/lib/phpbeautifier/Beautifier.php",
-		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/codeformatter/lib/phpbeautifier/php_beautifier",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/map.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/map-ar.js",
-		"/C/wamp/www/bbic/joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.sys.ini",
-		"/C/wamp/www/bbic/joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.ini",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody/one-sidebar-left.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody.php",
-		"/C/wamp/www/bbic/joomla/plugins/system/languagefilter/languagefilter.php",
-		"/C/Users/Jalal/Downloads/languagefilter-mediamanager.diff",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/hideTenantModules.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/head.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_articles_category/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/rtl/bootstrap.css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/rtl/_bootstrap-rtl.css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/spotlight-2.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody/no-sidebar.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/spotlight-1.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody-content-left.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/newsList.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody/two-sidebar.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody-content-right.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/header.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainnav.php",
-		"/C/wamp/www/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/2j.style4.tabs.css",
-		"/C/wamp/www/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/2j.style3.tabs.css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_blankcomponent/default/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_login/default.php",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/mod_login/default.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_login/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/components/com_users/views/login/tmpl/default_login.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_login/tmpl/index.html",
-		"/C/wamp/www/bbic/joomla/modules/mod_login/helper.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_login/mod_login.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_login/tmpl/default_logout.php",
-		"/C/wamp/www/bbic/joomla/components/com_users/views/login/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_xpertgallery/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/administrator/components/com_media/controllers/file.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/map2.xml",
-		"/C/var/www/html/joomla/logs/error.php",
-		"/C/Users/Jalal/Documents/Tamioz-Heroku-Clone/peaceful-headland-8486/views/body.html",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/map.xml.sqllookupcompanyprofiles.xml",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/templateHook.php",
-		"/C/wamp/www/bbic/joomla/components/com_blankcomponent/views/default/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_blankcomponent/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/analytics.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/index.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/list.pagination.min.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/tableSorter/jquery.tablesorter.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/SimpleTableFilter.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/jquery.simplePagination.js",
-		"/C/wamp/www/composer.json",
-		"/C/wamp/www/bbic/php.user.ini",
-		"/C/wamp/www/bbic/joomla/modules/mod_xpertgallery/assets/css/xpertgallery.css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody/two-sidebar-left.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_xpertgallery/mod_xpertgallery.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody/one-sidebar-right.php",
-		"/C/wamp/www/bbic/joomla/components/com_content/views/article/view.html.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_xpertgallery/helper.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_xpertgallery/assets/js/script.js",
-		"/C/wamp/www/bbic/joomla/modules/mod_xpertscroller/tmpl/default.php",
+		"/C/wamp/www/bbic/js/bootstrap.min.js",
+		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/mod_simplefileuploadv1.3.php",
+		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/tmpl/default.php",
+		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/helper.php",
 		"/C/wamp/www/bbic/index.php",
-		"/C/wamp/www/bbic/joomla/administrator/components/com_docman/databases/behaviors/aclable.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_articles_category/get_first_image.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_articles_category/tmpl/default.php",
-		"/C/wamp/www/bbic/README.md",
-		"/C/wamp/www/bbic/composer.json",
-		"/C/wamp/www/.git/line_info",
-		"/C/wamp/www/.git/description",
-		"/C/wamp/www/.git/refs/remotes/heroku/master",
-		"/C/wamp/www/.git/config",
-		"/C/wamp/www/.git/ORIG_HEAD",
-		"/C/wamp/www/.git/index",
-		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/category/default_items.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl/default.xml",
-		"/C/wamp/www/bbic/joomla/components/com_contact/models/category.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl/default_children.php",
-		"/C/wamp/www/bbic/css/landingpage.css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact/default.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/views/category/tmpl/default_items.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/views/contact/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/components/com_contact/views/categories/tmpl/default.php",
-		"/C/wamp/www/bbic/joomla/index.php",
-		"/C/wamp/www/bbic/Procfile",
-		"/C/wamp/www/bbic/joomla/modules/mod_simplefileuploadv1.3/mod_simplefileupload.css",
 		"/C/wamp/logs/apache_error.log",
 		"/C/wamp/logs/STDOUT",
+		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.ini",
+		"/C/wamp/www/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.sys.ini",
+		"/C/wamp/www/bbic/joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.ini",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact/default.php",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/model/form/application.xml",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/models/application.php",
 		"/C/wamp/www/bbic/joomla/administrator/components/com_config/models/forms/application.xml"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -486,129 +228,12 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
-			"csv_parse",
-			"color: #ffffff;",
-			"background-color: #4873aa",
-			"background-color: #aaaaaa",
-			"sql",
-			"sendEmail",
-			"in_arr",
-			"edit service",
-			"IMAGE",
-			"صورة",
-			"IMAGE",
-			"Image",
-			"type=\"media\"",
-			"type=\"text\"",
-			"units",
-			"remove_defau",
-			"Image",
-			"BBIC Admin",
-			"Conference Room",
-			"Meeting Room",
-			"Conference Room",
-			"Warehouse",
-			"First Floor",
-			"Ground Floor",
-			"Unit",
-			"Building",
-			"?>\n",
-			"#Mod129",
-			"tenant-no",
-			"ddata-content",
-			"data-titl1e",
-			"data-content",
-			"ata-title",
-			"data-title",
-			"map-popover",
-			"TPL_MAP",
-			"TPL_MAP_",
-			"DESC_IMAGE",
-			"TPL_MAP",
-			"DESC_IMAGE",
-			"TPL_MAP_LOT",
-			"DESC_IMAGE",
-			"TPL_MAP_BUILDING8",
-			"TPL_MAP",
-			"TPL_MAP_",
-			"DESC",
-			"'); ?>'\">",
-			"alt=\"\"",
-			"; ?>'\">",
-			"w4_1",
-			"bdb_1_1st",
-			"bdb_1_g",
-			"w3_1_1st",
-			"w3_1_g",
-			"w1_1_1st",
-			"w1_1_g",
-			"lotc_1",
-			"lotb_1",
-			"lota_1",
-			"building8_1",
-			"\">",
-			"</i",
-			"<i",
-			"title",
-			"data-content",
-			"description",
-			"label",
-			"field",
-			"tmp",
-			"_1st",
-			"w3",
-			"w1",
-			"_g",
-			"w3",
-			"'>\".$attribs->",
-			"').\"</option>\";",
-			"w1",
-			"_g",
-			"') != \"\") {",
-			"wh",
-			"building8",
-			"lotc",
-			"lotb",
-			"lota",
-			"W1",
-			"w1",
-			"LOTA",
-			"lota",
-			"LOTA",
-			"ulding",
-			"uldin",
-			"ulding",
-			"cursor-pointer map-popover ",
-			"curosr",
-			"lotb",
-			"campus_building_lota",
-			"toClass",
-			"campus_",
-			"campus",
-			"campus_building8",
-			"></i>",
-			"popver",
-			"class=\"building8",
-			"type",
-			"background-image",
-			"div",
-			"prev",
-			"next",
-			"t3-content",
-			"width",
-			"class4",
-			"20px",
-			"right",
-			"full_text",
-			"docman_document_id",
-			"insert",
-			"/bbic",
-			"public $host = 'localhost';\n	public $user = 'root';\n	public $password = '';",
-			"dotted",
-			"138",
+			"height",
+			"../images/map-assets",
+			"glyph",
 			"joomla",
 			"Saved",
 			"Saved As",
@@ -621,70 +246,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"",
-			"LINK",
-			"رابط",
-			"صورة",
-			"الادارة",
-			"قاعة المؤتمرات",
-			"غرفة الاجتماعات",
-			"ورشات",
-			"الطابق الأول",
-			"الطابق الأرضي",
-			"وحدة",
-			"مبنى",
-			"#Mod129, #Mod160",
-			"data-content",
-			"data-title",
-			"data-titl1e",
-			"data-title1",
-			"campus-map-popover",
-			"IMAGE_DESC",
-			"'); ?>'>\">",
-			"alt=''",
-			"; ?>'>\">",
-			"wh_1",
-			"w4_1",
-			"bdb_1_1st",
-			"bdb_1_g",
-			"w3_1_1st",
-			"w3_1_g",
-			"w1_1_1st",
-			"w1_1_g",
-			"lotc_1",
-			"lotb_1",
-			"lota_1",
-			"\" data-html=\"true\" \n						data-content=\"<img class='building-img' alt=\"\" height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'\">",
-			"\" data-html=\"true\" data-content=\"<img class='building-img' alt=\"\" height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_building8_1_image'); ?>'\">",
-			"</div",
-			"<div",
-			"content",
-			"_g",
-			"bdb",
-			"w3",
-			"_1st",
-			"w1",
-			"_g'>\".$attribs->",
-			"_g').\"</option>\";",
-			"w3",
-			"_1st",
-			"_g') != \"\") {",
-			"w1",
-			"wh",
-			"w4",
-			"lotc",
-			"lotb",
-			"BDB",
-			"bdb",
-			"LOTC",
-			"lotc",
-			"lotb",
-			"LOTB",
-			"lotc",
-			"i",
-			"class3",
-			"",
-			"dashed",
 			"bbic/joomla",
 			"2"
 		],
@@ -697,7 +258,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -713,7 +274,7 @@
 						"selection":
 						[
 							[
-								507,
+								629,
 								629
 							]
 						],
@@ -726,7 +287,152 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "joomla/templates/t3_bs3_blank/css/custom.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20653,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								624,
+								624
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css/2j.slidertabs.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2738,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2758.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "joomla/components/com_twojtoolbox/plugins/slidertabs/1000/twoj_slidertabs_plugin.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23404,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21604,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5779,
+								5779
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.ini",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 62216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7003,
+								7003
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4984.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -770,7 +476,7 @@
 	"project": "BBIC.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 136.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -805,7 +511,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 351.0,
+	"side_bar_width": 576.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

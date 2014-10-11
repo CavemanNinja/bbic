@@ -71,6 +71,7 @@ $list_show_billing_price = false;
 $list_show_companyprofile_approval = false;
 $list_show_billing_repeating = false;
 $list_show_companyprofile_language = false;
+$list_show_companyprofile_title = false;
 
 /*Must list news parent and all subcategories !use parent cat instead*/
 
@@ -86,6 +87,7 @@ if ($catid == "8" ||  $catid == "14" ||  $catid == "15" ||
 if ($catid == 9 || $parentid == 9) {
 	$list_show_companyprofile_approval = true;
 	$list_show_companyprofile_language = true;
+	$list_show_companyprofile_title = true;
 }
 
 //IF CATEGORY IS SERVICE REQUEST OR BILL
@@ -167,8 +169,11 @@ if (!empty($this->items))
 				<thead>
 					<tr>
 						<th id="categorylist_header_title" data-sorter="false">
-							<?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder); ?>
-
+							<?php if ($list_show_companyprofile_title == true) : ?>
+								<?php echo JHtml::_('grid.sort', 'Company Name', 'a.title', $listDirn, $listOrder); ?>
+							<?php else : ?>
+								<?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder); ?>
+							<?php endif; ?>
 						</th>
 						<?php if ($date = $this->params->get('list_show_date')) : ?>
 							<th id="categorylist_header_date" data-sorter="false">
