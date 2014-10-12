@@ -28,8 +28,8 @@ if ($headright = $this->countModules('head-search or languageswitcherload')) {
 <!-- HEADER -->
 <div class="myheaderdiv">
 <div class="row langsearch-row">
-<div class="container langsearch-container"
-		<!-- LANGUAGE SWITCHER + SEARCH -->
+<div class="container langsearch-container">
+		<!-- LANGUAGE SWITCHER & SEARCH -->
 		<div class="col-xs-12 langsearch">
 			<div class="breadcrumbs">
 				<jdoc:include type="modules" name="<?php $this->_p('breadcrumbs') ?>" style="raw" />

@@ -731,8 +731,17 @@ th {
 
 .languageswitcherload {
   float: right;
+}
+
+.languageswitcherload > div > ul > li > a > img  {
+  margin-bottom: 5px;
   
 }
+
+.languageswitcherload > a {
+  padding-bottom: 5px;
+}
+
 .languageswitcherload .mod-languages {
   text-align: right;
 }
