@@ -170,7 +170,11 @@ if (!empty($this->items))
 					<tr>
 						<th id="categorylist_header_title" data-sorter="false">
 							<?php if ($list_show_companyprofile_title == true) : ?>
-								<?php echo JHtml::_('grid.sort', 'Company Name', 'a.title', $listDirn, $listOrder); ?>
+								<?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
+									<?php echo JHtml::_('grid.sort', 'Company Name', 'a.title', $listDirn, $listOrder); ?>
+								<?php else : ?>
+									<?php echo JHtml::_('grid.sort', 'اسم الشركة', 'a.title', $listDirn, $listOrder); ?>
+								<?php endif; ?>
 							<?php else : ?>
 								<?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder); ?>
 							<?php endif; ?>
