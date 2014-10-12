@@ -64,8 +64,25 @@
             label="TPL_EXTRAFIELDS_COMPANYPROFILE_CATEGORY"
             description="TPL_EXTRAFIELDS_COMPANYPROFILE_CATEGORY_DESC"
          >
-            <option value="0">Industrial</option>
-            <option value="1">Retail</option>
+            <option value="0">Advertising</option>
+            <option value="1">Cleaning</option>
+            <option value="2">Consulting</option>
+            <option value="3">Contracting</option>
+            <option value="4">Design</option>
+            <option value="5">Event Management</option>
+            <option value="6">Fabrication</option>
+            <option value="7">Food</option>
+            <option value="8">Furniture</option>
+            <option value="9">Industrial</option>
+            <option value="10">Landscaping</option>
+            <option value="11">Marine</option>
+            <option value="12">Media</option>
+            <option value="13">Recreational</option>
+            <option value="14">Retail</option>
+            <option value="15">Society</option>
+            <option value="16">Technology</option>
+            <option value="17">Trading</option>
+            <option value="18">Transportation</option>
          </field>
 
          <field 

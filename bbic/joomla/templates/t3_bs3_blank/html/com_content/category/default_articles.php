@@ -68,10 +68,12 @@ $list_show_servicerequest_approval = false;
 $list_show_billing_name = false;
 $list_show_billing_status = false;
 $list_show_billing_price = false;
+$list_show_billing_type = type;
 $list_show_companyprofile_approval = false;
 $list_show_billing_repeating = false;
 $list_show_companyprofile_language = false;
 $list_show_companyprofile_title = false;
+$list_show_servicerequest_tenant = false;
 
 /*Must list news parent and all subcategories !use parent cat instead*/
 
@@ -81,7 +83,6 @@ if ($catid == "8" ||  $catid == "14" ||  $catid == "15" ||
 	$list_show_category_title = true;
 	// var_dump($this);
 }
-
 
 //IF COMPANY PROFILE
 if ($catid == 9 || $parentid == 9) {
@@ -100,12 +101,14 @@ if ($catid == 12 || 10) {
 if ($catid == 12) {
 	$list_show_servicerequest_item = true;
 	$list_show_servicerequest_approval = true;
+	$list_show_servicerequest_tenant = true;
 }
 
 if ($catid == 10) {
 	$list_show_billing_name = !$restrictView;
 	$list_show_billing_status = true;
 	$list_show_billing_price = true;
+	$list_show_billing_type = true;
 	$list_show_billing_repeating = true;
 }
 
@@ -202,6 +205,13 @@ if (!empty($this->items))
 						<?php endif; ?>
 
 						<!--SERVICE REQUEST HEADINGS -->
+						<?php if ($list_show_servicerequest_tenant) : ?>
+							<th id="categorylist_header_servicerequest_tenant" class="applyfilter">
+								<a href="#" onclick="return false;" class="hasTooltip" title="" data-original-title="<strong><?php echo JText::_('TPL_EXTRAFIELDS_SERVICEREQUEST_TENANT'); ?></strong><br />Click to sort by this column"><?php echo JText::_('TPL_EXTRAFIELDS_SERVICEREQUEST_TENANT'); ?></a>
+							
+							</th>
+						<?php endif; ?>
+
 						<?php if ($list_show_servicerequest_item) : ?>
 							<th id="categorylist_header_servicerequest_item" class="applyfilter">
 								<a href="#" onclick="return false;" class="hasTooltip" title="" data-original-title="<strong><?php echo JText::_('TPL_EXTRAFIELDS_SERVICEREQUEST_ITEM'); ?></strong><br />Click to sort by this column"><?php echo JText::_('TPL_EXTRAFIELDS_SERVICEREQUEST_ITEM'); ?></a>
@@ -229,11 +239,18 @@ if (!empty($this->items))
 							</th>
 						<?php endif; ?>
 						
+						<?php if ($list_show_billing_type) : ?>
+							<th id="categorylist_header_billing_type" class="applyfilter">
+								<a href="#" onclick="return false;" class="hasTooltip" title="" data-original-title="<strong><?php echo JText::_('TPL_EXTRAFIELDS_BILLING_TYPE'); ?></strong><br />Click to sort by this column"><?php echo JText::_('TPL_EXTRAFIELDS_BILLING_TYPE'); ?></a>
+							</th>
+						<?php endif; ?>
+						
 						<?php if ($list_show_billing_status) : ?>
 							<th id="categorylist_header_billing_status" class="applyfilter">
 								<a href="#" onclick="return false;" class="hasTooltip" title="" data-original-title="<strong><?php echo JText::_('TPL_EXTRAFIELDS_BILLING_REPEAT_SHORT'); ?></strong><br />Click to sort by this column"><?php echo JText::_('TPL_EXTRAFIELDS_BILLING_REPEAT_SHORT'); ?></a>
 							</th>
 						<?php endif; ?>
+
 
 						<?php if ($list_show_billing_repeating) : ?>
 							<th id="categorylist_header_billing_repeating" class="applyfilter">
@@ -272,6 +289,7 @@ if (!empty($this->items))
 			<tbody>
 			<!-- FILL IN THE TABLE ROWS -->
 			<?php foreach ($this->items as $i => $article) : ?>
+
 				<?php 
 					$attribs = new JRegistry($article->attribs);
 				 	$showarticle = false;
@@ -365,6 +383,11 @@ if (!empty($this->items))
 					      			</span>
 					      		</td>
 					      	<?php endif; ?>
+					      	<?php if ($list_show_servicerequest_tenant) :?>
+					      		<td headers="categorylist_header_servicerequest_tenant" class="list-servicerequest-tenant">
+									<?php echo $article->author; ?>
+						      	</td>
+					      	<?php endif; ?>
 					      	<?php if ($list_show_servicerequest_item) :?>
 					      		<td headers="categorylist_header_servicerequest_item" class="list-servicerequest-item">
 									<?php echo $attribs->get('service_name'); ?>
@@ -437,6 +460,11 @@ if (!empty($this->items))
 							<?php if ($list_show_billing_price) : ?>
 						    	<td headers="categorylist_header_billing_price" class="list-billing-price">
 						      		<?php echo $attribs->get('billing_amount'); ?>
+						      	</td>
+							<?php endif; ?>
+							<?php if ($list_show_billing_type) : ?>
+						    	<td headers="categorylist_header_billing_type" class="list-billing-type">
+						      		<?php echo $attribs->get('billing_type'); ?>
 						      	</td>
 							<?php endif; ?>
 					      	<?php if ($list_show_billing_status) : ?>

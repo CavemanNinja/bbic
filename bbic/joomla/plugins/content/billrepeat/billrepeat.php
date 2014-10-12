@@ -53,14 +53,65 @@ class plgContentBillrepeat extends JPlugin
             }
 
             //Put a company profile in the right category based on laguage and subcategory choice.
-            if ($catid == 9 || $catid == 28 || $parent_id == 9 || $parent_id == 28) {
+            if ($catid == 9 || $parent_id == 9) {
                 $subcategory_choice = $attribs->companyprofile_category;
                 switch($subcategory_choice) {
                     case 0: 
-                        $article->catid = 33;
+                        $article->catid = 56;
                         break;
                     case 1:
+                        $article->catid = 62;
+                        break;
+                    case 2: 
+                        $article->catid = 49;
+                        break;
+                    case 3: 
+                        $article->catid = 54;
+                        break;              
+                    case 4: 
+                        $article->catid = 65;
+                        break;          
+                    case 5: 
+                        $article->catid = 63;
+                        break;
+                    case 6: 
+                        $article->catid = 57;
+                        break;
+                    case 7: 
+                        $article->catid = 50;
+                        break;
+                    case 8: 
+                        $article->catid = 58;
+                        break;
+                    case 9: 
+                        $article->catid = 33;
+                        break;
+                    case 10: 
+                        $article->catid = 53;
+                        break;
+                    case 11: 
+                        $article->catid = 61;
+                        break;
+                    case 12: 
+                        $article->catid = 64;
+                        break;
+                    case 13: 
+                        $article->catid = 55;
+                        break;
+                    case 14: 
                         $article->catid = 34;
+                        break;
+                    case 15: 
+                        $article->catid = 51;
+                        break;
+                    case 16: 
+                        $article->catid = 59;
+                        break;
+                    case 17: 
+                        $article->catid = 52;
+                        break;
+                    case 18: 
+                        $article->catid = 60;
                         break;
                 }
             }

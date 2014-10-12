@@ -197,6 +197,14 @@ JHtml::_('bootstrap.tooltip');
  			<?php echo "</div>" ?>
  		<?php endif ?>
 
+ 		<?php if ($attribs->get('billing_type')) : ?>
+ 			<?php echo "<div class='ef_billing_type'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_BILLING_TYPE').": </span>" ?>
+	 			<span class="item-state state-<?php echo $attribs->get('billing_type') ?>">
+	 				<?php echo $attribs->get('billing_type') ?>
+	 			</span>
+ 			<?php echo "</div>" ?>
+ 		<?php endif ?>
+
 		<?php if ($attribs->get('billing_due_date')) : ?>
  			<?php echo "<div class='ef_billing_date'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_BILLING_DUE_DATE').": </span>" ?>
  			<span class="item-state state-<?php echo $attribs->get('billing_due_date') ?>">
@@ -346,6 +354,12 @@ JHtml::_('bootstrap.tooltip');
  			<?php echo "</div>" ?>
  		<?php endif ?>
 		
+ 		<?php if ($this->item->author) : ?>
+			<?php echo "<div class='ef_servicerequest_tenant'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_SERVICEREQUEST_TENANT').": </span>" ?>
+			<?php echo $this->item->author; ?>
+			<?php echo "</div>" ?>
+		<?php endif; ?>
+
 		<?php if ($attribs->get('service_name')) : ?>
 			<?php echo "<div class='ef_servicerequest_item'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_SERVICE_NAME').": </span>" ?>
 			<?php echo $attribs->get('service_name'); ?>
@@ -549,7 +563,7 @@ JHtml::_('bootstrap.tooltip');
 	</div>
 
 <!-- COMPANY PROFILE -->
-<?php elseif ($catid == "9" || $catid == "28" || $parentid == "9" || $parentid == "28") : ?>
+<?php elseif ($catid == "9" || $parentid == "9" ) : ?>
 	<!-- <?php echo "<script>hideTenantModules();</script>"; ?> -->
 	<article itemscope itemtype="http://schema.org/Article">
 		<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />

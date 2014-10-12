@@ -35,11 +35,32 @@ defined('_JEXEC') or die('Restricted accessd');
             </li>
             <?php
                 $cat_tags = XEFXpertGalleryHelper::getCatFilterList( $items, $params );
-                
+                // var_dump($cat_tags);
                 if ($page_lang == "ar-AA") {
+                    $cat_tags = str_replace("Advertising", "الإعلان", $cat_tags);
+                    $cat_tags = str_replace("Cleaning", "التنظيف", $cat_tags);
+                    $cat_tags = str_replace("Consulting", "الاستشارات", $cat_tags);
+                    $cat_tags = str_replace("Contracting", "التعاقد", $cat_tags);
+                    $cat_tags = str_replace("Design", "تصميم", $cat_tags);
+                    $cat_tags = str_replace("Event Management", "إدارة الأحداث", $cat_tags);
+                    $cat_tags = str_replace("Fabrication", "التصنيع", $cat_tags);
+                    $cat_tags = str_replace("Food", "طعام", $cat_tags);
+                    $cat_tags = str_replace("Furniture", "الأثاث", $cat_tags);
                     $cat_tags = str_replace("Industrial", "الصناعية", $cat_tags);
-                    $cat_tags = str_replace("Retail", "التجارية", $cat_tags);
+                    $cat_tags = str_replace("Landscaping", "المناظر الطبيعية", $cat_tags);
+                    $cat_tags = str_replace("Marine", "البحرية", $cat_tags);
+                    $cat_tags = str_replace("Media", "الإعلام", $cat_tags);
+                    $cat_tags = str_replace("Recreational", "الترفيهية", $cat_tags);
+                    $cat_tags = str_replace("Retail", "التجارية‎", $cat_tags);
+                    $cat_tags = str_replace("Society", "المجتمع", $cat_tags);
+                    $cat_tags = str_replace("Technology", "التكنولوجيا", $cat_tags);
+                    $cat_tags = str_replace("Trading", "التداول", $cat_tags);
+                    $cat_tags = str_replace("Transportation", "النقل", $cat_tags);
                 }
+                
+                /*Remove li for empty categories*/
+                $cat_tags = str_replace('<li data-filter="."></li>', "", $cat_tags);
+
                 echo $cat_tags;
             ?>
         </ul>
