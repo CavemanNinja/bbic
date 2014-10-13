@@ -47,7 +47,7 @@ class plgContentBillrepeat extends JPlugin
             $isTenant = in_array(10, $current_user->getAuthorisedGroups());
 
             //Set company profile approval to pending if current user is tenant
-            if ($isTenant && ($catid == 9 || $catid == 28 || $parent_id == 9 || $parent_id == 28 )) {
+            if ($isTenant && ($catid == 9 || $parent_id == 9)) {
                 $attribs->companyprofile_approval = "0";
                 $article->attribs = json_encode($attribs);
             }
@@ -173,6 +173,14 @@ class plgContentBillrepeat extends JPlugin
             $db = JFactory::getDbo();
             $catid = $article->catid;
 
+            //Get the parent category id - For Company Profiles
+            $query = $db->getQuery(true);
+            $query->select($db->quoteName("parent_id"));
+            $query->from($db->quoteName("#__categories"));
+            $query->where($db->quoteName("id") . " = " . $article->catid);
+            $db->setQuery($query);
+            $parent_id = $db->loadResult(); //loads single record.
+
             //Collect some article attributes.
             $id = intval($article->id);
             $asset_id = intval($article->asset_id);
@@ -227,13 +235,11 @@ class plgContentBillrepeat extends JPlugin
                     /*
                         Send Email Case (1) to tenant about New Service Request
                     */
-                    $body = "Hello " . $tenant_user->name . ",\n";
-                    $body.= "You have made a new Service Request\n";
-                    $body.= "Follow this link to your service requests page to view details:\n";
+                    $body = "Dear " . $tenant_user->name . ",\n";
+                    $body.= "Your service request has been received. A member of the BBIC will approve the request as soon as possible.";
                     
                     //TODO: Insert Proper LINK!!
-                    
-                    $subject = "You have created a new Service Request.";
+                    $subject = "Your Service Request has been received.";
                     
                     $send = $this->sendEmail($tenant_email, $subject, $body);
                     if ($send == true) {
@@ -306,10 +312,9 @@ class plgContentBillrepeat extends JPlugin
                         Send Email Service Request Has been approved.
                             Success: Set flag email has been sent on service request attribs.
                     */
-                    $subject = "Your Service Request Has been approved.";
-                    $body = "Hello " . $tenant_user->name . ",\n";
-                    $body.= "Your service request has been approved.\n";
-                    $body.= "Follow this link to your service requests page to view details:\n";
+                    $subject = "Your Service Request has been Approved.";
+                    $body = "Dear " . $tenant_user->name . ",\n";
+                    $body.= "Your service request for ".$attribs->servicerequest_item.", has been approved and will be attended to as soon as possible.\n";
                     
                     $send = $this->sendEmail($tenant_email, $subject, $body);
                     if ($send == true) {
@@ -407,9 +412,10 @@ class plgContentBillrepeat extends JPlugin
                     
                     $subject = "A new bill has been added to you account.";
                     
-                    $body = "Hello " . $tenant_user->name . ",\n";
-                    $body.= "A new bill has been added to your account\n";
-                    $body.= "Follow this link to your billing page to view details:\n";
+                    $body = "Dear " . $tenant_user->name . ",\n";
+                    $body.= "You have received the following bill ".$attribs->billing_invoice_id.", ". $attribs->billing_description. "\n";
+                    $body.= "Please arrange for the bill to be paid.\n";
+                    $body.= "If arrangements have been made and the charges have been received, we will confirm the payment of the bill through an e-mail reply.";
                     
                     //TODO: Insert Proper LINK!!
                     
@@ -430,10 +436,10 @@ class plgContentBillrepeat extends JPlugin
                     $tenant_user = JFactory::getUser($tenant_id);
                     $tenant_email = $tenant_user->email;
 
-                    $subject = "Thank you, Your Bill has been set as Paid.";
+                    $subject = "Thank you, Your Bill has been Paid.";
 
                     $body = "Hello " . $tenant_user->name . ",\n";
-                    $body .= "A bill in your account has been marked as Paid. Thank You.";
+                    $body .= "Bill ".$attribs->billing_invoice_id.", ". $attribs->billing_description. " has been paid in full. Thank You.";
 
                     $send = $this->sendEmail($tenant_email, $subject, $body);
                     if ($send == true) {
@@ -445,7 +451,9 @@ class plgContentBillrepeat extends JPlugin
             }
 
             //Company Profile Emails. Must use Parent category and catid!
-            if ($catid == 9 || $catid == 28 || $parent_id == 9 || $parent_id == 28 ) {
+
+            
+            if ($catid == 9 || $parent_id == 9) {
                 $tenant_id = $article->created_by;
                 $tenant_user = JFactory::getUser($tenant_id);
                 $tenant_email = $tenant_user->email;
@@ -454,10 +462,11 @@ class plgContentBillrepeat extends JPlugin
                 if ($isTenant && $attribs->companyprofile_approval == "0") {
                     //Send Email, 
                     $subject = "Your Company Profile has been saved.";
-                    $body = "Hello " . $tenant_user->name . ",\n";
-                    $body .= "Your Company Profile has been saved and is awaiting approval.\n";
-                    $body .= "You will be notified once your profile has been approved and is available for viewing.";
+                    $body = "Dear " . $tenant_user->name . ",\n";
+                    $body .= "Your company profile has been saved and is pending for review with the BBIC staff.\n";
+
                     $send = $this->sendEmail($tenant_email, $subject, $body);
+            
                     if ($send == true) {
                         JFactory::getApplication()->enqueueMessage("Mail Sent.");
                     } else {
@@ -479,8 +488,9 @@ class plgContentBillrepeat extends JPlugin
                             $i++;
                         }
                         // JFactory::getApplication()->enqueueMessage("staff emails: " . print_r($staff_emails, true));
-                        $staff_subject = "A Tenant has updated their profile.";
-                        $staff_body = "A Tenant has updated thier profile and it is awaiting approval.";
+                        $staff_subject = $tenant_user." Tenant has updated their profile.";
+                        $staff_body = "Dear BBIC Staff Member,\n";
+                        $staff_body .= $tenant_user." has updated thier profile, please review and approve the company profile.";
                         $send = $this->sendEmail($staff_emails, $staff_subject, $staff_body);
                         if ($send == true) {
                             JFactory::getApplication()->enqueueMessage("Mail Sent.");
@@ -493,8 +503,8 @@ class plgContentBillrepeat extends JPlugin
                 //Company Profile saved by Staff with Approved Status
                 if ($isStaff && $attribs->companyprofile_approval == "1") {
                     $subject = "Your Company Profile has been approved.";
-                    $body = "Hello " . $tenant_user->name . ",\n";
-                    $body .= "Your Company Profile has been approved.\n";
+                    $body = "Dear " . $tenant_user->name . ",\n";
+                    $body .= "Your company profile has been approved by BBIC staff . The company profile is displayed now or will be displayed shortly.\n";
 
                     $send = $this->sendEmail($tenant_email, $subject, $body);
                     if ($send == true) {
@@ -503,7 +513,6 @@ class plgContentBillrepeat extends JPlugin
                         JError::raiseNotice(500, "Mail Error.");
                     }
                 }
-
             }
         }        
 
@@ -566,10 +575,25 @@ class plgContentBillrepeat extends JPlugin
     
     function sendEmail($recipient, $subject, $body) {
         $mailer = JFactory::getMailer();
+        $mailer->isHTML(true);
+        $mailer->Encoding = 'base64';
         $config = JFactory::getConfig();
         $sender = array($config->get('config.mailfrom'), $config->get('config.fromname'));
         $mailer->setSender($sender);
         
+        $signature = '<div>';
+        $signature .= "<br/>Regards,";
+        $signature .='<br/><img src="'.JURI::base().'/images/logo.jpg" alt="logo"/>';
+        $signature .= '<br/>Tel: +973 17358888';
+        $signature .= '<br/>Fax: +973 17358888';
+        $signature .= '<br/>Email: ';
+        $signature .= '<br/>Website: www.bbicbahrain.com / www.bdb-bh.com';
+        $signature .= '<br/>PO Box 50450, Kingdom of Bahrain';
+        $signature .= '<br/>BBIC Arabic Ad : http://youtu.be/-y6HnxI9Ooc';
+        $signature .= '<br/>BBIC English Ad : http://youtu.be/pI5lTbC9Dkg';
+        $signature .= '</div>';
+        $body .= $signature;
+
         // JFactory::getApplication()->enqueueMessage("Send Email, Subject: " . $subject);
         $mailer->addRecipient($recipient);
         $mailer->setSubject($subject);

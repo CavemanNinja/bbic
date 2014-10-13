@@ -50,9 +50,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 $isTenant = in_array(10, array_values(JFactory::getUser()->groups));
 $restrictView = false;
 
-
-
-
 if ($this->items[0]){
 	$catid = $this->items[0]->catid;
 	/*Get the parent category ID, used for News and Company Profiles */
@@ -61,7 +58,10 @@ if ($this->items[0]){
 	$parent = $category->getParent();
 	$parentid = $parent->id;
 	$restrictView = (($catid == 9) || $parentid == 9 || ($catid == 10) || ($catid == 12))  && $isTenant;
+	$noSubmit = $isTenant && ($catid == 9 || $parentid == 9);
 }
+
+
 //Table header settings
 $list_show_servicerequest_item = false;
 $list_show_servicerequest_approval = false;
@@ -528,7 +528,7 @@ if (!empty($this->items))
 	<?php endif; ?>
 
 	<?php // Code to add a link to submit an article. ?>
-	<?php if ($this->category->getParams()->get('access-create')) : ?>
+	<?php if ($this->category->getParams()->get('access-create') && !$noSubmit) : ?>
 		<?php echo JHtml::_('icon.create', $this->category, $this->category->params); ?>
 	<?php  endif; ?>
 
