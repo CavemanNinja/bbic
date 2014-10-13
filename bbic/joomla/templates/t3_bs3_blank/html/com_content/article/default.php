@@ -1443,7 +1443,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
@@ -1474,7 +1474,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
@@ -1506,7 +1506,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
@@ -1538,7 +1538,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
@@ -1580,7 +1580,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
@@ -1610,7 +1610,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
@@ -1667,7 +1667,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
@@ -1695,7 +1695,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
@@ -1731,7 +1731,7 @@ JHtml::_('bootstrap.tooltip');
 							data-content="<?php echo $attribs->get('map_'.$unit); ?>"  
 						<?php endif; ?>
 						<?php if ($attribs->get('map_'. $unit .'_image') != "") : ?>
-							data-title="<img class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
+							data-title="<img href='<?php echo $attribs->get('map_'. $unit .'_link'); ?>' class='building-img' alt='' height='75' width='75' src='<?php echo JUri::base().$attribs->get('map_'. $unit  .'_image'); ?>'>"
 						<?php endif; ?>
 						><?php echo $label; ?></div>	
 					<?php endforeach; ?>
