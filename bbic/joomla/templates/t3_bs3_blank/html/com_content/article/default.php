@@ -215,11 +215,27 @@ JHtml::_('bootstrap.tooltip');
 
  		
 		<?php echo "<div class='ef_billing_date'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_BILLING_STATUS').": </span>" ?>
-		<?php if ($attribs->get('billing_status') == "1") : ?>
-			<?php echo "Paid" ?>
-		<?php else : ?>
-			<?php echo "Unpaid" ?>
-		<?php endif; ?>
+		<?php 
+			switch($attribs->get('billing_status')) {
+				case 0:
+					echo 'Unpaid';
+					break;
+				case 1:
+					echo 'Paid through Credimax';
+					break;
+				case 2:
+					echo 'Paid by Cheque';
+					break;
+				case 3:
+					echo 'Paid by Credit Card';
+					break;
+				case 4:
+					echo 'Paid by Tamkeen';
+					break;
+				default:
+					break;
+			}
+		?>
 		<?php echo "</div>" ?>
 
 	  <!-- footer -->

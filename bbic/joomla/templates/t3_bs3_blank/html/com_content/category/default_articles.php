@@ -497,6 +497,15 @@ if (!empty($this->items))
 						      				case '1':
 						      					echo "Paid";
 						      					break;
+						      				case '2':
+						      					echo "Paid";
+						      					break;
+						      				case '3':
+						      					echo "Paid";
+						      					break;
+						      				case '4':
+						      					echo "Paid";
+						      					break;
 						      				
 						      				default:
 						      					break;

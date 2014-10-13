@@ -776,37 +776,43 @@ class ModSimpleFileUploaderHelperv13{
 				foreach ($csv_array as $csv_line_number => $csv_record) {
 					
 					//check exact company name is found in database users table
-					$csv_company_name = $csv_record[5]; //change when looping
+					$tenant_name = $csv_record[5]; //change when looping
 					$query = $db->getQuery(true);
-					$query->select($db->quoteName('created_by'));
-					$query->from($db->quoteName('#__content'));
-					$query->where($db->quoteName('catid') . " = 33 AND ". 
-						$db->quoteName('title') ." LIKE ". $db->quote($csv_company_name));
+					$query->select($db->quoteName('id'));
+					$query->from($db->quoteName('#__users'));
+					$query->where($db->quoteName('username')." LIKE '". $tenant_name."'");
 					$db->setQuery($query);
 					$tenant_id = $db->loadResult();
-					$debug .= $tenant_id;
+
 					if ($tenant_id) {
 						//create new bill with information from csv using the invoice ID as the alias
-
-						//get the tenant name using the id						
-						$query = $db->getQuery(true);
-	                    $query->select($db->quoteName('username'));
-	                    $query->from($db->quoteName('#__users'));
-	                    $query->where($db->quoteName('id')." = ".$tenant_id);
-	                    $db->setQuery($query);
-	                    $result = $db->loadResult();
-	                    $tenant_name = $result;
-
 						$csv_time = strtotime($csv_record[1]);
 						$mysql_start_time = date('Y-m-d', $csv_time);
 
 						$billing_amount = str_replace(".00", "", $csv_record[9]);
 						$billing_amount = str_replace(",", "", $billing_amount);
 
+						$billing_status = 0;
+						switch($csv_record[11]) {
+							case 'Paid through Credimax':
+								$billing_status = 1;
+								break;
+							case 'Paid by Cheque':
+								$billing_status = 2;
+								break;
+							case 'Paid by Credit Card':
+								$billing_status = 3;
+								break;
+							case 'Paid by Tamkeen':
+								$billing_status = 4;
+								break;
+							default:
+								break;
+						}
 
 						$billing_attribs = '{"billing_tenant_name":"'.$tenant_name.'","billing_tenant_id":"'.$tenant_id.'","billing_amount":"'.$billing_amount.'","billing_invoice_id":"'.$csv_record[0].
 						'","billing_description":"'.$csv_record[6].'","billing_type":"'.$csv_record[10].
-						'","billing_invoice_date":"'. $mysql_start_time .'","billing_status":"0","billing_repeatcycle":"","billing_repeatstart":"","billing_repeatend":""}';
+						'","billing_invoice_date":"'. $mysql_start_time .'","billing_status":"'.$billing_status.'","billing_repeatcycle":"","billing_repeatstart":"","billing_repeatend":""}';
 						// break;
 						$jt_article = JTable::getInstance('content');
 						$jt_article->title = $csv_record[0].' - '.$csv_record[5]. ': '.$csv_record[6];
@@ -826,19 +832,19 @@ class ModSimpleFileUploaderHelperv13{
 	                    $db->setQuery($del_query);
 	                    $deleteresult = $db->query();
 	                    if ($deleteresult){
-	                    	$csv_results .= "Removed ".$csv_record[0] ."./n";
+	                    	$csv_results .= "Removed ".$csv_record[0] .".</br>";
 	                    }
 
 	                    //insert new article into database
 	                    if (!$jt_article->check()) {
 	                        JError::raiseNotice(500, $jt_article->getError());
 	                        // return FALSE;
-	                        $csv_results .= "Error adding Invoice ". $csv_record[0] ."to database (check)/n";
+	                        $csv_results .= "Error adding Invoice ". $csv_record[0] ."to database (check)<br/>";
 	                    }
 	                    if (!$jt_article->store(TRUE)) {
 	                        JError::raiseNotice(500, $jt_article->getError());
 	                        // return FALSE;
-	                        $csv_results .= "Error adding Invoice ". $csv_record[0] ."to database (store)/n";
+	                        $csv_results .= "Error adding Invoice ". $csv_record[0] ."to database (store)</br>";
 	                    }
 
 	                    // break;
@@ -850,20 +856,12 @@ class ModSimpleFileUploaderHelperv13{
 					}
 						
 				}
-				$csv_results .= $csv_success." Successful Invoices added./n";
+				$csv_results .= $csv_success." Successful Invoices added.</br>";
 			}
 
-			// return $query_result;
-			// return $csv_company_name;
-			// return number_format($csv_record[9], 0, "", "");
-			// return "Asdf";
-			// $csv_results .= "<<debug: ".$debug;
 			return $csv_results;
-			// return $debug;
-			// return $billing_attribs;
-			// return $results;
+			// return $debug_sql;
 		}
-		
 		
 		function gd_get_info() {
 			if (extension_loaded('gd') and
