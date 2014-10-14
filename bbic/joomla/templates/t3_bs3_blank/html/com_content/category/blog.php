@@ -16,6 +16,9 @@ JHtml::addIncludePath(dirname(dirname(__FILE__)));
 JHtml::_('behavior.caption');
 ?>
 <div class="blog<?php echo $this->pageclass_sfx;?>" itemscope itemtype="http://schema.org/Blog">
+
+
+
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 	<div class="page-header clearfix">
 		<h1 class="page-title"> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
@@ -85,12 +88,31 @@ JHtml::_('behavior.caption');
 	?>
 
 	<?php if (!empty($this->intro_items)) : ?>
+	
+	<?php $parent_id = $this->intro_items[0]->parent_id; ?>
+	
+	<?php if ($parent_id == 17) : ?>
+		<div class="apply-jump-list">
+			<ul>
+				<?php foreach ($this->intro_items as &$item) : ?>
+					<!-- <?php var_dump($item); ?> -->
+					<li><a href="#<?php echo $item->alias; ?>"><?php echo $item->title; ?></a></li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
+	<?php endif; ?>
+	
+
+
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
 		<?php
 			$catid = $item->catid;
 			$attribs = json_decode($item->attribs);
 			$companyprofile_approval = $attribs->companyprofile_approval;
 		 ?>
+		<?php if ($parent_id == 17) : ?>
+			<a name="<?php echo $item->alias; ?>">
+		<?php endif; ?>
 		<?php $rowcount = ((int) $counter % (int) $this->columns) + 1; ?>
 		<?php if ($rowcount == 1) : ?>
 			<?php $row = $counter / $this->columns; ?>
