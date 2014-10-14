@@ -33,19 +33,11 @@ abstract class XEFXpertGalleryHelper
 
         foreach( $items as $item )
         {
-            // var_dump($item);
+            $extrafields_attribs_json = $item[0]->attribs;
+            $extrafields_attribs = json_decode($extrafields_attribs_json, true);
 
-            foreach($item as $i) {
-                $extrafields_attribs_json = $i->attribs;
-                $extrafields_attribs = json_decode($extrafields_attribs_json, true);
-
-                if ($extrafields_attribs["companyprofile_approval"] == "1") {
-                    $html .= '<li data-filter=".'. str_replace('/', '-', $item[0]->$cat_alias) .'">' . $item[0]->$cat_name . '</li>' . "\n";
-                    break;
-                }
-            }
-
-            
+            if ($extrafields_attribs["companyprofile_approval"] == "1")
+                $html .= '<li data-filter=".'. str_replace('/', '-', $item[0]->$cat_alias) .'">' . $item[0]->$cat_name . '</li>' . "\n";
         }
 
         return $html ;

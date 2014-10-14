@@ -59,6 +59,7 @@ defined('_JEXEC') or die('Restricted accessd');
                 }
                 
                 /*Remove li for empty categories*/
+                // var_dump($cat_tags);
                 $cat_tags = str_replace('<li data-filter="."></li>', "", $cat_tags);
 
                 echo $cat_tags;
