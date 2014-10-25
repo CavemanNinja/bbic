@@ -1,0 +1,6 @@
+Joomla Admin
+root,adminpassword
+Staff Example Account
+staff,staff
+Tenant Example Account
+tenant,tenant

@@ -120,6 +120,25 @@ if(count($extrafields)){
 		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
 			<fieldset>
 
+			<div class="btn-toolbar">
+					<div class="btn-group force-no-margin">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+					<br/><br/>
+				</div>
+
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('TPL_EXTRAFIELDS_BILLING_SLIDER_LABEL') ?></a></li>
 					<?php if(false) : ?>
@@ -315,6 +334,24 @@ if(count($extrafields)){
 
 		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
 			<fieldset>
+			<div class="btn-toolbar">
+					<div class="btn-group force-no-margin">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+					<br/><br/>
+				</div>
 
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('JEDITOR') ?></a></li>
@@ -383,7 +420,32 @@ if(count($extrafields)){
 								$selectcat = str_replace('<option value="25">- - - أخبار اضافية</option>',
 								 '', $selectcat ); 
 
+								$selectcat = str_replace('<option value="23">- - - أخبارالمركز </option>', '', $selectcat);
+								$selectcat = str_replace('<option value="24">- - - أخبار بنك للتنمية</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="25">- - - أخبار المستأجرين</option>', '', $selectcat);
+
+								$selectcat = str_replace('<option value="33">- - - Industrial</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="34">- - - Retail</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="50">- - - Food</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="49">- - - Consulting</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="51">- - - Society</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="52">- - - Trading</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="53">- - - Landscaping</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="54">- - - Contracting</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="55">- - - Recreational</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="56">- - - Advertising</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="57">- - - Fabricatiion</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="58">- - - Furniture</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="59">- - - Technology</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="60">- - - Transportation</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="61">- - - Marine</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="62">- - - Cleaning</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="63">- - - Event Management</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="64">- - - Media</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="65">- - - Design</option>', '', $selectcat);
+
 								echo $selectcat;
+
 							} else {
 								$selectcat = $this->form->getInput('catid');
 
@@ -412,6 +474,26 @@ if(count($extrafields)){
 								 '', $selectcat ); 
 								$selectcat = str_replace('<option value="16">- - - Extra</option>',
 								 '', $selectcat ); 
+								$selectcat = str_replace('<option value="16">- - - Tenant</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="33">- - - Industrial</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="34">- - - Retail</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="50">- - - Food</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="49">- - - Consulting</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="51">- - - Society</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="52">- - - Trading</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="53">- - - Landscaping</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="54">- - - Contracting</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="55">- - - Recreational</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="56">- - - Advertising</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="57">- - - Fabricatiion</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="58">- - - Furniture</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="59">- - - Technology</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="60">- - - Transportation</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="61">- - - Marine</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="62">- - - Cleaning</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="63">- - - Event Management</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="64">- - - Media</option>', '', $selectcat);
+								$selectcat = str_replace('<option value="65">- - - Design</option>', '', $selectcat);
 
 								echo $selectcat;
 							}
@@ -669,6 +751,24 @@ if(count($extrafields)){
 
 		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
 			<fieldset>
+			<div class="btn-toolbar">
+					<div class="btn-group force-no-margin">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+					<br/><br/>
+				</div>
 
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('J3_EDITOR_COMPANYPROFILES_TAB') ?></a></li>
@@ -912,6 +1012,24 @@ if(count($extrafields)){
 
 		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
 			<fieldset>
+			<div class="btn-toolbar">
+					<div class="btn-group force-no-margin">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+					<br/><br/>
+				</div>
 
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('J3_EDITOR_SERVICEREQUEST_TAB') ?></a></li>
@@ -1120,6 +1238,24 @@ if(count($extrafields)){
 
 		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
 			<fieldset>
+			<div class="btn-toolbar">
+					<div class="btn-group force-no-margin">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+					<br/><br/>
+				</div>
 
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('J3_EDITOR_SERVICE_TAB') ?></a></li>
@@ -1312,6 +1448,24 @@ if(count($extrafields)){
 
 		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" enctype="multipart/form-data" method="post" name="adminForm" id="adminForm" class="form-validate">
 			<fieldset>
+			<div class="btn-toolbar">
+					<div class="btn-group force-no-margin">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+					<br/><br/>
+				</div>
 
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('J3_EDITOR_DOWNLOAD_TAB') ?></a></li>
@@ -1497,6 +1651,7 @@ if(count($extrafields)){
 
 <!-- MAP -->
 <?php elseif($catid == 29) : ?>
+
 	<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
 		<?php if ($params->get('show_page_heading', 1)) : ?>
 		<div class="page-header">
@@ -1508,9 +1663,27 @@ if(count($extrafields)){
 
 		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
 			<fieldset>
+			<div class="btn-toolbar">
+					<div class="btn-group force-no-margin">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+					<br/><br/>
+				</div>
 
 				<ul class="nav nav-tabs">
-					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('J3_EDITOR_SERVICE_TAB') ?></a></li>
+					<li class="active"><a href="#editor" data-toggle="tab"><?php echo "Edit Map" ?></a></li>
 					<?php if(false) : ?>
 					<li><a href="#extrafields" data-toggle="tab"><?php echo JText::_('T3_EXTRA_FIELDS_GROUP_LABEL') ?></a></li>
 					<?php endif; ?>
@@ -1704,6 +1877,24 @@ if(count($extrafields)){
 
 		<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
 			<fieldset>
+				<div class="btn-toolbar">
+					<div class="btn-group force-no-margin">
+						<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
+							<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
+						</button>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
+							<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
+						</button>
+					</div>
+					<?php if ($params->get('save_history', 0)) : ?>
+					<div class="btn-group">
+						<?php echo $this->form->getInput('contenthistory'); ?>
+					</div>
+					<?php endif; ?>
+					<br/><br/>
+				</div>
 
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('JEDITOR') ?></a></li>

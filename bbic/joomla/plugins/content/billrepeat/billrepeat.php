@@ -243,9 +243,9 @@ class plgContentBillrepeat extends JPlugin
                     
                     $send = $this->sendEmail($tenant_email, $subject, $body);
                     if ($send == true) {
-                        JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                        // JFactory::getApplication()->enqueueMessage("Mail Sent.");
                     } else {
-                        JFactory::getApplication()->enqueueMessage("Mail Error.");
+                        // JFactory::getApplication()->enqueueMessage("Mail Error.");
                     }
 
                     /*
@@ -270,9 +270,9 @@ class plgContentBillrepeat extends JPlugin
                         $staff_body = "A Tenant has added a new service request.";
                         $send = $this->sendEmail($staff_emails, $staff_subject, $staff_body);
                         if ($send == true) {
-                            JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                            // JFactory::getApplication()->enqueueMessage("Mail Sent.");
                         } else {
-                            JFactory::getApplication()->enqueueMessage("Mail Error.");
+                            // JFactory::getApplication()->enqueueMessage("Mail Error.");
                         }
                     }
                 }
@@ -305,7 +305,7 @@ class plgContentBillrepeat extends JPlugin
                     if (!$jt_article->store(TRUE)) {
                         JError::raiseNotice(500, $jt_article->getError() . ", " . $jt_article->alias);
                     } else {
-                      JFactory::getApplication()->enqueueMessage("New Bill created.");  
+                      // JFactory::getApplication()->enqueueMessage("New Bill created.");  
                     }
                     
                     /*
@@ -326,9 +326,9 @@ class plgContentBillrepeat extends JPlugin
                         $query->where($db->quoteName("id") . " = " . $id);
                         $db->setQuery($query);
                         $result = $db->query();
-                        JFactory::getApplication()->enqueueMessage("Notification Email sent to Tenant.");
+                        // JFactory::getApplication()->enqueueMessage("Notification Email sent to Tenant.");
                     } else {
-                        JError::raiseNotice(500, "Mail Error.");
+                        // JError::raiseNotice(500, "Mail Error.");
                     }
                 }
             }
@@ -421,9 +421,9 @@ class plgContentBillrepeat extends JPlugin
                     
                     $send = $this->sendEmail($tenant_email, $subject, $body);
                     if ($send == true) {
-                        JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                        // JFactory::getApplication()->enqueueMessage("Mail Sent.");
                     } else {
-                        JError::raiseNotice(500, "Mail Error.");
+                        // JError::raiseNotice(500, "Mail Error.");
                     }
 
 
@@ -443,9 +443,9 @@ class plgContentBillrepeat extends JPlugin
 
                     $send = $this->sendEmail($tenant_email, $subject, $body);
                     if ($send == true) {
-                        JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                        // JFactory::getApplication()->enqueueMessage("Mail Sent.");
                     } else {
-                        JError::raiseNotice(500, "Mail Error.");
+                        // JError::raiseNotice(500, "Mail Error.");
                     }   
                 }
             }
@@ -468,9 +468,9 @@ class plgContentBillrepeat extends JPlugin
                     $send = $this->sendEmail($tenant_email, $subject, $body);
             
                     if ($send == true) {
-                        JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                        // JFactory::getApplication()->enqueueMessage("Mail Sent.");
                     } else {
-                        JError::raiseNotice(500, "Mail Error.");
+                        // JError::raiseNotice(500, "Mail Error.");
                     }
 
                     //Query for all users in Group Staff>Manage Service Requests (groupid: 15)
@@ -493,9 +493,9 @@ class plgContentBillrepeat extends JPlugin
                         $staff_body .= $tenant_user." has updated thier profile, please review and approve the company profile.";
                         $send = $this->sendEmail($staff_emails, $staff_subject, $staff_body);
                         if ($send == true) {
-                            JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                            // JFactory::getApplication()->enqueueMessage("Mail Sent.");
                         } else {
-                            JFactory::getApplication()->enqueueMessage("Mail Error.");
+                            // JFactory::getApplication()->enqueueMessage("Mail Error.");
                         }
                     }
                 }
@@ -508,9 +508,9 @@ class plgContentBillrepeat extends JPlugin
 
                     $send = $this->sendEmail($tenant_email, $subject, $body);
                     if ($send == true) {
-                        JFactory::getApplication()->enqueueMessage("Mail Sent.");
+                        // JFactory::getApplication()->enqueueMessage("Mail Sent.");
                     } else {
-                        JError::raiseNotice(500, "Mail Error.");
+                        // JError::raiseNotice(500, "Mail Error.");
                     }
                 }
             }
