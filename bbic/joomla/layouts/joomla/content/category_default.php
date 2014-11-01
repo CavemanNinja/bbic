@@ -52,13 +52,13 @@ $tagsData  = $displayData->get('category')->tags->itemTags;
 		<?php echo $displayData->loadTemplate($displayData->subtemplatename); ?>
 
 		<?php if ($displayData->get('children') && $displayData->maxLevel != 0) : ?>
-			<div class="cat-children">
+<!-- 			<div class="cat-children">
 				<h3>
 					<?php echo JTEXT::_('JGLOBAL_SUBCATEGORIES'); ?>
 				</h3>
 
 				<?php echo $displayData->loadTemplate('children'); ?>
-			</div>
+			</div> -->
 		<?php endif; ?>
 	</div>
 </div>
