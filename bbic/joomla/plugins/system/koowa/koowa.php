@@ -1,184 +1,316 @@
 <?php
 /**
- * @version     $Id: koowa.php 4478 2012-02-10 01:50:39Z johanjanssens
- * @package     Nooku_Plugins
- * @subpackage  System
- * @copyright   Copyright (C) 2007 - 2012 Johan Janssens. All rights reserved.
+ * Nooku Framework - http://nooku.org/framework
+ *
+ * @copyright   Copyright (C) 2007 - 2014 Johan Janssens and Timble CVBA. (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
- * @link        http://www.nooku.org
+ * @link        https://github.com/nooku/nooku-framework for the canonical source repository
  */
 
-/**
- * Koowa System plugin
- *
- * @author      Johan Janssens <johan@nooku.org>
- * @package     Nooku_Plugins
- * @subpackage  System
- */
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-class plgSystemKoowa extends JPlugin
+/**
+ * Koowa System Plugin
+ *
+ * @author  Johan Janssens <https://github.com/johanjanssens>
+ * @package Plugin\System\Koowa
+ */
+class PlgSystemKoowa extends JPlugin
 {
-	public function __construct($subject, $config = array())
-	{
-        // Turn off E_STRICT errors for now
-        error_reporting(error_reporting() & ~E_STRICT);
-
+    /**
+     * Boots Koowa framework and applies some bug fixes for certain environments
+     *
+     * @param object $subject
+     * @param array  $config
+     */
+    public function __construct($subject, $config = array())
+    {
         // Check if database type is MySQLi
-		if(JFactory::getApplication()->getCfg('dbtype') != 'mysqli')
-		{
-			if (JFactory::getApplication()->getName() === 'administrator') 
-			{
-				$string = version_compare(JVERSION, '1.6', '<') ? 'mysqli' : 'MySQLi';
-				$link   = JRoute::_('index.php?option=com_config');
-				$error  = 'In order to use Joomlatools framework, your database type in Global Configuration should be set to <strong>%1$s</strong>. Please go to <a href="%2$s">Global Configuration</a> and in the \'Server\' tab change your Database Type to <strong>%1$s</strong>.';
-				JError::raiseWarning(0, sprintf(JText::_($error), $string, $link));
-			}
-			
-			return;
-		}
- 		
- 		// Set pcre.backtrack_limit to a larger value
- 		// See: https://bugs.php.net/bug.php?id=40846
- 		if (version_compare(PHP_VERSION, '5.3.6', '<=') && @ini_get('pcre.backtrack_limit') < 1000000) {
- 		    @ini_set('pcre.backtrack_limit', 1000000);
- 		}
+        if(JFactory::getApplication()->getCfg('dbtype') != 'mysqli')
+        {
+            if (JFactory::getApplication()->getName() === 'administrator')
+            {
+                $link   = JRoute::_('index.php?option=com_config');
+                $error  = 'In order to use Nooku Framework, your database type in Global Configuration should be
+                           set to <strong>MySQLi</strong>. Please go to <a href="%2$s">Global Configuration</a> and in
+                           the \'Server\' tab change your Database Type to <strong>MySQLi</strong>.';
 
-		//Set constants
-		define('KDEBUG', JDEBUG);
+                JFactory::getApplication()->enqueueMessage(sprintf(JText::_($error), $link), 'warning');
+            }
 
-        //Set path definitions
-        define('JPATH_FILES' , JPATH_ROOT);
-        define('JPATH_IMAGES', JPATH_ROOT.DIRECTORY_SEPARATOR.'images');
-
-        //Set exception handler
-		set_exception_handler(array($this, 'exceptionHandler'));
-
-		// Koowa : setup
-        require_once( JPATH_LIBRARIES.'/koowa/koowa.php');
-        Koowa::getInstance(array(
-			'cache_prefix'  => md5(JFactory::getApplication()->getCfg('secret')).'-cache-koowa',
-			'cache_enabled' => false //JFactory::getApplication()->getCfg('caching')
-        ));
-
-        KLoader::addAdapter(new KLoaderAdapterModule(array('basepath' => JPATH_BASE)));
-        KLoader::addAdapter(new KLoaderAdapterPlugin(array('basepath' => JPATH_ROOT)));
-        KLoader::addAdapter(new KLoaderAdapterComponent(array('basepath' => JPATH_BASE)));
-
-        KServiceIdentifier::addLocator(KService::get('koowa:service.locator.module'));
-        KServiceIdentifier::addLocator(KService::get('koowa:service.locator.plugin'));
-        KServiceIdentifier::addLocator(KService::get('koowa:service.locator.component'));
-
-        KServiceIdentifier::setApplication('site' , JPATH_SITE);
-        KServiceIdentifier::setApplication('admin', JPATH_ADMINISTRATOR);
-
-        KService::setAlias('koowa:database.adapter.mysqli', 'com://admin/default.database.adapter.mysqli');
-		KService::setAlias('translator', 'com:default.translator');
-
-	    //Setup the request, this is case insensitive since Windows servers allow folder names like /Administrator
-	    if (JFactory::getApplication()->getName() !== 'site') {
-	    	KRequest::root(str_ireplace('/'.JFactory::getApplication()->getName(), '', KRequest::base()));
-	    }
-
-		//Load the koowa plugins
-		JPluginHelper::importPlugin('koowa', null, true);
-
-	    //Bugfix : Set offset accoording to user's timezone
-		if(!JFactory::getUser()->guest)
-		{
-		   if($offset = JFactory::getUser()->getParam('timezone'))
-           {
-               if (version_compare(JVERSION, '3.0', '>=')) {
-                   JFactory::getConfig()->set('offset', $offset);
-               } else {
-                   JFactory::getConfig()->setValue('config.offset', $offset);
-               }
-		   }
-		}
-		
-		// Load language files for the framework
-		KService::get('com:default.translator')->loadLanguageFiles();
-
-		parent::__construct($subject, $config);
-	}
-	
-	/**
-	 * Set the disposition to inline for JSON requests
-	 */
-	public function onAfterRender()
-	{
-		if (JFactory::getDocument()->getType() !== 'json') {
-			return;
-		}
-		
-		$headers = JResponse::getHeaders();
-		foreach ($headers as $key => $header)
-		{
-			if ($header['name'] === 'Content-disposition')
-			{
-				$string = $header['value'];
-				if (strpos($string, 'attachment; ') !== false) 
-				{
-					$string = str_replace($string, 'attachment; ', 'inline; ');
-					JResponse::setHeader('Content-disposition', $string, true);
-					break;
-				}
-			}
-		}
-	}
-
- 	/**
-	 * Catch all exception handler
-	 *
-	 * Calls the Joomla error handler to process the exception
-	 *
-	 * @param object an Exception object
-	 * @return void
-	 */
-	public function exceptionHandler($exception)
-	{
-		$this->_exception = $exception; //store the exception for later use
-
-		if ($exception instanceof KException || $exception instanceof JException) {
-            $this->errorHandler($exception);
+            return;
         }
-		//Change the Joomla error handler to our own local handler and call it
-		JError::setErrorHandling( E_ERROR, 'callback', array($this,'errorHandler'));
 
-		//Make sure we have a valid status code
-		JError::raiseError(KHttpResponse::isError($exception->getCode()) ? $exception->getCode() : 500, $exception->getMessage());
-	}
+        // Try to raise Xdebug nesting level
+        @ini_set('xdebug.max_nesting_level', 200);
 
-	/**
-	 * Custom JError callback
-	 *
-	 * Push the exception call stack in the JException returned through the call back
-	 * adn then rener the custom error page
-	 *
-	 * @param object A JException object
-	 * @return void
-	 */
-	public function errorHandler($error)
-	{
-		$error->setProperties(array(
-			'backtrace'	=> $this->_exception->getTrace(),
-			'file'		=> $this->_exception->getFile(),
-			'line'		=> $this->_exception->getLine()
-		));
+        // Set pcre.backtrack_limit to a larger value
+        // See: https://bugs.php.net/bug.php?id=40846
+        if (version_compare(PHP_VERSION, '5.3.6', '<=') && @ini_get('pcre.backtrack_limit') < 1000000) {
+            @ini_set('pcre.backtrack_limit', 1000000);
+        }
 
-		$debug = version_compare(JVERSION, '3.0', 'ge')
-			? JFactory::getConfig()->get('debug')
-			: JFactory::getConfig()->getValue('config.debug');
+        // 2.5.7+ bug - you always need to supply a toolbar title to avoid notices
+        // This happens when the component does not supply an output at all
+        if (class_exists('JToolbarHelper')) {
+            JToolbarHelper::title('');
+        }
 
-	    if($debug) {
-			$error->set('message', (string) $this->_exception);
-		} else {
-			$error->set('message', KHttpResponse::getMessage($error->get('code')));
-		}
+        //Bugfix: Set offset according to user's timezone
+        if (!JFactory::getUser()->guest)
+        {
+            if ($offset = JFactory::getUser()->getParam('timezone')) {
+                JFactory::getConfig()->set('offset', $offset);
+            }
+        }
 
-		//Make sure the buffers are cleared
-		while(@ob_get_clean());
+        //Bootstrap the Koowa Framework
+        $this->bootstrap();
 
-		JError::customErrorPage($error);
-	}
+        parent::__construct($subject, $config);
+    }
+
+    /**
+     * Adds application response time and memory usage to Chrome Inspector with ChromeLogger extension
+     *
+     * See: https://chrome.google.com/webstore/detail/chrome-logger/noaneddfkdjfnfdakjjmocngnfkfehhd
+     */
+    public function __destruct()
+    {
+        if (JDEBUG && !headers_sent())
+        {
+            $buffer = JProfiler::getInstance('Application')->getBuffer();
+            if ($buffer)
+            {
+                $data = strip_tags(end($buffer));
+                $row = array(array($data), null, 'info');
+
+                $header = array(
+                    'version' => '4.1.0',
+                    'columns' => array('log', 'backtrace', 'type'),
+                    'rows'    => array($row)
+                );
+
+                header('X-ChromeLogger-Data: ' . base64_encode(utf8_encode(json_encode($header))));
+            }
+        }
+    }
+
+    /**
+     * Bootstrap the Koowa Framework
+     *
+     * @return bool Returns TRUE if the framework was found and bootstrapped succesfully.
+     */
+    public function bootstrap()
+    {
+        // Koowa: setup
+        $path = JPATH_LIBRARIES.'/koowa/libraries/koowa.php';
+        if (file_exists($path))
+        {
+            require_once $path;
+
+            $application = JFactory::getApplication()->getName();
+
+            /**
+             * Framework Bootstrapping
+             */
+            $koowa = Koowa::getInstance(array(
+                'debug'           => JDEBUG,
+                'cache'           => false, //JFactory::getApplication()->getCfg('caching')
+                'cache_namespace' => 'koowa-'.$application.'-'.md5(JFactory::getApplication()->getCfg('secret')),
+                'root_path'       => JPATH_ROOT,
+                'base_path'       => JPATH_BASE,
+                'vendor_path'     => JPATH_ROOT.(version_compare(JVERSION, '3.4', '>=') ? '/libraries/vendor' : '/vendor')
+            ));
+
+            $manager = KObjectManager::getInstance();
+            $loader  = $manager->getClassLoader();
+
+            /**
+             * Component Bootstrapping
+             */
+            $manager->getObject('object.bootstrapper')
+                ->registerApplication('site' , JPATH_SITE.'/components', JFactory::getApplication()->isSite())
+                ->registerApplication('admin', JPATH_ADMINISTRATOR.'/components', JFactory::getApplication()->isAdmin())
+                ->registerComponents(JPATH_LIBRARIES.'/koowa/components', 'koowa')
+                ->bootstrap();
+
+            //Module Locator
+            $loader->registerLocator(new ComKoowaClassLocatorModule(array(
+                'namespaces' => array(
+                    '\\'     => JPATH_BASE.'/modules',
+                    'Koowa'  => JPATH_LIBRARIES.'/koowa/modules',
+                )
+            )));
+
+            /**
+             * Module Bootstrapping
+             */
+            $manager->registerLocator('com:koowa.object.locator.module');
+
+            /**
+             * Plugin Bootstrapping
+             */
+            $loader->registerLocator(new ComKoowaClassLocatorPlugin(array(
+                'namespaces' => array(
+                    '\\'     => JPATH_ROOT.'/plugins',
+                    'Koowa'  => JPATH_LIBRARIES.'/koowa/plugins',
+                )
+            )));
+
+            $manager->registerLocator('com:koowa.object.locator.plugin');
+
+            /**
+             * Context Boostrapping
+             */
+            $request = $manager->getObject('request');
+
+            // Get the URL from Joomla if live_site is set
+            if (JFactory::getApplication()->getCfg('live_site'))
+            {
+                $request->setBasePath(rtrim(JURI::base(true), '/\\'));
+                $request->setBaseUrl($manager->getObject('lib:http.url', array('url' => JURI::base())));
+            }
+
+            //Exception Handling
+            if (PHP_SAPI !== 'cli') {
+                $manager->getObject('event.publisher')->addListener('onException', array($this, 'onException'), KEvent::PRIORITY_LOW);
+            }
+
+            // Handle 404 errors gracefully after log outs
+            $manager->getObject('event.publisher')->addListener('onException', array($this, 'onErrorAfterLogout'), KEvent::PRIORITY_HIGH);
+
+            /**
+             * Plugin Bootstrapping
+             */
+            JPluginHelper::importPlugin('koowa', null, true);
+
+
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Handles 404 errors gracefully after log outs
+     *
+     * If a user does not have access to the entity after logging out, they will be redirected to the homepage.
+     *
+     * @param KEventException $event
+     * @return bool
+     */
+    public function onErrorAfterLogout(KEventException $event)
+    {
+        if ($event->getException()->getCode() === KHttpResponse::NOT_FOUND && JFactory::getApplication()->isSite())
+        {
+            if (version_compare(JVERSION, '3.0', '<')) {
+                $hash = JApplication::getHash('plgSystemLogout'); // Watch out. Starts with lowercase p for 2.5
+            } else {
+                $hash = JApplicationHelper::getHash('PlgSystemLogout');
+            }
+
+            $app = JFactory::getApplication();
+            if ($app->input->cookie->getString($hash, null)) // just logged out
+            {
+                $app->enqueueMessage(JText::_('PLG_SYSTEM_LOGOUT_REDIRECT'));
+                $app->redirect('index.php');
+
+                return true;
+            }
+        }
+    }
+
+    /**
+     * Log user in from the JWT token in the request if possible
+     *
+     * onAfterInitialise is used here to make sure that Joomla doesn't display error messages for menu items
+     * with registered and above access levels.
+     */
+    public function onAfterInitialise()
+    {
+        if (class_exists('Koowa'))
+        {
+            if(JFactory::getUser()->guest)
+            {
+                $authenticator = KObjectManager::getInstance()->getObject('com:koowa.dispatcher.authenticator.jwt');
+
+                if ($authenticator->getAuthToken())
+                {
+                    $dispatcher = KObjectManager::getInstance()->getObject('com:koowa.dispatcher.http');
+                    $authenticator->authenticateRequest($dispatcher->getContext());
+                }
+            }
+        }
+    }
+
+    /*
+     * Joomla Compatibility
+     *
+     * For Joomla 3.x : Re-run the routing and add returned keys to the $_GET request. This is done because Joomla 3
+     * sets the results of the router in $_REQUEST and not in $_GET
+     */
+    public function onAfterRoute()
+    {
+        if (class_exists('Koowa'))
+        {
+            $request = KObjectManager::getInstance()->getObject('request');
+
+            $app = JFactory::getApplication();
+            if ($app->isSite())
+            {
+                $uri     = clone JURI::getInstance();
+
+                $router = JFactory::getApplication()->getRouter();
+                $result = $router->parse($uri);
+
+                foreach ($result as $key => $value)
+                {
+                    if (!$request->query->has($key)) {
+                        $request->query->set($key, $value);
+                    }
+                }
+            }
+
+            if ($request->query->has('limitstart')) {
+                $request->query->offset = $request->query->limitstart;
+            }
+        }
+    }
+
+    /*
+     * Joomla Compatibility
+     *
+     * For Joomla 2.5 and 3.x : Handle session messages if they have not been handled by Koowa for example after a
+     * redirect to a none Koowa component.
+     */
+    public function onAfterDispatch()
+    {
+        if (class_exists('Koowa'))
+        {
+            $messages = KObjectManager::getInstance()->getObject('user')->getSession()->getContainer('message')->all();
+
+            foreach($messages as $type => $group)
+            {
+                if ($type === 'success') {
+                    $type = 'message';
+                }
+
+                foreach($group as $message) {
+                    JFactory::getApplication()->enqueueMessage($message, $type);
+                }
+            }
+        }
+    }
+
+    /**
+     * Exception event handler
+     *
+     * @param KEventException $event
+     */
+    public function onException(KEventException $event)
+    {
+        KObjectManager::getInstance()->getObject('com:koowa.dispatcher.http')->fail($event);
+        return true;
+    }
 }

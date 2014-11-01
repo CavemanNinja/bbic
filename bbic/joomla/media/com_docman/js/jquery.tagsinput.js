@@ -1,6 +1,6 @@
 /*
 
-	jQuery Tags Input Plugin 1.3.3
+	kQuery Tags Input Plugin 1.3.3
 	
 	Copyright (C) 2011 - 2013 XOXCO, Inc
 	
@@ -74,7 +74,7 @@
   };
 
 	$.fn.addTag = function(value,options) {
-			options = jQuery.extend({focus:false,callback:true, mark_input: true, animate: true},options);
+			options = kQuery.extend({focus:false,callback:true, mark_input: true, animate: true},options);
 			this.each(function() { 
 				var id = $(this).attr('id');
 
@@ -83,7 +83,7 @@
 					tagslist = new Array();
 				}
 
-				value = jQuery.trim(value);
+				value = kQuery.trim(value);
 		
 				if (options.unique) {
 					var skipTag = $(tagslist).tagExist(value);
@@ -95,14 +95,14 @@
 					var skipTag = false; 
 				}
 				
-				if (value !='' && skipTag != true) { 
+				if (value !='' && skipTag != true) {
                     var element = $('<a>')
                     	.css('opacity', options.animate ? 0.1 : 1)
                     	.addClass('tag btn btn-mini')
                     	.attr('data-tag', value)
-                    	.append(
-	                        $('<span>').text(value).append( $('<span class="remove-tag">').html('&times;'))
-                    	).click(function () {
+                    	.append(value)
+                        .append($('<span class="remove-tag">&times;</span>'))
+                    	.click(function () {
                             return $('#' + id).removeTag(escape(value));
                         });
  
@@ -180,7 +180,7 @@
 		};
 	
 	$.fn.tagExist = function(val) {
-		return (jQuery.inArray(val, $(this)) >= 0); //true when tag exists, false when not
+		return (kQuery.inArray(val, $(this)) >= 0); //true when tag exists, false when not
 	};
 	
 	// clear all existing tags and import new ones from a string
@@ -191,7 +191,7 @@
 	}
 		
 	$.fn.tagsInput = function(options) { 
-    var settings = jQuery.extend({
+    var settings = kQuery.extend({
       interactive:true,
       defaultText:'add a tag',
       minChars:0,
@@ -215,7 +215,7 @@
 				
 			var id = $(this).attr('id')
 			
-			var data = jQuery.extend({
+			var data = kQuery.extend({
 				pid:id,
 				real_input: '#'+id,
 				holder: '#'+id+'_tagsinput',
@@ -236,8 +236,7 @@
 			
 			markup = markup + '<div id="'+id+'_tagsinput" class="tagsinput">';
 			if (settings.interactive) {
-				markup = markup + '<input id="'+id+'_tag" value="" data-default="'+settings.defaultText+'" />';
-				markup = markup + '<div style="clear: both"></div>';
+				markup = markup + '<input type="text" class="input-block-level" id="'+id+'_tag" value="" data-default="'+settings.defaultText+'" />';
 			}
 			
 			markup = markup + '<div id="'+id+'_addTag"></div><div class="tags_clear"></div></div>';
@@ -246,15 +245,15 @@
 
 			$(data.holder).css('width',settings.width);
 			$(data.holder).css('height',settings.height);
-	
+
 			if ($(data.real_input).val()!='') { 
 				$.fn.tagsInput.importTags($(data.real_input),$(data.real_input).val());
 			}		
 			if (settings.interactive) { 
 				$(data.fake_input).val($(data.fake_input).attr('data-default'));
-				$(data.fake_input).css('color',settings.placeholderColor);
-		        $(data.fake_input).resetAutosize(settings);
-		
+				// $(data.fake_input).css('color',settings.placeholderColor);
+		        // $(data.fake_input).resetAutosize(settings);
+
 				/*$(data.holder).bind('click',data,function(event) {
 					$(event.data.fake_input).focus();
 				});*/
@@ -272,14 +271,14 @@
 						autocomplete_options[attrname] = settings.autocomplete[attrname]; 
 					}
 				
-					if (jQuery.Autocompleter !== undefined) {
+					if (kQuery.Autocompleter !== undefined) {
 						$(data.fake_input).autocomplete(settings.autocomplete_url, settings.autocomplete);
 						$(data.fake_input).bind('result',data,function(event,data,formatted) {
 							if (data) {
 								$('#'+id).addTag(data[0] + "",{focus:true,unique:(settings.unique)});
 							}
 					  	});
-					} else if (jQuery.ui.autocomplete !== undefined) {
+					} else if (kQuery.ui.autocomplete !== undefined) {
 						$(data.fake_input).autocomplete(autocomplete_options);
 						$(data.fake_input).bind('autocompleteselect',data,function(event,ui) {
 							$(event.data.real_input).addTag(ui.item.value,{focus:true,unique:(settings.unique)});
@@ -368,4 +367,4 @@
 		}
 	};
 
-})(jQuery);
+})(kQuery);

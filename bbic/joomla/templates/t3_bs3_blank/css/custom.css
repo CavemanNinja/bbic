@@ -95,7 +95,7 @@ body {
 
 }
 /*Quick Downloads*/
-#Mod103 {
+#Mod103, #Mod167, #Mod168, #Mod169, #Mod170 {
   /*background-color: #ffffff;*/
   padding-bottom: 10px !important;
   /*margin: 0px !important;*/
@@ -251,8 +251,26 @@ body {
 }
 
 #Mod103 > div > div > div > div,
+#Mod167 > div > div > div > div, 
+#Mod168 > div > div > div > div,
+#Mod169 > div > div > div > div,
+#Mod170 > div > div > div > div,
 #Mod128 > div > div > div > div {
   padding-bottom: 14px;
+}
+
+#Mod167 > div > div > div > ul, 
+#Mod168 > div > div > div > ul {
+  padding-left: 15px;
+}
+
+#Mod169 > div > div > div > ul,
+#Mod170 > div > div > div > ul {
+  padding-right: 15px;
+}
+
+.downloads-module-icon {
+  text-align: center;
 }
 
 #Mod112 .module-inner .module-ct {
@@ -996,7 +1014,7 @@ div.st_tabs > div > ul {
 
 
 /* XPERTMOD GALLERY FOR TENANTS */
-#Mod149, #Mod158,
+#Mod149, #Mod158, #Mod171,
 #Mod159, #Mod160 {
   margin-top: 70px;
   

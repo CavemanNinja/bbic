@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     EXTman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA. (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA. (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
@@ -10,9 +10,13 @@ defined('_JEXEC') or die;
 
 if (!class_exists('Koowa')) 
 {
-	$link = version_compare(JVERSION, '1.6.0', '>=') ? '&view=plugins&filter_folder=system' : '&filter_type=system';
-	return JFactory::getApplication()
-		->redirect(JURI::base(), sprintf(JText::_('PLUGIN_ERROR'), JRoute::_('index.php?option=com_plugins'.$link)), 'error');
+	$error = sprintf(JText::_('PLUGIN_ERROR'), JRoute::_('index.php?option=com_plugins&view=plugins&filter_folder=system'));
+    return JFactory::getApplication()->redirect(JURI::base(), $error, 'error');
 }
 
-echo KService::get('com://admin/extman.dispatcher')->dispatch();
+//Catch exceptions before Joomla does (JApplication::dispatch())
+try {
+    KObjectManager::getInstance()->getObject('com://admin/extman.dispatcher.http')->dispatch();
+} catch(Exception $exception) {
+    KObjectManager::getInstance()->getObject('exception.handler')->handleException($exception);
+}

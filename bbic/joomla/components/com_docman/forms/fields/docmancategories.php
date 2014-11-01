@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
@@ -19,15 +19,18 @@ class JFormFieldDocmancategories extends JFormField
         $value = $this->value;
         $el_name = $this->name;
 
-        $key_field = (string) $this->element['key_field'];
-        $multiple = (string) $this->element['multiple'] == 'true';
-        $deselect =  (string) $this->element['deselect'] === 'true';
-        $id =  isset($this->element['id']) ? (string) $this->element['element_id'] : 'docman_categories_select2';
+        $key_field  = (string) $this->element['key_field'];
+        $multiple   = (string) $this->element['multiple'] == 'true';
+        $deselect   = (string) $this->element['deselect'] === 'true';
+        $id         = isset($this->element['id']) ? (string) $this->element['element_id'] : 'docman_categories_select2';
+        $pages      = isset($this->element['pages']) ? (string) $this->element['pages'] : null;
 
-        KService::get('translator')->loadLanguageFiles('com_docman');
+        KObjectManager::getInstance()->getObject('translator')->load('com://admin/docman');
 
-        $view = KService::get('com://admin/docman.view.default');
-        $template = $view->getTemplate();
+        $view = KObjectManager::getInstance()->getObject('com://admin/docman.view.default.html');
+        $template = $view->getTemplate()
+            ->addFilter('style')
+            ->addFilter('script');
 
         $attribs = array();
         if ($multiple) {
@@ -37,39 +40,41 @@ class JFormFieldDocmancategories extends JFormField
 
         $value_field = $key_field ? $key_field : 'slug';
         $string = "
-        <?= @helper('behavior.bootstrap'); ?>
-        <?= @helper('com://admin/docman.template.helper.listbox.categories', array(
-            'autocomplete' => false,
+        <?= helper('bootstrap.load'); ?>
+        <?= helper('com://admin/docman.listbox.categories', array(
             'name' => \$el_name,
             'value' => \$value_field,
             'deselect' => \$deselect,
             'selected' => \$value,
+            'filter'   => array(
+                'page' => \$pages
+            ),
             'attribs'  => array_merge(\$attribs, array(
                 'id' => \$id,
-                'data-placeholder' => @text('All Categories')))
+                'data-placeholder' => translate('All Categories')))
         )); ?>";
 
-        //@TODO submit fix on Joomla CMS github for allowing Chosen opt-out on form elements in menu item custom forms
         if(version_compare(JVERSION, '3.0', 'ge'))
         {
             $string .= "
             <script>
-                jQuery(function($){
+                kQuery(function($){
+                    $('#s2id_<?= \$id ?>').show();
                     $('#<?= \$id ?>_chzn').remove();
                 });
             </script>
             ";
         }
 
-        $template->loadString($string, array(
-            'el_name'  => $el_name,
-            'value'    => $value,
-            'value_field'    => $value_field,
-            'deselect' => $deselect,
-            'attribs'  => $attribs,
-            'id' => $id
-        ));
-
-        return $template->render();
+        return $template->loadString($string, 'php')
+            ->render(array(
+                'el_name'     => $el_name,
+                'value'       => $value,
+                'value_field' => $value_field,
+                'deselect'    => $deselect,
+                'attribs'     => $attribs,
+                'id'          => $id,
+                'pages'       => $pages
+            ));
     }
 }

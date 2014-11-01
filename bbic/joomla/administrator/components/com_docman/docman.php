@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
@@ -20,10 +20,9 @@ if (!class_exists('Koowa'))
     return JFactory::getApplication()->redirect(JURI::base(), $error, 'error');
 }
 
-/*if (!KService::get('com://admin/docman.dependency.checker')->checkRuntimeDependencies('docman')) {
-    return;
-}*/
-
-KService::get('koowa:loader')->loadIdentifier('com://admin/docman.init');
-
-echo KService::get('com://admin/docman.dispatcher')->dispatch();
+//Catch exceptions before Joomla does (JApplication::dispatch())
+try {
+    KObjectManager::getInstance()->getObject('com://admin/docman.dispatcher.http')->dispatch();
+} catch(Exception $exception) {
+    KObjectManager::getInstance()->getObject('exception.handler')->handleException($exception);
+}

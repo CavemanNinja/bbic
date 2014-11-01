@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
@@ -28,7 +28,7 @@ class JFormFieldDocmanfolders extends JFormField
             $attribs['size'] = $this->element['size'] ? $this->element['size'] : 5;
         }
 
-        return KService::get('com://admin/docman.template.helper.listbox')->folders(array(
+        return KObjectManager::getInstance()->getObject('com://admin/docman.template.helper.listbox')->folders(array(
             'name' => $el_name,
             'selected' => $value
         ));

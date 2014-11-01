@@ -1,0 +1,16 @@
+// Core variables and mixins without output available outside .koowa scope
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Overwrite variables
+$koowaPath: '../../koowa/com_koowa';
+
+// Mixins
+@import "koowa/generic/mixins";
+
+// Koowa behaviors
+@import "koowa/generic/general";
+
+.koowa {
+  @import "koowa/admin/table";
+}

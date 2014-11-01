@@ -1,86 +1,106 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
 
 class ComDocmanViewListJson extends ComDocmanViewJson
 {
-    protected function _initialize(KConfig $config)
+    public function isCollection()
     {
-        $config->append(array(
-            'model' => 'com://site/docman.model.categories'
-        ));
-
-        parent::_initialize($config);
+        return true;
     }
 
     /**
      * Returns the JSON output
      *
+     * Overridden to return both child categories and documents as well as category information
+     * for the category in menu item
+     *
      * @return array
      */
-    protected function _getData()
+    protected function _renderData()
     {
-        $category = $this->getModel()->getItem();
-        $state    = $this->getModel()->getState();
+        $state  = $this->getModel()->getState();
+        $params = $this->getParameters();
+        $user   = $this->getObject('user');
 
-        if ($category->isNew())
+        if ($this->getModel()->getState()->isUnique()) {
+            $category = $this->getModel()->fetch();
+        }
+        else
         {
-            $data  = array(
-                'links' => array(
-                    'self' => array('href' => JRoute::_('index.php?format=json&Itemid='.$this->getActiveMenu()->id))
-                )
-            );
-        }
-        else {
-            $data = $this->_getCategory($category);
+            $category = $this->getModel()->create();
+            $category->title = $params->page_heading ? $params->page_heading : $this->getActiveMenu()->title;
         }
 
-        $categories = $this->getService('com://site/docman.model.categories')
-            ->level(1)
-            ->parent_id($category->id)
-            ->enabled($state->enabled)
-            ->access($state->access)
-            ->page($state->page)
-            ->sort($this->getParameters()->sort_categories)
-            ->getList();
+        $data = parent::_renderData();
+        $data['entities'] = $this->_getCollection($category);
 
-        $data['categories'] = array(
-            'offset'   => 0,
-            'limit'    => 0,
-            'total'	   => count($categories),
-            'items'    => $this->_filterRowset($categories, array($this, '_getCategory'))
-        );
+        if ($params->show_subcategories)
+        {
+            $subcategories = $this->getObject('com://site/docman.model.categories')
+                ->level(1)
+                ->parent_id($category->id)
+                ->enabled($state->enabled)
+                ->access($state->access)
+                ->current_user($user->getId())
+                ->page($state->page)
+                ->sort($params->sort_categories)
+                ->limit(0)
+                ->fetch();
 
-        /*
-         * Have to do this here because the default limit setting code is wrapped in _actionBrowse
-         * and in a check for isDispatched and neither is true for this code
-         */
-        if (!$state->limit) {
-            $state->limit = JFactory::getApplication()->getCfg('list_limit');
+            $data['linked']['categories'] = $this->_getCollection($subcategories);
         }
+        else $data['linked']['categories'] = array();
 
-        $model = $this->getService('com://site/docman.controller.document')
-            ->enabled($state->enabled)
-            ->status($state->status)
-            ->access($state->access)
-            ->page($state->page)
-            ->category($category->id)
-            ->limit($state->limit)
-            ->offset($state->offset)
-            ->sort($state->sort)
-            ->direction($state->direction)
-            ->getModel();
+        if ($category->id)
+        {
+            $model = $this->getObject('com://site/docman.controller.document')
+                ->enabled($state->enabled)
+                ->status($state->status)
+                ->access($state->access)
+                ->current_user($user->getId())
+                ->page($state->page)
+                ->category($category->id)
+                ->limit($state->limit)
+                ->offset($state->offset)
+                ->sort($state->sort)
+                ->direction($state->direction)
+                ->getModel();
 
-        $data['documents'] = array(
-            'offset'   => (int) $model->offset,
-            'limit'    => (int) $model->limit,
-            'total'	   => $model->getTotal(),
-            'items'    => $this->_filterRowset($model->getList(), array($this, '_getDocument'))
-        );
+            $total     = $model->count();
+            $documents = $model->fetch();
+
+            $limit  = (int) $model->getState()->limit;
+            $offset = (int) $model->getState()->offset;
+
+            if ($limit && $total-($limit + $offset) > 0)
+            {
+                $data['links']['next'] = array(
+                    'href' => $this->_getPageUrl(array('offset' => $limit+$offset)),
+                    'type' => $this->mimetype
+                );
+            }
+
+            if ($limit && $offset && $offset >= $limit)
+            {
+                $data['links']['previous'] = array(
+                    'href' => $this->_getPageUrl(array('offset' => max($offset-$limit, 0))),
+                    'type' => $this->mimetype
+                );
+            }
+
+            $data['meta']['total'] = $total;
+            $data['linked']['documents'] = $this->_getCollection($documents);
+        }
+        else
+        {
+            $data['meta']['total'] = 0;
+            $data['linked']['documents'] = array();
+        }
 
         return $data;
     }

@@ -1,23 +1,32 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
 
 class ComDocmanViewCategoryHtml extends ComDocmanViewHtml
 {
-    public function display()
+    protected function _fetchData(KViewContext $context)
     {
-        $this->assign('parent', $this->getModel()->getItem()->getParent());
+        parent::_fetchData($context);
 
-        $default_access = (int) (JFactory::getConfig()->get('access') || 1);
-        $default_access = $this->getService('com://admin/docman.model.viewlevels')
-            ->id($default_access)->getItem();
+        $context->data->parent          = $this->getModel()->fetch()->getParent();
+        $context->data->default_access = $this->getObject('com://admin/docman.model.viewlevels')
+            ->id((int) (JFactory::getConfig()->get('access') || 1))
+            ->fetch();
 
-        $this->assign('default_access', $default_access);
+        $category = $context->data->category;
+        $ignored_parents = array();
 
-        return parent::display();
+        if ($category->id) {
+            $ignored_parents[] = $category->id;
+            foreach ($category->getDescendants() as $descendant) {
+                $ignored_parents[] = $descendant->id;
+            }
+        }
+
+        $context->data->ignored_parents = $ignored_parents;
     }
 }

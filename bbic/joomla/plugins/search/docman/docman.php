@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA. (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA. (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
@@ -41,21 +41,22 @@ class plgSearchDocman extends JPlugin
     }
 
     /**
-     * Weblink Search method
+     * Search method
      *
      * The sql must return the following fields that are used in a common display
      * routine: href, title, section, created, text, browsernav
-     * @param string Target search string
-     * @param string mathcing option, exact|any|all
-     * @param string ordering option, newest|oldest|popular|alpha|category
-     * @param mixed An array if the search it to be restricted to areas, null if search all
+     *
+     * @param string $keyword Target search string
+     * @param string $type  matching option, exact|any|all
+     * @param string $order ordering option, newest|oldest|popular|alpha|category
+     * @param null   $areas An array if the search it to be restricted to areas, null if search all
+     *
+     * @return array results
      */
     public function onContentSearch($keyword, $type='', $order='', $areas=null)
     {
-        KService::get('koowa:loader')->loadIdentifier('com://admin/docman.init');
-        KService::get('com://site/docman.aliases')->setAliases();
-
-        if (is_array($areas)) {
+        if (is_array($areas))
+        {
             if (!array_intersect($areas, array_keys($this->onContentSearchAreas()))) {
                 return array();
             }
@@ -66,54 +67,61 @@ class plgSearchDocman extends JPlugin
             return array();
         }
 
-        $limit = $this->params->def('search_limit', 50);
-
-        $order_map = array(
-            'default' => array('tbl.title', 'ASC'),
-            'oldest' => array('tbl.created_on', 'ASC'),
-            'newest' => array('tbl.created_on', 'DESC'),
-            'category' => array('category_title', 'ASC')
-        );
-
-        if (!array_key_exists($order, $order_map)) {
-            $order = 'default';
-        }
-        list($sort, $direction) = $order_map[$order];
-
-        $model = KService::get('com://site/docman.model.documents');
-        $model->enabled(1)
-            ->status('published')
-            ->access(JFactory::getUser()->getAuthorisedViewLevels())
-            ->page('all')
-            ->search($keyword)
-            ->search_by($type)
-            ->limit($limit)
-            ->sort($sort)
-            ->direction($direction);
-
-        $list = $model->getList();
-
-        if (!count($list)) {
-            return array();
-        }
-
         $return = array();
-        foreach ($list as $item) {
-            if (!$item->itemid || !searchHelper::checkNoHTML($item, $keyword, array('title', 'description'))) {
-                continue;
+        $pages  = KObjectManager::getInstance()->getObject('com://admin/docman.model.pages')->fetch();
+        if (count($pages))
+        {
+            $limit = $this->params->def('search_limit', 50);
+
+            $order_map = array(
+                'default'  => array('tbl.title', 'ASC'),
+                'oldest'   => array('tbl.created_on', 'ASC'),
+                'newest'   => array('tbl.created_on', 'DESC'),
+                'category' => array('category_title', 'ASC'),
+                'popular'  => array('tbl.hits', 'DESC')
+            );
+
+            if (!array_key_exists($order, $order_map)) {
+                $order = 'default';
+            }
+            list($sort, $direction) = $order_map[$order];
+
+            $model = KObjectManager::getInstance()->getObject('com://admin/docman.model.documents');
+            $model->enabled(1)
+                ->status('published')
+                ->access(KObjectManager::getInstance()->getObject('user')->getRoles())
+                ->page('all')
+                ->search($keyword)
+                ->search_by($type)
+                ->limit($limit)
+                ->sort($sort)
+                ->direction($direction);
+
+            $list = $model->fetch();
+
+            if (!count($list)) {
+                return array();
             }
 
-            $row = new stdClass();
-            $row->created = $item->created_on;
+            $return = array();
+            foreach ($list as $item)
+            {
+                if (!$item->itemid || !searchHelper::checkNoHTML($item, $keyword, array('title', 'description'))) {
+                    continue;
+                }
 
-            $row->href = JRoute::_(sprintf('index.php?option=com_docman&view=document&alias=%s&category_slug=%s&Itemid=%d',
-                $item->alias, $item->category->slug, $item->itemid));
-            $row->browsernav = '';
-            $row->title = $item->title;
-            $row->section = '';
-            $row->text = $item->description;
+                $entity = new stdClass();
+                $entity->created = $item->created_on;
 
-            $return[] = $row;
+                $entity->href = JRoute::_(sprintf('index.php?option=com_docman&view=document&alias=%s&category_slug=%s&Itemid=%d',
+                    $item->alias, $item->category->slug, $item->itemid));
+                $entity->browsernav = '';
+                $entity->title = $item->title;
+                $entity->section = '';
+                $entity->text = $item->description;
+
+                $return[] = $entity;
+            }
         }
 
         return $return;

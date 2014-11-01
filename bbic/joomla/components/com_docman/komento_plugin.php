@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
@@ -29,23 +29,9 @@ class KomentoComDocman extends KomentoExtension
         'title'         => 'title',
         'created_by'    => 'created_by',
         'catid'         => 'docman_category_id',
-        'permalink'     => 'link'
+        'permalink'     => 'link',
+        'hits'          => 'hits'
     );
-
-    public function __construct($component)
-    {
-        if (class_exists('Koowa')) {
-            KService::get('koowa:loader')->loadIdentifier('com://admin/docman.init');
-            KService::get('com://site/docman.aliases')->setAliases();
-        }
-
-        parent::__construct( $component );
-    }
-
-    public function getContentHits()
-    {
-        return 0;
-    }
 
     public function getComponentName()
     {
@@ -72,20 +58,30 @@ class KomentoComDocman extends KomentoExtension
 
         if (!isset($instances[$id]))
         {
-            $this->_item = KService::get('com://site/docman.model.documents')
-                ->id($id)
-                ->page(JFactory::getApplication()->input->get('Itemid', 0, 'int'))
-                ->getItem();
+            $page = 'all';
 
-            $this->_item->hits = 0;
+            if (JFactory::getApplication()->isSite())
+            {
+                $active = JFactory::getApplication()->getMenu()->getActive();
+
+                if ($active && $active->component === 'com_docman') {
+                    $page = $active->id;
+                }
+            }
+
+            $this->_item = KObjectManager::getInstance()->getObject('com://admin/docman.model.documents')
+                ->id($id)
+                ->page($page)
+                ->fetch();
+
             $this->_item->link = $this->prepareLink(sprintf('index.php?option=com_docman&view=document&alias=%s&category_slug=%s&Itemid=%d',
-                $this->_item->alias, $this->_item->category_slug, JFactory::getApplication()->input->get('Itemid', 0, 'int')));
+                $this->_item->alias, $this->_item->category_slug, $this->_item->itemid));
 
             if (!$this->_item || $this->_item->isNew()) {
                 return $this->onLoadArticleError($id);
             }
 
-            $this->_item = (object) $this->_item->getData();
+            $this->_item = (object) $this->_item->getProperties();
 
             $instances[$id] = $this->_item;
         }
@@ -101,12 +97,17 @@ class KomentoComDocman extends KomentoExtension
             return array();
         }
 
-        $documents = KService::get('com://site/docman.model.documents')
+        $documents = KObjectManager::getInstance()->getObject('com://admin/docman.model.documents')
             ->page('all')
             ->categories($categories)
-            ->limit(0)->sort('id')->getList();
+            ->limit(0)->sort('id')->fetch();
 
-        return $documents->getColumn('id');
+        $ids = array();
+        foreach ($documents as $document) {
+            $ids[] = $document->id;
+        }
+
+        return $ids;
     }
 
     public function getCategories()
@@ -115,23 +116,23 @@ class KomentoComDocman extends KomentoExtension
             return array();
         }
 
-        $categories = KService::get('com://site/docman.model.categories')
+        $categories = KObjectManager::getInstance()->getObject('com://admin/docman.model.categories')
             ->page('all')
             ->limit(0)
             ->sort('title')
-            ->getList();
+            ->fetch();
 
         $return = array();
         foreach ($categories as $category)
         {
-            $row = new stdClass();
+            $entity = new stdClass();
 
             $repeat = ( $category->level - 1 >= 0 ) ? $category->level - 1 : 0;
 
-            $row->treename = str_repeat( '.&#160;&#160;&#160;', $repeat ) . ( $category->level - 1 > 0 ? '|_&#160;' : '' ) . $category->title;
-            $row->id = $category->id;
+            $entity->treename = str_repeat( '.&#160;&#160;&#160;', $repeat ) . ( $category->level - 1 > 0 ? '|_&#160;' : '' ) . $category->title;
+            $entity->id = $category->id;
 
-            $return[] = $row;
+            $return[] = $entity;
         }
 
         return $return;

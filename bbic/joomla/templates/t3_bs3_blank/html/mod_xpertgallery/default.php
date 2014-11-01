@@ -93,8 +93,9 @@ defined('_JEXEC') or die('Restricted accessd');
                     $extrafields_attribs_json = $i->attribs;
                     $extrafields_attribs = json_decode($extrafields_attribs_json, true);
                     $item_lang = $extrafields_attribs["companyprofile_language"];
+                    
                     if (($extrafields_attribs["companyprofile_approval"] == "1") &&
-                        ( $item_lang == 0 || ($page_lang == "en-GB" && $item_lang == 1) || ($page_lang == "ar-AA" && $item_lang == 2) ))
+                        ( $item_lang == '0' || ($page_lang == "en-GB" && $item_lang == '1') || ($page_lang == "ar-AA" && $item_lang == '2') ))
                         :
                 ?>
                 <li class="<?php echo XEFXpertGalleryHelper::getCatNameAsClass( $i, $params ) ; ?>">

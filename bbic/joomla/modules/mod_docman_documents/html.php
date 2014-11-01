@@ -1,69 +1,155 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
 
-class ModDocman_DocumentsHtml extends ModDefaultHtml
+class ModDocman_DocumentsHtml extends ModKoowaHtml
 {
-    public function __construct(KConfig $config)
-    {
-        parent::__construct($config);
-
-        $this->getTemplate()->getFilter('alias')->append(array(
-            'icon://' => $config->root_url.'/joomlatools-files/docman-icons/'
-        ), KTemplateFilter::MODE_READ | KTemplateFilter::MODE_WRITE);
-    }
-
-    protected function _initialize(KConfig $config)
+    protected function _initialize(KObjectConfig $config)
     {
         $config->append(array(
-            'root_url' => KRequest::root()
+            'auto_fetch'       => false,
+            'model'            => 'com://site/docman.model.documents',
+            'behaviors'        => array(
+                'com://site/docman.view.behavior.pageable',
+            ),
+            'template_filters' => array(
+                'com://admin/docman.template.filter.asset',
+                'com://site/docman.template.filter.icon'
+            )
         ));
 
         parent::_initialize($config);
     }
 
-    public function display()
+    /**
+     * Sets the model state using module parameters
+     *
+     * @param KModelInterface $model
+     * @return $this
+     */
+    protected function _setModelState(KModelInterface $model)
     {
-        $model = $this->getService('com://site/docman.model.documents');
-        $params = $this->module->params;
+        $params = $this->getParameters();
+        $user   = $this->getObject('user');
 
-        $model
-            ->access(JFactory::getUser()->getAuthorisedViewLevels())
+        // Set all parameters in the state to allow easy extension of the module
+        $state = $params->toArray();
+        $state['category_children'] = $params->include_child_categories;
+        $state['page'] = !empty($params->page) ? $params->page : 'all';
+
+        if (substr($params->sort, 0, 8) === 'reverse_')
+        {
+            $state['sort'] = substr($params->sort, 8);
+            $state['direction'] = 'desc';
+        }
+
+        // Force created_by for user module
+        if ($params->own) {
+            $state['created_by'] = $user->getId();
+        }
+
+        $model->setState($state);
+
+        // Force certain states
+        $model->access($user->getRoles())
             ->enabled(1)
             ->status('published')
-            ->limit($params->limit)
-            ->sort($params->sort)
-            ->direction($params->direction)
-            ->created_by(KConfig::unbox($params->created_by))
-            ->category(KConfig::unbox($params->category))
-            ->category_children($params->include_child_categories)
-            ->page($params->page ? $params->page->toArray() : 'all')
-            ->current_user(JFactory::getUser()->id)
-            ;
+            ->current_user($user->getId());
 
-        $documents = $model->getList();
+        return $this;
+    }
 
-        foreach ($documents as $document) {
-            $document->link = JRoute::_(sprintf('index.php?option=com_docman&view=document&alias=%s&category_slug=%s&Itemid=%d', $document->alias, $document->category_slug, $document->itemid));
+    protected function _fetchData(KViewContext $context)
+    {
+        parent::_fetchData($context);
+
+        $model = $this->getModel();
+
+        $this->_setModelState($model);
+
+        $documents = $model->fetch();
+
+        $this->_prepareDocuments($documents, $this->getParameters());
+
+        $context->data->documents = $documents;
+        $context->parameters->total = $model->count();
+    }
+
+    /**
+     * Return the views output
+     *
+     * @param KViewContext	$context A view context object
+     * @return string  The output of the view
+     */
+    protected function _actionRender(KViewContext $context)
+    {
+        $params    = $this->getParameters();
+        $pages     = $this->getObject('com://site/docman.model.pages')->fetch();
+
+        // Only render if there is a menu item to DOCman AND we have documents or displaying a user's own documents
+        if (count($pages))
+        {
+            if (count($context->data->documents) || ($params->own && $this->getObject('user')->getId()))
+            {
+                if ($params->layout) {
+                    $this->setLayout($params->layout);
+                }
+
+                return parent::_actionRender($context);
+            }
         }
 
-        $this->assign('documents', $documents);
-        $this->assign('total', $model->getTotal());
-        $this->assign('params', $params);
+        return '';
+    }
 
-        if (strpos($params->layout, ':')) {
-            $layout = explode(':', $params->layout);
-            $params->layout = array_pop($layout);
+    /**
+     * Set properties such as download and category links
+     * @param $documents
+     * @param $params
+     */
+    protected function _prepareDocuments($documents, $params)
+    {
+        $pages  = $this->getObject('com://site/docman.model.pages')->fetch();
+        $helper = $this->getTemplate()->createHelper('com://admin/docman.template.helper.route');
+
+        foreach ($documents as $document)
+        {
+            $document->document_link = $helper->document(array('entity'=> $document, 'Itemid' => $document->itemid, 'layout' => 'default'));
+            $document->download_link = $helper->document(array('entity'=> $document, 'Itemid' => $document->itemid, 'view'   => 'download'));
+
+            $document->title_link = $params->link_to_download ? $document->download_link : $document->document_link;
+
+            if ($params->show_category)
+            {
+                $current = $pages->find($document->itemid);
+
+                if (!empty($current)
+                    && (isset($current->query['view']) && in_array($current->query['view'], array('list', 'userlist'))))
+                {
+                    $document->category_link = $helper->category(array(
+                        'entity' => array('slug' => $document->category_slug),
+                        'Itemid' => $document->itemid
+                    ));
+                }
+            }
         }
+    }
 
-        if ($params->layout) {
-            $this->setLayout($params->layout);
+    /**
+     * Sets the parameters in the pageable behavior too
+     *
+     * {@inheritdoc}
+     */
+    public function set($property, $value)
+    {
+        parent::set($property, $value);
+
+        if ($property == 'module' && isset($this->module->params)) {
+            $this->setParameters($this->module->params);
         }
-
-        return parent::display();
     }
 }

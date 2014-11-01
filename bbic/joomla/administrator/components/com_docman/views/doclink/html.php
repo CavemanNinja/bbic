@@ -1,41 +1,46 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
 
 class ComDocmanViewDoclinkHtml extends ComDocmanViewHtml
 {
-    protected function _initialize(KConfig $config)
+    protected function _initialize(KObjectConfig $config)
     {
         $config->append(array(
-            'layout' => 'default',
-            'auto_assign' => false
+            'layout'     => 'default',
+            'auto_fetch' => false
         ));
 
         parent::_initialize($config);
     }
 
-    public function display()
+    protected function _fetchData(KViewContext $context)
     {
-        $categories = $this->getService('com://admin/docman.controller.category')->limit(0)->browse();
-        $this->assign('categories', $categories);
+        // Load administrator language file for messages
+        $this->getObject('translator')->load('com://admin/docman');
 
-        $pages = $this->getService('com://site/docman.model.pages')
-            ->view(array('list', 'document', 'filteredlist', 'submit'))->getList();
+        //Pages
+        $pages = $this->getObject('com://admin/docman.model.pages')
+            ->view(array('list', 'document', 'filteredlist', 'submit'))
+            ->language('all')
+            ->fetch();
 
-        foreach ($pages as $page) {
+        foreach ($pages as $page)
+        {
             if ($page->query['view'] === 'list') {
-                $page->categories = $this->getService('com://admin/docman.model.categories')->page($page->id)->getList();
+                $page->categories = $this->getObject('com://admin/docman.model.categories')->page($page->id)->fetch();
             } else {
                 $page->categories = array();
             }
         }
 
-        $this->assign('pages', $pages);
+        $context->data->pages = $pages;
+        $context->data->admin = JFactory::getApplication()->isAdmin();
 
-        return parent::display();
+        parent::_fetchData($context);
     }
 }

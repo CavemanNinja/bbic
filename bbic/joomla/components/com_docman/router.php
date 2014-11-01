@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    DOCman
- * @copyright   Copyright (C) 2011 - 2013 Timble CVBA (http://www.timble.net)
+ * @copyright   Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://www.joomlatools.com
  */
@@ -55,7 +55,7 @@ class ComDocmanRouter
                 LEFT JOIN `#__docman_categories` AS c ON c.docman_category_id = d.docman_category_id
                 WHERE d.slug = %s
                 LIMIT 0, 1",
-            $db->quote($document_slug)));
+                $db->quote($document_slug)));
         $path = $db->loadResult();
 
         return $path;
@@ -137,15 +137,17 @@ class ComDocmanRouter
         $query_layout = isset($query['layout']) ? $query['layout'] : null;
 
         // com_files stuff
-        if (isset($query['routed']) || $query_view === 'files') {
+        if (isset($query['routed']) || in_array($query_view, array('files', 'users'))) {
             return $segments;
         }
 
-        if ($menu_view === 'document') {
+        if ($menu_view === 'document')
+        {
             unset($query['slug']);
             unset($query['category_slug']);
 
-            if ($query_layout === 'form' && isset($query['alias'])) {
+            if ($query_layout === 'form' && isset($query['alias']))
+            {
                 $pieces = explode('-', $query['alias'], 2);
                 $query['slug'] = array_pop($pieces);
             }
@@ -157,7 +159,7 @@ class ComDocmanRouter
 
         $slug = '';
 
-        if ($query_view === 'list')
+        if ($query_view === 'list' || $query_view === 'userlist')
         {
             // We will calculate the path below so don't need slug anymore
             if (!empty($query['slug'])) {
@@ -169,9 +171,8 @@ class ComDocmanRouter
         elseif ($query_view === 'document' || $query_view === 'download')
         {
             // If slug is set this is an old style link without the alias. Need to convert it.
-            if (isset($query['slug']) && $query_layout !== 'form') {
+            if (!empty($query['slug'])) {
                 $query['alias'] = $this->getDocumentAlias($query['slug']);
-                unset($query['slug']);
             }
 
             // Find the category path and use it to build the url
@@ -180,9 +181,11 @@ class ComDocmanRouter
                 $slug = $query['category_slug'];
                 unset($query['category_slug']);
             }
-            elseif (isset($query['slug'])) {
+            elseif (isset($query['slug']) && ($menu_view === 'list' || $menu_view === 'userlist')) {
                 $slug = $this->getCategorySlug($query['slug']);
             }
+
+            if (!empty($query['slug'])) unset($query['slug']);
         }
 
         if ($slug && $menu_view !== 'document') {
@@ -191,11 +194,12 @@ class ComDocmanRouter
         }
 
         // If the menu item also has a category path, we will make our path relative to it
-        if (!empty($path)) {
+        if (!empty($path))
+        {
             $menu_path = null;
 
             // Calculate the path for the category of the menu item
-            if ($menu_view === 'list') {
+            if ($menu_view === 'list' || $menu_view === 'userlist') {
                 $menu_path = $this->getCategoryPath(isset($menu_query['slug']) ? $menu_query['slug'] : '');
             }
 
@@ -207,7 +211,6 @@ class ComDocmanRouter
             elseif (strpos($path, $menu_path) === 0)
             {
                 $relative = substr($path, strlen($menu_path)+1, strlen($path));
-                $relative = str_replace($menu_path.'/', '', $path);
 
                 $segments[] = $relative;
             }
@@ -303,7 +306,8 @@ class ComDocmanRouter
     public function parse($segments)
     {
         // Circumvent Joomla's auto encoding
-        foreach ($segments as &$segment) {
+        foreach ($segments as &$segment)
+        {
             $segment = urldecode($segment);
             $pos = strpos($segment, ':');
             if ($pos !== false) {
@@ -312,7 +316,7 @@ class ComDocmanRouter
         }
 
         $vars      = array();
-        $item      = JFactory::getApplication()->getMenu()->getActive();
+        $menu      = JFactory::getApplication()->getMenu()->getActive();
         $view      = JFactory::getApplication()->input->getCmd('view', null);
         $document  = $this->_findDocument(array_slice(array_reverse($segments), 0, 2));
 
@@ -339,33 +343,37 @@ class ComDocmanRouter
         {
             $vars['view'] = $view;
 
-            if ($document) {
+            if (isset($menu->query['view']) && $menu->query['view'] === 'document') {
+                $vars['slug'] = $menu->query['slug'];
+            }
+            elseif ($document)
+            {
                 $pieces = explode('-', $document, 2);
                 $vars['slug'] = array_pop($pieces);
-            } elseif ($item->query['view'] === 'document') {
-                $vars['slug'] = $item->query['slug'];
+
             } else {
-                $vars['slug'] = null;
+                $vars['slug'] = '';
             }
 
             $vars['path'] = '';
-            if (isset($item->query['path'])) {
-                $vars['path'] .= $item->query['path'].'/';
+            if (isset($menu->query['path'])) {
+                $vars['path'] .= $menu->query['path'].'/';
             }
 
             $vars['path'] .= implode('/', $segments);
         }
         else // list view
         {
-            $vars['view'] = $item->query['view'];
+            $vars['view'] = $menu->query['view'];
             $vars['slug'] = array_pop($segments);
-            if (strpos('/', $vars['slug']) !== false) {
+            if (strpos('/', $vars['slug']) !== false)
+            {
                 $pieces = explode('/', $vars['slug']);
                 $vars['slug'] = array_pop($pieces);
             }
 
-            if (isset($item->query['layout'])) {
-                $vars['layout'] = $item->query['layout'];
+            if (isset($menu->query['layout'])) {
+                $vars['layout'] = $menu->query['layout'];
             }
         }
 
