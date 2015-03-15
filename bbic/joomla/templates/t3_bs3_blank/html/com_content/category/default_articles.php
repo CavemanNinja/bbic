@@ -139,8 +139,6 @@ $authorized = false;
 $access = $this->menu->access;
 $user_groups = JFactory::getUser()->groups;
 
-var_dump($access);
-var_dump($user_groups);
 
 // News
 if ($access == 7 && !in_array(12, $user_groups))
