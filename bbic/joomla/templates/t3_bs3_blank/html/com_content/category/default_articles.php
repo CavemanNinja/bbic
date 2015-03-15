@@ -141,24 +141,39 @@ $user_groups = JFactory::getUser()->groups;
 
 
 // News
-if ($access == 7 && !in_array(12, $user_groups))
+if ($access == 7 && !in_array(12, $user_groups)) {
     $this->params->set('show_no_articles', '0');
+    $this->params->set('show_page_heading', 0);
+}
 // Company Profiles
-if ($access == 8 && !in_array(13, $user_groups))
+if ($access == 8 && !in_array(13, $user_groups)) {
     $this->params->set('show_no_articles', '0');
+    $this->params->set('show_page_heading', 0);
+}
 // Billing
-if ($access == 9 && !in_array(14, $user_groups))
+if ($access == 9 && !in_array(14, $user_groups)) {
     $this->params->set('show_no_articles', '0');
+    $this->params->set('show_page_heading', 0);
+}
 // Service Requests
-if ($access == 11 && !in_array(15, $user_groups))
+if ($access == 11 && !in_array(15, $user_groups)) {
     $this->params->set('show_no_articles', '0');
+    $this->params->set('show_page_heading', 0);
+}
 // Services
-if ($access == 15 && !in_array(19, $user_groups))
+if ($access == 15 && !in_array(19, $user_groups)) {
     $this->params->set('show_no_articles', '0');
+    $this->params->set('show_page_heading', '0');
+}
+
+// $this->params->set('show_page_heading', '0');
+// var_dump($this);
 
 ?>
 
 <?php if ($this->params->get('show_no_articles', 0)) : ?>
+
+    <h1><?php echo $this->params->get('page_title'); ?></h1>
 
     <?php if (empty($this->items)) : ?>
 
