@@ -28,6 +28,7 @@ if ($sidebar1 && $sidebar2) {
 	$this->loadBlock('mainbody/one-sidebar-left', array('sidebar' => $sidebar1));
 } elseif ($sidebar2) {
 	$this->loadBlock('mainbody/one-sidebar-right', array('sidebar' => $sidebar2));
+
 } else {
 	$this->loadBlock('mainbody/no-sidebar');
 }

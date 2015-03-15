@@ -15,6 +15,7 @@ JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css'
 JHtml::addIncludePath(dirname(dirname(__FILE__)));
 JHtml::_('behavior.caption');
 ?>
+
 <div class="blog<?php echo $this->pageclass_sfx;?>" itemscope itemtype="http://schema.org/Blog">
 
 
@@ -33,11 +34,11 @@ JHtml::_('behavior.caption');
   		</h2>
 	</div>
 	<?php endif; ?>
-	
+
 	<?php if ($this->params->get('show_tags', 1) && !empty($this->category->tags->itemTags)) : ?>
 		<?php echo JLayoutHelper::render('joomla.content.tags', $this->category->tags->itemTags); ?>
 	<?php endif; ?>
-	
+
 	<?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
 	<div class="category-desc clearfix">
 		<?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
@@ -64,18 +65,18 @@ JHtml::_('behavior.caption');
 				$attribs = json_decode($item->attribs);
 				$companyprofile_approval = $attribs->companyprofile_approval;
 			 ?>
-			
+
 				<div class="leading leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
 					 itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-				
-				<?php 
+
+				<?php
 				$this->item = &$item;
 					if ($catid != 9 || $companyprofile_approval == "1") {
 						echo $this->loadTemplate('item');
 					}
 				?>
-				
-			
+
+
 		</div>
 		<?php $leadingcount++; ?>
 		<?php endforeach; ?>
@@ -88,9 +89,9 @@ JHtml::_('behavior.caption');
 	?>
 
 	<?php if (!empty($this->intro_items)) : ?>
-	
+
 	<?php $parent_id = $this->intro_items[0]->parent_id; ?>
-	
+
 	<?php if ($parent_id == 17) : ?>
 		<div class="apply-jump-list">
 			<ul>
@@ -101,7 +102,7 @@ JHtml::_('behavior.caption');
 			</ul>
 		</div>
 	<?php endif; ?>
-	
+
 
 
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
@@ -130,21 +131,21 @@ JHtml::_('behavior.caption');
 				</div><!-- end item -->
 				<?php $counter++; ?>
 			</div><!-- end span -->
-			<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>			
+			<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
 		</div><!-- end row -->
 			<?php endif; ?>
 	<?php endforeach; ?>
 	<?php endif; ?>
-	
+
 	<?php if (!empty($this->link_items)) : ?>
 	<div class="items-more">
 	<?php echo $this->loadTemplate('links'); ?>
 	</div>
 	<?php endif; ?>
-	
 
-	
-	<?php 
+
+
+	<?php
   $pagesTotal = isset($this->pagination->pagesTotal) ? $this->pagination->pagesTotal : $this->pagination->get('pages.total');
   if (($this->params->def('show_pagination', 1) == 1  || ($this->params->get('show_pagination') == 2)) && ($pagesTotal > 1)) : ?>
 	<div class="pagination-wrap">

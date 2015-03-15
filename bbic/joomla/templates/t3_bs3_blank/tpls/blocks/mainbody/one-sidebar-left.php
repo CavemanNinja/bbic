@@ -14,14 +14,14 @@ defined('_JEXEC') or die;
 <?php $id = JRequest::getVar('id');  ?>
 <!--  ONE-SIDEBAR-LEFT  -->
 <?php
-	$app = JFactory::getApplication(); 
+	$app = JFactory::getApplication();
 	$menu = $app->getMenu()->getActive()->id;
  ?>
-<?php if ($menu != "114" && 
-			$menu != "113" && 
-			$menu != "199" && 
+<?php if ($menu != "114" &&
+			$menu != "113" &&
+			$menu != "199" &&
 			$menu != "205" &&
-			 ($id == "28" || $id == "9")) : 
+			 ($id == "28" || $id == "9")) :
 ?>
 	<div id="t3-mainbody" class="tenant-no-component container t3-mainbody">
 <?php else: ?>
@@ -45,4 +45,4 @@ defined('_JEXEC') or die;
 		<!-- //SIDEBAR LEFT -->
 
 	</div>
-</div> 
+</div>
