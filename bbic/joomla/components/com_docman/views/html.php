@@ -169,14 +169,13 @@ class ComDocmanViewHtml extends ComKoowaViewHtml
         $document = JFactory::getDocument();
         $menu     = $this->getActiveMenu();
         $params   = $this->getParameters();
-        $title    = null;
 
         // Because the application sets a default page title,
         // we need to get it from the menu item itself
 
-        $title = $params->get('page_heading', $menu->title);
+        $title = $params->get('page_title', $params->get('page_heading', $menu->title));
 
-        $params->def('page_heading', $title);
+        $params->def('page_heading', $params->get('page_heading', $menu->title));
 
         if (empty($title)) {
             $title = $app->getCfg('sitename');

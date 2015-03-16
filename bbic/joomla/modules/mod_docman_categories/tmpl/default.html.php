@@ -13,35 +13,37 @@ defined('KOOWA') or die; ?>
     'wrapper' => false
 )) ?>
 
-<div class="koowa mod_docman mod_docman--categories<?= $params->moduleclass_sfx; ?> <?= JFactory::getLanguage()->isRTL() ? ' koowa--rtl' : '' ?>">
-<?
-foreach ($categories as $category):
-    $level      = $category->level;
-    $next_level = $categories->hasNext() ? $categories->getInnerIterator()->current()->level : false;
+<div class="koowa">
+    <div class="mod_docman mod_docman--categories<?= $params->moduleclass_sfx; ?> <?= JFactory::getLanguage()->isRTL() ? ' koowa--rtl' : '' ?>">
+    <?
+    foreach ($categories as $category):
+        $level      = $category->level;
+        $next_level = $categories->hasNext() ? $categories->getInnerIterator()->current()->level : false;
 
-    if ($level > $previous_level): // Start a new level ?>
-    <ul <?= $params->show_icon ? ' class="mod_docman_icons"' :'' ?>>
-    <? endif; ?>
-        <li class="module_document module_document__level<?= $level ?>">
-        <?= import('mod://site/docman_categories._category.html', array(
-            'category' => $category,
-            'params'   => $params
-        )); ?>
-    <? if ($next_level === false && $level >= $next_level): ?>
-        </li>
-    <? endif; ?>
-
-    <? if ($next_level === false || $level > $next_level): // Last one of the level ?>
-        <? for($i = 0; $i < $level - $next_level; ++$i): ?>
-            </ul>
-            <? if ($next_level !== false): ?>
+        if ($level > $previous_level): // Start a new level ?>
+        <ul <?= $params->show_icon ? ' class="mod_docman_icons"' :'' ?>>
+        <? endif; ?>
+            <li class="module_document module_document__level<?= $level ?>">
+            <?= import('mod://site/docman_categories._category.html', array(
+                'category' => $category,
+                'params'   => $params
+            )); ?>
+        <? if ($next_level === false && $level >= $next_level): ?>
             </li>
-            <? endif;
-        endfor;
-    endif;
+        <? endif; ?>
 
-$previous_level = $level;
-endforeach; ?>
+        <? if ($next_level === false || $level > $next_level): // Last one of the level ?>
+            <? for($i = 0; $i < $level - $next_level; ++$i): ?>
+                </ul>
+                <? if ($next_level !== false): ?>
+                </li>
+                <? endif;
+            endfor;
+        endif;
 
+    $previous_level = $level;
+    endforeach; ?>
+
+    </div>
 </div>
 <? endif; ?>

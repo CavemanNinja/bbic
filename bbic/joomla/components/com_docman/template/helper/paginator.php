@@ -35,6 +35,9 @@ class ComDocmanTemplateHelperPaginator extends ComKoowaTemplateHelperPaginator
                 'direction' => 'asc'),
             $translator->translate('Most popular first')         => array(
                 'sort'      => 'hits',
+                'direction' => 'desc'),
+            $translator->translate('Last modified first')         => array(
+                'sort'      => 'touched_on',
                 'direction' => 'desc')
         ), KObjectConfig::unbox($config->options));
 

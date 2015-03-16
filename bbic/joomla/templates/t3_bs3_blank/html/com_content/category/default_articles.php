@@ -59,7 +59,9 @@ if ($this->items[0]) {
     $parent = $category->getParent();
     $parentid = $parent->id;
     $restrictView = (($catid == 9) || $parentid == 9 || ($catid == 10) || ($catid == 12))  && $isTenant;
-    $noSubmit = $isTenant && ($catid == 9 || $parentid == 9);
+
+
+    //$noSubmit = $isTenant && ($catid == 9 || $parentid == 9);
 }
 
 

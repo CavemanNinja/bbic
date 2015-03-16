@@ -55,14 +55,19 @@ class ComDocmanDatabaseBehaviorPermissible extends KDatabaseBehaviorAbstract
                 if (!$entity->isNew())
                 {
                     $children = $entity->getDescendants();
+                    $excluded_parents = array();
 
                     foreach ($children as $child)
                     {
-                        if ($child->access_raw == -1)
-                        {
-                            $child->access = $entity->access;
-                            $child->save();
+                        if ($child->access_raw != -1
+                            || array_intersect($child->getParentIds(), $excluded_parents)
+                        ) {
+                            $excluded_parents[] = $child->id;
+                            continue;
                         }
+
+                        $child->access = $entity->access;
+                        $child->save();
                     }
                 }
 

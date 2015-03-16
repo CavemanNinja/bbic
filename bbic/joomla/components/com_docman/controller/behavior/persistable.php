@@ -17,4 +17,23 @@ class ComDocmanControllerBehaviorPersistable extends ComKoowaControllerBehaviorP
     {
         parent::_afterBrowse($context);
     }
+
+    /**
+     * Returns a key based on the context to persist state values
+     *
+     * @param 	KControllerContextInterface $context The active controller context
+     * @return  string
+     */
+    protected function _getStateKey(KControllerContextInterface $context)
+    {
+        $key = parent::_getStateKey($context);
+
+        $page = $context->getRequest()->getQuery()->get('page', 'int');
+
+        if (is_scalar($page)) {
+            $key .= '.'.$page;
+        }
+
+        return $key;
+    }
 }

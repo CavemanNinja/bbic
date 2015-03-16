@@ -62,4 +62,38 @@ class ComDocmanViewDocumentHtml extends ComDocmanViewHtml
             parent::_generatePathway($category, $document);
         }
     }
+
+    /**
+     * If the current page is not to a document menu item, use the current document title
+     */
+    protected function _setPageTitle()
+    {
+        if ($this->getName() !== $this->getActiveMenu()->query['view'])
+        {
+            $document = $this->getModel()->fetch();
+
+            $this->getParameters()->set('page_heading', $document->title);
+            $this->getParameters()->set('page_title',   $document->title);
+        }
+
+        parent::_setPageTitle();
+    }
+
+    /**
+     * If the current page is not to a document menu item, set metadata
+     */
+    protected function _preparePage()
+    {
+        if ($this->getName() !== $this->getActiveMenu()->query['view'])
+        {
+            $helper   = $this->getTemplate()->createHelper('string');
+            $document = $this->getModel()->fetch();
+            $this->getParameters()->{'menu-meta_description'} = $helper->truncate(array(
+                'text'   => $document->description,
+                'length' => 140
+            ));
+        }
+
+        parent::_preparePage();
+    }
 }

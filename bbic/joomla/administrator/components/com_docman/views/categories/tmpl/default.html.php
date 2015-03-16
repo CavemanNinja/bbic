@@ -107,7 +107,7 @@ kQuery(function($){
                                     ))); ?>
                                 </td>
                                 <td></td>
-                                <td class="docman_table__title_field level<?= $category->level;?>" style="text-align:left;padding-left: <?= (($category->level)*34)-34 ?>px">
+                                <td class="docman_table__title_field level<?= $category->level;?>">
                                     <div class="koowa_wrapped_content">
                                         <div class="whitespace_preserver">
                                             <?= import('com://site/docman.document.icon.html', array('icon' => $category->icon)) ?>

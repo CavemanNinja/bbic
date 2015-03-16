@@ -34,12 +34,8 @@ defined('KOOWA') or die; ?>
                         </fieldset>
 
                         <? // Description fieldset ?>
-                        <fieldset>
                             <legend><?= translate('Description') ?></legend>
-
                             <?= import('com://site/docman.document.form_description.html') ?>
-
-                        </fieldset>
                     </div>
 
                     <div class="docman_grid__item one-third">

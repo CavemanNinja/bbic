@@ -6,7 +6,7 @@
  * @link        http://www.joomlatools.com
  */
 
-class ModDocman_CategoriesHtml extends ModKoowaHtml
+class ModDocman_categoriesHtml extends ModKoowaHtml
 {
     protected function _initialize(KObjectConfig $config)
     {
@@ -110,18 +110,27 @@ class ModDocman_CategoriesHtml extends ModKoowaHtml
         $pages = $this->getObject('com://site/docman.model.pages')->fetch();
 
         // Only render if there is a menu item to DOCman AND we have categories to display
-        if (count($pages) && $context->parameters->total)
-        {
-            $params = $this->getParameters();
-
-            if ($params->layout) {
-                $this->setLayout($params->layout);
-            }
-
+        if (count($pages) && $context->parameters->total) {
             return parent::_actionRender($context);
         }
 
         return '';
+    }
+
+    /**
+     * Sets the layout from the parameters
+     *
+     * @param KViewContext $context
+     */
+    protected function _beforeRender(KViewContext $context)
+    {
+        $params = $this->getParameters();
+
+        if ($params->layout)
+        {
+            $this->setLayout($params->layout);
+            $context->layout = $this->getLayout();
+        }
     }
 
     /**

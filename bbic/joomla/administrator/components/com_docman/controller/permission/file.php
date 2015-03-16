@@ -30,7 +30,7 @@ class ComDocmanControllerPermissionFile extends ComDocmanControllerPermissionAbs
         $format = $this->getRequest()->getFormat();
 
         if (($format === 'html' && $view === 'files') ||
-            ($format === 'json' && in_array($view, array('nodes', 'file', 'folders', 'proxy')))
+            ($format === 'json' && in_array($view, array('nodes', 'file', 'files', 'folders', 'proxy')))
         ) {
             return $this->canChangeAnything();
         }

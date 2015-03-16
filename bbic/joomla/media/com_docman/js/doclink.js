@@ -93,7 +93,7 @@ DOCman.Doclink = Koowa.Class.extend({
         });
 
         if (window.parent.tinyMCE) {
-            var text = window.parent.tinyMCE.activeEditor.selection.getContent({format:'text'});
+            var text = window.parent.tinyMCE.activeEditor.selection.getContent({format:'raw'});
             if (text) {
                 this.caption_from_editor = true;
                 $('#caption').attr('value', text);

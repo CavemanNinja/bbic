@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_FILEMAN_LAYOUT_GALLERY">
+		<message>
+			<![CDATA[COM_FILEMAN_LAYOUT_GALLERY_DESCRIPTION]]>
+		</message>
+	</layout>
+	<fields name="request" addfieldpath="/components/com_fileman/forms/fields">
+		<!-- Basic options. -->
+		<fieldset name="request">
+			<field
+				name="folder"
+				type="folders"
+                url_encode="1"
+				default=""
+				label="FOLDER"
+			/>
+		</fieldset>
+	</fields>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="track_views" type="radio" class="btn-group"  default="1" label="TRACK_VIEWS" description="TRACK_VIEWS_DESCRIPTION">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="show_folders" type="radio" class="btn-group"  default="1" label="SHOW_FOLDERS">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="show_filenames" type="radio" class="btn-group"  default="1" label="SHOW_FILENAMES">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="humanize_filenames" type="radio" class="btn-group"  default="1" label="HUMANIZE_FILENAMES"
+				description="HUMANIZE_FILENAMES_DESCRIPTION">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="show_thumbnails" type="radio" class="btn-group"  default="1" label="SHOW_THUMBNAILS">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="limit" type="list" default="-1" label="FILES_PER_PAGE">
+				<option value="-1">SYSTEM_DEFAULT</option>
+				<option value="0">UNLIMITED</option>
+			</field>
+			<field name="sort" type="list" default="name" label="SORT_BY">
+				<option value="name">SORT_BY_NAME</option>
+				<option value="modified_on">SORT_BY_MODIFIED_ON</option>
+			</field>
+			<field name="direction" type="list" default="asc" label="SORT_DIRECTION">
+				<option value="asc">SORT_DIRECTION_ASC</option>
+				<option value="desc">SORT_DIRECTION_DESC</option>
+			</field>
+			<field name="allow_uploads" type="radio" class="btn-group"  default="0" label="ALLOW_UPLOADS"
+				description="ALLOW_UPLOADS_DESCRIPTION">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="notification_emails" type="textarea" label="SUBMIT_NOTIFY"
+				rows="5"
+				description="SUBMIT_NOTIFY_DESCRIPTION" />
+		</fieldset>
+	</fields>
+</metadata>

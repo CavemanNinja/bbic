@@ -23,6 +23,7 @@
                 <option value="reverse_created_on">JGLOBAL_MOST_RECENT_FIRST</option>
                 <option value="created_on">JGLOBAL_OLDEST_FIRST</option>
                 <option value="reverse_hits">MOST_POPULAR_FIRST</option>
+                <option value="reverse_touched_on">LAST_MODIFIED_FIRST</option>
             </field>
             <field name="show_document_sort_limit" type="radio" class="btn-group" default="0" label="SHOW_DOCUMENT_SORT_LIMIT"
                    description="SHOW_DOCUMENT_SORT_LIMIT_DESCRIPTION">

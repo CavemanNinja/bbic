@@ -120,9 +120,31 @@ class ComDocmanViewListHtml extends ComDocmanViewHtml
 
             if ($category->slug !== $slug) {
                 $this->getParameters()->set('page_heading', $category->title);
+                $this->getParameters()->set('page_title',   $category->title);
             }
         }
 
         parent::_setPageTitle();
+    }
+    /**
+     * If the current page is not to a category menu item, set metadata
+     */
+    protected function _preparePage()
+    {
+        if ($this->getName() === $this->getActiveMenu()->query['view']) {
+            $category = $this->getModel()->fetch();
+            $slug     = isset($this->getActiveMenu()->query['slug']) ? $this->getActiveMenu()->query['slug'] : null;
+
+            if ($category->slug !== $slug)
+            {
+                $helper   = $this->getTemplate()->createHelper('string');
+                $this->getParameters()->{'menu-meta_description'} = $helper->truncate(array(
+                    'text'   => $category->description,
+                    'length' => 140
+                ));
+            }
+        }
+
+        parent::_preparePage();
     }
 }

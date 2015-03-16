@@ -35,6 +35,7 @@ class ComDocmanModelPages extends KModelAbstract
             ->insert('id', 'int', null, true)
             ->insert('alias', 'cmd', null, true)
             ->insert('language', 'cmd', null)
+            ->insert('access', 'int', null) // -1 for no access filter
             ->insert('view', 'cmd');
     }
 
@@ -73,6 +74,13 @@ class ComDocmanModelPages extends KModelAbstract
                     $values[] = $this->getState()->language;
                 }
             }
+
+            if ($this->getState()->access !== null)
+            {
+                $attributes[] = 'access';
+                $values[]     = $this->getState()->access === -1 ? null : $this->getState()->access;
+            }
+
 
             $items = JApplication::getInstance('site')->getMenu()->getItems($attributes, $values);
 

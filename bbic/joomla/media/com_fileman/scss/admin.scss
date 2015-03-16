@@ -1,0 +1,42 @@
+// Core variables and mixins without output available outside .koowa scope
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Overwrite variables
+$koowaPath: '../../koowa/com_koowa';
+
+// Mixins
+@import "koowa/generic/mixins";
+
+// Koowa behaviors
+@import "koowa/generic/modal";
+@import "koowa/generic/icons";
+@import "koowa/generic/general";
+@import "koowa/generic/koowa_template";
+@import "koowa/admin/admin";
+@import "koowa/admin/admin3x";
+
+// Keep outside of the koowa namespace
+@import "admin/_global_overrides";
+
+.koowa {
+
+  // Koowa behaviours
+  @import "koowa/generic/dialog";
+  @import "koowa/generic/inputgroups";
+  @import "koowa/generic/tree";
+  @import "koowa/admin/table";
+  @import "koowa/generic/sidebar-nav";
+
+  // Com files
+  @import "koowa/files";
+
+  // Generic
+  @import "generic/mixins";
+  @import "generic/table";
+
+  // Admin
+  @import "admin/admin";
+  @import "admin/validator";
+
+}

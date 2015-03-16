@@ -40,8 +40,33 @@ if (substr(strtolower($view), 0, 6) == 'images' || $popup_upload == 1)
 	$path = 'image_path';
 }
 
-define('COM_MEDIA_BASE',    JPATH_ROOT . '/' . $params->get($path, 'images'));
-define('COM_MEDIA_BASEURL', JUri::root() . $params->get($path, 'images'));
+
+
+
+$app = JFactory::getApplication('site');
+if ($app->isAdmin()) {
+
+   //keep normal path for admin
+   define('COM_MEDIA_BASE',    JPATH_ROOT . '/' . $params->get($path, 'images'));
+   define('COM_MEDIA_BASEURL', JUri::root() . $params->get($path, 'images'));
+
+} else{
+
+
+
+   //change path depending on userid
+   $user = JFactory::getUser();
+   $uid = $user->id;
+
+	if(!is_dir('uploaded/'.$uid))
+		mkdir('uploaded/'.$uid, 0755);
+
+   define('COM_MEDIA_BASE',    JPATH_ROOT . '/uploaded/'.$uid);
+   define('COM_MEDIA_BASEURL', JUri::root() . '/uploaded/'.$uid);
+
+}
+
+
 
 $controller	= JControllerLegacy::getInstance('Media', array('base_path' => JPATH_COMPONENT_ADMINISTRATOR));
 $controller->execute($input->get('task'));

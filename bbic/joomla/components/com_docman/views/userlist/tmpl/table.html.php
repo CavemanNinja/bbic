@@ -14,7 +14,7 @@ defined('KOOWA') or die; ?>
     <?= helper('behavior.download_tracker'); ?>
 <? endif; ?>
 
-<div class="koowa_table_layout koowa_userlist_table_layout">
+<div class="docman_table_layout docman_userlist_table_layout">
 
     <? // Page heading ?>
     <? if ($params->get('show_page_heading')): ?>

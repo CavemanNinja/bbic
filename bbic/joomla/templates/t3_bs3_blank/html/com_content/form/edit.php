@@ -17,6 +17,8 @@ JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css'
 // var_dump($this);
 
 //Check if user is a tenant
+$user = JFactory::getUser();
+
 $isTenant = in_array("10", array_values(JFactory::getUser()->groups));
 
 // Create shortcut to parameters.
@@ -185,31 +187,31 @@ if(count($extrafields)){
 
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('catid'); ?>
-							<?php 
+							<?php
 								$selectcat = $this->form->getInput('catid');
 
 								$selectcat = str_replace('option value="8"',
-								 'option value="8" disabled="disabled"',  $selectcat); 
+								 'option value="8" disabled="disabled"',  $selectcat);
 								$selectcat = str_replace('option value="9"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								 'option value="9" disabled="disabled"', $selectcat );
 								$selectcat = str_replace('option value="12"',
-								 'option value="12" disabled="disabled"', $selectcat ); 
+								 'option value="12" disabled="disabled"', $selectcat );
 								echo $selectcat;
 								$selectcat = str_replace('option value="13"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								 'option value="9" disabled="disabled"', $selectcat );
 							?>
 						</div>
 
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('state'); ?>
-							<?php 
+							<?php
 								$statepublished = $this->form->getInput('state');
 
-								$statepublished = str_replace('option value="0"', 
+								$statepublished = str_replace('option value="0"',
 									'option value="0" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="2"', 
+								$statepublished = str_replace('option value="2"',
 									'option value="2" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="-2"', 
+								$statepublished = str_replace('option value="-2"',
 									'option value="-2" disabled="disabled"', $statepublished);
 								echo $statepublished;
 							?>
@@ -315,10 +317,10 @@ if(count($extrafields)){
 
 <!-- NEWS, MUST ADD SUBCATEGORIES, NO! use PARENT ID -->
 
-<?php 
-//elseif ($catid == "8" ||  $catid == "14" ||  $catid == "15" || Old stuff using subcategories. 
+<?php
+//elseif ($catid == "8" ||  $catid == "14" ||  $catid == "15" || Old stuff using subcategories.
 //$catid == "16" ||  $catid == "22" ||  $catid == "23" ||
-//$catid == "24" || $catid == "25") : 
+//$catid == "24" || $catid == "25") :
 ?>
 
 <?php elseif ($catid == "8" || $catid == "22" || $parentid == "8" || $parentid == "22") : ?>
@@ -361,7 +363,7 @@ if(count($extrafields)){
 					<?php if ($params->get('show_urls_images_frontend') ) : ?>
 					<li><a href="#images" data-toggle="tab"><?php echo JText::_('COM_CONTENT_IMAGES_AND_URLS') ?></a></li>
 					<?php endif; ?>
-					
+
 				</ul>
 
 				<div class="tab-content">
@@ -386,7 +388,7 @@ if(count($extrafields)){
 
 					<div class="form-group">
 						<?php echo $this->form->getLabel('catid'); ?>
-						<?php 
+						<?php
 
 							$lang = JFactory::getLanguage()->get('tag');
 							// var_dump($lang);
@@ -395,30 +397,30 @@ if(count($extrafields)){
 								// echo "START".$selectcat."END";
 
 								$selectcat = str_replace('<option value="9">- - Company Profiles</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 
 								$selectcat = str_replace('<option value="10">- Billing</option>',
-								 '',  $selectcat); 
-								
+								 '',  $selectcat);
+
 								$selectcat = str_replace('<option value="12">- Service Requests</option>',
-								 '', $selectcat ); 
-								
+								 '', $selectcat );
+
 								$selectcat = str_replace('<option value="13">- Downloads</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 
 								$selectcat = str_replace('<option value="19">- Services</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 
 								$selectcat = str_replace('<option value="28">- - Company Profiles</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="22">- - الأخبار</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="23">- - - أخبار ب ب أ سي </option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="24">- - - أخبار ب د ب</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="25">- - - أخبار اضافية</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 
 								$selectcat = str_replace('<option value="23">- - - أخبارالمركز </option>', '', $selectcat);
 								$selectcat = str_replace('<option value="24">- - - أخبار بنك للتنمية</option>', '', $selectcat);
@@ -450,30 +452,30 @@ if(count($extrafields)){
 								$selectcat = $this->form->getInput('catid');
 
 								$selectcat = str_replace('<option value="9">- - Company Profiles</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 
 								$selectcat = str_replace('<option value="10">- Billing</option>',
-								 '',  $selectcat); 
-								
+								 '',  $selectcat);
+
 								$selectcat = str_replace('<option value="12">- Service Requests</option>',
-								 '', $selectcat ); 
-								
+								 '', $selectcat );
+
 								$selectcat = str_replace('<option value="13">- Downloads</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 
 								$selectcat = str_replace('<option value="19">- Services</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 
 								$selectcat = str_replace('<option value="28">- - Company Profiles</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="8">- - News</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="14">- - - BBIC</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="15">- - - BDB</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="16">- - - Extra</option>',
-								 '', $selectcat ); 
+								 '', $selectcat );
 								$selectcat = str_replace('<option value="16">- - - Tenant</option>', '', $selectcat);
 								$selectcat = str_replace('<option value="33">- - - Industrial</option>', '', $selectcat);
 								$selectcat = str_replace('<option value="34">- - - Retail</option>', '', $selectcat);
@@ -505,22 +507,22 @@ if(count($extrafields)){
 					</div> -->
 					<div class="form-group">
 						<?php echo $this->form->getLabel('language'); ?>
-						<?php 
+						<?php
 							$lang = JFactory::getLanguage()->get('tag');
 							if ($lang == "en-GB") {
 								$selectlang = $this->form->getInput('language');
 								$selectlang = str_replace(
 									'<option value="en-GB">English</option>',
-									'<option selected value="en-GB">English</option>', 
+									'<option selected value="en-GB">English</option>',
 									$selectlang);
 								echo $selectlang;
 
 
 							} else {
-								$selectlang = $this->form->getInput('language');		
+								$selectlang = $this->form->getInput('language');
 								$selectlang = str_replace(
 									'<option value="ar-AA">عربي</option>',
-									'<option selected value="ar-AA">عربي</option>', 
+									'<option selected value="ar-AA">عربي</option>',
 									$selectlang);
 								echo $selectlang;
 							}
@@ -633,7 +635,7 @@ if(count($extrafields)){
 					<?php endif; ?>
 
 					<div class="tab-pane" id="publishing">
-						
+
 
 						<div class="form-group">
 							<?php echo $this->form->getLabel('tags'); ?>
@@ -655,14 +657,14 @@ if(count($extrafields)){
 						<?php if ($this->item->params->get('access-change')) : ?>
 							<div class="form-group">
 								<?php echo $this->form->getLabel('state'); ?>
-								<?php 
+								<?php
 									$statepublished = $this->form->getInput('state');
 
-									$statepublished = str_replace('option value="0"', 
+									$statepublished = str_replace('option value="0"',
 										'option value="0" disabled="disabled"', $statepublished);
-									$statepublished = str_replace('option value="2"', 
+									$statepublished = str_replace('option value="2"',
 										'option value="2" disabled="disabled"', $statepublished);
-									$statepublished = str_replace('option value="-2"', 
+									$statepublished = str_replace('option value="-2"',
 										'option value="-2" disabled="disabled"', $statepublished);
 									echo $statepublished;
 								?>
@@ -696,7 +698,7 @@ if(count($extrafields)){
 						<?php endif; ?>
 					</div>
 
-					
+
 
 					<div class="tab-pane" id="metadata">
 						<div class="form-group">
@@ -799,12 +801,12 @@ if(count($extrafields)){
 							<?php echo $this->form->getInput('articletext'); ?>
 							<br/><br/><br/><br/>
 						</div>
-					
+
 						<?php if(count($extrafields)) : ?>
 						<div class="tab-pane" id="extrafields">
 							<?php foreach ($extrafields as $extraset) : ?>
 								<?php foreach ($this->form->getFieldset($extraset->name) as $field) : ?>
-									
+
 										<div class="form-group">
 											<div class="control-label">
 												<?php echo $field->label; ?>
@@ -814,7 +816,7 @@ if(count($extrafields)){
 													<?php echo str_replace('<option value="1">Approved</option>', '<option value="1" disabled="disabled" >Approved</option>', $field->input); ?>
 
 												<?php elseif ($field->name == "jform[attribs][companyprofile_category]" && JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
-													<?php 
+													<?php
 														$ar_cat_string = $field->input;
 														$ar_cat_string = str_replace("Advertising", "الإعلان", $ar_cat_string);
 														$ar_cat_string = str_replace("Cleaning", "التنظيف", $ar_cat_string);
@@ -842,39 +844,39 @@ if(count($extrafields)){
 												<?php endif; ?>
 											</div>
 										</div>
-									
+
 								<?php endforeach ?>
 							<?php endforeach ?>
 						</div>
 						<?php endif; ?>
-						
+
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('catid'); ?>
 							<?php echo $this->form->getInput('catid');
-								// $selectcat = 
+								// $selectcat =
 
 								// $selectcat = str_replace('option value="10"',
-								//  'option value="10" disabled="disabled"',  $selectcat); 
+								//  'option value="10" disabled="disabled"',  $selectcat);
 								// $selectcat = str_replace('option value="8"',
-								//  'option value="8" disabled="disabled"', $selectcat ); 
+								//  'option value="8" disabled="disabled"', $selectcat );
 								// $selectcat = str_replace('option value="12"',
-								//  'option value="12" disabled="disabled"', $selectcat ); 
+								//  'option value="12" disabled="disabled"', $selectcat );
 								// echo $selectcat;
 								// $selectcat = str_replace('option value="13"',
-								//  'option value="9" disabled="disabled"', $selectcat ); 
+								//  'option value="9" disabled="disabled"', $selectcat );
 							?>
 						</div>
 
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('state'); ?>
-							<?php 
+							<?php
 								$statepublished = $this->form->getInput('state');
 
-								$statepublished = str_replace('option value="0"', 
+								$statepublished = str_replace('option value="0"',
 									'option value="0" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="2"', 
+								$statepublished = str_replace('option value="2"',
 									'option value="2" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="-2"', 
+								$statepublished = str_replace('option value="-2"',
 									'option value="-2" disabled="disabled"', $statepublished);
 								echo $statepublished;
 							?>
@@ -888,16 +890,16 @@ if(count($extrafields)){
 							// 	$selectlang = $this->form->getInput('language');
 							// 	$selectlang = str_replace(
 							// 		'<option value="en-GB">English</option>',
-							// 		'<option selected value="en-GB">English</option>', 
+							// 		'<option selected value="en-GB">English</option>',
 							// 		$selectlang);
 							// 	echo $selectlang;
 
 
 							// } else {
-							// 	$selectlang = $this->form->getInput('language');		
+							// 	$selectlang = $this->form->getInput('language');
 							// 	$selectlang = str_replace(
 							// 		'<option value="ar-AA">العربية</option>',
-							// 		'<option selected value="ar-AA">العربية</option>', 
+							// 		'<option selected value="ar-AA">العربية</option>',
 							// 		$selectlang);
 							// 	echo $selectlang;
 							// }
@@ -1069,22 +1071,22 @@ if(count($extrafields)){
 											<?php echo $field->label; ?>
 										</div>
 										<div class="controls">
-											<?php 
+											<?php
 												if ($isTenant) {
 													$extrafields =  $field->input;
-													$extrafields = 	str_replace("icon-calendar", 
+													$extrafields = 	str_replace("icon-calendar",
 														"glyphicon glyphicon-calendar", $extrafields);
-													$extrafields = str_replace('<option value="1">Approved', 
+													$extrafields = str_replace('<option value="1">Approved',
 													                           '<option value="1" disabled="disabled">Approved',
 													                           $extrafields);
-													$extrafields = str_replace('<option value="2">Denied', 
+													$extrafields = str_replace('<option value="2">Denied',
 													                           '<option value="2" disabled="disabled">Denied',
 													                           $extrafields);
-													echo $extrafields;		
+													echo $extrafields;
 												} else {
 													echo $field->input;
 												}
-												
+
 											?>
 										</div>
 									</div>
@@ -1092,34 +1094,34 @@ if(count($extrafields)){
 							<?php endforeach ?>
 						</div>
 						<?php endif; ?>
-					
+
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('catid'); ?>
-							<?php 
+							<?php
 								$selectcat = $this->form->getInput('catid');
 
 								$selectcat = str_replace('option value="10"',
-								 'option value="10" disabled="disabled"',  $selectcat); 
+								 'option value="10" disabled="disabled"',  $selectcat);
 								$selectcat = str_replace('option value="8"',
-								 'option value="8" disabled="disabled"', $selectcat ); 
+								 'option value="8" disabled="disabled"', $selectcat );
 								$selectcat = str_replace('option value="9"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								 'option value="9" disabled="disabled"', $selectcat );
 								$selectcat = str_replace('option value="13"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								 'option value="9" disabled="disabled"', $selectcat );
 								echo $selectcat;
 							?>
 						</div>
 						<?php if ($this->item->params->get('access-change')) : ?>
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('state'); ?>
-							<?php 
+							<?php
 								$statepublished = $this->form->getInput('state');
 
-								$statepublished = str_replace('option value="0"', 
+								$statepublished = str_replace('option value="0"',
 									'option value="0" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="2"', 
+								$statepublished = str_replace('option value="2"',
 									'option value="2" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="-2"', 
+								$statepublished = str_replace('option value="-2"',
 									'option value="-2" disabled="disabled"', $statepublished);
 								echo $statepublished;
 							?>
@@ -1129,7 +1131,7 @@ if(count($extrafields)){
 					</div><!--edit pane -->
 
 
-					
+
 					<div class="tab-pane" id="publishing">
 
 						<div class="form-group">
@@ -1268,7 +1270,7 @@ if(count($extrafields)){
 
 				<div class="tab-content">
 					<div class="tab-pane active" id="editor">
-						
+
 						<div class="form-group" readonly>
 							<?php echo $this->form->getLabel('title'); ?>
 							<?php echo $this->form->getInput('title'); ?>
@@ -1302,34 +1304,34 @@ if(count($extrafields)){
 							<?php endforeach ?>
 						</div>
 						<?php endif; ?>
-					
+
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('catid'); ?>
-							<?php 
+							<?php
 								$selectcat = $this->form->getInput('catid');
 
 								$selectcat = str_replace('option value="10"',
-								 'option value="10" disabled="disabled"',  $selectcat); 
+								 'option value="10" disabled="disabled"',  $selectcat);
 								$selectcat = str_replace('option value="8"',
-								 'option value="8" disabled="disabled"', $selectcat ); 
+								 'option value="8" disabled="disabled"', $selectcat );
 								$selectcat = str_replace('option value="9"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								 'option value="9" disabled="disabled"', $selectcat );
 								$selectcat = str_replace('option value="13"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								 'option value="9" disabled="disabled"', $selectcat );
 								echo $selectcat;
 							?>
 						</div>
 						<?php if ($this->item->params->get('access-change')) : ?>
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('state'); ?>
-							<?php 
+							<?php
 								$statepublished = $this->form->getInput('state');
 
-								$statepublished = str_replace('option value="0"', 
+								$statepublished = str_replace('option value="0"',
 									'option value="0" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="2"', 
+								$statepublished = str_replace('option value="2"',
 									'option value="2" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="-2"', 
+								$statepublished = str_replace('option value="-2"',
 									'option value="-2" disabled="disabled"', $statepublished);
 								echo $statepublished;
 							?>
@@ -1339,7 +1341,7 @@ if(count($extrafields)){
 					</div><!--edit pane -->
 
 
-					
+
 					<div class="tab-pane" id="publishing">
 
 						<div class="form-group">
@@ -1497,7 +1499,7 @@ if(count($extrafields)){
 							<br/><br/>
 							<?php echo $this->form->getInput('articletext'); ?>
 							<br/><br/><br/>						</div>
-					
+
 
 					<?php if(count($extrafields)) : ?>
 					<div class="tab-pane" id="extrafields">
@@ -1518,31 +1520,31 @@ if(count($extrafields)){
 
 					<div class="form-group hidden">
 						<?php echo $this->form->getLabel('catid'); ?>
-						<?php 
+						<?php
 							$selectcat = $this->form->getInput('catid');
 
 							$selectcat = str_replace('option value="10"',
-							 'option value="10" disabled="disabled"',  $selectcat); 
+							 'option value="10" disabled="disabled"',  $selectcat);
 							$selectcat = str_replace('option value="8"',
-							 'option value="8" disabled="disabled"', $selectcat ); 
+							 'option value="8" disabled="disabled"', $selectcat );
 							$selectcat = str_replace('option value="9"',
-							 'option value="9" disabled="disabled"', $selectcat ); 
+							 'option value="9" disabled="disabled"', $selectcat );
 							$selectcat = str_replace('option value="12"',
-							 'option value="9" disabled="disabled"', $selectcat ); 
+							 'option value="9" disabled="disabled"', $selectcat );
 							echo $selectcat;
-						?>		
+						?>
 					</div>
 
 					<div class="form-group hidden">
 						<?php echo $this->form->getLabel('state'); ?>
-						<?php 
+						<?php
 								$statepublished = $this->form->getInput('state');
 
-								$statepublished = str_replace('option value="0"', 
+								$statepublished = str_replace('option value="0"',
 									'option value="0" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="2"', 
+								$statepublished = str_replace('option value="2"',
 									'option value="2" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="-2"', 
+								$statepublished = str_replace('option value="-2"',
 									'option value="-2" disabled="disabled"', $statepublished);
 								echo $statepublished;
 							?>
@@ -1693,13 +1695,13 @@ if(count($extrafields)){
 
 				<div class="tab-content">
 					<div class="tab-pane active" id="editor">
-						
+
 						<div class="form-group" readonly>
 							<?php echo $this->form->getLabel('title'); ?>
-							<?php 
-								$title_input = $this->form->getInput('title'); 
+							<?php
+								$title_input = $this->form->getInput('title');
 								// var_dump($title_input);
-								// echo str_replace("<input", "<input default='Map' disabled='disabled'", $title_input); 
+								// echo str_replace("<input", "<input default='Map' disabled='disabled'", $title_input);
 								echo $title_input;
 							?>
 						</div>
@@ -1715,6 +1717,8 @@ if(count($extrafields)){
 							<?php echo $this->form->getInput('articletext'); ?>
 							<br/><br/><br/><br/>
 						</div>
+
+						<input type="hidden" value="<?php echo $user->id; ?>" id="userid" />
 
 						<?php if(count($extrafields)) : ?>
 						<div class="tab-pane" id="extrafields">
@@ -1732,34 +1736,34 @@ if(count($extrafields)){
 							<?php endforeach ?>
 						</div>
 						<?php endif; ?>
-					
+
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('catid'); ?>
-							<?php 
+							<?php
 								$selectcat = $this->form->getInput('catid');
 
 								$selectcat = str_replace('option value="10"',
-								 'option value="10" disabled="disabled"',  $selectcat); 
+								 'option value="10" disabled="disabled"',  $selectcat);
 								$selectcat = str_replace('option value="8"',
-								 'option value="8" disabled="disabled"', $selectcat ); 
+								 'option value="8" disabled="disabled"', $selectcat );
 								$selectcat = str_replace('option value="9"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								 'option value="9" disabled="disabled"', $selectcat );
 								$selectcat = str_replace('option value="13"',
-								 'option value="9" disabled="disabled"', $selectcat ); 
+								 'option value="9" disabled="disabled"', $selectcat );
 								echo $selectcat;
 							?>
 						</div>
 						<?php if ($this->item->params->get('access-change')) : ?>
 						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('state'); ?>
-							<?php 
+							<?php
 								$statepublished = $this->form->getInput('state');
 
-								$statepublished = str_replace('option value="0"', 
+								$statepublished = str_replace('option value="0"',
 									'option value="0" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="2"', 
+								$statepublished = str_replace('option value="2"',
 									'option value="2" disabled="disabled"', $statepublished);
-								$statepublished = str_replace('option value="-2"', 
+								$statepublished = str_replace('option value="-2"',
 									'option value="-2" disabled="disabled"', $statepublished);
 								echo $statepublished;
 							?>
@@ -1769,7 +1773,7 @@ if(count($extrafields)){
 					</div><!--edit pane -->
 
 
-					
+
 					<div class="tab-pane" id="publishing">
 
 						<div class="form-group">

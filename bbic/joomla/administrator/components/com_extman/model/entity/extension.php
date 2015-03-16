@@ -16,6 +16,7 @@ class ComExtmanModelEntityExtension extends KModelEntityRow implements KObjectIn
    	public static function getInstance(KObjectConfigInterface $config, KObjectManagerInterface $manager)
     {
         $identifier = $config->object_identifier->toArray();
+        $koowa_component = false;
 
         if ($config->data)
         {
@@ -40,18 +41,24 @@ class ComExtmanModelEntityExtension extends KModelEntityRow implements KObjectIn
             {
                 $type = (string)$config->data->dependency['type'];
 
-                if ($type === 'koowa-component')
-                {
-                    $identifier['path'][] = 'extension';
-                    $identifier['name'] = 'koowa';
+                if ($type === 'koowa-component') {
+                    $koowa_component = true;
                 }
+            }
+
+            if ($koowa_component || $config->data->type === 'koowa-component')
+            {
+                $koowa_component = true;
+
+                $identifier['path'][] = 'extension';
+                $identifier['name'] = 'koowa';
             }
         }
 
         $class = $manager->getClass($identifier);
 
         if($class === 'KModelEntityDefault' || !class_exists($class)) {
-            $class = 'ComExtmanModelEntityExtension';
+            $class = $koowa_component ? 'ComExtmanModelEntityExtensionKoowa' : 'ComExtmanModelEntityExtension';
         }
 
         $instance = new $class($config);

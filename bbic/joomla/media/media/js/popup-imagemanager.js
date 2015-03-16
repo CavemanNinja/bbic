@@ -191,6 +191,7 @@ var ImageManager = this.ImageManager = {
 
 	populateFields: function(file)
 	{
+		file = file.substr(file.lastIndexOf('/'+1));
 		$("#f_url").val(image_base_path+file);
 	},
 

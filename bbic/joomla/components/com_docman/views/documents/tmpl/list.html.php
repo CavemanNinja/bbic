@@ -17,7 +17,7 @@ defined('KOOWA') or die; ?>
         'document' => $document,
         'params' => $params,
         'heading' => '4',
-        'buttonstyle' => '',
+        'buttonstyle' => 'btn-default',
         'link' => 1,
         'description' => 'summary'
     )) ?>

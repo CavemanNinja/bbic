@@ -35,7 +35,7 @@ class ComDocmanTemplateHelperString extends KTemplateHelperAbstract
             'text' => '',
             'offset' => 0,
             'length' => 100,
-            'pad' => ' ...')
+            'pad' => '...')
         );
 
         // Don't show endstring if actual string length is less than cutting length

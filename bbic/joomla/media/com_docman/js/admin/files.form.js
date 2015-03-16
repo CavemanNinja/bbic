@@ -10,9 +10,11 @@ kQuery(function($) {
         getQueryString = function(form, defaults) {
             var values  = flattenArray($(form).serializeArray());
 
-            $.each(['enabled', 'docman_category_id'], function(val, key) {
-                if (values[key] === '') {
-                    values[key] = defaults[key];
+            $.each(defaults, function(key, value) {
+                if (!values[key] || values[key] === '') {
+                    if (typeof value !== 'undefined') {
+                        values[key] = value;
+                    }
                 }
             });
 

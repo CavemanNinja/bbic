@@ -1,0 +1,19 @@
+table.parameters {
+  td {
+    white-space: normal !important;
+
+    @include wrap_words();
+
+    &.detail-label {
+      white-space: nowrap !important;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+}
+
+#files-grid table {
+  td {
+    @include wrap_words();
+  }
+}

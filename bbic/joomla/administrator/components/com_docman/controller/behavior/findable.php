@@ -32,9 +32,12 @@ class ComDocmanControllerBehaviorFindable extends ComKoowaControllerBehaviorFind
      */
     protected function _afterAdd(KControllerContextInterface $context)
     {
-        $name = $this->getMixer()->getIdentifier()->name;
+        $name = $context->result->getIdentifier()->name;
 
-        if ($name === $this->_entity && $this->getModel()->findPage($context->result)) {
+        // Get a new model since we are going to change the state and it would reset the cached entity
+        $model = $this->getObject('com://admin/docman.model.documents');
+
+        if ($name === $this->_entity && $model->page('all')->findPage($context->result)) {
             parent::_afterAdd($context);
         }
     }

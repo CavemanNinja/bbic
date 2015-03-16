@@ -18,6 +18,7 @@ class ComDocmanModelDocuments extends ComDocmanModelAbstract
             ->insert('category', 'int')
             ->insert('category_children', 'boolean')
             ->insert('created_by', 'int')
+            ->insert('created_on', 'string')
             ->insert('enabled', 'int')
             ->insert('status', 'cmd')
             ->insert('search', 'string')
@@ -43,6 +44,7 @@ class ComDocmanModelDocuments extends ComDocmanModelAbstract
             ->columns('(CASE tbl.access WHEN -1 THEN COALESCE(c.access, 1) ELSE tbl.access END) AS access')
             ->columns('viewlevel.title AS access_title')
             ->columns('IF(tbl.publish_on = 0, tbl.created_on, tbl.publish_on) AS publish_date')
+            ->columns('GREATEST(tbl.created_on, tbl.modified_on) AS touched_on')
             ;
     }
 
@@ -148,6 +150,23 @@ class ComDocmanModelDocuments extends ComDocmanModelAbstract
                 'enabled' => (array) $state->enabled,
                 'current_user' => $state->current_user
             ));
+        }
+
+        if ($created_on = $state->created_on)
+        {
+            static $format_map = array(
+                4  => '%Y', // 2014
+                7  => '%Y-%m', // 2014-10
+                10 => '%Y-%m-%d', // 2014-10-10
+                13 => '%Y-%m-%d %H', // 2014-10-10 10
+                16 => '%Y-%m-%d %H:%i', // 2014-10-10 10:10
+                0  => '%Y-%m-%d %H:%i:%s' // 2014-10-10 10:10:10
+            );
+
+            $format = isset($format_map[strlen($created_on)]) ? $format_map[strlen($created_on)] : $format_map[0];
+
+            $query->where("DATE_FORMAT(tbl.created_on, '$format') = :created_on")
+                  ->bind(array('created_on' => $created_on));
         }
 
         if ($state->search_date || $state->day_range) 

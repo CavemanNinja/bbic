@@ -16,7 +16,7 @@ defined('KOOWA') or die; ?>
                 <?= $document->hits; ?>
             </p>
             <? if ($document->hits): ?>
-                <a href="#" class="btn btn-small"><?= translate('Reset'); ?></a>
+                <a href="#" class="btn btn-default btn-small"><?= translate('Reset'); ?></a>
             <? endif; ?>
         </div>
     </div>

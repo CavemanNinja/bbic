@@ -112,6 +112,8 @@ defined('KOOWA') or die; ?>
                                         )); ?>
                                 </div>
                             </div>
+                        </div>
+                        <div class="docman_grid">
                             <div class="control-group docman_grid__item one-whole">
                                 <label class="control-label"><?= translate('Date'); ?></label>
                                 <div class="controls">

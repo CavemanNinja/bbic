@@ -19,7 +19,7 @@ $button_size   = 'btn-'.(isset($button_size) ? $button_size : 'small');
 
         <? // Edit ?>
         <? if ($show_edit): ?>
-            <a class="btn <?= $button_size ?>"
+            <a class="btn btn-default <?= $button_size ?>"
                href="<?= helper('route.document', array('entity' => $document, 'layout' => 'form', 'tmpl' => 'koowa'));?>"
             ><?= translate('Edit'); ?></a>
         <? endif ?>

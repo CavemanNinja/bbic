@@ -36,7 +36,7 @@ class ComDocmanTemplateHelperBehavior extends ComKoowaTemplateHelperBehavior
     {
         $config = new KObjectConfigJson($config);
         $config->append(array(
-            'selector' => '.docman_track_download',
+            'selector' => 'docman_track_download',
             'category' => 'DOCman',
             'action'   => 'Download'
         ));
@@ -48,7 +48,7 @@ class ComDocmanTemplateHelperBehavior extends ComKoowaTemplateHelperBehavior
             $html .= "
             <script>
             kQuery(function($) {
-                $('{$config->selector}').on('click', function() {
+                $('.{$config->selector}').on('click', function() {
                     var el = $(this);
                     if (typeof _gaq !== 'undefined') {
                         if (_gat._getTrackers().length) {
@@ -61,6 +61,11 @@ class ComDocmanTemplateHelperBehavior extends ComKoowaTemplateHelperBehavior
                         window.ga('send', 'event', '{$config->category}', '{$config->action}', el.data('title'), parseInt(el.data('id'), 10));
                     }
                 });
+
+                if (typeof _paq !== 'undefined') {
+                    _paq.push(['setDownloadClasses', '{$config->selector}']);
+                    _paq.push(['trackPageView']);
+                }
             });
             </script>
             ";
@@ -375,6 +380,7 @@ class ComDocmanTemplateHelperBehavior extends ComKoowaTemplateHelperBehavior
             ));
 
         $data = array();
+
         foreach($config->list as $page)
         {
             $target = ($page->params->get('document_title_link') === 'download' && $page->params->get('download_in_blank_page')) ? 'blank' : '';
@@ -398,22 +404,40 @@ class ComDocmanTemplateHelperBehavior extends ComKoowaTemplateHelperBehavior
                 'children' => array()
             );
 
-            foreach($page->categories as $category)
+            $model = $this->getObject('com://admin/docman.model.categories');
+
+            if ($page->query['view'] === 'list')
             {
-                $parts = explode('/', $category->path);
-                array_pop($parts); // remove current id
-                $parent = (int)array_pop($parts);
-                $entity['children'][] = array(
-                    'label'       => $category->title,
-                    'tag'         => $tag,
-                    'slug'        => $category->slug,
-                    'itemid'      => $category->itemid,
-                    'id'          => 'page'.$page->id.'category'.$category->id,
-                    'category_id' => (int)$category->id,
-                    'path'        => $category->path,
-                    'parent'      => 'page'.$page->id.'category'.$parent,
-                    'target'      => $target
-                );
+                $count  = $model->page($page->id)->count();
+                $offset = 0;
+
+                while ($offset < $count)
+                {
+                    $categories = $model->page($page->id)->limit(100)->offset($offset)->fetch();
+
+                    foreach($categories as $category)
+                    {
+                        $parts = explode('/', $category->path);
+                        array_pop($parts); // remove current id
+                        $parent = (int)array_pop($parts);
+                        $entity['children'][] = array(
+                            'label'       => $category->title,
+                            'tag'         => $tag,
+                            'slug'        => $category->slug,
+                            'itemid'      => $page->id,
+                            'id'          => 'page'.$page->id.'category'.$category->id,
+                            'category_id' => (int)$category->id,
+                            'path'        => $category->path,
+                            'parent'      => 'page'.$page->id.'category'.$parent,
+                            'target'      => $target
+                        );
+                    }
+
+                    $offset += 100;
+                }
+
+
+
             }
 
             $data[] = $entity;

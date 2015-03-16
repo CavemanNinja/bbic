@@ -105,8 +105,7 @@ class ComDocmanControllerBehaviorFilterable extends KControllerBehaviorAbstract
         $query->direction = $query->direction ? $query->direction : $direction;
 
         // Disallow arbitrary sorting.
-        if (!in_array($query->sort, array('hits', 'title', 'created_on')))
-        {
+        if (!in_array($query->sort, array('hits', 'title', 'created_on', 'touched_on'))) {
             $query->sort = $sort;
         }
 

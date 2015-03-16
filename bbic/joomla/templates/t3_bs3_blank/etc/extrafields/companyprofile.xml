@@ -52,12 +52,12 @@
             name="companyprofile_logo"
             type="media"
             preview="tooltip"
-            directory="company_logos"
             label="TPL_COMPANYPROFILE_LOGO"
             description="TPL_COMPANYPROFILE_LOGO_DESC"
+            
          />
 
-         <field 
+         <field
             name="companyprofile_category"
             type="list"
             default="0"
@@ -85,7 +85,7 @@
             <option value="18">Transportation</option>
          </field>
 
-         <field 
+         <field
             name="companyprofile_language"
             type="list"
             default="0"
@@ -106,7 +106,7 @@
          >
             <option value="0">Pending</option>
             <option value="1">Approved</option>
-         </field>         
+         </field>
 
       </fieldset>
    </fields>

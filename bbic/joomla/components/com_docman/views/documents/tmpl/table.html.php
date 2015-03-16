@@ -59,9 +59,9 @@ defined('KOOWA') or die; ?>
                         <span class="koowa_wrapped_content">
                             <span class="whitespace_preserver">
                                 <? if ($params->document_title_link): ?>
-                                    <a href="<?= ($document->title_link) ?>" title="<?= escape($document->storage->name);?>">
+                                    <a href="<?= ($document->title_link) ?>" title="<?= escape($document->storage->name);?>"
                                         <?= $params->download_in_blank_page && $params->document_title_link === 'download'  ? 'target="_blank"' : ''; ?>
-                                        <span itemprop="name"><?= escape($document->title);?></span><!--
+                                    ><span itemprop="name"><?= escape($document->title);?></span><!--
                                         --><? if ($document->title_link === $document->download_link): ?>
                                             <? // Filetype and Filesize  ?>
                                             <? if (($params->show_document_size && $document->size) || ($document->storage_type == 'file' && $params->show_document_extension)): ?>
@@ -133,8 +133,12 @@ defined('KOOWA') or die; ?>
             <? // Date ?>
             <td width="5" class="koowa_table__dates">
             <? if ($params->show_document_created): ?>
-                <time itemprop="datePublished" datetime="<?= $document->publish_date ?>">
-                    <?= helper('date.format', array('date' => $document->publish_date, 'format' => 'd M Y')); ?>
+                <time itemprop="datePublished"
+                      datetime="<?= parameters()->sort === 'touched_on' ? $document->touched_on : $document->publish_date ?>"
+                >
+                    <?= helper('date.format', array(
+                        'date' => parameters()->sort === 'touched_on' ? $document->touched_on : $document->publish_date,
+                        'format' => 'd M Y')); ?>
                 </time>
             <? endif; ?>
             </td>
@@ -143,7 +147,7 @@ defined('KOOWA') or die; ?>
             <? if ($params->document_title_link !== 'download'): ?>
             <td width="5" class="koowa_table__download">
                 <div class="btn-group">
-                    <a class="btn btn-mini docman_download__button" href="<?= $document->download_link; ?>"
+                    <a class="btn btn-default btn-mini docman_download__button" href="<?= $document->download_link; ?>"
                         <?= $params->download_in_blank_page ? 'target="_blank"' : ''; ?>
                         >
                         <? // Text  ?>

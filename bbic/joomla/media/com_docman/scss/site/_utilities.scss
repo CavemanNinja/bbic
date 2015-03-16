@@ -73,3 +73,10 @@ tr, td {
 .nav {
   list-style: none !important;
 }
+
+
+// Submit page
+.submit_document__title_field,
+.submit_document__category_field {
+  max-width: 600px;
+}

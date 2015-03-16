@@ -23,7 +23,8 @@ class ComDocmanDatabaseTableDocuments extends KDatabaseTableAbstract
                 'timezonable' => array('fields' => array('publish_on', 'unpublish_on'))
             ),
             'column_map' => array(
-                'parameters' => 'params'
+                'parameters' => 'params',
+                'touched_on' => 'GREATEST(tbl.created_on, tbl.modified_on)'
             ),
             'filters' => array(
                 'parameters'   => array('json'),

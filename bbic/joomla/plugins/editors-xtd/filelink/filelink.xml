@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="3.0" group="editors-xtd" method="upgrade" overwrite="true">
+	<identifier>plg:editors-xtd.filelink</identifier>
+    <name>Button - FILElink</name>
+    <author>Joomlatools</author>
+    <creationDate>July 2014</creationDate>
+    <copyright>Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+	<version>2.0.6</version>
+	<description></description>
+
+    <files>
+        <filename plugin="filelink">filelink.php</filename>
+        <folder>language</folder>
+    </files>
+</extension>

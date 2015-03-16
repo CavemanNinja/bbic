@@ -1,5 +1,7 @@
 // File specific variables
 $queryWidthAdmin: 767px;
+$max-level: 30;
+
 
 // Overrides for default backend template
 fieldset label {
@@ -123,6 +125,11 @@ table tr .docman_table__category_field {
   padding-bottom: 2px;
   min-width: 150px;
   vertical-align: middle;
+  text-align: left;
+}
+
+@for $i from 1 through $max-level {
+  .docman_table__title_field.level#{$i}{padding-left: 34px * ($i - 1)}
 }
 
 table tr td .overflow_ellipsis {

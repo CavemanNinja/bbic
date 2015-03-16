@@ -108,6 +108,7 @@ class ComDocmanDispatcherBehaviorRoutable extends KControllerBehaviorAbstract
             {
                 $base_path = $context->request->getUrl()->toString(KHttpUrl::AUTHORITY);
                 $menu_path = JRoute::_('index.php?option=com_docman&Itemid='.$menu->id, false);
+                $menu_path = $this->getObject('filter.factory')->createChain('url')->sanitize($menu_path);
 
                 $config['base_url'] = $base_path.$menu_path;
                 $config['router']['defaults']['Itemid'] = $menu->id;

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_FILEMAN_LAYOUT_FILE">
+		<message>
+			<![CDATA[COM_FILEMAN_LAYOUT_FILE_DESCRIPTION]]>
+		</message>
+	</layout>
+	<fields name="request" addfieldpath="/components/com_fileman/forms/fields">
+		<!-- Basic options. -->
+		<fieldset name="request">
+			<field name="name" type="file" label="FILE_NAME" />
+			<field name="folder" id="folder" type="hidden" label="FOLDER_NAME" />
+		</fieldset>
+	</fields>
+</metadata>

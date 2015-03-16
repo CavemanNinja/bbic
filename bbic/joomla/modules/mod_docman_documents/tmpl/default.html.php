@@ -21,90 +21,92 @@ defined('KOOWA') or die; ?>
     <?= helper('com://admin/docman.behavior.download_tracker'); ?>
 <? endif; ?>
 
-<div class="koowa mod_docman mod_docman--documents<?= $params->moduleclass_sfx; ?>">
-    <ul<?= $params->show_icon ? ' class="mod_docman_icons"' :'' ?>>
-    <? foreach ($documents as $document): ?>
-        <li class="module_document">
+<div class="koowa">
+    <div class="mod_docman mod_docman--documents<?= $params->moduleclass_sfx; ?>">
+        <ul<?= $params->show_icon ? ' class="mod_docman_icons"' :'' ?>>
+        <? foreach ($documents as $document): ?>
+            <li class="module_document">
 
-            <div class="koowa_header">
-                <? // Header icon/image ?>
-                <? if ($document->icon && $params->show_icon): ?>
-                <span class="koowa_header__item koowa_header__item--image_container">
-                    <a href="<?= $document->title_link; ?>"
-                       class="koowa_header__image_link <?= $params->link_to_download ? 'docman_track_download' : ''; ?>"
-                       data-title="<?= escape($document->title); ?>"
-                       data-id="<?= $document->id; ?>"
-                        <?= $params->download_in_blank_page ? 'target="_blank"' : ''; ?>
-                        >
-                        <? // Icon ?>
-                        <?= import('com://site/docman.document.icon.html', array('icon' => $document->icon)) ?>
-                    </a>
-                </span>
-                <? endif ?>
-
-                <? // Header title ?>
-                <span class="koowa_header__item">
-                    <span class="koowa_wrapped_content">
-                        <span class="whitespace_preserver">
-                            <a href="<?= $document->title_link; ?>"
-                               class="koowa_header__title_link <?= $params->link_to_download === 'download' ? 'docman_track_download' : ''; ?>"
-                               data-title="<?= escape($document->title); ?>"
-                               data-id="<?= $document->id; ?>"
-                                <?= $params->download_in_blank_page ? 'target="_blank"' : ''; ?>
-                                >
-                                <?= escape($document->title);?></a>
-
-                            <? // Label new ?>
-                            <? if ($params->show_recent && isRecent($document)): ?>
-                                <span class="label label-success"><?= translate('New'); ?></span>
-                            <? endif; ?>
-
-                            <? // Label popular ?>
-                            <? if ($params->show_popular && ($document->hits >= $params->get('hits_for_popular', 100))): ?>
-                                <span class="label label-important"><?= translate('Popular') ?></span>
-                            <? endif ?>
-                        </span>
+                <div class="koowa_header">
+                    <? // Header icon/image ?>
+                    <? if ($document->icon && $params->show_icon): ?>
+                    <span class="koowa_header__item koowa_header__item--image_container">
+                        <a href="<?= $document->title_link; ?>"
+                           class="koowa_header__image_link <?= $params->link_to_download ? 'docman_track_download' : ''; ?>"
+                           data-title="<?= escape($document->title); ?>"
+                           data-id="<?= $document->id; ?>"
+                            <?= $params->download_in_blank_page ? 'target="_blank"' : ''; ?>
+                            >
+                            <? // Icon ?>
+                            <?= import('com://site/docman.document.icon.html', array('icon' => $document->icon)) ?>
+                        </a>
                     </span>
-                </span>
-            </div>
+                    <? endif ?>
 
+                    <? // Header title ?>
+                    <span class="koowa_header__item">
+                        <span class="koowa_wrapped_content">
+                            <span class="whitespace_preserver">
+                                <a href="<?= $document->title_link; ?>"
+                                   class="koowa_header__title_link <?= $params->link_to_download === 'download' ? 'docman_track_download' : ''; ?>"
+                                   data-title="<?= escape($document->title); ?>"
+                                   data-id="<?= $document->id; ?>"
+                                    <?= $params->download_in_blank_page ? 'target="_blank"' : ''; ?>
+                                    >
+                                    <?= escape($document->title);?></a>
 
-            <div class="module_document__info">
-                <? // Category ?>
-                <? if ($document->category_link): ?>
-                <div class="module_document__category">
-                    <span class="koowa_wrapped_content">
-                        <span class="whitespace_preserver">
-                            <?= translate('In {category}', array('category' => '<a href="'.$document->category_link.'">'.escape($document->category_title).'</a>')); ?>
+                                <? // Label new ?>
+                                <? if ($params->show_recent && isRecent($document)): ?>
+                                    <span class="label label-success"><?= translate('New'); ?></span>
+                                <? endif; ?>
+
+                                <? // Label popular ?>
+                                <? if ($params->show_popular && ($document->hits >= $params->get('hits_for_popular', 100))): ?>
+                                    <span class="label label-important"><?= translate('Popular') ?></span>
+                                <? endif ?>
+                            </span>
                         </span>
                     </span>
                 </div>
-                <? endif; ?>
 
-                <? // Created ?>
-                <? if ($params->show_created): ?>
-                <div class="module_document__date">
-                    <?= helper('date.format', array('date' => $document->publish_date)); ?>
-                </div>
-                <? endif; ?>
 
-                <? // Size ?>
-                <? if ($params->show_size && $document->size): ?>
-                <div class="module_document__size">
-                    <?= helper('com://admin/docman.string.humanize_filesize', array('size' => $document->size)); ?>
-                </div>
-                <? endif; ?>
+                <div class="module_document__info">
+                    <? // Category ?>
+                    <? if ($document->category_link): ?>
+                    <div class="module_document__category">
+                        <span class="koowa_wrapped_content">
+                            <span class="whitespace_preserver">
+                                <?= translate('In {category}', array('category' => '<a href="'.$document->category_link.'">'.escape($document->category_title).'</a>')); ?>
+                            </span>
+                        </span>
+                    </div>
+                    <? endif; ?>
 
-                <? // Downloads ?>
-                <? if ($params->show_hits && $document->hits): ?>
-                <div class="module_document__downloads">
-                    <?= object('translator')->choose(array('{number} download', '{number} downloads'), $document->hits, array('number' => $document->hits)) ?>
+                    <? // Created ?>
+                    <? if ($params->show_created): ?>
+                    <div class="module_document__date">
+                        <?= helper('date.format', array('date' => $document->publish_date)); ?>
+                    </div>
+                    <? endif; ?>
+
+                    <? // Size ?>
+                    <? if ($params->show_size && $document->size): ?>
+                    <div class="module_document__size">
+                        <?= helper('com://admin/docman.string.humanize_filesize', array('size' => $document->size)); ?>
+                    </div>
+                    <? endif; ?>
+
+                    <? // Downloads ?>
+                    <? if ($params->show_hits && $document->hits): ?>
+                    <div class="module_document__downloads">
+                        <?= object('translator')->choose(array('{number} download', '{number} downloads'), $document->hits, array('number' => $document->hits)) ?>
+                    </div>
+                    <? endif; ?>
                 </div>
-                <? endif; ?>
-            </div>
-        </li>
-    <? endforeach; ?>
-    </ul>
+            </li>
+        <? endforeach; ?>
+        </ul>
+    </div>
 </div>
 
 <? endif; ?>

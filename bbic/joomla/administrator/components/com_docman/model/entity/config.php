@@ -155,7 +155,7 @@ class ComDocmanModelEntityConfig extends KModelEntityAbstract implements KObject
                 $results[] = $mimetype->mimetype;
             }
 
-            $this->allowed_mimetypes = array_merge($this->allowed_mimetypes, $results);
+            $this->allowed_mimetypes = array_values(array_unique(array_merge($this->allowed_mimetypes, $results)));
         }
 
         // If the document path changed try to move the files to their new location
@@ -218,7 +218,7 @@ class ComDocmanModelEntityConfig extends KModelEntityAbstract implements KObject
             return;
         }
 
-        if (!preg_match('#^[0-9A-Za-z:_\-\\\/]+$#', $path)) {
+        if (!preg_match('#^[0-9A-Za-z:_\-\\\/\.]+$#', $path)) {
             $this->getObject('response')->addMessage($translator->translate('Document path can only contain letters, numbers, dash or underscore'), 'error');
             return;
         }

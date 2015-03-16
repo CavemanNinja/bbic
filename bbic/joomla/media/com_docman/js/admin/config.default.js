@@ -1,6 +1,6 @@
 
 kQuery.validator.addMethod("storagepath", function(value) {
-    return /^[0-9A-Za-z:_\-\/\\]+$/.test(value);
+    return /^[0-9A-Za-z:_\-\/\\\.]+$/.test(value);
 }, Koowa.translate('Folder names can only contain letters, numbers, dash, underscore or colons'));
 
 kQuery(function($) {

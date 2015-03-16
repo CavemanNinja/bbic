@@ -29,15 +29,6 @@ class ComDocmanViewDoclinkHtml extends ComDocmanViewHtml
             ->language('all')
             ->fetch();
 
-        foreach ($pages as $page)
-        {
-            if ($page->query['view'] === 'list') {
-                $page->categories = $this->getObject('com://admin/docman.model.categories')->page($page->id)->fetch();
-            } else {
-                $page->categories = array();
-            }
-        }
-
         $context->data->pages = $pages;
         $context->data->admin = JFactory::getApplication()->isAdmin();
 

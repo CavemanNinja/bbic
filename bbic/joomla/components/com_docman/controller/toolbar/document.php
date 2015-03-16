@@ -21,7 +21,8 @@ class ComDocmanControllerToolbarDocument extends ComKoowaControllerToolbarAction
         $this->addCommand('cancel');
 
         $controller = $this->getController();
-        $name    = strtolower($controller->getIdentifier()->name);
+        $translator = $this->getObject('translator');
+        $name       = $translator->translate(strtolower($context->subject->getIdentifier()->name));;
         $unique  = $controller->getModel()->getState()->isUnique();
         $title   = $this->getObject('translator')->translate($unique ? 'Edit {item_type}' : 'Create new {item_type}',
             array('item_type' => $name));

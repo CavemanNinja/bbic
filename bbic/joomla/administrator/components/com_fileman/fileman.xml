@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+	<identifier>com:fileman</identifier>
+	<name>com_fileman</name>
+    <author>Joomlatools</author>
+    <creationDate>July 2014</creationDate>
+    <copyright>Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+	<version>2.0.6</version>
+	<description>Advanced Media Manager</description>
+
+	<files folder="site/components/com_fileman">
+		<filename>fileman.php</filename>
+		<filename>router.php</filename>
+
+		<folder>controller</folder>
+        <folder>dispatcher</folder>
+		<folder>forms</folder>
+		<folder>language</folder>
+        <folder>resources</folder>
+		<folder>views</folder>
+	</files>
+
+    <media folder="media">
+        <folder>com_fileman</folder>
+    </media>
+
+    <scriptfile>resources/install/script.php</scriptfile>
+
+	<!-- Administrator back-end section -->
+	<administration>
+		<!-- Administration menu -->
+		<menu view="files">COM_FILEMAN</menu>
+		<!-- Back-end files -->
+        <files folder="administrator/components/com_fileman">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>fileman.php</filename>
+            <filename>version.php</filename>
+
+            <folder>controller</folder>
+            <folder>dispatcher</folder>
+            <folder>language</folder>
+            <folder>model</folder>
+            <folder>resources</folder>
+            <folder>template</folder>
+            <folder>views</folder>
+        </files>
+	</administration>
+
+    <dependencies>
+        <dependency type="koowa-component" element="files">extensions/files</dependency>
+    	<dependency type="plugin" element="filelink" folder="editors-xtd">extensions/plg_editorsxtd_filelink</dependency>
+    </dependencies>
+
+    <deleted>
+        <file>administrator/components/com_fileman/com_fileman.xml</file>
+        <file>administrator/components/com_fileman/install/install.php</file>
+        <file>administrator/components/com_fileman/install/uninstall.php</file>
+        <file>administrator/components/com_fileman/views/filelink/tmpl/default.php</file>
+        <folder>administrator/components/com_fileman/views/files/tmpl/app</folder>
+        <file>administrator/components/com_fileman/views/files/html.php</file>
+        <file>administrator/components/com_fileman/views/files/tmpl/default.php</file>
+        <file>administrator/components/com_fileman/views/files/tmpl/select.php</file>
+
+        <file>components/com_fileman/views/file/raw.php</file>
+        <file>components/com_fileman/views/folder/tmpl/gallery.php</file>
+        <file>components/com_fileman/views/folder/tmpl/table.php</file>
+        <file>components/com_fileman/views/submit/tmpl/form.php</file>
+
+        <folder>media/com_fileman/bootstrap</folder>
+        <folder>media/com_fileman/css/files</folder>
+        <file>media/com_fileman/css/files.css</file>
+        <file>media/com_fileman/css/gallery.css</file>
+        <file>media/com_fileman/css/table.css</file>
+        <file>media/com_fileman/css/toolbar.css</file>
+        <file>media/com_fileman/css/toolbar15.css</file>
+        <file>media/com_fileman/images/arrow.png</file>
+        <file>media/com_fileman/images/folder-140.png</file>
+        <file>media/com_fileman/images/icon-32-purge.png</file>
+        <file>media/com_fileman/js/gallery.js</file>
+        <folder>media/com_fileman/images/icons</folder>
+
+        <folder>administrator/components/com_files</folder>
+        <folder>components/com_files</folder>
+        <folder>media/com_files</folder>
+
+        <file>administrator/language/en-GB/en-GB.com_fileman.ini</file>
+        <file>administrator/language/en-GB/en-GB.com_fileman.menu.ini</file>
+        <file>administrator/language/en-GB/en-GB.plg_editors-xtd_filelink.ini</file>
+    </deleted>
+
+</extension>

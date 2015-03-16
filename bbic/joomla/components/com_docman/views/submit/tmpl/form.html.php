@@ -41,14 +41,16 @@ defined('KOOWA') or die; ?>
 
                     <legend><?= translate('Details'); ?></legend>
 
-                    <div class="control-group">
+                    <div class="control-group submit_document__title_field">
                         <label for="title_field"><?= translate('Title'); ?></label>
-                        <input required id="title_field" type="text" class="title input-xxlarge" size="25" name="title"
-                               value="<?= escape($document->title); ?>" />
+                        <div class="input-group">
+                            <input required id="title_field" type="text" class="title input-xxlarge" size="25" name="title"
+                                   value="<?= escape($document->title); ?>" />
+                        </div>
                     </div>
 
                     <? if ($show_categories): ?>
-                    <div class="control-group">
+                    <div class="control-group submit_document__category_field">
                         <label><?= translate('Category') ?></label>
                         <?=
                         helper('listbox.categories', array(
@@ -64,7 +66,7 @@ defined('KOOWA') or die; ?>
                     </div>
                     <? endif ?>
 
-                    <div class="control-group">
+                    <div class="control-group submit_document__document">
                         <ul class="nav nav-tabs">
                             <li>
                                 <a href="#" class="upload-method" data-type="file">

@@ -88,6 +88,8 @@
                                 <label class="control-label" for="allowed_extensions_tag"><?= translate('Select from presets'); ?></label>
                                 <ul id="extension_groups"></ul>
                             </div>
+                        </div>
+                        <div class="docman_grid">
                             <div class="control-group docman_grid__item one-whole">
                                 <div class="controls">
                                     <input type="text" class="input-block-level" name="allowed_extensions" id="allowed_extensions"
@@ -111,6 +113,8 @@
                                     <?= translate('You can override this per menu item in menu parameters.'); ?>
                                 </p>
                             </div>
+                        </div>
+                        <div class="docman_grid">
                             <div class="control-group docman_grid__item one-whole">
                                 <label class="control-label"><?= translate('Users can delete their own documents and categories');?></label>
                                 <div class="controls radio btn-group">

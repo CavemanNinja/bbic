@@ -45,7 +45,7 @@ class ComExtmanTemporaryDispatcher extends JDispatcher
             }
         }
 
-        if (!class_exists('ComLogmanVersion') || version_compare(ComLogmanVersion::VERSION, '2.0.0', '<'))
+        if (!file_exists(JPATH_ADMINISTRATOR.'/components/com_logman/dispatcher/http.php'))
         {
             $query = "UPDATE #__extensions SET enabled = 0 WHERE type='plugin' AND folder='koowa' AND element='logman'";
             JFactory::getDBO()->setQuery($query)->query();

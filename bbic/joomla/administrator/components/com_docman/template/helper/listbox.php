@@ -263,35 +263,34 @@ class ComDocmanTemplateHelperListbox extends ComKoowaTemplateHelperListbox
             'ignore' 	 => array(),
         ));
 
-        $list = $this->getObject($config->identifier)->setState(KObjectConfig::unbox($config->filter))->fetch();
-
-        //Get the list of items
-        $items = array();
-        foreach($list as $key => $item) {
-            $items[$key] = $item->getProperty($config->value);
-        }
-
-        if ($config->unique) {
-            $items = array_unique($items);
-        }
-
-        //Compose the options array
-        $options = array();
-
         $ignore = KObjectConfig::unbox($config->ignore);
-        foreach ($items as $key => $value)
+        $model  = $this->getObject($config->identifier);
+        $state  = KObjectConfig::unbox($config->filter);
+
+        $count  = $model->setState($state)->count();
+        $offset = 0;
+        $options    = array();
+
+        while ($offset < $count)
         {
-            $item = $list->find($key);
+            $categories = $model->setState($state)->limit(100)->offset($offset)->fetch();
 
-            if ($config->check_access && $item->isPermissible() && ($value != $config->selected) && !$item->canPerform('add')) {
-                continue;
+            foreach ($categories as $key => $item)
+            {
+                $value = $item->getProperty($config->value);
+
+                if ($config->check_access && $item->isPermissible() && ($value != $config->selected) && !$item->canPerform('add')) {
+                    continue;
+                }
+
+                if (in_array($item->id, $ignore)) {
+                    continue;
+                }
+
+                $options[] = $this->option(array('label' => str_repeat($config->indent, $item->level - 1) . $item->{$config->label}, 'value' => $item->{$config->value}));
             }
 
-            if (in_array($item->id, $ignore)) {
-                continue;
-            }
-
-            $options[] =  $this->option(array('label' => str_repeat($config->indent, $item->level-1) . $item->{$config->label}, 'value' => $item->{$config->value}));
+            $offset += 100;
         }
 
         //Add the options to the config object

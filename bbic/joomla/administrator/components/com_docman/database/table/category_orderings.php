@@ -6,7 +6,7 @@
  * @link        http://www.joomlatools.com
  */
 
-class ComDocmanDatabaseTableCategory_Orderings extends KDatabaseTableAbstract
+class ComDocmanDatabaseTableCategory_orderings extends KDatabaseTableAbstract
 {
     protected function _initialize(KObjectConfig $config)
     {

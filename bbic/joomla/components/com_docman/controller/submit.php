@@ -25,7 +25,7 @@ class ComDocmanControllerSubmit extends ComKoowaControllerModel
     protected function _initialize(KObjectConfig $config)
     {
         $config->append(array(
-            'behaviors' => array('notifiable', 'editable'),
+            'behaviors' => array('thumbnailable', 'findable', 'notifiable', 'editable'),
             'toolbars'  => array('submit'),
             'model'     => 'documents'
         ));
@@ -150,6 +150,7 @@ class ComDocmanControllerSubmit extends ComKoowaControllerModel
         {
             $message = $exception->getMessage();
             $context->getResponse()->setRedirect($this->getRequest()->getReferrer(), $message, 'error');
+            $context->getResponse()->send();
 
             $result = false;
         }

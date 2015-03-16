@@ -58,9 +58,9 @@ defined('KOOWA') or die; ?>
                         <span class="koowa_wrapped_content">
                             <span class="whitespace_preserver">
                                 <?php if ($params->document_title_link): ?>
-                                    <a href="<?php echo ($document->title_link) ?>" title="<?php echo $this->escape($document->storage->name);?>">
+                                    <a href="<?php echo ($document->title_link) ?>" title="<?php echo $this->escape($document->storage->name);?>"
                                         <?php echo $params->download_in_blank_page && $params->document_title_link === 'download'  ? 'target="_blank"' : ''; ?>
-                                        <span itemprop="name"><?php echo $this->escape($document->title);?></span><!--
+                                    ><span itemprop="name"><?php echo $this->escape($document->title);?></span><!--
                                         --><?php if ($document->title_link === $document->download_link): ?>
                                             <?php // Filetype and Filesize  ?>
                                             <?php if (($params->show_document_size && $document->size) || ($document->storage_type == 'file' && $params->show_document_extension)): ?>
@@ -132,8 +132,12 @@ defined('KOOWA') or die; ?>
             <?php // Date ?>
             <td width="5" class="koowa_table__dates">
             <?php if ($params->show_document_created): ?>
-                <time itemprop="datePublished" datetime="<?php echo $document->publish_date ?>">
-                    <?php echo $this->helper('date.format', array('date' => $document->publish_date, 'format' => 'd M Y')); ?>
+                <time itemprop="datePublished"
+                      datetime="<?php echo $this->parameters()->sort === 'touched_on' ? $document->touched_on : $document->publish_date ?>"
+                >
+                    <?php echo $this->helper('date.format', array(
+                        'date' => $this->parameters()->sort === 'touched_on' ? $document->touched_on : $document->publish_date,
+                        'format' => 'd M Y')); ?>
                 </time>
             <?php endif; ?>
             </td>
@@ -142,7 +146,7 @@ defined('KOOWA') or die; ?>
             <?php if ($params->document_title_link !== 'download'): ?>
             <td width="5" class="koowa_table__download">
                 <div class="btn-group">
-                    <a class="btn btn-mini docman_download__button" href="<?php echo $document->download_link; ?>"
+                    <a class="btn btn-default btn-mini docman_download__button" href="<?php echo $document->download_link; ?>"
                         <?php echo $params->download_in_blank_page ? 'target="_blank"' : ''; ?>
                         >
                         <?php // Text  ?>

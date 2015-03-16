@@ -41,7 +41,7 @@ class ComExtmanModelEntityExtensionKoowa extends ComExtmanModelEntityExtension
         $result = $this->_uninstallKoowaComponent();
 
         if ($result) {
-            $result = parent::delete();
+            $result = KDatabaseRowAbstract::delete();
         }
 
         return $result;
@@ -86,13 +86,27 @@ class ComExtmanModelEntityExtensionKoowa extends ComExtmanModelEntityExtension
 
         if ($this->install_method !== 'discover_install')
         {
-            foreach ($folders as $folder)
-            {
-                $target = JPATH_ROOT.'/'.$folder;
-                $source = $this->package.'/'.$folder;
-                $temp   = $target.'_tmp';
 
-                if (!JFolder::exists($source)) {
+            // new structure
+            if (file_exists($this->package.'/koowa-component.xml'))
+            {
+                $map = array(
+                    $this->package                     => JPATH_ROOT.'/'.$folders['code'],
+                    $this->package.'/resources/assets' => JPATH_ROOT.'/'.$folders['media']
+                );
+            }
+            else {
+                $map = array(
+                    $this->package.'/'.$folders['code']  => JPATH_ROOT.'/'.$folders['code'],
+                    $this->package.'/'.$folders['media'] => JPATH_ROOT.'/'.$folders['media'],
+                );
+            }
+
+            foreach ($map as $from => $to)
+            {
+                $temp   = $to.'_tmp';
+
+                if (!JFolder::exists($from)) {
                     continue;
                 }
 
@@ -100,13 +114,13 @@ class ComExtmanModelEntityExtensionKoowa extends ComExtmanModelEntityExtension
                     JFolder::delete($temp);
                 }
 
-                JFolder::copy($source, $temp);
+                JFolder::copy($from, $temp);
 
-                if (JFolder::exists($target)) {
-                    JFolder::delete($target);
+                if (JFolder::exists($to)) {
+                    JFolder::delete($to);
                 }
 
-                JFolder::move($temp, $target);
+                JFolder::move($temp, $to);
             }
         }
 

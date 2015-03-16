@@ -49,6 +49,10 @@ abstract class ComDocmanModelAbstract extends KModelDatabase
         if (!self::$_pages_model) {
             self::$_pages_model = $this->getObject('com://admin/docman.model.pages');
 
+            if (JFactory::getApplication()->isAdmin()) {
+                self::$_pages_model->access(-1);
+            }
+
             $view = $this->getObject('request')->query->view;
             if (JFactory::getApplication()->isAdmin() || $view === 'doclink' || $view === 'documents') {
                 self::$_pages_model->language('all');

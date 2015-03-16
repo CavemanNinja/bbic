@@ -1,6 +1,7 @@
 #documents-sidebar, #files-sidebar {
   border-right: 0;
   border-left: 1px solid #ddd;
+  float: right;
 }
 .fltlft {
   float: right;
@@ -65,6 +66,13 @@ ul.sidebar-nav li a {
   ul, li {
     float: right !important;
   }
+  li {
+    text-align: right;
+  }
+  .icon-triangle-right
+  {
+    transform:rotate(180deg);
+  }
   .icon-triangle-right, .icon-triangle-down, .icon-triangle-hide {
     padding-right: 0;
     padding-left: 2px;
@@ -119,8 +127,255 @@ ul.sidebar-nav li a {
   }
 }
 
+.docman_grid__item {
+  float: right;
+  padding-left: 0;
+  padding-right: 45px;
+}
+
+.docman_grid__item:first-child {
+  padding-right: 0;
+}
+
 // Pagination
 .pagination-toolbar .limit {
   float: right;
 }
 
+// Categories
+table {
+  tr {
+    .docman_table__title_field, .docman_table__category_field {
+      text-align: right;
+    }
+  }
+  th, td {
+    text-align: right;
+  }
+}
+
+@for $i from 1 through $max-level {
+  .docman_table__title_field.level#{$i}{padding-left:0; padding-right: 34px * ($i - 1)}
+}
+
+.docman_categories_table td.docman_table__title_field .docman_category_title:before
+{
+  left: auto;
+  right: -2em;
+  border-left: 0;
+  border-right: 1px solid #ccc;
+}
+
+
+.input-group
+{
+  .input-group-addon:not(:first-child):not(:last-child),
+  .input-group-btn:not(:first-child):not(:last-child)>.btn,
+  .input-group-form-control:not(:first-child),
+  .input-group-form-control-field:not(:first-child) .input-group-form-control,
+  .input-group-form-control-field:not(:first-child) .input-group>.input-group-addon,
+  .input-group-form-control-field:not(:first-child) .input-group>.input-group-form-control {
+    border-right: none;
+    border-left: 1px solid #ccc;
+  }
+
+  .input-group-form-control:not(:last-child),
+  .input-group-form-control-field:not(:last-child) .input-group-form-control,
+  .input-group-form-control-field:not(:last-child) .input-group>.input-group-addon,
+  .input-group-form-control-field:not(:last-child) .input-group>.input-group-form-control {
+    border-left: none;
+    border-right: 1px solid #ccc;
+  }
+
+  .input-group-form-control:first-child:not(:last-child),
+  .input-group-addon:first-child,
+  .input-group-btn:first-child>.btn,
+  .input-group-btn:first-child>*>.btn,
+  .input-group-btn:first-child>.dropdown-toggle,
+  .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .input-group-form-control:last-child,
+  .input-group-addon:last-child,
+  .input-group-btn:last-child>.btn,
+  .input-group-btn:last-child>.dropdown-toggle,
+  .input-group-btn:first-child>.btn:not(:first-child) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  .caret {
+    margin: 7px 6px 0 0;
+  }
+
+  ul {
+    left: auto;
+    right: 0;
+  }
+
+  .docman_dropdown_grid ul li a.koowa-modal.mfp-iframe {
+    padding-left: 0;
+    padding-right: 5px;
+  }
+}
+
+.dropdown-menu .koowa-modal
+{
+  text-align: right;
+}
+
+.datepicker {
+  direction: rtl;
+}
+
+.koowa_dialog {
+  direction:rtl;
+
+  #documents-sidebar, #files-sidebar
+  {
+    border-left: none;
+  }
+}
+.koowa_dialog__wrapper__child
+{
+  float:right;
+  border-left: none;
+  border-right: 1px solid #ccc;
+}
+
+.koowa_dialog__doclink_menu_items
+{
+  border-right: none;
+  border-left: 1px solid #ccc;
+}
+
+.koowa_dialog__child__content .scopebar
+{
+  right: auto;
+  left: 3px;
+}
+
+.koowa_dialog__menu {
+  left: auto;
+  right: 25%;
+
+  border-left: 0;
+  border-right: 1px solid transparent;
+  padding-left: 0;
+  padding-right: 10px;
+
+  a {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+#files-upload h3
+{
+  padding: 15px 15px 0 0;
+}
+#files-upload-controls .upload-buttons
+{
+  float: right;
+  margin: 10px 20px 0 0;
+
+  li{
+    display: inline-block;
+  }
+  li:first-child
+  {
+    padding-right: 0;
+    padding-left: 5px;
+  }
+
+  li a.active::before,
+  li a.active::after
+  {
+    left: auto;
+    right: 50%;
+    margin-left: 0;
+    margin-right: -8px;
+  }
+}
+
+#upload-max
+{
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+#remote-url, #remote-name
+{
+  float: right;
+}
+
+#files-uploader-web .remote-submit
+{
+  right: 0;
+  left: 2px;
+}
+
+
+.select2-container .select2-choice,
+.select2-container .select2-container-multi.select2-container-disabled .select2-choices,
+.select2-container-multi.select2-container-disabled .select2-container .select2-choices
+{
+  padding: 0 8px 0 0;
+}
+
+.select2-container .select2-choice .select2-arrow,
+.select2-container .select2-container-multi.select2-container-disabled .select2-choices .select2-arrow,
+.select2-container-multi.select2-container-disabled .select2-container .select2-choices .select2-arrow
+{
+  right: auto;
+  left: 0;
+  border-left: 0;
+  border-right: 1px solid #aaa;
+  border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+}
+
+.select2-container .select2-choice>.select2-chosen,
+.select2-container .select2-container-multi.select2-container-disabled .select2-choices>.select2-chosen,
+.select2-container-multi.select2-container-disabled .select2-container .select2-choices>.select2-chosen
+{
+  margin-right: 0;
+  margin-left: 26px;
+}
+
+#files-upload.uploader-files-queued {
+  .plupload_start,
+  .plupload_clear {
+    float: left;
+  }
+}
+
+.remote-wrap {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-right-width: 1px;
+  border-left-width: 0;
+}
+
+#remote-url {
+  border-left-color: #e6e6e6;
+}
+
+#remote-name {
+  width: 25%;
+  border-right-color: #e6e6e6;
+  border-left-width: 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: inherit;
+}

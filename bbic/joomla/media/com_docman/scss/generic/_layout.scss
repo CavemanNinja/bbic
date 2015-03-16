@@ -1,6 +1,6 @@
 // Overrides
 .help-block {
-  margin-top: 9px; // Adding a top amrgin to the help block so it won't stick to the forms
+  margin-top: 9px; // Adding a top margin to the help block so it won't stick to the forms
 }
 
 #extension_groups {
@@ -49,7 +49,12 @@
   @include clearfix;
   margin: 0 auto;
   max-width: 1020px;
-  padding: 30px 0 0;
+  padding: 15px 0 0;
+
+  @media screen and (min-width: $maxWidth) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 #document_list .docman_grid__item {
@@ -66,12 +71,17 @@
 
   @media screen and (min-width: $queryWidthMedium) {
     margin: 0;
-    margin-left:  -$koowaGutterWidthFirstLevel;
 
     .docman_grid {
       margin: 0;
-      margin-left: -$koowaGutterWidthSecondLevel;
     }
+  }
+
+  // JCE fix
+  .mceLayout {
+    max-width: 100%;
+    width: 99%;
+    @include box-sizing(border-box);
   }
 }
 
@@ -81,13 +91,24 @@
   width: 100%;
   @include box-sizing(border-box);
 
+  &:first-child {
+    padding-left: 0;
+  }
+
+  fieldset {
+    float: left;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    @include box-sizing(border-box);
+  }
+
   @media screen and (min-width: $queryWidthMedium) {
+    padding-left: $koowaGutterWidthSecondLevel;
+  }
+
+  @media screen and (min-width: $maxWidth) {
     padding-left: $koowaGutterWidthFirstLevel;
-
-    .docman_grid__item {
-      padding-left: $koowaGutterWidthSecondLevel;
-    }
-
   }
 
   @media screen and (min-width: $queryWidthMedium) {
@@ -123,27 +144,27 @@
 
 .select2-container {
   margin-bottom: 9px;
-  width: 100% !important;
-  max-width: 400px;
+  max-width: 100%;
 }
 
 .docman_grid .select2-container,
 .documents-filters .select2-container {
   max-width: none;
 }
-/*
-FIXME: This breaks the select elements in document/category forms like the access box in Firefox.
-With this rule select box disappears before you can click on any of the options
-.docman_grid fieldset {
-  @include clearfix;
-}
-*/
+
 .docman_grid legend + .control-group {
   margin-top: 0;
 }
 
-.docman_grid .controls {
-  min-height: 40px;
+.docman_grid {
+  .controls {
+    min-height: 40px;
+  }
+
+  .description_container .controls {
+    max-width: 100%;
+    overflow: auto;
+  }
 }
 
 .docman_grid .thumbnail-picker {

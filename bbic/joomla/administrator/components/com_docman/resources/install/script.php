@@ -43,7 +43,7 @@ class com_docmanInstallerScript
             $cache    = new JRegistry($manifest);
             $version  = $cache->get('version');
 
-            if (version_compare($version, '2.0.3', '<') || !class_exists('ComExtmanModelEntityExtension'))
+            if (version_compare($version, '2.0.6', '<') || !class_exists('ComExtmanModelEntityExtension'))
             {
                 $errors[] = JText::_('This component requires a newer EXTman version. Please download EXTman from <a href=http://joomlatools.com target=_blank>joomlatools.com</a> and upgrade it first.');
                 $return   = false;
@@ -55,7 +55,7 @@ class com_docmanInstallerScript
             // If user has Docman 1.x installed, stop the installation
             if ($type === 'update' && file_exists(JPATH_ADMINISTRATOR.'/components/com_docman/docman.class.php'))
             {
-                $errors[] = JText::_('It seems that you have DOCman 1.6 installed. In order to install DOCman 2, you need to uninstall it since there is no migration available yet for your existing documents.');
+                $errors[] = JText::_('It seems that you have DOCman 1.6 installed. In order to install DOCman 2, you need to migrate your documents using our <a href=http://www.joomlatools.com/support/forums/topic/3363-how-to-migrate-from-docman-1x-to-docman-20 target=_blank>migrator</a>.');
                 $return   = false;
             }
             else

@@ -24,197 +24,193 @@ defined('KOOWA') or die; ?>
         <div class="docman_container">
             <div class="docman_grid">
                 <div class="docman_grid__item two-thirds">
-                    <fieldset>
 
-                        <legend><?= translate('Details') ?></legend>
+                    <legend><?= translate('Details') ?></legend>
 
-                        <div class="docman_grid">
-                            <div class="control-group docman_grid__item two-thirds">
-                                <label class="control-label" for="docman_form_title"><?= translate('Title') ?></label>
-                                <div class="controls">
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                            <?= helper('behavior.icon', array(
-                                                'name'  => 'parameters[icon]',
-                                                'id' => 'params_icon',
-                                                'value' => $document->getParameters()->get('icon', 'default'),
-                                                'link'  => route('option=com_docman&view=files&layout=select&tmpl=koowa&container=docman-icons&types[]=image')
-                                            ))?>
-                                        </span>
-                                        <input required class="input-group-form-control" id="docman_form_title" type="text" name="title" maxlength="255"
-                                               value="<?= escape($document->title); ?>" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group docman_grid__item one-third">
-                                <label class="control-label" for="docman_form_alias"><?= translate('Alias') ?></label>
-                                <div class="controls">
-                                    <input id="docman_form_alias" type="text" class="input-block-level" name="slug" maxlength="255"
-                                           value="<?= escape($document->slug) ?>" />
+                    <div class="docman_grid">
+                        <div class="control-group docman_grid__item two-thirds">
+                            <label class="control-label" for="docman_form_title"><?= translate('Title') ?></label>
+                            <div class="controls">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <?= helper('behavior.icon', array(
+                                            'name'  => 'parameters[icon]',
+                                            'id' => 'params_icon',
+                                            'value' => $document->getParameters()->get('icon', 'default'),
+                                            'link'  => route('option=com_docman&view=files&layout=select&tmpl=koowa&container=docman-icons&types[]=image')
+                                        ))?>
+                                    </span>
+                                    <input required class="input-group-form-control" id="docman_form_title" type="text" name="title" maxlength="255"
+                                           value="<?= escape($document->title); ?>" />
                                 </div>
                             </div>
                         </div>
+                        <div class="control-group docman_grid__item one-third">
+                            <label class="control-label" for="docman_form_alias"><?= translate('Alias') ?></label>
+                            <div class="controls">
+                                <input id="docman_form_alias" type="text" class="input-block-level" name="slug" maxlength="255"
+                                       value="<?= escape($document->slug) ?>" />
+                            </div>
+                        </div>
+                    </div>
 
-                        <?= import('default_field_file.html'); ?>
+                    <?= import('default_field_file.html'); ?>
 
-                        <div class="docman_grid">
-                            <div class="control-group docman_grid__item one-whole">
-                                <label class="control-label"><?= translate('Category'); ?></label>
-                                <div class="controls">
-                                    <?= helper('listbox.categories', array(
-                                        'check_access' => true,
-                                        'deselect' => false,
+                    <div class="docman_grid">
+                        <div class="control-group docman_grid__item one-whole">
+                            <label class="control-label"><?= translate('Category'); ?></label>
+                            <div class="controls">
+                                <?= helper('listbox.categories', array(
+                                    'check_access' => true,
+                                    'deselect' => false,
+                                    'required' => true,
+                                    'name' => 'docman_category_id',
+                                    'attribs' => array(
                                         'required' => true,
-                                        'name' => 'docman_category_id',
-                                        'attribs' => array(
-                                            'required' => true,
-                                            'id'    => 'docman_category_id'
-                                        ),
-                                        'selected' => $document->docman_category_id
-                                    ))?>
-                                </div>
+                                        'id'    => 'docman_category_id'
+                                    ),
+                                    'selected' => $document->docman_category_id
+                                ))?>
                             </div>
                         </div>
+                    </div>
 
 
-                        <legend><?= translate('Description') ?></legend>
+                    <legend><?= translate('Description') ?></legend>
 
-                        <div class="docman_grid description_container">
-                            <div class="control-group docman_grid__item one-whole">
-                                <div class="controls">
-                                    <?= helper('editor.display', array(
-                                        'name' => 'description',
-                                        'value' => $document->description,
-                                        'id'   => 'description',
-                                        'width' => '100%',
-                                        'height' => '341',
-                                        'cols' => '100',
-                                        'rows' => '20',
-                                        'buttons' => array('pagebreak')
-                                    )); ?>
-                                </div>
+                    <div class="docman_grid description_container">
+                        <div class="control-group docman_grid__item one-whole">
+                            <div class="controls">
+                                <?= helper('editor.display', array(
+                                    'name' => 'description',
+                                    'value' => $document->description,
+                                    'id'   => 'description',
+                                    'width' => '100%',
+                                    'height' => '341',
+                                    'cols' => '100',
+                                    'rows' => '20',
+                                    'buttons' => array('pagebreak')
+                                )); ?>
                             </div>
                         </div>
+                    </div>
 
-                    </fieldset>
                 </div>
                 <div class="docman_grid__item one-third">
-                    <fieldset>
 
-                        <legend><?= translate('Publishing') ?></legend>
+                    <legend><?= translate('Publishing') ?></legend>
 
-                        <div class="docman_grid">
-                            <div class="control-group docman_grid__item one-whole">
-                                <label class="control-label"><?= translate('Status'); ?></label>
-                                <div class="controls radio btn-group">
-                                    <?= helper('select.booleanlist', array(
-                                        'name' => 'enabled',
-                                        'selected' => $document->enabled,
-                                        'true' => translate('Published'),
-                                        'false' => translate('Unpublished')
-                                    )); ?>
-                                </div>
+                    <div class="docman_grid">
+                        <div class="control-group docman_grid__item one-whole">
+                            <label class="control-label"><?= translate('Status'); ?></label>
+                            <div class="controls radio btn-group">
+                                <?= helper('select.booleanlist', array(
+                                    'name' => 'enabled',
+                                    'selected' => $document->enabled,
+                                    'true' => translate('Published'),
+                                    'false' => translate('Unpublished')
+                                )); ?>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="docman_grid">
-                            <div class="control-group docman_grid__item one-whole">
-                                <label class="control-label"><?= translate('Date'); ?></label>
-                                <div class="controls">
-                                    <?= helper('behavior.calendar', array(
-                                        'name' => 'created_on',
-                                        'id' => 'created_on',
-                                        'value' => $document->created_on,
-                                        'format' => '%Y-%m-%d %H:%M:%S',
-                                        'filter' => 'user_utc'
-                                    ))?>
-                                </div>
+                    <div class="docman_grid">
+                        <div class="control-group docman_grid__item one-whole">
+                            <label class="control-label"><?= translate('Date'); ?></label>
+                            <div class="controls">
+                                <?= helper('behavior.calendar', array(
+                                    'name' => 'created_on',
+                                    'id' => 'created_on',
+                                    'value' => $document->created_on,
+                                    'format' => '%Y-%m-%d %H:%M:%S',
+                                    'filter' => 'user_utc'
+                                ))?>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="docman_grid">
-                            <div class="control-group docman_grid__item one-whole">
-                                <label class="control-label"><?= translate('Start publishing on'); ?></label>
-                                <div class="controls">
-                                    <? $datetime = new DateTime(null, new DateTimeZone('UTC')) ?>
-                                    <? $datetime->modify('-1 day'); ?>
-                                    <?= helper('behavior.calendar', array(
-                                        'name' => 'publish_on',
-                                        'id' => 'publish_on',
-                                        'value' => $document->publish_on,
-                                        'format' => '%Y-%m-%d %H:%M:%S',
-                                        'filter' => 'user_utc',
-                                        'options' => array(
-                                            'clearBtn' => true,
-                                            'startDate' => $datetime->format('Y-m-d H:i:s'),
-                                            'todayBtn' => false
-                                        )
-                                    ))?>
-                                </div>
+                    <div class="docman_grid">
+                        <div class="control-group docman_grid__item one-whole">
+                            <label class="control-label"><?= translate('Start publishing on'); ?></label>
+                            <div class="controls">
+                                <? $datetime = new DateTime(null, new DateTimeZone('UTC')) ?>
+                                <? $datetime->modify('-1 day'); ?>
+                                <?= helper('behavior.calendar', array(
+                                    'name' => 'publish_on',
+                                    'id' => 'publish_on',
+                                    'value' => $document->publish_on,
+                                    'format' => '%Y-%m-%d %H:%M:%S',
+                                    'filter' => 'user_utc',
+                                    'options' => array(
+                                        'clearBtn' => true,
+                                        'startDate' => $datetime->format('Y-m-d H:i:s'),
+                                        'todayBtn' => false
+                                    )
+                                ))?>
                             </div>
                         </div>
-                        <div class="docman_grid">
-                            <div class="control-group docman_grid__item one-whole">
-                                <label class="control-label"><?= translate('Stop publishing on'); ?></label>
-                                <div class="controls">
-                                    <?= helper('behavior.calendar', array(
-                                        'name' => 'unpublish_on',
-                                        'id' => 'unpublish_on',
-                                        'value' => $document->unpublish_on,
-                                        'format' => '%Y-%m-%d %H:%M:%S',
-                                        'filter' => 'user_utc',
-                                        'options' => array(
-                                            'clearBtn' => true,
-                                            'todayBtn' => false
-                                        )
-                                    ))?>
-                                </div>
+                    </div>
+                    <div class="docman_grid">
+                        <div class="control-group docman_grid__item one-whole">
+                            <label class="control-label"><?= translate('Stop publishing on'); ?></label>
+                            <div class="controls">
+                                <?= helper('behavior.calendar', array(
+                                    'name' => 'unpublish_on',
+                                    'id' => 'unpublish_on',
+                                    'value' => $document->unpublish_on,
+                                    'format' => '%Y-%m-%d %H:%M:%S',
+                                    'filter' => 'user_utc',
+                                    'options' => array(
+                                        'clearBtn' => true,
+                                        'todayBtn' => false
+                                    )
+                                ))?>
                             </div>
                         </div>
+                    </div>
 
 
-                        <legend><?= translate('Permissions') ?></legend>
+                    <legend><?= translate('Permissions') ?></legend>
 
-                        <div class="docman_grid">
-                            <div class="control-group docman_grid__item one-whole">
-                                <label class="control-label"><?= translate('Access'); ?></label>
-                                <div class="controls">
-                                    <?= helper('listbox.access', array(
-                                        'name' => 'access',
-                                        'inheritable' => true,
-                                        'attribs' => array('class' => 'input-block-level'),
-                                        'selected' => $document->access_raw
-                                    ))?>
+                    <div class="docman_grid">
+                        <div class="control-group docman_grid__item one-whole">
+                            <label class="control-label"><?= translate('Access'); ?></label>
+                            <div class="controls">
+                                <?= helper('listbox.access', array(
+                                    'name' => 'access',
+                                    'inheritable' => true,
+                                    'attribs' => array('class' => 'input-block-level'),
+                                    'selected' => $document->access_raw
+                                ))?>
 
-                                    <?
-                                    $has_value = !$document->isNew() && $document->access_raw == -1;
-                                    $default = '<span>'
-                                        . ($has_value ? $document->access_title : '')
-                                        .'</span>';
-                                    ?>
-                                    <p class="help-block current-access">
-                                        <?= translate('Calculated as {access}', array('access' => $default)); ?>
-                                    </p>
-                                </div>
+                                <?
+                                $has_value = !$document->isNew() && $document->access_raw == -1;
+                                $default = '<span>'
+                                    . ($has_value ? $document->access_title : '')
+                                    .'</span>';
+                                ?>
+                                <p class="help-block current-access">
+                                    <?= translate('Calculated as {access}', array('access' => $default)); ?>
+                                </p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="docman_grid">
-                            <div class="control-group docman_grid__item one-whole">
-                                <label class="control-label"><?= translate('Owner'); ?></label>
-                                <div class="controls">
-                                    <?= helper('listbox.users', array(
-                                        'name' => 'created_by',
-                                        'selected' => $document->created_by ? $document->created_by : object('user')->getId(),
-                                        'deselect' => false
-                                    )) ?>
-                                </div>
+                    <div class="docman_grid">
+                        <div class="control-group docman_grid__item one-whole">
+                            <label class="control-label"><?= translate('Owner'); ?></label>
+                            <div class="controls">
+                                <?= helper('listbox.users', array(
+                                    'name' => 'created_by',
+                                    'selected' => $document->created_by ? $document->created_by : object('user')->getId(),
+                                    'deselect' => false
+                                )) ?>
                             </div>
                         </div>
+                    </div>
 
-                        <?= import('default_field_acl.html'); ?>
+                    <?= import('default_field_acl.html'); ?>
 
-                    </fieldset>
                 </div>
             </div>
         </div>
