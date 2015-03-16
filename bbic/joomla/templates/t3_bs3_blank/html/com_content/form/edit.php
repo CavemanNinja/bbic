@@ -7,12 +7,31 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+// var_dump($this->form->getAttribute('created_by'));
+// var_dump($this->item->get('created_by'));
+// var_dump($this);
+
 defined('_JEXEC') or die;
+
+$db = JFactory::getDbo();
+$query = $db->getQuery(true);
+
+$query = $db->getQuery(true);
+$query->select($db->quoteName('username'));
+$query->from($db->quoteName('#__users'));
+$query->where($db->quoteName('id') . " = " . $this->item->get('created_by'));
+$db->setQuery($query);
+$username = $db->loadResult();
+
+
+// $userRow = $userTable->load($this->item->get('created_by'));
+// var_dump($userRow);
 
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.calendar');
 JHtml::_('behavior.formvalidation');
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css', array(), true);
+
 
 // var_dump($this);
 
@@ -848,6 +867,13 @@ if(count($extrafields)){
 								<?php endforeach ?>
 							<?php endforeach ?>
 						</div>
+						<?php endif; ?>
+
+						<?php if (!$isTenant) : ?>
+							<div class="form-group">
+								<label class="control-label">Created By User</label>
+								<p><?php echo $username; ?></p>
+							</div>
 						<?php endif; ?>
 
 						<div class="form-group hidden">

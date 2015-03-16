@@ -279,7 +279,7 @@
 			"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
 			"settings":
 			{
-				"buffer_size": 34043,
+				"buffer_size": 34764,
 				"line_ending": "Windows"
 			}
 		}
@@ -334,7 +334,6 @@
 	[
 		"/C/wamp/www/bbic",
 		"/C/wamp/www/bbic/joomla",
-		"/C/wamp/www/bbic/joomla/language/en-GB",
 		"/C/wamp/www/bbic/joomla/templates",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html",
@@ -713,15 +712,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34043,
+						"buffer_size": 34764,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4291,
-								4291
+								0,
+								0
 							]
 						],
 						"settings":
