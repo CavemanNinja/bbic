@@ -16,7 +16,7 @@ JHtml::_('behavior.keepalive');
 if (version_compare(JVERSION, '3.0', 'ge')) {
 	JHtml::_('bootstrap.tooltip');
 }
-var_dump($params);
+// var_dump($params);
 ?>
 <?php if ($type == 'logout') : ?>
 	<form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form"
