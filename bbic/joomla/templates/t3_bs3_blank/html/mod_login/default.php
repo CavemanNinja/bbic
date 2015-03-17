@@ -16,6 +16,7 @@ JHtml::_('behavior.keepalive');
 if (version_compare(JVERSION, '3.0', 'ge')) {
 	JHtml::_('bootstrap.tooltip');
 }
+var_dump($params);
 ?>
 <?php if ($type == 'logout') : ?>
 	<form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form"
@@ -38,7 +39,7 @@ if (version_compare(JVERSION, '3.0', 'ge')) {
 		</div>
 	</form>
 <?php else : ?>
-	<form action="<?php echo JRoute::_('index.php', true, false); ?>" method="post" id="login-form">
+	<form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form">
 		<?php if ($params->get('pretext')): ?>
 			<div class="pretext">
 				<p><?php echo $params->get('pretext'); ?></p>
