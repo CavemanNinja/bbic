@@ -24,7 +24,7 @@ class JConfig {
 
 	public $db = 'heroku_e299eddf77acc03';
 	public $dbprefix = 'yzhv6_';
-	public $live_site = 'https://afternoon-falls-9745.herokuapp.com/bbic';
+	public $live_site = 'https://afternoon-falls-9745.herokuapp.com';
 	public $secret = 'hNZRfrd97rlRJoor';
 	public $gzip = '0';
 	public $error_reporting = 'none';
