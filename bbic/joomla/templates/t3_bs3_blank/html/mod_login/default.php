@@ -39,7 +39,7 @@ var_dump($params);
 		</div>
 	</form>
 <?php else : ?>
-	<form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form">
+	<form action="<?php echo JRoute::_('index.php', true, '0'); ?>" method="post" id="login-form">
 		<?php if ($params->get('pretext')): ?>
 			<div class="pretext">
 				<p><?php echo $params->get('pretext'); ?></p>
