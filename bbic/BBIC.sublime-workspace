@@ -276,11 +276,11 @@
 	"buffers":
 	[
 		{
-			"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+			"file": "joomla/configuration.php",
 			"settings":
 			{
-				"buffer_size": 34764,
-				"line_ending": "Windows"
+				"buffer_size": 2894,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -333,7 +333,6 @@
 	"expanded_folders":
 	[
 		"/C/wamp/www/bbic",
-		"/C/wamp/www/bbic/joomla",
 		"/C/wamp/www/bbic/joomla/templates",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html",
@@ -342,6 +341,7 @@
 	],
 	"file_history":
 	[
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
 		"/C/wamp/www/bbic/joomla/configuration.php",
 		"/C/wamp/www/composer.json",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/custom.css",
@@ -358,7 +358,6 @@
 		"/C/Users/Jalal/.AndroidStudioBeta/config/plugins/availables.xml",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_docman_documents/default.html.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
 		"/C/wamp/www/bbic/joomla/modules/mod_docman_documents/tmpl/default.html.php",
 		"/C/wamp/www/bbic/joomla/components/com_content/views/categories/tmpl/default.php",
 		"/C/wamp/www/bbic/joomla/components/com_content/views/categories/tmpl/default_items.php",
@@ -708,30 +707,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+					"file": "joomla/configuration.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34764,
+						"buffer_size": 2894,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								513,
+								513
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2170.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
