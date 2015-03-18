@@ -863,19 +863,17 @@ if(count($extrafields)){
 						</div>
 						<?php endif; ?>
 
-						<?php if (!$isTenant) : ?>
+						<?php $created_by = $this->item->get('created_by'); ?>
+						<?php if (!$isTenant && $created_by != NULL) : ?>
 							
 							<?php
-								var_dump($this);
-								var_dump($this->item->get('created_by'));
-
-								// $db = JFactory::getDbo();
-								// $query = $db->getQuery(true);
-								// $query->select($db->quoteName('username'));
-								// $query->from($db->quoteName('#__users'));
-								// $query->where($db->quoteName('id') . " = " . $this->item->get('created_by'));
-								// $db->setQuery($query);
-								// $username = $db->loadResult();
+								$db = JFactory::getDbo();
+								$query = $db->getQuery(true);
+								$query->select($db->quoteName('username'));
+								$query->from($db->quoteName('#__users'));
+								$query->where($db->quoteName('id') . " = " . $created_by);
+								$db->setQuery($query);
+								$username = $db->loadResult();
 							?>
 
 							<div class="form-group">
