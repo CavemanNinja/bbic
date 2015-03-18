@@ -9,7 +9,7 @@
 
 // no direct access
 defined('_JEXEC') or die;
-
+var_dump($params);
 require_once JPATH_SITE.'/components/com_users/helpers/route.php';
 
 JHtml::_('behavior.keepalive');
@@ -19,7 +19,7 @@ if (version_compare(JVERSION, '3.0', 'ge')) {
 // var_dump($params->'usesecure');
 ?>
 <?php if ($type == 'logout') : ?>
-	<form action="<?php echo JRoute::_('index.php', true, 1); ?>" method="post" id="login-form"
+	<form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form"
 		  class="form-vertical">
 		<?php if ($params->get('greeting')) : ?>
 			<div class="login-greeting">
