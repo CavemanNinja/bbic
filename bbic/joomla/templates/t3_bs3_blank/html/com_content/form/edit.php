@@ -866,6 +866,7 @@ if(count($extrafields)){
 						<?php if (!$isTenant) : ?>
 							
 							<?php
+								var_dump($this);
 								var_dump($this->item->get('created_by'));
 
 								// $db = JFactory::getDbo();
