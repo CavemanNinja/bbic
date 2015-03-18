@@ -12,6 +12,9 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
+	// public $host = 'localhost';
+	// public $user = 'root';
+	// public $password = '';
 	public $host = 'us-cdbr-iron-east-01.cleardb.net';
 	public $user = 'b2c8d807e51feb';
 	public $password = '3f32f546';
@@ -20,7 +23,7 @@ class JConfig {
 	public $live_site = '';
 	public $secret = 'hNZRfrd97rlRJoor';
 	public $gzip = '0';
-	public $error_reporting = 'none';
+	public $error_reporting = 'development';
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '';
 	public $ftp_port = '';
@@ -50,7 +53,7 @@ class JConfig {
 	public $MetaVersion = '0';
 	public $robots = '';
 	public $sef = '0';
-	public $sef_rewrite = '1';
+	public $sef_rewrite = '0';
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '5';
