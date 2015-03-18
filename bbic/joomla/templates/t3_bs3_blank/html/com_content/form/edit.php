@@ -13,16 +13,16 @@
 
 defined('_JEXEC') or die;
 
-$db = JFactory::getDbo();
-$query = $db->getQuery(true);
+// $db = JFactory::getDbo();
 
-$query = $db->getQuery(true);
-$query->select($db->quoteName('username'));
-$query->from($db->quoteName('#__users'));
-$query->where($db->quoteName('id') . " = " . $this->item->get('created_by'));
-$db->setQuery($query);
-$username = $db->loadResult();
+// $query = $db->getQuery(true);
+// $query->select($db->quoteName('username'));
+// $query->from($db->quoteName('#__users'));
+// $query->where($db->quoteName('id') . " = " . $this->item->get('created_by'));
+// $db->setQuery($query);
+// $username = $db->loadResult();
 
+$username = "poppy";
 
 // $userRow = $userTable->load($this->item->get('created_by'));
 // var_dump($userRow);
