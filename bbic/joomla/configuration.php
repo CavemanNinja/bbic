@@ -17,7 +17,7 @@ class JConfig {
 	public $password = '3f32f546';
 	public $db = 'heroku_e299eddf77acc03';
 	public $dbprefix = 'yzhv6_';
-	public $live_site = '';
+	public $live_site = 'https://afternoon-falls-9745.herokuapp.com';
 	public $secret = 'hNZRfrd97rlRJoor';
 	public $gzip = '0';
 	public $error_reporting = 'none';
@@ -50,7 +50,7 @@ class JConfig {
 	public $MetaVersion = '0';
 	public $robots = '';
 	public $sef = '0';
-	public $sef_rewrite = '0';
+	public $sef_rewrite = '1';
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '5';
@@ -73,7 +73,7 @@ class JConfig {
 	public $proxy_pass = '';
 	public $MetaRights = '';
 	public $sitename_pagetitles = '0';
-	public $force_ssl = '0';
+	public $force_ssl = '2';
 	public $session_memcache_server_host = 'localhost';
 	public $session_memcache_server_port = '11211';
 	public $session_memcached_server_host = 'localhost';
