@@ -55,7 +55,7 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '5';
 	public $log_path = '../logs';
-	public $tmp_path = '/tmp';
+	public $tmp_path = '../tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
 	public $memcache_persist = '1';
