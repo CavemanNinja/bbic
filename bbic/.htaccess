@@ -1,6 +1,6 @@
-#RewriteEngine On
+RewriteEngine On
 #RewriteCond %{SERVER_PORT} !^443$
 #RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI}
 
-#RewriteCond %{HTTPS} off
-#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
