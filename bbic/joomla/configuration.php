@@ -83,5 +83,5 @@ class JConfig {
 	public $asset_id = '1';
 
 	public $force_ssl = '2';
-	public $live_site = 'https://afternoon-falls-9745.herokuapp.com';
+	public $live_site = '';
 }
