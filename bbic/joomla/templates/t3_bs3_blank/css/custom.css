@@ -1120,3 +1120,8 @@ div.st_tabs > div > ul {
 .force-no-margin {
   margin: 0px !important;
 }
+
+ul.mod_docman_icons
+{
+    list-style-type: none !important;
+}
