@@ -753,15 +753,7 @@ if(count($extrafields)){
 <!-- COMPANY PROFILES -->
 <?php elseif ($catid == "9" || $parentid == "9"): ?>
 
-	<?php
-		$db = JFactory::getDbo();
-		$query = $db->getQuery(true);
-		$query->select($db->quoteName('username'));
-		$query->from($db->quoteName('#__users'));
-		$query->where($db->quoteName('id') . " = " . $this->item->get('created_by'));
-		$db->setQuery($query);
-		$username = $db->loadResult();
-	?>
+
 
 	<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
 		<?php if ($params->get('show_page_heading', 1)) : ?>
@@ -872,6 +864,19 @@ if(count($extrafields)){
 						<?php endif; ?>
 
 						<?php if (!$isTenant) : ?>
+							
+							<?php
+								var_dump($this->item->get('created_by'));
+
+								// $db = JFactory::getDbo();
+								// $query = $db->getQuery(true);
+								// $query->select($db->quoteName('username'));
+								// $query->from($db->quoteName('#__users'));
+								// $query->where($db->quoteName('id') . " = " . $this->item->get('created_by'));
+								// $db->setQuery($query);
+								// $username = $db->loadResult();
+							?>
+
 							<div class="form-group">
 								<label class="control-label">Created By User</label>
 								<p><?php echo $username; ?></p>
