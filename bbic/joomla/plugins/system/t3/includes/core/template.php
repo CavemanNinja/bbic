@@ -757,20 +757,29 @@ class T3Template extends ObjectExtendable
 	 *
 	 * @return string Block content
 	 */
+	
+	if (is_file(T3_TEMPLATE_PATH . '/' . $file)) $return = ($relative ? T3_TEMPLATE_REL : T3_TEMPLATE_URL) . '/' . $file;
+		if (!$return && is_file(T3_PATH . '/' . $file)) $return = ($relative ? T3_REL : T3_URL) . '/' . $file;
+		if (!$return && $default) $return = self::getUrl($default);
+
+JURI::base() . '/templates/t3_bs3_blank'
+
 	function addCss($name, $addresponsive = true)
 	{
 		$devmode    = $this->getParam('devmode', 0);
 		$themermode = $this->getParam('themermode', 1);
 		$responsive = $addresponsive && !$this->responcls ? $this->getParam('responsive', 1) : false;
 
-		if (($devmode || ($themermode && defined('T3_THEMER'))) && ($url = T3Path::getUrl('less/' . $name . '.less', '', true))) {
+		// if (($devmode || ($themermode && defined('T3_THEMER'))) && ($url = T3Path::getUrl('less/' . $name . '.less', '', true))) {
+		if (($devmode || ($themermode && defined('T3_THEMER'))) && ($url = JURI::base() . '/templates/t3_bs3_blank/less/' . $name . '.less')) {
 			T3::import('core/less');
 			T3Less::addStylesheet($url);
 		} else {
 
 			$added = false;
 			if ($this->direction == 'rtl') {
-				$url = T3Path::getUrl('css/rtl/' . $name . '.css');
+				// $url = T3Path::getUrl('css/rtl/' . $name . '.css');
+				$url = JURI::base() . '/templates/t3_bs3_blank/css/rtl/' . $name . '.css';
 				// Add this css into template
 				if ($url) {
 					$this->addStyleSheet($url);
@@ -779,7 +788,8 @@ class T3Template extends ObjectExtendable
 			}
 
 			if(!$added){
-				$url = T3Path::getUrl('css/' . $name . '.css');
+				// $url = T3Path::getUrl('css/' . $name . '.css');
+				$url = JURI::base() . '/templates/t3_bs3_blank/css/' . $name . '.css';
 				// Add this css into template
 				if ($url) {
 					$this->addStyleSheet($url);
