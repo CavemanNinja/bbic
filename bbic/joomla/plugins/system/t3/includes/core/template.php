@@ -758,11 +758,6 @@ class T3Template extends ObjectExtendable
 	 * @return string Block content
 	 */
 	
-	if (is_file(T3_TEMPLATE_PATH . '/' . $file)) $return = ($relative ? T3_TEMPLATE_REL : T3_TEMPLATE_URL) . '/' . $file;
-		if (!$return && is_file(T3_PATH . '/' . $file)) $return = ($relative ? T3_REL : T3_URL) . '/' . $file;
-		if (!$return && $default) $return = self::getUrl($default);
-
-JURI::base() . '/templates/t3_bs3_blank'
 
 	function addCss($name, $addresponsive = true)
 	{
