@@ -5,8 +5,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_METHOD} !^(GET|POST|HEAD)
 RewriteRule .* - [F]
 
-RewriteCond %{HTTP:X-Forwarded-Proto} !https 
-RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI}/$1 [L,R=301]
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI}/$1 [L,R=301]
 
 ServerSignature Off
 
