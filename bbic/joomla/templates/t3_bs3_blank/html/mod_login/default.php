@@ -39,7 +39,7 @@ if (version_compare(JVERSION, '3.0', 'ge')) {
 		</div>
 	</form>
 <?php else : ?>
-	<form action="<?php echo JRoute::_('https://afternoon-falls-9745.herokuapp.com/bbic/joomla/index.php?lang=en', true, $params->get('usesecure')); ?>" method="post" id="login-form">
+	<form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form">
 		<?php if ($params->get('pretext')): ?>
 			<div class="pretext">
 				<p><?php echo $params->get('pretext'); ?></p>
