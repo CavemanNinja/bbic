@@ -422,10 +422,10 @@ abstract class TwojToolBoxSiteHelper{
 			} else {
 				if( strpos( $file_need[$i], '*')===false ){
 					$prep_file_name = JPATH_SITE.'/components/com_twojtoolbox/' .$type.'/2j.'.$file_need[$i].'.'.$type;
-					$prep_file_name_url = JURI::base().'/components/com_twojtoolbox/'.$type.'/2j.'.$file_need[$i].'.'.$type;
+					$prep_file_name_url = JURI::root(true).'/components/com_twojtoolbox/'.$type.'/2j.'.$file_need[$i].'.'.$type;
 				} else {	
 					$prep_file_name = JPATH_SITE.'/' .'components/com_twojtoolbox/plugins/'.str_replace('*', '/', $file_need[$i]).'.'.$type;
-					$prep_file_name_url = JURI::base().'/components/com_twojtoolbox/plugins/'.str_replace('*', '/', $file_need[$i]).'.'.$type;
+					$prep_file_name_url = JURI::root(true).'/components/com_twojtoolbox/plugins/'.str_replace('*', '/', $file_need[$i]).'.'.$type;
 				}
 				if( JFile::exists($prep_file_name) ){
 					$c_file_content = JFile::read($prep_file_name);
@@ -445,10 +445,10 @@ abstract class TwojToolBoxSiteHelper{
 			return false;
 		}
 		$cacheFodler = JPATH_SITE.'/cache/twojtoolbox/';
-		$cacheFodlerUrl = JURI::base().'/cache/twojtoolbox/';
+		$cacheFodlerUrl = JURI::root(true).'/cache/twojtoolbox/';
 		if(JComponentHelper::getParams('com_twojtoolbox')->get('twojcachefolder', 0)){
 			$cacheFodler = JPATH_ROOT.'/media/com_twojtoolbox/cache/';
-			$cacheFodlerUrl = JURI::base().'/media/com_twojtoolbox/cache/';
+			$cacheFodlerUrl = JURI::root(true).'/media/com_twojtoolbox/cache/';
 		}
 		
 		$prepare_files_list = TwojToolBoxSiteHelper::prepareFilesName($files_list);
