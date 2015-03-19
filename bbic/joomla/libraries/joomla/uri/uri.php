@@ -245,7 +245,7 @@ class JUri
 					{
 						self::$base['path'] .= '/administrator';
 					}
-                }
+                
 				}
 			}
 			else
