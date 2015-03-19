@@ -3,121 +3,118 @@
  * NoNumber Framework Helper File: Assignments: HikaShop
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Assignments: HikaShop
- */
-class NNFrameworkAssignmentsHikaShop
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/assignment.php';
+
+class nnFrameworkAssignmentsHikaShop extends nnFrameworkAssignment
 {
-	function passPageTypes(&$parent, &$params, $selection = array(), $assignment = 'all')
+	function passPageTypes()
 	{
-		if ($parent->params->option != 'com_hikashop')
+		if ($this->request->option != 'com_hikashop')
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
 
-		$type = $parent->params->view;
+		$type = $this->request->view;
 		if (
-			($type == 'product' && in_array($parent->params->layout, array('contact', 'show')))
-			|| ($type == 'user' && in_array($parent->params->layout, array('cpanel')))
+			($type == 'product' && in_array($this->request->layout, array('contact', 'show')))
+			|| ($type == 'user' && in_array($this->request->layout, array('cpanel')))
 		)
 		{
-			$type .= '_' . $parent->params->layout;
+			$type .= '_' . $this->request->layout;
 		}
 
-		return $parent->passSimple($type, $selection, $assignment);
+		return $this->passSimple($type);
 	}
 
-	function passCategories(&$parent, &$params, $selection = array(), $assignment = 'all', $article = 0)
+	function passCategories()
 	{
-		if ($parent->params->option != 'com_hikashop')
+		if ($this->request->option != 'com_hikashop')
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
 
 		$pass = (
-			($params->inc_categories
-				&& ($parent->params->view == 'category')
+			($this->params->inc_categories
+				&& ($this->request->view == 'category')
 			)
-			|| ($params->inc_items && $parent->params->view == 'product')
+			|| ($this->params->inc_items && $this->request->view == 'product')
 		);
 
 		if (!$pass)
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
 
-		$cats = $this->getCategories($parent);
+		$cats = $this->getCategories();
 
-		$pass = $parent->passSimple($cats, $selection, 'include');
+		$pass = $this->passSimple($cats, 'include');
 
-		if ($pass && $params->inc_children == 2)
+		if ($pass && $this->params->inc_children == 2)
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
-		else if (!$pass && $params->inc_children)
+		else if (!$pass && $this->params->inc_children)
 		{
 			foreach ($cats as $cat)
 			{
-				$cats = array_merge($cats, self::getCatParentIds($parent, $cat));
+				$cats = array_merge($cats, $this->getCatParentIds($cat));
 			}
 		}
 
-		return $parent->passSimple($cats, $selection, $assignment);
+		return $this->passSimple($cats);
 	}
 
-	function passProducts(&$parent, &$params, $selection = array(), $assignment = 'all')
+	function passProducts()
 	{
-		if (!$parent->params->id || $parent->params->option != 'com_hikashop' || $parent->params->view != 'product')
+		if (!$this->request->id || $this->request->option != 'com_hikashop' || $this->request->view != 'product')
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
 
-		return $parent->passSimple($parent->params->id, $selection, $assignment);
+		return $this->passSimple($this->request->id);
 	}
 
-	function getCategories(&$parent)
+	function getCategories()
 	{
 		switch (true)
 		{
-			case ($parent->params->view == 'category' && $parent->params->id):
+			case ($this->request->view == 'category' && $this->request->id):
+				return array($this->request->id);
 
-				return array($parent->params->id);
-				break;
-			case ($parent->params->view == 'category'):
+			case ($this->request->view == 'category'):
 				include_once JPATH_ADMINISTRATOR . '/components/com_hikashop/helpers/helper.php';
 				$menuClass = hikashop_get('class.menus');
-				$menuData = $menuClass->get($parent->params->Itemid);
+				$menuData = $menuClass->get($this->request->Itemid);
 
-				return $parent->makeArray($menuData->hikashop_params['selectparentlisting']);
-				break;
+				return $this->makeArray($menuData->hikashop_params['selectparentlisting']);
 
-			case ($parent->params->id):
-				$parent->q->clear()
+			case ($this->request->id):
+				$query = $this->db->getQuery(true)
 					->select('c.category_id')
 					->from('#__hikashop_product_category AS c')
-					->where('c.product_id = ' . (int) $parent->params->id);
-				$parent->db->setQuery($parent->q);
-				$cats = $parent->db->loadColumn();
+					->where('c.product_id = ' . (int) $this->request->id);
+				$this->db->setQuery($query);
+				$cats = $this->db->loadColumn();
 
-				return $parent->makeArray($cats);
-				break;
+				return $this->makeArray($cats);
+
 			default:
 				return array();
 		}
 	}
 
-	function getCatParentIds(&$parent, $id = 0)
+	function getCatParentIds($id = 0)
 	{
-		return $parent->getParentIds($id, 'hikashop_category', 'category_parent_id', 'category_id');
+		return $this->getParentIds($id, 'hikashop_category', 'category_parent_id', 'category_id');
 	}
 }

@@ -3,32 +3,31 @@
  * NoNumber Framework Helper File: Assignments: Tags
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Assignments: Tags
- */
-class NNFrameworkAssignmentsTags
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/assignment.php';
+
+class nnFrameworkAssignmentsTags extends nnFrameworkAssignment
 {
-	function passTags(&$parent, &$params, $selection = array(), $assignment = 'all', $article = 0)
+	function passTags()
 	{
-		$is_content = in_array($parent->params->option, array('com_content', 'com_flexicontent'));
+		$is_content = in_array($this->request->option, array('com_content', 'com_flexicontent'));
 
 		if (!$is_content)
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
 
-		$is_item = in_array($parent->params->view, array('', 'article', 'item'));
-		$is_category = in_array($parent->params->view, array('category'));
+		$is_item = in_array($this->request->view, array('', 'article', 'item'));
+		$is_category = in_array($this->request->view, array('category'));
 
 		if ($is_item)
 		{
@@ -40,57 +39,69 @@ class NNFrameworkAssignmentsTags
 		}
 		else
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
 
 		// Load the tags.
-		$parent->q->clear()
-			->select($parent->db->quoteName('t.id'))
+		$query = $this->db->getQuery(true)
+			->select($this->db->quoteName('t.id'))
 			->from('#__tags AS t')
 			->join(
 				'INNER', '#__contentitem_tag_map AS m'
 				. ' ON m.tag_id = t.id'
-				. ' AND m.type_alias = ' . $parent->db->quote($prefix)
-				. ' AND m.content_item_id IN ( ' . $parent->params->id . ')'
+				. ' AND m.type_alias = ' . $this->db->quote($prefix)
+				. ' AND m.content_item_id IN ( ' . $this->request->id . ')'
 			);
-		$parent->db->setQuery($parent->q);
-		$tags = $parent->db->loadColumn();
+		$this->db->setQuery($query);
+		$tags = $this->db->loadColumn();
 
 		if (empty($tags))
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
-
-		$pass = 0;
 
 		foreach ($tags as $tag)
 		{
-			$pass = in_array($tag, $selection);
-			if ($pass && $params->inc_children == 2)
+			if (!$this->passTag($tag))
 			{
-				$pass = 0;
+				continue;
 			}
-			else if (!$pass && $params->inc_children)
-			{
-				$parentids = self::getParentIds($parent, $tag);
-				$parentids = array_diff($parentids, array('1'));
-				foreach ($parentids as $id)
-				{
-					if (in_array($id, $selection))
-					{
-						$pass = 1;
-						break;
-					}
-				}
-				unset($parentids);
-			}
+
+			return $this->pass(true);
 		}
 
-		return $parent->pass($pass, $assignment);
+		return $this->pass(false);
 	}
 
-	function getParentIds(&$parent, $id = 0)
+	private function passTag($tag)
 	{
-		return $parent->getParentIds($id, 'tags');
+		$pass = in_array($tag, $this->selection);
+
+		if ($pass)
+		{
+			// If passed, return false if assigned to only children
+			// Else return true
+			return ($this->params->inc_children != 2);
+		}
+
+		if (!$this->params->inc_children)
+		{
+			return false;
+		}
+
+		// Return true if a parent id is present in the selection
+		return array_intersect(
+			$this->getTagsParentIds($tag),
+			$this->selection
+		);
+	}
+
+	private function getTagsParentIds($id = 0)
+	{
+		$parentids = $this->getParentIds($id, 'tags');
+		// Remove the root tag
+		$parentids = array_diff($parentids, array('1'));
+
+		return $parentids;
 	}
 }

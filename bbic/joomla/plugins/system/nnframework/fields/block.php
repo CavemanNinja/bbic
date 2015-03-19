@@ -4,22 +4,21 @@
  * Displays a block with optionally a title and description
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-require_once JPATH_PLUGINS . '/system/nnframework/helpers/text.php';
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
 
-class JFormFieldNN_Block extends JFormField
+class JFormFieldNN_Block extends nnFormField
 {
 	public $type = 'Block';
-	private $params = null;
 
 	protected function getLabel()
 	{
@@ -35,6 +34,7 @@ class JFormFieldNN_Block extends JFormField
 		$title = $this->get('label');
 		$description = $this->get('description');
 		$class = $this->get('class');
+		$showclose = $this->get('showclose', 0);
 
 		$start = $this->get('start', 0);
 		$end = $this->get('end', 0);
@@ -52,9 +52,13 @@ class JFormFieldNN_Block extends JFormField
 			{
 				$html[] = '<div class="well well-small ' . $class . '">';
 			}
+			if ($showclose && JFactory::getUser()->authorise('core.admin'))
+			{
+				$html[] = '<button type="button" class="close nn_remove_assignment">&times;</button>';
+			}
 			if ($title)
 			{
-				$title = NNText::html_entity_decoder(JText::_($title));
+				$title = nnText::html_entity_decoder(JText::_($title));
 				$html[] = '<h4>' . $title . '</h4>';
 			}
 			if ($description)
@@ -66,7 +70,7 @@ class JFormFieldNN_Block extends JFormField
 				$v4 = JText::_($this->get('var4'));
 				$v5 = JText::_($this->get('var5'));
 
-				$description = NNText::html_entity_decoder(trim(JText::sprintf($description, $v1, $v2, $v3, $v4, $v5)));
+				$description = nnText::html_entity_decoder(trim(JText::sprintf($description, $v1, $v2, $v3, $v4, $v5)));
 				$description = str_replace('span style="font-family:monospace;"', 'span class="nn_code"', $description);
 				$html[] = '<div>' . $description . '</div>';
 			}
@@ -78,10 +82,5 @@ class JFormFieldNN_Block extends JFormField
 		}
 
 		return '</div>' . implode('', $html);
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }

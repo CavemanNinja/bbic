@@ -3,17 +3,17 @@
  * NoNumber Framework Helper File: VersionCheck
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-class NNVersions
+class nnVersions
 {
 	public static $instance = null;
 
@@ -130,14 +130,13 @@ class NoNumberVersions
 			}
 			$html[] = ' v' . $version;
 		}
+
 		if ($copyright)
 		{
-			$html[] = '<br />' . JText::_('COPYRIGHT') . ' &copy; ' . date('Y') . ' NoNumber ' . JText::_('ALL_RIGHTS_RESERVED');
-			if ($jedid)
-			{
-				$html[] = '<br />' . html_entity_decode(JText::sprintf('NN_RATE', $jedid));
-			}
+			$html[] = '<br />' . JText::_('NN_COPYRIGHT') . ' &copy; ' . date('Y') . ' NoNumber ' . JText::_('NN_ALL_RIGHTS_RESERVED');
+			$html[] = '<br />' . html_entity_decode(JText::sprintf('NN_RATE', 'http://nonr.nl/jed-' . str_replace('_', '', strtolower($name)) . '#reviews'));
 		}
+
 		$html[] = '</p>';
 
 		return implode('', $html);

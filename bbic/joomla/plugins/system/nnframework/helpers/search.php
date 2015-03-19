@@ -1,11 +1,11 @@
 <?php
 /**
  * @package          NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author           Peter van Westen <peter@nonumber.nl>
  * @link             http://www.nonumber.nl
- * @copyright        Copyright © 2014 NoNumber
+ * @copyright        Copyright © 2015 NoNumber
  * @license          http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -78,10 +78,26 @@ class SearchModelSearch extends JModelLegacy
 		$this->setState('limit', $app->getUserStateFromRequest('com_search.limit', 'limit', $config->get('list_limit'), 'uint'));
 		$this->setState('limitstart', $app->input->get('limitstart', 0, 'uint'));
 
+		// Get parameters.
+		$params = $app->getParams();
+
+		if ($params->get('searchphrase') == 1)
+		{
+			$searchphrase = 'any';
+		}
+		elseif ($params->get('searchphrase') == 2)
+		{
+			$searchphrase = 'exact';
+		}
+		else
+		{
+			$searchphrase = 'all';
+		}
+
 		// Set the search parameters
 		$keyword  = urldecode($app->input->getString('searchword'));
-		$match    = $app->input->get('searchphrase', 'all', 'word');
-		$ordering = $app->input->get('ordering', 'newest', 'word');
+		$match    = $app->input->get('searchphrase', $searchphrase, 'word');
+		$ordering = $app->input->get('ordering', $params->get('ordering', 'newest'), 'word');
 		$this->setSearch($keyword, $match, $ordering);
 
 		//Set the search areas
@@ -102,10 +118,12 @@ class SearchModelSearch extends JModelLegacy
 		if (isset($keyword))
 		{
 			$this->setState('origkeyword', $keyword);
+
 			if ($match !== 'exact')
 			{
 				$keyword = preg_replace('#\xE3\x80\x80#s', ' ', $keyword);
 			}
+
 			$this->setState('keyword', $keyword);
 		}
 

@@ -3,28 +3,32 @@
  * NoNumber Framework Helper File: Assignments: URLs
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Assignments: URLs
- */
-class NNFrameworkAssignmentsURLs
-{
-	function passURLs(&$parent, &$params, $selection = array(), $assignment = 'all')
-	{
-		$regex = isset($params->regex) ? $params->regex : 0;
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/assignment.php';
 
-		if (!is_array($selection))
+class nnFrameworkAssignmentsURLs extends nnFrameworkAssignment
+{
+	function passURLs()
+	{
+		$regex = isset($this->params->regex) ? $this->params->regex : 0;
+
+		if (!is_array($this->selection))
 		{
-			$selection = explode("\n", $selection);
+			$this->selection = explode("\n", $this->selection);
+		}
+
+		if (count($this->selection) == 1)
+		{
+			$this->selection = explode("\n", $this->selection['0']);
 		}
 
 		$url = JURI::getInstance();
@@ -38,40 +42,43 @@ class NNFrameworkAssignmentsURLs
 		);
 		$urls = array_unique($urls);
 
-		$pass = 0;
+		$pass = false;
 		foreach ($urls as $url)
 		{
-			foreach ($selection as $s)
+			foreach ($this->selection as $s)
 			{
 				$s = trim($s);
-				if ($s != '')
+				if ($s == '')
 				{
-					if ($regex)
+					continue;
+				}
+
+				if ($regex)
+				{
+					$url_part = str_replace(array('#', '&amp;'), array('\#', '(&amp;|&)'), $s);
+					$s = '#' . $url_part . '#si';
+					if (@preg_match($s . 'u', $url) || @preg_match($s, $url))
 					{
-						$url_part = str_replace(array('#', '&amp;'), array('\#', '(&amp;|&)'), $s);
-						$s = '#' . $url_part . '#si';
-						if (@preg_match($s . 'u', $url) || @preg_match($s, $url))
-						{
-							$pass = 1;
-							break;
-						}
+						$pass = true;
+						break;
 					}
-					else
-					{
-						if (strpos($url, $s) !== false)
-						{
-							$pass = 1;
-							break;
-						}
-					}
+
+					continue;
+				}
+
+				if (strpos($url, $s) !== false)
+				{
+					$pass = true;
+					break;
 				}
 			}
+
 			if ($pass)
 			{
 				break;
 			}
 		}
 
-		return $parent->pass($pass, $assignment);
+		return $this->pass($pass);
 	}
 }

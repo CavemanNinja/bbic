@@ -3,11 +3,11 @@
  * Plugin Helper File
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -24,26 +24,13 @@ class plgSystemNNFrameworkHelper
 	{
 		$url = JFactory::getApplication()->input->getString('url', '');
 
-		$func = new NNFrameworkFunctions;
+		$func = new nnFrameworkFunctions;
 
 		if ($url)
 		{
 			echo $func->getByUrl($url);
+
 			die;
-		}
-
-		$file = JFactory::getApplication()->input->getString('file', '');
-
-		// only allow files that have .inc.php in the file name
-		if (!$file || (strpos($file, '.inc.php') === false))
-		{
-			die;
-		}
-
-		$folder = JFactory::getApplication()->input->getString('folder', '');
-		if ($folder)
-		{
-			$file = implode('/', explode('.', $folder)) . '/' . $file;
 		}
 
 		$allowed = array(
@@ -53,10 +40,19 @@ class plgSystemNNFrameworkHelper
 			'media/rereplacer/images/image.inc.php',
 			'plugins/editors-xtd/articlesanywhere/articlesanywhere.inc.php',
 			'plugins/editors-xtd/contenttemplater/contenttemplater.inc.php',
+			'plugins/editors-xtd/dummycontent/dummycontent.inc.php',
 			'plugins/editors-xtd/modulesanywhere/modulesanywhere.inc.php',
 			'plugins/editors-xtd/snippets/snippets.inc.php',
 			'plugins/editors-xtd/sourcerer/sourcerer.inc.php'
 		);
+
+		$file = JFactory::getApplication()->input->getString('file', '');
+		$folder = JFactory::getApplication()->input->getString('folder', '');
+
+		if ($folder)
+		{
+			$file = implode('/', explode('.', $folder)) . '/' . $file;
+		}
 
 		if (!$file || in_array($file, $allowed) === false)
 		{

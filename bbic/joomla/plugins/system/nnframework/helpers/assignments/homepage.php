@@ -3,35 +3,34 @@
  * NoNumber Framework Helper File: Assignments: HomePage
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Assignments: URL
- */
-class NNFrameworkAssignmentsHomePage
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/assignment.php';
+
+class nnFrameworkAssignmentsHomePage extends nnFrameworkAssignment
 {
-	function passHomePage(&$parent, &$params, $selection = array(), $assignment = 'all')
+	function passHomePage()
 	{
 		$home = JFactory::getApplication()->getMenu('site')->getDefault(JFactory::getLanguage()->getTag());
 
 		// return if option or other set values do not match the homepage menu item values
-		if ($parent->params->option)
+		if ($this->request->option)
 		{
 			// check if option is different to home menu
-			if (!$home || !isset($home->query['option']) || $home->query['option'] != $parent->params->option)
+			if (!$home || !isset($home->query['option']) || $home->query['option'] != $this->request->option)
 			{
-				return $parent->pass(0, $assignment);
+				return $this->pass(false);
 			}
 
-			if (!$parent->params->option)
+			if (!$this->request->option)
 			{
 				// set the view/task/layout in the menu item to empty if not set
 				$home->query['view'] = isset($home->query['view']) ? $home->query['view'] : '';
@@ -42,14 +41,14 @@ class NNFrameworkAssignmentsHomePage
 			// check set values against home menu query items
 			foreach ($home->query as $k => $v)
 			{
-				if ((isset($parent->params->{$k}) && $parent->params->{$k} != $v)
+				if ((isset($this->request->{$k}) && $this->request->{$k} != $v)
 					|| (
-						(!isset($parent->params->{$k}) || in_array($v, array('virtuemart', 'mijoshop')))
+						(!isset($this->request->{$k}) || in_array($v, array('virtuemart', 'mijoshop')))
 						&& JFactory::getApplication()->input->get($k) != $v
 					)
 				)
 				{
-					return $parent->pass(0, $assignment);
+					return $this->pass(false);
 				}
 			}
 
@@ -60,7 +59,7 @@ class NNFrameworkAssignmentsHomePage
 					|| (!$v && isset($_POST[$k]) && $_POST[$k])
 				)
 				{
-					return $parent->pass(0, $assignment);
+					return $this->pass(false);
 				}
 			}
 		}
@@ -72,13 +71,11 @@ class NNFrameworkAssignmentsHomePage
 			$pass = $this->checkPass($home, 1);
 		}
 
-		return $parent->pass($pass, $assignment);
+		return $this->pass($pass);
 	}
 
 	function checkPass(&$home, $addlang = 0)
 	{
-		$pass = 0;
-
 		$uri = JURI::getInstance();
 
 		if ($addlang)
@@ -96,9 +93,10 @@ class NNFrameworkAssignmentsHomePage
 					$sef = $part;
 				}
 			}
+
 			if (empty($sef))
 			{
-				return 0;
+				return false;
 			}
 		}
 
@@ -143,41 +141,38 @@ class NNFrameworkAssignmentsHomePage
 			$root .= '/' . $sef;
 		}
 
-		if (!$pass)
+		/* Pass urls:
+		 * [root]
+		 */
+		$regex = '#^' . $root . '$#i';
+
+		if (preg_match($regex, $url))
 		{
-			/* Pass urls:
-			 * [root]
-			 */
-			$regex = '#^' . $root . '$#i';
-			$pass = preg_match($regex, $url);
+			return true;
 		}
 
-		if (!$pass)
-		{
-			/* Pass urls:
-			 * [root]?Itemid=[menu-id]
-			 * [root]/?Itemid=[menu-id]
-			 * [root]/index.php?Itemid=[menu-id]
-			 * [root]/[menu-alias]
-			 * [root]/[menu-alias]?Itemid=[menu-id]
-			 * [root]/index.php?[menu-alias]
-			 * [root]/index.php?[menu-alias]?Itemid=[menu-id]
-			 * [root]/[menu-link]
-			 * [root]/[menu-link]&Itemid=[menu-id]
-			 */
-			$regex = '#^' . $root
-				. '(/('
-				. 'index\.php'
-				. '|'
-				. '(index\.php\?)?' . preg_quote($home->alias, '#')
-				. '|'
-				. preg_quote($home->link, '#')
-				. ')?)?'
-				. '(/?[\?&]Itemid=' . (int) $home->id . ')?'
-				. '$#i';
-			$pass = preg_match($regex, $url);
-		}
+		/* Pass urls:
+		 * [root]?Itemid=[menu-id]
+		 * [root]/?Itemid=[menu-id]
+		 * [root]/index.php?Itemid=[menu-id]
+		 * [root]/[menu-alias]
+		 * [root]/[menu-alias]?Itemid=[menu-id]
+		 * [root]/index.php?[menu-alias]
+		 * [root]/index.php?[menu-alias]?Itemid=[menu-id]
+		 * [root]/[menu-link]
+		 * [root]/[menu-link]&Itemid=[menu-id]
+		 */
+		$regex = '#^' . $root
+			. '(/('
+			. 'index\.php'
+			. '|'
+			. '(index\.php\?)?' . preg_quote($home->alias, '#')
+			. '|'
+			. preg_quote($home->link, '#')
+			. ')?)?'
+			. '(/?[\?&]Itemid=' . (int) $home->id . ')?'
+			. '$#i';
 
-		return $pass;
+		return preg_match($regex, $url);
 	}
 }

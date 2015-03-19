@@ -4,38 +4,45 @@
  * Displays a select box of backend group levels
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-require_once JPATH_PLUGINS . '/system/nnframework/helpers/text.php';
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
 
-class JFormFieldNN_Tags extends JFormField
+class JFormFieldNN_Tags extends nnFormField
 {
 	public $type = 'Tags';
-	private $params = null;
-	private $db = null;
 
 	protected function getInput()
 	{
 		$this->params = $this->element->attributes();
-		$this->db = JFactory::getDBO();
 
 		$size = (int) $this->get('size');
 
-		$attribs = 'class="inputbox"';
+		// assemble items to the array
+		$options = array();
+		if ($this->get('show_ignore'))
+		{
+			if (in_array('-1', $this->value))
+			{
+				$this->value = array('-1');
+			}
+			$options[] = JHtml::_('select.option', '-1', '- ' . JText::_('NN_IGNORE') . ' -', 'value', 'text', 0);
+			$options[] = JHtml::_('select.option', '-', '&nbsp;', 'value', 'text', 1);
+		}
 
-		$options = $this->getTags();
+		$options += $this->getTags();
 
 		require_once JPATH_PLUGINS . '/system/nnframework/helpers/html.php';
 
-		return nnHtml::selectlist($options, $this->name, $this->value, $this->id, $size, 1, $attribs);
+		return nnHtml::selectlist($options, $this->name, $this->value, $this->id, $size, 1);
 	}
 
 	protected function getTags()
@@ -53,10 +60,5 @@ class JFormFieldNN_Tags extends JFormField
 		$options = $this->db->loadObjectList();
 
 		return $options;
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }

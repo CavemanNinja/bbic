@@ -3,103 +3,117 @@
  * NoNumber Framework Helper File: Assignments
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
+require_once __DIR__ . '/cache.php';
 require_once __DIR__ . '/functions.php';
 
 /**
  * Assignments
  * $assignment = no / include / exclude / none
  */
-class NNFrameworkAssignmentsHelper
+class nnFrameworkAssignmentsHelper
 {
 	var $db = null;
 	var $params = null;
-	var $init = 0;
+	var $init = false;
 	var $types = array();
-	var $passes = array();
 	var $maintype = '';
 	var $subtype = '';
-	var $cache = array();
 
 	public function __construct()
 	{
 		$this->db = JFactory::getDBO();
-		$this->q = $this->db->getQuery(true);
-
-		$this->date = JFactory::getDate();
-		$tz = new DateTimeZone(JFactory::getApplication()->getCfg('offset'));
-		$this->date->setTimeZone($tz);
 
 		$this->has = array();
-		$this->has['flexicontent'] = NNFrameworkFunctions::extensionInstalled('flexicontent');
-		$this->has['k2'] = NNFrameworkFunctions::extensionInstalled('k2');
-		$this->has['zoo'] = NNFrameworkFunctions::extensionInstalled('zoo');
-		$this->has['akeebasubs'] = NNFrameworkFunctions::extensionInstalled('akeebasubs');
-		$this->has['hikashop'] = NNFrameworkFunctions::extensionInstalled('hikashop');
-		$this->has['mijoshop'] = NNFrameworkFunctions::extensionInstalled('mijoshop');
-		$this->has['redshop'] = NNFrameworkFunctions::extensionInstalled('redshop');
-		$this->has['virtuemart'] = NNFrameworkFunctions::extensionInstalled('virtuemart');
-		$this->has['cookieconfirm'] = NNFrameworkFunctions::extensionInstalled('cookieconfirm');
+		$this->has['easyblog'] = nnFrameworkFunctions::extensionInstalled('easyblog');
+		$this->has['flexicontent'] = nnFrameworkFunctions::extensionInstalled('flexicontent');
+		$this->has['form2content'] = nnFrameworkFunctions::extensionInstalled('form2content');
+		$this->has['k2'] = nnFrameworkFunctions::extensionInstalled('k2');
+		$this->has['zoo'] = nnFrameworkFunctions::extensionInstalled('zoo');
+		$this->has['akeebasubs'] = nnFrameworkFunctions::extensionInstalled('akeebasubs');
+		$this->has['hikashop'] = nnFrameworkFunctions::extensionInstalled('hikashop');
+		$this->has['mijoshop'] = nnFrameworkFunctions::extensionInstalled('mijoshop');
+		$this->has['redshop'] = nnFrameworkFunctions::extensionInstalled('redshop');
+		$this->has['virtuemart'] = nnFrameworkFunctions::extensionInstalled('virtuemart');
+		$this->has['cookieconfirm'] = nnFrameworkFunctions::extensionInstalled('cookieconfirm');
 
 		$this->types = array(
-			'Menu',
-			'HomePage',
-			'DateTime_Date',
-			'DateTime_Seasons',
-			'DateTime_Months',
-			'DateTime_Days',
-			'DateTime_Time',
-			'Users_UserGroupLevels',
-			'Users_Users',
-			'Languages',
-			'IPs',
-			'Geo_Continents',
-			'Geo_Countries',
-			'Geo_Regions',
-			'Templates',
-			'URLs',
-			'Agents_OS',
-			'Agents_Browsers',
-			'Components',
-			'Tags',
-			'Content_PageTypes',
-			'Content_Categories',
-			'Content_Articles',
-			'FlexiContent_PageTypes',
-			'FlexiContent_Tags',
-			'FlexiContent_Types',
-			'K2_PageTypes',
-			'K2_Categories',
-			'K2_Tags',
-			'K2_Items',
-			'ZOO_PageTypes',
-			'ZOO_Categories',
-			'ZOO_Items',
-			'AkeebaSubs_PageTypes',
-			'AkeebaSubs_Levels',
-			'HikaShop_PageTypes',
-			'HikaShop_Categories',
-			'HikaShop_Products',
-			'MijoShop_PageTypes',
-			'MijoShop_Categories',
-			'MijoShop_Products',
-			'RedShop_PageTypes',
-			'RedShop_Categories',
-			'RedShop_Products',
-			'VirtueMart_PageTypes',
-			'VirtueMart_Categories',
-			'VirtueMart_Products',
-			'CookieConfirm',
-			'PHP'
+			'menuitems'             => 'Menu',
+			'homepage'              => 'HomePage',
+			'date'                  => 'DateTime.Date',
+			'seasons'               => 'DateTime.Seasons',
+			'months'                => 'DateTime.Months',
+			'days'                  => 'DateTime.Days',
+			'time'                  => 'DateTime.Time',
+			'usergrouplevels'       => 'Users.UserGroupLevels',
+			'users'                 => 'Users.Users',
+			'languages'             => 'Languages',
+			'ips'                   => 'IPs',
+			'geocontinents'         => 'Geo.Continents',
+			'geocountries'          => 'Geo.Countries',
+			'georegions'            => 'Geo.Regions',
+			'templates'             => 'Templates',
+			'urls'                  => 'URLs',
+			'os'                    => 'Agents.OS',
+			'browsers'              => 'Agents.Browsers',
+			'components'            => 'Components',
+			'tags'                  => 'Tags',
+			'contentpagetypes'      => 'Content.PageTypes',
+			'cats'                  => 'Content.Categories',
+			'articles'              => 'Content.Articles',
+			'easyblogpagetypes'     => 'EasyBlog.PageTypes',
+			'easyblogcats'          => 'EasyBlog.Categories',
+			'easyblogtags'          => 'EasyBlog.Tags',
+			'easyblogitems'         => 'EasyBlog.Items',
+			'flexicontentpagetypes' => 'FlexiContent.PageTypes',
+			'flexicontenttags'      => 'FlexiContent.Tags',
+			'flexicontenttypes'     => 'FlexiContent.Types',
+			'form2contentprojects'  => 'Form2Content.Projects',
+			'k2pagetypes'           => 'K2.PageTypes',
+			'k2cats'                => 'K2.Categories',
+			'k2tags'                => 'K2.Tags',
+			'k2items'               => 'K2.Items',
+			'zoopagetypes'          => 'Zoo.PageTypes',
+			'zoocats'               => 'Zoo.Categories',
+			'zooitems'              => 'Zoo.Items',
+			'akeebasubspagetypes'   => 'AkeebaSubs.PageTypes',
+			'akeebasubslevels'      => 'AkeebaSubs.Levels',
+			'hikashoppagetypes'     => 'HikaShop.PageTypes',
+			'hikashopcats'          => 'HikaShop.Categories',
+			'hikashopproducts'      => 'HikaShop.Products',
+			'mijoshoppagetypes'     => 'MijoShop.PageTypes',
+			'mijoshopcats'          => 'MijoShop.Categories',
+			'mijoshopproducts'      => 'MijoShop.Products',
+			'redshoppagetypes'      => 'RedShop.PageTypes',
+			'redshopcats'           => 'RedShop.Categories',
+			'redshopproducts'       => 'RedShop.Products',
+			'virtuemartpagetypes'   => 'VirtueMart.PageTypes',
+			'virtuemartcats'        => 'VirtueMart.Categories',
+			'virtuemartproducts'    => 'VirtueMart.Products',
+			'cookieconfirm'         => 'CookieConfirm',
+			'php'                   => 'PHP'
+		);
+		$this->thirdparty = array(
+			'EasyBlog',
+			'FlexiContent',
+			'Form2Content',
+			'K2',
+			'Zoo',
+			'AkeebaSubs',
+			'HikaShop',
+			'MijoShop',
+			'RedShop',
+			'VirtueMart',
+			'CookieConfirm'
 		);
 		$this->nonarray = array(
 			'PHP'
@@ -113,123 +127,125 @@ class NNFrameworkAssignmentsHelper
 	function setIdNames()
 	{
 		$this->names = array();
+
 		foreach ($this->types as $type)
 		{
-			$type = explode('_', $type, 2);
+			$type = explode('.', $type, 2);
 			$this->names[strtolower($type['0'])] = $type['0'];
 			if (isset($type['1']))
 			{
 				$this->names[strtolower($type['1'])] = $type['1'];
 			}
 		}
+
 		$this->names['menuitems'] = 'Menu';
 		$this->names['cats'] = 'Categories';
 	}
 
-	function initParams()
+	function init()
 	{
 		if ($this->init)
 		{
 			return;
 		}
 
-		$this->params = new stdClass;
-		$this->params->idname = 'id';
-		$this->params->option = JFactory::getApplication()->input->get('option');
-		$this->params->view = JFactory::getApplication()->input->get('view');
-		$this->params->task = JFactory::getApplication()->input->get('task');
-		$this->params->layout = JFactory::getApplication()->input->get('layout', '', 'string');
-		$this->params->id = JFactory::getApplication()->input->getInt('id', 0);
-		$this->params->Itemid = JFactory::getApplication()->input->getInt('Itemid', 0);
+		$this->date = JFactory::getDate();
+		$tz = new DateTimeZone(JFactory::getApplication()->getCfg('offset'));
+		$this->date->setTimeZone($tz);
 
-		if ($this->params->option)
+		$this->request = new stdClass;
+
+		$this->request->idname = 'id';
+		$this->request->option = JFactory::getApplication()->input->get('option');
+		$this->request->view = JFactory::getApplication()->input->get('view');
+		$this->request->task = JFactory::getApplication()->input->get('task');
+		$this->request->layout = JFactory::getApplication()->input->get('layout', '', 'string');
+		$this->request->id = JFactory::getApplication()->input->getInt('id', 0);
+		$this->request->Itemid = JFactory::getApplication()->input->getInt('Itemid', 0);
+
+		switch ($this->request->option)
 		{
-			switch ($this->params->option)
-			{
-				case 'com_categories':
-					$extension = JFactory::getApplication()->input->getCmd('extension');
-					$this->params->option = $extension ? $extension : 'com_content';
-					$this->params->view = 'category';
-					break;
-				case 'com_breezingforms':
-					if ($this->params->view == 'article')
-					{
-						$this->params->option = 'com_content';
-					}
-					break;
-			}
+			case 'com_categories':
+				$extension = JFactory::getApplication()->input->getCmd('extension');
+				$this->request->option = $extension ? $extension : 'com_content';
+				$this->request->view = 'category';
+				break;
+
+			case 'com_breezingforms':
+				if ($this->request->view == 'article')
+				{
+					$this->request->option = 'com_content';
+				}
+				break;
+
 		}
 
-		$option = strtolower(str_replace('com_', '', $this->params->option));
+		$option = strtolower(str_replace('com_', '', $this->request->option));
 		if (JFile::exists(__DIR__ . '/assignments/' . $option . '.php'))
 		{
 			require_once __DIR__ . '/assignments/' . $option . '.php';
-			$class = 'NNFrameworkAssignments' . $option;
+			$class = 'nnFrameworkAssignments' . $option;
 			if (class_exists($class))
 			{
-				$this->classes[$this->maintype] = new $class;
-				if (method_exists($class, 'init'))
-				{
-					$this->classes[$this->maintype]->init($this);
-				}
+				$this->classes[$this->maintype] = new $class($this->request, $this->date);
+				$this->classes[$this->maintype]->init();
 			}
 		}
 
-		if (!$this->params->id)
+		if (!$this->request->id)
 		{
 			$cid = JFactory::getApplication()->input->get('cid', array(0), 'array');
 			JArrayHelper::toInteger($cid);
-			$this->params->id = $cid['0'];
+			$this->request->id = $cid['0'];
 		}
 
 		// if no id is found, check if menuitem exists to get view and id
-		if (!$this->params->option || !$this->params->id)
+		if (JFactory::getApplication()->isSite()
+			&& (!$this->request->option || !$this->request->id)
+		)
 		{
-			if (JFactory::getApplication()->isSite())
+			$menuItem = empty($this->request->Itemid)
+				? JFactory::getApplication()->getMenu('site')->getActive()
+				: JFactory::getApplication()->getMenu('site')->getItem($this->request->Itemid);
+
+			if ($menuItem)
 			{
-				if (empty($this->params->Itemid))
+				if (!$this->request->option)
 				{
-					$menuItem = JFactory::getApplication()->getMenu('site')->getActive();
+					$this->request->option = (empty($menuItem->query['option'])) ? null : $menuItem->query['option'];
 				}
-				else
+
+				$this->request->view = (empty($menuItem->query['view'])) ? null : $menuItem->query['view'];
+				$this->request->task = (empty($menuItem->query['task'])) ? null : $menuItem->query['task'];
+
+				if (!$this->request->id)
 				{
-					$menuItem = JFactory::getApplication()->getMenu('site')->getItem($this->params->Itemid);
+					$this->request->id = (empty($menuItem->query[$this->request->idname])) ? $menuItem->params->get($this->request->idname) : $menuItem->query[$this->request->idname];
 				}
-				if ($menuItem)
-				{
-					if (!$this->params->option)
-					{
-						$this->params->option = (empty($menuItem->query['option'])) ? null : $menuItem->query['option'];
-					}
-					$this->params->view = (empty($menuItem->query['view'])) ? null : $menuItem->query['view'];
-					$this->params->task = (empty($menuItem->query['task'])) ? null : $menuItem->query['task'];
-					if (!$this->params->id)
-					{
-						$this->params->id = (empty($menuItem->query[$this->params->idname])) ? $menuItem->params->get($this->params->idname) : $menuItem->query[$this->params->idname];
-					}
-				}
-				unset($menuItem);
 			}
+
+			unset($menuItem);
 		}
 
-		$this->init = 1;
+		$this->init = true;
 	}
 
 	function initParamsByType(&$params, $type = '')
 	{
 		$this->getAssignmentState($params->assignment);
 		$params->id = $type;
-		if (strpos($type, '_') !== false)
-		{
-			$type = explode('_', $type, 2);
-			$params->maintype = $type['0'];
-			$params->subtype = $type['1'];
-		}
-		else
+
+		if (strpos($type, '.') === false)
 		{
 			$params->maintype = $type;
 			$params->subtype = $type;
+
+			return;
 		}
+
+		$type = explode('.', $type, 2);
+		$params->maintype = $type['0'];
+		$params->subtype = $type['1'];
 	}
 
 	function passAll(&$assignments, $match_method = 'and', $article = 0)
@@ -239,158 +255,125 @@ class NNFrameworkAssignmentsHelper
 			return 1;
 		}
 
-		$this->initParams();
-
 		$aid = ($article && isset($article->id)) ? '[' . $article->id . ']' : '';
-		$id = md5($aid . json_encode($assignments));
+		$hash = md5('passAll_' . $aid . '_' . $match_method . '_' . json_encode($assignments));
 
-		if (isset($this->passes[$id]))
+		if (nnCache::has($hash))
 		{
-			$pass = $this->passes[$id];
+			return nnCache::get($hash);
 		}
-		else
+
+		$this->init();
+
+		jimport('joomla.filesystem.file');
+
+		$pass = (bool) ($match_method == 'and');
+
+		foreach ($this->types as $type)
 		{
-			jimport('joomla.filesystem.file');
-			$pass = ($match_method == 'and') ? 1 : 0;
-			foreach ($this->types as $type)
+			// Break if not passed and matching method is ALL
+			// Or if  passed and matching method is ANY
+			if (
+				(!$pass && $match_method == 'and')
+				|| ($pass && $match_method == 'or')
+			)
 			{
-				if (isset($assignments[$type]))
-				{
-					$this->initParamsByType($assignments[$type], $type);
-					if (($pass && $match_method == 'and') || (!$pass && $match_method == 'or'))
-					{
-						$tid = md5($type . $aid . ':' . json_encode($assignments[$type]));
-						if (isset($this->passes[$tid]))
-						{
-							$pass = $this->passes[$tid];
-						}
-						else
-						{
-							if ($assignments[$type]->assignment == 'all')
-							{
-								$pass = 1;
-							}
-							else if ($assignments[$type]->assignment == 'none')
-							{
-								$pass = 0;
-							}
-							else
-							{
-								$c = $assignments[$type]->maintype;
-								$f = $assignments[$type]->subtype;
-								if (!isset($this->classes[$c]) && JFile::exists(__DIR__ . '/assignments/' . strtolower($c) . '.php'))
-								{
-									require_once __DIR__ . '/assignments/' . strtolower($c) . '.php';
-									$class = 'NNFrameworkAssignments' . $c;
-									$this->classes[$c] = new $class;
-								}
-								if (isset($this->classes[$c]))
-								{
-									$method = 'pass' . $f;
-									if (method_exists('NNFrameworkAssignments' . $c, $method))
-									{
-										self::fixAssignment($assignments[$type], $assignments[$type]->id);
-										$pass = $this->classes[$c]->$method($this, $assignments[$type]->params, $assignments[$type]->selection, $assignments[$type]->assignment, $article);
-									}
-								}
-							}
-							$this->passes[$tid] = $pass;
-						}
-					}
-				}
+				break;
+
 			}
-			$this->passes[$id] = $pass;
+
+			if (!isset($assignments[$type]))
+			{
+				continue;
+			}
+
+			$pass = $this->passAllByType($assignments[$type], $type, $article);
 		}
 
-		return ($pass) ? 1 : 0;
+		return nnCache::set($hash,
+			$pass
+		);
 	}
 
-	function hasAssignments(&$assignments)
+	private function passAllByType(&$assignment, $type, $article = 0)
+	{
+		$aid = ($article && isset($article->id)) ? '[' . $article->id . ']' : '';
+		$hash = md5('passAllByType_' . $type . '_' . $aid . '_' . json_encode($assignment) . '_' . json_encode($article));
+
+		if (nnCache::has($hash))
+		{
+			return nnCache::get($hash);
+		}
+
+		$this->initParamsByType($assignment, $type);
+
+		$hash = md5('passAllByType_' . $type . '_' . $aid . '_' . json_encode($assignment) . '_' . json_encode($article));
+
+		if (nnCache::has($hash))
+		{
+			return nnCache::get($hash);
+		}
+
+		switch ($assignment->assignment)
+		{
+			case 'all':
+				$pass = true;
+				break;
+
+			case 'none':
+				$pass = false;
+				break;
+
+			default:
+				$main_type = $assignment->maintype;
+				$sub_type = $assignment->subtype;
+				$pass = false;
+
+				if (!isset($this->classes[$main_type]) && JFile::exists(__DIR__ . '/assignments/' . strtolower($main_type) . '.php'))
+				{
+					require_once __DIR__ . '/assignments/' . strtolower($main_type) . '.php';
+					$class = 'nnFrameworkAssignments' . $main_type;
+					$this->classes[$main_type] = new $class($this->request, $this->date);
+				}
+
+				if (isset($this->classes[$main_type]))
+				{
+					$method = 'pass' . $sub_type;
+					if (method_exists('nnFrameworkAssignments' . $main_type, $method))
+					{
+						$this->classes[$main_type]->initAssignment($assignment, $article);
+						$pass = $this->classes[$main_type]->$method();
+					}
+				}
+
+				break;
+
+		}
+
+		return nnCache::set($hash,
+			$pass
+		);
+	}
+
+	public function hasAssignments(&$assignments)
 	{
 		if (empty($assignments))
 		{
-			return 0;
+			return false;
 		}
 
 		foreach ($this->types as $type)
 		{
 			if (isset($assignments[$type]) && isset($assignments[$type]->assignment) && $assignments[$type]->assignment)
 			{
-				return 1;
+				return true;
 			}
 		}
 
-		return 0;
+		return false;
 	}
 
-	function fixAssignment(&$a, $type = '')
-	{
-		$a->params = isset($a->params) ? $a->params : new stdClass();
-		$a->assignment = isset($a->assignment) ? $a->assignment : '';
-		if (!in_array($type, $this->nonarray))
-		{
-			$a->selection = isset($a->selection) ? $this->makeArray($a->selection) : array();
-		}
-	}
-
-	function pass($pass = 1, $assignment = 'all')
-	{
-		return ($pass) ? ($assignment == 'include') : ($assignment == 'exclude');
-	}
-
-	function passSimple($values = '', $selection = array(), $assignment = 'all', $caseinsensitive = 0)
-	{
-		$values = $this->makeArray($values, 1);
-		$selection = $this->makeArray($selection);
-
-		$pass = 0;
-		foreach ($values as $value)
-		{
-			if ($caseinsensitive)
-			{
-				if (in_array(strtolower($value), array_map('strtolower', $selection)))
-				{
-					$pass = 1;
-					break;
-				}
-			}
-			else
-			{
-				if (in_array($value, $selection))
-				{
-					$pass = 1;
-					break;
-				}
-			}
-		}
-
-		return $this->pass($pass, $assignment);
-	}
-
-	function passPageTypes($option, $selection = array(), $assignment = 'all', $add = 0)
-	{
-		if ($this->params->option != $option)
-		{
-			return $this->pass(0, $assignment);
-		}
-
-		$type = $this->params->view;
-		if ($this->params->layout && $this->params->layout != 'default')
-		{
-			if ($add)
-			{
-				$type .= '_' . $this->params->layout;
-			}
-			else
-			{
-				$type = $this->params->layout;
-			}
-		}
-
-		return $this->passSimple($type, $selection, $assignment);
-	}
-
-	function getAssignmentState(&$assignment)
+	private function getAssignmentState(&$assignment)
 	{
 		switch ($assignment)
 		{
@@ -398,381 +381,286 @@ class NNFrameworkAssignmentsHelper
 			case 'include':
 				$assignment = 'include';
 				break;
+
 			case 2:
 			case 'exclude':
 				$assignment = 'exclude';
 				break;
+
 			case 3:
 			case -1:
 			case 'none':
 				$assignment = 'none';
 				break;
+
 			default:
 				$assignment = 'all';
 				break;
+
 		}
-	}
-
-	function getMenuItemParams($id = 0)
-	{
-		$hash = 'MenuItemParams_' . $id;
-
-		if (!isset($this->cache[$hash]))
-		{
-			$this->q->clear()
-				->select('m.params')
-				->from('#__menu AS m')
-				->where('m.id = ' . (int) $id);
-			$this->db->setQuery($this->q);
-			$params = $this->db->loadResult();
-
-			$parameters = NNParameters::getInstance();
-			$this->cache[$hash] = $parameters->getParams($params);
-		}
-
-		return $this->cache[$hash];
-	}
-
-	function getParentIds($id = 0, $table = 'menu', $parent = 'parent_id', $child = 'id')
-	{
-		if (!$id)
-		{
-			return array();
-		}
-
-		$hash = 'ParentIds_' . $id . '_' . $table . '_' . $parent . '_' . $child;
-
-		$parent_ids = array();
-		if (!isset($this->cache[$hash]))
-		{
-			while ($id)
-			{
-				$this->q->clear()
-					->select('t.' . $parent)
-					->from('#__' . $table . ' as t')
-					->where('t.' . $child . ' = ' . (int) $id);
-				$this->db->setQuery($this->q);
-				$id = $this->db->loadResult();
-				if ($id)
-				{
-					$parent_ids[] = $id;
-				}
-			}
-			$this->cache[$hash] = $parent_ids;
-		}
-
-		return $this->cache[$hash];
 	}
 
 	function makeArray($array = '', $onlycommas = 0, $trim = 1)
 	{
-		if (!is_array($array))
+		if (empty($array))
 		{
-			if (!$onlycommas && strpos($array, '|') !== false)
-			{
-				$array = explode('|', $array);
-			}
-			else
-			{
-				$array = explode(',', $array);
-			}
-		}
-		else if (isset($array['0']) && is_array($array['0']))
-		{
-			$array = $array['0'];
-		}
-		else if (count($array) === 1 && strpos($array['0'], ',') !== false)
-		{
-			$array = explode(',', $array['0']);
+			return array();
 		}
 
-		if ($trim)
+		$hash = md5('makeArray_' . json_encode($array) . '_' . $onlycommas . '_' . $trim);
+
+		if (nnCache::has($hash))
 		{
-			if ($trim && !empty($array))
+			return nnCache::get($hash);
+		}
+
+		$array = $this->mixedDataToArray($array, $onlycommas);
+
+		if (empty($array))
+		{
+			return $array;
+		}
+
+		if (!$trim)
+		{
+			return $array;
+		}
+
+		foreach ($array as $k => $v)
+		{
+			if (!is_string($v))
 			{
-				foreach ($array as $k => $v)
-				{
-					if (is_string($v))
-					{
-						$array[$k] = trim($v);
-					}
-				}
+				continue;
 			}
+
+			$array[$k] = trim($v);
+		}
+
+		return nnCache::set($hash,
+			$array
+		);
+	}
+
+	private function mixedDataToArray($array = '', $onlycommas = 0)
+	{
+		if (!is_array($array))
+		{
+			$delimiter = ($onlycommas || strpos($array, '|') === false) ? ',' : '|';
+
+			return explode($delimiter, $array);
+		}
+
+		if (empty($array))
+		{
+			return $array;
+		}
+
+		if (isset($array['0']) && is_array($array['0']))
+		{
+			return $array['0'];
+		}
+
+		if (count($array) === 1 && strpos($array['0'], ',') !== false)
+		{
+			return explode(',', $array['0']);
 		}
 
 		return $array;
 	}
 
-	function getAssignmentsFromParams(&$params)
+	public function getAssignmentsFromParams(&$params)
 	{
-		jimport('joomla.filesystem.file');
+		$hash = md5('getAssignmentsFromParams_' . json_encode($params));
 
-		$assignments = array();
-
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'menuitems');
-		if ($id)
+		if (nnCache::has($hash))
 		{
-			$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-			$assignments[$name]->params->inc_noItemid = $params->{'assignto_' . $id . '_inc_noitemid'};
+			return nnCache::get($hash);
 		}
 
-		$this->setAssignmentParams($assignments, $params, 'homepage');
+		$types = array();
 
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'datetime', 'date');
-		if ($id)
+		foreach ($this->types as $id => $type)
 		{
-			$assignments[$name]->params->publish_up = $params->{'assignto_' . $id . '_publish_up'};
-			$assignments[$name]->params->publish_down = $params->{'assignto_' . $id . '_publish_down'};
-			$assignments[$name]->params->recurring = isset($params->{'assignto_' . $id . '_recurring'}) ? $params->{'assignto_' . $id . '_recurring'} : 0;
-		}
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'datetime', 'seasons');
-		if ($id)
-		{
-			$assignments[$name]->params->hemisphere = $params->{'assignto_' . $id . '_hemisphere'};
-		}
-		$this->setAssignmentParams($assignments, $params, 'datetime', 'months');
-		$this->setAssignmentParams($assignments, $params, 'datetime', 'days');
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'datetime', 'time');
-		if ($id)
-		{
-			$assignments[$name]->params->publish_up = $params->{'assignto_' . $id . '_publish_up'};
-			$assignments[$name]->params->publish_down = $params->{'assignto_' . $id . '_publish_down'};
-		}
-
-		$this->setAssignmentParams($assignments, $params, 'users', 'usergrouplevels');
-		$this->setAssignmentParams($assignments, $params, 'users', 'users');
-
-		$this->setAssignmentParams($assignments, $params, 'languages');
-
-		$this->setAssignmentParams($assignments, $params, 'ips');
-
-		$this->setAssignmentParams($assignments, $params, 'geo', 'continents', 1);
-		$this->setAssignmentParams($assignments, $params, 'geo', 'countries', 1);
-		$this->setAssignmentParams($assignments, $params, 'geo', 'regions', 1);
-
-		$this->setAssignmentParams($assignments, $params, 'templates');
-
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'urls');
-		if ($id)
-		{
-			$assignments[$name]->selection = $params->{'assignto_' . $id . '_selection'};
-			if (isset($params->{'assignto_' . $id . '_selection_sef'}))
+			if (!isset($params->{'assignto_' . $id}) || !$params->{'assignto_' . $id})
 			{
-				$assignments[$name]->selection .= "\n" . $params->{'assignto_' . $id . '_selection_sef'};
-			}
-			$assignments[$name]->selection = trim(str_replace("\r", '', $assignments[$name]->selection));
-			$assignments[$name]->selection = explode("\n", $assignments[$name]->selection);
-			$assignments[$name]->params->regex = isset($params->{'assignto_' . $id . '_regex'}) ? $params->{'assignto_' . $id . '_regex'} : 1;
-		}
-
-		$this->setAssignmentParams($assignments, $params, 'agents', 'os');
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'agents', 'browsers');
-		if ($id)
-		{
-			$selection = $assignments[$name]->selection;
-			if (isset($params->assignto_mobile_selection) && !empty($params->assignto_mobile_selection))
-			{
-				$selection = array_merge($selection, $this->makeArray($params->assignto_mobile_selection));
-			}
-			if (isset($params->assignto_searchbots_selection) && !empty($params->assignto_searchbots_selection))
-			{
-				$selection = array_merge($selection, $this->makeArray($params->assignto_searchbots_selection));
-			}
-			$assignments[$name]->selection = $selection;
-		}
-
-		$this->setAssignmentParams($assignments, $params, 'components');
-
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'tags');
-		if ($id)
-		{
-			$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-		}
-
-		$this->setAssignmentParams($assignments, $params, 'content', 'pagetypes', 1);
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'content', 'cats');
-		if ($id)
-		{
-			$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-			$assignments[$name]->params->inc_categories = in_array('inc_cats', $incs);
-			$assignments[$name]->params->inc_articles = in_array('inc_arts', $incs);
-			$assignments[$name]->params->inc_others = in_array('inc_others', $incs);
-			$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-		}
-		list($id, $name) = $this->setAssignmentParams($assignments, $params, 'content', 'articles');
-		if ($id)
-		{
-			$assignments[$name]->params->keywords = $params->{'assignto_' . $id . '_keywords'};
-		}
-
-		if ($this->has['flexicontent'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'flexicontent', 'pagetypes', 1);
-
-			list($id, $name) = $this->setAssignmentParams($assignments, $params, 'flexicontent', 'tags', 1);
-			if ($id)
-			{
-				$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-				$assignments[$name]->params->inc_tags = in_array('inc_tags', $incs);
-				$assignments[$name]->params->inc_items = in_array('inc_items', $incs);
+				continue;
 			}
 
-			$this->setAssignmentParams($assignments, $params, 'flexicontent', 'types', 1);
-		}
+			$types[$type] = (object) array(
+				'assignment' => $params->{'assignto_' . $id},
+				'selection'  => array(),
+				'params'     => new stdClass()
+			);
 
-		if ($this->has['k2'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'k2', 'pagetypes', 1);
-
-			list($id, $name) = $this->setAssignmentParams($assignments, $params, 'k2', 'cats', 1);
-			if ($id)
+			if (isset($params->{'assignto_' . $id . '_selection'}))
 			{
-				$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-				$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-				$assignments[$name]->params->inc_categories = in_array('inc_cats', $incs);
-				$assignments[$name]->params->inc_items = in_array('inc_items', $incs);
+				$selection = $params->{'assignto_' . $id . '_selection'};
+				$types[$type]->selection = in_array($type, $this->nonarray) ? $selection : $this->makeArray($selection);
 			}
 
-			list($id, $name) = $this->setAssignmentParams($assignments, $params, 'k2', 'tags', 1);
-			if ($id)
-			{
-				$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-				$assignments[$name]->params->inc_tags = in_array('inc_tags', $incs);
-				$assignments[$name]->params->inc_items = in_array('inc_items', $incs);
-			}
-
-			$this->setAssignmentParams($assignments, $params, 'k2', 'items', 1);
+			$this->addParams($types[$type], $type, $id, $params);
 		}
 
-		if ($this->has['zoo'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'zoo', 'pagetypes', 1);
+		return nnCache::set($hash,
+			$types
+		);
 
-			list($id, $name) = $this->setAssignmentParams($assignments, $params, 'zoo', 'cats', 1);
-			if ($id)
-			{
-				$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-				$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-				$assignments[$name]->params->inc_apps = in_array('inc_apps', $incs);
-				$assignments[$name]->params->inc_categories = in_array('inc_cats', $incs);
-				$assignments[$name]->params->inc_items = in_array('inc_items', $incs);
-			}
-
-			$this->setAssignmentParams($assignments, $params, 'zoo', 'items', 1);
-		}
-
-		if ($this->has['akeebasubs'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'akeebasubs', 'pagetypes', 1);
-			$this->setAssignmentParams($assignments, $params, 'akeebasubs', 'levels', 1);
-		}
-
-		if ($this->has['hikashop'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'hikashop', 'pagetypes', 1);
-
-			list($id, $name) = $this->setAssignmentParams($assignments, $params, 'hikashop', 'cats', 1);
-			if ($id)
-			{
-				$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-				$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-				$assignments[$name]->params->inc_categories = in_array('inc_cats', $incs);
-				$assignments[$name]->params->inc_items = in_array('inc_items', $incs);
-			}
-
-			$this->setAssignmentParams($assignments, $params, 'hikashop', 'products', 1);
-		}
-
-		if ($this->has['mijoshop'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'mijoshop', 'pagetypes', 1);
-
-			list($id, $name) = $this->setAssignmentParams($assignments, $params, 'mijoshop', 'cats', 1);
-			if ($id)
-			{
-				$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-				$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-				$assignments[$name]->params->inc_categories = in_array('inc_cats', $incs);
-				$assignments[$name]->params->inc_items = in_array('inc_items', $incs);
-			}
-
-			$this->setAssignmentParams($assignments, $params, 'mijoshop', 'products', 1);
-		}
-
-		if ($this->has['redshop'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'redshop', 'pagetypes', 1);
-
-			list($id, $name) = $this->setAssignmentParams($assignments, $params, 'redshop', 'cats', 1);
-			if ($id)
-			{
-				$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-				$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-				$assignments[$name]->params->inc_categories = in_array('inc_cats', $incs);
-				$assignments[$name]->params->inc_items = in_array('inc_items', $incs);
-			}
-
-			$this->setAssignmentParams($assignments, $params, 'redshop', 'products', 1);
-		}
-
-		if ($this->has['virtuemart'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'virtuemart', 'pagetypes', 1);
-
-			list($id, $name) = $this->setAssignmentParams($assignments, $params, 'virtuemart', 'cats', 1);
-			if ($id)
-			{
-				$assignments[$name]->params->inc_children = $params->{'assignto_' . $id . '_inc_children'};
-				$incs = $this->makeArray($params->{'assignto_' . $id . '_inc'});
-				$assignments[$name]->params->inc_categories = in_array('inc_cats', $incs);
-				$assignments[$name]->params->inc_items = in_array('inc_items', $incs);
-			}
-
-			$this->setAssignmentParams($assignments, $params, 'virtuemart', 'products', 1);
-		}
-
-		if ($this->has['cookieconfirm'])
-		{
-			$this->setAssignmentParams($assignments, $params, 'cookieconfirm');
-		}
-
-		$this->setAssignmentParams($assignments, $params, 'php');
-
-		return $assignments;
+		return $types;
 	}
 
-	function setAssignmentParams(&$assignments, &$params, $maintype, $subtype = '', $usemain = 0)
+	private function addParams(&$object, $type, $id, &$params)
 	{
-		$id = $maintype;
-		$name = $this->names[$maintype];
-		if ($subtype)
+		$bool_params = array();
+		$array_params = array();
+		$includes = array();
+
+		switch ($type)
 		{
-			$name .= '_' . $this->names[$subtype];
-			if ($usemain)
-			{
-				$id .= $subtype;
-			}
-			else
-			{
-				$id = $subtype;
-			}
-		}
-		if (isset($params->{'assignto_' . $id}) && $params->{'assignto_' . $id})
-		{
-			$assignments[$name] = new stdClass;
-			$assignments[$name]->assignment = $params->{'assignto_' . $id};
-			$assignments[$name]->selection = array();
-			$assignments[$name]->params = new stdClass;
-			if (isset($params->{'assignto_' . $id . '_selection'}) && !empty($params->{'assignto_' . $id . '_selection'}))
-			{
-				$assignments[$name]->selection = $params->{'assignto_' . $id . '_selection'};
-			}
-		}
-		else
-		{
-			$id = '';
+			case 'Menu':
+				$bool_params = array('inc_children', 'inc_noitemid');
+				break;
+
+			case 'DateTime.Date':
+				$bool_params = array('publish_up', 'publish_down', 'recurring');
+				break;
+
+			case 'DateTime.Seasons':
+				$bool_params = array('hemisphere');
+				break;
+
+			case 'DateTime.Time':
+				$bool_params = array('publish_up', 'publish_down');
+				break;
+
+			case 'Geo.Continents':
+			case 'Geo.Countries':
+			case 'Geo.Regions':
+				$object->params->service = isset($params->assignto_geo_service) ? $params->assignto_geo_service : 'telize';
+				break;
+
+			case 'URLs':
+				if (is_array($object->selection))
+				{
+					$object->selection = implode("\n", $object->selection);
+				}
+				if (isset($params->assignto_urls_selection_sef))
+				{
+					$object->selection .= "\n" . $params->assignto_urls_selection_sef;
+				}
+				$object->selection = trim(str_replace("\r", '', $object->selection));
+				$object->selection = explode("\n", $object->selection);
+				$object->params->regex = isset($params->assignto_urls_regex) ? $params->assignto_urls_regex : 1;
+				break;
+
+			case 'Agents.Browsers':
+				if (isset($params->assignto_mobile_selection) && !empty($params->assignto_mobile_selection))
+				{
+					$object->selection = array_merge($this->makeArray($object->selection), $this->makeArray($params->assignto_mobile_selection));
+				}
+				if (isset($params->assignto_searchbots_selection) && !empty($params->assignto_searchbots_selection))
+				{
+					$object->selection = array_merge($object->selection, $this->makeArray($params->assignto_searchbots_selection));
+				}
+				break;
+
+			case 'Tags':
+				$bool_params = array('inc_children');
+				break;
+
+			case 'Content.Categories':
+				$bool_params = array('inc_children');
+				$includes = array('cats' => 'categories', 'arts' => 'articles', 'others');
+				break;
+
+			case 'EasyBlog.Categories':
+			case 'K2.Categories':
+			case 'HikaShop.Categories':
+			case 'MijoShop.Categories':
+			case 'RedShop.Categories':
+			case 'VirtueMart.Categories':
+				$bool_params = array('inc_children');
+				$includes = array('cats' => 'categories', 'items');
+				break;
+
+			case 'Zoo.Categories':
+				$bool_params = array('inc_children');
+				$includes = array('apps', 'cats' => 'categories', 'items');
+				break;
+
+			case 'EasyBlog.Tags':
+			case 'FlexiContent.Tags':
+			case 'K2.Tags':
+				$includes = array('tags', 'items');
+				break;
+
+			case 'Content.Articles':
+				$bool_params = array('content_keywords', 'keywords' => 'meta_keywords', 'authors');
+				break;
+
+			case 'K2.Items':
+				$bool_params = array('content_keywords', 'meta_keywords', 'authors');
+				break;
+
+			case 'EasyBlog.Items':
+				$bool_params = array('content_keywords', 'authors');
+				break;
+
+			case 'Zoo.Items':
+				$bool_params = array('authors');
+				break;
 		}
 
-		return array($id, $name);
+		if (empty($bool_params) && empty($array_params) && empty($includes))
+		{
+			return;
+		}
+
+		$this->addParamsByType($object, $id, $params, $bool_params, $array_params, $includes);
+	}
+
+	private function addParamsByType(&$object, $id, $params, $bool_params = array(), $array_params = array(), $includes = array())
+	{
+		foreach ($bool_params as $key => $param)
+		{
+			$key = is_numeric($key) ? $param : $key;
+			$object->params->{$param} = $this->getTypeParamValue($id, $params, $key);
+		}
+
+		foreach ($array_params as $key => $param)
+		{
+			$key = is_numeric($key) ? $param : $key;
+			$object->params->{$param} = $this->getTypeParamValue($id, $params, $key, true);
+		}
+
+		if (empty($includes))
+		{
+			return;
+		}
+
+		$incs = $this->getTypeParamValue($id, $params, 'inc', true);
+
+
+		foreach ($includes as $key => $param)
+		{
+			$key = is_numeric($key) ? $param : $key;
+			$object->params->{'inc_' . $param} = in_array('inc_' . $key, $incs) ? 1 : 0;
+		}
+
+		unset($object->params->inc);
+	}
+
+	private function getTypeParamValue($id, $params, $key, $is_array = false)
+	{
+		if (isset($params->{'assignto_' . $id . '_' . $key}))
+		{
+			return $params->{'assignto_' . $id . '_' . $key};
+		}
+
+		if ($is_array)
+		{
+			return array();
+		}
+
+		return 0;
 	}
 }

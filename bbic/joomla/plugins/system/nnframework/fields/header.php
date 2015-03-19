@@ -4,22 +4,21 @@
  * Displays a title with a bunch of extras, like: description, image, versioncheck
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-require_once JPATH_PLUGINS . '/system/nnframework/helpers/text.php';
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
 
-class JFormFieldNN_Header extends JFormField
+class JFormFieldNN_Header extends nnFormField
 {
 	public $type = 'Header';
-	private $params = null;
 
 	protected function getLabel()
 	{
@@ -46,7 +45,7 @@ class JFormFieldNN_Header extends JFormField
 			$v4 = $this->get('var4');
 			$v5 = $this->get('var5');
 
-			$description = NNText::html_entity_decoder(trim(JText::sprintf($description, $v1, $v2, $v3, $v4, $v5)));
+			$description = nnText::html_entity_decoder(trim(JText::sprintf($description, $v1, $v2, $v3, $v4, $v5)));
 		}
 
 		if ($title)
@@ -114,7 +113,7 @@ class JFormFieldNN_Header extends JFormField
 			{
 				$title = '<a href="' . $url . '" target="_blank" title="' . preg_replace('#<[^>]*>#', '', $title) . '">' . $title . '</a>';
 			}
-			$html[] = '<h4>' . NNText::html_entity_decoder($title) . '</h4>';
+			$html[] = '<h4>' . nnText::html_entity_decoder($title) . '</h4>';
 		}
 		if ($description)
 		{
@@ -126,10 +125,5 @@ class JFormFieldNN_Header extends JFormField
 		}
 
 		return '</div><div>' . implode('', $html);
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }

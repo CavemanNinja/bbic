@@ -3,25 +3,34 @@
  * NoNumber Framework Helper File: Functions
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
+require_once __DIR__ . '/cache.php';
+
 /**
  * Framework Functions
  */
-class NNFrameworkFunctions
+class nnFrameworkFunctions
 {
-	var $_version = '14.8.6';
+	var $_version = '15.3.4';
 
-	public function getByUrl($url, $options = array())
+	public function getByUrl($url)
 	{
+		$hash = md5('getByUrl_' . $url);
+
+		if (nnCache::has($hash))
+		{
+			return nnCache::get($hash);
+		}
+
 		// only allow url calls from administrator
 		if (!JFactory::getApplication()->isAdmin())
 		{
@@ -60,14 +69,25 @@ class NNFrameworkFunctions
 		header("Cache-Control: public");
 		header("Content-type: text/xml");
 
-		return self::getContents($url);
+		return nnCache::set($hash,
+			self::getContents($url)
+		);
 	}
 
 	public function getContents($url, $fopen = 0)
 	{
+		$hash = md5('getByUrl_' . $url . '_' . $fopen);
+
+		if (nnCache::has($hash))
+		{
+			return nnCache::get($hash);
+		}
+
 		if ((!$fopen || !ini_get('allow_url_fopen')) && function_exists('curl_init') && function_exists('curl_exec'))
 		{
-			return $this->curl($url);
+			return nnCache::set($hash,
+				$this->curl($url)
+			);
 		}
 
 		if (!ini_get('allow_url_fopen'))
@@ -86,11 +106,20 @@ class NNFrameworkFunctions
 			$html[] = fgets($file, 1024);
 		}
 
-		return implode('', $html);
+		return nnCache::set($hash,
+			implode('', $html)
+		);
 	}
 
 	protected function curl($url)
 	{
+		$hash = md5('curl_' . $url);
+
+		if (nnCache::has($hash))
+		{
+			return nnCache::get($hash);
+		}
+
 		$timeout = JFactory::getApplication()->input->getInt('timeout', 3);
 		$timeout = min(array(30, max(array(3, $timeout))));
 
@@ -116,7 +145,7 @@ class NNFrameworkFunctions
 		}
 
 		//follow on location problems
-		if (ini_get('open_basedir') == '' && ini_get('safe_mode') != '1' && ini_get('safe_mode') != 'On')
+		if (!ini_get('safe_mode') && !ini_get('open_basedir'))
 		{
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 			$html = curl_exec($ch);
@@ -127,10 +156,12 @@ class NNFrameworkFunctions
 		}
 		curl_close($ch);
 
-		return $html;
+		return nnCache::set($hash,
+			$html
+		);
 	}
 
-	protected function curl_redir_exec($ch)
+	public function curl_redir_exec($ch)
 	{
 		static $curl_loops = 0;
 		static $curl_max_loops = 20;
@@ -176,7 +207,7 @@ class NNFrameworkFunctions
 			$new_url = $url['scheme'] . '://' . $url['host'] . $url['path'] . ($url['query'] ? '?' . $url['query'] : '');
 			curl_setopt($ch, CURLOPT_URL, $new_url);
 
-			return $this->curl_redir_exec($ch);
+			return self::curl_redir_exec($ch);
 		}
 		else
 		{
@@ -228,6 +259,7 @@ class NNFrameworkFunctions
 				}
 				break;
 		}
+
 		return 0;
 	}
 
@@ -238,6 +270,13 @@ class NNFrameworkFunctions
 
 	static function xmlToObject($url, $root)
 	{
+		$hash = md5('curl_' . $url . '_' . $root);
+
+		if (nnCache::has($hash))
+		{
+			return nnCache::get($hash);
+		}
+
 		if (JFile::exists($url))
 		{
 			$xml = @new SimpleXMLElement($url, LIBXML_NONET | LIBXML_NOCDATA, 1);
@@ -249,15 +288,20 @@ class NNFrameworkFunctions
 
 		if (!@count($xml))
 		{
-			return new stdClass;
+			return nnCache::set($hash,
+				new stdClass
+			);
 		}
 
 		if ($root)
 		{
 			if (!isset($xml->$root))
 			{
-				return new stdClass;
+				return nnCache::set($hash,
+					new stdClass
+				);
 			}
+
 			$xml = $xml->$root;
 		}
 
@@ -268,20 +312,22 @@ class NNFrameworkFunctions
 			$xml = $xml->$root;
 		}
 
-		return $xml;
+		return nnCache::set($hash,
+			$xml
+		);
 	}
 
 	static function xmlToArray($xml, $options = array())
 	{
 		$defaults = array(
 			'namespaceSeparator' => ':', //you may want this to be something other than a colon
-			'attributePrefix' => '', //to distinguish between attributes and nodes with the same name
-			'alwaysArray' => array(), //array of xml tag names which should always become arrays
-			'autoArray' => true, //only create arrays for tags which appear more than once
-			'textContent' => 'value', //key used for the text content of elements
-			'autoText' => true, //skip textContent key if node has no attributes or child nodes
-			'keySearch' => false, //optional search and replace on tag and attribute names
-			'keyReplace' => false //replace values for above search values (as passed to str_replace())
+			'attributePrefix'    => '', //to distinguish between attributes and nodes with the same name
+			'alwaysArray'        => array(), //array of xml tag names which should always become arrays
+			'autoArray'          => true, //only create arrays for tags which appear more than once
+			'textContent'        => 'value', //key used for the text content of elements
+			'autoText'           => true, //skip textContent key if node has no attributes or child nodes
+			'keySearch'          => false, //optional search and replace on tag and attribute names
+			'keyReplace'         => false //replace values for above search values (as passed to str_replace())
 		);
 		$options = array_merge($defaults, $options);
 		$namespaces = $xml->getDocNamespaces();

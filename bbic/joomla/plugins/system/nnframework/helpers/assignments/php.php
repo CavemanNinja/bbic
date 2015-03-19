@@ -3,30 +3,31 @@
  * NoNumber Framework Helper File: Assignments: PHP
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Assignments: PHP
- */
-class NNFrameworkAssignmentsPHP
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/assignment.php';
+
+class nnFrameworkAssignmentsPHP extends nnFrameworkAssignment
 {
-	function passPHP(&$parent, &$params, $selection = array(), $assignment = 'all', $article = 0)
+	function passPHP()
 	{
-		if (!is_array($selection))
+		$article = $this->article;
+
+		if (!is_array($this->selection))
 		{
-			$selection = array($selection);
+			$this->selection = array($this->selection);
 		}
 
-		$pass = 0;
-		foreach ($selection as $php)
+		$pass = false;
+		foreach ($this->selection as $php)
 		{
 			// replace \n with newline and other fix stuff
 			$php = str_replace('\|', '|', $php);
@@ -35,18 +36,18 @@ class NNFrameworkAssignmentsPHP
 
 			if ($php == '')
 			{
-				$pass = 1;
+				$pass = true;
 				break;
 			}
 
 			if (!$article && strpos($php, '$article') !== false)
 			{
 				$article = '';
-				if ($parent->params->option == 'com_content' && $parent->params->view == 'article')
+				if ($this->request->option == 'com_content' && $this->request->view == 'article')
 				{
 					require_once JPATH_SITE . '/components/com_content/models/article.php';
 					$model = JModelLegacy::getInstance('article', 'contentModel');
-					$article = $model->getItem($parent->params->id);
+					$article = $model->getItem($this->request->id);
 				}
 			}
 			if (!isset($Itemid))
@@ -81,12 +82,13 @@ class NNFrameworkAssignmentsPHP
 			{
 				$user = JFactory::getUser();
 			}
-			$php .= ';return 1;';
+			$php .= ';return true;';
+
 			$temp_PHP_func = create_function('&$article, &$Itemid, &$mainframe, &$app, &$document, &$doc, &$database, &$db, &$user', $php);
 
 			// evaluate the script
 			ob_start();
-			$pass = $temp_PHP_func($article, $Itemid, $mainframe, $app, $document, $doc, $database, $db, $user) ? 1 : 0;
+			$pass = (bool) $temp_PHP_func($article, $Itemid, $mainframe, $app, $document, $doc, $database, $db, $user);
 			unset($temp_PHP_func);
 			ob_end_clean();
 
@@ -96,6 +98,6 @@ class NNFrameworkAssignmentsPHP
 			}
 		}
 
-		return $parent->pass($pass, $assignment);
+		return $this->pass($pass);
 	}
 }

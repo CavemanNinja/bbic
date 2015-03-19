@@ -4,22 +4,21 @@
  * Displays Assignment Selection radio options
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-require_once JPATH_PLUGINS . '/system/nnframework/helpers/text.php';
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
 
-class JFormFieldNN_AssignmentSelection extends JFormField
+class JFormFieldNN_AssignmentSelection extends nnFormField
 {
 	public $type = 'AssignmentSelection';
-	private $params = null;
 
 	protected function getLabel()
 	{
@@ -45,7 +44,7 @@ class JFormFieldNN_AssignmentSelection extends JFormField
 
 		if ($label)
 		{
-			$label = NNText::html_entity_decoder(JText::_($label));
+			$label = nnText::html_entity_decoder(JText::_($label));
 
 			$html[] = '</div>';
 			if (!$noshow)
@@ -109,10 +108,5 @@ class JFormFieldNN_AssignmentSelection extends JFormField
 		}
 
 		return '</div>' . implode('', $html);
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }

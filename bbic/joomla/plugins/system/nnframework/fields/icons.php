@@ -4,20 +4,21 @@
  * Displays a list of radio items and the images you can chose from
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-class JFormFieldNN_Icons extends JFormField
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
+
+class JFormFieldNN_Icons extends nnFormField
 {
 	public $type = 'Icons';
-	private $params = null;
 
 	protected function getInput()
 	{
@@ -143,10 +144,5 @@ class JFormFieldNN_Icons extends JFormField
 		}
 
 		return '<div id="' . $this->id . '" class="btn-group radio nn_icon_group">' . implode('', $html) . '</div>';
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }

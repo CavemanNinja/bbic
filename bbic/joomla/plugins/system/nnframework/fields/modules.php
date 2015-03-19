@@ -4,32 +4,30 @@
  * Displays an article id field with a button
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-require_once JPATH_PLUGINS . '/system/nnframework/helpers/text.php';
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
 
-class JFormFieldNN_Modules extends JFormField
+class JFormFieldNN_Modules extends nnFormField
 {
 	public $type = 'Modules';
-	private $params = null;
-	private $db = null;
 
 	protected function getInput()
 	{
 		$this->params = $this->element->attributes();
-		$this->db = JFactory::getDBO();
 
 		JHtml::_('behavior.modal', 'a.modal');
 
-		$size = (int) $this->get('size');
+		$size = ($this->get('size') ? 'style="width:' . $this->get('size') . 'px"' : '');
+
 		$multiple = $this->get('multiple');
 		$showtype = $this->get('showtype');
 		$showid = $this->get('showid');
@@ -75,7 +73,7 @@ class JFormFieldNN_Modules extends JFormField
 			{
 				$item->title .= ' (' . $item->language . ')';
 			}
-			$item->title = NNText::prepareSelectItem($item->title, $item->published);
+			$item->title = nnText::prepareSelectItem($item->title, $item->published);
 
 			$options[] = JHtml::_('select.option', $item->id, $item->title);
 		}
@@ -115,12 +113,12 @@ class JFormFieldNN_Modules extends JFormField
 						}
 					}
 				}
-				$html .= '<input type="text" id="' . $this->id . '_text" value="' . $val_name . '" class="inputbox" size="' . $size . '" disabled="disabled" />';
+				$html .= '<input type="text" id="' . $this->id . '_text" value="' . $val_name . '" class="inputbox" ' . $size . ' disabled="disabled" />';
 				$html .= '<input type="hidden" name="' . $this->name . '" id="' . $this->id . '" value="' . $this->value . '" />';
 			}
 			else
 			{
-				$html .= '<input type="text" name="' . $this->name . '" id="' . $this->id . '" value="' . $this->value . '" class="inputbox" size="' . $size . '" />';
+				$html .= '<input type="text" name="' . $this->name . '" id="' . $this->id . '" value="' . $this->value . '" class="inputbox" ' . $size . ' />';
 			}
 			$html .= '</td><td style="padding: 0px;"padding-left: 5px;>' . "\n";
 			$html .= JHtml::_('select.genericlist', $options, '', $attribs, 'value', 'text', '', '');
@@ -128,7 +126,7 @@ class JFormFieldNN_Modules extends JFormField
 		}
 		else
 		{
-			$attr = $size ? ' size="' . (int) $size . '"' : '';
+			$attr = $size;
 			$attr .= $multiple ? ' multiple="multiple"' : '';
 			$attr .= ' class="input-xxlarge"';
 
@@ -137,10 +135,5 @@ class JFormFieldNN_Modules extends JFormField
 		}
 
 		return preg_replace('#>\[\[\:(.*?)\:\]\]#si', ' style="\1">', $html);
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }

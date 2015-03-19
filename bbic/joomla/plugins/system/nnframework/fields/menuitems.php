@@ -4,22 +4,21 @@
  * Display a menuitem field with a button
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-require_once JPATH_PLUGINS . '/system/nnframework/helpers/text.php';
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
 
-class JFormFieldNN_MenuItems extends JFormField
+class JFormFieldNN_MenuItems extends nnFormField
 {
 	public $type = 'MenuItems';
-	private $params = null;
 
 	protected function getInput()
 	{
@@ -30,8 +29,7 @@ class JFormFieldNN_MenuItems extends JFormField
 
 		JFactory::getLanguage()->load('com_menus', JPATH_ADMINISTRATOR);
 
-		require_once JPATH_ADMINISTRATOR . '/components/com_menus/helpers/menus.php';
-		$options = $this->getMenuLinks();
+		$options = $this->getMenuItems();
 
 		require_once JPATH_PLUGINS . '/system/nnframework/helpers/html.php';
 
@@ -41,7 +39,7 @@ class JFormFieldNN_MenuItems extends JFormField
 	/**
 	 * Get a list of menu links for one or all menus.
 	 */
-	public static function getMenuLinks()
+	public static function getMenuItems()
 	{
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true)
@@ -95,7 +93,7 @@ class JFormFieldNN_MenuItems extends JFormField
 			$type->class = 'hidechildren';
 			$type->labelclass = 'nav-header';
 
-			$rlu[$type->menutype] = & $type;
+			$rlu[$type->menutype] = &$type;
 			$type->links = array();
 		}
 
@@ -116,11 +114,11 @@ class JFormFieldNN_MenuItems extends JFormField
 
 				if ($link->type == 'alias')
 				{
-					$link->text .=' <small>(' . JText::_('COM_MENUS_TYPE_ALIAS') . ')</small>';
+					$link->text .= ' <small>(' . JText::_('COM_MENUS_TYPE_ALIAS') . ')</small>';
 					$link->disable = 1;
 				}
 
-				$rlu[$link->menutype]->links[] = & $link;
+				$rlu[$link->menutype]->links[] = &$link;
 
 				// Cleanup garbage.
 				unset($link->menutype);
@@ -128,10 +126,5 @@ class JFormFieldNN_MenuItems extends JFormField
 		}
 
 		return $menuTypes;
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }

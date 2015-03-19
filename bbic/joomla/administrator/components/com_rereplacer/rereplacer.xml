@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.2" type="component" method="upgrade">
+	<name>COM_REREPLACER</name>
+	<description>COM_REREPLACER_DESC</description>
+	<version>5.13.3FREE</version>
+	<creationDate>March 2015</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2015 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<administration>
+		<menu img="../media/rereplacer/images/icon_rereplacer.png">COM_REREPLACER</menu>
+	</administration>
+
+	<!-- installation/uninstallation -->
+	<scriptfile>script.rereplacer.php</scriptfile>
+</extension>

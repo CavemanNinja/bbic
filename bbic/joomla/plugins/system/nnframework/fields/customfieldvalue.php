@@ -4,20 +4,21 @@
  * Displays a custom key field (use in combination with customfieldkey)
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-class JFormFieldNN_CustomFieldValue extends JFormField
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
+
+class JFormFieldNN_CustomFieldValue extends nnFormField
 {
 	public $type = 'CustomFieldValue';
-	private $params = null;
 
 	protected function getLabel()
 	{
@@ -29,16 +30,11 @@ class JFormFieldNN_CustomFieldValue extends JFormField
 		$this->params = $this->element->attributes();
 
 		$label = ($this->get('label') ? $this->get('label') : '');
-		$size = ($this->get('size') ? 'size="' . $this->get('size') . '"' : '');
+		$size = ($this->get('size') ? 'style="width:' . $this->get('size') . 'px"' : '');
 		$class = ($this->get('class') ? 'class="' . $this->get('class') . '"' : 'class="text_area"');
 		$this->value = htmlspecialchars(html_entity_decode($this->value, ENT_QUOTES), ENT_QUOTES);
 
 		return '</div></div></div><input type="text" name="' . $this->name . '" id="' . $this->id . '" value="' . $this->value
 		. '" placeholder="' . JText::_($label) . '" title="' . JText::_($label) . '" ' . $class . ' ' . $size . ' />';
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }

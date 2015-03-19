@@ -2,11 +2,11 @@
  * Stylesheet for font faces
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -54,26 +54,30 @@
 }
 
 .icon-nonumber {
-	width: 16px !important;
 	&:before {
 		font-family: 'NoNumber' !important;
-		font-size: 16px !important;
+		font-size: 14.2px !important;
 	}
 }
+
 .btn .icon-nonumber {
 	text-indent: -2px;
 }
+
 .btn .icon-nonumber:before {
 	vertical-align: -3px;
 }
+
 .icon-nonumber-24:before {
 	vertical-align: -5px;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
 	.icon-nonumber-24:before {
 		vertical-align: -3px;
 	}
 }
+
 .btn .icon-nonumber {
 	text-indent: -2px;
 }
@@ -114,6 +118,9 @@
 	}
 	&dbreplacer:before {
 		content: "\e00a";
+	}
+	&dummycontent:before {
+		content: "\e017";
 	}
 	&emailprotector:before {
 		content: "\e00b";
@@ -162,6 +169,7 @@
 		font-family: 'NNIcons' !important;
 	}
 }
+
 .nnicon- {
 	&paragraph-left:before {
 		content: "\e001";
@@ -245,21 +253,25 @@
 		content: "\e01f";
 	}
 }
+
 .icon-nonumber.icon-src-sourcetags:before,
 .nnicon-src-sourcetags:before {
 	font-family: 'NNIcons' !important;
 	content: "\e01b";
 }
+
 .icon-nonumber.icon-src-nosourcetags:before,
 .nnicon-src-nosourcetags:before {
 	font-family: 'NNIcons' !important;
 	content: "\e01c";
 }
+
 .icon-nonumber.icon-src-tagstyle:before,
 .nnicon-src-tagstyle:before {
 	font-family: 'NNIcons' !important;
 	content: "\e01d";
 }
+
 .icon-nonumber.icon-src-tagstylebrackets:before,
 .nnicon-src-tagstylebrackets:before {
 	font-family: 'NNIcons' !important;

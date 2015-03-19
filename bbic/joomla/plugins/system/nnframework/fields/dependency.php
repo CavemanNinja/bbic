@@ -4,11 +4,11 @@
  * Displays an error if given file is not found
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
@@ -16,10 +16,11 @@ defined('_JEXEC') or die;
 
 jimport('joomla.form.formfield');
 
-class JFormFieldNN_Dependency extends JFormField
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
+
+class JFormFieldNN_Dependency extends nnFormField
 {
 	public $type = 'Dependency';
-	private $params = null;
 
 	protected function getLabel()
 	{
@@ -66,11 +67,6 @@ class JFormFieldNN_Dependency extends JFormField
 		nnFieldDependency::setMessage($file, $label);
 
 		return '';
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }
 

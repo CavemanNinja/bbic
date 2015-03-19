@@ -3,81 +3,121 @@
  * NoNumber Framework Helper File: Assignments: Geo
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Assignments: Browsers
- */
-class NNFrameworkAssignmentsGeo
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/assignment.php';
+
+class nnFrameworkAssignmentsGeo extends nnFrameworkAssignment
 {
 	var $geo = null;
 
 	/**
 	 * passContinents
 	 */
-	function passContinents(&$parent, &$params, $selection = array(), $assignment = 'all')
+	function passContinents()
 	{
-		$selection = $parent->makeArray($selection);
-
-		$geo = self::getGeo();
-		if (!$geo)
+		if (!$geo = self::getGeo($this->params->service))
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
-		$continent = $geo->geoplugin_continentCode;
 
-		return $parent->passSimple($continent, $selection, $assignment);
+		return $this->passSimple($geo->continent);
 	}
 
 	/**
 	 * passCountries
 	 */
-	function passCountries(&$parent, &$params, $selection = array(), $assignment = 'all')
+	function passCountries()
 	{
-		$selection = $parent->makeArray($selection);
-
-		$geo = self::getGeo();
-		if (!$geo)
+		if (!$geo = self::getGeo($this->params->service))
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
-		$country = $geo->geoplugin_countryCode;
 
-		return $parent->passSimple($country, $selection, $assignment);
+		return $this->passSimple($geo->country);
 	}
 
 	/**
 	 * passRegions
 	 */
-	function passRegions(&$parent, &$params, $selection = array(), $assignment = 'all')
+	function passRegions()
 	{
-		$selection = $parent->makeArray($selection);
-
-		$geo = self::getGeo();
-		if (!$geo)
+		if (!$geo = self::getGeo($this->params->service))
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
-		$region = $geo->geoplugin_countryCode . '-' . $geo->geoplugin_regionCode;
 
-		return $parent->passSimple($region, $selection, $assignment);
+		$region = $geo->country . '-' . $geo->region;
+
+		return $this->passSimple($region);
 	}
 
-	function getGeo()
+	function getGeo($service)
 	{
-		if (!$this->geo)
+		if ($this->geo !== null)
 		{
-			require_once JPATH_PLUGINS . '/system/nnframework/helpers/functions.php';
-			$func = new NNFrameworkFunctions;
-			$this->geo = json_decode($func->getContents('http://www.geoplugin.net/json.gp?ip=' . $_SERVER['REMOTE_ADDR']));
+			return $this->geo;
+		}
+
+		require_once JPATH_PLUGINS . '/system/nnframework/helpers/functions.php';
+		$func = new nnFrameworkFunctions;
+
+		$ip = $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ? '' : $_SERVER['REMOTE_ADDR'];
+
+		switch ($service)
+		{
+			case 'geoplugin':
+				if (!$geo = json_decode($func->getContents('http://www.geoplugin.net/json.gp?ip=' . $ip)))
+				{
+					$this->geo = false;
+
+					return false;
+				}
+
+				if (isset($geo->geoplugin_status) && $geo->geoplugin_status == 404)
+				{
+					$this->geo = false;
+
+					return false;
+				}
+
+				$this->geo = (object) array(
+					'continent' => isset($geo->geoplugin_continentCode) ? $geo->geoplugin_continentCode : '',
+					'country'   => isset($geo->geoplugin_countryCode) ? $geo->geoplugin_countryCode : '',
+					'region'    => isset($geo->geoplugin_regionCode) ? $geo->geoplugin_regionCode : '',
+				);
+				break;
+
+			case 'telize':
+			default:
+				if (!$geo = json_decode($func->getContents('http://www.telize.com/geoip/' . $ip)))
+				{
+					$this->geo = false;
+
+					return false;
+				}
+
+				if (isset($geo->code))
+				{
+					$this->geo = false;
+
+					return false;
+				}
+
+				$this->geo = (object) array(
+					'continent' => isset($geo->continent_code) ? $geo->continent_code : '',
+					'country'   => isset($geo->country_code) ? $geo->country_code : '',
+					'region'    => isset($geo->region_code) ? $geo->region_code : '',
+				);
+				break;
 		}
 
 		return $this->geo;

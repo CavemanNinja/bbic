@@ -3,80 +3,72 @@
  * NoNumber Framework Helper File: Tags
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Functions
- */
-class NNTags
+class nnTags
 {
-	public static function getTagValues($str = '', $keys = array('title'), $separator = '|', $equal = '=', $limit = 0)
+	public static function getTagValues($string = '', $keys = array('title'), $separator = '|', $equal = '=', $limit = 0)
 	{
-		$s = '[[S]]';
-		$e = '[[E]]';
-		$t1 = '[[T]]';
-		$t2 = '[[/T]]';
+		$temp_separator = '[[S]]';
+		$temp_equal = '[[E]]';
+		$tag_start = '[[T]]';
+		$tag_end = '[[/T]]';
 
 		// replace separators and equal signs with special markup
-		$str = str_replace(array($separator, $equal), array($s, $e), $str);
+		$string = str_replace(array($separator, $equal), array($temp_separator, $temp_equal), $string);
 		// replace protected separators and equal signs back to original
-		$str = str_replace(array('\\' . $s, '\\' . $e), array($separator, $equal), $str);
+		$string = str_replace(array('\\' . $temp_separator, '\\' . $temp_equal), array($separator, $equal), $string);
 
 		// protect all html tags
-		if (preg_match_all('#</?[a-z][^>]*>#si', $str, $tags, PREG_SET_ORDER) > 0)
+		if (preg_match_all('#</?[a-z][^>]*>#si', $string, $tags, PREG_SET_ORDER) > 0)
 		{
 			foreach ($tags as $tag)
 			{
-				$str = str_replace(
+				$string = str_replace(
 					$tag['0'],
-					$t1 . base64_encode(str_replace(array($s, $e), array($separator, $equal), $tag['0'])) . $t2,
-					$str
+					$tag_start . base64_encode(str_replace(array($temp_separator, $temp_equal), array($separator, $equal), $tag['0'])) . $tag_end,
+					$string
 				);
 			}
 		}
 
 		// split string into array
-		if ($limit)
-		{
-			$vals = explode($s, $str, (int) $limit);
-		}
-		else
-		{
-			$vals = explode($s, $str);
-		}
+		$vals = $limit
+			? explode($temp_separator, $string, (int) $limit)
+			: explode($temp_separator, $string);
 
 		// initialize return vars
-		$t = new stdClass;
-		$t->params = array();
+		$tag_values = new stdClass;
+		$tag_values->params = array();
 
 		// loop through splits
 		foreach ($vals as $i => $keyval)
 		{
 			// spit part into key and val by equal sign
-			$keyval = explode($e, $keyval, 2);
+			$keyval = explode($temp_equal, $keyval, 2);
 			if (isset($keyval['1']))
 			{
-				$keyval['1'] = str_replace(array($s, $e), array($separator, $equal), $keyval['1']);
+				$keyval['1'] = str_replace(array($temp_separator, $temp_equal), array($separator, $equal), $keyval['1']);
 			}
 
 			// unprotect tags in key and val
-			foreach ($keyval as $k => $v)
+			foreach ($keyval as $key => $val)
 			{
-				if (preg_match_all('#' . preg_quote($t1, '#') . '(.*?)' . preg_quote($t2, '#') . '#si', $v, $tags, PREG_SET_ORDER) > 0)
+				if (preg_match_all('#' . preg_quote($tag_start, '#') . '(.*?)' . preg_quote($tag_end, '#') . '#si', $val, $tags, PREG_SET_ORDER) > 0)
 				{
 					foreach ($tags as $tag)
 					{
-						$v = str_replace($tag['0'], base64_decode($tag['1']), $v);
+						$val = str_replace($tag['0'], base64_decode($tag['1']), $val);
 					}
-					$keyval[trim($k)] = $v;
+					$keyval[trim($key)] = $val;
 				}
 			}
 
@@ -90,7 +82,7 @@ class NNTags
 				{
 					$val = substr($val, strlen($key) + 1);
 				}
-				$t->{$key} = $val;
+				$tag_values->{$key} = $val;
 				unset($keys[$i]);
 			}
 			else
@@ -98,16 +90,16 @@ class NNTags
 				// else add as defined in the string
 				if (isset($keyval['1']))
 				{
-					$t->{$keyval['0']} = $keyval['1'];
+					$tag_values->{$keyval['0']} = $keyval['1'];
 				}
 				else
 				{
-					$t->params[] = implode($equal, $keyval);
+					$tag_values->params[] = implode($equal, $keyval);
 				}
 			}
 		}
 
-		return $t;
+		return $tag_values;
 	}
 
 	public static function setSurroundingTags($pre, $post, $tags = 0)

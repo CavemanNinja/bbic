@@ -3,55 +3,67 @@
  * NoNumber Framework Helper File: Text
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Functions
- */
-class NNText
+class nnText
 {
+	public static function fixDateOffset(&$date)
+	{
+		if ($date <= 0)
+		{
+			$date = 0;
+
+			return;
+		}
+
+		$date = JFactory::getDate($date, JFactory::getUser()->getParam('timezone', JFactory::getConfig()->get('offset')));
+		$date->setTimezone(new DateTimeZone('UTC'));
+
+		$date = $date->format('Y-m-d H:i:s', true, false);
+	}
+
 	public static function dateToDateFormat($dateFormat)
 	{
 		$caracs = array(
 			// Day
-			'%d' => 'd',
-			'%a' => 'D',
+			'%d'  => 'd',
+			'%a'  => 'D',
 			'%#d' => 'j',
-			'%A' => 'l',
-			'%u' => 'N',
-			'%w' => 'w',
-			'%j' => 'z',
+			'%A'  => 'l',
+			'%u'  => 'N',
+			'%w'  => 'w',
+			'%j'  => 'z',
 			// Week
-			'%V' => 'W',
+			'%V'  => 'W',
 			// Month
-			'%B' => 'F',
-			'%m' => 'm',
-			'%b' => 'M',
+			'%B'  => 'F',
+			'%m'  => 'm',
+			'%b'  => 'M',
 			// Year
-			'%G' => 'o',
-			'%Y' => 'Y',
-			'%y' => 'y',
+			'%G'  => 'o',
+			'%Y'  => 'Y',
+			'%y'  => 'y',
 			// Time
-			'%P' => 'a',
-			'%p' => 'A',
-			'%l' => 'g',
-			'%I' => 'h',
-			'%H' => 'H',
-			'%M' => 'i',
-			'%S' => 's',
+			'%P'  => 'a',
+			'%p'  => 'A',
+			'%l'  => 'g',
+			'%I'  => 'h',
+			'%H'  => 'H',
+			'%M'  => 'i',
+			'%S'  => 's',
 			// Timezone
-			'%z' => 'O',
-			'%Z' => 'T',
+			'%z'  => 'O',
+			'%Z'  => 'T',
 			// Full Date / Time
-			'%s' => 'U'
+			'%s'  => 'U'
 		);
 
 		return strtr((string) $dateFormat, $caracs);
@@ -61,37 +73,37 @@ class NNText
 	{
 		$caracs = array(
 			// Day - no strf eq : S
-			'd' => '%d',
-			'D' => '%a',
+			'd'  => '%d',
+			'D'  => '%a',
 			'jS' => '%#d[TH]',
-			'j' => '%#d',
-			'l' => '%A',
-			'N' => '%u',
-			'w' => '%w',
-			'z' => '%j',
+			'j'  => '%#d',
+			'l'  => '%A',
+			'N'  => '%u',
+			'w'  => '%w',
+			'z'  => '%j',
 			// Week - no date eq : %U, %W
-			'W' => '%V',
+			'W'  => '%V',
 			// Month - no strf eq : n, t
-			'F' => '%B',
-			'm' => '%m',
-			'M' => '%b',
+			'F'  => '%B',
+			'm'  => '%m',
+			'M'  => '%b',
 			// Year - no strf eq : L; no date eq : %C, %g
-			'o' => '%G',
-			'Y' => '%Y',
-			'y' => '%y',
+			'o'  => '%G',
+			'Y'  => '%Y',
+			'y'  => '%y',
 			// Time - no strf eq : B, G, u; no date eq : %r, %R, %T, %X
-			'a' => '%P',
-			'A' => '%p',
-			'g' => '%l',
-			'h' => '%I',
-			'H' => '%H',
-			'i' => '%M',
-			's' => '%S',
+			'a'  => '%P',
+			'A'  => '%p',
+			'g'  => '%l',
+			'h'  => '%I',
+			'H'  => '%H',
+			'i'  => '%M',
+			's'  => '%S',
 			// Timezone - no strf eq : e, I, P, Z
-			'O' => '%z',
-			'T' => '%Z',
+			'O'  => '%z',
+			'T'  => '%Z',
 			// Full Date / Time - no strf eq : c, r; no date eq : %c, %D, %F, %x
-			'U' => '%s'
+			'U'  => '%s'
 		);
 
 		return strtr((string) $dateFormat, $caracs);
@@ -112,64 +124,119 @@ class NNText
 		return html_entity_decode($given_html, $quote_style, $charset);
 	}
 
-	public static function cleanTitle($str, $striptags = 0)
+	public static function getTagRegex($tags, $include_no_attributes = true, $include_ending = true, $required_attributes = array())
 	{
+		$tags = self::toArray($tags);
+		$tags = '(?:' . implode('|', $tags) . ')';
+
+		$attribs = '(?:\s|&nbsp;|&\#160;)[^>"]*(?:"[^"]*"[^>"]*)+';
+
+		$required_attributes = self::toArray($required_attributes);
+		if (!empty($required_attributes))
+		{
+			$attribs = '(?:\s|&nbsp;|&\#160;)[^>"]*(?:"[^"]*"[^>"]*)*(?:' . implode('|', $required_attributes) . ')\s*=\s*(?:"[^"]*"[^>"]*)+';
+		}
+
+		if ($include_no_attributes)
+		{
+			$attribs = '(?:' . $attribs . ')?';
+		}
+
+		if (!$include_ending)
+		{
+			return '<' . $tags . $attribs . '>';
+		}
+
+		return '<(?:\/' . $tags . '|' . $tags . $attribs . ')(?:\s|&nbsp;|&\#160;)*>';
+	}
+
+	public static function toArray($string, $separator = '')
+	{
+		if (is_array($string))
+		{
+			return $string;
+		}
+
+		if (is_object($string))
+		{
+			return (array) $string;
+		}
+
+		if ($separator == '')
+		{
+			return array($string);
+		}
+
+		return explode($separator, $string);
+	}
+
+	public static function cleanTitle($string, $striptags = 0)
+	{
+		if (empty($string))
+		{
+			return '';
+		}
+
 		// remove comment tags
-		$str = preg_replace('#<\!--.*?-->#s', '', $str);
+		$string = preg_replace('#<\!--.*?-->#s', '', $string);
 
 		// replace weird whitespace
-		$str = str_replace(chr(194) . chr(160), ' ', $str);
+		$string = str_replace(chr(194) . chr(160), ' ', $string);
 
 		if ($striptags)
 		{
 			// remove html tags
-			$str = preg_replace('#</?[a-z][^>]*>#usi', '', $str);
+			$string = preg_replace('#</?[a-z][^>]*>#usi', '', $string);
 			// remove comments tags
-			$str = preg_replace('#<\!--.*?-->#us', '', $str);
+			$string = preg_replace('#<\!--.*?-->#us', '', $string);
 		}
 
-		return trim($str);
+		return trim($string);
 	}
 
-	public static function prepareSelectItem($str, $published = 1, $type = '', $remove_first = 0)
+	public static function prepareSelectItem($string, $published = 1, $type = '', $remove_first = 0)
 	{
+		if (empty($string))
+		{
+			return '';
+		}
 
-		$str = str_replace(array('&nbsp;', '&#160;'), ' ', $str);
-		$str = preg_replace('#- #', '  ', $str);
+		$string = str_replace(array('&nbsp;', '&#160;'), ' ', $string);
+		$string = preg_replace('#- #', '  ', $string);
 		for ($i = 0; $remove_first > $i; $i++)
 		{
-			$str = preg_replace('#^  #', '', $str);
+			$string = preg_replace('#^  #', '', $string);
 		}
-		preg_match('#^( *)(.*)$#', $str, $match);
-		list($str, $pre, $name) = $match;
+		preg_match('#^( *)(.*)$#', $string, $match);
+		list($string, $pre, $name) = $match;
 
 		$pre = preg_replace('#  #', ' ·  ', $pre);
 		$pre = preg_replace('#(( ·  )*) ·  #', '\1 »  ', $pre);
 		$pre = str_replace('  ', ' &nbsp; ', $pre);
 
-		if ($type == 'separator')
+		switch (true)
 		{
-			$pre = '[[:font-weight:normal;font-style:italic;color:grey;:]]' . $pre;
-		}
-		else if (!$published)
-		{
-			$pre = '[[:font-style:italic;color:grey;:]]' . $pre;
-			$name = $name . ' [' . JText::_('JUNPUBLISHED') . ']';
-		}
-		else if ($published == 2)
-		{
-			$pre = '[[:font-style:italic;:]]' . $pre;
-			$name = $name . ' [' . JText::_('JARCHIVED') . ']';
+			case ($type == 'separator'):
+				$pre = '[[:font-weight:normal;font-style:italic;color:grey;:]]' . $pre;
+				break;
+			case (!$published):
+				$pre = '[[:font-style:italic;color:grey;:]]' . $pre;
+				$name = $name . ' [' . JText::_('JUNPUBLISHED') . ']';
+				break;
+			case ($published == 2):
+				$pre = '[[:font-style:italic;:]]' . $pre;
+				$name = $name . ' [' . JText::_('JARCHIVED') . ']';
+				break;
 		}
 
 		return $pre . $name;
 	}
 
-	public static function strReplaceOnce($search, $replace, $str)
+	public static function strReplaceOnce($search, $replace, $string)
 	{
 		$replace = str_replace(array('\\', '$'), array('\\\\', '\\$'), $replace);
 
-		return preg_replace('#' . preg_quote($search, '#') . '#', $replace, $str, 1);
+		return preg_replace('#' . preg_quote($search, '#') . '#', $replace, $string, 1);
 	}
 
 	/**
@@ -178,6 +245,17 @@ class NNText
 	public static function getURI($hash = '')
 	{
 		$uri = JURI::getInstance();
+
+		if (version_compare(JVERSION, '3.0', '<'))
+		{
+			$uri = $uri->get('_uri');
+
+			$uri = ($hash != '')
+				? preg_replace('#\#.*$#', '', $uri) . '#' . $hash
+				: $uri;
+
+			return $uri;
+		}
 
 		if ($hash != '')
 		{
@@ -190,40 +268,137 @@ class NNText
 	/**
 	 * gets attribute from a tag string
 	 */
-	public static function fixHtmlTagStructure(&$str)
+	public static function fixHtmlTagStructure(&$string, $remove_surrounding_p_tags = 1)
 	{
-		// Move div nested inside <p> tags outside of it
-		// input: <p><div>...</div></p>
-		// output: </p><div>...</div><p>
-		$str = preg_replace('#((?:<p(?: [^>]*)?>\s*)?)((?:<br ?/?>)?\s*<div(?: [^>]*)?>.*?</div>\s*(?:<br ?/?>)?)((?:\s*</p>)?)#si', '\3\2\1', $str);
+		if (empty($string))
+		{
+			return;
+		}
 
 		// Combine duplicate <p> tags
-		nnText::combinePTags($str);
+		nnText::combinePTags($string);
+
+		// Move div nested inside <p> tags outside of it
+		nnText::moveDivBlocksOutsidePBlocks($string);
 
 		// Remove duplicate ending </p> tags
-		nnText::removeDuplicateTags($str, '/p');
+		nnText::removeDuplicateTags($string, '/p');
+
+		if ($remove_surrounding_p_tags)
+		{
+			// Remove surrounding <p></p> blocks
+			nnText::removeSurroundingPBlocks($string);
+		}
 	}
 
 	/**
-	 * combine duplicate <p> tags
+	 * Move div nested inside <p> tags outside of it
+	 * input: <p><div>...</div></p>
+	 *  output: </p><div>...</div><p>
+	 */
+	public static function moveDivBlocksOutsidePBlocks(&$string)
+	{
+		if (empty($string))
+		{
+			return;
+		}
+
+		$p_start_tag = '<p(?: [^>]*)?>';
+		$p_end_tag = '</p>';
+		$optional_tags = '\s*(?:<br ?/?>|<\!-- [^>]*-->|&nbsp;|&\#160;)*\s*';
+
+		$string = trim(preg_replace('#(' . $p_start_tag . ')(' . $optional_tags . '<div(?: [^>]*)?>.*?</div>' . $optional_tags . ')(' . $p_end_tag . ')#si', '\2', $string));
+	}
+
+	/**
+	 * Combine duplicate <p> tags
 	 * input: <p class="aaa" a="1"><!-- ... --><p class="bbb" b="2">
 	 * output: <p class="aaa bbb" a="1" b="2"><!-- ... -->
 	 */
-	public static function combinePTags(&$str)
+	public static function combinePTags(&$string)
 	{
-		if (!preg_match_all('#(<p(?: [^>]*)?>)\s*((?:<!--.*?-->\s*)?)(<p(?: [^>]*)?>)#si', $str, $tags, PREG_SET_ORDER) > 0)
+		if (empty($string))
+		{
+			return;
+		}
+
+		$p_start_tag = '<p(?: [^>]*)?>';
+		$optional_tags = '\s*(?:<\!-- [^>]*-->|&nbsp;|&\#160;)*\s*';
+		if (!preg_match_all('#(' . $p_start_tag . ')(' . $optional_tags . ')(' . $p_start_tag . ')#si', $string, $tags, PREG_SET_ORDER) > 0)
 		{
 			return;
 		}
 
 		foreach ($tags as $tag)
 		{
-			$str = str_replace($tag['0'], nnText::combineTags($tag['1'], $tag['3']) . $tag['2'], $str);
+			$string = str_replace($tag['0'], $tag['2'] . nnText::combineTags($tag['1'], $tag['3']), $string);
 		}
 	}
 
 	/**
-	 * combine tags
+	 * Remove surrounding <p></p> blocks
+	 * input: <p ...><!-- ... --></p>...<p ...><!-- ... --></p>
+	 * output: <!-- ... -->...<!-- ... -->
+	 */
+	public static function removeSurroundingPBlocks(&$string)
+	{
+		if (empty($string))
+		{
+			return;
+		}
+
+		nnText::removeStartingPTag($string);
+		nnText::removeEndingPTag($string);
+	}
+
+	public static function removeStartingPTag(&$string)
+	{
+		if (empty($string))
+		{
+			return;
+		}
+
+		$p_start_tag = '<p(?: [^>]*)?>';
+
+		if (strpos($string, '</p>') === false || !preg_match('#^\s*' . $p_start_tag . '#si', $string))
+		{
+			return;
+		}
+
+		$test = preg_replace('#^(\s*)' . $p_start_tag . '#si', '\1', $string);
+		if (stripos($test, '<p') > stripos($test, '</p'))
+		{
+			return;
+		}
+
+		$string = $test;
+	}
+
+	public static function removeEndingPTag(&$string)
+	{
+		if (empty($string))
+		{
+			return;
+		}
+
+		$p_end_tag = '</p>';
+
+		if (!preg_match('#' . $p_end_tag . '\s*$#si', $string))
+		{
+			return;
+		}
+
+		$test = preg_replace('#' . $p_end_tag . '(\s*)$#si', '\1', $string);
+		if (strrpos($test, '<p') > strrpos($test, '</p'))
+		{
+			return;
+		}
+
+		$string = $test;
+	}
+
+	/**
+	 * Combine tags
 	 */
 	public static function combineTags($tag1, $tag2)
 	{
@@ -251,10 +426,10 @@ class NNText
 	/**
 	 * gets attribute from a tag string
 	 */
-	public static function getAttribute($attrib, $str)
+	public static function getAttribute($attributes, $string)
 	{
 		// get attribute from string
-		if (preg_match('#' . preg_quote($attrib, '#') . '="([^"]*)"#si', $str, $match))
+		if (preg_match('#' . preg_quote($attributes, '#') . '="([^"]*)"#si', $string, $match))
 		{
 			return $match['1'];
 		}
@@ -265,15 +440,23 @@ class NNText
 	/**
 	 * gets attributes from a tag string
 	 */
-	public static function getAttributes($str)
+	public static function getAttributes($string)
 	{
-		$attribs = array();
-		if (preg_match_all('#([a-z0-9-_]+)="([^"]*)"#si', $str, $matches, PREG_SET_ORDER) > 0)
+		if (empty($string))
 		{
-			foreach ($matches as $match)
-			{
-				$attribs[$match['1']] = $match['2'];
-			}
+			return array();
+		}
+
+		if (preg_match_all('#([a-z0-9-_]+)="([^"]*)"#si', $string, $matches, PREG_SET_ORDER) < 1)
+		{
+			return array();
+		}
+
+		$attribs = array();
+
+		foreach ($matches as $match)
+		{
+			$attribs[$match['1']] = $match['2'];
 		}
 
 		return $attribs;
@@ -293,7 +476,7 @@ class NNText
 		$attribs = array_diff_key($attribs1, $attribs2) + array_diff_key($attribs2, $attribs1);
 
 		// Add/combine the duplicate ids
-		$single_value_attributes = array('id');
+		$single_value_attributes = array('id', 'href');
 		foreach ($dublicate_attribs as $key => $val)
 		{
 			if (in_array($key, $single_value_attributes))
@@ -301,10 +484,12 @@ class NNText
 				$attribs[$key] = $attribs2[$key];
 				continue;
 			}
-
 			// Combine strings, but remove duplicates
 			// "aaa bbb" + "aaa ccc" = "aaa bbb ccc"
-			$attribs[$key] = implode(' ', explode(' ', $attribs1[$key]) + explode(' ', $attribs2[$key]));
+
+			// use a ';' as a concatenated for javascript values (keys beginning with 'on')
+			$glue = substr($key, 0, 2) == 'on' ? ';' : ' ';
+			$attribs[$key] = implode($glue, array_merge(explode($glue, $attribs1[$key]), explode($glue, $attribs2[$key])));
 		}
 
 		foreach ($attribs as $key => &$val)
@@ -316,55 +501,65 @@ class NNText
 	}
 
 	/**
-	 * combine duplicate <p> tags
+	 * remove duplicate </p> tags
 	 * input: </p><!-- ... --></p>
 	 * output: </p><!-- ... -->
 	 */
-	public static function removeDuplicateTags(&$str, $tag_type = 'p')
+	public static function removeDuplicateTags(&$string, $tag_type = 'p')
 	{
-		$str = preg_replace('#(<' . $tag_type . '(?: [^>]*)?>\s*(<!--.*?-->\s*)?)<' . $tag_type . '(?: [^>]*)?>#si', '\1', $str);
+		if (empty($string))
+		{
+			return;
+		}
+
+		$string = preg_replace('#(<' . $tag_type . '(?: [^>]*)?>\s*(<!--.*?-->\s*)?)<' . $tag_type . '(?: [^>]*)?>#si', '\1', $string);
 	}
 
 	/**
 	 * Creates an alias from a string
 	 * Based on stringURLUnicodeSlug method from the unicode slug plugin by infograf768
 	 */
-	public static function createAlias($str)
+	public static function createAlias($string)
 	{
+		if (empty($string))
+		{
+			return '';
+		}
+
 		// Remove < > html entities
-		$str = str_replace(array('&lt;', '&gt;'), '', $str);
+		$string = str_replace(array('&lt;', '&gt;'), '', $string);
 
 		// Convert html entities
-		$str = html_entity_decode($str, ENT_COMPAT, 'UTF-8');
+		$string = html_entity_decode($string, ENT_COMPAT, 'UTF-8');
 
 		// remove html tags
-		$str = preg_replace('#</?[a-z][^>]*>#usi', '', $str);
+		$string = preg_replace('#</?[a-z][^>]*>#usi', '', $string);
 		// remove comments tags
-		$str = preg_replace('#<\!--.*?-->#us', '', $str);
+		$string = preg_replace('#<\!--.*?-->#us', '', $string);
 
 		// Replace double byte whitespaces by single byte (East Asian languages)
-		$str = preg_replace('/\xE3\x80\x80/', ' ', $str);
+		$string = preg_replace('/\xE3\x80\x80/', ' ', $string);
 
 		// Remove any '-' from the string as they will be used as concatenator.
 		// Would be great to let the spaces in but only Firefox is friendly with this
-		$str = str_replace('-', ' ', $str);
+		$string = str_replace('-', ' ', $string);
 
 		// Replace forbidden characters by whitespaces
-		$str = preg_replace('#[,:\#\$\*"@+=;!&\.%()\]\/\'\\\\|\[]#', "\x20", $str);
+		$string = preg_replace('#[,:\#\$\*"@+=;!&\.%()\]\/\'\\\\|\[]#', "\x20", $string);
 
 		// Delete all '?'
-		$str = str_replace('?', '', $str);
+		$string = str_replace('?', '', $string);
 
 		// Trim white spaces at beginning and end of alias and make lowercase
-		$str = trim($str);
+		$string = trim($string);
 
 		// Remove any duplicate whitespace and replace whitespaces by hyphens
-		$str = preg_replace('#\x20+#', '-', $str);
+		$string = preg_replace('#\x20+#', '-', $string);
 
 		// Remove leading and trailing hyphens
-		$str = trim($str, '-');
+		$string = trim($string, '-');
 
-		return JString::strtolower($str);
+		return JString::strtolower($string);
 	}
 
 	/**
@@ -424,5 +619,10 @@ class NNText
 		$body = implode('</body>', $body_split) . '</body>';
 
 		return array($pre, $body, $post);
+	}
+
+	static function createArray($string, $separator = ',')
+	{
+		return array_filter(explode($separator, trim($string)));
 	}
 }

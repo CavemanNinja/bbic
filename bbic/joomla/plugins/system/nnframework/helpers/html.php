@@ -4,19 +4,16 @@
  * extra JHTML functions
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * nnHtml
- */
 class nnHtml
 {
 	static function selectlist(&$options, $name, $value, $id, $size = 0, $multiple = 0, $simple = 0)
@@ -27,7 +24,7 @@ class nnHtml
 		}
 
 		require_once JPATH_PLUGINS . '/system/nnframework/helpers/parameters.php';
-		$parameters = NNParameters::getInstance();
+		$parameters = nnParameters::getInstance();
 		$params = $parameters->getPluginParams('nnframework');
 
 		if (!is_array($value))
@@ -70,8 +67,6 @@ class nnHtml
 			return '<fieldset class="radio"><label for="' . $id . '">' . JText::_('NN_ITEM_IDS') . ':</label>' . $input . '</fieldset>';
 		}
 
-		$size = $size ? $size : 300;
-
 		if (!$multiple)
 		{
 			$first_level = isset($options['0']->level) ? $options['0']->level : 0;
@@ -86,17 +81,22 @@ class nnHtml
 			}
 			$html = JHtml::_('select.genericlist', $options, $name, 'class="inputbox"', 'value', 'text', $value);
 
-			return preg_replace('#>((?:\s*-\s*)*)\[\[\:(.*?)\:\]\]#si', ' style="\2">\1', $html);
+			return self::handlePreparedStyles($html);
 		}
+
+		$size = (int) $size ?: 300;
 
 		if ($simple)
 		{
-			$attr = '';
-			$attr .= ' size="' . (int) $size . '"';
+			$attr = 'style="width: ' . $size . 'px"';
 			$attr .= $multiple ? ' multiple="multiple"' : '';
 
-			return JHtml::_('select.genericlist', $options, $name, trim($attr), 'value', 'text', $value, $id);
+			$html = JHtml::_('select.genericlist', $options, $name, trim($attr), 'value', 'text', $value, $id);
+
+			return self::handlePreparedStyles($html);
 		}
+
+		JFactory::getLanguage()->load('com_modules', JPATH_ADMINISTRATOR);
 
 		JHtml::stylesheet('nnframework/multiselect.min.css', false, true);
 		JFactory::getDocument()->addScriptVersion(JURI::root(true) . '/media/nnframework/js/multiselect.min.js');
@@ -151,7 +151,7 @@ class nnHtml
 			}
 		}
 
-		$html[] = '<ul class="nn_multiselect-ul" style="max-height:' . (int) $size . 'px;overflow-x: hidden;">';
+		$html[] = '<ul class="nn_multiselect-ul" style="max-height:300px;min-width:' . $size . 'px;overflow-x: hidden;">';
 		$prevlevel = 0;
 
 		foreach ($o as $i => $option)
@@ -231,11 +231,16 @@ class nnHtml
 
 		$html = implode('', $html);
 
-		return preg_replace('#>\[\[\:(.*?)\:\]\]#si', ' style="\1">', $html);
+		return self::handlePreparedStyles($html);
 	}
 
 	static function selectlistsimple(&$options, $name, $value, $id, $size = 0, $multiple = 0)
 	{
 		return self::selectlist($options, $name, $value, $id, $size, $multiple, 1);
+	}
+
+	static private function handlePreparedStyles($string)
+	{
+		return preg_replace('#>((?:\s*-\s*)*)\[\[\:(.*?)\:\]\]#si', ' style="\2">\1', $string);
 	}
 }

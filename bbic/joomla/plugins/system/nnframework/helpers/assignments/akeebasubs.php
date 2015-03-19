@@ -3,50 +3,49 @@
  * NoNumber Framework Helper File: Assignments: AkeebaSubs
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-/**
- * Assignments: AkeebaSubs
- */
-class NNFrameworkAssignmentsAkeebaSubs
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/assignment.php';
+
+class nnFrameworkAssignmentsAkeebaSubs extends nnFrameworkAssignment
 {
-	function init(&$parent)
+	function init()
 	{
-		if (!$parent->params->id && $parent->params->view == 'level')
+		if (!$this->request->id && $this->request->view == 'level')
 		{
 			$slug = JFactory::getApplication()->input->getString('slug', '');
 			if ($slug)
 			{
-				$parent->q->clear()
+				$query = $this->db->getQuery(true)
 					->select('l.akeebasubs_level_id')
 					->from('#__akeebasubs_levels AS l')
-					->where('l.slug = ' . $parent->db->quote($slug));
-				$parent->db->setQuery($parent->q);
-				$parent->params->id = $parent->db->loadResult();
+					->where('l.slug = ' . $this->db->quote($slug));
+				$this->db->setQuery($query);
+				$this->request->id = $this->db->loadResult();
 			}
 		}
 	}
 
-	function passPageTypes(&$parent, &$params, $selection = array(), $assignment = 'all')
+	function passPageTypes()
 	{
-		return $parent->passPageTypes('com_akeebasubs', $selection, $assignment);
+		return $this->passByPageTypes('com_akeebasubs', $this->selection, $this->assignment);
 	}
 
-	function passLevels(&$parent, &$params, $selection = array(), $assignment = 'all')
+	function passLevels()
 	{
-		if (!$parent->params->id || $parent->params->option != 'com_akeebasubs' || $parent->params->view != 'level')
+		if (!$this->request->id || $this->request->option != 'com_akeebasubs' || $this->request->view != 'level')
 		{
-			return $parent->pass(0, $assignment);
+			return $this->pass(false);
 		}
 
-		return $parent->passSimple($parent->params->id, $selection, $assignment);
+		return $this->passSimple($this->request->id);
 	}
 }

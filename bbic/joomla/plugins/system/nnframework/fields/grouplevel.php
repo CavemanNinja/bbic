@@ -4,36 +4,32 @@
  * Displays a select box of backend group levels
  *
  * @package         NoNumber Framework
- * @version         14.8.6
+ * @version         15.3.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
- * @copyright       Copyright © 2014 NoNumber All Rights Reserved
+ * @copyright       Copyright © 2015 NoNumber All Rights Reserved
  * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 
 defined('_JEXEC') or die;
 
-require_once JPATH_PLUGINS . '/system/nnframework/helpers/text.php';
+require_once JPATH_PLUGINS . '/system/nnframework/helpers/field.php';
 
-class JFormFieldNN_GroupLevel extends JFormField
+class JFormFieldNN_GroupLevel extends nnFormField
 {
 	public $type = 'GroupLevel';
-	private $params = null;
-	private $db = null;
 
 	protected function getInput()
 	{
 		$this->params = $this->element->attributes();
-		$this->db = JFactory::getDBO();
 
 		$size = (int) $this->get('size');
 		$multiple = $this->get('multiple');
 		$show_all = $this->get('show_all');
 
-		$attribs = 'class="inputbox"';
-
 		$options = $this->getUserGroups();
+
 		if ($show_all)
 		{
 			$option = new stdClass;
@@ -45,7 +41,7 @@ class JFormFieldNN_GroupLevel extends JFormField
 
 		require_once JPATH_PLUGINS . '/system/nnframework/helpers/html.php';
 
-		return nnHtml::selectlist($options, $this->name, $this->value, $this->id, $size, $multiple, $attribs);
+		return nnHtml::selectlist($options, $this->name, $this->value, $this->id, $size, $multiple);
 	}
 
 	protected function getUserGroups()
@@ -61,10 +57,5 @@ class JFormFieldNN_GroupLevel extends JFormField
 		$this->db->setQuery($query);
 
 		return $this->db->loadObjectList();
-	}
-
-	private function get($val, $default = '')
-	{
-		return (isset($this->params[$val]) && (string) $this->params[$val] != '') ? (string) $this->params[$val] : $default;
 	}
 }
