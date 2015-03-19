@@ -422,10 +422,10 @@ abstract class TwojToolBoxSiteHelper{
 			} else {
 				if( strpos( $file_need[$i], '*')===false ){
 					$prep_file_name = JPATH_SITE.'/components/com_twojtoolbox/' .$type.'/2j.'.$file_need[$i].'.'.$type;
-					$prep_file_name_url = JURI::root(true).'/components/com_twojtoolbox/'.$type.'/2j.'.$file_need[$i].'.'.$type;
+					$prep_file_name_url = JURI::root().'/components/com_twojtoolbox/'.$type.'/2j.'.$file_need[$i].'.'.$type;
 				} else {	
 					$prep_file_name = JPATH_SITE.'/' .'components/com_twojtoolbox/plugins/'.str_replace('*', '/', $file_need[$i]).'.'.$type;
-					$prep_file_name_url = JURI::root(true).'/components/com_twojtoolbox/plugins/'.str_replace('*', '/', $file_need[$i]).'.'.$type;
+					$prep_file_name_url = JURI::root().'/components/com_twojtoolbox/plugins/'.str_replace('*', '/', $file_need[$i]).'.'.$type;
 				}
 				if( JFile::exists($prep_file_name) ){
 					$c_file_content = JFile::read($prep_file_name);
