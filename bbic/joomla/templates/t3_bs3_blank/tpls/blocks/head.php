@@ -37,9 +37,9 @@ defined('_JEXEC') or die;
 
 <?php
 // SYSTEM CSS
-$this->addStyleSheet(JURI::base(true) . '/templates/system/css/system.css');
+// $this->addStyleSheet(JURI::base(true) . '/templates/system/css/system.css');
 // $this->addStyleSheet('//templates/system/css/system.css');
-// $this->addStyleSheet(JURI::base() . '/templates/system/css/system.css');
+$this->addStyleSheet(JURI::base() . '/templates/system/css/system.css');
 ?>
 
 <?php
@@ -50,8 +50,8 @@ $this->addHead();
 <?php
 // CUSTOM CSS
 if (is_file(T3_TEMPLATE_PATH . '/css/custom.css')) {
-	// $this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank/css/custom.css');
-	$this->addStyleSheet(T3_TEMPLATE_URL . '/css/custom.css');
+	$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank/css/custom.css');
+	// $this->addStyleSheet(T3_TEMPLATE_URL . '/css/custom.css');
 }
 ?>
 
