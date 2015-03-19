@@ -37,8 +37,9 @@ defined('_JEXEC') or die;
 
 <?php
 // SYSTEM CSS
-$this->addStyleSheet('//templates/system/css/system.css');
 // $this->addStyleSheet(JURI::base(true) . '/templates/system/css/system.css');
+// $this->addStyleSheet('//templates/system/css/system.css');
+$this->addStyleSheet(JURI::base() . '/templates/system/css/system.css');
 ?>
 
 <?php
