@@ -240,7 +240,7 @@ class JUri
 
                     $force_ssl = $config->getValue('config.force_ssl');
                     if($force_ssl > 0)
-                        self::$base['prefix'] = str_replace("http://","https://",self::$base['prefix']);
+                        $base['prefix'] = str_replace("http://","https://",$base['prefix']);
 					if (JPATH_BASE == JPATH_ADMINISTRATOR)
 					{
 						self::$base['path'] .= '/administrator';
