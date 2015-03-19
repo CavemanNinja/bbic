@@ -823,7 +823,7 @@ class T3Template extends ObjectExtendable
 		if($legacycss){
 			$this->addCss('legacy-grid');	//legacy grid
 			// $this->addStyleSheet(T3_URL . '/fonts/font-awesome/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
-			$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank' . '/fonts/font-awesome/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
+			$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank' . '/fonts/font-awesoghjkme/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
 		}
 
 		// FRONTEND EDITING
