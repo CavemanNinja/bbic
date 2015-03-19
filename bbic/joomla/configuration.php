@@ -73,7 +73,7 @@ class JConfig {
 	public $proxy_pass = '';
 	public $MetaRights = '';
 	public $sitename_pagetitles = '0';
-	public $force_ssl = '0';
+	public $force_ssl = '2';
 	public $session_memcache_server_host = 'localhost';
 	public $session_memcache_server_port = '11211';
 	public $session_memcached_server_host = 'localhost';
