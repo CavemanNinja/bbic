@@ -48,12 +48,12 @@ if ($headright = $this->countModules('head-search or languageswitcherload')) {
 		<!-- LOGO -->
 		<div class="col-xs-12 <?php echo $logosize ?> logo pull-down">
 			<div class="logo-<?php echo $logotype, ($logoimgsm ? ' logo-control' : '') ?>">
-				<a href="<?php echo JURI::base(true) ?>" title="<?php echo strip_tags($sitename) ?>">
+				<a href="<?php echo JURI::base() ?>" title="<?php echo strip_tags($sitename) ?>">
 					<?php if($logotype == 'image'): ?>
-						<img class="logo-img pull-down img-responsive col-xs-12 col-sm-12" src="<?php echo JURI::base(true) . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
+						<img class="logo-img pull-down img-responsive col-xs-12 col-sm-12" src="<?php echo JURI::base() . '/' . $logoimage ?>" alt="<?php echo strip_tags($sitename) ?>" />
 					<?php endif ?>
 					<?php if($logoimgsm) : ?>
-						<img class="logo-img-sm pull-down" src="<?php echo JURI::base(true) . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
+						<img class="logo-img-sm pull-down" src="<?php echo JURI::base() . '/' . $logoimgsm ?>" alt="<?php echo strip_tags($sitename) ?>" />
 					<?php endif ?>
 					<span><?php echo $sitename ?></span>
 				</a>
