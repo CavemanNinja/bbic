@@ -50,7 +50,7 @@ $this->addHead();
 <?php
 // CUSTOM CSS
 if (is_file(T3_TEMPLATE_PATH . '/css/custom.css')) {
-	$this->addStyleSheet(T3_TEMPLATE_PATH . '/css/custom.css');
+	$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank/css/custom.css');
 	// $this->addStyleSheet(T3_TEMPLATE_URL . '/css/custom.css');
 }
 ?>
