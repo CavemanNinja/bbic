@@ -44,7 +44,7 @@ $this->addStyleSheet(JURI::base() . '/templates/system/css/system.css');
 
 <?php
 // T3 BASE HEAD
-$this->addHead();
+// $this->addHead();
 ?>
 
 <?php
