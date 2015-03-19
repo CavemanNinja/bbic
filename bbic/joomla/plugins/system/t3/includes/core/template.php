@@ -823,7 +823,7 @@ class T3Template extends ObjectExtendable
 		if($legacycss){
 			$this->addCss('legacy-grid');	//legacy grid
 			// $this->addStyleSheet(T3_URL . '/fonts/font-awesome/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
-			$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank' . '/fonts/font-awesoghjkme/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
+			$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank' . '/fonts/font-awesome/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
 		}
 
 		// FRONTEND EDITING
@@ -907,10 +907,10 @@ class T3Template extends ObjectExtendable
 
 		// As joomla 3.0 bootstrap is buggy, we will not use it
 		// $this->addScript(T3_URL . '/bootstrap/js/bootstrap.js');
-		$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/bootstrap/js/bootstrap.js');
+		$this->addScript(JURI::base() . 'templates/t3_bs3_blank' . '/bootstrap/js/bootstrap.js');
 		// a jquery tap plugin
 		// $this->addScript(T3_URL . '/js/jquery.tap.min.js');
-		$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/jquery.tap.min.js');
+		$this->addScript(JURI::base() . 'templates/t3_bs3_blank' . '/js/jquery.tap.min.js');
 
 		// add css/js for off-canvas
 		if ($offcanvas && ($this->responcls || $responsive)) {
@@ -928,7 +928,7 @@ class T3Template extends ObjectExtendable
 		}
 
 		if($navtrigger == 'hover' || $this->responcls){
-			$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/menu.js');
+			$this->addScript(JURI::base() . 'templates/t3_bs3_blank' . '/js/menu.js');
 			// $this->addScript(T3_URL . '/js/menu.js');
 		}
 
