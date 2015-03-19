@@ -817,7 +817,8 @@ class T3Template extends ObjectExtendable
 		// LEGACY COMPATIBLE
 		if($legacycss){
 			$this->addCss('legacy-grid');	//legacy grid
-			$this->addStyleSheet(T3_URL . '/fonts/font-awesome/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
+			// $this->addStyleSheet(T3_URL . '/fonts/font-awesome/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
+			$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank' . '/fonts/font-awesome/css/font-awesome' . ($this->getParam('devmode', 0) ? '' : '.min') . '.css'); //font awesome 3
 		}
 
 		// FRONTEND EDITING
@@ -858,10 +859,12 @@ class T3Template extends ObjectExtendable
 			// If the template does not overwrite megamenu.less & megamenu-responsive.less
 			// We check and included predefined megamenu style in base
 			if(!is_file(T3_TEMPLATE_PATH . '/less/megamenu.less')){
-				$this->addStyleSheet(T3_URL . '/css/megamenu.css');
+				$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank' . '/css/megamenu.css');
+				// $this->addStyleSheet(T3_URL . '/css/megamenu.css');
 
 				if ($responsive && !$this->responcls){
-					$this->addStyleSheet(T3_URL . '/css/megamenu-responsive.css');
+					$this->addStyleSheet(JURI::base() . '/templates/t3_bs3_blank' . '/css/megamenu-responsive.css');
+					// $this->addStyleSheet(T3_URL . '/css/megamenu-responsive.css');
 				}
 			}
 
@@ -887,8 +890,10 @@ class T3Template extends ObjectExtendable
 			}
 
 			if (!$jqueryIncluded) {
-				$this->addScript(T3_URL . '/js/jquery-1.8.3' . ($this->getParam('devmode', 0) ? '' : '.min') . '.js');
-				$this->addScript(T3_URL . '/js/jquery.noconflict.js');
+				// $this->addScript(T3_URL . '/js/jquery-1.8.3' . ($this->getParam('devmode', 0) ? '' : '.min') . '.js');
+				$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/jquery-1.8.3' . ($this->getParam('devmode', 0) ? '' : '.min') . '.js');
+				// $this->addScript(T3_URL . '/js/jquery.noconflict.js');
+				$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/jquery.noconflict.js');
 			}
 		}
 
@@ -896,17 +901,21 @@ class T3Template extends ObjectExtendable
 
 
 		// As joomla 3.0 bootstrap is buggy, we will not use it
-		$this->addScript(T3_URL . '/bootstrap/js/bootstrap.js');
+		// $this->addScript(T3_URL . '/bootstrap/js/bootstrap.js');
+		$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/bootstrap/js/bootstrap.js');
 		// a jquery tap plugin
-		$this->addScript(T3_URL . '/js/jquery.tap.min.js');
+		// $this->addScript(T3_URL . '/js/jquery.tap.min.js');
+		$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/jquery.tap.min.js');
 
 		// add css/js for off-canvas
 		if ($offcanvas && ($this->responcls || $responsive)) {
 			$this->addCss('off-canvas', false);
-			$this->addScript(T3_URL . '/js/off-canvas.js');
+			// $this->addScript(T3_URL . '/js/off-canvas.js');
+			$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/off-canvas.js');
 		}
 
-		$this->addScript(T3_URL . '/js/script.js');
+		// $this->addScript(T3_URL . '/js/script.js');
+		$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/script.js');
 
 		//menu control script
 		if ($navtrigger == 'hover') {
@@ -914,17 +923,20 @@ class T3Template extends ObjectExtendable
 		}
 
 		if($navtrigger == 'hover' || $this->responcls){
-			$this->addScript(T3_URL . '/js/menu.js');
+			$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/menu.js');
+			// $this->addScript(T3_URL . '/js/menu.js');
 		}
 
 		//reponsive script
 		if ($responsive && !$this->responcls) {
-			$this->addScript(T3_URL . '/js/responsive.js');
+			// $this->addScript(T3_URL . '/js/responsive.js');
+			$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/responsive.js');
 		}
 
 		//some helper javascript functions for frontend edit
 		if($frontedit){
-			$this->addScript(T3_URL . '/js/frontend-edit.js');
+			// $this->addScript(T3_URL . '/js/frontend-edit.js');
+			$this->addScript(JURI::base() . '/templates/t3_bs3_blank' . '/js/frontend-edit.js');
 		}
 
 		//check and add additional assets

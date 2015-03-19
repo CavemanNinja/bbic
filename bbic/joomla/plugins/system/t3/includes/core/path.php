@@ -44,9 +44,10 @@ class T3Path extends JObject
 	public static function getUrl($file, $default = '', $relative = false)
 	{
 		$return = '';
-		if (is_file(T3_TEMPLATE_PATH . '/' . $file)) $return = ($relative ? T3_TEMPLATE_REL : T3_TEMPLATE_URL) . '/' . $file;
-		if (!$return && is_file(T3_PATH . '/' . $file)) $return = ($relative ? T3_REL : T3_URL) . '/' . $file;
-		if (!$return && $default) $return = self::getUrl($default);
+		$return = JURI::base() . '/templates/t3_bs3_blank' . '/' . $file;
+		// if (is_file(T3_TEMPLATE_PATH . '/' . $file)) $return = ($relative ? T3_TEMPLATE_REL : T3_TEMPLATE_URL) . '/' . $file;
+		// if (!$return && is_file(T3_PATH . '/' . $file)) $return = ($relative ? T3_REL : T3_URL) . '/' . $file;
+		// if (!$return && $default) $return = self::getUrl($default);
 		return $return;
 	}
 
