@@ -232,10 +232,17 @@ class JUri
 
 				if (defined('JPATH_BASE') && defined('JPATH_ADMINISTRATOR'))
 				{
-					if (JPATH_BASE == JPATH_ADMINISTRATOR)
-					{
-						self::$base['path'] .= '/administrator';
-					}
+					// if (JPATH_BASE == JPATH_ADMINISTRATOR)
+					// {
+					// 	self::$base['path'] .= '/administrator';
+					// }
+					if(JPATH_BASE == JPATH_ADMINISTRATOR) {
+                    $force_ssl = $config->getValue('config.force_ssl');
+                    if($force_ssl > 0){
+                        $base['prefix'] = str_replace("http://","https://",$base['prefix']);
+                    }
+                    $base['path'] .= '/administrator';
+                }
 				}
 			}
 			else
