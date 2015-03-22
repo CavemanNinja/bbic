@@ -153,7 +153,7 @@ class plgContentBillrepeat extends JPlugin
                 $attribs->service_price = $service_attribs->service_price;
                 $attribs->service_name = $service_attribs->service_name;
                 $article->attribs = json_encode($attribs);
-                $article->state = 1;
+
             }
             
             //If Service add the price to the title.
@@ -164,6 +164,9 @@ class plgContentBillrepeat extends JPlugin
                 $article->title = $name . " - BD " . $price;
             }
         }
+
+        $article->state = 1;
+
         return true;
     }
     
@@ -373,7 +376,7 @@ class plgContentBillrepeat extends JPlugin
                             $jt_article->publish_up = $mysql_start_time;
                             $jt_article->attribs = $new_attribs_json;
                             
-                            // $jt_article->state = 1;
+                            $jt_article->state = 0;
                             $jt_article->access = 1;
                             $jt_article->metadata = '{"page_title":"","author":"","robots":""}';
                             $jt_article->language = '*';
