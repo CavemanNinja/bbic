@@ -10,8 +10,7 @@ RewriteCond %{HTTPS} off
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 
-#Header always unset Server
-Header always unset X-Powered-By
+#Header always unset X-Powered-By
 
 ServerSignature Off
 ServerTokens Prod
