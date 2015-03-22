@@ -136,7 +136,7 @@ echo $params->get('image_path', 'images'); ?>/';
 					</div>
 				</div>
 			</fieldset>
-			<?php JFactory::getSession()->set('com_media.return_url', 'https://afternoon-falls-9745.herokuapp.com/bbic/joomla/index.php?option=com_media&view=images&tmpl=component&fieldid=' . $input->getCmd('fieldid', '') . '&e_name=' . $input->getCmd('e_name') . '&asset=' . $input->getCmd('asset') . '&author=' . $input->getCmd('author')); ?>
+			<?php JFactory::getSession()->set('com_media.return_url', str_replace('http', 'https', JUri::base()).'index.php?option=com_media&view=images&tmpl=component&fieldid=' . $input->getCmd('fieldid', '') . '&e_name=' . $input->getCmd('e_name') . '&asset=' . $input->getCmd('asset') . '&author=' . $input->getCmd('author')); ?>
 		</div>
 	</form>
 <?php endif; ?>
