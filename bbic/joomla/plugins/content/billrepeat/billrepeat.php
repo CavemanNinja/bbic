@@ -141,8 +141,6 @@ class plgContentBillrepeat extends JPlugin
             //Service Request, add service name+price to attribs
             elseif ($catid == 12) {
                 $service_id = $attribs->servicerequest_item;
-                
-                JFactory::getApplication()->enqueueMessage("sevice_id: " + $attribs->servicerequest_item);
 
                 $query = $db->getQuery(true);
                 $query->select($db->quoteName('attribs'));
@@ -155,6 +153,7 @@ class plgContentBillrepeat extends JPlugin
                 $attribs->service_price = $service_attribs->service_price;
                 $attribs->service_name = $service_attribs->service_name;
                 $article->attribs = json_encode($attribs);
+                $article->state = 1;
             }
             
             //If Service add the price to the title.
@@ -197,7 +196,7 @@ class plgContentBillrepeat extends JPlugin
 
             //Create bill automatically when service request made
             if ($catid == 12) {
-                    
+                
                 
                 //Get the service price and name from database
                 $tenant_id = $article->created_by;
