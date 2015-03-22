@@ -13,6 +13,6 @@ RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 #Header always unset X-Powered-By
 
 ServerSignature Off
-ServerTokens Prod
+#ServerTokens Prod
 
 Header always append X-Frame-Options SAMEORIGIN
