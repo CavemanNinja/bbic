@@ -78,11 +78,13 @@ var ImageManager = this.ImageManager = {
 			portString = ':'+a.port;
 		}
 		$('#uploadForm').attr('action', a.scheme+'://'+a.domain+portString+a.path+'?'+a.query);
-		console.log("foo");
+		console.log("foo1");
 	},
 
 	getImageFolder: function()
 	{
+
+		console.log("foo2");
 		var url 	= this.frame.location.search.substring(1);
 		var args	= this.parseQuery(url);
 
@@ -150,7 +152,10 @@ var ImageManager = this.ImageManager = {
 				break;
 			}
 		}
-		this.frame.location.href='index.php?option=com_media&view=imagesList&tmpl=component&folder=' + folder + '&asset=' + asset + '&author=' + author;
+
+		a = this._getUriObject($('#uploadForm').attr('action'));
+
+		this.frame.location.href=a.scheme+'://'+a.domain+portString+'index.php?option=com_media&view=imagesList&tmpl=component&folder=' + folder + '&asset=' + asset + '&author=' + author;
 	},
 
 	getFolder: function() {
@@ -159,6 +164,7 @@ var ImageManager = this.ImageManager = {
 
 	upFolder: function()
 	{
+		console.log("upFolder");
 		var currentFolder = this.getFolder();
 
 		if (currentFolder.length < 2) {
