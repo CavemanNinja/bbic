@@ -42,7 +42,7 @@ var ImageManager = this.ImageManager = {
 		// Setup folder up button
 		this.upbutton = document.getElementById('upbutton');
 		$(this.upbutton).off('click');
-		$(this.upbutton).on('click', function(){ console.log('onclick'); ImageManager.upFolder(); });
+		$(this.upbutton).on('click', function(){ ImageManager.upFolder(); });
 	},
 
 	onloadimageview: function()
@@ -78,14 +78,13 @@ var ImageManager = this.ImageManager = {
 			portString = ':'+a.port;
 		}
 		$('#uploadForm').attr('action', a.scheme+'://'+a.domain+portString+a.path+'?'+a.query);
-		console.log("onload + a.scheme: " + a.scheme);
 
 	},
 
 	getImageFolder: function()
 	{
 
-		console.log("getImageFolder");
+
 		var url 	= this.frame.location.search.substring(1);
 		var args	= this.parseQuery(url);
 
@@ -94,7 +93,6 @@ var ImageManager = this.ImageManager = {
 
 	onok: function()
 	{
-		console.log("onok");
 		var tag		= '';
 		var extra	= '';
 
@@ -144,7 +142,6 @@ var ImageManager = this.ImageManager = {
 
 	setFolder: function(folder,asset,author)
 	{
-		console.log('setFolder');
 		for(var i = 0; i < this.folderlist.length; i++)
 		{
 			if (folder == this.folderlist.options[i].value) {
@@ -165,7 +162,7 @@ var ImageManager = this.ImageManager = {
 
 	upFolder: function()
 	{
-		console.log("upFolder");
+
 		var currentFolder = this.getFolder();
 
 		if (currentFolder.length < 2) {
