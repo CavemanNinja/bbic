@@ -14,6 +14,5 @@ RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 #Header always set Server
 
 ServerSignature Off
-ServerTokens Prod
 
 Header always append X-Frame-Options SAMEORIGIN
