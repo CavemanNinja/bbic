@@ -142,6 +142,8 @@ class plgContentBillrepeat extends JPlugin
             elseif ($catid == 12) {
                 $service_id = $attribs->servicerequest_item;
                 
+                JFactory::getApplication()->enqueueMessage("sevice_id: " + $attribs->servicerequest_item);
+
                 $query = $db->getQuery(true);
                 $query->select($db->quoteName('attribs'));
                 $query->from($db->quoteName('#__content'));
