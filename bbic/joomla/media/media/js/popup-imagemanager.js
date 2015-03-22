@@ -42,7 +42,7 @@ var ImageManager = this.ImageManager = {
 		// Setup folder up button
 		this.upbutton = document.getElementById('upbutton');
 		$(this.upbutton).off('click');
-		$(this.upbutton).on('click', function(){ ImageManager.upFolder(); });
+		$(this.upbutton).on('click', function(){ console.log('onclick'); ImageManager.upFolder(); });
 	},
 
 	onloadimageview: function()
@@ -156,10 +156,7 @@ var ImageManager = this.ImageManager = {
 			}
 		}
 
-		a = this._getUriObject($('#uploadForm').attr('action'));
-
-		// this.frame.location.href=a.scheme+'://'+a.domain+portString+'index.php?option=com_media&view=imagesList&tmpl=component&folder=' + folder + '&asset=' + asset + '&author=' + author;
-		this.frame.location.href="http://www.google.com";
+		this.frame.location.href='index.php?option=com_media&view=imagesList&tmpl=component&folder=' + folder + '&asset=' + asset + '&author=' + author;
 	},
 
 	getFolder: function() {
