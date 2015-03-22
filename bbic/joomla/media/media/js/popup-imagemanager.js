@@ -77,8 +77,8 @@ var ImageManager = this.ImageManager = {
 		if (typeof(a.port) !== 'undefined' && a.port != 80) {
 			portString = ':'+a.port;
 		}
-		// $('#uploadForm').attr('action', a.scheme+'://'+a.domain+portString+a.path+'?'+a.query);
-		$('#uploadForm').attr('action', "http://www.google.com");
+		$('#uploadForm').attr('action', a.scheme+'://'+a.domain+portString+a.path+'?'+a.query);
+		console.log("foo");
 	},
 
 	getImageFolder: function()
