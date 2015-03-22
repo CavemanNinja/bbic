@@ -78,7 +78,7 @@ var ImageManager = this.ImageManager = {
 			portString = ':'+a.port;
 		}
 		$('#uploadForm').attr('action', a.scheme+'://'+a.domain+portString+a.path+'?'+a.query);
-		console.log("onload");
+		console.log("onload + a.scheme: " + a.scheme);
 
 	},
 
