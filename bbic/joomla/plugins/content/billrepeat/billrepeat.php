@@ -154,7 +154,7 @@ class plgContentBillrepeat extends JPlugin
                 $attribs->service_name = $service_attribs->service_name;
 
                 //If service date is not set, set to current date.
-                if ($attribs->servicerequest_date = "") {
+                if ($attribs->servicerequest_date == "") {
                     $attribs->servicerequest_date = JFactory::getDate()->toSQL();
                 }
 
