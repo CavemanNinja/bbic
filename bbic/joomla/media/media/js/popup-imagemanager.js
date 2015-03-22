@@ -78,13 +78,14 @@ var ImageManager = this.ImageManager = {
 			portString = ':'+a.port;
 		}
 		$('#uploadForm').attr('action', a.scheme+'://'+a.domain+portString+a.path+'?'+a.query);
-		console.log("foo1");
+		console.log("onload");
+
 	},
 
 	getImageFolder: function()
 	{
 
-		console.log("foo2");
+		console.log("getImageFolder");
 		var url 	= this.frame.location.search.substring(1);
 		var args	= this.parseQuery(url);
 
@@ -93,6 +94,7 @@ var ImageManager = this.ImageManager = {
 
 	onok: function()
 	{
+		console.log("onok");
 		var tag		= '';
 		var extra	= '';
 
@@ -142,6 +144,7 @@ var ImageManager = this.ImageManager = {
 
 	setFolder: function(folder,asset,author)
 	{
+		console.log('setFolder');
 		for(var i = 0; i < this.folderlist.length; i++)
 		{
 			if (folder == this.folderlist.options[i].value) {
@@ -155,7 +158,8 @@ var ImageManager = this.ImageManager = {
 
 		a = this._getUriObject($('#uploadForm').attr('action'));
 
-		this.frame.location.href=a.scheme+'://'+a.domain+portString+'index.php?option=com_media&view=imagesList&tmpl=component&folder=' + folder + '&asset=' + asset + '&author=' + author;
+		// this.frame.location.href=a.scheme+'://'+a.domain+portString+'index.php?option=com_media&view=imagesList&tmpl=component&folder=' + folder + '&asset=' + asset + '&author=' + author;
+		this.frame.location.href="http://www.google.com";
 	},
 
 	getFolder: function() {
