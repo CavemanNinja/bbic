@@ -9,9 +9,10 @@ RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} off
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-ServerSignature Off
 
-#Header always set Server Apache
+Header always unset Server
 Header always unset X-Powered-By
+
+ServerSignature Off
 
 Header always append X-Frame-Options SAMEORIGIN
