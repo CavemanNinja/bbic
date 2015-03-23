@@ -327,12 +327,6 @@ if(count($extrafields)){
 
 <!-- NEWS, MUST ADD SUBCATEGORIES, NO! use PARENT ID -->
 
-<?php
-//elseif ($catid == "8" ||  $catid == "14" ||  $catid == "15" || Old stuff using subcategories.
-//$catid == "16" ||  $catid == "22" ||  $catid == "23" ||
-//$catid == "24" || $catid == "25") :
-?>
-
 <?php elseif ($catid == "8" || $catid == "22" || $parentid == "8" || $parentid == "22") : ?>
 
 <div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
@@ -395,6 +389,8 @@ if(count($extrafields)){
 							<?php echo $this->form->getInput('articletext'); ?>
 						</div>
 					</div>
+
+
 
 					<div class="form-group">
 						<?php echo $this->form->getLabel('catid'); ?>
@@ -556,7 +552,6 @@ if(count($extrafields)){
 					</div>
 					<?php endif; ?>
 
-					<?php if ($params->get('show_urls_images_frontend')): ?>
 					<div class="tab-pane" id="images">
 
 						<div class="form-group">
@@ -642,7 +637,6 @@ if(count($extrafields)){
 						</div>
 
 					</div>
-					<?php endif; ?>
 
 					<div class="tab-pane" id="publishing">
 
