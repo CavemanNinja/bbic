@@ -390,8 +390,6 @@ if(count($extrafields)){
 						</div>
 					</div>
 
-
-
 					<div class="form-group">
 						<?php echo $this->form->getLabel('catid'); ?>
 						<?php
@@ -552,6 +550,7 @@ if(count($extrafields)){
 					</div>
 					<?php endif; ?>
 
+					<?php if ($params->get('show_urls_images_frontend')): ?>
 					<div class="tab-pane" id="images">
 
 						<div class="form-group">
@@ -637,6 +636,7 @@ if(count($extrafields)){
 						</div>
 
 					</div>
+					<?php endif; ?>
 
 					<div class="tab-pane" id="publishing">
 

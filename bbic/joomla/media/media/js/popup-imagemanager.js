@@ -84,8 +84,8 @@ var ImageManager = this.ImageManager = {
 	getImageFolder: function()
 	{
 
-
 		var url 	= this.frame.location.search.substring(1);
+		console.log(url);
 		var args	= this.parseQuery(url);
 
 		return args['folder'];
