@@ -24,8 +24,6 @@ JHtml::_('behavior.formvalidation');
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css', array(), true);
 
 
-var_dump($this);
-
 //Check if user is a tenant
 $user = JFactory::getUser();
 
@@ -364,9 +362,9 @@ if(count($extrafields)){
 					<?php if(count($extrafields)) : ?>
 					<li><a href="#extrafields" data-toggle="tab"><?php echo JText::_('T3_EXTRA_FIELDS_GROUP_LABEL') ?></a></li>
 					<?php endif; ?>
-					
+					<?php if ($params->get('show_urls_images_frontend') ) : ?>
 					<li><a href="#images" data-toggle="tab"><?php echo JText::_('COM_CONTENT_IMAGES_AND_URLS') ?></a></li>
-					
+					<?php endif; ?>
 
 				</ul>
 
@@ -552,7 +550,12 @@ if(count($extrafields)){
 					</div>
 					<?php endif; ?>
 
-					
+					<div class="form-group">
+						<?php echo $this->form->getLabel('image_fulltext', 'images'); ?>
+						<?php echo $this->form->getInput('image_fulltext', 'images'); ?>
+					</div>
+
+					<?php if ($params->get('show_urls_images_frontend')): ?>
 					<div class="tab-pane" id="images">
 
 						<div class="form-group">
@@ -638,7 +641,7 @@ if(count($extrafields)){
 						</div>
 
 					</div>
-					
+					<?php endif; ?>
 
 					<div class="tab-pane" id="publishing">
 
