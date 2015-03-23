@@ -1,7 +1,7 @@
-$(function(){
+jQuery(function(){
 	console.log('insertImageInArticle');
-	$('#imgInsertButton').on('click', function(){
-		console.log('imgInsertButton: ' + $('#jform_images_image_fulltext').value() );
-		$('#tinymce').prepend('<p><img src="' + $('#jform_images_image_fulltext').value() + '"></p>');
+	jQuery('#imgInsertButton').on('click', function(){
+		console.log('imgInsertButton: ' + jQuery('#jform_images_image_fulltext').value() );
+		jQuery('#tinymce').prepend('<p><img src="' + jQuery('#jform_images_image_fulltext').value() + '"></p>');
 	});	
 });
