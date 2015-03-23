@@ -552,6 +552,7 @@ if(count($extrafields)){
 
 					<div class="form-group">
 						<?php echo $this->form->getLabel('image_fulltext', 'images'); ?>
+						<<p>Upload an image. Copy the url and use insert image in the editor above".</p>
 						<?php echo $this->form->getInput('image_fulltext', 'images'); ?>
 					</div>
 
