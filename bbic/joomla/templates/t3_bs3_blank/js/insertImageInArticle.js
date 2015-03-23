@@ -2,8 +2,11 @@ jQuery(function(){
 	console.log('insertImageInArticle');
 	jQuery('#imgInsertButton').on('click', function(){
 		console.log('imgInsertButton: ' + jQuery('#jform_images_image_fulltext').val() );
-		console.log('timymce html: ' + jQuery('#jform_articletest_ifr > #tinymce').html());
+		var iframe = jQuery('#jform_articletest_ifr');
+		var tinymce = jQuery('#tinymce', iframe.contents());
+		console.log('timymce html: ' + jQuery('#tinymce', iframe.contents()).html());
+		console.log('tinymce.html' + tinymce.html());
 
-		jQuery('#tinymce').html('<p><img src="' + jQuery('#jform_images_image_fulltext').val() + '"></p>' + jQuery('#tinymce').html());
+		tinymce.html('<p><img src="' + jQuery('#jform_images_image_fulltext').val() + '"></p>' + tinymce.html());
 	});	
 });
