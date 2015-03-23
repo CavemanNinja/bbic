@@ -49,6 +49,8 @@ $listDirn = $this->escape($this->state->get('list.direction'));
 
 //Check for Tenant
 $isTenant = in_array(10, array_values(JFactory::getUser()->groups));
+$isStaff = in_array(11, $current_user->getAuthorisedGroups());
+
 $restrictView = false;
 
 if ($this->items[0]) {
@@ -62,6 +64,7 @@ if ($this->items[0]) {
 
 
     //$noSubmit = $isTenant && ($catid == 9 || $parentid == 9);
+    $noSubmit = $isStaff && $catid == 12;
 }
 
 
