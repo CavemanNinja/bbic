@@ -364,9 +364,9 @@ if(count($extrafields)){
 					<?php if(count($extrafields)) : ?>
 					<li><a href="#extrafields" data-toggle="tab"><?php echo JText::_('T3_EXTRA_FIELDS_GROUP_LABEL') ?></a></li>
 					<?php endif; ?>
-					<?php if ($params->get('show_urls_images_frontend') ) : ?>
+					
 					<li><a href="#images" data-toggle="tab"><?php echo JText::_('COM_CONTENT_IMAGES_AND_URLS') ?></a></li>
-					<?php endif; ?>
+					
 
 				</ul>
 
