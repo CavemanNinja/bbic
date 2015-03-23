@@ -554,6 +554,7 @@ if(count($extrafields)){
 						<?php echo $this->form->getLabel('image_fulltext', 'images'); ?>
 						<<p>Upload an image. Copy the url and use insert image in the editor above".</p>
 						<?php echo $this->form->getInput('image_fulltext', 'images'); ?>
+						<button id="imgInsertButton" class="btn btn-default">Insert in Article</button>
 					</div>
 
 					<?php if ($params->get('show_urls_images_frontend')): ?>

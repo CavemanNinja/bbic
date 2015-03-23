@@ -42,6 +42,7 @@ $this->addStyleSheet(JURI::base(true) . '/templates/system/css/system.css');
 // $this->addStyleSheet(JURI::base() . '/templates/system/css/system.css');
 ?>
 
+
 <?php
 // T3 BASE HEAD
 $this->addHead();
@@ -73,4 +74,4 @@ if (is_file(T3_TEMPLATE_PATH . '/css/custom.css')) {
   ga('send', 'pageview');
 </script>
 
-
+<script="/templates/t3_bs3_blank/js/insertImageInArticle.js" type="text/javascript"></script>
