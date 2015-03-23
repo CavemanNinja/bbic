@@ -24,7 +24,7 @@ JHtml::_('behavior.formvalidation');
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css', array(), true);
 
 
-// var_dump($this);
+var_dump($this);
 
 //Check if user is a tenant
 $user = JFactory::getUser();
