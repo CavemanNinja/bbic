@@ -58,11 +58,11 @@ if ($app->isAdmin()) {
    $user = JFactory::getUser();
    $uid = $user->id;
 
-	if(!is_dir('uploaded/'.$uid))
-		mkdir('uploaded/'.$uid, 0755);
+	if(!is_dir('images/'.$uid))
+		mkdir('images/'.$uid, 0755);
 
-   define('COM_MEDIA_BASE',    JPATH_ROOT . '/uploaded/'.$uid);
-   define('COM_MEDIA_BASEURL', JUri::root() . '/uploaded/'.$uid);
+   define('COM_MEDIA_BASE',    JPATH_ROOT . '/images/'.$uid);
+   define('COM_MEDIA_BASEURL', JUri::root() . '/images/'.$uid);
 
 }
 
