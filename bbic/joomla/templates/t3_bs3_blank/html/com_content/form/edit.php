@@ -819,7 +819,7 @@ if(count($extrafields)){
 												<?php echo $field->label; ?>
 											</div>
 											<div class="controls">
-												<?php if ($field->name == "jform[attribs][companyprofile_approval]" || $isTenant) : ?>
+												<?php if ($field->name == "jform[attribs][companyprofile_approval]" && $isTenant) : ?>
 													<?php echo str_replace('<option value="1">Approved</option>', '<option value="1" disabled="disabled" >Approved</option>', $field->input); ?>
 
 												<?php elseif ($field->name == "jform[attribs][companyprofile_category]" && JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
