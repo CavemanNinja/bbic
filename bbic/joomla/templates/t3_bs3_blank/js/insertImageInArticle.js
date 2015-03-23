@@ -1,5 +1,5 @@
 $(function(){
-	$('imgInsertButton').onClick(function(){
+	$('#imgInsertButton').onClick(function(){
 		console.log('imgInsertButton: ' + $('#jform_images_image_fulltext').value() );
 		$('#tinymce').prepend('<p><img src="' + $('#jform_images_image_fulltext').value() + '"></p>');
 	});	
