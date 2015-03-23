@@ -195,21 +195,38 @@ var ImageManager = this.ImageManager = {
 
 	populateFields: function(file)
 	{
-		file = file.substr(file.lastIndexOf('/'+1));
-		$("#f_url").val(image_base_path+file);
+	//check if we're in administrator
+	var url = window.location.pathname;
+	var string = 'administrator';
+
+	if(url.indexOf(string) !== -1) {
+	document.id("f_url").value = image_base_path+file;
+	} else {
+	//we're in frontend, get userid
+	var userid = parent.document.id("usrid").value;
+	document.id("f_url").value = 'images/'+userid+'/'+file;
+	}
+
+
 	},
 
-	showMessage: function(text)
-	{
-		var message  = document.id('message');
-		var messages = document.id('messages');
+	// populateFields: function(file)
+	// {
+	// 	file = file.substr(file.lastIndexOf('/'+1));
+	// 	$("#f_url").val(image_base_path+file);
+	// },
 
-		if (message.firstChild)
-			message.removeChild(message.firstChild);
+	// showMessage: function(text)
+	// {
+	// 	var message  = document.id('message');
+	// 	var messages = document.id('messages');
 
-		message.appendChild(document.createTextNode(text));
-		messages.style.display = "block";
-	},
+	// 	if (message.firstChild)
+	// 		message.removeChild(message.firstChild);
+
+	// 	message.appendChild(document.createTextNode(text));
+	// 	messages.style.display = "block";
+	// },
 
 	parseQuery: function(query)
 	{

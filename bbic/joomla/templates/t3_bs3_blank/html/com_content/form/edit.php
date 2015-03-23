@@ -370,6 +370,8 @@ if(count($extrafields)){
 
 				</ul>
 
+				 <input type="hidden" value="<?php echo $user->id ?>" id="usrid" />
+
 				<div class="tab-content">
 					<div class="tab-pane active" id="editor">
 
@@ -778,6 +780,8 @@ if(count($extrafields)){
 					<?php endif; ?>
 					<br/><br/>
 				</div>
+
+				 <input type="hidden" value="<?php echo $user->id ?>" id="usrid" />
 
 				<ul class="nav nav-tabs">
 					<li class="active"><a href="#editor" data-toggle="tab"><?php echo JText::_('J3_EDITOR_COMPANYPROFILES_TAB') ?></a></li>
