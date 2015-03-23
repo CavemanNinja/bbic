@@ -57,7 +57,7 @@ if (is_file(T3_TEMPLATE_PATH . '/css/custom.css')) {
 ?>
 
 <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-<script src="bbic/joomla/templates/t3_bs3_blank/js/insertImageInArticle.js" type="text/javascript"></script>
+<script src="templates/t3_bs3_blank/js/insertImageInArticle.js" type="text/javascript"></script>
 <!-- Le HTML5 shim and media query for IE8 support -->
 <!--[if lt IE 9]>
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>

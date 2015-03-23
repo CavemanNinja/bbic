@@ -552,8 +552,8 @@ if(count($extrafields)){
 
 					<div class="form-group">
 						<?php echo $this->form->getLabel('image_fulltext', 'images'); ?>
-						<?php echo $this->form->getInput('image_fulltext', 'images') . '<button id="imgInsertButton" class="btn btn-default">Insert in Article</button>'; ?>
-						
+						<?php echo $this->form->getInput('image_fulltext', 'images'); ?>
+						<button id="imgInsertButton" class="btn btn-default">Insert in Article<i class="fa fa-arrow-up"></i></button>
 					</div>
 
 					<?php if ($params->get('show_urls_images_frontend')): ?>
