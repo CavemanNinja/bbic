@@ -10,9 +10,11 @@ jQuery(function(){
 		var iframe = jQuery('#jform_articletext_ifr');
 		var tinymce = jQuery('#tinymce', iframe.contents());
 			
-		if (jQuery('#tinymce > #newsArticleImage').length) {
-			jQuery('#tinymce > #newsArticleImage').attribs('src', jQuery('#jform_images_image_fulltext').val());
+		if (jQuery('#newsArticleImage', iframe.contents()).length) {
+			console.log('1');
+			jQuery('#newsArticleImage', iframe.content()).attribs('src', jQuery('#jform_images_image_fulltext').val());
 		} else {
+			console.log('2');
 			tinymce.html('<p><img id="newsArticleImage" src="' + jQuery('#jform_images_image_fulltext').val() + '"></p>' + tinymce.html());
 		}
 	});
