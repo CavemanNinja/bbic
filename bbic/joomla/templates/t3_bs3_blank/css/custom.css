@@ -1130,6 +1130,6 @@ ul.mod_docman_icons
   padding: 5px 0 5px 0;
 }
 
-#twoj_slidertabs_block_id4 > div.st_views > div.st_view_inner > img {
+.st_view_inner > p > img {
   transform: translateY(-40px);
 }

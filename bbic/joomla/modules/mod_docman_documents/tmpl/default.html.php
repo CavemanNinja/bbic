@@ -45,7 +45,7 @@ defined('KOOWA') or die; ?>
 
                     <? // Header title ?>
                     <span class="koowa_header__item">
-                        <span class="koowa_wrapped_content">
+                        <span>
                             <span class="whitespace_preserver">
                                 <a href="<?= $document->title_link; ?>"
                                    class="koowa_header__title_link <?= $params->link_to_download === 'download' ? 'docman_track_download' : ''; ?>"
