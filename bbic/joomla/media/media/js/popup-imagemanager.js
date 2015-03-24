@@ -47,8 +47,9 @@ var ImageManager = this.ImageManager = {
 		jQuery('#popupInsertImage').on('click', function(){
 			var iframe = jQuery('#jform_articletext_ifr');
 			var tinymce = jQuery('#tinymce', iframe.contents());
-			// console.log('iframe: ' + iframe);
-			// console.log('tinymce: ' + tinymce);
+			console.log('tinymce: ' + tinymce.html());
+			console.log('(\'#jform_images_image_fulltext\').val(): ' + ('#jform_images_image_fulltext').val());
+			console.log('popupmanager insert image');
 			tinymce.html('<p><img src="' + jQuery('#jform_images_image_fulltext').val() + '"></p>' + tinymce.html());
 		});	
 	},
