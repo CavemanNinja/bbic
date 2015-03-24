@@ -919,6 +919,10 @@ div.st_tabs > div > ul {
 
 }
 
+#Mod138 {
+    padding-bottom: 60px;
+}
+
 #txtUploadFile138 {
   left: 0px !important;
 
@@ -1128,10 +1132,6 @@ ul.mod_docman_icons
 
 .module_document {
   padding: 5px 0 5px 0;
-}
-
-.st_view_inner > p > img {
-  transform: translateY(-40px);
 }
 
 .koowa_wrapped_content {
