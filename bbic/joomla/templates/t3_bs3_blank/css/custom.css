@@ -919,7 +919,7 @@ div.st_tabs > div > ul {
 
 }
 
-#Mod138 {
+#Mod108 {
     padding-bottom: 60px;
 }
 
@@ -1135,6 +1135,5 @@ ul.mod_docman_icons
 }
 
 .koowa_wrapped_content {
-  display: inline-block !important;
   width: auto !important;
 }
