@@ -1133,3 +1133,7 @@ ul.mod_docman_icons
 .st_view_inner > p > img {
   transform: translateY(-40px);
 }
+
+.koowa_wrapped_content {
+  display: inline-block !important;
+}
