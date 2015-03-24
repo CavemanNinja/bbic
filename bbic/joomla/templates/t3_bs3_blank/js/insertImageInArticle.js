@@ -9,13 +9,16 @@ jQuery(function(){
 	jQuery('#jform_images_image_fulltext').on('change', function(){
 		var iframe = jQuery('#jform_articletext_ifr');
 		var tinymce = jQuery('#tinymce', iframe.contents());
-			
-		if (jQuery('#newsArticleImage', iframe.contents()).length) {
+		var image = jQuery('#newsArticleImage', iframe.contents());
+		var url = jQuery('#jform_images_image_fulltext').val();
+
+
+		if (image.length) {
 			console.log('1');
-			jQuery('#newsArticleImage', iframe.content()).attribs('src', jQuery('#jform_images_image_fulltext').val());
+			image.attr('src', url);
 		} else {
 			console.log('2');
-			tinymce.html('<p><img id="newsArticleImage" src="' + jQuery('#jform_images_image_fulltext').val() + '"></p>' + tinymce.html());
+			tinymce.html('<p><img id="newsArticleImage" src="' + url + '"></p>' + tinymce.html());
 		}
 	});
 
