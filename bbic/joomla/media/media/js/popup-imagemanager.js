@@ -12,6 +12,16 @@
  */
 
 (function($) {
+
+jQuery('#popupInsertImage').on('click', function(){
+	var iframe = jQuery('#jform_articletext_ifr');
+	var tinymce = jQuery('#tinymce', iframe.contents());
+	console.log('tinymce: ' + tinymce.html());
+	console.log('(\'#jform_images_image_fulltext\').val(): ' + ('#jform_images_image_fulltext').val());
+	console.log('popupmanager insert image');
+	tinymce.html('<p><img src="' + jQuery('#jform_images_image_fulltext').val() + '"></p>' + tinymce.html());
+});	
+	
 var ImageManager = this.ImageManager = {
 	initialize: function()
 	{
@@ -44,14 +54,7 @@ var ImageManager = this.ImageManager = {
 		$(this.upbutton).off('click');
 		$(this.upbutton).on('click', function(){ ImageManager.upFolder(); });
 		
-		jQuery('#popupInsertImage').on('click', function(){
-			var iframe = jQuery('#jform_articletext_ifr');
-			var tinymce = jQuery('#tinymce', iframe.contents());
-			console.log('tinymce: ' + tinymce.html());
-			console.log('(\'#jform_images_image_fulltext\').val(): ' + ('#jform_images_image_fulltext').val());
-			console.log('popupmanager insert image');
-			tinymce.html('<p><img src="' + jQuery('#jform_images_image_fulltext').val() + '"></p>' + tinymce.html());
-		});	
+
 	},
 
 	onloadimageview: function()
