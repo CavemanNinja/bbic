@@ -43,9 +43,14 @@ var ImageManager = this.ImageManager = {
 		this.upbutton = document.getElementById('upbutton');
 		$(this.upbutton).off('click');
 		$(this.upbutton).on('click', function(){ ImageManager.upFolder(); });
-		$('#imageForm > div:nth-child(2) > div > div.pull-right > button.btn.btn-primary').onClick(function(){
-			$('#tinymce').prepend('<p><img src="' + document.id("f_url").value + '"></p>');
-		});
+		
+		jQuery('#popupInsertImage').on('click', function(){
+			var iframe = jQuery('#jform_articletext_ifr');
+			var tinymce = jQuery('#tinymce', iframe.contents());
+			// console.log('iframe: ' + iframe);
+			// console.log('tinymce: ' + tinymce);
+			tinymce.html('<p><img src="' + jQuery('#jform_images_image_fulltext').val() + '"></p>' + tinymce.html());
+		});	
 	},
 
 	onloadimageview: function()
