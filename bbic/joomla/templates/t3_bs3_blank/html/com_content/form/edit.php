@@ -461,7 +461,7 @@ if(count($extrafields)){
 							} else {
 								$selectcat = $this->form->getInput('catid');
 
-								$selectcat = str_replace('<option value="22">- - الأخبار</option>',
+								$selectcat = str_replace('<option value="22" selected="selected">- - الأخبار</option>',
 								 '', $selectcat );
 
 								$selectcat = str_replace('<option value="8" selected="selected">- - News</option>',
