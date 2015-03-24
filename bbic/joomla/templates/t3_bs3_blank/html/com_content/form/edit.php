@@ -1167,66 +1167,66 @@ if(count($extrafields)){
 
 					<div class="tab-pane" id="publishing">
 
-						<div class="form-group">
+						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('tags'); ?>
 							<?php echo str_replace('span12', '', $this->form->getInput('tags')); ?>
 						</div>
 
 						<?php if ($params->get('save_history', 0)) : ?>
-						<div class="form-group">
+						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('version_note'); ?>
 							<?php echo $this->form->getInput('version_note'); ?>
 						</div>
 						<?php endif; ?>
 
-						<div class="form-group">
+						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('created_by_alias'); ?>
 							<?php echo $this->form->getInput('created_by_alias'); ?>
 						</div>
 
 						<?php if ($this->item->params->get('access-change')) : ?>
-							<div class="form-group">
+							<div class="form-group hidden">
 								<?php echo $this->form->getLabel('featured'); ?>
 								<?php echo $this->form->getInput('featured'); ?>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group hidden">
 								<?php echo $this->form->getLabel('publish_up'); ?>
 								<?php echo str_replace('class="btn"', 'class="btn btn-default"', $this->form->getInput('publish_up')); ?>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group hidden">
 								<?php echo $this->form->getLabel('publish_down'); ?>
 								<?php echo str_replace('class="btn"', 'class="btn btn-default"', $this->form->getInput('publish_down')); ?>
 							</div>
 						<?php endif; ?>
 
-						<div class="form-group">
+						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('access'); ?>
 							<?php echo $this->form->getInput('access'); ?>
 						</div>
 
 						<?php if (is_null($this->item->id)):?>
-							<div class="form-group">
+							<div class="form-group hidden">
 								<?php echo JText::_('COM_CONTENT_ORDERING'); ?>
 							</div>
 						<?php endif; ?>
 					</div>
 
 					<div class="tab-pane" id="language">
-						<div class="form-group">
+						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('language'); ?>
 							<?php echo $this->form->getInput('language'); ?>
 						</div>
 					</div>
 
 					<div class="tab-pane" id="metadata">
-						<div class="form-group">
+						<div class="form-group hidden">
 							<?php echo $this->form->getLabel('metadesc'); ?>
 							<?php echo $this->form->getInput('metadesc'); ?>
 						</div>
 
-						<div class="form-group">
+						<div class="form-group hidden">
 								<?php echo $this->form->getLabel('metakey'); ?>
 								<?php echo $this->form->getInput('metakey'); ?>
 						</div>

@@ -14,13 +14,11 @@ jQuery(function(){
 
 
 		if (image.length) {
-			console.log('1');
 			image.attr('src', url);
 		if (url.length === 0) {
 				image.remove();
 			}
 		} else {
-			console.log('2');
 			tinymce.html('<p><img id="newsArticleImage" src="' + url + '"></p>' + tinymce.html());
 		}
 	});
