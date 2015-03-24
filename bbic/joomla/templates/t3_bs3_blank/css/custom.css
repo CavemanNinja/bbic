@@ -1135,5 +1135,7 @@ ul.mod_docman_icons
 }
 
 .koowa_wrapped_content {
+  display: inline !important;
   width: auto !important;
+  height: auto !important;
 }
