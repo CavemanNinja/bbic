@@ -288,7 +288,7 @@ class plgContentBillrepeat extends JPlugin
                 }
                 
                 //If the SR is saved by staff member with the status approved and flag indicating it was just approved
-                elseif ($isStaff && $attribs->servicerequest_approval == "1" && $article->metakey == "") {
+                elseif ($isStaff && && $service_price > 0 && $attribs->servicerequest_approval == "1" && $article->metakey == "") {
                     
                     // JFactory::getApplication()->enqueueMessage("first time approved.");
                     /*
