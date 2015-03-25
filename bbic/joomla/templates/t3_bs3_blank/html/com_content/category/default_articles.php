@@ -108,9 +108,7 @@ if ($catid == 12) {
     $list_show_servicerequest_item = true;
     $list_show_servicerequest_approval = true;
     $list_show_servicerequest_tenant = true;
-    if ($isTenant) {
-        $isEditable = false;
-    }
+
 }
 
 if ($catid == 10) {
@@ -136,6 +134,14 @@ if (!empty($this->items))
             break;
         }
     }
+}
+
+
+/*
+    Make isEditable false for tenants when viewing Service Requests or Bills.
+ */
+if (($catid == 12 || $catid == 10) && $isTenant) {
+    $isEditable = false;
 }
 
 /*
