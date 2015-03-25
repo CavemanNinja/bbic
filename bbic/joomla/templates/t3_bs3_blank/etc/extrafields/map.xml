@@ -17,7 +17,7 @@
             name="map_building8_1_image"
             type="media"
             preview="tooltip"
-            directory="map_images"
+            
             label="TPL_MAP_BUILDING8_1_IMAGE"
             description="TPL_MAP_BUILDING8_1_IMAGE_DESC"
          />
@@ -37,7 +37,7 @@
             name="map_building8_2_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_2_IMAGE"
             description="TPL_MAP_BUILDING8_2_IMAGE_DESC"
          />
@@ -57,7 +57,7 @@
             name="map_building8_3_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_3_IMAGE"
             description="TPL_MAP_BUILDING8_3_IMAGE_DESC"
          />
@@ -77,7 +77,7 @@
             name="map_building8_4_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_4_IMAGE"
             description="TPL_MAP_BUILDING8_4_IMAGE_DESC"
          />
@@ -97,7 +97,7 @@
             name="map_building8_5_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_5_IMAGE"
             description="TPL_MAP_BUILDING8_5_IMAGE_DESC"
          />
@@ -117,7 +117,7 @@
             name="map_building8_6_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_6_IMAGE"
             description="TPL_MAP_BUILDING8_6_IMAGE_DESC"
          />
@@ -137,7 +137,7 @@
             name="map_building8_7_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_7_IMAGE"
             description="TPL_MAP_BUILDING8_7_IMAGE_DESC"
          />
@@ -157,7 +157,7 @@
             name="map_building8_8_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_8_IMAGE"
             description="TPL_MAP_BUILDING8_8_IMAGE_DESC"
          />
@@ -177,7 +177,7 @@
             name="map_building8_9_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_9_IMAGE"
             description="TPL_MAP_BUILDING8_9_IMAGE_DESC"
          />
@@ -197,7 +197,7 @@
             name="map_building8_10_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_10_IMAGE"
             description="TPL_MAP_BUILDING8_10_IMAGE_DESC"
          />
@@ -217,7 +217,7 @@
             name="map_building8_11_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_11_IMAGE"
             description="TPL_MAP_BUILDING8_11_IMAGE_DESC"
          />
@@ -237,7 +237,7 @@
             name="map_building8_12_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_12_IMAGE"
             description="TPL_MAP_BUILDING8_12_IMAGE_DESC"
          />
@@ -257,7 +257,7 @@
             name="map_building8_13_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_13_IMAGE"
             description="TPL_MAP_BUILDING8_13_IMAGE_DESC"
          />
@@ -277,7 +277,7 @@
             name="map_building8_14_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_14_IMAGE"
             description="TPL_MAP_BUILDING8_14_IMAGE_DESC"
          />
@@ -297,7 +297,7 @@
             name="map_building8_15_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_15_IMAGE"
             description="TPL_MAP_BUILDING8_15_IMAGE_DESC"
          />
@@ -317,7 +317,7 @@
             name="map_building8_16_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_16_IMAGE"
             description="TPL_MAP_BUILDING8_16_IMAGE_DESC"
          />
@@ -337,7 +337,7 @@
             name="map_building8_17_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_17_IMAGE"
             description="TPL_MAP_BUILDING8_17_IMAGE_DESC"
          />
@@ -357,7 +357,7 @@
             name="map_building8_18_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_18_IMAGE"
             description="TPL_MAP_BUILDING8_18_IMAGE_DESC"
          />
@@ -377,7 +377,7 @@
             name="map_building8_20_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_20_IMAGE"
             description="TPL_MAP_BUILDING8_20_IMAGE_DESC"
          />
@@ -397,7 +397,7 @@
             name="map_building8_21_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_21_IMAGE"
             description="TPL_MAP_BUILDING8_21_IMAGE_DESC"
          />
@@ -417,7 +417,7 @@
             name="map_building8_22_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_22_IMAGE"
             description="TPL_MAP_BUILDING8_22_IMAGE_DESC"
          />
@@ -437,7 +437,7 @@
             name="map_building8_23_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_23_IMAGE"
             description="TPL_MAP_BUILDING8_23_IMAGE_DESC"
          />
@@ -457,7 +457,7 @@
             name="map_building8_24_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_24_IMAGE"
             description="TPL_MAP_BUILDING8_24_IMAGE_DESC"
          />
@@ -477,7 +477,7 @@
             name="map_building8_25_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_25_IMAGE"
             description="TPL_MAP_BUILDING8_25_IMAGE_DESC"
          />
@@ -497,7 +497,7 @@
             name="map_building8_26_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_26_IMAGE"
             description="TPL_MAP_BUILDING8_26_IMAGE_DESC"
          />
@@ -517,7 +517,7 @@
             name="map_building8_27_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_27_IMAGE"
             description="TPL_MAP_BUILDING8_27_IMAGE_DESC"
          />
@@ -537,7 +537,7 @@
             name="map_building8_28_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_28_IMAGE"
             description="TPL_MAP_BUILDING8_28_IMAGE_DESC"
          />
@@ -557,7 +557,7 @@
             name="map_building8_29_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_29_IMAGE"
             description="TPL_MAP_BUILDING8_29_IMAGE_DESC"
          />
@@ -577,7 +577,7 @@
             name="map_building8_30_image" 
             type="media"
             preview="tooltip"
-            directory="map_images"             
+                         
             label="TPL_MAP_BUILDING8_30_IMAGE"
             description="TPL_MAP_BUILDING8_30_IMAGE_DESC"            
          /> 
@@ -597,7 +597,7 @@
             name="map_building8_32_image" 
             type="media"
             preview="tooltip"
-            directory="map_images"            
+                        
             label="TPL_MAP_BUILDING8_32_IMAGE"
             description="TPL_MAP_BUILDING8_32_IMAGE_DESC"
          />
@@ -617,7 +617,7 @@
             name="map_building8_33_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_33_IMAGE"
             description="TPL_MAP_BUILDING8_33_IMAGE_DESC"
          />
@@ -637,7 +637,7 @@
             name="map_building8_34_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_34_IMAGE"
             description="TPL_MAP_BUILDING8_34_IMAGE_DESC"
          />
@@ -657,7 +657,7 @@
             name="map_building8_35_image" 
             type="media"
             preview="tooltip"
-            directory="map_images"   
+               
             label="TPL_MAP_BUILDING8_35_IMAGE"
             description="TPL_MAP_BUILDING8_35_IMAGE_DESC"
          />
@@ -677,7 +677,7 @@
             name="map_building8_36_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_36_IMAGE"
             description="TPL_MAP_BUILDING8_36_IMAGE_DESC"
          />
@@ -697,7 +697,7 @@
             name="map_building8_37_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_37_IMAGE"
             description="TPL_MAP_BUILDING8_37_IMAGE_DESC"
          />
@@ -717,7 +717,7 @@
             name="map_building8_38_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_38_IMAGE"
             description="TPL_MAP_BUILDING8_38_IMAGE_DESC"
          />
@@ -737,7 +737,7 @@
             name="map_building8_39_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_39_IMAGE"
             description="TPL_MAP_BUILDING8_39_IMAGE_DESC"
          />
@@ -757,7 +757,7 @@
             name="map_building8_40_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_40_IMAGE"
             description="TPL_MAP_BUILDING8_40_IMAGE_DESC"
          />
@@ -777,7 +777,7 @@
             name="map_building8_41_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_41_IMAGE"
             description="TPL_MAP_BUILDING8_41_IMAGE_DESC"
          />
@@ -797,7 +797,7 @@
             name="map_building8_42_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_42_IMAGE"
             description="TPL_MAP_BUILDING8_42_IMAGE_DESC"
          />
@@ -817,7 +817,7 @@
             name="map_building8_43_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_43_IMAGE"
             description="TPL_MAP_BUILDING8_43_IMAGE_DESC"
          />
@@ -837,7 +837,7 @@
             name="map_building8_44_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_44_IMAGE"
             description="TPL_MAP_BUILDING8_44_IMAGE_DESC"
          />
@@ -857,7 +857,7 @@
             name="map_building8_45_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_45_IMAGE"
             description="TPL_MAP_BUILDING8_45_IMAGE_DESC"
          />
@@ -877,7 +877,7 @@
             name="map_building8_46_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_46_IMAGE"
             description="TPL_MAP_BUILDING8_46_IMAGE_DESC"
          />
@@ -897,7 +897,7 @@
             name="map_building8_47_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BUILDING8_47_IMAGE"
             description="TPL_MAP_BUILDING8_47_IMAGE_DESC"
          />
@@ -919,7 +919,7 @@
             name="map_lota_1_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_1_IMAGE"
             description="TPL_MAP_LOTA_1_IMAGE_DESC"
          />
@@ -939,7 +939,7 @@
             name="map_lota_2_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_2_IMAGE"
             description="TPL_MAP_LOTA_2_IMAGE_DESC"
          />
@@ -959,7 +959,7 @@
             name="map_lota_3_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_3_IMAGE"
             description="TPL_MAP_LOTA_3_IMAGE_DESC"
          />
@@ -979,7 +979,7 @@
             name="map_lota_4_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_4_IMAGE"
             description="TPL_MAP_LOTA_4_IMAGE_DESC"
          />  
@@ -999,7 +999,7 @@
             name="map_lota_5_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_5_IMAGE"
             description="TPL_MAP_LOTA_5_IMAGE_DESC"
          /> 
@@ -1020,7 +1020,7 @@
             name="map_lota_6_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_6_IMAGE"
             description="TPL_MAP_LOTA_6_IMAGE_DESC"
          />   
@@ -1040,7 +1040,7 @@
             name="map_lota_7_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_7_IMAGE"
             description="TPL_MAP_LOTA_7_IMAGE_DESC"
          />   
@@ -1060,7 +1060,7 @@
             name="map_lota_8_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_8_IMAGE"
             description="TPL_MAP_LOTA_8_IMAGE_DESC"
          />  
@@ -1080,7 +1080,7 @@
             name="map_lota_9_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_9_IMAGE"
             description="TPL_MAP_LOTA_9_IMAGE_DESC"
          /> 
@@ -1100,7 +1100,7 @@
             name="map_lota_10_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTA_10_IMAGE"
             description="TPL_MAP_LOTA_10_IMAGE_DESC"
          />  
@@ -1123,7 +1123,7 @@
             name="map_lotb_1_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_1_IMAGE"
             description="TPL_MAP_LOTA_1_IMAGE_DESC"
          />
@@ -1143,7 +1143,7 @@
             name="map_lotb_2_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_2_IMAGE"
             description="TPL_MAP_LOTB_2_IMAGE_DESC"
          />
@@ -1163,7 +1163,7 @@
             name="map_lotb_3_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_3_IMAGE"
             description="TPL_MAP_LOTB_3_IMAGE_DESC"
          />
@@ -1183,7 +1183,7 @@
             name="map_lotb_4_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_4_IMAGE"
             description="TPL_MAP_LOTB_4_IMAGE_DESC"
          />  
@@ -1203,7 +1203,7 @@
             name="map_lotb_5_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_5_IMAGE"
             description="TPL_MAP_LOTB_5_IMAGE_DESC"
          />  
@@ -1223,7 +1223,7 @@
             name="map_lotb_6_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_6_IMAGE"
             description="TPL_MAP_LOTB_6_IMAGE_DESC"
          />  
@@ -1243,7 +1243,7 @@
             name="map_lotb_7_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_7_IMAGE"
             description="TPL_MAP_LOTB_7_IMAGE_DESC"
          />  
@@ -1263,7 +1263,7 @@
             name="map_lotb_8_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_8_IMAGE"
             description="TPL_MAP_LOTB_8_IMAGE_DESC"
          />   
@@ -1283,7 +1283,7 @@
             name="map_lotb_9_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_9_IMAGE"
             description="TPL_MAP_LOTB_9_IMAGE_DESC"
          />  
@@ -1303,7 +1303,7 @@
             name="map_lotb_10_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTB_10_IMAGE"
             description="TPL_MAP_LOTB_10_IMAGE_DESC"
          />  
@@ -1325,7 +1325,7 @@
             name="map_lotc_1_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_1_IMAGE"
             description="TPL_MAP_LOTC_1_IMAGE_DESC"
          />
@@ -1345,7 +1345,7 @@
             name="map_lotc_2_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_2_IMAGE"
             description="TPL_MAP_LOTC_2_IMAGE_DESC"
          />
@@ -1366,7 +1366,7 @@
             name="map_lotc_3_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_3_IMAGE"
             description="TPL_MAP_LOTC_3_IMAGE_DESC"
          />
@@ -1386,7 +1386,7 @@
             name="map_lotc_4_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_4_IMAGE"
             description="TPL_MAP_LOTC_4_IMAGE_DESC"
          />  
@@ -1406,7 +1406,7 @@
             name="map_lotc_5_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_5_IMAGE"
             description="TPL_MAP_LOTC_5_IMAGE_DESC"
          />     
@@ -1428,7 +1428,7 @@
             name="map_lotc_6_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_6_IMAGE"
             description="TPL_MAP_LOTC_6_IMAGE_DESC"
          />  
@@ -1449,7 +1449,7 @@
             name="map_lotc_7_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_7_IMAGE"
             description="TPL_MAP_LOTC_7_IMAGE_DESC"
          />  
@@ -1469,7 +1469,7 @@
             name="map_lotc_8_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_8_IMAGE"
             description="TPL_MAP_LOTC_8_IMAGE_DESC"
          /> 
@@ -1489,7 +1489,7 @@
             name="map_lotc_9_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_9_IMAGE"
             description="TPL_MAP_LOTC_9_IMAGE_DESC"
          />        
@@ -1509,7 +1509,7 @@
             name="map_lotc_10_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_LOTC_10_IMAGE"
             description="TPL_MAP_LOTC_10_IMAGE_DESC"
          />   
@@ -1532,7 +1532,7 @@
             name="map_w1_1_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_1_G_IMAGE"
             description="TPL_MAP_W1_1_G_IMAGE_DESC"
          />
@@ -1552,7 +1552,7 @@
             name="map_w1_2_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_2_G_IMAGE"
             description="TPL_MAP_W1_2_G_IMAGE_DESC"
          />
@@ -1573,7 +1573,7 @@
             name="map_w1_3_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_3_G_IMAGE"
             description="TPL_MAP_W1_3_G_IMAGE_DESC"
          />
@@ -1593,7 +1593,7 @@
             name="map_w1_4_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_4_G_IMAGE"
             description="TPL_MAP_W1_4_G_IMAGE_DESC"
          />
@@ -1613,7 +1613,7 @@
             name="map_w1_5_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_5_G_IMAGE"
             description="TPL_MAP_W1_5_G_IMAGE_DESC"
          />
@@ -1633,7 +1633,7 @@
             name="map_w1_6_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_6_G_IMAGE"
             description="TPL_MAP_W1_6_G_IMAGE_DESC"
          />
@@ -1653,7 +1653,7 @@
             name="map_w1_7_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_7_G_IMAGE"
             description="TPL_MAP_W1_7_G_IMAGE_DESC"
          />
@@ -1673,7 +1673,7 @@
             name="map_w1_8_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_8_G_IMAGE"
             description="TPL_MAP_W1_8_G_IMAGE_DESC"
          />  
@@ -1694,7 +1694,7 @@
             name="map_w1_1_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_1_1ST_IMAGE"
             description="TPL_MAP_W1_1_1ST_IMAGE_DESC"
          />
@@ -1714,7 +1714,7 @@
             name="map_w1_2_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_2_1ST_IMAGE"
             description="TPL_MAP_W1_2_1ST_IMAGE_DESC"
          />
@@ -1734,7 +1734,7 @@
             name="map_w1_3_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_3_1ST_IMAGE"
             description="TPL_MAP_W1_3_1ST_IMAGE_DESC"
          />
@@ -1754,7 +1754,7 @@
             name="map_w1_4_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_4_1ST_IMAGE"
             description="TPL_MAP_W1_4_1ST_IMAGE_DESC"
          />
@@ -1774,7 +1774,7 @@
             name="map_w1_5_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_5_1ST_IMAGE"
             description="TPL_MAP_W1_5_1ST_IMAGE_DESC"
          />
@@ -1794,7 +1794,7 @@
             name="map_w1_6_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_6_1ST_IMAGE"
             description="TPL_MAP_W1_6_1ST_IMAGE_DESC"
          />
@@ -1814,7 +1814,7 @@
             name="map_w1_7_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_7_1ST_IMAGE"
             description="TPL_MAP_W1_7_1ST_IMAGE_DESC"
          />
@@ -1834,7 +1834,7 @@
             name="map_w1_8_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_8_1ST_IMAGE"
             description="TPL_MAP_W1_8_1ST_IMAGE_DESC"
          />
@@ -1854,7 +1854,7 @@
             name="map_w1_9_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_9_1ST_IMAGE"
             description="TPL_MAP_W1_9_1ST_IMAGE_DESC"
          />
@@ -1874,7 +1874,7 @@
             name="map_w1_10_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_10_1ST_IMAGE"
             description="TPL_MAP_W1_10_1ST_IMAGE_DESC"
          />
@@ -1895,7 +1895,7 @@
             name="map_w1_11_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W1_11_1ST_IMAGE"
             description="TPL_MAP_W1_11_1ST_IMAGE_DESC"
          /> 
@@ -1918,7 +1918,7 @@
             name="map_w3_1_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W3_1_G_IMAGE"
             description="TPL_MAP_W3_1_G_IMAGE_DESC"
          />
@@ -1938,7 +1938,7 @@
             name="map_w3_2_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W3_2_G_IMAGE"
             description="TPL_MAP_W3_2_G_IMAGE_DESC"
          /> 
@@ -1958,7 +1958,7 @@
             name="map_w3_3_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W3_3_G_IMAGE"
             description="TPL_MAP_W3_3_G_IMAGE_DESC"
          />
@@ -1978,7 +1978,7 @@
             name="map_w3_4_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W3_4_G_IMAGE"
             description="TPL_MAP_W3_4_G_IMAGE_DESC"
          />
@@ -1998,7 +1998,7 @@
             name="map_w3_5_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W3_5_G_IMAGE"
             description="TPL_MAP_W3_5_G_IMAGE_DESC"
          />
@@ -2018,7 +2018,7 @@
             name="map_w3_6_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W3_6_G_IMAGE"
             description="TPL_MAP_W3_6_G_IMAGE_DESC"
          />
@@ -2038,7 +2038,7 @@
             name="map_w3_7_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W3_7_G_IMAGE"
             description="TPL_MAP_W3_7_G_IMAGE_DESC"
          />
@@ -2058,7 +2058,7 @@
             name="map_w3_8_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W3_8_G_IMAGE"
             description="TPL_MAP_W3_8_G_IMAGE_DESC"
          />   
@@ -2082,7 +2082,7 @@
             name="map_bdb_1_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_1_G_IMAGE"
             description="TPL_MAP_BDB_1_G_IMAGE_DESC"
          />
@@ -2102,7 +2102,7 @@
             name="map_bdb_2_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_2_G_IMAGE"
             description="TPL_MAP_BDB_2_G_IMAGE_DESC"
          /> 
@@ -2122,7 +2122,7 @@
             name="map_bdb_3_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_3_G_IMAGE"
             description="TPL_MAP_BDB_3_G_IMAGE_DESC"
          />
@@ -2142,7 +2142,7 @@
             name="map_bdb_4_g_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_4_G_IMAGE"
             description="TPL_MAP_BDB_4_G_IMAGE_DESC"
          />
@@ -2162,7 +2162,7 @@
             name="map_bdb_1_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_1_1ST_IMAGE"
             description="TPL_MAP_BDB_1_1ST_IMAGE_DESC"
          />
@@ -2182,7 +2182,7 @@
             name="map_bdb_2_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_2_1ST_IMAGE"
             description="TPL_MAP_BDB_2_1ST_IMAGE_DESC"
          />
@@ -2202,7 +2202,7 @@
             name="map_bdb_3_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_3_1ST_IMAGE"
             description="TPL_MAP_BDB_3_1ST_IMAGE_DESC"
          /> 
@@ -2222,7 +2222,7 @@
             name="map_bdb_4_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_4_1ST_IMAGE"
             description="TPL_MAP_BDB_4_1ST_IMAGE_DESC"
          />
@@ -2242,7 +2242,7 @@
             name="map_bdb_5_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_5_1ST_IMAGE"
             description="TPL_MAP_BDB_5_1ST_IMAGE_DESC"
          />
@@ -2262,7 +2262,7 @@
             name="map_bdb_6_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_6_1ST_IMAGE"
             description="TPL_MAP_BDB_6_1ST_IMAGE_DESC"
          />
@@ -2282,7 +2282,7 @@
             name="map_bdb_7_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_7_1ST_IMAGE"
             description="TPL_MAP_BDB_7_1ST_IMAGE_DESC"
          />
@@ -2302,7 +2302,7 @@
             name="map_bdb_8_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_8_1ST_IMAGE"
             description="TPL_MAP_BDB_8_1ST_IMAGE_DESC"
          /> 
@@ -2322,7 +2322,7 @@
             name="map_bdb_9_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_9_1ST_IMAGE"
             description="TPL_MAP_BDB_9_1ST_IMAGE_DESC"
          />
@@ -2342,7 +2342,7 @@
             name="map_bdb_10_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_10_1ST_IMAGE"
             description="TPL_MAP_BDB_10_1ST_IMAGE_DESC"
          />
@@ -2362,7 +2362,7 @@
             name="map_bdb_11_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_11_1ST_IMAGE"
             description="TPL_MAP_BDB_11_1ST_IMAGE_DESC"
          />
@@ -2382,7 +2382,7 @@
             name="map_bdb_12_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_12_1ST_IMAGE"
             description="TPL_MAP_BDB_12_1ST_IMAGE_DESC"
          />
@@ -2402,7 +2402,7 @@
             name="map_bdb_13_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_13_1ST_IMAGE"
             description="TPL_MAP_BDB_13_1ST_IMAGE_DESC"
          /> 
@@ -2423,7 +2423,7 @@
             name="map_bdb_14_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_14_1ST_IMAGE"
             description="TPL_MAP_BDB_14_1ST_IMAGE_DESC"
          /> 
@@ -2444,7 +2444,7 @@
             name="map_bdb_15_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_15_1ST_IMAGE"
             description="TPL_MAP_BDB_15_1ST_IMAGE_DESC"
          />
@@ -2464,7 +2464,7 @@
             name="map_bdb_16_1st_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_BDB_16_1ST_IMAGE"
             description="TPL_MAP_BDB_16_1ST_IMAGE_DESC"
          />    
@@ -2486,7 +2486,7 @@
             name="map_w4_1_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W4_1_IMAGE"
             description="TPL_MAP_W4_1_IMAGE_DESC"
          /> 
@@ -2506,7 +2506,7 @@
             name="map_w4_2_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W4_2_IMAGE"
             description="TPL_MAP_W4_2_IMAGE_DESC"
          />   
@@ -2526,7 +2526,7 @@
             name="map_w4_3_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W4_3_IMAGE"
             description="TPL_MAP_W4_3_IMAGE_DESC"
          />  
@@ -2547,7 +2547,7 @@
             name="map_w4_4_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W4_4_IMAGE"
             description="TPL_MAP_W4_4_IMAGE_DESC"
          /> 
@@ -2567,7 +2567,7 @@
             name="map_w4_5_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W4_5_IMAGE"
             description="TPL_MAP_W4_5_IMAGE_DESC"
          />
@@ -2587,7 +2587,7 @@
             name="map_w4_6_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_W4_6_IMAGE"
             description="TPL_MAP_W4_6_IMAGE_DESC"
          /> 
@@ -2609,7 +2609,7 @@
             name="map_wh_1_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_1_IMAGE"
             description="TPL_MAP_W4_1_IMAGE_DESC"
          />
@@ -2629,7 +2629,7 @@
             name="map_wh_2_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_2_IMAGE"
             description="TPL_MAP_W4_2_IMAGE_DESC"
          />
@@ -2649,7 +2649,7 @@
             name="map_wh_3_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_3_IMAGE"
             description="TPL_MAP_W4_3_IMAGE_DESC"
          />
@@ -2669,7 +2669,7 @@
             name="map_wh_4_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_4_IMAGE"
             description="TPL_MAP_W4_4_IMAGE_DESC"
          />
@@ -2689,7 +2689,7 @@
             name="map_wh_5_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_5_IMAGE"
             description="TPL_MAP_W4_5_IMAGE_DESC"
          />
@@ -2709,7 +2709,7 @@
             name="map_wh_6_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_6_IMAGE"
             description="TPL_MAP_W4_6_IMAGE_DESC"
          />
@@ -2729,7 +2729,7 @@
             name="map_wh_7_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_7_IMAGE"
             description="TPL_MAP_W4_7_IMAGE_DESC"
          />
@@ -2749,7 +2749,7 @@
             name="map_wh_8_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_8_IMAGE"
             description="TPL_MAP_W4_8_IMAGE_DESC"
          />
@@ -2769,7 +2769,7 @@
             name="map_wh_9_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_9_IMAGE"
             description="TPL_MAP_W4_9_IMAGE_DESC"
          />
@@ -2790,7 +2790,7 @@
             name="map_wh_10_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_10_IMAGE"
             description="TPL_MAP_W4_10_IMAGE_DESC"
          />
@@ -2811,7 +2811,7 @@
             name="map_wh_11_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_11_IMAGE"
             description="TPL_MAP_W4_11_IMAGE_DESC"
          />
@@ -2831,7 +2831,7 @@
             name="map_wh_12_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_12_IMAGE"
             description="TPL_MAP_W4_12_IMAGE_DESC"
          />
@@ -2851,7 +2851,7 @@
             name="map_wh_13_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_13_IMAGE"
             description="TPL_MAP_W4_13_IMAGE_DESC"
          /> 
@@ -2871,7 +2871,7 @@
             name="map_wh_14_image" 
             type="media"
             preview="tooltip"
-            directory="map_images" 
+             
             label="TPL_MAP_WH_14_IMAGE"
             description="TPL_MAP_W4_14_IMAGE_DESC"
          />    
