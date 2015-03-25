@@ -323,7 +323,7 @@ if(count($extrafields)){
 		</form>
 	</div>
 
-<!-- NEWS, MUST ADD SUBCATEGORIES, NO! use PARENT ID -->
+<!-- NEWS -->
 
 <?php elseif ($catid == "8" || $catid == "22" || $parentid == "8" || $parentid == "22") : ?>
 
@@ -1126,6 +1126,9 @@ if(count($extrafields)){
 														"glyphicon glyphicon-calendar", $extrafields);
 													$extrafields = str_replace('<option value="1">Approved',
 													                           '<option value="1" disabled="disabled">Approved',
+													                           $extrafields);
+													$extrafields = str_replace('<option value="1" selected="selected">Approved',
+													                           '<option value="1" selected="selected" disabled="disabled">Approved',
 													                           $extrafields);
 													$extrafields = str_replace('<option value="2">Denied',
 													                           '<option value="2" disabled="disabled">Denied',
