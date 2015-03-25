@@ -87,7 +87,6 @@ var ImageManager = this.ImageManager = {
 
 		var url 	= this.frame.location.search.substring(1);
 		var args	= this.parseQuery(url);
-		console.log('folder: ' + args['folder']);
 		return args['folder'];
 	},
 
