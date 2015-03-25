@@ -108,6 +108,9 @@ if ($catid == 12) {
     $list_show_servicerequest_item = true;
     $list_show_servicerequest_approval = true;
     $list_show_servicerequest_tenant = true;
+    if ($isTenant) {
+        $isEditable = false;
+    }
 }
 
 if ($catid == 10) {
@@ -170,6 +173,8 @@ if ($access == 15 && !in_array(19, $user_groups)) {
     $this->params->set('show_no_articles', '0');
     $this->params->set('show_page_heading', '0');
 }
+
+
 
 // $this->params->set('show_page_heading', '0');
 // var_dump($this);
