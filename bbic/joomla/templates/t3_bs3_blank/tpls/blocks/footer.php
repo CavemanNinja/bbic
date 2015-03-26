@@ -73,18 +73,18 @@ defined('_JEXEC') or die;
 							<a class="mysitemap-entry" href="index.php?Itemid=167&option=com_search&lang=en">Search</a>
 					 	<?php else : ?>
 					 		<p class="mypartners-heading">خارطة الموقع</p>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/">الصفحة الرئيسية</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/2014-07-07-21-54-17">عن المركز</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/arapplications">تسجيل لمشروع الحاضنات</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/arapplications">تسجيل في مركز الاعمال</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/2014-09-13-21-21-58">الأخبار</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/artenants">شركات</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/argallery">المعرض</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/ardownloads">التنزيلات</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/map-ar">خريطة</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/2014-07-07-21-42-36">للإتصال بنا</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/component/users/?view=login">تسجيل دخول المستأجر</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/component/search/">البحث</a>
+							<a class="mysitemap-entry" href="index.php?lang=ar&Itemid=170">الصفحة الرئيسية</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=31&Itemid=177&lang=ar">عن المركز</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=140&Itemid=187&lang=ar">استمارة طلب مكتب</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=139&Itemid=186&lang=ar">استمارة طلب ورشة</a>
+							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=tabs&id=16&Itemid=229&lang=ar">الأخبار</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=9&Itemid=173&lang=ar">شركات</a>
+							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=gallery&id=1&Itemid=174&lang=ar">المعرض</a>
+							<a class="mysitemap-entry" href="index.php?option=com_docman&view=filteredlist&layout=table&Itemid=249&lang=ar">التنزيلات</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=217&Itemid=236&lang=ar">خريطة</a>
+							<a class="mysitemap-entry" href="index.php?option=com_contact&view=contact&id=4&Itemid=176&lang=ar">للإتصال بنا</a>
+							<a class="mysitemap-entry" href="index.php?option=com_users&view=login&lang=ar">تسجيل دخول المستأجر</a>
+							<a class="mysitemap-entry" href="index.php?Itemid=167&option=com_search&lang=ar">البحث</a>
 					 	<?php endif; ?>
 
 					</div>
