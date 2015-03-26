@@ -420,6 +420,13 @@ class TwoJToolBoxSliderTabs extends TwoJToolBoxPlugin{
 		$text_author = JText::sprintf('COM_CONTENT_WRITTEN_BY', ($item->created_by_alias ? $item->created_by_alias : $item->author) );
 		$text_hits = JText::sprintf('COM_CONTENT_ARTICLE_HITS', $item->hits);
 		
+		if (JFactory::getLanguage()->get('tag') == "en-GB") {
+			$item->link = 'index.php?lang=en&Itemid=227'
+		} else {
+			$item->link = 'index.php?lang=ar&Itemid=229'
+		}
+
+
 		$text_link = $item->link;
 	
 		if($item->readmore){
