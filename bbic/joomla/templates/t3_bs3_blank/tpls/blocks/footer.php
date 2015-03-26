@@ -59,18 +59,18 @@ defined('_JEXEC') or die;
 					<div class="col-md-9 mysitemap"/>
 						<?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
 							<p class="mypartners-heading">Site Map</p>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/">Home</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/about-us">About Us</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applications">Incubator Application</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/applications">Business Application</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/newstabs">News (All)</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/tenants">Tenants</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/gallery">Image Gallery</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/downloads">Download Centre</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/map">Map</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/contact-us">Contact Us</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/component/users/?view=login">User Login</a>
-							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/en/component/search/">Search</a>
+							<a class="mysitemap-entry" href="index.php?lang=en">Home</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=30&Itemid=179&lang=en">About Us</a>
+							<a class="mysitemap-entry" href="https://afternoon-falls-9745.herokuapp.com/bbic/joomla/index.php?option=com_content&view=category&layout=blog&id=43&Itemid=161&lang=en">Office Application</a>
+							<a class="mysitemap-entry" href="https://afternoon-falls-9745.herokuapp.com/bbic/joomla/index.php?option=com_content&view=category&layout=blog&id=44&Itemid=160&lang=en">Workshop Application</a>
+							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=tabs&id=15&Itemid=227&lang=en">News</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=9&Itemid=182&lang=en">Tenants</a>
+							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=gallery&id=1&Itemid=183&lang=en">Image Gallery</a>
+							<a class="mysitemap-entry" href="index.php?option=com_docman&view=filteredlist&layout=table&Itemid=248&lang=en">Download Centre</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=145&Itemid=211&lang=en">Map</a>
+							<a class="mysitemap-entry" href="index.php?option=com_contact&view=category&id=18&Itemid=242&lang=en">Contact Us</a>
+							<a class="mysitemap-entry" href="index.php?option=com_users&view=login&lang=en">User Login</a>
+							<a class="mysitemap-entry" href="index.php?Itemid=167&option=com_search&lang=en">Search</a>
 					 	<?php else : ?>
 					 		<p class="mypartners-heading">خارطة الموقع</p>
 							<a class="mysitemap-entry" href="<?php echo JURI::root();?>index.php/ar/">الصفحة الرئيسية</a>
