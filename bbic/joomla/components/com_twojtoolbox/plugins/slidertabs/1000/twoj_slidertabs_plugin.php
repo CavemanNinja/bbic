@@ -421,9 +421,9 @@ class TwoJToolBoxSliderTabs extends TwoJToolBoxPlugin{
 		$text_hits = JText::sprintf('COM_CONTENT_ARTICLE_HITS', $item->hits);
 		
 		if (JFactory::getLanguage()->get('tag') == "en-GB") {
-			$item->link = 'index.php?lang=en&Itemid=227'
+			$item->link = 'index.php?lang=en&Itemid=227';
 		} else {
-			$item->link = 'index.php?lang=ar&Itemid=229'
+			$item->link = 'index.php?lang=ar&Itemid=229';
 		}
 
 
