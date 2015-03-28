@@ -159,6 +159,8 @@ class plgContentBillrepeat extends JPlugin
                 }
 
                 $article->attribs = json_encode($attribs);
+                
+                $article->state = 1;
 
             }
             
@@ -171,7 +173,6 @@ class plgContentBillrepeat extends JPlugin
             }
         }
 
-        $article->state = 1;
 
         return true;
     }
