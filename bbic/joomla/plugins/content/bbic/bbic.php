@@ -5,7 +5,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.plugin.plugin');
 jimport('joomla.utilities.date');
 
-class plgContentBillrepeat extends JPlugin
+class plgContentBbic extends JPlugin
 {
     
     /**
