@@ -179,7 +179,8 @@ class plgContentBbic extends JPlugin
     
     function onContentAfterSave($context, $article, $isNew) {
         if(property_exists($article, 'catid') && property_exists($article, 'attribs')){
-            // JFactory::getApplication()->enqueueMessage("oncontentaftersave catid and attribs article detected");
+            JFactory::getApplication()->enqueueMessage('BBIC PLUGIN WORKING');
+            JFactory::getApplication()->enqueueMessage(JText::sprintf('BBIC_TEST_STRING'));
             // Get DB Object.
             $db = JFactory::getDbo();
             $catid = $article->catid;
