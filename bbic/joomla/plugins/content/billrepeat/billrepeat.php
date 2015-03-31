@@ -145,7 +145,7 @@ class plgContentBillrepeat extends JPlugin
                 $query = $db->getQuery(true);
                 $query->select($db->quoteName('attribs'));
                 $query->from($db->quoteName('#__content'));
-                $query->where($db->quoteName('id') . " = " . $service_id);
+                $query->where($db->quoteName('id') . " = " . $db->quoteName($service_id));
                 $db->setQuery($query);
                 $result = $db->loadResult();
                 $service_attribs = json_decode($result);
@@ -179,8 +179,8 @@ class plgContentBillrepeat extends JPlugin
     
     function onContentAfterSave($context, $article, $isNew) {
         if(property_exists($article, 'catid') && property_exists($article, 'attribs')){
-            JFactory::getApplication()->enqueueMessage('BBIC PLUGIN WORKING');
-            JFactory::getApplication()->enqueueMessage(JText::sprintf('BBIC_TEST_STRING'));
+            // JFactory::getApplication()->enqueueMessage('BBIC PLUGIN WORKING');
+            // JFactory::getApplication()->enqueueMessage(JText::sprintf('BBIC_TEST_STRING'));
             // Get DB Object.
             $db = JFactory::getDbo();
             $catid = $article->catid;
@@ -312,10 +312,10 @@ class plgContentBillrepeat extends JPlugin
                     
                     //Insert new article into database
                     if (!$jt_article->check()) {
-                        JError::raiseNotice(500, $jt_article->getError());
+                        // JError::raiseNotice(500, $jt_article->getError());
                     }
                     if (!$jt_article->store(TRUE)) {
-                        JError::raiseNotice(500, $jt_article->getError() . ", " . $jt_article->alias);
+                        // JError::raiseNotice(500, $jt_article->getError() . ", " . $jt_article->alias);
                     } else {
                       // JFactory::getApplication()->enqueueMessage("New Bill created.");  
                     }
@@ -392,14 +392,14 @@ class plgContentBillrepeat extends JPlugin
                             
                             //insert new article into database
                             if (!$jt_article->check()) {
-                                JError::raiseNotice(500, $jt_article->getError());
+                                // JError::raiseNotice(500, $jt_article->getError());
                                 
                                 // return FALSE;
                                 
                                 
                             }
                             if (!$jt_article->store(TRUE)) {
-                                JError::raiseNotice(500, $jt_article->getError());
+                                // JError::raiseNotice(500, $jt_article->getError());
                                 
                                 // return FALSE;
                                 
@@ -409,7 +409,7 @@ class plgContentBillrepeat extends JPlugin
                             $start_time = $start_time + $cycle;
                         }
                     } else {
-                        JError::raiseWarning(100, 'Warning: Unable to create repeated invoices, please check repeated billing information.');
+                        // JError::raiseWarning(100, 'Warning: Unable to create repeated invoices, please check repeated billing information.');
                     }
                 }
                 
@@ -578,7 +578,7 @@ class plgContentBillrepeat extends JPlugin
             
             $send = $mailer->Send();
             if ($send == true) {
-                JError::raiseNotice(500, $send->__toString());
+                // JError::raiseNotice(500, $send->__toString());
             } else {
                 echo "Mail Sent";
             }
