@@ -17,9 +17,7 @@ defined('_JEXEC') or die;
 
 		<!-- MAIN CONTENT -->
 		<div id="t3-content" class="t3-content col-xs-12 col-sm-8 col-md-6">
-			<?php if($this->hasMessage()) : ?>
-			<jdoc:include type="message" />
-			<?php endif ?>
+
 			<jdoc:include type="component" />
 		</div>
 		<!-- //MAIN CONTENT -->
