@@ -624,7 +624,7 @@ div.col-lg-9.col-md-9.col-sm-8.col-xs-12 {
 }*/
 
 
-.t3-copyright .myspacer {
+.t3-copyright, .myspacer {
   border: 0px;
   /*background: #666;*/
   /*background-image: url('../../../images/footer-background.png') !important;*/
