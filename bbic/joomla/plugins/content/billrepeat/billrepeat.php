@@ -145,7 +145,7 @@ class plgContentBillrepeat extends JPlugin
                 $query = $db->getQuery(true);
                 $query->select($db->quoteName('attribs'));
                 $query->from($db->quoteName('#__content'));
-                $query->where($db->quoteName('id') . " = " . $db->quoteName($service_id));
+                $query->where($db->quoteName('id') . " = " . $service_id);
                 $db->setQuery($query);
                 $result = $db->loadResult();
                 $service_attribs = json_decode($result);
