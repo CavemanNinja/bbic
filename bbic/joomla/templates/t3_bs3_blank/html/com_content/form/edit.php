@@ -55,15 +55,17 @@ $parentid = $parent->id;
 
 $authorized = false;
 $access = $this->menu->access;
-var_dump($access);
 $user_groups = JFactory::getUser()->groups;
+var_dump($catid);
+var_dump($parentid);
+var_dump($user_groups);
 
 // News
-if ($parentid == 8 || $parentid == 22 || $catid == 8 || $catid == 22 && !in_array(12, $user_groups)) {
+if (($parentid == 8 || $parentid == 22 || $catid == 8 || $catid == 22) && !in_array(12, $user_groups)) {
     $authorized = true;
 }
 // Company Profiles
-if ($parentid ==  9 || $catid == 9 && !in_array(13, $user_groups)) {
+if (($parentid ==  9 || $catid == 9 )&& !in_array(13, $user_groups)) {
 	$authorized = true;
 }
 // Billing
