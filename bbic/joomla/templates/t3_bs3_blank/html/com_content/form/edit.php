@@ -92,8 +92,8 @@ if ($catid == 29 && in_array(20, $user_groups)) {
 	$authorized = true;
 }
 
-print_r("authorized: ");
-var_dump($authorized);
+// print_r("authorized: ");
+// var_dump($authorized);
 
 /*BILLING*/
 if ($catid == "10") {
