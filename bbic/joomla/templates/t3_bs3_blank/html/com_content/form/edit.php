@@ -64,27 +64,27 @@ print_r("user_groups: ");
 var_dump($user_groups);
 
 // News
-if (($parentid == 8 || $parentid == 22 || $catid == 8 || $catid == 22) && !in_array(12, $user_groups)) {
+if (($parentid == 8 || $parentid == 22 || $catid == 8 || $catid == 22) && in_array(12, $user_groups)) {
     $authorized = true;
 }
 // Company Profiles
-if (($parentid ==  9 || $catid == 9 )&& !in_array(13, $user_groups)) {
+if (($parentid ==  9 || $catid == 9 )&& in_array(13, $user_groups)) {
 	$authorized = true;
 }
 // Billing
-if ($catid == 10 && !in_array(14, $user_groups)) {
+if ($catid == 10 && in_array(14, $user_groups)) {
 	$authurized = true;
 }
 // Service Requests
-if ($catid == 12 && !in_array(15, $user_groups)) {
+if ($catid == 12 && in_array(15, $user_groups)) {
 	$authorized = true;
 }
 // Services
-if ($catid == 19 && !in_array(19, $user_groups)) {
+if ($catid == 19 && in_array(19, $user_groups)) {
 	$authorized = true;
 }
 
-print_r("authorized");
+print_r("authorized: ");
 var_dump($authorized);
 
 /*BILLING*/
