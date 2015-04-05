@@ -56,8 +56,11 @@ $parentid = $parent->id;
 $authorized = false;
 $access = $this->menu->access;
 $user_groups = JFactory::getUser()->groups;
+print_r("catid: ");
 var_dump($catid);
+print_r("parentid: ");
 var_dump($parentid);
+print_r("user_groups: ");
 var_dump($user_groups);
 
 // News
