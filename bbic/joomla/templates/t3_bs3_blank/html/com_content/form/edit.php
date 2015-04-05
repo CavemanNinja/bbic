@@ -54,6 +54,8 @@ $parentid = $parent->id;
 */
 
 $authorized = false;
+$access = $this->menu->access;
+var_dump($access);
 $user_groups = JFactory::getUser()->groups;
 
 // News
