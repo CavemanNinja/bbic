@@ -68,7 +68,7 @@ if (($parentid == 8 || $parentid == 22 || $catid == 8 || $catid == 22) && in_arr
     $authorized = true;
 }
 // Company Profiles
-if (($parentid ==  9 || $catid == 9 )&& in_array(13, $user_groups)) {
+if (($parentid ==  9 || $catid == 9 )&& (in_array(13, $user_groups) || in_array(10, $user_groups) )) {
 	$authorized = true;
 }
 // Billing
