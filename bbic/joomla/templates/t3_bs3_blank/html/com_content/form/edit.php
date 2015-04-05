@@ -84,6 +84,8 @@ if ($catid == 19 && !in_array(19, $user_groups)) {
 	$authorized = true;
 }
 
+print_r("authorized");
+var_dump($authorized);
 
 /*BILLING*/
 if ($catid == "10") {
