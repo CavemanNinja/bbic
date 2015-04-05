@@ -54,35 +54,27 @@ $parentid = $parent->id;
 */
 
 $authorized = false;
-$access = $this->menu->access;
 $user_groups = JFactory::getUser()->groups;
 
-var_dump($access);
-
 // News
-if ($access == 7 && !in_array(12, $user_groups)) {
-    $this->params->set('show_no_articles', '0');
-    $this->params->set('show_page_heading', 0);
+if ($parentid == 8 || $parentid == 22 || $catid == 8 || $catid == 22 && !in_array(12, $user_groups)) {
+    $authorized = true;
 }
 // Company Profiles
-if ($access == 8 && !in_array(13, $user_groups)) {
-    $this->params->set('show_no_articles', '0');
-    $this->params->set('show_page_heading', 0);
+if ($parentid ==  9 || $catid == 9 && !in_array(13, $user_groups)) {
+	$authorized = true;
 }
 // Billing
-if ($access == 9 && !in_array(14, $user_groups)) {
-    $this->params->set('show_no_articles', '0');
-    $this->params->set('show_page_heading', 0);
+if ($catid == 10 && !in_array(14, $user_groups)) {
+	$authurized = true;
 }
 // Service Requests
-if ($access == 11 && !in_array(15, $user_groups)) {
-    $this->params->set('show_no_articles', '0');
-    $this->params->set('show_page_heading', 0);
+if ($catid == 12 && !in_array(15, $user_groups)) {
+	$authorized = true;
 }
 // Services
-if ($access == 15 && !in_array(19, $user_groups)) {
-    $this->params->set('show_no_articles', '0');
-    $this->params->set('show_page_heading', '0');
+if ($catid == 19 && !in_array(19, $user_groups)) {
+	$authorized = true;
 }
 
 
