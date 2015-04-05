@@ -80,11 +80,11 @@ if (($catid == 11 || $parentid == 11 || $catid == 17 || $parentid == 17 || $cati
 	$authorized = true;
 }
 // Service Requests
-if ($catid == 12 && in_array(15, $user_groups)) {
+if ($catid == 12 && (in_array(15, $user_groups) && || in_array(10, $user_groups)) ) {
 	$authorized = true;
 }
 // Services
-if ($catid == 19 && (in_array(19, $user_groups) || in_array(10, $user_groups) )) {
+if ($catid == 19 && in_array(19, $user_groups)) {
 	$authorized = true;
 }
 // Map
