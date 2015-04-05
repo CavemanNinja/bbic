@@ -76,7 +76,7 @@ if ($catid == 10 && in_array(14, $user_groups)) {
 	$authorized = true;
 }
 // Public Pages
-if (($catid == 11 || $parentid == 11) && in_array(11, $user_groups)) {
+if (($catid == 11 || $catid == 30 || $parentid == 11) && in_array(11, $user_groups)) {
 	$authorized = true;
 }
 // Service Requests
