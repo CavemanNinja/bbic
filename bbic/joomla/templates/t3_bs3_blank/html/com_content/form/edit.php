@@ -56,12 +56,12 @@ $parentid = $parent->id;
 $authorized = false;
 $access = $this->menu->access;
 $user_groups = JFactory::getUser()->groups;
-print_r("catid: ");
-var_dump($catid);
-print_r("parentid: ");
-var_dump($parentid);
-print_r("user_groups: ");
-var_dump($user_groups);
+// print_r("catid: ");
+// var_dump($catid);
+// print_r("parentid: ");
+// var_dump($parentid);
+// print_r("user_groups: ");
+// var_dump($user_groups);
 
 // News
 if (($parentid == 8 || $parentid == 22 || $catid == 8 || $catid == 22) && in_array(12, $user_groups)) {
@@ -2299,4 +2299,6 @@ if(count($extrafields)){
 			</form>
 		</div>
 	<?php endif; ?>
+<?php else: ?>
+	<div class="alert alert-danger" role="alert">You are not Authorized to access this resource.</div>
 <?php endif; ?>
