@@ -87,6 +87,10 @@ if ($catid == 12 && in_array(15, $user_groups)) {
 if ($catid == 19 && in_array(19, $user_groups)) {
 	$authorized = true;
 }
+// Map
+if ($catid == 29 && in_array(20, $user_groups)) {
+	$authorized = true;
+}
 
 print_r("authorized: ");
 var_dump($authorized);
@@ -787,24 +791,7 @@ if(count($extrafields)){
 
 			<form action="<?php echo JRoute::_('index.php?option=com_content&a_id='.(int) $this->item->id); ?>" role="form" method="post" name="adminForm" id="adminForm" class="form-validate">
 				<fieldset>
-				<div class="btn-toolbar">
-						<div class="btn-group force-no-margin">
-							<button type="button" class="btn btn-primary validate" onclick="Joomla.submitbutton('article.save')">
-								<span class="fa fa-ok"></span>&#160;<?php echo JText::_('J3_EDITOR_SERVICEREQUEST_SUBMIT') ?>
-							</button>
-						</div>
-						<div class="btn-group">
-							<button type="button" class="btn btn-default" onclick="Joomla.submitbutton('article.cancel')">
-								<span class="fa fa-cancel"></span>&#160;<?php echo JText::_('JCANCEL') ?>
-							</button>
-						</div>
-						<?php if ($params->get('save_history', 0)) : ?>
-						<div class="btn-group">
-							<?php echo $this->form->getInput('contenthistory'); ?>
-						</div>
-						<?php endif; ?>
-						<br/><br/>
-					</div>
+
 
 					 <input type="hidden" value="<?php echo $user->id ?>" id="usrid" />
 
