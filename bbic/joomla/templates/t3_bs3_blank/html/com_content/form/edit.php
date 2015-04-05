@@ -73,7 +73,7 @@ if (($parentid ==  9 || $catid == 9 )&& (in_array(13, $user_groups) || in_array(
 }
 // Billing
 if ($catid == 10 && in_array(14, $user_groups)) {
-	$authurized = true;
+	$authorized = true;
 }
 // Service Requests
 if ($catid == 12 && in_array(15, $user_groups)) {
