@@ -76,7 +76,7 @@ if ($catid == 10 && in_array(14, $user_groups)) {
 	$authorized = true;
 }
 // Public Pages
-if (($catid == 11 || $parentid == 11 || $catid == 17 || $parentid == 17) && in_array(11, $user_groups)) {
+if (($catid == 11 || $parentid == 11 || $catid == 17 || $parentid == 17 || $catid == 26 || $parentid == 26) && in_array(11, $user_groups)) {
 	$authorized = true;
 }
 // Service Requests
@@ -1892,7 +1892,7 @@ if(count($extrafields)){
 				</fieldset>
 			</form>
 		</div>
-	<?php elseif($catid == 11 || $parentid == 11 || $catid == 17 || $parentid == 17) : ?>
+	<?php elseif($catid == 11 || $parentid == 11 || $catid == 17 || $parentid == 17 || $catid == 26 || $parentid == 26) : ?>
 		<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
 			<?php if ($params->get('show_page_heading', 1)) : ?>
 			<div class="page-header">
