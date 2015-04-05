@@ -146,7 +146,7 @@ if(count($extrafields)){
 
 
 <!-- BILLING -->
-<?php if ($authorized) ?>
+<?php if ($authorized) : ?>
 
 	<?php if ($catid == 10) : ?>
 		<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
