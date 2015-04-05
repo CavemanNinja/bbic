@@ -84,7 +84,7 @@ if ($catid == 12 && in_array(15, $user_groups)) {
 	$authorized = true;
 }
 // Services
-if ($catid == 19 && in_array(19, $user_groups)) {
+if ($catid == 19 && (in_array(19, $user_groups) || in_array(10, $user_groups) )) {
 	$authorized = true;
 }
 // Map
@@ -778,7 +778,7 @@ if(count($extrafields)){
 	<!-- COMPANY PROFILES -->
 	<?php elseif ($catid == "9" || $parentid == "9"): ?>
 
-
+		<div class="alert alert-info" role="alert">So that you don't lose your work, we advise you to use your favorite text processor to write your Company Profile then copy and paste into the box below when you are ready</div>
 
 		<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
 			<?php if ($params->get('show_page_heading', 1)) : ?>
