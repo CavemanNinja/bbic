@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.1" type="plugin" group="content">
-        <name>plg_bbic</name>
+        <name>plg_billrepeat</name>
         <author>Jalal</author>
         <creationDate>June 2014</creationDate>
         <copyright>Copyright (C) 2014. All rights reserved.</copyright>

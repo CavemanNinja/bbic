@@ -841,25 +841,27 @@ if(count($extrafields)){
 													<?php elseif ($field->name == "jform[attribs][companyprofile_category]" && JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
 														<?php
 															$ar_cat_string = $field->input;
-															$ar_cat_string = str_replace("Advertising", "الإعلان", $ar_cat_string);
+															$ar_cat_string = str_replace("Advertising", "دعاية والإعلان", $ar_cat_string);
 															$ar_cat_string = str_replace("Cleaning", "التنظيف", $ar_cat_string);
-															$ar_cat_string = str_replace("Consulting", "الاستشارات", $ar_cat_string);
-															$ar_cat_string = str_replace("Contracting", "التعاقد", $ar_cat_string);
+															$ar_cat_string = str_replace("Consulting", "إستشارة", $ar_cat_string);
+															$ar_cat_string = str_replace("Contracting", "مقاولات", $ar_cat_string);
+															$ar_cat_string = str_replace("Delivery", "خدمات التوصيل", $ar_cat_string);
 															$ar_cat_string = str_replace("Design", "تصميم", $ar_cat_string);
-															$ar_cat_string = str_replace("Event Management", "إدارة الأحداث", $ar_cat_string);
-															$ar_cat_string = str_replace("Fabrication", "التصنيع", $ar_cat_string);
-															$ar_cat_string = str_replace("Food", "طعام", $ar_cat_string);
-															$ar_cat_string = str_replace("Furniture", "الأثاث", $ar_cat_string);
+															$ar_cat_string = str_replace("Event Management", "تنظيم المناسبات", $ar_cat_string);
+															$ar_cat_string = str_replace("Fabrication and Manufacturing", "إنتاج و تصنيع", $ar_cat_string);
+															$ar_cat_string = str_replace("Food and Drink", "مواد غذائية و مشروبات", $ar_cat_string);
+															$ar_cat_string = str_replace("Furniture", "أثاث", $ar_cat_string);
 															$ar_cat_string = str_replace("Industrial", "الصناعية", $ar_cat_string);
 															$ar_cat_string = str_replace("Landscaping", "المناظر الطبيعية", $ar_cat_string);
-															$ar_cat_string = str_replace("Marine", "البحرية", $ar_cat_string);
-															$ar_cat_string = str_replace("Media", "الإعلام", $ar_cat_string);
+															$ar_cat_string = str_replace("Maintenance and Repairs", "تصليح و صيانة", $ar_cat_string);
+															$ar_cat_string = str_replace("Marine Services", "خدمات بحرية", $ar_cat_string);
+															$ar_cat_string = str_replace("Media", "إعلام", $ar_cat_string);
 															$ar_cat_string = str_replace("Recreational", "الترفيهية", $ar_cat_string);
 															$ar_cat_string = str_replace("Retail", "التجارية‎", $ar_cat_string);
-															$ar_cat_string = str_replace("Society", "المجتمع", $ar_cat_string);
-															$ar_cat_string = str_replace("Technology", "التكنولوجيا", $ar_cat_string);
-															$ar_cat_string = str_replace("Trading", "التداول", $ar_cat_string);
-															$ar_cat_string = str_replace("Transportation", "النقل", $ar_cat_string);
+															$ar_cat_string = str_replace("Societies", "جمعيات", $ar_cat_string);
+															$ar_cat_string = str_replace("Technology", "تكنولوجيا", $ar_cat_string);
+															$ar_cat_string = str_replace("Trading", "البيع و الشراء", $ar_cat_string);
+															$ar_cat_string = str_replace("Transport", "خدمات النقل", $ar_cat_string);
 															echo $ar_cat_string;
 														?>
 													<?php else : ?>
