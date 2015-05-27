@@ -264,7 +264,7 @@ jimport('joomla.html.html.bootstrap');
 		<?php endif; ?>
 	</div>
 
-<?php elseif ($this->params->get("page_title") == "للإتصال بنا") : ?>
+<?php elseif ($this->params->get("page_title") == "تواصل معنا") : ?>
 	<div class="contact<?php echo $this->pageclass_sfx?>" itemscope itemtype="http://schema.org/Person">
 		<?php if ($this->params->get('show_page_heading')) : ?>
 			<h1>
