@@ -242,7 +242,7 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                         <?php echo JHtml::_('grid.sort', 'اسم الشركة', 'a.title', $listDirn, $listOrder); ?>
                                     <?php endif; ?>
                                 
-                                <?php elseif ($list_show_news_heading) :?>
+                                <?php elseif ($list_show_news_heading == true) :?>
                                     <th>
                                         <?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
                                             <?php echo JHtml::_('grid.sort', 'Title', 'a.title', $listDirn, $listOrder); ?>
