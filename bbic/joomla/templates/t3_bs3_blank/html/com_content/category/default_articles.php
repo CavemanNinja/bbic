@@ -243,13 +243,11 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                     <?php endif; ?>
                                 
                                 <?php elseif ($list_show_news_heading == true) :?>
-                                    <th>
-                                        <?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
-                                            <?php echo JHtml::_('grid.sort', 'Title', 'a.title', $listDirn, $listOrder); ?>
-                                        <?php else : ?>
-                                            <?php echo JHtml::_('grid.sort', 'عنوان المقال', 'a.title', $listDirn, $listOrder); ?>
-                                        <?php endif; ?>
-                                    </th>
+                                    <?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
+                                        <?php echo JHtml::_('grid.sort', 'Title', 'a.title', $listDirn, $listOrder); ?>
+                                    <?php else : ?>
+                                        <?php echo JHtml::_('grid.sort', 'عنوان المقال', 'a.title', $listDirn, $listOrder); ?>
+                                    <?php endif; ?>
                                 <?php else : ?>
                                     <?php echo JHtml::_('grid.sort', 'JGLOBAL_TITLE', 'a.title', $listDirn, $listOrder); ?>
                                 <?php endif; ?>
