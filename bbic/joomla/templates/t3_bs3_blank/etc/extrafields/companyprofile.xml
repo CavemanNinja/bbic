@@ -88,6 +88,15 @@
          </field>
 
          <field
+            name="companyprofile_graduated"
+            type="checkbox"
+            label="TPL_EXTRAFIELDS_COMPANYPROFILE_GRADUATED"
+            description="TPL_EXTRAFIELDS_COMPANYPROFILE_GRADUATED_DESC"
+            value="1"
+            default="0"
+         />
+
+         <field
             name="companyprofile_language"
             type="list"
             default="0"
