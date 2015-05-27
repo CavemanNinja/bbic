@@ -35,7 +35,7 @@ defined('_JEXEC') or die('Restricted accessd');
             </li>
             <?php
                 $cat_tags = XEFXpertGalleryHelper::getCatFilterList( $items, $params );
-                // var_dump($cat_tags);
+                var_dump($cat_tags);
                 if ($page_lang == "ar-AA") {
                     $cat_tags = str_replace("Advertising", "دعاية والإعلان", $cat_tags);
                     $cat_tags = str_replace("Cleaning", "التنظيف", $cat_tags);
