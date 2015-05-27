@@ -678,8 +678,6 @@ jimport('joomla.html.html.bootstrap');
 
 <?php elseif ($this->params->get("page_title") == "اقتراحات") : ?>
 
- <div> <p> sup dawg heard you like ikterahat</p></div>
-
 	<div class="contact<?php echo $this->pageclass_sfx?>" itemscope itemtype="http://schema.org/Person">
 		<?php if ($this->params->get('show_page_heading')) : ?>
 			<h1>
@@ -722,7 +720,7 @@ jimport('joomla.html.html.bootstrap');
 		<?php endif; ?>
 		
 		<?php if ($this->params->get('presentation_style') == 'sliders') : ?>
-			<div class="panel-group" id="slide-contact">
+<!-- 			<div class="panel-group" id="slide-contact">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
@@ -732,7 +730,7 @@ jimport('joomla.html.html.bootstrap');
 						</h4>
 					</div>
 					<div id="basic-details" class="panel-collapse collapse in">
-						<div class="panel-body">
+						<div class="panel-body"> -->
 		<?php endif; ?>
 		<?php if ($this->params->get('presentation_style') == 'tabs'):?>
 			<ul class="nav nav-tabs" id="myTab">
@@ -782,7 +780,7 @@ jimport('joomla.html.html.bootstrap');
 		<?php if ($this->params->get('show_email_form') && ($this->contact->email_to || $this->contact->user_id)) : ?>
 
 			<?php if ($this->params->get('presentation_style')=='sliders'):?>
-				<div class="panel panel-default">
+				<!-- <div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a class="accordion-toggle" data-toggle="collapse" data-parent="#slide-contact" href="#display-form">
@@ -791,7 +789,7 @@ jimport('joomla.html.html.bootstrap');
 						</h4>
 					</div>
 					<div id="display-form" class="panel-collapse collapse">
-						<div class="panel-body">
+						<div class="panel-body"> -->
 			<?php endif; ?>
 			<?php if ($this->params->get('presentation_style') == 'tabs') : ?>
 				<div id="display-form" class="tab-pane">
