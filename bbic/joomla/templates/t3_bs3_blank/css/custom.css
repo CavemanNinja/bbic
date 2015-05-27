@@ -1142,3 +1142,13 @@ ul.mod_docman_icons
   width: auto !important;
   height: auto !important;
 }
+
+.tx-gallery-item-in {
+  position: relative;
+}
+
+.tx-gallery-grad {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

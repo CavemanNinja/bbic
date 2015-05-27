@@ -95,6 +95,7 @@ defined('_JEXEC') or die('Restricted accessd');
                     $extrafields_attribs_json = $i->attribs;
                     $extrafields_attribs = json_decode($extrafields_attribs_json, true);
                     $item_lang = $extrafields_attribs["companyprofile_language"];
+                    $graduated = $extrafields_attribs["companyprofile_graduated"];
                     
                     if (($extrafields_attribs["companyprofile_approval"] == "1") &&
                         ( $item_lang == '0' || ($page_lang == "en-GB" && $item_lang == '1') || ($page_lang == "ar-AA" && $item_lang == '2') ))
@@ -103,6 +104,8 @@ defined('_JEXEC') or die('Restricted accessd');
                 <li class="<?php echo XEFXpertGalleryHelper::getCatNameAsClass( $i, $params ) ; ?>">
                     <div class="tx-gallery-item">
                         <div class="tx-gallery-item-in">
+
+                            <div class="tx-gallery-grad"><img src="/images/grad.png"></div>
 
                             <div class="tx-gallery-image">
                                 <!-- <a href="<?php echo $i->image; ?>"> -->
