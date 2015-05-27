@@ -80,12 +80,14 @@ $list_show_billing_repeating = false;
 $list_show_companyprofile_language = false;
 $list_show_companyprofile_title = false;
 $list_show_servicerequest_tenant = false;
+$list_show_news_heading = false;
 
 /*Must list news parent and all subcategories !use parent cat instead*/
 
 if ($catid == "8" ||  $catid == "14" ||  $catid == "15" ||
      $catid == "16" ||  $catid == "22" ||  $catid == "23" ||
       $catid == "24" || $catid == "25") {
+    $list_show_news_heading = true;
     $list_show_category_title = true;
     // var_dump($this);
 }
@@ -333,19 +335,20 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                             <?php endif; ?>
 
                             <!-- NEWS HEADINGS -->
-                            <?php if ($list_show_category_title) :?>
-                            <th id="categorylist_header_title" data-sorter="false">
 
+                            <?php if ($list_show_news_heading) :?>
                                 <?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
                                     <?php echo JHtml::_('grid.sort', 'Title', 'a.title', $listDirn, $listOrder); ?>
                                 <?php else : ?>
                                     <?php echo JHtml::_('grid.sort', 'عنوان المقال', 'a.title', $listDirn, $listOrder); ?>
-                                <?php endif; ?> 
-                            </th>
-                                <!-- <th id="categorylist_header_category_title">
+                                <?php endif; ?>
+                            <?php endif; ?> 
+
+                            <?php if ($list_show_category_title) :?>
+                                <th id="categorylist_header_category_title">
                                 <a href="#" onclick="return false;" class="hasTooltip" title="" data-original-title="<strong><?php echo JText::_('J3_LISTHEADING_CATEGORY'); ?></strong><br />Click to sort by this column"><?php echo JText::_('J3_LISTHEADING_CATEGORY'); ?></a>
 
-                                </th> -->
+                                </th>
                             <?php endif; ?>
 
                             <?php if ($isEditable) : ?>
