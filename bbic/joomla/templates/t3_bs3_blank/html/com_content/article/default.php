@@ -840,11 +840,17 @@ JHtml::_('bootstrap.tooltip');
 			<!-- <?php var_dump($attribs->get('map_building8_1')); ?> -->
 			<?php echo $this->item->text; ?>
 
+			<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
+				<div class="map-select-label">Search by company name</div>
+			<?php else : ?>
+				<div class="map-select-label">البحث بأسم الشركة</div>
+			<?php endif; ?>
+
 			<select id="map-select">
 				<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
-					<option value="0" disabled selected> -- اختر متجر تجاري -- </option>
+					<option value="0" disabled selected> -- أسم الشركة -- </option>
 				<?php else : ?>
-					<option value="0" disabled selected> -- Select a business name -- </option>
+					<option value="0" disabled selected> -- Company Name -- </option>
 				<?php endif; ?>
 				<?php 
 					if ($attribs->get('map_building8_1') != "") {
