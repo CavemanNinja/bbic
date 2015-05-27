@@ -841,10 +841,11 @@ JHtml::_('bootstrap.tooltip');
 			<?php echo $this->item->text; ?>
 
 			<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
-				<div class="map-select-label">Search by company name</div>
+				<div class="h4 map-select-label">البحث بأسم الشركة</div>
 			<?php else : ?>
-				<div class="map-select-label">البحث بأسم الشركة</div>
+				<div class="h4 map-select-label">Search by company name</div>
 			<?php endif; ?>
+			<br/>
 
 			<select id="map-select">
 				<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
