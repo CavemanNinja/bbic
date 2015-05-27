@@ -313,8 +313,8 @@ jimport('joomla.html.html.bootstrap');
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a class="accordion-toggle" data-toggle="collapse" data-parent="#slide-contact" href="#basic-details">
-							<!-- <?php echo JText::_('COM_CONTACT_DETAILS');?> -->
-							العنوان والهاتف
+							<?php echo JText::_('COM_CONTACT_DETAILS');?>
+							<!-- العنوان والهاتف -->
 							</a>
 						</h4>
 					</div>
@@ -373,8 +373,8 @@ jimport('joomla.html.html.bootstrap');
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a class="accordion-toggle" data-toggle="collapse" data-parent="#slide-contact" href="#display-form">
-							<!-- <?php echo JText::_('COM_CONTACT_EMAIL_FORM');?> -->
-							التواصل لابريد الإلكتروني
+							<?php echo JText::_('COM_CONTACT_EMAIL_FORM');?>
+							<!-- التواصل لابريد الإلكتروني -->
 							</a>
 						</h4>
 					</div>
