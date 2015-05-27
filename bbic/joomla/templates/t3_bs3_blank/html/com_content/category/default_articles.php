@@ -335,7 +335,7 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                             <?php endif; ?>
 
                             <!-- NEWS HEADINGS -->
-
+                            <th>
                             <?php if ($list_show_news_heading) :?>
                                 <?php if (JFactory::getLanguage()->get('tag') == "en-GB") : ?>
                                     <?php echo JHtml::_('grid.sort', 'Title', 'a.title', $listDirn, $listOrder); ?>
@@ -343,7 +343,7 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                     <?php echo JHtml::_('grid.sort', 'عنوان المقال', 'a.title', $listDirn, $listOrder); ?>
                                 <?php endif; ?>
                             <?php endif; ?> 
-
+                            </th>
                             <?php if ($list_show_category_title) :?>
                                 <th id="categorylist_header_category_title">
                                 <a href="#" onclick="return false;" class="hasTooltip" title="" data-original-title="<strong><?php echo JText::_('J3_LISTHEADING_CATEGORY'); ?></strong><br />Click to sort by this column"><?php echo JText::_('J3_LISTHEADING_CATEGORY'); ?></a>
