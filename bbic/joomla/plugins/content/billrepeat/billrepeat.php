@@ -113,6 +113,12 @@ class plgContentBillrepeat extends JPlugin
                     case 18: 
                         $article->catid = 60;
                         break;
+                    case 19: 
+                        $article->catid = 71;
+                        break;
+                    case 20: 
+                        $article->catid = 81;
+                        break;
                 }
             }
 

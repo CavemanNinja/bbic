@@ -466,6 +466,8 @@ if(count($extrafields)){
 									$selectcat = str_replace('<option value="63">- - - Event Management</option>', '', $selectcat);
 									$selectcat = str_replace('<option value="64">- - - Media</option>', '', $selectcat);
 									$selectcat = str_replace('<option value="65">- - - Design</option>', '', $selectcat);
+									$selectcat = str_replace('<option value="71">- - - Delivery</option>', '', $selectcat);
+									$selectcat = str_replace('<option value="81">- - - Maintenance and Repairs</option>', '', $selectcat);
 
 									echo $selectcat;
 
@@ -526,6 +528,8 @@ if(count($extrafields)){
 									$selectcat = str_replace('<option value="63">- - - Event Management</option>', '', $selectcat);
 									$selectcat = str_replace('<option value="64">- - - Media</option>', '', $selectcat);
 									$selectcat = str_replace('<option value="65">- - - Design</option>', '', $selectcat);
+									$selectcat = str_replace('<option value="71">- - - Delivery</option>', '', $selectcat);
+									$selectcat = str_replace('<option value="81">- - - Maintenance and Repairs</option>', '', $selectcat);
 
 									echo $selectcat;
 								}
@@ -1881,6 +1885,8 @@ if(count($extrafields)){
 				</fieldset>
 			</form>
 		</div>
+
+	<!-- Public Pages -->
 	<?php elseif($catid == 11 || $parentid == 11 || $catid == 17 || $parentid == 17 || $catid == 26 || $parentid == 26) : ?>
 		<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
 			<?php if ($params->get('show_page_heading', 1)) : ?>
@@ -1992,6 +1998,8 @@ if(count($extrafields)){
 									$selectcat = str_replace('<option value="63">- - - Event Management</option>', '', $selectcat);
 									$selectcat = str_replace('<option value="64">- - - Media</option>', '', $selectcat);
 									$selectcat = str_replace('<option value="65">- - - Design</option>', '', $selectcat);
+									$selectcat = str_replace('<option value="71">- - - Delivery</option>', '', $selectcat);
+									$selectcat = str_replace('<option value="81">- - - Maintenance and Repairs</option>', '', $selectcat);									
 
 									echo $selectcat;
 
@@ -2052,6 +2060,8 @@ if(count($extrafields)){
 									$selectcat = str_replace('<option value="63">- - - Event Management</option>', '', $selectcat);
 									$selectcat = str_replace('<option value="64">- - - Media</option>', '', $selectcat);
 									$selectcat = str_replace('<option value="65">- - - Design</option>', '', $selectcat);
+									$selectcat = str_replace('<option value="71">- - - Delivery</option>', '', $selectcat);
+									$selectcat = str_replace('<option value="81">- - - Maintenance and Repairs</option>', '', $selectcat);									
 
 									echo $selectcat;
 								}
