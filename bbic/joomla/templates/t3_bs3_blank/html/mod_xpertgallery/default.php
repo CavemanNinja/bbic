@@ -105,7 +105,7 @@ defined('_JEXEC') or die('Restricted accessd');
                     <div class="tx-gallery-item">
                         <div class="tx-gallery-item-in">
 
-                            <div class="tx-gallery-grad"><img src="<?php echo JRoute::_('/images/grad.png'); ?>"></div>
+                            <div class="tx-gallery-grad"><img src="images/grad.png"></div>
 
                             <div class="tx-gallery-image">
                                 <!-- <a href="<?php echo $i->image; ?>"> -->
