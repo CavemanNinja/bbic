@@ -17,7 +17,7 @@ defined('_JEXEC') or die('Restricted accessd');
     <?php if ($page_lang == "en-GB") : ?>
         <h1>Tenants</h1>
     <?php else : ?>
-        <h1>الشركات</h1>
+        <h1>المستأجرين</h1>
     <?php endif; ?>
 </div>
 <!--ThemeXpert: Xpert Gallery module 2.2 Start here-->
