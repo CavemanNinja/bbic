@@ -720,7 +720,7 @@ jimport('joomla.html.html.bootstrap');
 		<?php endif; ?>
 		
 		<?php if ($this->params->get('presentation_style') == 'sliders') : ?>
-<!-- 			<div class="panel-group" id="slide-contact">
+			<div class="panel-group" id="slide-contact">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
@@ -730,7 +730,7 @@ jimport('joomla.html.html.bootstrap');
 						</h4>
 					</div>
 					<div id="basic-details" class="panel-collapse collapse in">
-						<div class="panel-body"> -->
+						<div class="panel-body">
 		<?php endif; ?>
 		<?php if ($this->params->get('presentation_style') == 'tabs'):?>
 			<ul class="nav nav-tabs" id="myTab">
@@ -745,7 +745,7 @@ jimport('joomla.html.html.bootstrap');
 				<div id="basic-details" class="tab-pane active">
 		<?php endif; ?>
 		<?php if ($this->params->get('presentation_style') == 'plain') : ?>
-			<?php  echo '<h3>'. JText::_('COM_CONTACT_DETAILS').'</h3>';  ?>
+			
 		<?php endif; ?>
 		
 		<?php if ($this->contact->image && $this->params->get('show_image')) : ?>
@@ -780,7 +780,7 @@ jimport('joomla.html.html.bootstrap');
 		<?php if ($this->params->get('show_email_form') && ($this->contact->email_to || $this->contact->user_id)) : ?>
 
 			<?php if ($this->params->get('presentation_style')=='sliders'):?>
-				<!-- <div class="panel panel-default">
+				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
 							<a class="accordion-toggle" data-toggle="collapse" data-parent="#slide-contact" href="#display-form">
@@ -789,13 +789,13 @@ jimport('joomla.html.html.bootstrap');
 						</h4>
 					</div>
 					<div id="display-form" class="panel-collapse collapse">
-						<div class="panel-body"> -->
+						<div class="panel-body">
 			<?php endif; ?>
 			<?php if ($this->params->get('presentation_style') == 'tabs') : ?>
 				<div id="display-form" class="tab-pane">
 			<?php endif; ?>
 			<?php if ($this->params->get('presentation_style')=='plain'):?>
-				<?php  echo '<h3>'. JText::_('COM_CONTACT_EMAIL_FORM').'</h3>';  ?>
+
 			<?php endif; ?>
 			<?php  echo $this->loadTemplate('form');  ?>
 			<?php if ($this->params->get('presentation_style')=='sliders'):?>
