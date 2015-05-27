@@ -104,9 +104,11 @@ defined('_JEXEC') or die('Restricted accessd');
                 <li class="<?php echo XEFXpertGalleryHelper::getCatNameAsClass( $i, $params ) ; ?>">
                     <div class="tx-gallery-item">
                         <div class="tx-gallery-item-in">
-
-                            <div class="tx-gallery-grad"><img src="images/grad.png"></div>
-
+                            
+                            <?php if ($graduated == 1) : ?>
+                                <div class="tx-gallery-grad"><img src="images/grad.png"></div>
+                            <?php endif; ?>
+                            
                             <div class="tx-gallery-image">
                                 <!-- <a href="<?php echo $i->image; ?>"> -->
                                     <img class="img-thumbnail" src="<?php echo $extrafields_attribs['companyprofile_logo'];?>" alt="<?php echo $i->title?>">
