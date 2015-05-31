@@ -131,3 +131,7 @@ div.st_tabs > div > ul > li.twoj_tab_block_li > a:hover {
 	box-sizing: border-box;
 }
 
+div.st_tabs_wrap {
+	background-color: #f6f6f6 !important;
+	
+}
