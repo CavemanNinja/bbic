@@ -29,11 +29,11 @@ defined('_JEXEC') or die;
 					<p class="mypartners-heading">Our Partners</p>
 					<div class="row">
 						<div class="col-md-6">
-							<a href="http://www.bdb-bh.com/"><img class="img-responsive partners-images" src="images/partners/bdb-logo-clear.png" alt=""/></a>
+							<a href="http://www.bdb-bh.com/" target="_blank"><img class="img-responsive partners-images" src="images/partners/bdb-logo-clear.png" alt=""/></a>
 							<p>BDB commenced its operations on January 20, 1992 as the country's leading Development Financial Institution. The Government has entrusted the Bank with a crucial task of promoting investments in the Kingdom of Bahrain.</p>
 						</div>
 						<div class="col-md-6">
-							<a href="http://www.lf.bh/en/"><img class="img-responsive partners-images" src="images/partners/tamkeen-logo-clear.png" alt="" /></a>
+							<a href="http://www.lf.bh/en/" target="_blank"><img class="img-responsive partners-images" src="images/partners/tamkeen-logo-clear.png" alt="" /></a>
 							<p>Tamkeen was established in August 2006 as part of Bahrain’s national reform initiatives and Bahrain Economic Vision 2030, and is tasked with supporting Bahrain’s private sector and positioning it as the key driver of economic development.</p>
 						</div>
 					</div>
@@ -47,7 +47,7 @@ defined('_JEXEC') or die;
 							<p>يعتبر بنك البحرين للتنمية مؤسسة مالية وتنموية متخصصة في تمويل وتنمية المؤسسات الصغيرة والمتوسطة في مملكة البحرين. وقد بدأ البنك عملياته في شهر يناير 1992، حيث عهدت إليه الحكومة الرشيدة عملية تمويل المؤسسات الصغيرة والمتوسطة وتشجيع الاستثمار في هذا القطاع الحيوي، وذلك بهدف المساهمة في عملية التنمية الاقتصادية والاجتماعية وتوفير فرص عمل جديدة للبحرينيين وزيادة نسبة الصادرات البحرينية وغيرها.</p>
 						</div>
 						<div class="col-md-6">
-							<a href="http://www.lf.bh/en/"><img class="img-responsive partners-images" src="images/partners/tamkeen-logo-clear.png" alt="" /></a>
+							<a href="http://www.lf.bh/en/" target="_blank"><img class="img-responsive partners-images" src="images/partners/tamkeen-logo-clear.png" alt="" /></a>
 							<p>تعتبر تمكين جهة شبه مستقلة تتمتع بقدر من الاستقلال تقوم بوضع وصياغة الخطط الإستراتيجية وخطط العمل لاستغلال الرسوم التي تقوم بجمعها هيئة تنظيم سوق العمل من أجل تحقيق الرفاهية الشاملة للبحرين عن طريق الاستثمار في تحسين قدرات التوظيف للمواطنين البحرينيين وخلق وتوفير الوظائف وتقديم الدعم الاجتماعي.</p>
 						</div>
 					</div>
