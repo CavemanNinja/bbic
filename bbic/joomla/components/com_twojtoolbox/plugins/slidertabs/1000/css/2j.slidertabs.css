@@ -133,6 +133,6 @@ div.st_tabs > div > ul > li > a {
 
 div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
 	background-color: #efefef !important;
-	color: #555 !important;
-	font-weight: 600 !important;
+	color: #444 !important;
+	/*font-weight: 600 !important;*/
 }
