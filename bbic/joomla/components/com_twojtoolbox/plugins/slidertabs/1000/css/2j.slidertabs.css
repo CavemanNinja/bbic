@@ -109,7 +109,7 @@ div.twoj_slidertabs_wrap {
 }
 
 
-#Mod108 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap {
+#Mod108 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs_wrap {
 	background-color: #0277BD !important;
 }
 
@@ -132,5 +132,6 @@ div.st_tabs > div > ul > li > a {
 }
 
 div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
+	background-color: #f1f1f1 !important;
 	color: #01579b !important;
 }
