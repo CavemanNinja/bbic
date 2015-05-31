@@ -132,6 +132,6 @@ div.st_tabs > div > ul > li > a {
 }
 
 div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
-	background-color: #f1f1f1 !important;
+	background-color: #efefef !important;
 	color: #01579b !important;
 }
