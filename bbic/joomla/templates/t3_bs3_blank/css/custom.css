@@ -1154,12 +1154,12 @@ ul.mod_docman_icons
   z-index: 100;
 }
 
-div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_first.st_li_active {
+div.st_tabs ul.st_tabs_ul li.twoj_tab_block_li.st_li_active {
    background-color: #01579b !important;
    color: #fff !important; 
 }
 
-div.st_tabs > div > ul > li.twoj_tab_block_li {
+div.st_tabs ul.st_tabs_ul li.twoj_tab_block_li {
   background-color: #f6f6f6 !important;
   color: #666 !important;
 }
