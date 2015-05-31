@@ -43,7 +43,7 @@ defined('_JEXEC') or die;
 					<p class="mypartners-heading">شركاؤنا</p>
 					<div class="row">
 						<div class="col-md-6">
-							<a href="http://www.bdb-bh.com/"><img class="img-responsive partners-images" src="images/partners/bdb-logo-clear.png" alt=""/></a>
+							<a href="http://www.bdb-bh.com/" target="_blank"><img class="img-responsive partners-images" src="images/partners/bdb-logo-clear.png" alt=""/></a>
 							<p>يعتبر بنك البحرين للتنمية مؤسسة مالية وتنموية متخصصة في تمويل وتنمية المؤسسات الصغيرة والمتوسطة في مملكة البحرين. وقد بدأ البنك عملياته في شهر يناير 1992، حيث عهدت إليه الحكومة الرشيدة عملية تمويل المؤسسات الصغيرة والمتوسطة وتشجيع الاستثمار في هذا القطاع الحيوي، وذلك بهدف المساهمة في عملية التنمية الاقتصادية والاجتماعية وتوفير فرص عمل جديدة للبحرينيين وزيادة نسبة الصادرات البحرينية وغيرها.</p>
 						</div>
 						<div class="col-md-6">
