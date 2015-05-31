@@ -5,10 +5,10 @@ RewriteEngine On
 RewriteCond %{REQUEST_METHOD} !^(GET|POST|HEAD)
 RewriteRule .* - [F]
 
-RewriteCond %{HTTP:X-Forwarded-Proto} !https 
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} !(www.bdb-bh.com)
-RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https 
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP_HOST} !(www.bdb-bh.com)
+#RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 Header always unset X-Powered-By
 ServerSignature Off
