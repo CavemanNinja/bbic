@@ -585,13 +585,16 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                               $billing_repeat = $attribs->get('billing_repeat');
                                               switch ($billing_repeat) {
                                                   case '0':
-                                                      echo "No";
+                                                      if ($list_show_billing_arabic) echo "لا"
+                                                      else echo "No";
                                                       break;
                                                   case '1':
-                                                      echo "Yes";
+                                                      if ($list_show_billing_arabic) echo "نعم"
+                                                      else echo "Yes";
                                                       break;
                                                   default:
-                                                      echo "No";
+                                                      if ($list_show_billing_arabic) echo "لا"
+                                                      else echo "No";
                                                       break;
                                               };
                                           ?>
