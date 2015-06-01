@@ -847,20 +847,7 @@ if(count($extrafields)){
 												</div>
 												<div class="controls">
 													<?php if ($field->name == "jform[attribs][companyprofile_approval]") : ?>
-														<?php 
-															$approvalstring = $field->input;
-
-															if ($isTenant) {
-																$approvalstring = str_replace('<option value="1">Approved</option>', '<option value="1" disabled="disabled" >Approved</option>', $approvalstring); 
-															}
-
-															if (JFactory::getLanguage()->get('tag') == "ar-AA") {
-																$approvalstring = str_replace('Pending', 'بإنتظر الموفقة', $approvalstring)
-																$approvalstring = str_replace('Approved', 'موافق', $approvalstring)
-															}
-
-															echo $approvalstring;
-														?>
+													
 													<?php elseif ($field->name == "jform[attribs][companyprofile_category]" && JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
 														<?php
 															$ar_cat_string = $field->input;
