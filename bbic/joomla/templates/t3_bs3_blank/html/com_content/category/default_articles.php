@@ -81,6 +81,7 @@ $list_show_companyprofile_language = false;
 $list_show_companyprofile_title = false;
 $list_show_servicerequest_tenant = false;
 $list_show_news_heading = false;
+$list_show_service_arabic_name = false;
 
 /*Must list news parent and all subcategories !use parent cat instead*/
 
@@ -106,6 +107,7 @@ if ($catid == 12 || 10) {
     $this->params->set("list_show_hits", "0");
 }
 
+//Service Requests
 if ($catid == 12) {
     $list_show_servicerequest_item = true;
     $list_show_servicerequest_approval = true;
@@ -113,12 +115,18 @@ if ($catid == 12) {
 
 }
 
+//Billing
 if ($catid == 10) {
     $list_show_billing_name = !$restrictView;
     $list_show_billing_status = true;
     $list_show_billing_price = true;
     $list_show_billing_type = true;
     $list_show_billing_repeating = true;
+}
+
+//Services 
+if ($catid == 19 && JFactory::getLanguage()->get('tag') == "ar-AA") {
+    $list_show_service_arabic_name = true;
 }
 
 // var_dump($this);
@@ -181,6 +189,8 @@ if ($access == 15 && !in_array(19, $user_groups)) {
     $this->params->set('show_no_articles', '0');
     $this->params->set('show_page_heading', '0');
 }
+
+
 
 
 
@@ -394,7 +404,11 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                 <td headers="categorylist_header_title" class="list-title">
                                     <?php if (in_array($article->access, $this->user->getAuthorisedViewLevels())) : ?>
                                         <a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid)); ?>">
-                                            <?php echo $this->escape($article->title); ?>
+                                            <?php if ($list_show_service_arabic_name): ?>
+                                                <?php echo $attribs->get('service_arabic_name'); ?>
+                                            <?php else : ?>
+                                                <?php echo $this->escape($article->title); ?>
+                                            <?php endif; ?>
                                         </a>
                                     <?php else: ?>
                                         <?php
