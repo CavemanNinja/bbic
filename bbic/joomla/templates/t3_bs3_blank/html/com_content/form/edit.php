@@ -549,19 +549,22 @@ if(count($extrafields)){
 										'<option value="en-GB">English</option>',
 										'<option selected value="en-GB">English</option>',
 										$selectlang);
-									echo $selectlang;
 
+									echo $selectlang;
 
 								} else {
 									$selectlang = $this->form->getInput('language');
+									
 									$selectlang = str_replace(
 										'<option value="ar-AA">عربي</option>',
 										'<option selected value="ar-AA">عربي</option>',
 										$selectlang);
+
 									$selectlang = str_replace(
 										'<option value="en-GB">English</option>',
 										'<option value="en-GB">الإنجليزية</option>',
 										$selectlang);
+									
 									echo $selectlang;
 								}
 							?>
@@ -843,7 +846,7 @@ if(count($extrafields)){
 													<?php echo $field->label; ?>
 												</div>
 												<div class="controls">
-													<?php if ($field->name == "jform[attribs][companyprofile_approval]" && $isTenant) : ?>
+													<?php if ($field->name == "jform[attribs][companyprofile_approval]") : ?>
 														<?php 
 															$approvalstring = $field->input;
 
