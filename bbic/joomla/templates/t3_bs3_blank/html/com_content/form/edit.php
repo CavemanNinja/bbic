@@ -850,13 +850,13 @@ if(count($extrafields)){
 														<?php 
 															$approvalstring = $field->input;
 
-															// if ($isTenant) {
-															// 	$approvalstring = str_replace('<option value="1">Approved</option>', '<option value="1" disabled="disabled" >Approved</option>', $approvalstring); 
-															// }
+															if ($isTenant) {
+																$approvalstring = str_replace('<option value="1">Approved</option>', '<option value="1" disabled="disabled" >Approved</option>', $approvalstring); 
+															}
 
 															if (JFactory::getLanguage()->get('tag') == "ar-AA") {
-																$approvalstring = str_replace('Pending', 'بإنتظر الموفقة', $approvalstring)
-																$approvalstring = str_replace('Approved', 'موافق', $approvalstring)
+																$approvalstring = str_replace('Pending', 'بإنتظر الموفقة', $approvalstring);
+																$approvalstring = str_replace('Approved', 'موافق', $approvalstring);
 															}
 
 															echo $approvalstring;
