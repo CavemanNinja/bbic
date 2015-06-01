@@ -389,13 +389,26 @@ JHtml::_('bootstrap.tooltip');
 		<?php endif; ?>
 		
 		<?php echo "<div class='ef_servicerequest_approval'><span class='ef-label'>". JText::_('TPL_EXTRAFIELDS_SERVICEREQUEST_APPROVAL') .": </span>" ?>
-		<?php if ($attribs->get('servicerequest_approval') == "1") : ?>
-			<?php echo "Approved" ?>
-		<?php elseif ($attribs->get('servicerequest_approval') == "2") : ?>
-			<?php echo "Denied" ?>
-		<?php else : ?>
-			<?php echo "Pending" ?>
-		<?php endif; ?>
+			<?php 
+				switch($attribs->get('servicerequest_approval')) {
+					case 0:
+						if (JFactory::getLanguage()->get('tag') == "ar-AA") echo "بإنتظر الموفقة";
+						else echo "Pending";
+						break;
+					case 1:
+						if (JFactory::getLanguage()->get('tag') == "ar-AA") echo "موافق";
+						else echo 'Approved';
+						break;
+					case 2:
+						if (JFactory::getLanguage()->get('tag') == "ar-AA") echo "رفض";
+						echo 'Denied';
+						break;
+					default:
+						if (JFactory::getLanguage()->get('tag') == "ar-AA") echo "";
+						else echo "Pending";
+						break;
+				}
+			?>
 		<?php echo "</div>" ?>
 
 	  <!-- footer -->
