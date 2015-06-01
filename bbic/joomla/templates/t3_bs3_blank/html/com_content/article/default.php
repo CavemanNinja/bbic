@@ -461,6 +461,160 @@ JHtml::_('bootstrap.tooltip');
 	<?php echo $this->item->event->afterDisplayContent; ?>
 	</div>
 
+<!-- SERVICE -->
+<?php elseif ($catid == "19") : ?>
+
+<article itemscope itemtype="http://schema.org/Article">
+	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
+
+	<?php if ($params->get('show_title')) : ?>
+		<?php echo JLayoutHelper::render('joomla.content.item_title', array('item' => $this->item, 'params' => $params, 'title-tag'=>'h1')); ?>
+	<?php endif; ?>
+
+	<!-- Aside -->
+	<?php if ($topInfo || $icons) : ?>
+	<aside class="article-aside clearfix">
+	  <?php if ($topInfo): ?>
+	  <?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
+	  <?php endif; ?>
+	  
+	  <?php if ($icons): ?>
+	  <?php echo JLayoutHelper::render('joomla.content.icons', array('item' => $this->item, 'params' => $params, 'print' => $this->print)); ?>
+	  <?php endif; ?>
+	</aside>  
+	<?php endif; ?>
+	<!-- //Aside -->
+
+
+	<?php if (isset ($this->item->toc)) : ?>
+		<?php echo $this->item->toc; ?>
+	<?php endif; ?>
+
+	<?php if ($params->get('show_tags', 1) && !empty($this->item->tags)) : ?>
+		<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
+	<?php endif; ?>
+
+	<?php if (!$params->get('show_intro')) : ?>
+		<?php echo $this->item->event->afterDisplayTitle; ?>
+	<?php endif; ?>
+
+	<?php echo $this->item->event->beforeDisplayContent; ?>
+
+	<?php if (isset($urls) && ((!empty($urls->urls_position) && ($urls->urls_position == '0')) || ($params->get('urls_position') == '0' && empty($urls->urls_position))) || (empty($urls->urls_position) && (!$params->get('urls_position')))): ?>
+		<?php echo $this->loadTemplate('links'); ?>
+	<?php endif; ?>
+
+	<?php	if ($params->get('access-view')): ?>
+
+		<?php echo JLayoutHelper::render('joomla.content.fulltext_image', array('item' => $this->item, 'params' => $params)); ?>
+
+		<?php	if (!empty($this->item->pagination) AND $this->item->pagination AND !$this->item->paginationposition AND !$this->item->paginationrelative):
+			echo $this->item->pagination;
+		endif; ?>
+
+		<section class="article-content clearfix" itemprop="articleBody">
+			<?php echo $this->item->text; ?>
+		</section>
+
+		<!-- EXTRA FIELDS CONTENT -->
+
+		<h2>Service Details</h2>
+
+		<?php if ($attribs->get('servicerequest_date')) : ?>
+ 			<?php echo "<div class='ef_servicerequest_date'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_SERVICEREQUEST_DATE').": </span>" ?>
+ 			<span class="item-state state-<?php echo $attribs->get('servicerequest_date') ?>">
+ 				<?php echo $attribs->get('servicerequest_date') ?>
+ 			</span>
+ 			<?php echo "</div>" ?>
+ 		<?php endif ?>
+		
+ 		<?php if ($this->item->author) : ?>
+			<?php echo "<div class='ef_servicerequest_tenant'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_SERVICEREQUEST_TENANT').": </span>" ?>
+			<?php echo $this->item->author; ?>
+			<?php echo "</div>" ?>
+		<?php endif; ?>
+
+		<?php if ($attribs->get('service_name')) : ?>
+			<?php echo "<div class='ef_servicerequest_item'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_SERVICE_NAME').": </span>" ?>
+			<?php echo $attribs->get('service_name'); ?>
+			<?php echo "</div>" ?>
+		<?php endif; ?>
+
+		<?php if ($attribs->get('service_arabic_name')) : ?>
+			<?php echo "<div class='ef_servicerequest_item'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_SERVICE_ARABIC_NAME').": </span>" ?>
+			<?php echo $attribs->get('service_arabic_name'); ?>
+			<?php echo "</div>" ?>
+		<?php endif; ?>
+
+		<?php if ($attribs->get('service_price')) : ?>
+			<?php echo "<div class='ef_servicerequest_item'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_SERVICE_PRICE').": </span>" ?>
+			<?php echo $attribs->get('service_price'); ?>
+			<?php echo "</div>" ?>
+		<?php endif; ?>
+		
+	  <!-- footer -->
+	  <?php if ($botInfo) : ?>
+	  <footer class="article-footer clearfix">
+	    <?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
+	  </footer>
+	  <?php endif; ?>
+	  <!-- //footer -->
+
+		<?php
+		if (false): ?>
+			<?php
+			echo '<hr class="divider-vertical" />';
+			echo $this->item->pagination;
+			?>
+		<?php endif; ?>
+
+		<?php if (isset($urls) && ((!empty($urls->urls_position) && ($urls->urls_position == '1')) || ($params->get('urls_position') == '1'))): ?>
+			<?php echo $this->loadTemplate('links'); ?>
+		<?php endif; ?>
+
+		<?php //optional teaser intro text for guests ?>
+	<?php elseif ($params->get('show_noauth') == true and  $user->get('guest')) : ?>
+
+		<?php echo $this->item->introtext; ?>
+		<?php //Optional link to let them register to see the whole article. ?>
+		<?php if ($params->get('show_readmore') && $this->item->fulltext != null) :
+			$link1 = JRoute::_('index.php?option=com_users&view=login');
+			$link = new JURI($link1);
+			?>
+			<section class="readmore">
+				<a href="<?php echo $link; ?>" itemprop="url">
+							<span>
+							<?php $attribs = json_decode($this->item->attribs); ?>
+							<?php
+							if ($attribs->alternative_readmore == null) :
+								echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
+							elseif ($readmore = $this->item->alternative_readmore) :
+								echo $readmore;
+								if ($params->get('show_readmore_title', 0) != 0) :
+									echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+								endif;
+							elseif ($params->get('show_readmore_title', 0) == 0) :
+								echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+							else :
+								echo JText::_('COM_CONTENT_READ_MORE');
+								echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+							endif; ?>
+							</span>
+				</a>
+			</section>
+		<?php endif; ?>
+	<?php endif; ?>
+
+	</article>
+	<!-- //Article -->
+
+	<?php if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative): ?>
+		<?php echo $this->item->pagination; ?>
+	<?php endif; ?>
+
+	<?php echo $this->item->event->afterDisplayContent; ?>
+	</div>
+
 <!-- PUBLIC PAGES -->
 <?php elseif ($catid == "11" || $catid == "17") : ?>
 <article itemscope itemtype="http://schema.org/Article">
