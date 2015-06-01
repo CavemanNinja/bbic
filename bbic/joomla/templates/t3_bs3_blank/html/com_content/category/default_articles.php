@@ -82,6 +82,7 @@ $list_show_companyprofile_title = false;
 $list_show_servicerequest_tenant = false;
 $list_show_news_heading = false;
 $list_show_service_arabic_name = false;
+$list_show_servicerequest_arabic_name = false;
 
 /*Must list news parent and all subcategories !use parent cat instead*/
 
@@ -113,6 +114,9 @@ if ($catid == 12) {
     $list_show_servicerequest_approval = true;
     $list_show_servicerequest_tenant = true;
 
+    if (JFactory::getLanguage()->get('tag') == "ar-AA") {
+        $list_show_servicerequest_arabic_name = true;
+    }
 }
 
 //Billing
@@ -475,7 +479,11 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                   <?php endif; ?>
                                   <?php if ($list_show_servicerequest_item) :?>
                                       <td headers="categorylist_header_servicerequest_item" class="list-servicerequest-item">
-                                        <?php echo $attribs->get('service_name'); ?>
+                                            <?php if ($list_show_servicerequest_arabic_name) : ?>
+                                                <?php echo $attribs->get('service_arabic_name'); ?>
+                                            <?php else : ?>
+                                                <?php echo $attribs->get('service_name'); ?>
+                                            <?php endif; ?>
                                       </td>
                                   <?php endif; ?>
                                   <?php if ($list_show_servicerequest_approval) :?>

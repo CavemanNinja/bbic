@@ -158,6 +158,7 @@ class plgContentBillrepeat extends JPlugin
                 
                 $attribs->service_price = $service_attribs->service_price;
                 $attribs->service_name = $service_attribs->service_name;
+                $attribs->service_arabic_name = $service_attribs->service_arabic_name;
 
                 //If service date is not set, set to current date.
                 if ($attribs->servicerequest_date == "") {
