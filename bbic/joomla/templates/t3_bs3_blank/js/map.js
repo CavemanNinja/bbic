@@ -6,7 +6,7 @@ jQuery(function(){
 	jQuery('.campus-map-popover').popover({
 		animation: false,
 		trigger: 'hover'
-	})
+	});
 	jQuery('#map-select').change(function(){
 		building = this.value.split('_');
 		drillDown(building[0]);
@@ -44,18 +44,23 @@ function drillDown(building) {
 	switch(building) {
 		case 'building8':
 			jQuery('.map-label > h2').text("Building 8");
+			jQuery('.floor-label').hide();
 			break;
 		case 'a1':
 			jQuery('.map-label > h2').text("Lot A");
+			jQuery('.floor-label').hide();
 			break;
 		case 'a2':
 			jQuery('.map-label > h2').text("Lot A");
+			jQuery('.floor-label').hide();
 			break;
 		case 'a3':
 			jQuery('.map-label > h2').text("Lot A");
+			jQuery('.floor-label').hide();
 			break;
 		case 'b1':
 			jQuery('.map-label > h2').text("Lot B");
+			jQuery('.floor-label').hide();
 			break;
 		case 'b2':
 			jQuery('.map-label > h2').text("Lot B");
@@ -65,15 +70,19 @@ function drillDown(building) {
 			break;
 		case 'c1':
 			jQuery('.map-label > h2').text("Lot C");
+			jQuery('.floor-label').hide();			
 			break;
 		case 'c2':
 			jQuery('.map-label > h2').text("Lot C");
+			jQuery('.floor-label').hide();
 			break;
 		case 'c3':
 			jQuery('.map-label > h2').text("Lot C");
+			jQuery('.floor-label').hide();
 			break;
 		case 'wh':
 			jQuery('.map-label > h2').text("Warehouses");
+			jQuery('.floor-label').hide();			
 			break;
 		case 'bdb':
 			jQuery('.map-label > h2').text("Building W2");
@@ -93,9 +102,11 @@ function drillDown(building) {
 			break;
 		case 'w4':
 			jQuery('.map-label > h2').text("Building W4");
+			jQuery('.floor-label').hide();
 			break;
 		case 'w3':
 			jQuery('.map-label > h2').text("Building W3");
+			jQuery('.floor-label').hide();
 			break;
 	}
 	jQuery("#back-button").show();

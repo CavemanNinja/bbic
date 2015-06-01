@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-style"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
 				"cat",
 				"cat_tags"
 			],
@@ -184,10 +192,6 @@
 				"lota_1"
 			],
 			[
-				"font",
-				"font-size"
-			],
-			[
 				"map",
 				"map-assets"
 			],
@@ -206,10 +210,6 @@
 			[
 				"paddin",
 				"padding"
-			],
-			[
-				"text",
-				"text-align"
 			],
 			[
 				"in",
@@ -279,7 +279,7 @@
 			"file": "joomla/templates/t3_bs3_blank/css/custom.css",
 			"settings":
 			{
-				"buffer_size": 22177,
+				"buffer_size": 22429,
 				"line_ending": "Windows"
 			}
 		},
@@ -292,10 +292,18 @@
 			}
 		},
 		{
-			"file": "joomla/templates/t3_bs3_blank/html/mod_xpertgallery/default.php",
+			"file": "joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
 			"settings":
 			{
-				"buffer_size": 9544,
+				"buffer_size": 6704,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css/2j.slidertabs.css",
+			"settings":
+			{
+				"buffer_size": 3254,
 				"line_ending": "Unix"
 			}
 		}
@@ -355,20 +363,18 @@
 	[
 		"/home/cavemanninja/workspace/bbic/bbic",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/models",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/administrator/components/com_twojtoolbox",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/cache",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_2jslidertabs",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_2jtabs",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs/1000",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views/twojtoolbox",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views/twojtoolbox/tmpl",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/language",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/plugins/content",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/plugins/content/billrepeat",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/etc/extrafields",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_blankcomponent/default",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_contact",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_contact/category",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact",
@@ -376,11 +382,19 @@
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/article",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/category",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks"
 	],
 	"file_history":
 	[
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/configuration.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css/2j.slidertabs.css",
+		"/home/cavemanninja/workspace/bbic/.htaccess",
+		"/home/cavemanninja/workspace/bbic/bbic/scratch.ini",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/index.php",
+		"/home/cavemanninja/workspace/bbic/bbic/index.html",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery/default.php",
+		"/home/cavemanninja/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.sys.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
@@ -394,12 +408,10 @@
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.mod_articles_latest.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.mod_articles_latest.sys.ini",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery/default.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views/twojtoolbox/view.html.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views/twojtoolbox/tmpl/default.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views/twojtoolbox/tmpl/default_raw.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_contact/category/default_items.php",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/plugins/content/billrepeat/billrepeat.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/etc/extrafields/companyprofile.xml",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
@@ -408,7 +420,6 @@
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery/helper.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.sys.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/en-GB/en-GB.tpl_t3_bs3_blank.ini",
-		"/home/cavemanninja/workspace/bbic/.htaccess",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/plugins/content/billrepeat/billrepeat.xml",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody/two-sidebar.php",
@@ -502,13 +513,7 @@
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/spotlight-1.php",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/newsList.js",
 		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody-content-right.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainnav.php",
-		"/C/wamp/www/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/2j.style4.tabs.css",
-		"/C/wamp/www/bbic/joomla/components/com_twojtoolbox/plugins/tabs/1804/css/2j.style3.tabs.css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/com_blankcomponent/default/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_login/default.php",
-		"/C/wamp/www/bbic/joomla/plugins/system/t3/base-bs3/html/mod_login/default.php",
-		"/C/wamp/www/bbic/joomla/modules/mod_login/tmpl/default.php"
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainnav.php"
 	],
 	"find":
 	{
@@ -527,6 +532,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"01579b",
+			"st_tabs_wrap",
+			"fff",
+			"01579b",
+			"div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {",
 			"إدارة الفواتير",
 			"العنوان",
 			"آخر الأخبار",
@@ -649,12 +659,7 @@
 			"toClass",
 			"campus_",
 			"campus",
-			"campus_building8",
-			"></i>",
-			"popver",
-			"class=\"building8",
-			"type",
-			"background-image"
+			"campus_building8"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -744,7 +749,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -753,7 +758,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 22177,
+						"buffer_size": 22429,
 						"regions":
 						{
 							"gutter_color_10124":
@@ -3239,6 +3244,123 @@
 								],
 								"scope": "gutter_color"
 							},
+							"gutter_color_22241":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#01579b.png",
+								"regions":
+								[
+									[
+										22241,
+										22281
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_22252":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#01579b.png",
+								"regions":
+								[
+									[
+										22253,
+										22293
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_22281":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#01579b.png",
+								"regions":
+								[
+									[
+										22241,
+										22281
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_22282":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										22282,
+										22309
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_22322":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										22282,
+										22309
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_22362":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f6f6f6.png",
+								"regions":
+								[
+									[
+										22362,
+										22401
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_22372":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f6f6f6.png",
+								"regions":
+								[
+									[
+										22374,
+										22413
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_22402":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666.png",
+								"regions":
+								[
+									[
+										22402,
+										22427
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_22452":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666.png",
+								"regions":
+								[
+									[
+										22402,
+										22427
+									]
+								],
+								"scope": "gutter_color"
+							},
 							"gutter_color_2313":
 							{
 								"flags": 144,
@@ -3763,8 +3885,8 @@
 						"selection":
 						[
 							[
-								22177,
-								22177
+								19441,
+								19441
 							]
 						],
 						"settings":
@@ -3774,10 +3896,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 17919.0,
+						"translation.y": 15189.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -3793,13 +3915,41 @@
 						"selection":
 						[
 							[
-								296,
-								296
+								45,
+								45
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6704,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -3811,30 +3961,224 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "joomla/templates/t3_bs3_blank/html/mod_xpertgallery/default.php",
+					"buffer": 3,
+					"file": "joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css/2j.slidertabs.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9544,
+						"buffer_size": 3254,
 						"regions":
 						{
+							"gutter_color_1506":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ffffff.png",
+								"regions":
+								[
+									[
+										1506,
+										1540
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1541":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f7f7f7.png",
+								"regions":
+								[
+									[
+										1541,
+										1572
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1767":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#ffffff.png",
+								"regions":
+								[
+									[
+										1767,
+										1805
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1962":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f7f7f7.png",
+								"regions":
+								[
+									[
+										1962,
+										1996
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1997":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666666.png",
+								"regions":
+								[
+									[
+										1997,
+										2037
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2068":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666666.png",
+								"regions":
+								[
+									[
+										2068,
+										2111
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2493":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#01579b.png",
+								"regions":
+								[
+									[
+										2493,
+										2531
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2551":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f6f6f6.png",
+								"regions":
+								[
+									[
+										2551,
+										2589
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2721":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#01579b.png",
+								"regions":
+								[
+									[
+										2721,
+										2759
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2760":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#fff.png",
+								"regions":
+								[
+									[
+										2760,
+										2784
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_2947":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#0277BD.png",
+								"regions":
+								[
+									[
+										2947,
+										2985
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3023":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666.png",
+								"regions":
+								[
+									[
+										3023,
+										3047
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3048":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f6f6f6.png",
+								"regions":
+								[
+									[
+										3048,
+										3086
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3155":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#efefef.png",
+								"regions":
+								[
+									[
+										3155,
+										3193
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_3194":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#444.png",
+								"regions":
+								[
+									[
+										3194,
+										3218
+									]
+								],
+								"scope": "gutter_color"
+							}
 						},
 						"selection":
 						[
 							[
-								3041,
-								3041
+								3206,
+								3206
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 240.0,
+						"translation.y": 1403.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
