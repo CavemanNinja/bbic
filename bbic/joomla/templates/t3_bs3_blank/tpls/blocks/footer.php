@@ -61,12 +61,12 @@ defined('_JEXEC') or die;
 							<p class="mypartners-heading">Site Map</p>
 							<a class="mysitemap-entry" href="index.php?lang=en">Home</a>
 							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=30&Itemid=179&lang=en">About Us</a>
-							<a class="mysitemap-entry" href="https://afternoon-falls-9745.herokuapp.com/bbic/joomla/index.php?option=com_content&view=category&layout=blog&id=43&Itemid=161&lang=en">Office Application</a>
-							<a class="mysitemap-entry" href="https://afternoon-falls-9745.herokuapp.com/bbic/joomla/index.php?option=com_content&view=category&layout=blog&id=44&Itemid=160&lang=en">Workshop Application</a>
+							<a class="mysitemap-entry" href="https://afternoon-falls-9745.herokuapp.com/bbic/joomla/index.php?option=com_content&view=category&layout=blog&id=43&Itemid=161&lang=en">Apply for Office</a>
+							<a class="mysitemap-entry" href="https://afternoon-falls-9745.herokuapp.com/bbic/joomla/index.php?option=com_content&view=category&layout=blog&id=44&Itemid=160&lang=en">Apply for Workshop</a>
 							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=tabs&id=15&Itemid=227&lang=en">News</a>
 							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=9&Itemid=182&lang=en">Tenants</a>
-							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=gallery&id=1&Itemid=183&lang=en">Image Gallery</a>
-							<a class="mysitemap-entry" href="index.php?option=com_docman&view=filteredlist&layout=table&Itemid=248&lang=en">Download Centre</a>
+							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=gallery&id=1&Itemid=183&lang=en">Gallery</a>
+							<a class="mysitemap-entry" href="index.php?option=com_docman&view=filteredlist&layout=table&Itemid=248&lang=en">Downloads</a>
 							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=145&Itemid=211&lang=en">Map</a>
 							<a class="mysitemap-entry" href="index.php?option=com_contact&view=category&id=18&Itemid=242&lang=en">Contact Us</a>
 							<a class="mysitemap-entry" href="index.php?option=com_users&view=login&lang=en">User Login</a>
@@ -75,15 +75,15 @@ defined('_JEXEC') or die;
 					 		<p class="mypartners-heading">خارطة الموقع</p>
 							<a class="mysitemap-entry" href="index.php?lang=ar&Itemid=170">الصفحة الرئيسية</a>
 							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=31&Itemid=177&lang=ar">عن المركز</a>
-							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=140&Itemid=187&lang=ar">استمارة طلب مكتب</a>
-							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=139&Itemid=186&lang=ar">استمارة طلب ورشة</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=140&Itemid=187&lang=ar">تقديم الطلب لمكتب</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=139&Itemid=186&lang=ar">تقديم طلب لورشة</a>
 							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=tabs&id=16&Itemid=229&lang=ar">الأخبار</a>
-							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=9&Itemid=173&lang=ar">شركات</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=category&layout=blog&id=9&Itemid=173&lang=ar">المستأجرين</a>
 							<a class="mysitemap-entry" href="index.php?option=com_twojtoolbox&view=twojtoolbox&type=gallery&id=1&Itemid=174&lang=ar">المعرض</a>
+							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=217&Itemid=236&lang=ar">خارطة المركز</a>
 							<a class="mysitemap-entry" href="index.php?option=com_docman&view=filteredlist&layout=table&Itemid=249&lang=ar">التنزيلات</a>
-							<a class="mysitemap-entry" href="index.php?option=com_content&view=article&id=217&Itemid=236&lang=ar">خريطة</a>
-							<a class="mysitemap-entry" href="index.php?option=com_contact&view=contact&id=4&Itemid=176&lang=ar">للإتصال بنا</a>
-							<a class="mysitemap-entry" href="index.php?option=com_users&view=login&lang=ar">تسجيل دخول المستأجر</a>
+							<a class="mysitemap-entry" href="index.php?option=com_contact&view=contact&id=4&Itemid=176&lang=ar">تواصل معنا</a>
+							<a class="mysitemap-entry" href="index.php?option=com_users&view=login&lang=ar">دخول المستخدم</a>
 							<a class="mysitemap-entry" href="index.php?Itemid=167&option=com_search&lang=ar">البحث</a>
 					 	<?php endif; ?>
 
