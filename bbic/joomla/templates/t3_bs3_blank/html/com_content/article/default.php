@@ -378,7 +378,11 @@ JHtml::_('bootstrap.tooltip');
 
 		<?php if ($attribs->get('service_name')) : ?>
 			<?php echo "<div class='ef_servicerequest_item'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_SERVICE_NAME').": </span>" ?>
-			<?php echo $attribs->get('service_name'); ?>
+			
+			<?php 
+				if (JFactory::getLanguage()->get('tag') == "ar-AA") echo $attribs->get('service_arabic_name');
+				else echo $attribs->get('service_name'); 
+			?>
 			<?php echo "</div>" ?>
 		<?php endif; ?>
 
@@ -404,7 +408,7 @@ JHtml::_('bootstrap.tooltip');
 						echo 'Denied';
 						break;
 					default:
-						if (JFactory::getLanguage()->get('tag') == "ar-AA") echo "";
+						if (JFactory::getLanguage()->get('tag') == "ar-AA") echo "بإنتظر الموفقة";
 						else echo "Pending";
 						break;
 				}
