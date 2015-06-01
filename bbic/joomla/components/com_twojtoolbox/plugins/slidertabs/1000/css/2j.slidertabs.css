@@ -136,3 +136,16 @@ div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
 	color: #444 !important;
 	/*font-weight: 600 !important;*/
 }
+
+#Mod131 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > .st_tabs_wrap {
+	background-color: #01579b !important;
+}
+
+#Mod131 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > div > ul > li > a {
+	background-color: #01579b !important;
+	color: #fff !important;
+}
+
+#Mod131 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
+	background-color: #0277BD !important;
+}
