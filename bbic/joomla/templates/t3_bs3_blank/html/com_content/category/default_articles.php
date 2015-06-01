@@ -84,6 +84,7 @@ $list_show_news_heading = false;
 $list_show_service_arabic_name = false;
 $list_show_servicerequest_arabic_name = false;
 $list_show_companyprofile_arabic = false;
+$list_show_billing_arabic = false;
 
 /*Must list news parent and all subcategories !use parent cat instead*/
 
@@ -130,6 +131,10 @@ if ($catid == 10) {
     $list_show_billing_price = true;
     $list_show_billing_type = true;
     $list_show_billing_repeating = true;
+
+    if (JFactory::getLanguage()->get('tag') == "ar-AA") {
+        $list_show_billing_arabic = true;
+    }
 }
 
 //Services 
@@ -599,19 +604,24 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                               $billing_status = $attribs->get('billing_status');
                                               switch ($billing_status) {
                                                   case '0':
-                                                      echo "Unpaid";
+                                                      if ($list_show_billing_arabic) echo "غير مدفوع"
+                                                      else echo "Unpaid";
                                                       break;
                                                   case '1':
-                                                      echo "Paid";
+                                                      if ($list_show_billing_arabic) echo "مدفوع";
+                                                      else echo "Paid";
                                                       break;
                                                   case '2':
-                                                      echo "Paid";
+                                                      if ($list_show_billing_arabic) echo "مدفوع";
+                                                      else echo "Paid";
                                                       break;
                                                   case '3':
-                                                      echo "Paid";
+                                                      if ($list_show_billing_arabic) echo "مدفوع";
+                                                      else echo "Paid";
                                                       break;
                                                   case '4':
-                                                      echo "Paid";
+                                                      if ($list_show_billing_arabic) echo "مدفوع";
+                                                      else echo "Paid";
                                                       break;
 
                                                   default:
