@@ -847,19 +847,20 @@ if(count($extrafields)){
 												</div>
 												<div class="controls">
 													<?php if ($field->name == "jform[attribs][companyprofile_approval]") : ?>
-														<?php $approvalstring = $field->input; ?>
+														<?php 
+															$approvalstring = $field->input;
 
-															<?php if ($isTenant) : ?> 
-																<?php $approvalstring = str_replace('<option value="1">Approved</option>', '<option value="1" disabled="disabled" >Approved</option>', $approvalstring); ?>
-															<?php endif; ?>
+															// if ($isTenant) {
+															// 	$approvalstring = str_replace('<option value="1">Approved</option>', '<option value="1" disabled="disabled" >Approved</option>', $approvalstring); 
+															// }
 
-															<?php if (JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
-																<?php $approvalstring = str_replace('Pending', 'بإنتظر الموفقة', $approvalstring)
-																$approvalstring = str_replace('Approved', 'موافق', $approvalstring) ?>
-															<?php endif; ?>
+															if (JFactory::getLanguage()->get('tag') == "ar-AA") {
+																$approvalstring = str_replace('Pending', 'بإنتظر الموفقة', $approvalstring)
+																$approvalstring = str_replace('Approved', 'موافق', $approvalstring)
+															}
 
-															<?php echo $approvalstring; ?>
-														
+															echo $approvalstring;
+														?>
 													<?php elseif ($field->name == "jform[attribs][companyprofile_category]" && JFactory::getLanguage()->get('tag') == "ar-AA") : ?>
 														<?php
 															$ar_cat_string = $field->input;
