@@ -83,6 +83,7 @@ $list_show_servicerequest_tenant = false;
 $list_show_news_heading = false;
 $list_show_service_arabic_name = false;
 $list_show_servicerequest_arabic_name = false;
+$list_show_companyprofile_arabic = false;
 
 /*Must list news parent and all subcategories !use parent cat instead*/
 
@@ -99,6 +100,9 @@ if ($catid == 9 || $parentid == 9) {
     $list_show_companyprofile_approval = true;
     $list_show_companyprofile_language = true;
     $list_show_companyprofile_title = true;
+    if (JFactory::getLanguage()->get('tag') == "ar-AA") {
+        $list_show_companyprofile_arabic = true;
+    }
 }
 
 //IF CATEGORY IS SERVICE REQUEST OR BILL
@@ -519,10 +523,12 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                           $companyprofile_approval = $attribs->get('companyprofile_approval');
                                           switch ($companyprofile_approval) {
                                               case '0':
-                                                  echo "Pending";
+                                                  if ($list_show_companyprofile_arabic) echo "بإنتظر الموفقة";
+                                                  else echo "Pending";
                                                   break;
                                               case '1':
-                                                  echo "Approved";
+                                                  if ($list_show_companyprofile_arabic) echo "موافق";
+                                                  else echo "Approved";
                                                   break;
                                               default:
                                                   break;
