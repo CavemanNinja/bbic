@@ -542,13 +542,16 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                           $companyprofile_language = $attribs->get('companyprofile_language');
                                           switch ($companyprofile_language) {
                                               case '0':
-                                                  echo "Both";
+                                                    if ($list_show_companyprofile_arabic) echo "الجميع";
+                                                    else echo "Both";
                                                   break;
                                               case '1':
-                                                  echo "English Only";
+                                                  if ($list_show_companyprofile_arabic) echo "فقط الإنجليزية";
+                                                  else echo "English Only";
                                                   break;
                                               case '2':
-                                                  echo "Arabic Only";
+                                                  if ($list_show_companyprofile_arabic) echo "فقط العربية";
+                                                  else echo "Arabic Only";
                                                   break;
                                               default:
                                                   break;
