@@ -558,6 +558,10 @@ if(count($extrafields)){
 										'<option value="ar-AA">عربي</option>',
 										'<option selected value="ar-AA">عربي</option>',
 										$selectlang);
+									$seelctlang = str_replace(
+										'<option value="en-GB">English</option>'
+										'<option value="en-GB">الإنجليزية</option>'
+										$selectlang);
 									echo $selectlang;
 								}
 							?>
