@@ -16,6 +16,13 @@
          />
 
          <field
+            name="service_arabic_name"
+            type="text"
+            label="TPL_EXTRAFIELDS_SERVICE_ARABIC_NAME"
+            description="TPL_EXTRAFIELDS_SERVICE_ARABIC_NAME_DESC"
+         />
+
+         <field
                name="service_description"
                type="textarea"
                rows="16"
