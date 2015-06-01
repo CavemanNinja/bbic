@@ -477,32 +477,37 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                         <?php echo $article->author; ?>
                                       </td>
                                   <?php endif; ?>
+                                  
                                   <?php if ($list_show_servicerequest_item) :?>
                                       <td headers="categorylist_header_servicerequest_item" class="list-servicerequest-item">
+                                  
                                             <?php if ($list_show_servicerequest_arabic_name) : ?>
                                                 <?php echo $attribs->get('service_arabic_name'); ?>
                                             <?php else : ?>
                                                 <?php echo $attribs->get('service_name'); ?>
                                             <?php endif; ?>
+                                  
                                       </td>
                                   <?php endif; ?>
+                                  
                                   <?php if ($list_show_servicerequest_approval) :?>
                                   <td headers="categorylist_header_servicerequest_approval" class="list-servicerequest-approval">
                                       <?php
                                           $servicerequest_approval = $attribs->get('servicerequest_approval');
                                           switch ($servicerequest_approval) {
                                               case '0':
-                                                  echo "Pending";
+                                                  if ($list_show_servicerequest_arabic_name) echo "بإنتظر الموفقة";
+                                                  else echo "Pending";
                                                   break;
                                               case '1':
-                                                  echo "Approved";
+                                                  if ($list_show_servicerequest_arabic_name) echo "موافق";
+                                                  else echo "Approved";
                                                   break;
                                               case '2':
-                                                  echo "Denied";
+                                                  if ($list_show_servicerequest_arabic_name) echo "رفض";
+                                                  else echo "Denied";
                                                   break;
-
                                               default:
-
                                                   break;
                                           };
                                       ?>
