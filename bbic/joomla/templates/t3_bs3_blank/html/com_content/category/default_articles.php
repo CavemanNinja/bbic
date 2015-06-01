@@ -585,15 +585,15 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                               $billing_repeat = $attribs->get('billing_repeat');
                                               switch ($billing_repeat) {
                                                   case '0':
-                                                      if ($list_show_billing_arabic) echo "لا"
+                                                      if ($list_show_billing_arabic) echo "لا";
                                                       else echo "No";
                                                       break;
                                                   case '1':
-                                                      if ($list_show_billing_arabic) echo "نعم"
+                                                      if ($list_show_billing_arabic) echo "نعم";
                                                       else echo "Yes";
                                                       break;
                                                   default:
-                                                      if ($list_show_billing_arabic) echo "لا"
+                                                      if ($list_show_billing_arabic) echo "لا";
                                                       else echo "No";
                                                       break;
                                               };
@@ -607,7 +607,7 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                               $billing_status = $attribs->get('billing_status');
                                               switch ($billing_status) {
                                                   case '0':
-                                                      if ($list_show_billing_arabic) echo "غير مدفوع"
+                                                      if ($list_show_billing_arabic) echo "غير مدفوع";
                                                       else echo "Unpaid";
                                                       break;
                                                   case '1':
