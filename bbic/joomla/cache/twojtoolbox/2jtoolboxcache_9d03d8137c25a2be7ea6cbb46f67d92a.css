@@ -109,22 +109,47 @@ div.twoj_slidertabs_wrap {
 
 }
 
+
+#Mod108 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > .st_tabs_wrap {
+	background-color: #01579b !important;
+}
+
+.st_tabs_wrap {
+	background-color: #f6f6f6 !important;
+}
+
+#Mod108 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > div > ul > li > a {
+	background-color: #01579b !important;
+	color: #fff !important;
+}
+
+#Mod108 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
+	background-color: #0277BD !important;
+}
+
 div.st_tabs > div > ul > li > a {
-	color: #01579b !important;
-	background-color: #fff !important;
+	color: #666 !important;
+	background-color: #f6f6f6 !important;
 }
 
 div.st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
-	border-bottom: 1px solid #01579b !important;
-	box-sizing: border-box !important;
+	background-color: #efefef !important;
+	color: #444 !important;
+	/*font-weight: 600 !important;*/
 }
 
-div.st_tabs > div > ul > li.twoj_tab_block_li > a:hover {
- 	border-bottom: 1px solid #999;
-	box-sizing: border-box;
+#Mod131 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > .st_tabs_wrap {
+	background-color: #01579b !important;
 }
 
-/*!
+#Mod131 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > div > ul > li > a {
+	background-color: #01579b !important;
+	color: #fff !important;
+}
+
+#Mod131 > .module-inner > .module-ct > .moduletable > .twoj_slidertabs_wrap > .twoj_slidertabs > .st_tabs > div > ul > li.twoj_tab_block_li.st_li_active > a {
+	background-color: #0277BD !important;
+}/*!
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
  *  ------------------------------------------------------------------------------
