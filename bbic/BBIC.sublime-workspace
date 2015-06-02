@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"service_",
+				"servicerequest_approval"
+			],
+			[
+				"list_show_companyprofile_a",
+				"list_show_companyprofile_arabic"
+			],
+			[
+				"list_show_compe",
+				"$list_show_companyprofile_arabic〔variable〕"
+			],
+			[
+				"list_show_com",
+				"$list_show_companyprofile_arabic〔variable〕"
+			],
+			[
+				"list_show_se",
+				"$list_show_servicerequest_arabic_name〔variable〕"
+			],
+			[
+				"list_show_servicereq",
+				"list_show_servicerequest_arabic_name"
+			],
+			[
 				"font",
 				"font-style"
 			],
@@ -279,8 +303,56 @@
 			"file": "joomla/templates/t3_bs3_blank/css/custom.css",
 			"settings":
 			{
-				"buffer_size": 22429,
+				"buffer_size": 22438,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/templates/t3_bs3_blank/etc/extrafields/service.xml",
+			"settings":
+			{
+				"buffer_size": 1230,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+			"settings":
+			{
+				"buffer_size": 38883,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
+			"settings":
+			{
+				"buffer_size": 91082,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
+			"settings":
+			{
+				"buffer_size": 90803,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "joomla/plugins/content/billrepeat/billrepeat.php",
+			"settings":
+			{
+				"buffer_size": 29602,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.ini",
+			"settings":
+			{
+				"buffer_size": 52569,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -288,22 +360,6 @@
 			"settings":
 			{
 				"buffer_size": 2807,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
-			"settings":
-			{
-				"buffer_size": 6704,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css/2j.slidertabs.css",
-			"settings":
-			{
-				"buffer_size": 3254,
 				"line_ending": "Unix"
 			}
 		}
@@ -363,32 +419,41 @@
 	[
 		"/home/cavemanninja/workspace/bbic/bbic",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/administrator/components/com_twojtoolbox",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/cache",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_2jslidertabs",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_2jtabs",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs/1000",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views/twojtoolbox",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views/twojtoolbox/tmpl",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/plugins",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/plugins/content",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/plugins/content/billrepeat",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/etc",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/etc/extrafields",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_contact",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_contact/category",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/article",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/category",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/mod_xpertgallery",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks"
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/form"
 	],
 	"file_history":
 	[
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/configuration.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/categories/default_items.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.com_content.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css/2j.slidertabs.css",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/default-content-right.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/default-content-left.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody-content-left.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody/one-sidebar-left.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/spotlight-2.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/spotlight-1.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody-content-right.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/css/rtl/light-blue/home.css",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/css/rtl/light-blue/legacy-grid.css",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/css/rtl/light-blue/legacy-navigation.css",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody/one-sidebar-right.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/off-canvas.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/js/map.js",
+		"/home/cavemanninja/workspace/bbic/bbic/joomla/configuration.php",
 		"/home/cavemanninja/workspace/bbic/.htaccess",
 		"/home/cavemanninja/workspace/bbic/bbic/scratch.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/index.php",
@@ -399,13 +464,10 @@
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.sys.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_contact/contact/default.php",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.com_content.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.mod_articles_categories.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.mod_articles_category.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/blog.php",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.com_contact.ini",
-		"/home/cavemanninja/workspace/bbic/bbic/joomla/templates/t3_bs3_blank/html/com_content/category/default.php",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.mod_articles_latest.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/language/ar-AA/ar-AA.mod_articles_latest.sys.ini",
 		"/home/cavemanninja/workspace/bbic/bbic/joomla/components/com_twojtoolbox/views/twojtoolbox/view.html.php",
@@ -499,25 +561,11 @@
 		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/codeformatter/lib/phpbeautifier/PEAR.php",
 		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/codeformatter/lib/phpbeautifier/Beautifier.php",
 		"/C/Users/Jalal/AppData/Roaming/Sublime Text 3/Packages/CodeFormatter/codeformatter/lib/phpbeautifier/php_beautifier",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/map.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/map-ar.js",
-		"/C/wamp/www/bbic/joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.sys.ini",
-		"/C/wamp/www/bbic/joomla/plugins/system/languagefilter/languagefilter.php",
-		"/C/Users/Jalal/Downloads/languagefilter-mediamanager.diff",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/hideTenantModules.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/head.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/html/mod_articles_category/default.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/rtl/bootstrap.css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/css/rtl/_bootstrap-rtl.css",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/spotlight-2.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/spotlight-1.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/newsList.js",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainbody-content-right.php",
-		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/tpls/blocks/mainnav.php"
+		"/C/wamp/www/bbic/joomla/templates/t3_bs3_blank/js/map.js"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -532,6 +580,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"19",
+			"attribs",
+			"language",
+			"19",
+			"service",
+			"فلترة العنوان",
 			"01579b",
 			"st_tabs_wrap",
 			"fff",
@@ -653,13 +707,7 @@
 			"uldin",
 			"ulding",
 			"cursor-pointer map-popover ",
-			"curosr",
-			"lotb",
-			"campus_building_lota",
-			"toClass",
-			"campus_",
-			"campus",
-			"campus_building8"
+			"curosr"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -749,7 +797,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -758,7 +806,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 22429,
+						"buffer_size": 22438,
 						"regions":
 						{
 							"gutter_color_10124":
@@ -2861,8 +2909,8 @@
 								"regions":
 								[
 									[
-										19312,
-										19334
+										19321,
+										19343
 									]
 								],
 								"scope": "gutter_color"
@@ -2874,8 +2922,8 @@
 								"regions":
 								[
 									[
-										19316,
-										19338
+										19325,
+										19347
 									]
 								],
 								"scope": "gutter_color"
@@ -2887,8 +2935,8 @@
 								"regions":
 								[
 									[
-										19316,
-										19338
+										19325,
+										19347
 									]
 								],
 								"scope": "gutter_color"
@@ -2906,15 +2954,15 @@
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_19317":
+							"gutter_color_19326":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#f9f9f9.png",
 								"regions":
 								[
 									[
-										19317,
-										19339
+										19326,
+										19348
 									]
 								],
 								"scope": "gutter_color"
@@ -2939,8 +2987,8 @@
 								"regions":
 								[
 									[
-										20116,
-										20132
+										20125,
+										20141
 									]
 								],
 								"scope": "gutter_color"
@@ -2952,8 +3000,8 @@
 								"regions":
 								[
 									[
-										20116,
-										20132
+										20125,
+										20141
 									]
 								],
 								"scope": "gutter_color"
@@ -2965,21 +3013,34 @@
 								"regions":
 								[
 									[
-										20128,
-										20220
+										20137,
+										20229
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_20117":
+							"gutter_color_20126":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#777.png",
 								"regions":
 								[
 									[
-										20117,
-										20133
+										20126,
+										20142
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_20137":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#777.png",
+								"regions":
+								[
+									[
+										20137,
+										20229
 									]
 								],
 								"scope": "gutter_color"
@@ -2991,8 +3052,8 @@
 								"regions":
 								[
 									[
-										20683,
-										20705
+										20692,
+										20714
 									]
 								],
 								"scope": "gutter_color"
@@ -3004,8 +3065,8 @@
 								"regions":
 								[
 									[
-										20683,
-										20705
+										20692,
+										20714
 									]
 								],
 								"scope": "gutter_color"
@@ -3017,8 +3078,8 @@
 								"regions":
 								[
 									[
-										20728,
-										20756
+										20737,
+										20765
 									]
 								],
 								"scope": "gutter_color"
@@ -3030,34 +3091,47 @@
 								"regions":
 								[
 									[
-										20729,
-										20757
+										20738,
+										20766
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_20684":
+							"gutter_color_20693":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#f7f7f7.png",
 								"regions":
 								[
 									[
-										20684,
-										20706
+										20693,
+										20715
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_20729":
+							"gutter_color_20707":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f7f7f7.png",
+								"regions":
+								[
+									[
+										20707,
+										20728
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_20738":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#e3e3e3.png",
 								"regions":
 								[
 									[
-										20729,
-										20757
+										20738,
+										20766
 									]
 								],
 								"scope": "gutter_color"
@@ -3095,8 +3169,8 @@
 								"regions":
 								[
 									[
-										21630,
-										21644
+										21639,
+										21653
 									]
 								],
 								"scope": "gutter_color"
@@ -3108,8 +3182,8 @@
 								"regions":
 								[
 									[
-										21631,
-										21645
+										21640,
+										21654
 									]
 								],
 								"scope": "gutter_color"
@@ -3121,8 +3195,8 @@
 								"regions":
 								[
 									[
-										21636,
-										21665
+										21645,
+										21674
 									]
 								],
 								"scope": "gutter_color"
@@ -3134,47 +3208,21 @@
 								"regions":
 								[
 									[
-										21645,
-										21674
+										21654,
+										21683
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_21566":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#01579b.png",
-								"regions":
-								[
-									[
-										21646,
-										21675
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_21585":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#01579b.png",
-								"regions":
-								[
-									[
-										21666,
-										21681
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_21631":
+							"gutter_color_21640":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#fff.png",
 								"regions":
 								[
 									[
-										21631,
-										21645
+										21640,
+										21654
 									]
 								],
 								"scope": "gutter_color"
@@ -3182,12 +3230,25 @@
 							"gutter_color_21646":
 							{
 								"flags": 144,
-								"icon": "Cache/GutterColor/#01579b.png",
+								"icon": "Cache/GutterColor/#fff.png",
 								"regions":
 								[
 									[
 										21646,
 										21675
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_21655":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#01579b.png",
+								"regions":
+								[
+									[
+										21655,
+										21684
 									]
 								],
 								"scope": "gutter_color"
@@ -3199,8 +3260,8 @@
 								"regions":
 								[
 									[
-										21749,
-										21777
+										21758,
+										21786
 									]
 								],
 								"scope": "gutter_color"
@@ -3212,21 +3273,21 @@
 								"regions":
 								[
 									[
-										21751,
-										21779
+										21760,
+										21788
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_21750":
+							"gutter_color_21759":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#0277bd.png",
 								"regions":
 								[
 									[
-										21750,
-										21778
+										21759,
+										21787
 									]
 								],
 								"scope": "gutter_color"
@@ -3257,6 +3318,19 @@
 								],
 								"scope": "gutter_color"
 							},
+							"gutter_color_22250":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#01579b.png",
+								"regions":
+								[
+									[
+										22250,
+										22290
+									]
+								],
+								"scope": "gutter_color"
+							},
 							"gutter_color_22252":
 							{
 								"flags": 144,
@@ -3264,8 +3338,8 @@
 								"regions":
 								[
 									[
-										22253,
-										22293
+										22262,
+										22302
 									]
 								],
 								"scope": "gutter_color"
@@ -3277,8 +3351,8 @@
 								"regions":
 								[
 									[
-										22241,
-										22281
+										22250,
+										22290
 									]
 								],
 								"scope": "gutter_color"
@@ -3296,15 +3370,15 @@
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_22322":
+							"gutter_color_22291":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#fff.png",
 								"regions":
 								[
 									[
-										22282,
-										22309
+										22291,
+										22318
 									]
 								],
 								"scope": "gutter_color"
@@ -3322,6 +3396,19 @@
 								],
 								"scope": "gutter_color"
 							},
+							"gutter_color_22371":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#f6f6f6.png",
+								"regions":
+								[
+									[
+										22371,
+										22410
+									]
+								],
+								"scope": "gutter_color"
+							},
 							"gutter_color_22372":
 							{
 								"flags": 144,
@@ -3329,8 +3416,8 @@
 								"regions":
 								[
 									[
-										22374,
-										22413
+										22383,
+										22422
 									]
 								],
 								"scope": "gutter_color"
@@ -3348,6 +3435,19 @@
 								],
 								"scope": "gutter_color"
 							},
+							"gutter_color_22411":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#666.png",
+								"regions":
+								[
+									[
+										22411,
+										22436
+									]
+								],
+								"scope": "gutter_color"
+							},
 							"gutter_color_22452":
 							{
 								"flags": 144,
@@ -3355,8 +3455,8 @@
 								"regions":
 								[
 									[
-										22402,
-										22427
+										22411,
+										22436
 									]
 								],
 								"scope": "gutter_color"
@@ -3885,8 +3985,8 @@
 						"selection":
 						[
 							[
-								19441,
-								19441
+								18842,
+								18842
 							]
 						],
 						"settings":
@@ -3896,14 +3996,194 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 15189.0,
+						"translation.y": 14333.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "joomla/templates/t3_bs3_blank/etc/extrafields/service.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								589,
+								589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "joomla/templates/t3_bs3_blank/html/com_content/category/default_articles.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38883,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								28107,
+								28107
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 7747.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "joomla/templates/t3_bs3_blank/html/com_content/article/default.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 91082,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8859,
+								8859
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3191.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "joomla/templates/t3_bs3_blank/html/com_content/form/edit.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 90803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32940,
+								32940
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 13216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "joomla/plugins/content/billrepeat/billrepeat.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6640,
+								6640
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2064.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 6,
+					"file": "joomla/language/ar-AA/ar-AA.tpl_t3_bs3_blank.ini",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 52569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5463,
+								5463
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 912.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "joomla/configuration.php",
 					"semi_transient": false,
 					"settings":
@@ -3928,260 +4208,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "joomla/templates/t3_bs3_blank/tpls/blocks/footer.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6704,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "joomla/components/com_twojtoolbox/plugins/slidertabs/1000/css/2j.slidertabs.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3254,
-						"regions":
-						{
-							"gutter_color_1506":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#ffffff.png",
-								"regions":
-								[
-									[
-										1506,
-										1540
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1541":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#f7f7f7.png",
-								"regions":
-								[
-									[
-										1541,
-										1572
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1767":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#ffffff.png",
-								"regions":
-								[
-									[
-										1767,
-										1805
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1962":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#f7f7f7.png",
-								"regions":
-								[
-									[
-										1962,
-										1996
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1997":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#666666.png",
-								"regions":
-								[
-									[
-										1997,
-										2037
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2068":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#666666.png",
-								"regions":
-								[
-									[
-										2068,
-										2111
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2493":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#01579b.png",
-								"regions":
-								[
-									[
-										2493,
-										2531
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2551":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#f6f6f6.png",
-								"regions":
-								[
-									[
-										2551,
-										2589
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2721":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#01579b.png",
-								"regions":
-								[
-									[
-										2721,
-										2759
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2760":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#fff.png",
-								"regions":
-								[
-									[
-										2760,
-										2784
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2947":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#0277BD.png",
-								"regions":
-								[
-									[
-										2947,
-										2985
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_3023":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#666.png",
-								"regions":
-								[
-									[
-										3023,
-										3047
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_3048":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#f6f6f6.png",
-								"regions":
-								[
-									[
-										3048,
-										3086
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_3155":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#efefef.png",
-								"regions":
-								[
-									[
-										3155,
-										3193
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_3194":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#444.png",
-								"regions":
-								[
-									[
-										3194,
-										3218
-									]
-								],
-								"scope": "gutter_color"
-							}
-						},
-						"selection":
-						[
-							[
-								3206,
-								3206
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1403.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
@@ -4250,7 +4277,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Jalal\\workspace\\redditplus\\redditplus.sublime-project"
+				"~/workspace/redditplus/server.sublime-workspace"
 			]
 		],
 		"width": 380.0
