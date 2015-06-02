@@ -24,11 +24,13 @@
   .bbic-map {
     padding-left: 5px;
     zoom: 0.75;
-    /*-moz-transform: scale(0.5);*/
+    -moz-transform: scale(0.5);
+    -moz-transform: translateX(50%);
   }
   .popover {
     zoom: 0.75;
-    /*-moz-transform: scale(0.5);*/
+    -moz-transform: scale(0.5);
+    -moz-transform: translateX(50%);
 
   }
 }
@@ -38,11 +40,13 @@
   .bbic-map {
     padding-left: 5px;
     zoom: 0.5;
-    /*-moz-transform: scale(0.5);*/
+    -moz-transform: scale(0.5);
+    -moz-transform: translateX(50%);
   }
   .popover {
     zoom: 0.5;
-    /*-moz-transform: scale(0.5);*/
+    -moz-transform: scale(0.5);
+    -moz-transform: translateX(50%);
 
   }
 }
@@ -51,11 +55,13 @@
   .bbic-map {
     padding-left: 5px;
     zoom: 0.35;
-    /*-moz-transform: scale(0.35);*/
+    -moz-transform: scale(0.35);
+    -moz-transform: translateX(50%);
   }
   .popover {
     zoom: 0.35;
-    /*-moz-transform: scale(0.35);*/
+    -moz-transform: scale(0.35);
+    -moz-transform: translateX(50%);
 
   }
 }
