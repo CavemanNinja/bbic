@@ -1143,8 +1143,9 @@ if(count($extrafields)){
 											</div>
 											<div class="controls">
 												<?php
+													$extrafields =  $field->input;
+													
 													if ($isTenant) {
-														$extrafields =  $field->input;
 														$extrafields = 	str_replace("icon-calendar",
 															"glyphicon glyphicon-calendar", $extrafields);
 														$extrafields = str_replace('<option value="1">Approved',
@@ -1156,10 +1157,15 @@ if(count($extrafields)){
 														$extrafields = str_replace('<option value="2">Denied',
 														                           '<option value="2" disabled="disabled">Denied',
 														                           $extrafields);
-														echo $extrafields;
-													} else {
-														echo $field->input;
+													} 
+													
+													if (JFactory::getLanguage()->get('tag') == "ar-AA") {
+														$extrafields = str_replace('Approved', 'موافق', $extrafields);
+														$extrafields = str_replace('Denied', 'رفض', $extrafields);
+														$extrafields = str_replace('Pending', 'بإنتظر الموفقة', $extrafields);
 													}
+
+													echo $extrafields;
 
 												?>
 											</div>
