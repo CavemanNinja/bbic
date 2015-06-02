@@ -41,6 +41,19 @@
   }
 }
 
+@media (max-width: 520px) {
+  .bbic-map {
+    padding-left: 5px;
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
+  }
+  .popover {
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
+
+  }
+}
+
 .cursor-pointer:hover {
   cursor: pointer;
 }
