@@ -24,11 +24,11 @@
   .bbic-map {
     padding-left: 5px;
     zoom: 0.75;
-    -moz-transform: scale(0.75) translateX(-35%);
+    -moz-transform: scale(0.75) translateX(-20%);
   }
   .popover {
     zoom: 0.75;
-    -moz-transform: scale(0.75) translateX(-35%);
+    -moz-transform: scale(0.75) translateX(-20%);
 
   }
 }
