@@ -9,15 +9,19 @@
   height: 600px;
 }
 
+.bbic-map {
+  margin: auto;
+}
+
 @media (max-width: 1200px) {
 	.bbic-map {
-		padding-left: 25px;
+		/*padding-left: 25px;*/
 	}
 }
 
 @media (max-width: 992px) {
   .bbic-map {
-    padding-left: 5px;
+    /*padding-left: 5px;*/
     zoom: 0.75;
     -moz-transform: scale(0.75);
   }
@@ -28,22 +32,10 @@
   }
 }
 
-/*@media (max-width: 720px) {
-  .bbic-map {
-    padding-left: 5px;
-    zoom: 0.75;
-    -moz-transform: scale(0.75);
-  }
-  .popover {
-    zoom: 0.75;
-    -moz-transform: scale(0.75);
 
-  }
-}
-*/
 @media (max-width: 520px) {
   .bbic-map {
-    padding-left: 5px;
+    /*padding-left: 5px;*/
     zoom: 0.5;
     -moz-transform: scale(0.5);
   }
@@ -54,9 +46,9 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 350px) {
   .bbic-map {
-    padding-left: 5px;
+    /*padding-left: 5px;*/
     zoom: 0.35;
     -moz-transform: scale(0.35);
   }
