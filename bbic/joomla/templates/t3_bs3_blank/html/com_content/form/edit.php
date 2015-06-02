@@ -887,6 +887,16 @@ if(count($extrafields)){
 															$ar_cat_string = str_replace("Transport", "خدمات النقل", $ar_cat_string);
 															echo $ar_cat_string;
 														?>
+													<?php elseif ($field->name == "jform[attribs][companyprofile_language]" && JFactory::getLanguage()->get('tag') == "ar-AA") :?>
+														<?php
+															$language_string = $field->input;
+															
+															$langauge_string = str_replace('Arabic Only', ' فقط العربية', $language_string);
+															$langauge_string = str_replace('English Only', 'فقط الإنجليزية', $language_string);
+															$langauge_string = str_replace('English and Arabic', 'الجميع', $language_string);
+
+															echo $language_string;
+														?>
 													<?php else : ?>
 														<?php echo $field->input; ?>
 													<?php endif; ?>
