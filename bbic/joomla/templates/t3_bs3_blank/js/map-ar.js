@@ -44,36 +44,47 @@ function drillDown(building) {
 	switch(building) {
 		case 'building8':
 			jQuery('.map-label > h2').text("مبنى 8");
+			jQuery('.floor-label').hide();
 			break;
 		case 'a1':
 			jQuery('.map-label > h2').text("قسم أ");
+			jQuery('.floor-label').hide();
 			break;
 		case 'a2':
 			jQuery('.map-label > h2').text("قسم أ");
+			jQuery('.floor-label').hide();
 			break;
 		case 'a3':
 			jQuery('.map-label > h2').text("قسم أ");
+			jQuery('.floor-label').hide();
 			break;
 		case 'b1':
 			jQuery('.map-label > h2').text("قسم ب");
+			jQuery('.floor-label').hide();
 			break;
 		case 'b2':
 			jQuery('.map-label > h2').text("قسم ب");
+			jQuery('.floor-label').hide();
 			break;
 		case 'b3':
 			jQuery('.map-label > h2').text("قسم ب");
+			jQuery('.floor-label').hide();
 			break;
 		case 'c1':
 			jQuery('.map-label > h2').text("قسم ت");
+			jQuery('.floor-label').hide();
 			break;
 		case 'c2':
 			jQuery('.map-label > h2').text("قسم ت");
+			jQuery('.floor-label').hide();
 			break;
 		case 'c3':
 			jQuery('.map-label > h2').text("قسم ت");
+			jQuery('.floor-label').hide();
 			break;
 		case 'wh':
 			jQuery('.map-label > h2').text("ورشات");
+			jQuery('.floor-label').hide();
 			break;
 		case 'bdb':
 			jQuery('.map-label > h2').text("مبنى W2");
@@ -90,13 +101,17 @@ function drillDown(building) {
 			jQuery('.ground').css('top', '30px');
 			jQuery('.first').css('top', '30px');
 			jQuery('.first').css('right', '220px');
+			
 			break;
 		case 'w4':
 			jQuery('.map-label > h2').text("مبنى W4");
+			jQuery('.floor-label').hide();
 			break;
 		case 'w3':
 			jQuery('.map-label > h2').text("مبنى W3");
+			jQuery('.floor-label').hide();
 			break;
+
 	}
 	jQuery("#back-button").show();
 }
