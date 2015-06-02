@@ -4,9 +4,10 @@
   display: block;
   position: relative;
   width: 100%;
-  text-align: center;
+  /*text-align: center;*/
   padding-left: 100px;
   height: 600px;
+  float: left;
 }
 
 .bbic-map {
