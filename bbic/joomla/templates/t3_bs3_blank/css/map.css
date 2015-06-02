@@ -15,6 +15,13 @@
 	}
 }
 
+@media (max-width: 720px) {
+  .bbic-map {
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
+  }
+}
+
 .cursor-pointer:hover {
   cursor: pointer;
 }
