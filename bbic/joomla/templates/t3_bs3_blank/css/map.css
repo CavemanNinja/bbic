@@ -10,7 +10,9 @@
 }
 
 .bbic-map {
-  margin: auto;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 !important;
 }
 
 @media (max-width: 1200px) {
