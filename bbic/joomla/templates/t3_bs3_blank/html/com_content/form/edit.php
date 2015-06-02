@@ -216,9 +216,9 @@ if(count($extrafields)){
 											</div>
 											<div class="controls">
 												<?php 
-													$extrafileds_string = $field->input;
+													$extrafields_string = $field->input;
 													
-													$extrafileds_string = str_replace("icon-calendar", "glyphicon glyphicon-calendar", $extrafields_string); 
+													$extrafields_string = str_replace("icon-calendar", "glyphicon glyphicon-calendar", $extrafields_string); 
 													$extrafields_string = str_replace('Paid by Cheque', 'دفع بالشيك', $extrafields_string);
 													$extrafields_string = str_replace('Paid through Credimax', 'دفع عن طريق كريدي مكس', $extrafields_string);
 													$extrafields_string = str_replace('Paid by Credit Card', 'دفع ببطاقطة الأتمان', $extrafields_string);
