@@ -21,8 +21,8 @@ class plgAjaxSrdescription extends JPlugin
 
 		// return json_encode($service_description);
                 
-                // $arr = array('a' => $this->params->get('value', ''), 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+                $arr = array('a' => $this->params->get('value', ''), 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 
-                return json_encode($this->params->get('value', ''));
+                return json_encode($arr);
 	}
 }
