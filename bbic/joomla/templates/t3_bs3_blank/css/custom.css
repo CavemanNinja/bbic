@@ -1165,7 +1165,7 @@ div.st_tabs ul.st_tabs_ul li.twoj_tab_block_li {
 }
 
 #jform_attribs_servicerequest_description {
-  display: none;
+  visibility: hidden;
 }
 
 #jform_attribs_servicerequest_description-lbl {
