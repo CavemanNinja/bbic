@@ -38,7 +38,7 @@ $document->addScriptDeclaration("
           		success: function(data) {
           			console.log(JSON.stringify(data));
           			console.log(data.data[0]);
-          			jQuery('.servicerequest_description').text(data.data[0]);
+          			jQuery('#jform_attribs_servicerequest_description-lbl').html(data.data[0]);
           			// jQuery('#jform_attribs_servicerequest_description').val(data[0]);
 
           		}
