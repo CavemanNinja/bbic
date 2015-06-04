@@ -23,6 +23,24 @@ JHtml::_('behavior.calendar');
 JHtml::_('behavior.formvalidation');
 JHtml::stylesheet(JUri::base().'templates/t3_bs3_blank/css/font-awesome.min.css', array(), true);
 
+$document = JFactory::getDocument();
+$document->addScriptDeclaration("
+    jQuery(function(){
+        jQuery('#jform_attribs_servicerequest_item').on('change', function() {
+          	var value = jQuery(this).val();
+          	jQuery.ajax({
+          		type: "post",
+          		url: ?option=com_ajax&plugin=srdescription&method=post&format=raw,
+          		data: {'value': value},
+          		success: function(data) {
+          			console.log(data);
+          			jQuery('.servicerequest_description').html(data);
+          		}
+          	});
+        });
+    });
+");
+
 
 //Check if user is a tenant
 $user = JFactory::getUser();
@@ -1167,6 +1185,10 @@ if(count($extrafields)){
 														$extrafields = str_replace('Denied', 'رفض', $extrafields);
 														$extrafields = str_replace('Pending', 'بإنتظر الموفقة', $extrafields);
 													}
+
+													$extrafields = str_replace('<input type="text" name="jform[attribs][servicerequest_description]" id="jform_attribs_servicerequest_description" value="">', '', $extrafields);
+													$extrafields = str_replace('<label id="jform_attribs_servicerequest_description-lbl" for="jform_attribs_servicerequest_description" class=""></label>', '<label id="jform_attribs_servicerequest_description-lbl" for="jform_attribs_servicerequest_description" class="servicerequest_description"></label>', $extrafields);
+
 
 													echo $extrafields;
 
