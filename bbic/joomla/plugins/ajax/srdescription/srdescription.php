@@ -21,6 +21,6 @@ class plgAjaxSrdescription extends JPlugin
 
 		// return json_encode($service_description);
                 
-                return json_encode(var_dump($this));
+                return json_encode($this);
 	}
 }
