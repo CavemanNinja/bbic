@@ -8,10 +8,12 @@ class plgAjaxSrdescription extends JPlugin
 {
 	function onAjaxSrdescription()
 	{
-                var_dump('onAjaxSrdescription');
-                var_dump($this->params->get('value', 'xyz'));
-	
-                echo("<script>console.log('onAjaxSrdescription');</script>");
+                $dump_variable = 'onAjaxSrdescriptionDumpVariable';
+                
+                dump($dump_variable);
+
+                dump('onAjaxSrdescription');
+                
 
 		$query = $db->getQuery(true);
                 $query->select($db->quoteName('attribs'));

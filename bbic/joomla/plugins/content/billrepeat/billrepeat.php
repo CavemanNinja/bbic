@@ -29,6 +29,9 @@ class plgContentBillrepeat extends JPlugin
     function onContentBeforeSave($context, $article, $isNew) {
         if(property_exists($article, 'catid') && property_exists($article, 'attribs')){
 
+            $testdump = "testdump";
+            dump($testdump);
+
             // JError::raiseNotice( 100, 'onContentBeforeSave plugin fired!' );
             $db = JFactory::getDbo();
             $catid = $article->catid;
