@@ -19,6 +19,6 @@ class plgAjaxSrdescription extends JPlugin
                 $service_attribs = json_decode($result);
                 $service_description = $service_attribs->service_description;
 
-		return json_encode(array('service_description' => $service_description));
+		return $service_description;
 	}
 }
