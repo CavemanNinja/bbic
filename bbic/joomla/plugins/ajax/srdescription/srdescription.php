@@ -2,12 +2,15 @@
 
 defined('_JEXEC') or die('Restricted access');
 
-jimport('joomla.plugin.plugin');
+jimport('joomla.plugin.plugin'); jimport('joomla.log.log');
 class plgAjaxSrdescription extends JPlugin
 {
 	function onAjaxSrdescription()
 	{
 	
+            fwrite(STDOUT, '<<<<<<<<<<<<<<<<<<<<<onAjaxSrdescription>>>>>>>>>>>>>>>');
+
+
 		$query = $db->getQuery(true);
                 $query->select($db->quoteName('attribs'));
                 $query->from($db->quoteName('#__content'));
