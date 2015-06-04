@@ -37,7 +37,7 @@ $document->addScriptDeclaration("
           		
           		success: function(data) {
           			console.log('data: ');
-          			console.log(data);
+          			console.log(JSON.stringify(data));
           			// jQuery('.servicerequest_description').html(data);
           		}
 
