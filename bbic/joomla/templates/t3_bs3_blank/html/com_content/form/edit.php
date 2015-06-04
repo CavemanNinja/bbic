@@ -1146,7 +1146,7 @@ if(count($extrafields)){
 												<?php
 													$extrafields =  $field->input;
 													
-													var_dump($extrafields);
+													// var_dump($extrafields);
 
 													if ($isTenant) {
 														$extrafields = 	str_replace("icon-calendar",
