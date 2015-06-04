@@ -2,7 +2,7 @@
 
 defined('_JEXEC') or die('Restricted access');
 
-jimport('joomla.plugin.plugin'); jimport('joomla.log.log');
+jimport('joomla.plugin.plugin');
 
 class plgAjaxSrdescription extends JPlugin
 {
@@ -21,6 +21,6 @@ class plgAjaxSrdescription extends JPlugin
 
 		// return json_encode($service_description);
                 
-                return json_encode($value);
+                return json_encode($_GET["value"]);
 	}
 }
