@@ -31,7 +31,7 @@ $document->addScriptDeclaration("
           	console.log('onChange, value: ' + value);
           	jQuery.ajax({
           		type: 'post',
-          		url: ?option=com_ajax&plugin=srdescription&method=post&format=raw,
+          		url: '?option=com_ajax&plugin=srdescription&method=post&format=raw',
           		data: {'value': value},
           		success: function(data) {
           			console.log(data);
