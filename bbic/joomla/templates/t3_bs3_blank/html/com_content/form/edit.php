@@ -27,16 +27,19 @@ $document = JFactory::getDocument();
 $document->addScriptDeclaration("
     jQuery(function(){
         jQuery('#jform_attribs_servicerequest_item').on('change', function() {
+          	
           	var value = jQuery(this).val();
           	console.log('onChange, value: ' + value);
+          	
           	jQuery.ajax({
           		type: 'get',
           		url: '?option=com_ajax&plugin=srdescription&format=json&value=' + value,
-          		// data: {'value': value},
+          		
           		success: function(data) {
           			console.log(data);
           			jQuery('.servicerequest_description').html(data);
           		}
+
           	});
         });
     });
