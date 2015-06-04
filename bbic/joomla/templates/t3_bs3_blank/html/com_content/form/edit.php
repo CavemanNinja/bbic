@@ -30,9 +30,9 @@ $document->addScriptDeclaration("
           	var value = jQuery(this).val();
           	console.log('onChange, value: ' + value);
           	jQuery.ajax({
-          		type: 'post',
-          		url: '?option=com_ajax&plugin=srdescription&method=post&format=json',
-          		data: {'value': value},
+          		type: 'get',
+          		url: '?option=com_ajax&plugin=srdescription&format=json&value=' + value,
+          		// data: {'value': value},
           		success: function(data) {
           			console.log(data);
           			jQuery('.servicerequest_description').html(data);
