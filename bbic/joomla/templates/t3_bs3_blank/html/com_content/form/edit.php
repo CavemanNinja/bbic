@@ -1134,6 +1134,7 @@ if(count($extrafields)){
 							</div>
 
 							<?php if(count($extrafields)) : ?>
+							
 							<div class="tab-pane" id="extrafields">
 								<?php foreach ($extrafields as $extraset) : ?>
 									<?php foreach ($this->form->getFieldset($extraset->name) as $field) : ?>
@@ -1145,6 +1146,8 @@ if(count($extrafields)){
 												<?php
 													$extrafields =  $field->input;
 													
+													var_dump($extrafields);
+
 													if ($isTenant) {
 														$extrafields = 	str_replace("icon-calendar",
 															"glyphicon glyphicon-calendar", $extrafields);

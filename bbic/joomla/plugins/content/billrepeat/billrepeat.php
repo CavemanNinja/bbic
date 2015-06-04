@@ -144,7 +144,7 @@ class plgContentBillrepeat extends JPlugin
                 
             }
             
-            //Service Request, add service name+price to attribs
+            //Service Request, add service name+price+arabic name+description. to attribs
             elseif ($catid == 12) {
                 $service_id = $attribs->servicerequest_item;
 
