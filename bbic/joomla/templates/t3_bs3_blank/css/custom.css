@@ -1167,3 +1167,7 @@ div.st_tabs ul.st_tabs_ul li.twoj_tab_block_li {
 .servicerequest_description {
   font-wieght: normal;
 }
+
+#jform_attribs_servicerequest_description {
+  display: none;
+}
