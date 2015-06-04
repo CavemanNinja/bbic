@@ -3,6 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
 
 jimport('joomla.plugin.plugin'); jimport('joomla.log.log');
+
 class plgAjaxSrdescription extends JPlugin
 {
 	function onAjaxSrdescription()
@@ -11,7 +12,7 @@ class plgAjaxSrdescription extends JPlugin
 		$query = $db->getQuery(true);
                 $query->select($db->quoteName('attribs'));
                 $query->from($db->quoteName('#__content'));
-                $query->where($db->quoteName('id') . " = " . $service_id);
+                $query->where($db->quoteName('id') . " = " . $value);
                 $db->setQuery($query);
                 $result = $db->loadResult();
 

@@ -31,8 +31,7 @@ $document->addScriptDeclaration("
           	console.log('onChange, value: ' + value);
           	jQuery.ajax({
           		type: 'get',
-          		url: '?option=com_ajax&plugin=srdescription&format=json',
-          		data: {'value': value},
+          		url: '?option=com_ajax&plugin=srdescription&format=json&value=' + value,
           		success: function(data) {
           			console.log(data);
           			jQuery('.servicerequest_description').html(data);
