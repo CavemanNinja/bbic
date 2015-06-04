@@ -16,6 +16,9 @@
 
 	<config>
 		<fields name="params">
+			<fieldset name="basic">
+				<field name="value" type="text" default=""/>
+			</fieldset>
 		</fields>
 	</config>
 

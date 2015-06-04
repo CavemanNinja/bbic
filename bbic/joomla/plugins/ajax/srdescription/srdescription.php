@@ -12,7 +12,7 @@ class plgAjaxSrdescription extends JPlugin
 		$query = $db->getQuery(true);
                 $query->select($db->quoteName('attribs'));
                 $query->from($db->quoteName('#__content'));
-                $query->where($db->quoteName('id') . " = " . $value);
+                $query->where($db->quoteName('id') . " = " . $this->params->get('value', ''));
                 $db->setQuery($query);
                 $result = $db->loadResult();
 
