@@ -16,7 +16,13 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="value"/>
+				<field name="value"
+				       type="list"
+				       default=""
+				       label="value"
+				       description="">
+					<option value="1">1</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>
