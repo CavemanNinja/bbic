@@ -25,6 +25,14 @@
             value_field="title"
             key_field="id" 
          />
+      
+        <field
+            name="servicerequest_description"
+            type="text"
+            label=""
+            description=""
+         />
+
         <field
             name="servicerequest_approval"
             type="list"
@@ -36,6 +44,7 @@
                <option value="1">Approved</option>
                <option value="2">Denied</option>
          </field>
+
       </fieldset>
    </fields>
 </form>
