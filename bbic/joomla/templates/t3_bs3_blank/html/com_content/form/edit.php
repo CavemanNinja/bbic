@@ -36,7 +36,7 @@ $document->addScriptDeclaration("
           		url: '?option=com_ajax&plugin=srdescription&format=json&value=' + value,
           		
           		success: function(data) {
-          			console.log('data: ');
+          			console.log(JSON.stringify(data));
           			console.log(data.data['service_description']);
           			jQuery('.servicerequest_description').html(data);
           		}
