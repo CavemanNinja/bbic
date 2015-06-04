@@ -8,8 +8,7 @@ class plgAjaxSrdescription extends JPlugin
 {
 	function onAjaxSrdescription()
 	{
-                // $dump_variable = 'onAjaxSrdescriptionDumpVariable';
-                
+  //               $db = JFactory::getDbo();
 		// $query = $db->getQuery(true);
   //               $query->select($db->quoteName('attribs'));
   //               $query->from($db->quoteName('#__content'));
@@ -20,9 +19,9 @@ class plgAjaxSrdescription extends JPlugin
   //               $service_attribs = json_decode($result);
   //               $service_description = $service_attribs->service_description;
 
-		// return json_encode($service_description);
+		return json_encode($service_description);
                 
-                $arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
+                $arr = array('a' => $this->params->get('value', ''), 'b' => 2, 'c' => 3, 'd' => 4, 'e' => 5);
 
                 return json_encode($arr);
 	}
