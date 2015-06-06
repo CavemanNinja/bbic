@@ -625,8 +625,10 @@ if ($access == 15 && !in_array(19, $user_groups)) {
                                                   case '4':
                                                       if ($list_show_billing_arabic) echo "مدفوع";
                                                       else echo "Paid";
+                                                  case '5':
+                                                      if ($list_show_billing_arabic) echo "مدفوع";
+                                                      else echo "Paid";
                                                       break;
-
                                                   default:
                                                       break;
                                               };

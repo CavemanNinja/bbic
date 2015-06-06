@@ -216,25 +216,60 @@ JHtml::_('bootstrap.tooltip');
  		
 		<?php echo "<div class='ef_billing_date'><span class='ef-label'>".JText::_('TPL_EXTRAFIELDS_BILLING_STATUS').": </span>" ?>
 		<?php 
-			switch($attribs->get('billing_status')) {
-				case 0:
-					echo 'Unpaid';
-					break;
-				case 1:
-					echo 'Paid through Credimax';
-					break;
-				case 2:
-					echo 'Paid by Cheque';
-					break;
-				case 3:
-					echo 'Paid by Credit Card';
-					break;
-				case 4:
-					echo 'Paid by Tamkeen';
-					break;
-				default:
-					break;
+			
+			if (JFactory::getLanguage()->get('tag') == "ar-AA") {
+
+				switch($attribs->get('billing_status')) {
+					case 0:
+						echo 'غير مدفوع';
+						break;
+					case 1:
+						echo 'دفع عن طريق كريدي مكس';
+						break;
+					case 2:
+						echo 'دفع بالشيك';
+						break;
+					case 3:
+						echo 'دفع ببطاقطة الأتمان';
+						break;
+					case 4:
+						echo 'دفع من خلال تمكين';
+						break;
+					case 5:
+						echo 'دفع بالنقود‏';
+					default:
+						break;
+				}
+
+			} else {
+
+				switch($attribs->get('billing_status')) {
+					case 0:
+						echo 'Unpaid';
+						break;
+					case 1:
+						echo 'Paid through Credimax';
+						break;
+					case 2:
+						echo 'Paid by Cheque';
+						break;
+					case 3:
+						echo 'Paid by Credit Card';
+						break;
+					case 4:
+						echo 'Paid by Tamkeen';
+						break;
+					case 5:
+						echo 'Paid by Cash';
+					default:
+						break;
+				}
+				
 			}
+
+
+
+
 		?>
 		<?php echo "</div>" ?>
 

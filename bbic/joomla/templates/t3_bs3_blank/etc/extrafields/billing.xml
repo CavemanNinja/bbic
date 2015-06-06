@@ -63,11 +63,12 @@
             label="TPL_EXTRAFIELDS_BILLING_STATUS"
             description="TPL_EXTRAFIELDS_BILLING_STATUS_DESC"
          >
-               <option value="0">Unpaid</option>
-               <option value="1">Paid through Credimax</option>
-               <option value="2">Paid by Cheque</option>
-               <option value="3">Paid by Credit Card</option>
-               <option value="4">Paid by Tamkeen</option>
+            <option value="0">Unpaid</option>
+            <option value="1">Paid through Credimax</option>
+            <option value="2">Paid by Cheque</option>
+            <option value="3">Paid by Credit Card</option>
+            <option value="4">Paid by Tamkeen</option>
+            <option value="5">Paid by Cash</option>
          </field>
 
          <field
